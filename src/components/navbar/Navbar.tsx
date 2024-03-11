@@ -44,7 +44,7 @@ const Navbar = () => {
           </Link>
           <div className='user' onClick={handleToggleMenu}>
             <Image src='/img/user.png' width={30} height={30} alt='' />
-            <div className='userMenu'>
+            <div className={showMenu ? 'userMenu active' : 'userMenu'}>
               <Link href='/login'>Login</Link>
               <Link href='/regiter'>Register</Link>
             </div>
