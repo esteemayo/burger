@@ -24,6 +24,10 @@ const Navbar = () => {
     return isActive ? 'navbar active' : 'navbar';
   }, [isActive]);
 
+  const menuClasses = useMemo(() => {
+    return showMenu ? 'userMenu active' : 'userMenu';
+  }, [showMenu]);
+
   useEffect(() => {
     window.addEventListener('scroll', isActiveHandler);
     return () => window.removeEventListener('scroll', isActiveHandler);
@@ -50,7 +54,7 @@ const Navbar = () => {
               alt=''
               onMouseOver={handleToggleMenu}
             />
-            <div className={showMenu ? 'userMenu active' : 'userMenu'}>
+            <div className={menuClasses}>
               <Link href='/login'>Login</Link>
               <Link href='/register'>Register</Link>
             </div>
