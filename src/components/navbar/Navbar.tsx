@@ -42,7 +42,7 @@ const Navbar = () => {
             <div className='userMenu'>
               <div className='wrapper'>
                 <Link href='/'>Login</Link>
-                <Link href='/'>Register</Link>
+                {/* <Link href='/'>Register</Link> */}
               </div>
             </div>
           </div>
