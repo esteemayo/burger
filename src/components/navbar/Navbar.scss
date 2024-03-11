@@ -1,0 +1,123 @@
+.navbar {
+  display: flex;
+  justify-content: center;
+
+  height: 8rem;
+  background-color: #fff;
+  color: #ff0018;
+  border-bottom: 1px solid #f7dbdb;
+
+  position: sticky;
+  top: 0;
+
+  &.active {
+    background-color: transparent;
+    backdrop-filter: blur(1rem);
+  }
+
+  .wrapper {
+    width: 130rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+      text-transform: capitalize;
+      font-weight: 500;
+      font-size: 1.8rem;
+      color: #ff0018;
+
+      a,
+      a:link,
+      a:active {
+        color: inherit;
+
+        h1 {
+          color: currentColor;
+
+          &::after {
+            display: inline-block;
+            content: '';
+            width: 0.5rem;
+            height: 0.5rem;
+            background-color: #ff0018;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+
+      a,
+      a:link,
+      a:active {
+        color: inherit;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        transition: all 0.3s;
+
+        &:hover {
+          color: #a00c1a;
+        }
+
+        svg {
+          font-size: 3rem;
+        }
+
+        span {
+          font-weight: 700;
+          font-size: 1.4rem;
+          white-space: nowrap;
+        }
+      }
+
+      .user {
+        position: relative;
+
+        img {
+          display: inline-block;
+          width: 3rem;
+          height: 3rem;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+
+        .userMenu {
+          position: absolute;
+        }
+      }
+
+      .cart {
+        position: relative;
+        cursor: pointer;
+
+        svg {
+          font-size: 2.4rem;
+          color: #ff0018;
+        }
+
+        span {
+          width: 2rem;
+          height: 2rem;
+          font-size: 1.4rem;
+          background-color: #a00c1a;
+          color: #fff;
+          border-radius: 50%;
+          position: absolute;
+          top: -1rem;
+          right: -1rem;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
