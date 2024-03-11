@@ -42,8 +42,14 @@ const Navbar = () => {
             <RoomServiceIcon />
             <span>Products</span>
           </Link>
-          <div className='user' onClick={handleToggleMenu}>
-            <Image src='/img/user.png' width={30} height={30} alt='' />
+          <div className='user'>
+            <Image
+              src='/img/user.png'
+              width={30}
+              height={30}
+              alt=''
+              onMouseOver={handleToggleMenu}
+            />
             <div className={showMenu ? 'userMenu active' : 'userMenu'}>
               <Link href='/login'>Login</Link>
               <Link href='/register'>Register</Link>
