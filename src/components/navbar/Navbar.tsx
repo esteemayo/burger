@@ -40,10 +40,8 @@ const Navbar = () => {
           <div className='user'>
             <Image src='/img/user.png' width={30} height={30} alt='' />
             <div className='userMenu'>
-              <div className='wrapper'>
-                <Link href='/'>Login</Link>
-                {/* <Link href='/'>Register</Link> */}
-              </div>
+              <Link href='/'>Login</Link>
+              <Link href='/'>Register</Link>
             </div>
           </div>
           <div className='cart'>
