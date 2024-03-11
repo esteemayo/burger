@@ -46,7 +46,7 @@ const Navbar = () => {
             <Image src='/img/user.png' width={30} height={30} alt='' />
             <div className={showMenu ? 'userMenu active' : 'userMenu'}>
               <Link href='/login'>Login</Link>
-              <Link href='/regiter'>Register</Link>
+              <Link href='/register'>Register</Link>
             </div>
           </div>
           <div className='cart'>
