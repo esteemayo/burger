@@ -195,6 +195,11 @@
               color: #000;
             }
 
+            hr {
+              height: 0;
+              border: 1px solid #f7dbdb;
+            }
+
             .cardProductBox {
               display: flex;
               flex-direction: column;
