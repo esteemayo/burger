@@ -233,8 +233,8 @@
               display: flex;
               justify-content: space-between;
               padding: 1.5rem;
-              border-top: 1px solid lightgray;
-              border-bottom: 1px solid lightgray;
+              border-top: 1px solid #f7dbdb;
+              border-bottom: 1px solid #f7dbdb;
               margin-bottom: 1rem;
 
               span.subTotal,
@@ -243,6 +243,21 @@
                 font-size: 1.3rem;
                 color: #00000059;
               }
+            }
+
+            .checkoutBtn {
+              border: none;
+              outline: none;
+              width: 100%;
+              font-weight: 500;
+              font-size: 1.3rem;
+              padding: 0.5rem;
+              background: #a00c1a;
+              color: #fff;
+              border-radius: 0.6rem;
+
+              display: flex;
+              justify-content: center;
             }
           }
         }
