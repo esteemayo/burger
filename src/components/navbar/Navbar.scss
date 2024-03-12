@@ -236,6 +236,13 @@
               border-top: 1px solid lightgray;
               border-bottom: 1px solid lightgray;
               margin-bottom: 1rem;
+
+              span.subTotal,
+              span {
+                font-weight: 900;
+                font-size: 1.3rem;
+                color: #00000059;
+              }
             }
           }
         }
