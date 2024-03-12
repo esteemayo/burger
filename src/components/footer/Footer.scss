@@ -16,7 +16,13 @@
 
       .left {
         flex: 1;
+
         .logoBox {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          gap: 12rem;
+
           .download {
           }
         }
