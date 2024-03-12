@@ -180,7 +180,21 @@
               font-weight: 700;
               padding: 1.5rem;
               color: #000;
-              border-bottom: 1px solid #f7dbdb;
+            }
+
+            .cardProductBox {
+              display: flex;
+              flex-direction: column;
+              min-width: 25rem;
+
+              .productBox {
+                display: flex;
+                justify-content: space-between;
+                gap: 0.8rem;
+                padding: 2.4rem;
+                color: lightgray;
+                border-top: 1px solid #f7dbdb;
+              }
             }
           }
         }
