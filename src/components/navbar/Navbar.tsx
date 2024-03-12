@@ -61,7 +61,7 @@ const Navbar = () => {
           </div>
           <div className='cart'>
             <ShoppingCartIcon />
-            <span>3</span>
+            <span className='count'>3</span>
           </div>
         </div>
       </div>
