@@ -1,11 +1,13 @@
+@import '../../styles/variables';
+
 .navbar {
   display: flex;
   justify-content: center;
 
   height: 8rem;
-  background-color: #fff;
-  color: #ff0018;
-  border-bottom: 1px solid #f7dbdb;
+  background-color: $clr-white;
+  color: $clr-primary;
+  border-bottom: 1px solid $clr-border;
 
   position: sticky;
   top: 0;
@@ -26,7 +28,7 @@
       text-transform: capitalize;
       font-weight: 500;
       font-size: 1.8rem;
-      color: #ff0018;
+      color: $clr-primary;
 
       a,
       a:link,
@@ -41,7 +43,7 @@
             content: '';
             width: 0.5rem;
             height: 0.5rem;
-            background-color: #ff0018;
+            background-color: $clr-primary;
             border-radius: 50%;
           }
         }
@@ -63,7 +65,7 @@
         transition: all 0.3s;
 
         &:hover {
-          color: #a00c1a;
+          color: $clr-secondary;
         }
 
         svg {
@@ -105,7 +107,7 @@
           min-width: 20rem;
           width: 20rem;
           padding: 1.4rem;
-          background-color: #fff;
+          background-color: $clr-white;
           border-radius: 0.8rem;
           -webkit-box-shadow: 0px 0px 5px -1px rgba(73, 73, 73, 0.16);
           box-shadow: 0px 0px 5px -1px rgba(73, 73, 73, 0.16);
@@ -128,8 +130,8 @@
             transition: all 0.3s;
 
             &:hover {
-              background-color: #faecec;
-              color: #a00c1a;
+              background-color: $clr-tertiary;
+              color: $clr-secondary;
               border-radius: 0.5rem;
             }
           }
@@ -150,15 +152,15 @@
 
         svg {
           font-size: 2.4rem;
-          color: #ff0018;
+          color: $clr-primary;
         }
 
         .count {
           width: 2rem;
           height: 2rem;
           font-size: 1.4rem;
-          background-color: #a00c1a;
-          color: #fff;
+          background-color: $clr-secondary;
+          color: $clr-white;
           border-radius: 50%;
           position: absolute;
           top: -1rem;
@@ -176,7 +178,7 @@
           min-width: 24rem;
           width: fit-content;
           padding: 0.5rem 3px;
-          background-color: #fff;
+          background-color: $clr-white;
           border-radius: 0.8rem;
           -webkit-box-shadow: 0px 0px 5px -1px rgba(73, 73, 73, 0.16);
           box-shadow: 0px 0px 5px -1px rgba(73, 73, 73, 0.16);
@@ -192,7 +194,7 @@
             .cardHeader {
               font-weight: 700;
               padding: 1.5rem;
-              color: #000;
+              color: $clr-black;
 
               &.empty {
                 text-align: center;
@@ -201,7 +203,7 @@
 
             hr {
               height: 0;
-              border: 1px solid #f7dbdb;
+              border: 1px solid $clr-border;
             }
 
             .cardProductBox {
@@ -214,8 +216,8 @@
                 justify-content: space-between;
                 gap: 0.8rem;
                 padding: 1.5rem;
-                color: #d3d3d3;
-                border-top: 1px solid #f7dbdb;
+                color: $clr-gray-light;
+                border-top: 1px solid $clr-border;
 
                 .quantity {
                   font-weight: 700;
@@ -229,14 +231,14 @@
                   text-transform: capitalize;
                   font-weight: 700;
                   font-size: 1.3rem;
-                  color: #ff0018;
+                  color: $clr-primary;
                   overflow: hidden;
                 }
 
                 .cardButtons {
                   display: flex;
                   align-items: center;
-                  color: #00000059;
+                  color: $clr-gray-dark;
 
                   button {
                     display: inline-block;
@@ -247,7 +249,7 @@
                     cursor: pointer;
 
                     &:disabled {
-                      color: #d3d3d3;
+                      color: $clr-gray-light;
                     }
 
                     svg {
@@ -260,7 +262,7 @@
                 .deleteBtn {
                   svg {
                     font-size: var(--default-font-size);
-                    color: #d3d3d3;
+                    color: $clr-gray-light;
                     cursor: pointer;
                   }
                 }
@@ -268,7 +270,7 @@
                 .price {
                   font-weight: 500;
                   font-size: 1.3rem;
-                  color: #d3d3d3;
+                  color: $clr-gray-light;
                   white-space: nowrap;
                 }
               }
@@ -278,15 +280,15 @@
               display: flex;
               justify-content: space-between;
               padding: 1.5rem;
-              border-top: 1px solid #f7dbdb;
-              border-bottom: 1px solid #f7dbdb;
+              border-top: 1px solid $clr-border;
+              border-bottom: 1px solid $clr-border;
               margin-bottom: 1rem;
 
               span.subTotal,
               span {
                 font-weight: 900;
                 font-size: 1.3rem;
-                color: #00000059;
+                color: $clr-gray-dark;
               }
             }
 
@@ -297,8 +299,8 @@
               font-weight: 500;
               font-size: 1.3rem;
               padding: 0.5rem;
-              background: #a00c1a;
-              color: #fff;
+              background: $clr-secondary;
+              color: $clr-white;
               border-radius: 0.6rem;
 
               display: flex;
@@ -316,8 +318,8 @@
                 font-weight: 500;
                 font-size: 1.3rem;
                 padding: 0.5rem;
-                background: #a00c1a;
-                color: #fff;
+                background: $clr-secondary;
+                color: $clr-white;
                 border-radius: 0.6rem;
 
                 display: flex;
