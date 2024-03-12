@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import Logo from '../logo/Logo';
-import { footerLinks } from '@/data';
+import { footerLinks, footerMenus } from '@/data';
 
 import './Footer.scss';
 
@@ -33,6 +33,16 @@ const Footer = () => {
           <div className='right'>
             <div className='links'>
               {footerLinks.map((link) => {
+                const { id, url, label } = link;
+                return (
+                  <Link key={id} href={url}>
+                    {label}
+                  </Link>
+                );
+              })}
+            </div>
+            <div className='links'>
+              {footerMenus.map((link) => {
                 const { id, url, label } = link;
                 return (
                   <Link key={id} href={url}>
