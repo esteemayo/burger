@@ -189,7 +189,8 @@
             color: $clr-white;
             transition: all 0.3s;
 
-            &:hover, &:visited {
+            &:hover,
+            &:visited {
               text-decoration: underline;
               text-underline-offset: 0.5rem;
               text-decoration-color: $clr-primary;
