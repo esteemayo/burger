@@ -62,10 +62,19 @@
             line-height: 2.4rem;
             transition: all 0.3s;
 
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+
             &:hover {
               text-decoration: underline;
               text-underline-offset: 0.5rem;
               text-decoration-color: $clr-primary;
+            }
+
+            img {
+              width: 1.6rem;
+              height: 1.6rem;
             }
           }
         }
