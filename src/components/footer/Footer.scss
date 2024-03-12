@@ -41,6 +41,27 @@
 
       .right {
         flex: 1;
+        display: flex;
+        gap: 10rem;
+
+        .links {
+          display: flex;
+          flex-direction: column;
+          gap: 1.6rem;
+
+          a,
+          a:link,
+          a:active {
+            text-decoration-color: $clr-black;
+            text-decoration-line: none;
+            text-decoration-style: solid;
+            text-decoration-thickness: auto;
+            font-weight: 400;
+            font-size: 1.5rem;
+            color: $clr-white;
+            line-height: 2.4rem;
+          }
+        }
       }
     }
 
