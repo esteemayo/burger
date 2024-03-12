@@ -4,6 +4,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import Link from 'next/link';
 import RoomServiceIcon from '@mui/icons-material/RoomService';
 import Image from 'next/image';
+import RemoveShoppingCartIcon from '@mui/icons-material/RemoveShoppingCart';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 
 import './Navbar.scss';
@@ -83,7 +84,9 @@ const Navbar = () => {
                       <div className='productBox'>
                         <span className='quantity'>1</span>
                         <div className='cardItem'>Grilled chicken burger</div>
-                        <div className='deleteBtn'>icon</div>
+                        <div className='deleteBtn'>
+                          <RemoveShoppingCartIcon />
+                        </div>
                         <span className='price'>$11999.0</span>
                       </div>
                     </div>
