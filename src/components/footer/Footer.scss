@@ -182,6 +182,19 @@
           align-items: center;
           justify-content: flex-end;
           gap: 1rem;
+
+          a,
+          a:link,
+          a:active {
+            color: $clr-white;
+            transition: all 0.3s;
+
+            &:hover, &:visited {
+              text-decoration: underline;
+              text-underline-offset: 0.5rem;
+              text-decoration-color: $clr-primary;
+            }
+          }
         }
       }
     }
