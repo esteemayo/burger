@@ -20,7 +20,7 @@ export const footerMenus: FooterLinks = [
   { id: 3, url: '/', label: 'View all countries' },
   { id: 4, url: '/', label: 'Pickup near me' },
   { id: 5, url: '/', label: 'About Uber Eats' },
-  { id: 6, url: '/', label: 'English' },
+  { id: 6, url: '/', icon: '/svg/language.svg', label: 'English' },
 ];
 
 export const socials: Socials = [

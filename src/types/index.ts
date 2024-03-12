@@ -4,6 +4,7 @@ import { OverridableComponent } from '@mui/material/OverridableComponent';
 export type FooterLinks = {
   id: number;
   url: string;
+  icon?: string;
   label: string;
 }[];
 
