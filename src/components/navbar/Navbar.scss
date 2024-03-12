@@ -193,6 +193,10 @@
               font-weight: 700;
               padding: 1.5rem;
               color: #000;
+
+              &.empty {
+                text-align: center;
+              }
             }
 
             hr {
@@ -275,6 +279,27 @@
 
               display: flex;
               justify-content: center;
+            }
+
+            .cartFooter {
+              margin-top: 1rem;
+
+              .cartBtn {
+                border: none;
+                outline: none;
+                width: 100%;
+                text-transform: capitalize;
+                font-weight: 500;
+                font-size: 1.3rem;
+                padding: 0.5rem;
+                background: #a00c1a;
+                color: #fff;
+                border-radius: 0.6rem;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              }
             }
           }
         }

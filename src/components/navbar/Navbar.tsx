@@ -54,7 +54,7 @@ const Navbar = () => {
               <div className='card'>
                 {cart.length < 1 ? (
                   <>
-                    <div className='cardHeader'>Empty bag</div>
+                    <div className='cardHeader empty'>Empty cart</div>
                     <hr />
                     <div className='cartFooter'>
                       <Link href='/' className='cartBtn'>
