@@ -33,6 +33,8 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', isActiveHandler);
   }, [isActiveHandler]);
 
+  const cart = [{ id: 1, name: 'Grilled chicken burger', price: 11999.0 }];
+
   return (
     <nav className={navClasses}>
       <div className='wrapper'>
@@ -62,6 +64,40 @@ const Navbar = () => {
           <div className='cart'>
             <ShoppingCartIcon />
             <span className='count'>3</span>
+            <div className='cartBox'>
+              <div className='card'>
+                {cart.length < 1 ? (
+                  <>
+                    <div>Empty bag</div>
+                    <hr />
+                    <div className='cartFooter'>
+                      <Link href='/' className='cartBtn'>
+                        Continue shopping
+                      </Link>
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <div className='cardHeader'>Your order</div>
+                    <div className='cardProductBox'>
+                      <div className='productBox'>
+                        <span className='quantity'>1</span>
+                        <div className='cardItem'>Grilled chicken burger</div>
+                        <div className='deleteBtn'>icon</div>
+                        <span className='price'>$11999.0</span>
+                      </div>
+                    </div>
+                    <div className='itemTotal'>
+                      <span className='subTotal'>Items subtotal:</span>
+                      <span>N subTotal</span>
+                    </div>
+                    <Link href='/checkout' className='checkoutBtn'>
+                      Proceed to Checkout
+                    </Link>
+                  </>
+                )}
+              </div>
+            </div>
           </div>
         </div>
       </div>
