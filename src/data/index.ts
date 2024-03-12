@@ -3,7 +3,7 @@ import XIcon from '@mui/icons-material/X';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 
-import { FooterLinks, Socials } from '@/types';
+import { FooterLinks, Menus, Socials } from '@/types';
 
 export const footerLinks: FooterLinks = [
   { id: 1, url: '/', label: 'Get Help' },
@@ -24,8 +24,15 @@ export const footerMenus: FooterLinks = [
 ];
 
 export const socials: Socials = [
-  { id: 1, icon: FacebookIcon },
-  { id: 2, icon: XIcon },
-  { id: 3, icon: InstagramIcon },
-  { id: 4, icon: YouTubeIcon },
+  { id: 1, url: '/', icon: FacebookIcon },
+  { id: 2, url: '/', icon: XIcon },
+  { id: 3, url: '/', icon: InstagramIcon },
+  { id: 4, url: '/', icon: YouTubeIcon },
+];
+
+export const menus: Menus = [
+  { id: 1, url: '/', label: 'Privacy Policy' },
+  { id: 2, url: '/', label: 'Terms' },
+  { id: 3, url: '/', label: 'Pricing' },
+  { id: 4, url: '/', label: 'Do not sell or share my personal information' },
 ];
