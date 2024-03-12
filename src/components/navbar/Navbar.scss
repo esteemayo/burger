@@ -104,7 +104,7 @@
           width: 20rem;
           padding: 1.4rem;
           background-color: #fff;
-          border-radius: 0.5rem;
+          border-radius: 0.8rem;
           -webkit-box-shadow: 0px 0px 5px -1px rgba(73, 73, 73, 0.16);
           box-shadow: 0px 0px 5px -1px rgba(73, 73, 73, 0.16);
           visibility: hidden;
@@ -170,7 +170,7 @@
           width: fit-content;
           padding: 0.5rem 3px;
           background-color: #fff;
-          border-radius: 0.5rem;
+          border-radius: 0.8rem;
           -webkit-box-shadow: 0px 0px 5px -1px rgba(73, 73, 73, 0.16);
           box-shadow: 0px 0px 5px -1px rgba(73, 73, 73, 0.16);
           z-index: 1000;
@@ -192,7 +192,7 @@
                 display: flex;
                 justify-content: space-between;
                 gap: 0.8rem;
-                padding: 2.4rem;
+                padding: 1.5rem;
                 color: lightgray;
                 border-top: 1px solid #f7dbdb;
 
@@ -227,6 +227,15 @@
                   white-space: nowrap;
                 }
               }
+            }
+
+            .itemTotal {
+              display: flex;
+              justify-content: space-between;
+              padding: 1.5rem;
+              border-top: 1px solid lightgray;
+              border-bottom: 1px solid lightgray;
+              margin-bottom: 1rem;
             }
           }
         }
