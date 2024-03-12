@@ -11,23 +11,14 @@ import './Navbar.scss';
 
 const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
-  const [showMenu, setShowMenu] = useState(false);
 
   const isActiveHandler = useCallback(() => {
     setIsActive(window.scrollY > 0 ? true : false);
   }, []);
 
-  const handleToggleMenu = useCallback(() => {
-    setShowMenu((value) => !value);
-  }, []);
-
   const navClasses = useMemo(() => {
     return isActive ? 'navbar active' : 'navbar';
   }, [isActive]);
-
-  const menuClasses = useMemo(() => {
-    return showMenu ? 'userMenu active' : 'userMenu';
-  }, [showMenu]);
 
   useEffect(() => {
     window.addEventListener('scroll', isActiveHandler);
@@ -50,14 +41,8 @@ const Navbar = () => {
             <span>Products</span>
           </Link>
           <div className='user'>
-            <Image
-              src='/img/user.png'
-              width={30}
-              height={30}
-              alt=''
-              onMouseOver={handleToggleMenu}
-            />
-            <div className={menuClasses}>
+            <Image src='/img/user.png' width={30} height={30} alt='' />
+            <div className='userMenu'>
               <Link href='/login'>Login</Link>
               <Link href='/register'>Register</Link>
             </div>
