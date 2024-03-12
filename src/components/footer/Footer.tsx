@@ -51,9 +51,10 @@ const Footer = () => {
             </div>
             <div className='links'>
               {footerMenus.map((link) => {
-                const { id, url, label } = link;
+                const { id, url, icon, label } = link;
                 return (
                   <Link key={id} href={url}>
+                    {icon && <Image src={icon} width={16} height={16} alt='' />}{' '}
                     {label}
                   </Link>
                 );
