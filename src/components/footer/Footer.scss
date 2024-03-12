@@ -60,6 +60,13 @@
             font-size: 1.5rem;
             color: $clr-white;
             line-height: 2.4rem;
+            transition: all 0.3s;
+
+            &:hover {
+              text-decoration: underline;
+              text-underline-offset: 0.5rem;
+              text-decoration-color: $clr-secondary;
+            }
           }
         }
       }
