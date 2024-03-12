@@ -214,7 +214,7 @@
                 justify-content: space-between;
                 gap: 0.8rem;
                 padding: 1.5rem;
-                color: lightgray;
+                color: #d3d3d3;
                 border-top: 1px solid #f7dbdb;
 
                 .quantity {
@@ -233,10 +233,34 @@
                   overflow: hidden;
                 }
 
+                .cardButtons {
+                  display: flex;
+                  align-items: center;
+                  color: #00000059;
+
+                  button {
+                    display: inline-block;
+                    border: none;
+                    outline: none;
+                    background-color: transparent;
+                    color: inherit;
+                    cursor: pointer;
+
+                    &:disabled {
+                      color: #d3d3d3;
+                    }
+
+                    svg {
+                      font-size: 2rem;
+                      color: currentColor;
+                    }
+                  }
+                }
+
                 .deleteBtn {
                   svg {
-                    font-size: 1.6rem;
-                    color: lightgray;
+                    font-size: var(--default-font-size);
+                    color: #d3d3d3;
                     cursor: pointer;
                   }
                 }
@@ -244,7 +268,7 @@
                 .price {
                   font-weight: 500;
                   font-size: 1.3rem;
-                  color: lightgray;
+                  color: #d3d3d3;
                   white-space: nowrap;
                 }
               }

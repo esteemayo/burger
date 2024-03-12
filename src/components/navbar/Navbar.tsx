@@ -73,10 +73,10 @@ const Navbar = () => {
                         <div className='cardItem'>Grilled chicken burger</div>
                         <div className='cardButtons'>
                           <button>
-                            <ExpandLessIcon />
+                            <ExpandMoreIcon />
                           </button>
                           <button>
-                            <ExpandMoreIcon />
+                            <ExpandLessIcon />
                           </button>
                         </div>
                         <div className='deleteBtn'>
