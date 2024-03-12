@@ -24,6 +24,9 @@
           gap: 12rem;
 
           .download {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
           }
         }
       }
