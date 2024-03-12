@@ -9,7 +9,14 @@ export type FooterLinks = {
 
 export type Socials = {
   id: number;
+  url: string;
   icon: OverridableComponent<SvgIconTypeMap<{}, 'svg'>> & {
     muiName: string;
   };
+}[];
+
+export type Menus = {
+  id: number;
+  url: string;
+  label: string;
 }[];
