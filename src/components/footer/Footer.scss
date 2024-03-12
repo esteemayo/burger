@@ -172,6 +172,17 @@
             }
           }
         }
+
+        .security {
+          font-weight: 400;
+          font-size: 1.4rem;
+          line-height: 2rem;
+
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          gap: 1rem;
+        }
       }
     }
   }

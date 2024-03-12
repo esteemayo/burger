@@ -81,10 +81,11 @@ const Footer = () => {
                 );
               })}
             </div>
-            <div className=''>
+            <div className='security'>
               This site is protected by reCAPTCHA and the Google{' '}
               <Link href='/'>Privacy Policy</Link> and{' '}
               <Link href='/'>Terms of Service</Link> apply.
+              <div>© 2024 Burger Technologies Inc.</div>
             </div>
           </div>
         </div>
