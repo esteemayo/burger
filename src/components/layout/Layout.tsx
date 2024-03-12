@@ -1,5 +1,6 @@
 import Footer from '../footer/Footer';
 import Navbar from '../navbar/Navbar';
+import Designer from '../designer/Designer';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -7,6 +8,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <Navbar />
       {children}
       <Footer />
+      <Designer />
     </>
   );
 };
