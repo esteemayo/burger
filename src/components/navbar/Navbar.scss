@@ -194,6 +194,21 @@
                 padding: 2.4rem;
                 color: lightgray;
                 border-top: 1px solid #f7dbdb;
+
+                .quantity {
+                  font-weight: 700;
+                }
+
+                .cardItem {
+                  display: inline-block;
+                  width: 15rem;
+                  white-space: nowrap;
+                  text-overflow: ellipsis;
+                  text-transform: capitalize;
+                  font-weight: 700;
+                  color: #ff0018;
+                  overflow: hidden;
+                }
               }
             }
           }
