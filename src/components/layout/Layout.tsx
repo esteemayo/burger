@@ -4,12 +4,12 @@ import Designer from '../designer/Designer';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <>
+    <main>
       <Navbar />
       {children}
       <Footer />
       <Designer />
-    </>
+    </main>
   );
 };
 
