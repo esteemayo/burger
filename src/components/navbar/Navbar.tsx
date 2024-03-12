@@ -9,6 +9,8 @@ import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import RemoveShoppingCartIcon from '@mui/icons-material/RemoveShoppingCart';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
+import Logo from '../logo/Logo';
+
 import './Navbar.scss';
 
 const Navbar = () => {
@@ -32,11 +34,7 @@ const Navbar = () => {
   return (
     <nav className={navClasses}>
       <div className='wrapper'>
-        <div className='logo'>
-          <Link href='/'>
-            <h1>Burger</h1>
-          </Link>
-        </div>
+        <Logo />
         <div className='nav'>
           <Link href='/products'>
             <RoomServiceIcon />

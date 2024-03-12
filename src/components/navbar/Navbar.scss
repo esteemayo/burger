@@ -24,32 +24,6 @@
     align-items: center;
     justify-content: space-between;
 
-    .logo {
-      text-transform: capitalize;
-      font-weight: 500;
-      font-size: 1.8rem;
-      color: $clr-primary;
-
-      a,
-      a:link,
-      a:active {
-        color: inherit;
-
-        h1 {
-          color: currentColor;
-
-          &::after {
-            display: inline-block;
-            content: '';
-            width: 0.5rem;
-            height: 0.5rem;
-            background-color: $clr-secondary;
-            border-radius: 50%;
-          }
-        }
-      }
-    }
-
     .nav {
       display: flex;
       align-items: center;
