@@ -1,11 +1,13 @@
 'use client';
 
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import Link from 'next/link';
 import RoomServiceIcon from '@mui/icons-material/RoomService';
+import Link from 'next/link';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import Image from 'next/image';
-import RemoveShoppingCartIcon from '@mui/icons-material/RemoveShoppingCart';
 import { useCallback, useEffect, useMemo, useState } from 'react';
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+import RemoveShoppingCartIcon from '@mui/icons-material/RemoveShoppingCart';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import './Navbar.scss';
 
@@ -57,7 +59,7 @@ const Navbar = () => {
                     <div className='cardHeader empty'>Empty cart</div>
                     <hr />
                     <div className='cartFooter'>
-                      <Link href='/' className='cartBtn'>
+                      <Link href='/products' className='cartBtn'>
                         Continue shopping
                       </Link>
                     </div>
@@ -69,6 +71,14 @@ const Navbar = () => {
                       <div className='productBox'>
                         <span className='quantity'>1</span>
                         <div className='cardItem'>Grilled chicken burger</div>
+                        <div className='cardButtons'>
+                          <button>
+                            <ExpandLessIcon />
+                          </button>
+                          <button>
+                            <ExpandMoreIcon />
+                          </button>
+                        </div>
                         <div className='deleteBtn'>
                           <RemoveShoppingCartIcon />
                         </div>
