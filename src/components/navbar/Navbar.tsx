@@ -68,7 +68,7 @@ const Navbar = () => {
               <div className='card'>
                 {cart.length < 1 ? (
                   <>
-                    <div>Empty bag</div>
+                    <div className='cardHeader'>Empty bag</div>
                     <hr />
                     <div className='cartFooter'>
                       <Link href='/' className='cartBtn'>
