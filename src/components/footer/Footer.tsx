@@ -1,5 +1,8 @@
-import Link from 'next/link';
+'use client';
+
 import Image from 'next/image';
+import Link from 'next/link';
+import { useMemo } from 'react';
 
 import Logo from '../logo/Logo';
 import { footerLinks, footerMenus, menus, socials } from '@/data';
@@ -7,6 +10,11 @@ import { footerLinks, footerMenus, menus, socials } from '@/data';
 import './Footer.scss';
 
 const Footer = () => {
+  const year = useMemo(() => {
+    const date = new Date();
+    return date.getFullYear();
+  }, []);
+
   return (
     <footer className='footer'>
       <div className='wrapper'>
@@ -85,7 +93,7 @@ const Footer = () => {
               This site is protected by reCAPTCHA and the Google{' '}
               <Link href='/'>Privacy Policy</Link> and{' '}
               <Link href='/'>Terms of Service</Link> apply.
-              <div>© 2024 Burger Technologies Inc.</div>
+              <div>© {year} Burger Technologies Inc.</div>
             </div>
           </div>
         </div>
