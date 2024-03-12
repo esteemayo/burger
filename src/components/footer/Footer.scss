@@ -143,6 +143,15 @@
 
       .right {
         flex: 3;
+        align-self: flex-end;
+        text-align: right;
+
+        .menus {
+          display: flex;
+          align-items: center;
+          justify-content: end;
+          gap: 2rem;
+        }
       }
     }
   }
