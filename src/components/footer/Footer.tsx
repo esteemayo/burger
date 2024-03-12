@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import Logo from '../logo/Logo';
-import { footerLinks, footerMenus } from '@/data';
+import { footerLinks, footerMenus, menus, socials } from '@/data';
 
 import './Footer.scss';
 
@@ -53,7 +53,41 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className='bottom'></div>
+        <hr />
+        <div className='bottom'>
+          <div className='left'>
+            <h6>Follow us</h6>
+            <ul className='socials'>
+              {socials.map((item) => {
+                const { id, url, icon: Icon } = item;
+                return (
+                  <li key={id}>
+                    <Link href={url}>
+                      <Icon />
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+          <div className='right'>
+            <div className='menus'>
+              {menus.map((menu) => {
+                const { id, url, label } = menu;
+                return (
+                  <Link key={id} href={url}>
+                    {label}
+                  </Link>
+                );
+              })}
+            </div>
+            <div className=''>
+              This site is protected by reCAPTCHA and the Google{' '}
+              <Link href='/'>Privacy Policy</Link> and{' '}
+              <Link href='/'>Terms of Service</Link> apply.
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
   );
