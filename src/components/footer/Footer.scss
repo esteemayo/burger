@@ -79,6 +79,11 @@
     }
 
     .bottom {
+      h6 {
+        color: currentColor;
+        font-weight: 900;
+        font-size: var(--default-font-size);
+      }
     }
   }
 }
