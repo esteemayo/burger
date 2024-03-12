@@ -9,5 +9,25 @@
 
   .wrapper {
     width: 144rem;
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+
+      .left {
+        flex: 1;
+        .logoBox {
+          .download {
+          }
+        }
+      }
+
+      .right {
+        flex: 1;
+      }
+    }
+
+    .bottom {
+    }
   }
 }

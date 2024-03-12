@@ -12,7 +12,7 @@ const Footer = () => {
       <div className='wrapper'>
         <div className='top'>
           <div className='left'>
-            <div className=''>
+            <div className='logoBox'>
               <Logo />
               <div className='download'>
                 <Image
