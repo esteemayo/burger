@@ -1,2 +1,21 @@
+@import '../../styles/variables.scss';
+
 .designer {
+  text-align: center;
+  padding: 1.6rem;
+  background-color: transparent;
+  color: $clr-gray-dark;
+
+  .wrapper {
+    padding: 0 3rem;
+
+    .copyright {
+      .text {
+        font-weight: 400;
+        font-size: 1.3rem;
+        text-align: center;
+        letter-spacing: 2px;
+      }
+    }
+  }
 }
