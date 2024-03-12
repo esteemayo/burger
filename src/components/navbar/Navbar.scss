@@ -161,6 +161,20 @@
           align-items: center;
           justify-content: center;
         }
+
+        .cartBox {
+          position: absolute;
+          top: 4rem;
+          right: 0;
+          min-width: 24rem;
+          width: fit-content;
+          padding: 0.5rem 3px;
+          background-color: #fff;
+          border-radius: 0.5rem;
+          -webkit-box-shadow: 0px 0px 5px -1px rgba(73, 73, 73, 0.16);
+          box-shadow: 0px 0px 5px -1px rgba(73, 73, 73, 0.16);
+          z-index: 1000;
+        }
       }
     }
   }
