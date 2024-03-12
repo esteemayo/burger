@@ -27,6 +27,14 @@
             display: flex;
             align-items: center;
             gap: 2rem;
+
+            img {
+              width: 13.5rem;
+              height: 4rem;
+              display: inline-block;
+              object-fit: cover;
+              cursor: pointer;
+            }
           }
         }
       }
