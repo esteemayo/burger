@@ -1,7 +1,7 @@
+import Link from 'next/link';
 import LocalDiningIcon from '@mui/icons-material/LocalDining';
 
 import './Features.scss';
-import Link from 'next/link';
 
 const Features = () => {
   return (

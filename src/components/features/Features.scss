@@ -1,2 +1,21 @@
 .features {
+  display: flex;
+  justify-content: center;
+  padding: 6rem 0;
+
+  .container {
+    width: 144rem;
+
+    .wrapper {
+      width: 100%;
+
+      .items {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 2rem;
+      }
+    }
+  }
 }
