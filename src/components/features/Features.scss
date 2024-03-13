@@ -6,7 +6,7 @@
   padding: 6rem 0;
 
   .container {
-    width: 144rem;
+    width: 120rem;
 
     .wrapper {
       width: 100%;
@@ -70,6 +70,15 @@
                   opacity: 0.7;
                 }
               }
+            }
+
+            .desc {
+              display: inline-block;
+              text-align: center;
+              font-family: inherit;
+              font-size: 1.5rem;
+              color: $clr-gray-light;
+              line-height: 1.5;
             }
           }
         }

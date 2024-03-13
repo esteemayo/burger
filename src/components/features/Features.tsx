@@ -1,3 +1,4 @@
+import RoomServiceIcon from '@mui/icons-material/RoomService';
 import Link from 'next/link';
 import LocalDiningIcon from '@mui/icons-material/LocalDining';
 
@@ -40,7 +41,7 @@ const Features = () => {
             <article className='item'>
               <div className='itemWrapper'>
                 <div className='iconWrapper'>
-                  <LocalDiningIcon />
+                  <RoomServiceIcon />
                 </div>
                 <h3 className='heading'>
                   <Link href='/'>Fast delivery</Link>
