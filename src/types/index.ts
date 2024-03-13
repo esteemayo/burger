@@ -1,4 +1,5 @@
 import { SvgIconTypeMap } from '@mui/material';
+import { IconType } from 'react-icons/lib';
 import { OverridableComponent } from '@mui/material/OverridableComponent';
 
 export type FooterLinks = {
@@ -20,4 +21,15 @@ export type Menus = {
   id: number;
   url: string;
   label: string;
+}[];
+
+export type FeaturesType = {
+  id: number;
+  icon:
+    | (OverridableComponent<SvgIconTypeMap<{}, 'svg'>> & {
+        muiName: string;
+      })
+    | IconType;
+  title: string;
+  desc: string;
 }[];
