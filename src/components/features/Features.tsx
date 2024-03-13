@@ -10,18 +10,21 @@ const Features = () => {
         <div className='wrapper'>
           <div className='items'>
             <article className='item'>
-              <div className='iconWrapper'>
-                <LocalDiningIcon />
+              <div className='itemWrapper'>
+                <div className='iconWrapper'>
+                  <LocalDiningIcon />
+                </div>
+                <h3 className='heading'>
+                  <Link href='/'>Tropical atmosphere</Link>
+                </h3>
+                <p className='desc'>
+                  Our restaurant offers an amazing dining atmosphere for you and
+                  your guests.
+                </p>
               </div>
-              <h3 className='heading'>
-                <Link href='/'>Tropical atmosphere</Link>
-              </h3>
-              <p className='desc'>
-                Our restaurant offers an amazing dining atmosphere for you and
-                your guests.
-              </p>
             </article>
             <article className='item'>
+              <div className='itemWrapper'>
               <div className='iconWrapper'>
                 <LocalDiningIcon />
               </div>
@@ -32,8 +35,10 @@ const Features = () => {
                 Our foods are carefully sourced and prepared for the nourishment
                 of everyone
               </p>
+              </div>
             </article>
             <article className='item'>
+              <div className='itemWrapper'>
               <div className='iconWrapper'>
                 <LocalDiningIcon />
               </div>
@@ -44,6 +49,7 @@ const Features = () => {
                 Get the best customer service experience with your orders at any
                 time
               </p>
+              </div>
             </article>
           </div>
         </div>

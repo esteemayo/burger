@@ -15,6 +15,14 @@
         align-items: center;
         justify-content: flex-start;
         gap: 2rem;
+
+        .item {
+          padding: 0 5rem;
+
+          .itemWrapper {
+            width: 26.5rem;
+          }
+        }
       }
     }
   }
