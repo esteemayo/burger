@@ -28,8 +28,10 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      width: 50%;
       padding: 1rem 2rem;
       background-color: $clr-white;
+      border: 1px solid #05a357;
       border-radius: 0.5rem;
 
       .searchInput {
@@ -42,6 +44,13 @@
         }
 
         input {
+          display: inline-block;
+          border: none;
+          outline: none;
+          width: 100%;
+          height: 100%;
+          background-color: transparent;
+          color: $clr-gray-dark;
         }
       }
 
