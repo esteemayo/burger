@@ -68,6 +68,18 @@
             color: $clr-gray-light;
           }
         }
+
+        .btnClear {
+          display: inline-block;
+          border: none;
+          outline: none;
+          font-weight: 700;
+          font-size: 1.4rem;
+          background-color: transparent;
+          color: $clr-gray-dark;
+          margin-right: 2rem;
+          line-height: 1.6rem;
+        }
       }
 
       .searchBtn {

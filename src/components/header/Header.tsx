@@ -16,7 +16,12 @@ const Header = () => {
               alt='search icon'
               className='searchIcon'
             />
-            <input type='text' className='search' placeholder='Search burger...' />
+            <input
+              type='text'
+              className='search'
+              placeholder='Search burger...'
+            />
+            <button className='btnClear'>Clear</button>
           </div>
           <button className='searchBtn'>Find burger</button>
         </div>
