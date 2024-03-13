@@ -13,80 +13,9 @@
 
       .items {
         display: flex;
-        flex-wrap: wrap;
         align-items: center;
         justify-content: flex-start;
         gap: 2rem;
-
-        .item {
-          padding: 0 5rem;
-
-          &:not(:last-child){
-            border-right: 1px dotted $clr-gray-light;
-          }
-
-          .itemWrapper {
-            width: 26.5rem;
-            text-align: center;
-
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-
-            .iconWrapper {
-              width: 9.5rem;
-              height: 9.5rem;
-              font-size: 4rem;
-              line-height: 9.5rem;
-              background-color: $clr-primary;
-              color: $clr-white;
-              border-radius: 50%;
-
-              display: flex;
-              align-items: center;
-              justify-content: center;
-
-              svg {
-                font-size: inherit;
-                fill: currentColor;
-              }
-            }
-
-            .heading {
-              text-transform: uppercase;
-              text-align: center;
-              text-rendering: optimizeLegibility;
-              font-weight: 600;
-              font-size: var(--default-font-size);
-              color: $clr-gray-dark;
-              line-height: 1.5;
-              margin-top: 1.5rem;
-              margin-bottom: 0.5rem;
-
-              a,
-              a:link,
-              a:active {
-                color: currentColor;
-                transition: all 0.3s;
-
-                &:hover,
-                &:visited {
-                  opacity: 0.7;
-                }
-              }
-            }
-
-            .desc {
-              display: inline-block;
-              text-align: center;
-              font-family: inherit;
-              font-size: 1.5rem;
-              color: $clr-gray-light;
-              line-height: 1.5;
-            }
-          }
-        }
       }
     }
   }
