@@ -35,29 +35,27 @@ const Header = () => {
       <div className='container'>
         <h1>Search</h1>
         <div className='search'>
-          <div className='searchWrapper'>
-            <div className='searchInput'>
-              <Image
-                src='/img/search.png'
-                width={20}
-                height={20}
-                alt='search icon'
-                className='searchIcon'
-              />
-              <input
-                type='text'
-                ref={inputRef}
-                className='search'
-                value={query}
-                placeholder='Search burger...'
-                onChange={handleChange}
-              />
-              {query.length > 0 && (
-                <button className='btnClear' onClick={handleClear}>
-                  Clear
-                </button>
-              )}
-            </div>
+          <div className='searchInput'>
+            <Image
+              src='/img/search.png'
+              width={20}
+              height={20}
+              alt='search icon'
+              className='searchIcon'
+            />
+            <input
+              type='text'
+              ref={inputRef}
+              className='search'
+              value={query}
+              placeholder='Search burger...'
+              onChange={handleChange}
+            />
+            {query.length > 0 && (
+              <button className='btnClear' onClick={handleClear}>
+                Clear
+              </button>
+            )}
           </div>
           <button className='searchBtn' onClick={handleClick}>
             Find burger
