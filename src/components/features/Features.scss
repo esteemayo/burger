@@ -1,3 +1,5 @@
+@import '../../styles/variables.scss';
+
 .features {
   display: flex;
   justify-content: center;
@@ -21,6 +23,18 @@
 
           .itemWrapper {
             width: 26.5rem;
+
+            .iconWrapper {
+              width: 9.5rem;
+              height: 9.5rem;
+              font-size: 4rem;
+              line-height: 9.5rem;
+              background-color: $clr-tertiary;
+
+              svg {
+                font-size: inherit;
+              }
+            }
           }
         }
       }
