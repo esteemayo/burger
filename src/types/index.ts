@@ -36,4 +36,4 @@ type Feature = {
 
 export type FeaturesType = Feature[];
 
-export type FeatureProps = Feature[];
+export type FeatureProps = Feature;
