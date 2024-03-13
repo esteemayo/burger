@@ -23,6 +23,12 @@
 
           .itemWrapper {
             width: 26.5rem;
+            text-align: center;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
 
             .iconWrapper {
               width: 9.5rem;
