@@ -21,13 +21,29 @@
       }
 
       .box {
-        .left {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+
+        .left,
+        .right {
+          display: flex;
+          flex-direction: column;
+          gap: 2.5px;
+
+          .line {
+            width: 9.5rem;
+            height: 0.5px;
+            background-color: $clr-gray-light;
+          }
         }
 
         .icon {
-        }
-
-        .right {
+          svg {
+            font-size: 5rem;
+            color: $clr-gray-dark;
+          }
         }
       }
     }
