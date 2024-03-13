@@ -1,2 +1,9 @@
 .menus {
+  display: flex;
+  justify-content: center;
+  padding: 12rem;
+
+  .container {
+    width: 144rem;
+  }
 }
