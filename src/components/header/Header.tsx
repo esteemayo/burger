@@ -33,7 +33,7 @@ const Header = () => {
   return (
     <header className='header'>
       <div className='container'>
-        <h1>Search</h1>
+        <h1>The best burger to share with your family</h1>
         <div className='search'>
           <div className='searchInput'>
             <Image
