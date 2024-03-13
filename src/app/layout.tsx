@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
-import { Nunito } from 'next/font/google';
+import { Poppins } from 'next/font/google';
 
 import Layout from '@/components/layout/Layout';
 
 import './globals.scss';
 
-const nunito = Nunito({
+const poppins = Poppins({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600', '700', '800', '900'],
 });
@@ -22,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={nunito.className}>
+      <body className={poppins.className}>
         <Layout>{children}</Layout>
       </body>
     </html>
