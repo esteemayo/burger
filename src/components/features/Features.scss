@@ -48,6 +48,29 @@
                 fill: currentColor;
               }
             }
+
+            .heading {
+              text-transform: uppercase;
+              text-rendering: optimizeLegibility;
+              font-weight: 600;
+              font-size: var(--default-font-size);
+              color: $clr-gray-dark;
+              line-height: 1.5;
+              margin-top: 1.5rem;
+              margin-bottom: 0.5rem;
+
+              a,
+              a:link,
+              a:active {
+                color: currentColor;
+                transition: all 0.3s;
+
+                &:hover,
+                &:visited {
+                  opacity: 0.7;
+                }
+              }
+            }
           }
         }
       }
