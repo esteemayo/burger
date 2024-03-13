@@ -1,11 +1,13 @@
 'use client';
 
 import Image from 'next/image';
-import { useCallback, useState } from 'react';
+import { useCallback, useRef, useState } from 'react';
 
 import './Header.scss';
 
 const Header = () => {
+  const inputRef = useRef<HTMLInputElement>(null);
+
   const [query, setQuery] = useState('');
 
   const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
@@ -14,12 +16,19 @@ const Header = () => {
 
   const handleClear = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
     e.stopPropagation();
+
     setQuery('');
+    inputRef.current?.focus();
   }, []);
 
-  const handleClick = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
-    e.stopPropagation();
-  }, []);
+  const handleClick = useCallback(
+    (e: React.MouseEvent<HTMLButtonElement>) => {
+      e.stopPropagation();
+
+      console.log(query);
+    },
+    [query]
+  );
 
   return (
     <header className='header'>
@@ -36,6 +45,7 @@ const Header = () => {
             />
             <input
               type='text'
+              ref={inputRef}
               className='search'
               value={query}
               placeholder='Search burger...'
