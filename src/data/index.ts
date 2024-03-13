@@ -1,9 +1,12 @@
 import FacebookIcon from '@mui/icons-material/Facebook';
 import XIcon from '@mui/icons-material/X';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import { SiCodechef } from 'react-icons/si';
+import RoomServiceIcon from '@mui/icons-material/RoomService';
 import YouTubeIcon from '@mui/icons-material/YouTube';
+import LocalDiningIcon from '@mui/icons-material/LocalDining';
 
-import { FooterLinks, Menus, Socials } from '@/types';
+import { FeaturesType, FooterLinks, Menus, Socials } from '@/types';
 
 export const footerLinks: FooterLinks = [
   { id: 1, url: '/', label: 'Get Help' },
@@ -35,4 +38,25 @@ export const menus: Menus = [
   { id: 2, url: '/', label: 'Terms' },
   { id: 3, url: '/', label: 'Pricing' },
   { id: 4, url: '/', label: 'Do not sell or share my personal information' },
+];
+
+export const features: FeaturesType = [
+  {
+    id: 1,
+    icon: SiCodechef,
+    title: 'Tropical atmosphere',
+    desc: 'Our restaurant offers an amazing dining atmosphere for you and your guests.',
+  },
+  {
+    id: 2,
+    icon: LocalDiningIcon,
+    title: 'Delicious food',
+    desc: 'Our foods are carefully sourced and prepared for the nourishment of everyone',
+  },
+  {
+    id: 3,
+    icon: RoomServiceIcon,
+    title: 'Fast delivery',
+    desc: 'Get the best customer service experience with your orders at any time',
+  },
 ];
