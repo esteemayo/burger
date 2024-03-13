@@ -1,6 +1,7 @@
 import RoomServiceIcon from '@mui/icons-material/RoomService';
 import Link from 'next/link';
 import LocalDiningIcon from '@mui/icons-material/LocalDining';
+import { SiCodechef } from 'react-icons/si';
 
 import './Features.scss';
 
@@ -13,7 +14,7 @@ const Features = () => {
             <article className='item'>
               <div className='itemWrapper'>
                 <div className='iconWrapper'>
-                  <LocalDiningIcon />
+                  <SiCodechef />
                 </div>
                 <h3 className='heading'>
                   <Link href='/'>Tropical atmosphere</Link>
