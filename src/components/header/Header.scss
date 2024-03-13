@@ -1,3 +1,5 @@
+@import '../../styles/variables';
+
 .header {
   width: 100vw;
   height: 85vh;
@@ -23,7 +25,19 @@
     }
 
     .search {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      background-color: $clr-white;
+      border-radius: 0.5rem;
+
       .searchInput {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
         .searchIcon {
         }
 
