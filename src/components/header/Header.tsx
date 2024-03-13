@@ -12,6 +12,11 @@ const Header = () => {
     setQuery(e.target.value);
   }, []);
 
+  const handleClear = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
+    e.stopPropagation();
+    setQuery('');
+  }, []);
+
   const handleClick = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
     e.stopPropagation();
   }, []);
@@ -36,7 +41,11 @@ const Header = () => {
               placeholder='Search burger...'
               onChange={handleChange}
             />
-            <button className='btnClear'>Clear</button>
+            {query.length > 0 && (
+              <button className='btnClear' onClick={handleClear}>
+                Clear
+              </button>
+            )}
           </div>
           <button className='searchBtn' onClick={handleClick}>
             Find burger
