@@ -12,6 +12,10 @@ const Header = () => {
     setQuery(e.target.value);
   }, []);
 
+  const handleClick = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
+    e.stopPropagation();
+  }, []);
+
   return (
     <header className='header'>
       <div className='container'>
@@ -34,7 +38,9 @@ const Header = () => {
             />
             <button className='btnClear'>Clear</button>
           </div>
-          <button className='searchBtn'>Find burger</button>
+          <button className='searchBtn' onClick={handleClick}>
+            Find burger
+          </button>
         </div>
       </div>
     </header>
