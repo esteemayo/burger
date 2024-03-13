@@ -1,8 +1,17 @@
+'use client';
+
 import Image from 'next/image';
+import { useCallback, useState } from 'react';
 
 import './Header.scss';
 
 const Header = () => {
+  const [query, setQuery] = useState('');
+
+  const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+    setQuery(e.target.value);
+  }, []);
+
   return (
     <header className='header'>
       <div className='container'>
@@ -19,7 +28,9 @@ const Header = () => {
             <input
               type='text'
               className='search'
+              value={query}
               placeholder='Search burger...'
+              onChange={handleChange}
             />
             <button className='btnClear'>Clear</button>
           </div>
