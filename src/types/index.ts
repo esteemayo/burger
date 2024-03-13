@@ -23,7 +23,7 @@ export type Menus = {
   label: string;
 }[];
 
-export type FeaturesType = {
+type Feature = {
   id: number;
   icon:
     | (OverridableComponent<SvgIconTypeMap<{}, 'svg'>> & {
@@ -32,4 +32,8 @@ export type FeaturesType = {
     | IconType;
   title: string;
   desc: string;
-}[];
+};
+
+export type FeaturesType = Feature[];
+
+export type FeatureProps = Feature[];
