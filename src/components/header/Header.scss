@@ -4,10 +4,11 @@
   width: 100vw;
   height: 85vh;
   background-color: $clr-secondary;
-  background-image: url(/svg/hero-2.svg);
-  background-size: cover;
-  background-position: center;
+  background-image: url(/svg/hero-1.svg), url(/svg/hero-2.svg);
+  background-size: contain;
+  background-position: center left, center right;
   background-repeat: no-repeat;
+  overflow: visible;
 
   .container {
     width: 100%;
