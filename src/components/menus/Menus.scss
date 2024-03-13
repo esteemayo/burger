@@ -1,3 +1,5 @@
+@import '../../styles/variables.scss';
+
 .menus {
   display: flex;
   justify-content: center;
@@ -5,5 +7,29 @@
 
   .container {
     width: 144rem;
+
+    .headings {
+      text-align: center;
+
+      .heading {
+        text-transform: uppercase;
+        text-rendering: optimizeLegibility;
+        font-weight: 600;
+        font-size: 3.4128rem;
+        line-height: 1.5;
+        color: inherit;
+      }
+
+      .box {
+        .left {
+        }
+
+        .icon {
+        }
+
+        .right {
+        }
+      }
+    }
   }
 }
