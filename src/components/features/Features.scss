@@ -35,10 +35,17 @@
               height: 9.5rem;
               font-size: 4rem;
               line-height: 9.5rem;
-              background-color: $clr-tertiary;
+              background-color: $clr-primary;
+              color: $clr-white;
+              border-radius: 50%;
+
+              display: flex;
+              align-items: center;
+              justify-content: center;
 
               svg {
                 font-size: inherit;
+                fill: currentColor;
               }
             }
           }

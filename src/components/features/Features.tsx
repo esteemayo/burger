@@ -25,30 +25,30 @@ const Features = () => {
             </article>
             <article className='item'>
               <div className='itemWrapper'>
-              <div className='iconWrapper'>
-                <LocalDiningIcon />
-              </div>
-              <h3 className='heading'>
-                <Link href='/'>Delicious food</Link>
-              </h3>
-              <p className='desc'>
-                Our foods are carefully sourced and prepared for the nourishment
-                of everyone
-              </p>
+                <div className='iconWrapper'>
+                  <LocalDiningIcon />
+                </div>
+                <h3 className='heading'>
+                  <Link href='/'>Delicious food</Link>
+                </h3>
+                <p className='desc'>
+                  Our foods are carefully sourced and prepared for the
+                  nourishment of everyone
+                </p>
               </div>
             </article>
             <article className='item'>
               <div className='itemWrapper'>
-              <div className='iconWrapper'>
-                <LocalDiningIcon />
-              </div>
-              <h3 className='heading'>
-                <Link href='/'>Fast delivery</Link>
-              </h3>
-              <p className='desc'>
-                Get the best customer service experience with your orders at any
-                time
-              </p>
+                <div className='iconWrapper'>
+                  <LocalDiningIcon />
+                </div>
+                <h3 className='heading'>
+                  <Link href='/'>Fast delivery</Link>
+                </h3>
+                <p className='desc'>
+                  Get the best customer service experience with your orders at
+                  any time
+                </p>
               </div>
             </article>
           </div>
