@@ -7,7 +7,7 @@ import './Menus.scss';
 
 const Menus = () => {
   return (
-    <section className='menus'>
+    <section className='menusContainer'>
       <div className='container'>
         <div className='headings'>
           <h2 className='heading'>Popular menu</h2>
