@@ -122,4 +122,16 @@ export const cardMenus: CardMenu = [
     image: '/img/hero.png',
     price: 13999,
   },
+  {
+    id: 11,
+    name: 'A double crunchy and fries',
+    image: '/img/hero.png',
+    price: 23499,
+  },
+  {
+    id: 12,
+    name: 'Double crunchy X fries',
+    image: '/img/hero.png',
+    price: 29999,
+  },
 ];
