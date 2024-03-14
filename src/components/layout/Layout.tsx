@@ -1,6 +1,7 @@
 import Footer from '../footer/Footer';
-import Navbar from '../navbar/Navbar';
 import Designer from '../designer/Designer';
+import Navbar from '../navbar/Navbar';
+import ScrollTop from '../scrollTop/ScrollTop';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -9,6 +10,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       {children}
       <Footer />
       <Designer />
+      <ScrollTop />
     </main>
   );
 };
