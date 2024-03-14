@@ -34,6 +34,13 @@ type Feature = {
   desc: string;
 };
 
+export type CardMenu = {
+  id: number;
+  name: string;
+  image: string;
+  price: number;
+}[];
+
 export type FeaturesType = Feature[];
 
 export type FeatureProps = Feature;
