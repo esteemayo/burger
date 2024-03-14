@@ -12,7 +12,13 @@
         text-rendering: optimizeLegibility;
         font-weight: 600;
         font-size: 1.4rem;
+        color: inherit;
         line-height: 1.5;
+        transition: all 0.3s;
+
+        &:hover {
+          color: $clr-secondary;
+        }
       }
     }
   }
