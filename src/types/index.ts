@@ -44,3 +44,10 @@ export type CardMenu = {
 export type FeaturesType = Feature[];
 
 export type FeatureProps = Feature;
+
+export interface MenuCardProps {
+  id: number;
+  name: string;
+  image: string;
+  price: number;
+}
