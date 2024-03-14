@@ -6,7 +6,7 @@ import RoomServiceIcon from '@mui/icons-material/RoomService';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import LocalDiningIcon from '@mui/icons-material/LocalDining';
 
-import { FeaturesType, FooterLinks, Menus, Socials } from '@/types';
+import { CardMenu, FeaturesType, FooterLinks, Menus, Socials } from '@/types';
 
 export const footerLinks: FooterLinks = [
   { id: 1, url: '/', label: 'Get Help' },
@@ -58,5 +58,68 @@ export const features: FeaturesType = [
     icon: RoomServiceIcon,
     title: 'Fast delivery',
     desc: 'Get the best customer service experience with your orders at any time',
+  },
+];
+
+export const cardMenus: CardMenu = [
+  {
+    id: 1,
+    name: 'Double Grilled Chicken Burger',
+    image: '/img/hero.png',
+    price: 26000,
+  },
+  {
+    id: 2,
+    name: 'Grilled Chicken Burger',
+    image: '/img/hero.png',
+    price: 23500,
+  },
+  {
+    id: 3,
+    name: 'A crunchy chicken',
+    image: '/img/hero.png',
+    price: 30000,
+  },
+  {
+    id: 4,
+    name: 'Breakfast burger',
+    image: '/img/hero.png',
+    price: 13000,
+  },
+  {
+    id: 5,
+    name: 'Double beef & fries',
+    image: '/img/hero.png',
+    price: 37000,
+  },
+  {
+    id: 6,
+    name: 'Single beef burger',
+    image: '/img/hero.png',
+    price: 12700,
+  },
+  {
+    id: 7,
+    name: 'Doble beef burger',
+    image: '/img/hero.png',
+    price: 16000,
+  },
+  {
+    id: 8,
+    name: 'Single beef & fries',
+    image: '/img/hero.png',
+    price: 27499,
+  },
+  {
+    id: 9,
+    name: 'Double cruncy chicken burger',
+    image: '/img/hero.png',
+    price: 21999,
+  },
+  {
+    id: 10,
+    name: 'Cruncy chicken burger',
+    image: '/img/hero.png',
+    price: 13999,
   },
 ];
