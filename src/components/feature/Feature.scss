@@ -41,7 +41,7 @@
       text-rendering: optimizeLegibility;
       font-weight: 600;
       font-size: var(--default-font-size);
-      color: $clr-gray-dark;
+      color: $clr-black;
       line-height: 1.5;
       margin-top: 1.5rem;
       margin-bottom: 0.5rem;
@@ -49,12 +49,12 @@
       a,
       a:link,
       a:active {
-        color: currentColor;
+        color: inherit;
         transition: all 0.3s;
 
         &:hover,
         &:visited {
-          opacity: 0.7;
+          opacity: 0.5;
         }
       }
     }
