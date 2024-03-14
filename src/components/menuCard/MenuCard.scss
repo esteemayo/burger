@@ -6,7 +6,7 @@
   a,
   a:link,
   a:active {
-    color: inherit;
+    color: $clr-black;
 
     .imgWrapper {
       width: 30rem;
@@ -37,14 +37,15 @@
         visibility: hidden;
         opacity: 0;
         z-index: -1;
+        transition: all 0.3s linear;
 
         display: flex;
         align-items: center;
         justify-content: center;
 
         button {
-          display: inline-block;
           all: unset;
+          display: inline-block;
           text-transform: uppercase;
           text-align: center;
           font-weight: 600;
