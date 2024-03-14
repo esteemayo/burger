@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import { MenuCardProps } from '@/types';
+import { formatCurrency } from '@/utils/formatCurrency';
 
 import './MenuCard.scss';
 
@@ -17,7 +18,7 @@ const MenuCard = ({ name, image, price }: MenuCardProps) => {
         </div>
         <div className='cardFooter'>
           <h2 className='heading'>{name}</h2>
-          <span className='price'>${price}</span>
+          <span className='price'>{formatCurrency(price)}</span>
         </div>
       </Link>
     </article>
