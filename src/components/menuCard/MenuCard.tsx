@@ -7,7 +7,7 @@ const MenuCard = () => {
     <article className='menuCard'>
       <Link href='/'>
         <div className='imgWrapper'>
-          <Image src='/img/hero.png' width={291} height={243} alt='' />
+          <Image src='/img/hero.png' width={291} height={270} alt='' />
         </div>
         <div className='cardFooter'>
           <h2 className='heading'>Double Grilled Chicken Burger</h2>
