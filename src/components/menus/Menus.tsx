@@ -1,5 +1,7 @@
 import LocalDiningIcon from '@mui/icons-material/LocalDining';
 
+import MenuCard from '../menuCard/MenuCard';
+
 import './Menus.scss';
 
 const Menus = () => {
@@ -21,6 +23,9 @@ const Menus = () => {
               <span className='line'>&nbsp;</span>
             </div>
           </div>
+        </div>
+        <div className='wrapper'>
+          <MenuCard />
         </div>
       </div>
     </section>
