@@ -1,12 +1,16 @@
 import Link from 'next/link';
-import './MenuCard.scss';
 import Image from 'next/image';
+
+import './MenuCard.scss';
 
 const MenuCard = () => {
   return (
     <article className='menuCard'>
       <Link href='/'>
         <div className='imgWrapper'>
+          <span className='overlay'>
+            <button type='button'>Add to cart</button>
+          </span>
           <Image src='/img/hero.png' width={291} height={270} alt='' />
         </div>
         <div className='cardFooter'>
