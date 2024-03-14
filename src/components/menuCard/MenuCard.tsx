@@ -11,7 +11,7 @@ const MenuCard = () => {
           <span className='overlay'>
             <button type='button'>Add to cart</button>
           </span>
-          <Image src='/img/hero.png' width={291} height={270} alt='' />
+          <Image src='/img/hero.png' width={300} height={270} alt='' />
         </div>
         <div className='cardFooter'>
           <h2 className='heading'>Double Grilled Chicken Burger</h2>
