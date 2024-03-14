@@ -1,5 +1,6 @@
 import LocalDiningIcon from '@mui/icons-material/LocalDining';
 
+import { cardMenus } from '@/data';
 import MenuCard from '../menuCard/MenuCard';
 
 import './Menus.scss';
@@ -25,7 +26,9 @@ const Menus = () => {
           </div>
         </div>
         <div className='wrapper'>
-          <MenuCard />
+          {cardMenus.map((menu) => {
+            return <MenuCard key={menu.id} {...menu} />;
+          })}
         </div>
       </div>
     </section>

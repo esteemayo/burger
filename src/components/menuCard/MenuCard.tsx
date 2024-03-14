@@ -1,9 +1,11 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
+import { MenuCardProps } from '@/types';
+
 import './MenuCard.scss';
 
-const MenuCard = () => {
+const MenuCard = ({ name, image, price }: MenuCardProps) => {
   return (
     <article className='menuCard'>
       <Link href='/'>
@@ -11,11 +13,11 @@ const MenuCard = () => {
           <span className='overlay'>
             <button type='button'>Add to cart</button>
           </span>
-          <Image src='/img/hero.png' width={300} height={270} alt='' />
+          <Image src={image} width={300} height={270} alt={name} />
         </div>
         <div className='cardFooter'>
-          <h2 className='heading'>Double Grilled Chicken Burger</h2>
-          <span className='price'>$6,000.00</span>
+          <h2 className='heading'>{name}</h2>
+          <span className='price'>${price}</span>
         </div>
       </Link>
     </article>

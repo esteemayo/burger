@@ -64,7 +64,7 @@ export const features: FeaturesType = [
 export const cardMenus: CardMenu = [
   {
     id: 1,
-    name: 'Double Grilled Chicken Burger',
+    name: 'Double grilled chicken burger',
     image: '/img/hero.png',
     price: 26000,
   },
@@ -100,7 +100,7 @@ export const cardMenus: CardMenu = [
   },
   {
     id: 7,
-    name: 'Doble beef burger',
+    name: 'Double beef burger',
     image: '/img/hero.png',
     price: 16000,
   },
@@ -112,13 +112,13 @@ export const cardMenus: CardMenu = [
   },
   {
     id: 9,
-    name: 'Double cruncy chicken burger',
+    name: 'Double crunchy chicken burger',
     image: '/img/hero.png',
     price: 21999,
   },
   {
     id: 10,
-    name: 'Cruncy chicken burger',
+    name: 'Crunchy chicken burger',
     image: '/img/hero.png',
     price: 13999,
   },
