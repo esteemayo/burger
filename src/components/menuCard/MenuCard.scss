@@ -1,4 +1,19 @@
 @import '../../styles/variables.scss';
 
 .menuCard {
+  a,
+  a:link,
+  a:active {
+    color: inherit;
+
+    .cardFooter {
+      .heading {
+        text-transform: uppercase;
+        text-rendering: optimizeLegibility;
+        font-weight: 600;
+        font-size: 1.4rem;
+        line-height: 1.5;
+      }
+    }
+  }
 }
