@@ -11,6 +11,16 @@
     .imgWrapper {
       width: 30rem;
       height: 27rem;
+      position: relative;
+
+      .overlay {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.45);
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
 
       img {
         display: block;
