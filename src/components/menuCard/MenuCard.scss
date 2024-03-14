@@ -12,6 +12,20 @@
       width: 30rem;
       height: 27rem;
       position: relative;
+      transition: all 0.3s;
+
+      &:hover .overlay {
+        visibility: visible;
+        opacity: 1;
+        z-index: 1000;
+
+        button {
+          visibility: visible;
+          opacity: 1;
+          z-index: 1000;
+          transform: translate3d(0, 0, 0);
+        }
+      }
 
       .overlay {
         width: 100%;
@@ -20,6 +34,9 @@
         position: absolute;
         top: 0;
         left: 0;
+        visibility: hidden;
+        opacity: 0;
+        z-index: -1;
 
         display: flex;
         align-items: center;
@@ -37,7 +54,9 @@
           background-color: $clr-tertiary;
           color: inherit;
           border-radius: 2px;
+          visibility: hidden;
           opacity: 0;
+          z-index: -1;
           transition: all 0.3s;
           transform: translate3d(-50%, 0, 0);
 
