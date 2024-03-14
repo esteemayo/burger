@@ -45,7 +45,7 @@ export type FeaturesType = Feature[];
 
 export type FeatureProps = Feature;
 
-export interface MenuCardProps {
+export interface ProductCardProps {
   id: number;
   name: string;
   image: string;
