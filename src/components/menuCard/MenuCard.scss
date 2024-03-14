@@ -3,6 +3,8 @@
 .menuCard {
   width: 30rem;
   border-radius: 3px;
+  -webkit-box-shadow: $box-shadow;
+  box-shadow: $box-shadow;
   overflow: hidden;
 
   a,
