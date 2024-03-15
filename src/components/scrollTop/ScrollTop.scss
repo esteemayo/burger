@@ -4,13 +4,23 @@
   position: fixed;
   right: 3.5rem;
   bottom: 0;
-  display: block;
   text-align: center;
   line-height: 3.5rem;
   width: 3.5rem;
   height: 3.5rem;
   overflow: hidden;
-  z-index: 1000;
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+  z-index: -1;
+
+  &.show {
+    bottom: 7.5rem;
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    z-index: 1000;
+  }
 
   button {
     all: unset;
