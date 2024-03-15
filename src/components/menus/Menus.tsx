@@ -1,4 +1,4 @@
-import LocalDiningIcon from '@mui/icons-material/LocalDining';
+import RoomServiceIcon from '@mui/icons-material/RoomService';
 
 import { cardMenus } from '@/data';
 import ProductCard from '../productCard/ProductCard';
@@ -17,7 +17,7 @@ const Menus = () => {
               <span className='line'>&nbsp;</span>
             </div>
             <div className='icon'>
-              <LocalDiningIcon />
+              <RoomServiceIcon />
             </div>
             <div className='right'>
               <span className='line'>&nbsp;</span>
