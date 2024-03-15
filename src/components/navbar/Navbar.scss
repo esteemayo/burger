@@ -102,12 +102,13 @@
             font-size: 1.5rem;
             color: currentColor;
             padding: 3px 1rem;
+            background-color: $clr-tertiary;
+            color: $clr-secondary;
+            border-radius: 0.5rem;
             transition: all 0.3s;
 
             &:hover {
-              background-color: $clr-tertiary;
-              color: $clr-secondary;
-              border-radius: 0.5rem;
+              background-color: $clr-border;
             }
           }
         }
