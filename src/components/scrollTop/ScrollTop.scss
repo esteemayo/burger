@@ -1,3 +1,5 @@
+@import '../../styles/variables.scss';
+
 .scrollTop {
   position: fixed;
   right: 3.5rem;
@@ -9,4 +11,15 @@
   height: 3.5rem;
   overflow: hidden;
   z-index: 1000;
+
+  button {
+    all: unset;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: $clr-primary;
+    color: $clr-white;
+    border-radius: 1px;
+    cursor: pointer;
+  }
 }
