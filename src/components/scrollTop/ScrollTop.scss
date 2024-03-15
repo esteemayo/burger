@@ -1,7 +1,12 @@
 .scrollTop {
   position: fixed;
   right: 3.5rem;
+  bottom: 0;
+  display: block;
+  text-align: center;
+  line-height: 3.5rem;
   width: 3.5rem;
   height: 3.5rem;
   overflow: hidden;
+  z-index: 1000;
 }
