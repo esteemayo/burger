@@ -1,5 +1,6 @@
-import Header from '@/components/header/Header';
 import Menus from '@/components/menus/Menus';
+import Header from '@/components/header/Header';
+import Offer from '@/components/offer/Offer';
 import Features from '@/components/features/Features';
 
 const Home = () => {
@@ -8,6 +9,7 @@ const Home = () => {
       <Header />
       <Features />
       <Menus />
+      <Offer />
     </div>
   );
 };
