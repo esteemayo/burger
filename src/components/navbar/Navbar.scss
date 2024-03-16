@@ -306,6 +306,13 @@
           }
         }
       }
+
+      .search {
+        svg {
+          font-size: 2rem;
+          fill: $clr-primary;
+        }
+      }
     }
   }
 }
