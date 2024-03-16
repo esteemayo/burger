@@ -3,10 +3,29 @@
 .offer {
   display: flex;
   justify-content: center;
+  background-image: url(/img/offerBg.png);
   background-color: $clr-secondary;
+  color: $clr-white;
 
   .container {
     width: 144rem;
     padding: 8rem 0;
+
+    .left {
+      .heading {
+      }
+
+      .desc {
+        font-size: 2rem;
+        line-height: 2.8rem;
+        color: currentColor;
+      }
+    }
+
+    .right {
+      .imgContainer {
+        position: relative;
+      }
+    }
   }
 }

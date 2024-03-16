@@ -9,7 +9,7 @@ const Offer = () => {
     <section className='offer'>
       <div className='container'>
         <div className='left'>
-          <h1 className='header'>Double crunchy chicken burger</h1>
+          <h1 className='heading'>Double crunchy chicken burger</h1>
           <p className='desc'>
             Progressively simplify effective e-toilers and process-centric
             methods of empowerment. Quickly pontificate parallel.
