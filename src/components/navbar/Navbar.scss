@@ -320,7 +320,7 @@
           top: 4rem;
           right: 0;
           width: 26.8rem;
-          border-radius: 0.5rem;
+          border-radius: 0.8rem;
           -webkit-box-shadow: $box-shadow;
           box-shadow: $box-shadow;
           overflow: hidden;
@@ -340,10 +340,11 @@
               width: 26.8rem;
               height: 4rem;
               padding: 0.5rem 2rem;
-              padding-left: 4rem;
+              padding-left: 3.5rem;
+              padding-right: 0.5rem;
               background-color: $clr-white;
               color: $clr-gray-dark;
-              border-radius: 0.5rem;
+              border-radius: 0.8rem;
               caret-color: $clr-secondary;
 
               &::placeholder {
