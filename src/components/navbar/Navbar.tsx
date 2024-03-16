@@ -5,16 +5,19 @@ import Link from 'next/link';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import Image from 'next/image';
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import ExpandLessIcon from '@mui/icons-material/ExpandLess';
-import RemoveShoppingCartIcon from '@mui/icons-material/RemoveShoppingCart';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { FaSearch } from 'react-icons/fa';
+import RemoveShoppingCartIcon from '@mui/icons-material/RemoveShoppingCart';
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+import { usePathname } from 'next/navigation';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import Logo from '../logo/Logo';
 
 import './Navbar.scss';
 
 const Navbar = () => {
+  const pathname = usePathname();
+
   const [isActive, setIsActive] = useState(false);
 
   const isActiveHandler = useCallback(() => {
@@ -100,20 +103,22 @@ const Navbar = () => {
               </div>
             </div>
           </div>
-          <div className='search'>
-            <FaSearch />
-            <div className='searchForm'>
-              <form onSubmit={handleSubmit}>
-                <input type='search' placeholder='Search burger...' />
-              </form>
-              <Image
-                src='/img/search.png'
-                width={20}
-                height={20}
-                alt='search icon'
-              />
+          {pathname !== '/' && (
+            <div className='search'>
+              <FaSearch />
+              <div className='searchForm'>
+                <form onSubmit={handleSubmit}>
+                  <input type='search' placeholder='Search burger...' />
+                </form>
+                <Image
+                  src='/img/search.png'
+                  width={20}
+                  height={20}
+                  alt='search icon'
+                />
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
     </nav>
