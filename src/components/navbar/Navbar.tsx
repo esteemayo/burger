@@ -8,6 +8,7 @@ import { useCallback, useEffect, useMemo, useState } from 'react';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import RemoveShoppingCartIcon from '@mui/icons-material/RemoveShoppingCart';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { FaSearch } from 'react-icons/fa';
 
 import Logo from '../logo/Logo';
 
@@ -94,6 +95,9 @@ const Navbar = () => {
                 )}
               </div>
             </div>
+          </div>
+          <div className='search'>
+            <FaSearch />
           </div>
         </div>
       </div>
