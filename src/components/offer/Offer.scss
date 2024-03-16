@@ -25,6 +25,12 @@
     .right {
       .imgContainer {
         position: relative;
+        width: 100%;
+
+        img {
+          display: block;
+          object-fit: contain;
+        }
       }
     }
   }
