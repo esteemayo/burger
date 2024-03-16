@@ -308,9 +308,17 @@
       }
 
       .search {
+        position: relative;
+
         svg {
           font-size: 2rem;
           fill: $clr-primary;
+        }
+
+        .searchForm {
+          position: absolute;
+          top: 4rem;
+          right: 0;
         }
       }
     }

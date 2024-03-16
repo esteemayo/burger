@@ -98,6 +98,11 @@ const Navbar = () => {
           </div>
           <div className='search'>
             <FaSearch />
+            <div className='searchForm'>
+              <form>
+                <input type='text' placeholder='Search...' />
+              </form>
+            </div>
           </div>
         </div>
       </div>
