@@ -319,6 +319,11 @@
           position: absolute;
           top: 4rem;
           right: 0;
+          width: 26.8rem;
+          border-radius: 0.5rem;
+          -webkit-box-shadow: $box-shadow;
+          box-shadow: $box-shadow;
+          overflow: hidden;
 
           form {
             input {
@@ -333,9 +338,15 @@
               padding: 0.5rem 2rem;
               background-color: $clr-white;
               color: $clr-gray-dark;
-              -webkit-box-shadow: none;
-              box-shadow: none;
+              border-radius: 0.5rem;
               caret-color: $clr-secondary;
+
+              &::placeholder {
+                text-transform: uppercase;
+                font-weight: 500;
+                font-size: 1.3rem;
+                color: $clr-gray-light;
+              }
             }
           }
         }
