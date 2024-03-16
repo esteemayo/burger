@@ -310,6 +310,15 @@
       .search {
         position: relative;
 
+        &:hover .searchForm {
+          right: 0;
+          display: block;
+          visibility: visible;
+          opacity: 1;
+          z-index: 1000;
+          transition: all 0.5s ease-in;
+        }
+
         svg {
           font-size: 2rem;
           fill: $clr-primary;
@@ -318,12 +327,18 @@
         .searchForm {
           position: absolute;
           top: 4rem;
-          right: 0;
+          right: -40rem;
           width: 26.8rem;
           border-radius: 0.8rem;
           -webkit-box-shadow: $box-shadow;
           box-shadow: $box-shadow;
           overflow: hidden;
+          display: none;
+          visibility: hidden;
+          opacity: 0;
+          z-index: -1;
+          transition: all 0.5s ease-out;
+          transition-duration: 700ms;
 
           display: flex;
           align-items: center;
