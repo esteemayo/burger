@@ -319,6 +319,25 @@
           position: absolute;
           top: 4rem;
           right: 0;
+
+          form {
+            input {
+              display: inline-block;
+              border: none;
+              outline: none;
+              appearance: none;
+              font-family: inherit;
+              font-size: var(--default-font-size);
+              width: 26.8rem;
+              height: 4rem;
+              padding: 0.5rem 2rem;
+              background-color: $clr-white;
+              color: $clr-gray-dark;
+              -webkit-box-shadow: none;
+              box-shadow: none;
+              caret-color: $clr-secondary;
+            }
+          }
         }
       }
     }
