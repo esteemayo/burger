@@ -1,5 +1,7 @@
 import Image from 'next/image';
 
+import CountDown from '../countdown/CountDown';
+
 import './Offer.scss';
 
 const Offer = () => {
@@ -12,6 +14,7 @@ const Offer = () => {
             Progressively simplify effective e-toilers and process-centric
             methods of empowerment. Quickly pontificate parallel.
           </p>
+          <CountDown />
           <button type='button'>Order now</button>
         </div>
         <div className='right'>
