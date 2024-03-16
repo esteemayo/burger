@@ -1,6 +1,9 @@
+@import '../../styles/variables.scss';
+
 .offer {
   display: flex;
   justify-content: center;
+  background-color: $clr-secondary;
 
   .container {
     width: 144rem;
