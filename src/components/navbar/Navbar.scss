@@ -319,11 +319,15 @@
           position: absolute;
           top: 4rem;
           right: 0;
-          width: 26.8rem;
+          width: 30rem;
           border-radius: 0.5rem;
           -webkit-box-shadow: $box-shadow;
           box-shadow: $box-shadow;
           overflow: hidden;
+
+          display: flex;
+          align-items: center;
+          gap: 1rem;
 
           form {
             input {
@@ -336,6 +340,7 @@
               width: 26.8rem;
               height: 4rem;
               padding: 0.5rem 2rem;
+              padding-left: 4rem;
               background-color: $clr-white;
               color: $clr-gray-dark;
               border-radius: 0.5rem;
@@ -352,8 +357,9 @@
 
           img {
             position: absolute;
-            top: 1.2rem;
             left: 1rem;
+            width: 1.5rem;
+            height: 1.5rem;
           }
         }
       }
