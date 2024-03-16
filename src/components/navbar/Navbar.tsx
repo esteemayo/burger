@@ -21,6 +21,10 @@ const Navbar = () => {
     setIsActive(window.scrollY > 0 ? true : false);
   }, []);
 
+  const handleSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+  }, []);
+
   const navClasses = useMemo(() => {
     return isActive ? 'navbar active' : 'navbar';
   }, [isActive]);
@@ -99,7 +103,7 @@ const Navbar = () => {
           <div className='search'>
             <FaSearch />
             <div className='searchForm'>
-              <form>
+              <form onSubmit={handleSubmit}>
                 <input type='search' placeholder='Search burger...' />
               </form>
               <Image
