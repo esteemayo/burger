@@ -102,6 +102,12 @@ const Navbar = () => {
               <form>
                 <input type='text' placeholder='Search burger...' />
               </form>
+              <Image
+                src='/img/search.png'
+                width={20}
+                height={20}
+                alt='search icon'
+              />
             </div>
           </div>
         </div>
