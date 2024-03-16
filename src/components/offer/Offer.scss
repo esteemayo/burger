@@ -36,6 +36,22 @@
         line-height: 2.8rem;
         color: currentColor;
       }
+
+      button {
+        all: unset;
+        display: inline-block;
+        width: fit-content;
+        padding: 1.2rem 2.4rem;
+        background-color: $clr-primary;
+        color: inherit;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        transition: all 0.3s;
+
+        &:hover {
+          background-color: $clr-secondary;
+        }
+      }
     }
 
     .right {
