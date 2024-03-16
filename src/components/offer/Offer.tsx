@@ -9,6 +9,11 @@ const Offer = () => {
     <section className='offer'>
       <div className='container'>
         <div className='left'>
+          <div className='imgContainer'>
+            <Image src='/img/offerProduct.png' fill alt='offer product' />
+          </div>
+        </div>
+        <div className='right'>
           <h1 className='heading'>Double crunchy chicken burger</h1>
           <p className='desc'>
             Progressively simplify effective e-toilers and process-centric
@@ -16,11 +21,6 @@ const Offer = () => {
           </p>
           <CountDown />
           <button type='button'>Order now</button>
-        </div>
-        <div className='right'>
-          <div className='imgContainer'>
-            <Image src='/img/offerProduct.png' fill alt='offer product' />
-          </div>
         </div>
       </div>
     </section>

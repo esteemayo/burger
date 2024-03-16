@@ -17,6 +17,23 @@
     justify-content: space-between;
 
     .left {
+      flex: 1;
+
+      .imgContainer {
+        position: relative;
+        width: 50rem;
+        height: 50rem;
+
+        img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+
+    .right {
       flex: 1.5;
       display: flex;
       flex-direction: column;
@@ -50,23 +67,6 @@
 
         &:hover {
           background-color: $clr-secondary;
-        }
-      }
-    }
-
-    .right {
-      flex: 1;
-
-      .imgContainer {
-        position: relative;
-        width: 50rem;
-        height: 50rem;
-
-        img {
-          display: block;
-          width: 100%;
-          height: 100%;
-          object-fit: contain;
         }
       }
     }
