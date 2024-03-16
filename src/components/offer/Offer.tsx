@@ -18,7 +18,9 @@ const Offer = () => {
           <button type='button'>Order now</button>
         </div>
         <div className='right'>
-          <Image src='/img/offerProduct.png' fill alt='offer product' />
+          <div className='imgContainer'>
+            <Image src='/img/offerProduct.png' fill alt='offer product' />
+          </div>
         </div>
       </div>
     </section>
