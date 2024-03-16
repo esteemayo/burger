@@ -319,7 +319,7 @@
           position: absolute;
           top: 4rem;
           right: 0;
-          width: 30rem;
+          width: 26.8rem;
           border-radius: 0.5rem;
           -webkit-box-shadow: $box-shadow;
           box-shadow: $box-shadow;
@@ -337,7 +337,7 @@
               appearance: none;
               font-family: inherit;
               font-size: var(--default-font-size);
-              width: 26.8rem;
+              width: inherit;
               height: 4rem;
               padding: 0.5rem 2rem;
               padding-left: 4rem;
