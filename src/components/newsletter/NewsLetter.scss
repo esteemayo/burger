@@ -36,6 +36,11 @@
       flex: 2;
 
       form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2.2rem;
+
         input {
           display: inline-block;
           border: none;
@@ -67,6 +72,7 @@
           font-size: 1.3rem;
           letter-spacing: 1.5px;
           line-height: 1;
+          width: fit-content;
           padding: 1.6rem 6rem;
           background-color: $clr-primary;
           color: $clr-white;
