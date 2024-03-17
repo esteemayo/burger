@@ -1,7 +1,8 @@
-import Menus from '@/components/menus/Menus';
 import Header from '@/components/header/Header';
-import Offer from '@/components/offer/Offer';
+import Menus from '@/components/menus/Menus';
 import Features from '@/components/features/Features';
+import Offer from '@/components/offer/Offer';
+import NewsLetter from './../components/newsletter/NewsLetter';
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <Features />
       <Menus />
       <Offer />
+      <NewsLetter />
     </div>
   );
 };
