@@ -68,7 +68,8 @@ const Login = () => {
             </form>
             <div className='signupWrap'>
               <p>
-                Don&apos;t have an Account <Link href='/register'>Sign up</Link>
+                Don&apos;t have an Account?{' '}
+                <Link href='/register'>Sign up</Link>
               </p>
             </div>
           </div>

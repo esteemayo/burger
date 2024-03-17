@@ -197,9 +197,19 @@
       }
       .signupWrap {
         p {
+          font-size: 1.5rem;
+          color: $clr-gray-dark;
+
           a,
           a:link,
           a:active {
+            color: $clr-primary;
+            transition: all 0.3s;
+
+            &:hover,
+            &:visited {
+              color: $clr-secondary;
+            }
           }
         }
       }
