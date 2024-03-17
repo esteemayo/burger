@@ -34,6 +34,10 @@
       }
 
       .formWrap {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
         .headingWrap {
           h1 {
             span {
