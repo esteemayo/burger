@@ -39,8 +39,26 @@
         gap: 2rem;
 
         .headingWrap {
+          margin-top: -1rem;
+
           h1 {
+            font-weight: 500;
+            font-size: 3rem;
+            line-height: 1;
+
             span {
+              text-transform: capitalize;
+              font-weight: 700;
+              color: $clr-yellow;
+
+              &::after {
+                display: inline-block;
+                content: '';
+                width: 0.5rem;
+                height: 0.5rem;
+                background-color: currentColor;
+                border-radius: 50%;
+              }
             }
           }
         }
