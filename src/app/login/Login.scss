@@ -96,6 +96,7 @@
 
             input {
               display: inline-block;
+              border: none;
               outline: none;
               appearance: none;
               font-family: inherit;
@@ -105,8 +106,9 @@
               padding: 1.5rem 2rem;
               background-color: transparent;
               color: $clr-gray-dark;
-              border: 1px solid $clr-gray-light;
-              border-radius: 3px;
+              border-radius: 0.5rem;
+              -webkit-box-shadow: inset $box-shadow;
+              box-shadow: inset $box-shadow;
               caret-color: $clr-secondary;
 
               &::placeholder {
