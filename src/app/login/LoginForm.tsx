@@ -16,6 +16,7 @@ const initialState = {
 };
 
 const LoginForm = () => {
+  const [rememberMe, setRememberMe] = useState(false);
   const [data, setData] = useState(initialState);
   const [showPassword, setShowPassword] = useState(false);
 
@@ -25,6 +26,13 @@ const LoginForm = () => {
       setData((prev) => {
         return { ...prev, [name]: value };
       });
+    },
+    []
+  );
+
+  const handleChangeRememberMe = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      setRememberMe(e.target.checked);
     },
     []
   );
@@ -83,7 +91,13 @@ const LoginForm = () => {
         </div>
         <div className='rememberWrap'>
           <div className='remember'>
-            <input type='checkbox' name='rememberMe' id='rememberMe' />
+            <input
+              type='checkbox'
+              name='rememberMe'
+              id='rememberMe'
+              checked={rememberMe}
+              onChange={handleChangeRememberMe}
+            />
             <label htmlFor='rememberMe'>Remember for 30 days</label>
           </div>
           <Link href='#'>Forgot password</Link>
