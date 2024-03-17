@@ -13,7 +13,7 @@
     justify-content: center;
 
     .wrapper {
-      width: max-content;
+      width: 90rem;
       height: 50rem;
       display: flex;
       align-items: center;
@@ -100,7 +100,7 @@
               font-size: var(--default-font-size);
               width: 100%;
               height: 100%;
-              padding: 1.25rem 2rem;
+              padding: 1.5rem 2rem;
               background-color: transparent;
               color: $clr-gray-dark;
               border: 1px solid $clr-gray-light;
@@ -121,15 +121,28 @@
             justify-content: space-between;
 
             .remember {
-              input {
-              }
+              display: flex;
+              align-items: center;
+              gap: 1rem;
 
               label {
+                font-weight: lighter;
+                font-size: 1.45rem;
               }
             }
+
             a,
             a:link,
             a:active {
+              text-transform: capitalize;
+              font-size: 1.45rem;
+              color: $clr-primary;
+              transition: all 0.3s;
+
+              &:hover,
+              &:visited {
+                color: $clr-secondary;
+              }
             }
           }
 
