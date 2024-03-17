@@ -1,7 +1,5 @@
-import Link from 'next/link';
-import Image from 'next/image';
-
-import Logo from '@/components/logo/Logo';
+import LoginForm from './LoginForm';
+import LoginImage from './LoginImage';
 
 import './Login.scss';
 
@@ -10,69 +8,8 @@ const Login = () => {
     <div className='login'>
       <div className='container'>
         <div className='wrapper'>
-          <div className='imgWrap'>
-            <Image
-              src='/svg/process.svg'
-              width={500}
-              height={500}
-              alt='login illustration'
-            />
-          </div>
-          <div className='formWrap'>
-            <Logo />
-            <div className='headingWrap'>
-              <h1>
-                Hey there! <br /> Welcome back to <span>Burger</span>
-              </h1>
-            </div>
-            <form className='loginForm'>
-              <div className='formGroup'>
-                <label htmlFor='email'>Email</label>
-                <input
-                  type='email'
-                  name='email'
-                  id='email'
-                  placeholder='Enter your email address'
-                />
-              </div>
-              <div className='formGroup'>
-                <label htmlFor='password'>Password</label>
-                <input
-                  type='password'
-                  name='password'
-                  id='password'
-                  placeholder='Password'
-                />
-              </div>
-              <div className='rememberWrap'>
-                <div className='remember'>
-                  <input type='checkbox' name='rememberMe' id='rememberMe' />
-                  <label htmlFor='rememberMe'>Remember for 30 days</label>
-                </div>
-                <Link href='#'>Forgot password</Link>
-              </div>
-              <div className='buttonWrap'>
-                <button type='submit' className='loginBtn'>
-                  Sign in
-                </button>
-                <button type='button' className='googleBtn'>
-                  <Image
-                    src='/img/google.png'
-                    width={25}
-                    height={25}
-                    alt='google icon'
-                  />
-                  Continue with Google
-                </button>
-              </div>
-            </form>
-            <div className='signupWrap'>
-              <p>
-                Don&apos;t have an Account?{' '}
-                <Link href='/register'>Sign up</Link>
-              </p>
-            </div>
-          </div>
+          <LoginImage />
+          <LoginForm />
         </div>
       </div>
     </div>
