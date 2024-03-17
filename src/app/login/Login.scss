@@ -152,9 +152,14 @@
               align-items: center;
               gap: 1rem;
 
+              input {
+                cursor: pointer;
+              }
+
               label {
                 font-weight: lighter;
                 font-size: 1.45rem;
+                cursor: pointer;
               }
             }
 
