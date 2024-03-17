@@ -78,9 +78,18 @@
           .formGroup {
             display: flex;
             flex-direction: column;
-            gap: 0.5rem;
+            gap: 3px;
+
+            &:not(:last-child) {
+              margin-bottom: 1rem;
+            }
 
             label {
+              display: inline-block;
+              width: 7rem;
+              text-transform: capitalize;
+              font-weight: 500;
+              font-size: 1.5rem;
             }
 
             input {
