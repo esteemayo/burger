@@ -1,10 +1,12 @@
+@import '../../styles/variables.scss';
+
 .login {
   display: flex;
   justify-content: center;
 
   .container {
     width: 144rem;
-    padding: 10rem 0;
+    padding: 15rem 0;
 
     display: flex;
     align-items: center;
@@ -14,6 +16,10 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      padding: 2rem 3rem;
+      -webkit-box-shadow: $box-shadow;
+      box-shadow: $box-shadow;
+      border-radius: 0.5rem;
 
       .imgWrap {
         width: 50rem;
