@@ -22,7 +22,7 @@ const Login = () => {
             <Logo />
             <div className='headingWrap'>
               <h1>
-                Hey there! <br /> Welcome back <span>Burger</span>
+                Hey there! <br /> Welcome back to <span>Burger</span>
               </h1>
             </div>
             <form className='loginForm'>
