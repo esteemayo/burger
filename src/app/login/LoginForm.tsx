@@ -28,6 +28,15 @@ const LoginForm = () => {
     []
   );
 
+  const handleSubmit = useCallback(
+    (e: React.FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
+
+      console.log(data);
+    },
+    [data]
+  );
+
   return (
     <div className='formWrap'>
       <Logo />
@@ -36,7 +45,7 @@ const LoginForm = () => {
           Hey there! <br /> Welcome back to <span>Burger</span>
         </h1>
       </div>
-      <form className='loginForm'>
+      <form onSubmit={handleSubmit} className='loginForm'>
         <div className='formGroup'>
           <label htmlFor='email'>Email</label>
           <input
