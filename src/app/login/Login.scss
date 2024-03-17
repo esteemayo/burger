@@ -147,7 +147,25 @@
           }
 
           .buttonWrap {
+            margin-top: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+
+            .loginBtn,
+            .googleBtn {
+              display: inline-block;
+              border: none;
+              outline: none;
+              width: 100%;
+              padding: 3rem;
+              border-radius: 0.5rem;
+              cursor: pointer;
+            }
+
             .loginBtn {
+              text-transform: capitalize;
             }
 
             .googleBtn {
