@@ -9,5 +9,67 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    .wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .imgWrap {
+        img {
+        }
+      }
+
+      .formWrap {
+        .headingWrap {
+          h1 {
+            span {
+            }
+          }
+        }
+
+        .loginForm {
+          .formGroup {
+            label {
+            }
+
+            input {
+            }
+          }
+
+          .rememberWrap {
+            .remember {
+              input {
+              }
+
+              label {
+              }
+            }
+            a,
+            a:link,
+            a:active {
+            }
+          }
+
+          .buttonWrap {
+            .loginBtn {
+            }
+
+            .googleBtn {
+              img {
+              }
+            }
+          }
+        }
+      }
+      .signupWrap {
+        p {
+          a,
+          a:link,
+          a:active {
+          }
+        }
+      }
+    }
   }
 }
