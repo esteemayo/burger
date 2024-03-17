@@ -1,12 +1,33 @@
+'use client';
+
 import Link from 'next/link';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import Image from 'next/image';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
+import { useCallback, useState } from 'react';
 
 import Logo from '@/components/logo/Logo';
+
 import './Login.scss';
 
+const initialState = {
+  email: '',
+  password: '',
+};
+
 const LoginForm = () => {
+  const [data, setData] = useState(initialState);
+
+  const handleChange = useCallback(
+    ({ target: input }: React.ChangeEvent<HTMLInputElement>) => {
+      const { name, value } = input;
+      setData((prev) => {
+        return { ...prev, [name]: value };
+      });
+    },
+    []
+  );
+
   return (
     <div className='formWrap'>
       <Logo />
@@ -23,6 +44,7 @@ const LoginForm = () => {
             name='email'
             id='email'
             placeholder='Enter your email address'
+            onChange={handleChange}
           />
         </div>
         <div className='formGroup'>
@@ -32,6 +54,7 @@ const LoginForm = () => {
             name='password'
             id='password'
             placeholder='Password'
+            onChange={handleChange}
           />
         </div>
         <div className='rememberWrap'>
