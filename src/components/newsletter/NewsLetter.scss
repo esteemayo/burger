@@ -5,10 +5,11 @@
   justify-content: center;
 
   .container {
-    width: 144rem;
-    padding: 6rem 0;
+    width: 120rem;
+    padding: 8rem 0;
     display: flex;
     justify-content: space-between;
+    gap: 3rem;
 
     .textWrap {
       flex: 1;
@@ -16,7 +17,7 @@
       .headingWrap {
         display: flex;
         align-items: center;
-        gap: 2rem;
+        gap: 3rem;
 
         svg {
           font-size: 4.2rem;
@@ -54,9 +55,10 @@
           padding: 1rem 2rem;
           background-color: transparent;
           color: $clr-gray-dark;
-          letter-spacing: 1px;
           -webkit-box-shadow: inset $box-shadow;
           box-shadow: inset $box-shadow;
+          border-radius: 0.5rem;
+          letter-spacing: 1px;
           caret-color: $clr-secondary;
 
           &::placeholder {
