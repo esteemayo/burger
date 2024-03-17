@@ -38,7 +38,15 @@
           padding: 1rem 2rem;
           background-color: $clr-tertiary;
           color: $clr-secondary;
+          letter-spacing: 1px;
           caret-color: $clr-secondary;
+
+          &::placeholder {
+            text-transform: uppercase;
+            font-weight: 300;
+            font-size: 1.3rem;
+            color: $clr-gray-light;
+          }
         }
 
         button {
