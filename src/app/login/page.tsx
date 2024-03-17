@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 import Logo from '@/components/logo/Logo';
 
@@ -9,7 +10,14 @@ const Login = () => {
     <div className='login'>
       <div className='container'>
         <div className='wrapper'>
-          <div className='imgWrap'>Image</div>
+          <div className='imgWrap'>
+            <Image
+              src='/svg/access-account.svg'
+              width={500}
+              height={500}
+              alt='login illustration'
+            />
+          </div>
           <div className='formWrap'>
             <Logo />
             <div className='headingWrap'>
@@ -48,10 +56,21 @@ const Login = () => {
                   Sign in
                 </button>
                 <button type='button' className='googleBtn'>
+                  <Image
+                    src='/img/google.png'
+                    width={25}
+                    height={25}
+                    alt='google icon'
+                  />
                   Continue with Google
                 </button>
               </div>
             </form>
+            <div className='signupWrap'>
+              <p>
+                Don&apos;t have an Account <Link href='/register'>Sign up</Link>
+              </p>
+            </div>
           </div>
         </div>
       </div>
