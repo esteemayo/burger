@@ -14,7 +14,7 @@ const NewsLetter = () => {
         </div>
         <div className='formWrap'>
           <form>
-            <input type='text' placeholder='Your email address' />
+            <input type='email' placeholder='Your email address' />
             <button type='submit'>Subscribe</button>
           </form>
         </div>
