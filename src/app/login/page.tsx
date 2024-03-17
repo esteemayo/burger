@@ -12,7 +12,7 @@ const Login = () => {
         <div className='wrapper'>
           <div className='imgWrap'>
             <Image
-              src='/svg/access-account.svg'
+              src='/svg/process.svg'
               width={500}
               height={500}
               alt='login illustration'
