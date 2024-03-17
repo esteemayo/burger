@@ -4,7 +4,7 @@ import Link from 'next/link';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import Image from 'next/image';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
-import { useCallback, useState } from 'react';
+import React, { useCallback, useState } from 'react';
 
 import Logo from '@/components/logo/Logo';
 
@@ -17,6 +17,7 @@ const initialState = {
 
 const LoginForm = () => {
   const [data, setData] = useState(initialState);
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleChange = useCallback(
     ({ target: input }: React.ChangeEvent<HTMLInputElement>) => {
@@ -27,6 +28,10 @@ const LoginForm = () => {
     },
     []
   );
+
+  const togglePassword = useCallback((_e: React.MouseEvent<HTMLSpanElement>) => {
+    setShowPassword((value) => !value);
+  }, []);
 
   const handleSubmit = useCallback(
     (e: React.FormEvent<HTMLFormElement>) => {
@@ -65,6 +70,9 @@ const LoginForm = () => {
             placeholder='Password'
             onChange={handleChange}
           />
+          <span onClick={togglePassword}>
+            {showPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
+          </span>
         </div>
         <div className='rememberWrap'>
           <div className='remember'>
