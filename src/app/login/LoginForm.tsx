@@ -4,7 +4,7 @@ import Link from 'next/link';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import Image from 'next/image';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useMemo, useState } from 'react';
 
 import Logo from '@/components/logo/Logo';
 
@@ -45,6 +45,10 @@ const LoginForm = () => {
     [data]
   );
 
+  const iconClasses = useMemo(() => {
+    return data.password.length > 0 ? 'icon show' : 'icon';
+  }, [data]);
+
   return (
     <div className='formWrap'>
       <Logo />
@@ -73,7 +77,7 @@ const LoginForm = () => {
             placeholder='Password'
             onChange={handleChange}
           />
-          <span onClick={togglePassword} className='icon'>
+          <span onClick={togglePassword} className={iconClasses}>
             {showPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
           </span>
         </div>
