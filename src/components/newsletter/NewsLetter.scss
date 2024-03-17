@@ -1,3 +1,5 @@
+@import '../../styles/variables.scss';
+
 .newsLetter {
   display: flex;
   justify-content: center;
@@ -5,5 +7,29 @@
   .container {
     width: 144rem;
     padding: 6rem 0;
+
+    .textWrap {
+      .headingWrap {
+        svg {
+        }
+
+        h5 {
+          text-transform: uppercase;
+          font-size: var(--default-font-size);
+          color: $clr-black;
+          letter-spacing: 0.5px;
+        }
+      }
+    }
+
+    .formWrap {
+      form {
+        input {
+        }
+
+        button {
+        }
+      }
+    }
   }
 }
