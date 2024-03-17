@@ -1,14 +1,26 @@
 'use client';
 
-import { useCallback } from 'react';
+import { useCallback, useState } from 'react';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 
 import './NewsLetter.scss';
 
 const NewsLetter = () => {
-  const handleSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const [email, setEmail] = useState('');
+
+  const handleEmail = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(e.target.value);
   }, []);
+
+  const handleSubmit = useCallback(
+    (e: React.FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
+
+      console.log(email);
+      setEmail('');
+    },
+    [email]
+  );
 
   return (
     <section className='newsLetter'>
@@ -21,7 +33,11 @@ const NewsLetter = () => {
         </div>
         <div className='formWrap'>
           <form onSubmit={handleSubmit}>
-            <input type='email' placeholder='Your email address' />
+            <input
+              type='email'
+              placeholder='Your email address'
+              onChange={handleEmail}
+            />
             <button type='submit'>Subscribe</button>
           </form>
         </div>
