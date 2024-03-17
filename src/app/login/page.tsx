@@ -38,7 +38,7 @@ const Login = () => {
               <div className='formGroup'>
                 <label htmlFor='password'>Password</label>
                 <input
-                  type='email'
+                  type='password'
                   name='password'
                   id='password'
                   placeholder='Password'
