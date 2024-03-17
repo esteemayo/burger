@@ -81,6 +81,7 @@
           .formGroup {
             display: flex;
             flex-direction: column;
+            position: relative;
 
             &:not(:last-child) {
               margin-bottom: 1rem;
@@ -115,6 +116,17 @@
                 font-weight: 400;
                 font-size: 1.5rem;
                 color: $clr-gray-light;
+              }
+            }
+
+            .icon {
+              position: absolute;
+              top: 4.35rem;
+              right: 2rem;
+
+              svg {
+                font-size: 2rem;
+                fill: inherit;
               }
             }
           }

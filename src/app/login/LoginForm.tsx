@@ -29,9 +29,12 @@ const LoginForm = () => {
     []
   );
 
-  const togglePassword = useCallback((_e: React.MouseEvent<HTMLSpanElement>) => {
-    setShowPassword((value) => !value);
-  }, []);
+  const togglePassword = useCallback(
+    (_e: React.MouseEvent<HTMLSpanElement>) => {
+      setShowPassword((value) => !value);
+    },
+    []
+  );
 
   const handleSubmit = useCallback(
     (e: React.FormEvent<HTMLFormElement>) => {
@@ -70,7 +73,7 @@ const LoginForm = () => {
             placeholder='Password'
             onChange={handleChange}
           />
-          <span onClick={togglePassword}>
+          <span onClick={togglePassword} className='icon'>
             {showPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
           </span>
         </div>
