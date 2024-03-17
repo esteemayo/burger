@@ -55,11 +55,18 @@
           text-transform: uppercase;
           font-weight: 600;
           font-size: 1.3rem;
-          letter-spacing: 0.5px;
+          letter-spacing: 1.5px;
+          line-height: 1;
           padding: 1.6rem 6rem;
           background-color: $clr-primary;
           color: $clr-white;
+          border-radius: 0.5rem;
           cursor: pointer;
+          transition: all 0.3s;
+
+          &:hover {
+            background-color: $clr-secondary;
+          }
         }
       }
     }
