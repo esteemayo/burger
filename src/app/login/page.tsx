@@ -62,7 +62,7 @@ const Login = () => {
                     height={25}
                     alt='google icon'
                   />
-                  Google
+                  Continue with Google
                 </button>
               </div>
             </form>
