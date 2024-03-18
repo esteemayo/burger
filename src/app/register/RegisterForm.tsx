@@ -14,11 +14,13 @@ const initialState = {
   name: '',
   email: '',
   password: '',
+  confirmPassword: '',
 };
 
 const RegisterForm = () => {
-  const [data, setData] = useState(initialState);
   const [showPassword, setShowPassword] = useState(false);
+  const [data, setData] = useState(initialState);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
   const handleChange = useCallback(
     ({ target: input }: React.ChangeEvent<HTMLInputElement>) => {
@@ -37,6 +39,13 @@ const RegisterForm = () => {
     []
   );
 
+  const toggleConfirmPassword = useCallback(
+    (_e: React.MouseEvent<HTMLSpanElement>) => {
+      setShowPassword((value) => !value);
+    },
+    []
+  );
+
   const handleSubmit = useCallback(
     (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
@@ -48,6 +57,10 @@ const RegisterForm = () => {
 
   const iconClasses = useMemo(() => {
     return data.password.length > 0 ? 'icon show' : 'icon';
+  }, [data]);
+
+  const confirmIconClasses = useMemo(() => {
+    return data.confirmPassword.length > 0 ? 'icon show' : 'icon';
   }, [data]);
 
   return (
@@ -89,6 +102,19 @@ const RegisterForm = () => {
             onChange={handleChange}
           />
           <span onClick={togglePassword} className={iconClasses}>
+            {showPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
+          </span>
+        </div>
+        <div className='formGroup'>
+          <label htmlFor='confirmPassword'>Confirm Password</label>
+          <input
+            type={showPassword ? 'text' : 'password'}
+            name='confirmPassword'
+            id='password'
+            placeholder='Confirm Password'
+            onChange={handleChange}
+          />
+          <span onClick={toggleConfirmPassword} className={confirmIconClasses}>
             {showPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
           </span>
         </div>
