@@ -41,7 +41,7 @@ const RegisterForm = () => {
 
   const toggleConfirmPassword = useCallback(
     (_e: React.MouseEvent<HTMLSpanElement>) => {
-      setShowPassword((value) => !value);
+      setShowConfirmPassword((value) => !value);
     },
     []
   );
@@ -108,14 +108,14 @@ const RegisterForm = () => {
         <div className='formGroup'>
           <label htmlFor='confirmPassword'>Confirm Password</label>
           <input
-            type={showPassword ? 'text' : 'password'}
+            type={showConfirmPassword ? 'text' : 'password'}
             name='confirmPassword'
             id='confirmPassword'
             placeholder='Confirm Password'
             onChange={handleChange}
           />
           <span onClick={toggleConfirmPassword} className={confirmIconClasses}>
-            {showPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
+            {showConfirmPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
           </span>
         </div>
         <div className='buttonWrap'>
