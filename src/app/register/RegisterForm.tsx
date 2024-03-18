@@ -110,7 +110,7 @@ const RegisterForm = () => {
           <input
             type={showPassword ? 'text' : 'password'}
             name='confirmPassword'
-            id='password'
+            id='confirmPassword'
             placeholder='Confirm Password'
             onChange={handleChange}
           />
