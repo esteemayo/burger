@@ -189,6 +189,28 @@
             }
           }
         }
+
+        .signinWrap {
+          line-height: 1.2;
+  
+          p {
+            font-size: 1.5rem;
+            color: $clr-gray-dark;
+  
+            a,
+            a:link,
+            a:active {
+              text-transform: capitalize;
+              color: $clr-primary;
+              transition: all 0.3s;
+  
+              &:hover,
+              &:visited {
+                color: $clr-secondary;
+              }
+            }
+          }
+        }
       }
     }
   }
