@@ -1,6 +1,7 @@
 import { SvgIconTypeMap } from '@mui/material';
 import { IconType } from 'react-icons/lib';
 import { OverridableComponent } from '@mui/material/OverridableComponent';
+import React from 'react';
 
 export type FooterLinks = {
   id: number;
@@ -50,4 +51,13 @@ export interface ProductCardProps {
   name: string;
   image: string;
   price: number;
+}
+
+export interface InputProps
+  extends React.InputHTMLAttributes<HTMLInputElement> {
+  id: string;
+  name: string;
+  type?: string;
+  label?: string;
+  onChange(e: React.ChangeEvent<HTMLInputElement>): void;
 }
