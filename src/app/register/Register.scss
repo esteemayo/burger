@@ -203,13 +203,13 @@
               text-transform: capitalize;
               color: $clr-primary;
               transition: all 0.3s;
+              
+              &:visited {
+                color: $clr-primary;
+              }
 
               &:hover {
                 color: $clr-secondary;
-              }
-
-              &:visited {
-                color: $clr-primary;
               }
             }
           }
