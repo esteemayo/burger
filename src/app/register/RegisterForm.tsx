@@ -7,6 +7,7 @@ import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import { useCallback, useMemo, useState } from 'react';
 
 import Input from '@/components/input/Input';
+import Button from '@/components/button/Button';
 
 import './Register.scss';
 
@@ -121,18 +122,15 @@ const RegisterForm = () => {
           onChange={handleFile}
         />
         <div className='buttonWrap'>
-          <button type='submit' className='registerBtn'>
-            Sign up
-          </button>
-          <button type='button' className='googleBtn'>
+          <Button type='submit' label='Sign up' className='registerBtn' />
+          <Button label='Continue with Google' className='googleBtn'>
             <Image
               src='/img/google.png'
               width={15}
               height={15}
               alt='google icon'
             />
-            Continue with Google
-          </button>
+          </Button>
         </div>
       </form>
       <div className='signinWrap'>
