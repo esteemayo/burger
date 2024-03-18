@@ -21,6 +21,7 @@ const RegisterForm = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [data, setData] = useState(initialState);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [file, setFile] = useState<File>();
 
   const handleChange = useCallback(
     ({ target: input }: React.ChangeEvent<HTMLInputElement>) => {
@@ -31,6 +32,12 @@ const RegisterForm = () => {
     },
     []
   );
+
+  const handleFile = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+    const target = e.target as HTMLInputElement;
+    const file = (target.files as FileList)[0];
+    setFile(file);
+  }, []);
 
   const togglePassword = useCallback(
     (_e: React.MouseEvent<HTMLSpanElement>) => {
@@ -50,9 +57,9 @@ const RegisterForm = () => {
     (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
 
-      console.log(data);
+      console.log({ ...data, file });
     },
-    [data]
+    [data, file]
   );
 
   const iconClasses = useMemo(() => {
@@ -75,7 +82,7 @@ const RegisterForm = () => {
         <div className='formGroup'>
           <label htmlFor='name'>Name</label>
           <input
-            type='name'
+            type='text'
             name='name'
             id='name'
             placeholder='Enter your name'
@@ -117,6 +124,10 @@ const RegisterForm = () => {
           <span onClick={toggleConfirmPassword} className={confirmIconClasses}>
             {showConfirmPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
           </span>
+        </div>
+        <div className='formGroup'>
+          <label htmlFor='file'>Avatar</label>
+          <input type='file' id='file' accept='image/*' onChange={handleFile} />
         </div>
         <div className='buttonWrap'>
           <button type='submit' className='registerBtn'>
