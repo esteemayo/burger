@@ -65,6 +65,7 @@ export interface InputProps
 
 export interface ButtonProps {
   label: string;
-  type?: string;
+  type?: 'button' | 'reset' | 'submit';
+  className: string;
   onClick?(e: React.MouseEvent<HTMLButtonElement>): void;
 }
