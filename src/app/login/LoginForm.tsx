@@ -4,7 +4,9 @@ import Link from 'next/link';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import Image from 'next/image';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
-import React, { useCallback, useMemo, useState } from 'react';
+import { useCallback, useMemo, useState } from 'react';
+
+import Input from '@/components/input/Input';
 
 import './Login.scss';
 
@@ -63,29 +65,24 @@ const LoginForm = () => {
         </h1>
       </div>
       <form onSubmit={handleSubmit} className='loginForm'>
-        <div className='formGroup'>
-          <label htmlFor='email'>Email</label>
-          <input
-            type='email'
-            name='email'
-            id='email'
-            placeholder='Enter your email address'
-            onChange={handleChange}
-          />
-        </div>
-        <div className='formGroup'>
-          <label htmlFor='password'>Password</label>
-          <input
-            type={showPassword ? 'text' : 'password'}
-            name='password'
-            id='password'
-            placeholder='Password'
-            onChange={handleChange}
-          />
+        <Input
+          name='email'
+          type='email'
+          label='Email'
+          placeholder='Enter your email address'
+          onChange={handleChange}
+        />
+        <Input
+          name='password'
+          type={showPassword ? 'text' : 'password'}
+          label='Password'
+          placeholder='Password'
+          onChange={handleChange}
+        >
           <span onClick={togglePassword} className={iconClasses}>
             {showPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
           </span>
-        </div>
+        </Input>
         <div className='rememberWrap'>
           <div className='remember'>
             <input
