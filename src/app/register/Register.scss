@@ -14,13 +14,10 @@
 
     .wrapper {
       width: 100rem;
-      min-height: 50rem;
+      height: 100%;
       line-height: 1;
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      gap: 3rem;
-      background-color: $clr-secondary;
       -webkit-box-shadow: $box-shadow;
       box-shadow: $box-shadow;
       border-radius: 0.5rem;
@@ -203,7 +200,7 @@
               text-transform: capitalize;
               color: $clr-primary;
               transition: all 0.3s;
-              
+
               &:visited {
                 color: $clr-primary;
               }
