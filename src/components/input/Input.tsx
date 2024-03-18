@@ -13,7 +13,7 @@ const Input = ({
   return (
     <div className='formGroup'>
       <label htmlFor={name}>{label}</label>
-      <input {...rest} id={id || name} name={name} type={type} />
+      <input {...rest} id={name} name={name} type={type} />
       {children}
     </div>
   );
