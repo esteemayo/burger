@@ -19,9 +19,9 @@ const initialState = {
 
 const RegisterForm = () => {
   const [showPassword, setShowPassword] = useState(false);
-  const [data, setData] = useState(initialState);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [file, setFile] = useState<File>();
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [data, setData] = useState(initialState);
 
   const handleChange = useCallback(
     ({ target: input }: React.ChangeEvent<HTMLInputElement>) => {
