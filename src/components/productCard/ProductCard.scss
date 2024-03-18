@@ -23,7 +23,7 @@
         opacity: 1;
         z-index: 1000;
 
-        button {
+        .cartBtn {
           visibility: visible;
           opacity: 1;
           z-index: 1000;
@@ -47,7 +47,7 @@
         align-items: center;
         justify-content: center;
 
-        button {
+        .cartBtn {
           all: unset;
           display: inline-block;
           text-transform: uppercase;

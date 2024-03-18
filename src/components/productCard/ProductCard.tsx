@@ -12,7 +12,17 @@ const ProductCard = ({ name, image, price }: ProductCardProps) => {
       <Link href='/'>
         <div className='imgWrapper'>
           <span className='overlay'>
-            <button type='button'>Add to cart</button>
+            <button type='button' className='cartBtn'>
+              Add to cart
+            </button>
+            <button type='button' className='likeBtn'>
+              <Image
+                src='/svg/heart-1.svg'
+                width={36}
+                height={36}
+                alt='like icon'
+              />
+            </button>
           </span>
           <Image src={image} width={300} height={270} alt={name} />
         </div>
