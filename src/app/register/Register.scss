@@ -19,7 +19,7 @@
       align-items: center;
       justify-content: space-between;
       gap: 3rem;
-      background-color: #fef0c1;
+      background-color: $clr-secondary;
       -webkit-box-shadow: $box-shadow;
       box-shadow: $box-shadow;
       border-radius: 0.5rem;
@@ -30,7 +30,7 @@
         width: 100%;
         height: 100%;
         padding: 2rem 3rem;
-        background-color: #fef0c1;
+        background-color: $clr-secondary;
 
         display: flex;
         align-items: center;
