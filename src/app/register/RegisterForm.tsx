@@ -6,6 +6,8 @@ import Image from 'next/image';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import { useCallback, useMemo, useState } from 'react';
 
+import Input from '@/components/input/Input';
+
 import './Register.scss';
 
 const initialState = {
@@ -76,56 +78,48 @@ const RegisterForm = () => {
         </h1>
       </div>
       <form onSubmit={handleSubmit} className='registerForm'>
-        <div className='formGroup'>
-          <label htmlFor='name'>Name</label>
-          <input
-            type='text'
-            name='name'
-            id='name'
-            placeholder='Enter your name'
-            onChange={handleChange}
-          />
-        </div>
-        <div className='formGroup'>
-          <label htmlFor='email'>Email</label>
-          <input
-            type='email'
-            name='email'
-            id='email'
-            placeholder='Enter your email address'
-            onChange={handleChange}
-          />
-        </div>
-        <div className='formGroup'>
-          <label htmlFor='password'>Password</label>
-          <input
-            type={showPassword ? 'text' : 'password'}
-            name='password'
-            id='password'
-            placeholder='Password'
-            onChange={handleChange}
-          />
+        <Input
+          name='name'
+          label='Name'
+          placeholder='Enter your name'
+          onChange={handleChange}
+        />
+        <Input
+          name='email'
+          type='email'
+          label='Email'
+          placeholder='Enter your email address'
+          onChange={handleChange}
+        />
+        <Input
+          name='password'
+          type={showPassword ? 'text' : 'password'}
+          label='Password'
+          placeholder='Password'
+          onChange={handleChange}
+        >
           <span onClick={togglePassword} className={iconClasses}>
             {showPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
           </span>
-        </div>
-        <div className='formGroup'>
-          <label htmlFor='confirmPassword'>Confirm Password</label>
-          <input
-            type={showConfirmPassword ? 'text' : 'password'}
-            name='confirmPassword'
-            id='confirmPassword'
-            placeholder='Confirm Password'
-            onChange={handleChange}
-          />
+        </Input>
+        <Input
+          name='confirmPassword'
+          type={showConfirmPassword ? 'text' : 'password'}
+          label='Confirm Password'
+          placeholder='Confirm Password'
+          onChange={handleChange}
+        >
           <span onClick={toggleConfirmPassword} className={confirmIconClasses}>
             {showConfirmPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
           </span>
-        </div>
-        <div className='formGroup'>
-          <label htmlFor='file'>Avatar</label>
-          <input type='file' id='file' accept='image/*' onChange={handleFile} />
-        </div>
+        </Input>
+        <Input
+          type='file'
+          name='file'
+          label='Avatar'
+          accept='image/*'
+          onChange={handleFile}
+        />
         <div className='buttonWrap'>
           <button type='submit' className='registerBtn'>
             Sign up

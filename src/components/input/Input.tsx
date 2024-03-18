@@ -2,11 +2,19 @@ import { InputProps } from '@/types';
 
 import './Input.scss';
 
-const Input = ({ id, name, type = 'text', label, ...rest }: InputProps) => {
+const Input = ({
+  id,
+  name,
+  type = 'text',
+  label,
+  children,
+  ...rest
+}: InputProps) => {
   return (
     <div className='formGroup'>
       <label htmlFor={name}>{label}</label>
-      <input {...rest} id={name} name={name} type={type} />
+      <input {...rest} id={id || name} name={name} type={type} />
+      {children}
     </div>
   );
 };

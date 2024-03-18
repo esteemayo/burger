@@ -55,9 +55,10 @@ export interface ProductCardProps {
 
 export interface InputProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
-  id: string;
-  name: string;
+  id?: string;
+  name?: string;
   type?: string;
   label?: string;
+  children?: React.ReactNode;
   onChange(e: React.ChangeEvent<HTMLInputElement>): void;
 }
