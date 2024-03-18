@@ -1,3 +1,4 @@
+.loginBtn,
 .registerBtn,
 .googleBtn {
   all: unset;
@@ -10,6 +11,7 @@
   cursor: pointer;
 }
 
+.loginBtn,
 .registerBtn {
   text-transform: capitalize;
   background-color: $clr-primary;

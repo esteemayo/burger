@@ -7,6 +7,7 @@ import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import { useCallback, useMemo, useState } from 'react';
 
 import Input from '@/components/input/Input';
+import Button from '@/components/button/Button';
 
 import './Login.scss';
 
@@ -97,18 +98,15 @@ const LoginForm = () => {
           <Link href='#'>Forgot password</Link>
         </div>
         <div className='buttonWrap'>
-          <button type='submit' className='loginBtn'>
-            Sign in
-          </button>
-          <button type='button' className='googleBtn'>
+          <Button type='submit' label='Sign in' className='loginBtn' />
+          <Button label='Continue with Google' className='googleBtn'>
             <Image
               src='/img/google.png'
               width={15}
               height={15}
               alt='google icon'
             />
-            Continue with Google
-          </button>
+          </Button>
         </div>
       </form>
       <div className='signupWrap'>
