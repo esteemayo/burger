@@ -204,9 +204,12 @@
               color: $clr-primary;
               transition: all 0.3s;
 
-              &:hover,
-              &:visited {
+              &:hover {
                 color: $clr-secondary;
+              }
+
+              &:visited {
+                color: $clr-primary;
               }
             }
           }
