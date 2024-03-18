@@ -58,7 +58,7 @@ const RegisterForm = () => {
             Hey there! <br /> Welcome to <span>Burger</span>
           </h1>
         </div>
-        <form onSubmit={handleSubmit} className='loginForm'>
+        <form onSubmit={handleSubmit} className='registerForm'>
           <div className='formGroup'>
             <label htmlFor='name'>Name</label>
             <input
