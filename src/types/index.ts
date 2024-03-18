@@ -65,6 +65,7 @@ export interface InputProps
 
 export interface ButtonProps {
   label: string;
+  children?: React.ReactNode;
   type?: 'button' | 'reset' | 'submit';
   className: string;
   onClick?(e: React.MouseEvent<HTMLButtonElement>): void;
