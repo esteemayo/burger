@@ -103,24 +103,22 @@ const Navbar = () => {
               </div>
             </div>
           </div>
-          {pathname !== '/' ||
-            pathname !== '/login' ||
-            (pathname !== '/register' && (
-              <div className='search'>
-                <FaSearch />
-                <div className='searchForm'>
-                  <form onSubmit={handleSubmit}>
-                    <input type='search' placeholder='Search burger...' />
-                  </form>
-                  <Image
-                    src='/img/search.png'
-                    width={20}
-                    height={20}
-                    alt='search icon'
-                  />
-                </div>
+          {pathname !== '/' && (
+            <div className='search'>
+              <FaSearch />
+              <div className='searchForm'>
+                <form onSubmit={handleSubmit}>
+                  <input type='search' placeholder='Search burger...' />
+                </form>
+                <Image
+                  src='/img/search.png'
+                  width={20}
+                  height={20}
+                  alt='search icon'
+                />
               </div>
-            ))}
+            </div>
+          )}
         </div>
       </div>
     </nav>
