@@ -62,3 +62,9 @@ export interface InputProps
   children?: React.ReactNode;
   onChange(e: React.ChangeEvent<HTMLInputElement>): void;
 }
+
+export interface ButtonProps {
+  label: string;
+  type?: string;
+  onClick?(e: React.MouseEvent<HTMLButtonElement>): void;
+}
