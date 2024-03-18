@@ -9,7 +9,7 @@ const RegisterImage = () => {
         src='/svg/sign-up.svg'
         width={400}
         height={350}
-        alt='login illustration'
+        alt='register illustration'
       />
     </div>
   );

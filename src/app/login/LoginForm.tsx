@@ -6,8 +6,6 @@ import Image from 'next/image';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import React, { useCallback, useMemo, useState } from 'react';
 
-import Logo from '@/components/logo/Logo';
-
 import './Login.scss';
 
 const initialState = {
@@ -59,7 +57,6 @@ const LoginForm = () => {
 
   return (
     <div className='formWrap'>
-      <Logo />
       <div className='headingWrap'>
         <h1>
           Hey there! <br /> Welcome back to <span>Burger</span>
