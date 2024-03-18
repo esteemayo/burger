@@ -1,7 +1,7 @@
 import { SvgIconTypeMap } from '@mui/material';
-import { IconType } from 'react-icons/lib';
-import { OverridableComponent } from '@mui/material/OverridableComponent';
 import React from 'react';
+import { OverridableComponent } from '@mui/material/OverridableComponent';
+import { IconType } from 'react-icons/lib';
 
 export type FooterLinks = {
   id: number;
