@@ -16,6 +16,7 @@ export const useForm = <T extends object, U extends object>(
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
     >) => {
       const { name, value } = input;
+
       setData((prev) => {
         return { ...prev, [name]: value };
       });
@@ -28,6 +29,7 @@ export const useForm = <T extends object, U extends object>(
       e.preventDefault();
 
       const errors = validate(data);
+
       if (Object.keys(errors).length > 0) {
         setErrors(validate(data));
         return;
