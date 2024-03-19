@@ -20,8 +20,24 @@
       gap: 3rem;
 
       small {
-        font-size: 1.4rem;
+        font-size: 0.875em;
         color: $clr-gray-dark;
+        
+        a,
+        a:link,
+        a:active {
+          font-size: inherit;
+          color: $clr-gray-dark;
+          transition: all 0.3s;
+          
+          &:visited {
+            color: $clr-gray-dark;
+          }
+
+          &:hover {
+            color: $clr-secondary;
+          }
+        }
       }
     }
   }
