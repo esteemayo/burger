@@ -98,6 +98,51 @@
             align-items: center;
             justify-content: space-between;
             gap: 1rem;
+
+            .loginBtn,
+            .googleBtn {
+              all: unset;
+              display: inline-block;
+              text-align: center;
+              font-size: 1.4rem;
+              width: 100%;
+              padding: 1.5rem 1rem;
+              border-radius: 0.5rem;
+              cursor: pointer;
+            }
+
+            .loginBtn {
+              text-transform: capitalize;
+              background-color: $clr-primary;
+              color: $clr-white;
+              transition: all 0.3s;
+
+              &:hover {
+                background-color: $clr-secondary;
+              }
+            }
+
+            .googleBtn {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: 1rem;
+              -webkit-box-shadow: inset $box-shadow;
+              box-shadow: inset $box-shadow;
+              transition: all 0.3s;
+
+              &:hover {
+                background-color: $clr-tertiary;
+                color: $clr-secondary;
+              }
+
+              img {
+                width: 1.5rem;
+                height: 1.5rem;
+                display: block;
+                object-fit: cover;
+              }
+            }
           }
         }
       }
