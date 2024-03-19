@@ -76,3 +76,9 @@ export interface CheckboxProps
   name: string;
   label: string;
 }
+
+export interface AuthInfoProps {
+  url: string;
+  text: string;
+  label: string;
+}
