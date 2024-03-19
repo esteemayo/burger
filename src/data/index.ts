@@ -135,3 +135,78 @@ export const cardMenus: CardMenu = [
     price: 29999,
   },
 ];
+
+export const products: CardMenu = [
+  {
+    id: 1,
+    name: 'Double grilled chicken burger',
+    image: '/img/hero.png',
+    price: 26000,
+  },
+  {
+    id: 2,
+    name: 'Grilled Chicken Burger',
+    image: '/img/hero.png',
+    price: 23500,
+  },
+  {
+    id: 3,
+    name: 'A crunchy chicken',
+    image: '/img/hero.png',
+    price: 30000,
+  },
+  {
+    id: 4,
+    name: 'Breakfast burger',
+    image: '/img/hero.png',
+    price: 13000,
+  },
+  {
+    id: 5,
+    name: 'Double beef & fries',
+    image: '/img/hero.png',
+    price: 37000,
+  },
+  {
+    id: 6,
+    name: 'Single beef burger',
+    image: '/img/hero.png',
+    price: 12700,
+  },
+  {
+    id: 7,
+    name: 'Double beef burger',
+    image: '/img/hero.png',
+    price: 16000,
+  },
+  {
+    id: 8,
+    name: 'Single beef & fries',
+    image: '/img/hero.png',
+    price: 27499,
+  },
+  {
+    id: 9,
+    name: 'Double crunchy chicken burger',
+    image: '/img/hero.png',
+    price: 21999,
+  },
+  {
+    id: 10,
+    name: 'Crunchy chicken burger',
+    image: '/img/hero.png',
+    price: 13999,
+  },
+  {
+    id: 11,
+    name: 'A double crunchy and fries',
+    image: '/img/hero.png',
+    price: 23499,
+  },
+  {
+    id: 12,
+    name: 'Double crunchy X fries',
+    image: '/img/hero.png',
+    price: 29999,
+  },
+];
