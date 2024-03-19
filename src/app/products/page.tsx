@@ -21,6 +21,9 @@ const Products = () => {
           </small>
         </h3>
         <ProductLists products={products} />
+        <div className='btnContainer'>
+          <button type='button'>See more...</button>
+        </div>
       </div>
     </div>
   );
