@@ -59,6 +59,7 @@ export interface InputProps
   name?: string;
   type?: string;
   label?: string;
+  error?: string;
   children?: React.ReactNode;
   onChange(e: React.ChangeEvent<HTMLInputElement>): void;
 }
