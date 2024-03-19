@@ -70,3 +70,9 @@ export interface ButtonProps {
   className: string;
   onClick?(e: React.MouseEvent<HTMLButtonElement>): void;
 }
+
+export interface CheckboxProps
+  extends React.InputHTMLAttributes<HTMLInputElement> {
+  name: string;
+  label: string;
+}
