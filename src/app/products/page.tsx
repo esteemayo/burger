@@ -8,7 +8,7 @@ const Products = () => {
   return (
     <div className='products'>
       <div className='container'>
-        <h3 className='heading'>
+        <h3>
           Most popular near you
           <small>
             <Link href='/products'>12 main features</Link>
