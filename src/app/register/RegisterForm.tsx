@@ -9,8 +9,10 @@ import Input from '@/components/input/Input';
 import GoogleButton from '@/components/google/GoogleButton';
 import Button from '@/components/button/Button';
 
-import { RegisterData, RegisterErrors } from '@/types';
+import { useForm } from '@/hooks/useForm';
 import { validateRegisterInputs } from '@/validations/register';
+
+import { RegisterData, RegisterErrors } from '@/types';
 
 import './Register.scss';
 
@@ -29,21 +31,9 @@ const initialErrors: RegisterErrors = {
 };
 
 const RegisterForm = () => {
-  const [errors, setErrors] = useState(initialErrors);
-  const [file, setFile] = useState<File>();
   const [showPassword, setShowPassword] = useState(false);
-  const [data, setData] = useState(initialState);
+  const [file, setFile] = useState<File>();
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-
-  const handleChange = useCallback(
-    ({ target: input }: React.ChangeEvent<HTMLInputElement>) => {
-      const { name, value } = input;
-      setData((prev) => {
-        return { ...prev, [name]: value };
-      });
-    },
-    []
-  );
 
   const handleFile = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     const target = e.target as HTMLInputElement;
@@ -65,18 +55,15 @@ const RegisterForm = () => {
     []
   );
 
-  const handleSubmit = useCallback(
-    (e: React.FormEvent<HTMLFormElement>) => {
-      e.preventDefault();
+  const onSubmitHandler = () => {
+    console.log({ ...data, file });
+  };
 
-      const errors = validateRegisterInputs(data);
-      if (Object.values(errors).length > 0) return setErrors(errors);
-
-      setErrors({});
-
-      console.log({ ...data, file });
-    },
-    [data, file]
+  const { data, errors, handleChange, handleSubmit } = useForm(
+    onSubmitHandler,
+    initialState,
+    initialErrors,
+    validateRegisterInputs
   );
 
   const iconClasses = useMemo(() => {
