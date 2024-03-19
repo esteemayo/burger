@@ -6,9 +6,10 @@ import Image from 'next/image';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import { useCallback, useMemo, useState } from 'react';
 
-import Button from '@/components/button/Button';
+import AuthInfo from '@/components/authInfo/AuthInfo';
 import Input from '@/components/input/Input';
 import Checkbox from '@/components/checkbox/Checkbox';
+import Button from '@/components/button/Button';
 
 import './Login.scss';
 
@@ -106,11 +107,11 @@ const LoginForm = () => {
           </Button>
         </div>
       </form>
-      <div className='signupWrap'>
-        <p>
-          Don&apos;t have an Account? <Link href='/register'>Sign up</Link>
-        </p>
-      </div>
+      <AuthInfo
+        url='/register'
+        text="Don't have an account?"
+        label='Sign up'
+      />
     </div>
   );
 };

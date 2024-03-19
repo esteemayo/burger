@@ -1,12 +1,14 @@
 import Link from 'next/link';
 
+import { AuthInfoProps } from '@/types';
+
 import './AuthInfo.scss';
 
-const AuthInfo = () => {
+const AuthInfo = ({ url, text, label }: AuthInfoProps) => {
   return (
     <div className='authInfo'>
       <p>
-        Already registered? <Link href='/login'>Sign in</Link>
+        {text} <Link href={url}>{label}</Link>
       </p>
     </div>
   );
