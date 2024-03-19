@@ -12,11 +12,17 @@
       font-weight: 500;
       font-size: 2.8rem;
       color: $clr-black;
-      margin-bottom: 2rem;
+      line-height: 1.2;
+      margin-bottom: 3rem;
 
       display: flex;
       align-items: baseline;
-      gap: 2rem;
+      gap: 3rem;
+
+      small {
+        font-size: 1.4rem;
+        color: $clr-gray-dark;
+      }
     }
   }
 }
