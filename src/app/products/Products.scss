@@ -22,14 +22,15 @@
       small {
         font-size: 0.875em;
         color: $clr-gray-dark;
-        
+
         a,
         a:link,
         a:active {
+          font-weight: 600;
           font-size: inherit;
           color: $clr-gray-dark;
           transition: all 0.3s;
-          
+
           &:visited {
             color: $clr-gray-dark;
           }

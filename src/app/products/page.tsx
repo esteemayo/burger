@@ -1,5 +1,6 @@
 import Link from 'next/link';
 
+import { products } from '@/data';
 import ProductLists from '@/components/productLists/ProductLists';
 
 import './Products.scss';
@@ -14,7 +15,7 @@ const Products = () => {
             <Link href='/products'>12 main features</Link>
           </small>
         </h3>
-        <ProductLists />
+        <ProductLists products={products} />
       </div>
     </div>
   );
