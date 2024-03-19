@@ -9,9 +9,19 @@ import Input from '@/components/input/Input';
 import GoogleButton from '@/components/google/GoogleButton';
 import Button from '@/components/button/Button';
 
+import { RegisterData, RegisterErrors } from '@/types';
+import { validateRegisterInputs } from '@/validations/register';
+
 import './Register.scss';
 
-const initialState = {
+const initialState: RegisterData = {
+  name: '',
+  email: '',
+  password: '',
+  confirmPassword: '',
+};
+
+const initialErrors: RegisterErrors = {
   name: '',
   email: '',
   password: '',
@@ -19,10 +29,11 @@ const initialState = {
 };
 
 const RegisterForm = () => {
-  const [showPassword, setShowPassword] = useState(false);
+  const [errors, setErrors] = useState(initialErrors);
   const [file, setFile] = useState<File>();
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
   const [data, setData] = useState(initialState);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
   const handleChange = useCallback(
     ({ target: input }: React.ChangeEvent<HTMLInputElement>) => {
@@ -58,6 +69,11 @@ const RegisterForm = () => {
     (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
 
+      const errors = validateRegisterInputs(data);
+      if (Object.values(errors).length > 0) return setErrors(errors);
+
+      setErrors({});
+
       console.log({ ...data, file });
     },
     [data, file]
@@ -84,6 +100,7 @@ const RegisterForm = () => {
           label='Name'
           placeholder='Enter your name'
           onChange={handleChange}
+          error={errors['name']}
         />
         <Input
           name='email'
@@ -91,6 +108,7 @@ const RegisterForm = () => {
           label='Email'
           placeholder='Enter your email address'
           onChange={handleChange}
+          error={errors['email']}
         />
         <Input
           name='password'
@@ -98,6 +116,7 @@ const RegisterForm = () => {
           label='Password'
           placeholder='Password'
           onChange={handleChange}
+          error={errors['password']}
         >
           <span onClick={togglePassword} className={iconClasses}>
             {showPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
@@ -109,6 +128,7 @@ const RegisterForm = () => {
           label='Confirm Password'
           placeholder='Confirm Password'
           onChange={handleChange}
+          error={errors['confirmPassword']}
         >
           <span onClick={toggleConfirmPassword} className={confirmIconClasses}>
             {showConfirmPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
