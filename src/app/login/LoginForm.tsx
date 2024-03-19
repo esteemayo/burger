@@ -11,6 +11,9 @@ import Checkbox from '@/components/checkbox/Checkbox';
 import Button from '@/components/button/Button';
 import GoogleButton from '@/components/google/GoogleButton';
 
+import { LoginErrors } from '@/types';
+import { validateLoginInputs } from '@/validations/login';
+
 import './Login.scss';
 
 const initialState = {
@@ -18,9 +21,15 @@ const initialState = {
   password: '',
 };
 
+const initialErrors: LoginErrors = {
+  email: '',
+  password: '',
+};
+
 const LoginForm = () => {
   const [rememberMe, setRememberMe] = useState(false);
   const [data, setData] = useState(initialState);
+  const [errors, setErrors] = useState<LoginErrors>(initialErrors);
   const [showPassword, setShowPassword] = useState(false);
 
   const handleChange = useCallback(
@@ -51,6 +60,11 @@ const LoginForm = () => {
     (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
 
+      const errors = validateLoginInputs(data);
+      if (Object.values(errors).length > 0) return setErrors(errors);
+
+      setErrors({});
+
       console.log(data);
     },
     [data]
@@ -74,6 +88,7 @@ const LoginForm = () => {
           label='Email'
           placeholder='Enter your email address'
           onChange={handleChange}
+          error={errors['email']}
         />
         <Input
           name='password'
@@ -81,6 +96,7 @@ const LoginForm = () => {
           label='Password'
           placeholder='Password'
           onChange={handleChange}
+          error={errors['password']}
         >
           <span onClick={togglePassword} className={iconClasses}>
             {showPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
