@@ -11,12 +11,12 @@ import Checkbox from '@/components/checkbox/Checkbox';
 import Button from '@/components/button/Button';
 import GoogleButton from '@/components/google/GoogleButton';
 
-import { LoginErrors } from '@/types';
+import { LoginData, LoginErrors } from '@/types';
 import { validateLoginInputs } from '@/validations/login';
 
 import './Login.scss';
 
-const initialState = {
+const initialState: LoginData = {
   email: '',
   password: '',
 };
@@ -29,8 +29,8 @@ const initialErrors: LoginErrors = {
 const LoginForm = () => {
   const [rememberMe, setRememberMe] = useState(false);
   const [data, setData] = useState(initialState);
-  const [errors, setErrors] = useState<LoginErrors>(initialErrors);
   const [showPassword, setShowPassword] = useState(false);
+  const [errors, setErrors] = useState(initialErrors);
 
   const handleChange = useCallback(
     ({ target: input }: React.ChangeEvent<HTMLInputElement>) => {
