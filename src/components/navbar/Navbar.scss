@@ -18,6 +18,7 @@
     background-color: transparent;
     color: $clr-secondary;
     backdrop-filter: blur(1rem);
+    border-bottom: none;
 
     .wrapper {
       .nav {
