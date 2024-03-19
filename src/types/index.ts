@@ -109,3 +109,7 @@ export interface RegisterErrors {
   password?: string;
   confirmPassword?: string;
 }
+
+export interface ProductListsProps {
+  products: CardMenu[];
+}
