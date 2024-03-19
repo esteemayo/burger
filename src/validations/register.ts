@@ -21,7 +21,7 @@ export const validateRegisterInputs = (data: RegisterData) => {
   if (password === '') {
     errors.password = 'Pasword is required';
   } else if (password.length < 8) {
-    errors.password = 'Passwords must not be less than 8 characters';
+    errors.password = 'Password must not be less than 8 characters';
   } else if (!confirmPassword) {
     errors.confirmPassword = 'Confirm your password';
   } else if (password !== confirmPassword) {
