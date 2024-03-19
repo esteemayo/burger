@@ -12,6 +12,7 @@ import Button from '@/components/button/Button';
 import GoogleButton from '@/components/google/GoogleButton';
 
 import { LoginData, LoginErrors } from '@/types';
+import { useForm } from '@/hooks/useForm';
 import { validateLoginInputs } from '@/validations/login';
 
 import './Login.scss';
@@ -28,19 +29,7 @@ const initialErrors: LoginErrors = {
 
 const LoginForm = () => {
   const [rememberMe, setRememberMe] = useState(false);
-  const [data, setData] = useState(initialState);
   const [showPassword, setShowPassword] = useState(false);
-  const [errors, setErrors] = useState(initialErrors);
-
-  const handleChange = useCallback(
-    ({ target: input }: React.ChangeEvent<HTMLInputElement>) => {
-      const { name, value } = input;
-      setData((prev) => {
-        return { ...prev, [name]: value };
-      });
-    },
-    []
-  );
 
   const handleChangeRememberMe = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -56,18 +45,15 @@ const LoginForm = () => {
     []
   );
 
-  const handleSubmit = useCallback(
-    (e: React.FormEvent<HTMLFormElement>) => {
-      e.preventDefault();
+  const onSubmitHandler = () => {
+    console.log(data);
+  };
 
-      const errors = validateLoginInputs(data);
-      if (Object.values(errors).length > 0) return setErrors(errors);
-
-      setErrors({});
-
-      console.log(data);
-    },
-    [data]
+  const { data, errors, handleChange, handleSubmit } = useForm(
+    onSubmitHandler,
+    initialState,
+    initialErrors,
+    validateLoginInputs
   );
 
   const iconClasses = useMemo(() => {
