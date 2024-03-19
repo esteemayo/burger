@@ -12,6 +12,7 @@
     color: inherit;
 
     h1 {
+      display: inline-block;
       color: currentColor;
 
       &::after {
