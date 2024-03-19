@@ -6,8 +6,9 @@ import Image from 'next/image';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import { useCallback, useMemo, useState } from 'react';
 
-import Input from '@/components/input/Input';
 import Button from '@/components/button/Button';
+import Input from '@/components/input/Input';
+import AuthInfo from '@/components/authInfo/AuthInfo';
 
 import './Register.scss';
 
@@ -133,11 +134,7 @@ const RegisterForm = () => {
           </Button>
         </div>
       </form>
-      <div className='signinWrap'>
-        <p>
-          Already registered? <Link href='/login'>Sign in</Link>
-        </p>
-      </div>
+      <AuthInfo url='/login' text='Already registered?' label='Sign in' />
     </div>
   );
 };
