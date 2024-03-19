@@ -77,22 +77,6 @@
             align-items: center;
             justify-content: space-between;
 
-            .remember {
-              display: flex;
-              align-items: center;
-              gap: 1rem;
-
-              input {
-                cursor: pointer;
-              }
-
-              label {
-                font-weight: lighter;
-                font-size: 1.45rem;
-                cursor: pointer;
-              }
-            }
-
             a,
             a:link,
             a:active {

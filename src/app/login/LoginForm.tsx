@@ -6,8 +6,9 @@ import Image from 'next/image';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import { useCallback, useMemo, useState } from 'react';
 
-import Input from '@/components/input/Input';
 import Button from '@/components/button/Button';
+import Input from '@/components/input/Input';
+import Checkbox from '@/components/checkbox/Checkbox';
 
 import './Login.scss';
 
@@ -85,16 +86,12 @@ const LoginForm = () => {
           </span>
         </Input>
         <div className='rememberWrap'>
-          <div className='remember'>
-            <input
-              type='checkbox'
-              name='rememberMe'
-              id='rememberMe'
-              checked={rememberMe}
-              onChange={handleChangeRememberMe}
-            />
-            <label htmlFor='rememberMe'>Remember for 30 days</label>
-          </div>
+          <Checkbox
+            name='rememberMe'
+            label='Remember for 30 days'
+            checked={rememberMe}
+            onChange={handleChangeRememberMe}
+          />
           <Link href='#'>Forgot password</Link>
         </div>
         <div className='buttonWrap'>
