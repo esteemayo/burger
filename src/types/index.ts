@@ -111,5 +111,5 @@ export interface RegisterErrors {
 }
 
 export interface ProductListsProps {
-  products: CardMenu[];
+  products: CardMenu;
 }
