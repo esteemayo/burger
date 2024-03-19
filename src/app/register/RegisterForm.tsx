@@ -1,14 +1,13 @@
 'use client';
 
-import Link from 'next/link';
 import VisibilityIcon from '@mui/icons-material/Visibility';
-import Image from 'next/image';
-import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import { useCallback, useMemo, useState } from 'react';
+import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 
-import Button from '@/components/button/Button';
-import Input from '@/components/input/Input';
 import AuthInfo from '@/components/authInfo/AuthInfo';
+import Input from '@/components/input/Input';
+import GoogleButton from '@/components/google/GoogleButton';
+import Button from '@/components/button/Button';
 
 import './Register.scss';
 
@@ -124,14 +123,7 @@ const RegisterForm = () => {
         />
         <div className='buttonWrap'>
           <Button type='submit' label='Sign up' className='registerBtn' />
-          <Button label='Continue with Google' className='googleBtn'>
-            <Image
-              src='/img/google.png'
-              width={15}
-              height={15}
-              alt='google icon'
-            />
-          </Button>
+          <GoogleButton />
         </div>
       </form>
       <AuthInfo url='/login' text='Already registered?' label='Sign in' />

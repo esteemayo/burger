@@ -1,8 +1,7 @@
 'use client';
 
-import Link from 'next/link';
 import VisibilityIcon from '@mui/icons-material/Visibility';
-import Image from 'next/image';
+import Link from 'next/link';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import { useCallback, useMemo, useState } from 'react';
 
@@ -10,6 +9,7 @@ import AuthInfo from '@/components/authInfo/AuthInfo';
 import Input from '@/components/input/Input';
 import Checkbox from '@/components/checkbox/Checkbox';
 import Button from '@/components/button/Button';
+import GoogleButton from '@/components/google/GoogleButton';
 
 import './Login.scss';
 
@@ -97,21 +97,10 @@ const LoginForm = () => {
         </div>
         <div className='buttonWrap'>
           <Button type='submit' label='Sign in' className='loginBtn' />
-          <Button label='Continue with Google' className='googleBtn'>
-            <Image
-              src='/img/google.png'
-              width={15}
-              height={15}
-              alt='google icon'
-            />
-          </Button>
+          <GoogleButton />
         </div>
       </form>
-      <AuthInfo
-        url='/register'
-        text="Don't have an account?"
-        label='Sign up'
-      />
+      <AuthInfo url='/register' text="Don't have an account?" label='Sign up' />
     </div>
   );
 };
