@@ -37,7 +37,6 @@ export const useForm = <T extends object, U extends object>(
 
       callback();
       setData(initialState);
-      console.log({ ...data });
     },
     [callback, data, initialErrors, initialState, validate]
   );

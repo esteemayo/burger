@@ -11,9 +11,10 @@ import Checkbox from '@/components/checkbox/Checkbox';
 import Button from '@/components/button/Button';
 import GoogleButton from '@/components/google/GoogleButton';
 
-import { LoginData, LoginErrors } from '@/types';
 import { useForm } from '@/hooks/useForm';
 import { validateLoginInputs } from '@/validations/login';
+
+import { LoginData, LoginErrors } from '@/types';
 
 import './Login.scss';
 
