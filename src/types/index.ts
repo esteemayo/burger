@@ -61,6 +61,8 @@ export interface InputProps
   label?: string;
   error?: string;
   children?: React.ReactNode;
+  disabled?: boolean;
+  required?: boolean;
   onChange(e: React.ChangeEvent<HTMLInputElement>): void;
 }
 
