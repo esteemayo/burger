@@ -17,7 +17,7 @@ const Products = () => {
         <h3>
           Most popular near you
           <small>
-            <Link href='/products'>12 main features</Link>
+            <Link href='/products'>{products.length} main features</Link>
           </small>
         </h3>
         <ProductLists products={products} />
