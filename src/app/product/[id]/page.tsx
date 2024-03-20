@@ -1,3 +1,4 @@
+import Reviews from '@/components/reviews/Reviews';
 import ProductInfo from '@/components/productInfo/ProductInfo';
 
 import './Product.scss';
@@ -14,6 +15,10 @@ const Product = () => {
         </div>
       </header>
       <ProductInfo />
+      <section className='reviewCart'>
+        <Reviews />
+        <div>cart</div>
+      </section>
     </div>
   );
 };
