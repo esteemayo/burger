@@ -35,9 +35,15 @@
         .starRating {
           display: flex;
           align-items: center;
+
+          svg {
+            fill: #00000059;
+          }
         }
 
         .totalReview {
+          font-size: 1.2rem;
+          color: #000000de;
         }
       }
 
