@@ -53,12 +53,18 @@
         font-size: var(--default-font-size);
         background-color: $clr-white;
         border-radius: 50%;
+        cursor: pointer;
 
         display: flex;
         align-items: center;
         justify-content: center;
 
         img {
+          max-width: 100%;
+          width: auto;
+          height: auto;
+          padding: 0.8rem;
+          border-radius: 3px;
         }
 
         .price {
