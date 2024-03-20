@@ -16,8 +16,10 @@ const Product = () => {
       </header>
       <ProductInfo />
       <section className='reviewCart'>
-        <Reviews />
-        <div>cart</div>
+        <div className='container'>
+          <Reviews />
+          <div>cart</div>
+        </div>
       </section>
     </div>
   );

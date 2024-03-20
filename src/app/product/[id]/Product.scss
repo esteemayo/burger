@@ -52,4 +52,16 @@
       }
     }
   }
+
+  .reviewCart {
+    display: flex;
+    justify-content: center;
+
+    .container {
+      width: 144rem;
+      padding: 8rem 0;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
 }
