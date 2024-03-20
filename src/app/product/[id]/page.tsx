@@ -1,3 +1,5 @@
+import ProductInfo from '@/components/productInfo/ProductInfo';
+
 import './Product.scss';
 
 const Product = () => {
@@ -11,7 +13,7 @@ const Product = () => {
           </div>
         </div>
       </header>
-      <div className='container'>Product</div>
+      <ProductInfo />
     </div>
   );
 };
