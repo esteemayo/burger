@@ -19,7 +19,6 @@
         padding: 4px 5rem;
         color: #777;
         border-bottom: none;
-        cursor: pointer;
 
         &.active {
           position: relative;
@@ -35,9 +34,14 @@
     }
 
     .reviewWrap {
+      padding: 7.5rem 4.2rem 5rem;
+      border: 1px solid #ddd;
+      border-top: none;
+
       .reviewContainer {
         .allReviews {
           p {
+            margin: 0 0 2.2rem;
           }
         }
 
