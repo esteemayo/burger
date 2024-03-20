@@ -18,7 +18,7 @@ const Reviews = () => {
               <div className='reviewForm'>
                 <div className='respond'>
                   <span className='replyTitle'>
-                    Be the first to review “Chicken Caesar Salad”
+                    Be the first to review “Double Grilled Chicken Burger”
                   </span>
                   <form>
                     <div className='ratingWrap'>
@@ -48,7 +48,7 @@ const Reviews = () => {
                       <input
                         type='email'
                         name='email'
-                        placeholder='Email'
+                        placeholder='Email address'
                         className='formControl'
                       />
                     </div>
