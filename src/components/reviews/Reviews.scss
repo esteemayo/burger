@@ -11,10 +11,15 @@
 
       .listItem {
         display: inline-block;
+        text-transform: uppercase;
         font-weight: 600;
         font-size: 1.3rem;
         letter-spacing: 0.5px;
         line-height: 3rem;
+        padding: 4px 5rem;
+        color: #777;
+        border-bottom: none;
+        cursor: pointer;
 
         &.active {
           position: relative;
