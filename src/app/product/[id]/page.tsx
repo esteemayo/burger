@@ -1,4 +1,5 @@
 import Reviews from '@/components/reviews/Reviews';
+import Cart from '@/components/cart/Cart';
 import ProductInfo from '@/components/productInfo/ProductInfo';
 
 import './Product.scss';
@@ -18,7 +19,7 @@ const Product = () => {
       <section className='reviewCart'>
         <div className='container'>
           <Reviews />
-          <div>cart</div>
+          <Cart />
         </div>
       </section>
     </div>
