@@ -79,6 +79,29 @@
               }
 
               form {
+                .ratingWrap {
+                  display: flex;
+                  align-items: baseline;
+                  gap: 1rem;
+
+                  span {
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    font-size: 1.3rem;
+                    color: $clr-gray-dark;
+                    line-height: 2rem;
+                  }
+
+                  .formRating {
+                    display: flex;
+                    align-items: center;
+
+                    svg {
+                      font-size: 1.7rem;
+                      fill: #00000059;
+                    }
+                  }
+                }
                 textarea {
                 }
 
