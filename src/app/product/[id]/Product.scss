@@ -1,4 +1,9 @@
 .product {
+  display: flex;
+  justify-content: center;
+
   .container {
+    width: 144rem;
+    padding: 12rem 0;
   }
 }
