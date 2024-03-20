@@ -1,3 +1,5 @@
+@import '../../styles/variables.scss';
+
 .productInfo {
   padding: 1rem 0;
   display: flex;
@@ -5,5 +7,13 @@
 
   .container {
     width: 120rem;
+
+    h3 {
+      display: inline-block;
+      font-weight: 900;
+      font-size: 2.8rem;
+      color: inherit;
+      margin-bottom: 0.5rem;
+    }
   }
 }
