@@ -7,7 +7,7 @@ import './ProductInfo.scss';
 const ProductInfo = () => {
   return (
     <section className='productInfo'>
-      <div>
+      <div className='container'>
         <h3>Double grilled chicken burger</h3>
         <p className='desc'>
           Our Chicken nuggets are made from freshly ground well spiced chicken
@@ -22,7 +22,7 @@ const ProductInfo = () => {
           </div>
           <span className='heartWrap'>
             <Image
-              src='/img/heart-1.png'
+              src='/svg/heart-1.svg'
               width={20}
               height={20}
               alt='heart icon'
