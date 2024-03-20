@@ -1,11 +1,75 @@
+@import '../../styles/variables.scss';
+
 .reviews {
   flex: 3;
   width: 70%;
-  background-color: yellowgreen;
 
-  .container {
+  .reviewBox {
     .listWrap {
-      li {
+      list-style: none;
+      margin-bottom: 1px solid #ddd;
+
+      .listItem {
+        display: inline-block;
+        font-weight: 600;
+        font-size: 1.3rem;
+        letter-spacing: 0.5px;
+        line-height: 3rem;
+
+        &.active {
+          position: relative;
+          top: 1px;
+          background-color: $clr-white;
+          color: inherit;
+          border-top: 2px solid $clr-secondary;
+          border-left: 1px solid #ddd !important;
+          border-right: 1px solid #ddd;
+          border-color: $clr-secondary;
+        }
+      }
+    }
+
+    .reviewWrap {
+      .reviewContainer {
+        .allReviews {
+          p {
+          }
+        }
+
+        .reviewFormWrap {
+          .reviewForm {
+            .respond {
+              .replyTitle {
+              }
+
+              form {
+                textarea {
+                }
+
+                .inputWrap {
+                  input {
+                  }
+                }
+
+                .consent {
+                  p {
+                  }
+
+                  div {
+                    input {
+                    }
+
+                    label {
+                    }
+                  }
+                }
+
+                button {
+                }
+              }
+            }
+          }
+        }
       }
     }
   }

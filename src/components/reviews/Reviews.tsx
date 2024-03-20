@@ -3,9 +3,9 @@ import './Reviews.scss';
 const Reviews = () => {
   return (
     <div className='reviews'>
-      <div className='container'>
+      <div className='reviewBox'>
         <ul className='listWrap'>
-          <li>Reviews (0)</li>
+          <li className='listItem active'>Reviews (0)</li>
         </ul>
         <div className='reviewWrap'>
           <div className='reviewContainer'>
@@ -20,7 +20,7 @@ const Reviews = () => {
                   </span>
                   <form>
                     <textarea name='review' id='review' cols={30} rows={10} />
-                    <div>
+                    <div className='inputWrap'>
                       <input type='text' name='name' placeholder='Name' />
                       <input type='email' name='email' placeholder='Email' />
                     </div>
@@ -35,8 +35,8 @@ const Reviews = () => {
                           Sign me up for the newsletter!
                         </label>
                       </div>
-                      <button type='submit'>Submit review</button>
                     </div>
+                    <button type='submit'>Submit review</button>
                   </form>
                 </div>
               </div>
