@@ -25,10 +25,9 @@
           top: 1px;
           background-color: $clr-white;
           color: inherit;
-          border-top: 2px solid $clr-secondary;
+          border-top: 2px solid $clr-primary;
           border-left: 1px solid #ddd !important;
           border-right: 1px solid #ddd;
-          border-color: $clr-secondary;
         }
       }
     }
@@ -37,7 +36,6 @@
       padding: 7.5rem 4.2rem 5rem;
       background-color: $clr-white;
       border: 1px solid #ddd;
-      border-top: none;
 
       .reviewContainer {
         .allReviews {
