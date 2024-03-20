@@ -1,9 +1,13 @@
 .product {
-  display: flex;
-  justify-content: center;
+  .productHeader {
+    width: 100vw;
+    height: 70vh;
+    background-image: url(/img/slider_bg3.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
 
   .container {
-    width: 144rem;
-    padding: 12rem 0;
   }
 }

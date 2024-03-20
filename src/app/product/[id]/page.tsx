@@ -3,7 +3,7 @@ import './Product.scss';
 const Product = () => {
   return (
     <div className='product'>
-      <header>
+      <header className='productHeader'>
         <h1 className='productHeading'>Double grilled chicken burger</h1>
         <div className='productSubHeading'>
           <span>Welcome to burger</span>
