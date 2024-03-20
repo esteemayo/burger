@@ -35,6 +35,7 @@
 
     .reviewWrap {
       padding: 7.5rem 4.2rem 5rem;
+      background-color: $clr-white;
       border: 1px solid #ddd;
       border-top: none;
 
@@ -104,16 +105,40 @@
                 }
 
                 textarea {
-                  all: unset;
                   display: inline-block;
+                  border: none;
+                  outline: none;
+                  appearance: none;
+                  font-family: inherit;
+                  font-size: var(--default-font-size);
                   width: 78.2rem;
                   height: 10.7rem;
+                  padding: 1rem 2rem;
+                  background-color: #fbfbfc;
+                  color: $clr-gray-dark;
+                  border: 1px solid transparent;
+                  border-radius: 0.5rem;
+                  caret-color: $clr-secondary;
+                  resize: none;
+                  transition: all 0.3s;
+
+                  &:focus {
+                    border: 1px solid $clr-gray-light;
+                  }
+
+                  &::placeholder {
+                    text-transform: uppercase;
+                    font-weight: 400;
+                    font-size: 1.3rem;
+                    color: $clr-gray-light;
+                  }
                 }
 
                 .inputWrap {
                   margin-bottom: 1.6rem;
 
                   input {
+                    background-color: #fbfbfc;
                   }
                 }
 

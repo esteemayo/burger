@@ -31,7 +31,13 @@ const Reviews = () => {
                         <FaStar />
                       </div>
                     </div>
-                    <textarea name='review' id='review' cols={30} rows={10} />
+                    <textarea
+                      name='review'
+                      id='review'
+                      cols={30}
+                      rows={10}
+                      placeholder='Message'
+                    />
                     <div className='inputWrap'>
                       <input type='text' name='name' placeholder='Name' />
                       <input type='email' name='email' placeholder='Email' />
