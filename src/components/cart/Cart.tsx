@@ -1,7 +1,7 @@
 import './Cart.scss';
 
 const Cart = () => {
-  return <div>Cart</div>;
+  return <div className='productCart'>Cart</div>;
 };
 
 export default Cart;

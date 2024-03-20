@@ -56,10 +56,11 @@
   .reviewCart {
     display: flex;
     justify-content: center;
+    padding: 8rem 0;
+    background-color: #fbfbfc;
 
     .container {
       width: 144rem;
-      padding: 8rem 0;
       display: flex;
       justify-content: space-between;
     }
