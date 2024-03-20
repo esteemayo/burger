@@ -1,3 +1,5 @@
+import { FaStar } from 'react-icons/fa';
+
 import './Reviews.scss';
 
 const Reviews = () => {
@@ -19,6 +21,16 @@ const Reviews = () => {
                     Be the first to review “Chicken Caesar Salad”
                   </span>
                   <form>
+                    <div className='ratingWrap'>
+                      <span>Your rating</span>
+                      <div className='formRating'>
+                        <FaStar />
+                        <FaStar />
+                        <FaStar />
+                        <FaStar />
+                        <FaStar />
+                      </div>
+                    </div>
                     <textarea name='review' id='review' cols={30} rows={10} />
                     <div className='inputWrap'>
                       <input type='text' name='name' placeholder='Name' />
