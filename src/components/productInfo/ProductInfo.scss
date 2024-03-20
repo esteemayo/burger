@@ -82,18 +82,27 @@
 
       button {
         all: unset;
-        display: inline-block;
         text-transform: uppercase;
         text-align: center;
         font-weight: 600;
         font-size: 1.3rem;
         letter-spacing: 2px;
         line-height: 1.8rem;
-        padding: 1.2rem 5rem 1.2rem 7.2rem;
+        padding: 1.2rem 5rem;
         background-color: $clr-black;
         color: $clr-white;
         border-radius: 0.5rem;
         cursor: pointer;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+
+        svg {
+          font-size: 1.7rem;
+          fill: currentColor;
+        }
       }
     }
   }
