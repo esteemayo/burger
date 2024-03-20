@@ -26,6 +26,16 @@
         font-size: 5.8rem;
         line-height: normal;
       }
+
+      .productSubHeading {
+        display: table;
+        text-align: center;
+        font-size: var(--default-font-size);
+        color: $clr-white;
+        line-height: 0;
+        letter-spacing: 3.5px;
+        margin: 1.2rem auto 0;
+      }
     }
   }
 
