@@ -66,6 +66,16 @@
               }
 
               .replyTitle {
+                display: inline-block;
+                text-transform: uppercase;
+                font-weight: 600;
+                font-size: var(--default-font-size);
+                letter-spacing: 0.5px;
+                padding-right: 2rem;
+                background-color: $clr-white;
+                color: inherit;
+                margin-bottom: 3.8rem;
+                position: relative;
               }
 
               form {
