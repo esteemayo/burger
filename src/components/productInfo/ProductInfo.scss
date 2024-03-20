@@ -21,5 +21,35 @@
       line-height: 1;
       margin-bottom: 1rem;
     }
+
+    .wrapper {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+
+      .reviewWrap {
+        .starRating {
+        }
+
+        .totalReview {
+        }
+      }
+
+      .heartWrap {
+        img {
+        }
+
+        .price {
+        }
+      }
+    }
+
+    .quantity {
+      input {
+      }
+
+      button {
+      }
+    }
   }
 }

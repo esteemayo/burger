@@ -13,16 +13,16 @@ const ProductInfo = () => {
           Our Chicken nuggets are made from freshly ground well spiced chicken
           breast dipped in batter and fried to golden perfection!
         </p>
-        <div>
-          <div>
-            <div>
+        <div className='wrapper'>
+          <div className='reviewWrap'>
+            <div className='starRating'>
               <FaStar />
               <FaStar />
               <FaStar />
               <FaStar />
               <FaStar />
             </div>
-            <span>0 reviews</span>
+            <span className='totalReview'>0 reviews</span>
           </div>
           <span className='heartWrap'>
             <Image
