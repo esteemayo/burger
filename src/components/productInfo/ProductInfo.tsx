@@ -17,6 +17,10 @@ const ProductInfo = () => {
           <div>
             <div>
               <FaStar />
+              <FaStar />
+              <FaStar />
+              <FaStar />
+              <FaStar />
             </div>
             <span>0 reviews</span>
           </div>
