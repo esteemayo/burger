@@ -39,8 +39,18 @@ const Reviews = () => {
                       placeholder='Message'
                     />
                     <div className='inputWrap'>
-                      <input type='text' name='name' placeholder='Name' />
-                      <input type='email' name='email' placeholder='Email' />
+                      <input
+                        type='text'
+                        name='name'
+                        placeholder='Name'
+                        className='formControl'
+                      />
+                      <input
+                        type='email'
+                        name='email'
+                        placeholder='Email'
+                        className='formControl'
+                      />
                     </div>
                     <div className='consent'>
                       <p>

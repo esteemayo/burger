@@ -104,7 +104,7 @@
                   }
                 }
 
-                input,
+                input.formControl,
                 textarea {
                   display: inline-block;
                   border: none;
@@ -145,20 +145,29 @@
                   gap: 2rem;
                   margin: 1.6rem 0;
 
-                  input {
+                  input.formControl {
                     width: 100%;
                   }
                 }
 
                 .consent {
+                  font-size: 1.35rem;
+                  margin-bottom: 1rem;
+
                   p {
+                    font-size: 100%;
                   }
 
                   div {
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+
                     input {
                     }
 
                     label {
+                      font-size: 100%;
                     }
                   }
                 }
