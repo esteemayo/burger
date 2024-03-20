@@ -172,6 +172,25 @@
                 }
 
                 button {
+                  all: unset;
+                  display: inline-block;
+                  text-align: center;
+                  text-transform: uppercase;
+                  font-weight: 400;
+                  font-size: 1.3rem;
+                  width: 20rem;
+                  max-width: 20rem;
+                  height: 5rem;
+                  line-height: 2.34rem;
+                  background-color: $clr-black;
+                  color: $clr-white;
+                  border-radius: 0.5rem;
+                  cursor: pointer;
+                  transition: all 0.3s;
+
+                  &:hover {
+                    color: $clr-secondary;
+                  }
                 }
               }
             }
