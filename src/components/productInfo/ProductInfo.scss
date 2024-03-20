@@ -79,9 +79,20 @@
     .quantity {
       display: flex;
       align-items: center;
-      gap: 1rem;
+      gap: 1.3rem;
 
       input {
+        display: inline-block;
+        border: none;
+        outline: none;
+        text-align: center;
+        font-family: inherit;
+        font-weight: 600;
+        font-size: var(--default-font-size);
+        width: 7.4rem;
+        padding: 0.7rem;
+        background-color: $clr-tertiary;
+        color: $clr-secondary;
       }
 
       button {
