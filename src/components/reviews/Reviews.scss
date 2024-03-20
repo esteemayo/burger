@@ -102,10 +102,17 @@
                     }
                   }
                 }
+
                 textarea {
+                  all: unset;
+                  display: inline-block;
+                  width: 78.2rem;
+                  height: 10.7rem;
                 }
 
                 .inputWrap {
+                  margin-bottom: 1.6rem;
+
                   input {
                   }
                 }
