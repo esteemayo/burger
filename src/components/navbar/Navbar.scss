@@ -238,7 +238,7 @@
                 .cardButtons {
                   display: flex;
                   align-items: center;
-                  color: $clr-gray-dark;
+                  color: $clr-gray-dark !important;
 
                   button {
                     display: inline-block;
@@ -254,7 +254,7 @@
 
                     svg {
                       font-size: 2rem;
-                      color: currentColor;
+                      fill: currentColor;
                     }
                   }
                 }
@@ -262,7 +262,7 @@
                 .deleteBtn {
                   svg {
                     font-size: var(--default-font-size);
-                    color: $clr-gray-light;
+                    fill: $clr-gray-light;
                     cursor: pointer;
                   }
                 }
