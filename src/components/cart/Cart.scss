@@ -56,6 +56,14 @@
             color: $clr-primary;
             border: 1px solid currentColor;
             border-radius: 0.5rem;
+
+            &:visited {
+              color: $clr-primary;
+            }
+
+            &:hover {
+              color: #dc3545;
+            }
           }
         }
       }
