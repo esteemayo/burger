@@ -29,6 +29,14 @@
         border-bottom: 1px solid $clr-gray-light;
       }
 
+      .emptyCart {
+        height: 35rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
       .cardBody {
         height: 35rem;
         overflow-y: hidden;
