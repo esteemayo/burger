@@ -12,7 +12,7 @@ const Reviews = () => {
     e.preventDefault();
   }, []);
 
-  const reviews = [1, 2, 3, 4, 5];
+  const reviews = [];
 
   return (
     <div className='reviews'>
