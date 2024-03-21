@@ -1,7 +1,43 @@
+import Link from 'next/link';
+import RemoveShoppingCartIcon from '@mui/icons-material/RemoveShoppingCart';
+
 import './Cart.scss';
 
 const Cart = () => {
-  return <div className='productCart'>Cart</div>;
+  return (
+    <aside className='productCart'>
+      <div className='detailBox'>
+        <div className='cardWrap'>
+          <div className='cardHeading'>Your cart</div>
+          <div className='cardBody'>
+            <div className='catProduct'>
+              <div className='cardBox'>
+                <div className='cardProductBox'>
+                  <div className='cardProduct'>
+                    <div className='cardName'>
+                      <Link href='/'>
+                        <p>
+                          <span>1</span>
+                          <span>Grilled chicken burger</span>
+                        </p>
+                      </Link>
+                    </div>
+                    <div className='deleteCardBtn'>
+                      <RemoveShoppingCartIcon />
+                    </div>
+                    <div className='cardPrice'>$11999.0</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className='cardFooter'>
+            <button type='button'>Proceed to checkout</button>
+          </div>
+        </div>
+      </div>
+    </aside>
+  );
 };
 
 export default Cart;
