@@ -104,7 +104,36 @@
       }
 
       .cardFooter {
+        padding: 1.5rem;
+        border-top: 1px solid $clr-gray-light;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
         button {
+          all: unset;
+          display: inline-block;
+          text-align: center;
+          vertical-align: middle;
+          user-select: none;
+          font-weight: 500;
+          font-size: 1.3rem;
+          width: 100%;
+          padding: 0.6rem 1.6rem 0.5rem;
+          background-color: $clr-green;
+          color: $clr-white;
+          border: 1px solid transparent;
+          line-height: 1.595;
+          border-radius: 0.5rem;
+          cursor: pointer;
+          transition: all 0.3s;
+
+          &:hover {
+            background-color: $clr-white;
+            color: $clr-primary;
+            border-color: $clr-primary;
+          }
         }
       }
     }
