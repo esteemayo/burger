@@ -40,11 +40,26 @@
             .cardProductBox {
               .cardProduct {
                 .cardName {
+                  font-weight: 700;
+                  font-size: 1rem;
+                  white-space: nowrap;
+                  text-overflow: ellipsis;
+                  overflow: hidden;
+
                   a,
                   a:link,
                   a:active {
+                    color: $clr-primary;
+
                     p {
+                      font-size: 1.4rem;
+                      text-overflow: ellipsis;
+                      white-space: nowrap;
+                      overflow: hidden;
+
                       span {
+                        color: #00000059;
+                        margin-right: 1rem;
                       }
                     }
                   }
