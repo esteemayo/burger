@@ -13,7 +13,7 @@ const Cart = () => {
       <div className='detailBox'>
         <div className='cardWrap'>
           <div className='cardHeading'>Your cart</div>
-          {cart.length > 0 ? (
+          {cart.length < 1 ? (
             <div className='emptyCart'>
               <div className='emptyHeading'>Empty cart</div>
               <div className='emptyLink'>
@@ -50,7 +50,7 @@ const Cart = () => {
               </div>
             </div>
           )}
-          {cart.length < 1 && (
+          {cart.length > 0 && (
             <div className='cardFooter'>
               <button type='button'>Proceed to Checkout</button>
             </div>
