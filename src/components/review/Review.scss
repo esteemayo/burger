@@ -41,7 +41,7 @@
         }
       }
 
-      .reviewer {
+      .reviewer {  
         .reviewerName {
           text-transform: capitalize;
           font-weight: 500;
@@ -50,6 +50,7 @@
 
         .reviewerText {
           font-size: 1.4rem;
+          color: $clr-gray-dark;
         }
       }
     }
