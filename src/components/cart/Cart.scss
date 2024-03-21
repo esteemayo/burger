@@ -25,7 +25,17 @@
       }
 
       .cardBody {
+        height: 35rem;
+        padding: 1.5rem;
+        overflow-y: hidden;
+
         .catProduct {
+          display: flex;
+          align-items: flex-start;
+          justify-content: space-between;
+          padding: 1.5rem;
+          border-bottom: 1px solid $clr-gray-light;
+
           .cardBox {
             .cardProductBox {
               .cardProduct {
