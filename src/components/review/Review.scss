@@ -35,17 +35,14 @@
       }
 
       .reviewer {
-        .reviewRating {
-          position: absolute;
-          top: -2.6rem;
-          right: -1.6rem;
+        .reviewerName {
+          text-transform: capitalize;
+          font-weight: 500;
+          font-size: 100%;
+        }
 
-          .reviewerName {
-          }
-
-          .reviewerText {
-            font-size: 1.3rem;
-          }
+        .reviewerText {
+          font-size: 1.4rem;
         }
       }
     }
