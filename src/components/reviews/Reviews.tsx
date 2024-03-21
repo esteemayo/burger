@@ -33,7 +33,9 @@ const Reviews = () => {
               <div className='reviewForm'>
                 <div className='respond'>
                   <span className='replyTitle'>
-                    Be the first to review “Double Grilled Chicken Burger”
+                    {reviews.length > 0
+                      ? 'Add a review'
+                      : 'Be the first to review “Double Grilled Chicken Burger”'}
                   </span>
                   <form onSubmit={handleSubmit}>
                     <div className='ratingWrap'>
