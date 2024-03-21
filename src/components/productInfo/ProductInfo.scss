@@ -113,11 +113,16 @@
         color: $clr-white;
         border-radius: 0.5rem;
         cursor: pointer;
+        transition: all 0.3s;
 
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 1rem;
+
+        &:hover {
+          background-color: $clr-secondary;
+        }
 
         svg {
           font-size: 1.7rem;
