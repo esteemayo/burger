@@ -6,7 +6,7 @@
   .reviewBox {
     .listWrap {
       list-style: none;
-      margin-bottom: 1px solid $clr-gray-light;
+      border-bottom: none;
 
       .listItem {
         display: inline-block;
@@ -24,9 +24,11 @@
           top: 1px;
           background-color: $clr-white;
           color: inherit;
-          border-top: 2px solid $clr-primary;
+          border-top: 2px solid $clr-green;
           border-left: 1px solid $clr-gray-light !important;
           border-right: 1px solid $clr-gray-light;
+          border-top-left-radius: 0.5rem;
+          border-top-right-radius: 0.5rem;
         }
       }
     }
@@ -35,6 +37,8 @@
       padding: 7.5rem 4.2rem 5rem;
       background-color: $clr-white;
       border: 1px solid $clr-gray-light;
+      border-radius: 0.5rem;
+      border-top-left-radius: 0;
 
       .reviewContainer {
         .allReviews {
