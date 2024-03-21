@@ -82,6 +82,7 @@
       display: flex;
       align-items: center;
       gap: 1.3rem;
+      margin-top: 2rem;
 
       input {
         display: inline-block;
@@ -101,7 +102,7 @@
 
       button {
         all: unset;
-        text-transform: uppercase;
+        text-transform: capitalize;
         text-align: center;
         font-weight: 600;
         font-size: 1.3rem;
