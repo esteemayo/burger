@@ -17,7 +17,7 @@
       border: none;
 
       .cardHeading {
-        font-weight: 900;
+        font-weight: 700;
         padding: 1.5rem;
         background-color: inherit;
         color: inherit;
@@ -88,8 +88,14 @@
                 }
 
                 .cardPrice {
-                  display: flex;
-                  justify-content: flex-end;
+                  font-weight: 500;
+                  font-size: 1.35rem;
+                  color: #00000059;
+                  transition: all 0.3s;
+
+                  &:hover {
+                    color: #bc2634;
+                  }
                 }
               }
             }
