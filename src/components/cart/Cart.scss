@@ -14,7 +14,14 @@
     border-radius: 3px;
 
     .cardWrap {
+      border: none;
+
       .cardHeading {
+        font-weight: 900;
+        padding: 1.5rem;
+        background-color: inherit;
+        color: inherit;
+        border-bottom: 1px solid $clr-gray-light;
       }
 
       .cardBody {

@@ -18,7 +18,7 @@ const Cart = () => {
                       <Link href='/'>
                         <p>
                           <span>1</span>
-                          <span>Grilled chicken burger</span>
+                          Grilled chicken burger
                         </p>
                       </Link>
                     </div>
