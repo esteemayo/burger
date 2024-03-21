@@ -1,8 +1,15 @@
+'use client';
+
+import { useCallback } from 'react';
 import { FaStar } from 'react-icons/fa';
 
 import './Reviews.scss';
 
 const Reviews = () => {
+  const handleSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+  }, []);
+
   return (
     <div className='reviews'>
       <div className='reviewBox'>
@@ -20,7 +27,7 @@ const Reviews = () => {
                   <span className='replyTitle'>
                     Be the first to review “Double Grilled Chicken Burger”
                   </span>
-                  <form>
+                  <form onSubmit={handleSubmit}>
                     <div className='ratingWrap'>
                       <span>Your rating</span>
                       <div className='formRating'>
