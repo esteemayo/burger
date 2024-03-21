@@ -1,3 +1,5 @@
+@import '../../styles/variables.scss';
+
 .review {
   background-color: #fbfbfc;
   border-radius: 0.5rem;
@@ -29,7 +31,12 @@
         right: -1.6rem;
 
         .star {
+          display: flex;
+          align-items: center;
+
           svg {
+            fill: #00000059;
+            fill: #f9ab04;
           }
         }
       }
