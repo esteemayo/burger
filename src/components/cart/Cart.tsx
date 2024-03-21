@@ -13,16 +13,16 @@ const Cart = () => {
       <div className='detailBox'>
         <div className='cardWrap'>
           <div className='cardHeading'>Your cart</div>
-          <div className='cardBody'>
-            <div className='catProduct'>
-              {cart.length > 0 ? (
-                <div className='emptyCart'>
-                  <div className='emptyHeading'>Empty cart</div>
-                  <div className='emptyLink'>
-                    <Link href='/'>Continue shopping</Link>
-                  </div>
-                </div>
-              ) : (
+          {cart.length > 0 ? (
+            <div className='emptyCart'>
+              <div className='emptyHeading'>Empty cart</div>
+              <div className='emptyLink'>
+                <Link href='/'>Continue shopping</Link>
+              </div>
+            </div>
+          ) : (
+            <div className='cardBody'>
+              <div className='catProduct'>
                 <div className='cardBox'>
                   <div className='cardProductWrap'>
                     <div className='cardProduct'>
@@ -47,9 +47,9 @@ const Cart = () => {
                     </div>
                   </div>
                 </div>
-              )}
+              </div>
             </div>
-          </div>
+          )}
           {cart.length < 1 && (
             <div className='cardFooter'>
               <button type='button'>Proceed to Checkout</button>
