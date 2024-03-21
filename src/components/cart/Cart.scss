@@ -38,6 +38,9 @@
           .cardBox {
             .cardProductBox {
               .cardProduct {
+                display: flex;
+                align-items: center;
+
                 .cardName {
                   font-weight: 700;
                   font-size: 1rem;
@@ -56,6 +59,7 @@
                       text-overflow: ellipsis;
                       white-space: nowrap;
                       overflow: hidden;
+                      margin-top: 0;
                       margin-bottom: 0;
 
                       span {
@@ -67,11 +71,25 @@
                 }
 
                 .deleteCardBtn {
+                  all: unset;
+                  display: inline-block;
+                  color: #00000059;
+                  margin-right: 2rem;
+                  cursor: pointer;
+                  transition: all 0.3s;
+
+                  &:hover {
+                    color: #bc2634;
+                  }
+
                   svg {
+                    fill: currentColor;
                   }
                 }
 
                 .cardPrice {
+                  display: flex;
+                  justify-content: flex-end;
                 }
               }
             }

@@ -22,9 +22,9 @@ const Cart = () => {
                         </p>
                       </Link>
                     </div>
-                    <div className='deleteCardBtn'>
+                    <button type='button' className='deleteCardBtn'>
                       <RemoveShoppingCartIcon />
-                    </div>
+                    </button>
                     <div className='cardPrice'>$11999.0</div>
                   </div>
                 </div>
