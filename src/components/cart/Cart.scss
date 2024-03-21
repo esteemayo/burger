@@ -70,6 +70,34 @@
                   }
                 }
 
+                .cardButtons {
+                  display: flex;
+                  align-items: center;
+                  color: $clr-gray-dark;
+
+                  button {
+                    all: unset;
+                    display: inline-block;
+                    background-color: transparent;
+                    color: inherit;
+                    cursor: pointer;
+                    transition: all 0.3s;
+
+                    &:hover {
+                      color: #bc2634;
+                    }
+
+                    &:disabled {
+                      color: $clr-gray-light;
+                    }
+
+                    svg {
+                      font-size: 2rem;
+                      color: currentColor;
+                    }
+                  }
+                }
+
                 .deleteCardBtn {
                   all: unset;
                   display: inline-block;
