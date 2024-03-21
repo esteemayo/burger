@@ -39,7 +39,7 @@ const Cart = () => {
             </div>
           </div>
           <div className='cardFooter'>
-            <button type='button'>Proceed to checkout</button>
+            <button type='button'>Proceed to Checkout</button>
           </div>
         </div>
       </div>
