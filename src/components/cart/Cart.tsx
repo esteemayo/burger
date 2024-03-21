@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import RemoveShoppingCartIcon from '@mui/icons-material/RemoveShoppingCart';
 
 import './Cart.scss';
@@ -15,12 +14,10 @@ const Cart = () => {
                 <div className='cardProductBox'>
                   <div className='cardProduct'>
                     <div className='cardName'>
-                      <Link href='/'>
-                        <p>
-                          <span>1</span>
-                          Grilled chicken burger
-                        </p>
-                      </Link>
+                      <p>
+                        <span>1</span>
+                        Grilled chicken burger
+                      </p>
                     </div>
                     <button type='button' className='deleteCardBtn'>
                       <RemoveShoppingCartIcon />

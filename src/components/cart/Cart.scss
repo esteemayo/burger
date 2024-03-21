@@ -49,23 +49,18 @@
                   text-overflow: ellipsis;
                   overflow: hidden;
 
-                  a,
-                  a:link,
-                  a:active {
+                  p {
+                    font-size: 1.4rem;
+                    text-overflow: ellipsis;
                     color: $clr-primary;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    margin-top: 0;
+                    margin-bottom: 0;
 
-                    p {
-                      font-size: 1.4rem;
-                      text-overflow: ellipsis;
-                      white-space: nowrap;
-                      overflow: hidden;
-                      margin-top: 0;
-                      margin-bottom: 0;
-
-                      span {
-                        color: #00000059;
-                        margin-right: 1rem;
-                      }
+                    span {
+                      color: #00000059;
+                      margin-right: 1rem;
                     }
                   }
                 }
