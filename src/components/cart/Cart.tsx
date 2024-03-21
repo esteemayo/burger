@@ -1,4 +1,6 @@
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import RemoveShoppingCartIcon from '@mui/icons-material/RemoveShoppingCart';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import './Cart.scss';
 
@@ -18,6 +20,14 @@ const Cart = () => {
                         <span>1</span>
                         Grilled chicken burger
                       </p>
+                    </div>
+                    <div className='cardButtons'>
+                      <button type='button'>
+                        <ExpandMoreIcon />
+                      </button>
+                      <button type='button'>
+                        <ExpandLessIcon />
+                      </button>
                     </div>
                     <button type='button' className='deleteCardBtn'>
                       <RemoveShoppingCartIcon />
