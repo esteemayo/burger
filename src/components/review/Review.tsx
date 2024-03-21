@@ -26,7 +26,7 @@ const Review = () => {
                 <FaStar />
               </div>
             </div>
-            <div>
+            <div className='reviewerWrap'>
               <div className='reviewerName'>Emmanuel Adebayo</div>
               <p className='reviewerText'>Looks so delicious!</p>
             </div>

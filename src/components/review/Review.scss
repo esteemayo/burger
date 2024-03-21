@@ -4,5 +4,33 @@
 
   .reviewCard {
     padding: 5.6rem 4rem 4rem 4rem;
+
+    .reviewWrapper {
+      display: flex;
+      align-items: center;
+      gap: 2.8rem;
+
+      .reviewImg {
+        img {
+        }
+      }
+
+      .reviewer {
+        .reviewRating {
+          .star {
+            svg {
+            }
+          }
+        }
+
+        .reviewRating {
+          .reviewerName {
+          }
+
+          .reviewerText {
+          }
+        }
+      }
+    }
   }
 }
