@@ -16,16 +16,16 @@ const Review = () => {
               alt='avatar'
             />
           </div>
-          <div className='reviewer'>
-            <div className='reviewRating'>
-              <div className='star'>
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaStar />
-              </div>
+          <div className='reviewRating'>
+            <div className='star'>
+              <FaStar />
+              <FaStar />
+              <FaStar />
+              <FaStar />
+              <FaStar />
             </div>
+          </div>
+          <div className='reviewer'>
             <div className='reviewerWrap'>
               <div className='reviewerName'>Emmanuel Adebayo</div>
               <p className='reviewerText'>Looks so delicious!</p>

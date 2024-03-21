@@ -9,6 +9,7 @@
       display: flex;
       align-items: center;
       gap: 2.8rem;
+      position: relative;
 
       .reviewImg {
         width: 8.7rem;
@@ -22,19 +23,28 @@
         }
       }
 
-      .reviewer {
-        .reviewRating {
-          .star {
-            svg {
-            }
+      .reviewRating {
+        position: absolute;
+        top: -2.6rem;
+        right: -1.6rem;
+
+        .star {
+          svg {
           }
         }
+      }
 
+      .reviewer {
         .reviewRating {
+          position: absolute;
+          top: -2.6rem;
+          right: -1.6rem;
+
           .reviewerName {
           }
 
           .reviewerText {
+            font-size: 1.3rem;
           }
         }
       }
