@@ -13,7 +13,7 @@ const Cart = () => {
           <div className='cardBody'>
             <div className='catProduct'>
               <div className='cardBox'>
-                <div className='cardProductBox'>
+                <div className='cardProductWrap'>
                   <div className='cardProduct'>
                     <div className='cardName'>
                       <p>

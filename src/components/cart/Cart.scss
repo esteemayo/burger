@@ -41,17 +41,19 @@
           border-bottom: 1px solid $clr-gray-light;
 
           .cardBox {
-            .cardProductBox {
+            .cardProductWrap {
               .cardProduct {
                 display: flex;
                 align-items: center;
+                margin-top: -1rem;
 
                 .cardName {
+                  white-space: nowrap;
+                  text-overflow: ellipsis;
                   font-weight: 700;
                   font-size: 1rem;
                   padding: 1.5rem;
-                  white-space: nowrap;
-                  text-overflow: ellipsis;
+                  padding-left: 0;
                   overflow: hidden;
 
                   p {
