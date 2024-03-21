@@ -1,12 +1,12 @@
 @import '../../styles/variables.scss';
 
 .productInfo {
-  padding: 1rem 0;
   display: flex;
   justify-content: center;
 
   .container {
     width: 120rem;
+    padding: 6rem 0;
 
     h3 {
       display: inline-block;
