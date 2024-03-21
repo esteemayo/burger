@@ -3,12 +3,16 @@
 import { useCallback } from 'react';
 import { FaStar } from 'react-icons/fa';
 
+import Review from '../review/Review';
+
 import './Reviews.scss';
 
 const Reviews = () => {
   const handleSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
   }, []);
+
+  const reviews = [1, 2, 3, 4, 5];
 
   return (
     <div className='reviews'>
@@ -18,9 +22,13 @@ const Reviews = () => {
         </ul>
         <div className='reviewWrap'>
           <div className='reviewContainer'>
-            <div className='allReviews'>
-              <p>There are no reviews yet.</p>
-            </div>
+            {reviews.length < 1 ? (
+              <div className='allReviews'>
+                <p>There are no reviews yet.</p>
+              </div>
+            ) : (
+              <Review />
+            )}
             <div className='reviewFormWrap'>
               <div className='reviewForm'>
                 <div className='respond'>
