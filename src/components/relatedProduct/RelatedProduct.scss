@@ -59,8 +59,9 @@
           transition: all 0.3s;
 
           position: absolute;
-          left: 12%;
+          left: 50%;
           top: 13rem;
+          transform: translateX(-50%);
 
           display: none;
           visibility: hidden;
