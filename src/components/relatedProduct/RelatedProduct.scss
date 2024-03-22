@@ -1,6 +1,7 @@
 @import '../../styles/variables.scss';
 
 .relatedProduct {
+  width: 22rem;
   -webkit-box-shadow: $box-shadow;
   box-shadow: $box-shadow;
   border-radius: 3px;
@@ -10,7 +11,7 @@
     position: relative;
 
     .relatedThumbnail {
-      width: 19rem;
+      width: 22rem;
       height: 17rem;
       position: relative;
       overflow: hidden;
