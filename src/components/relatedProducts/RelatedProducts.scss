@@ -5,8 +5,13 @@
   justify-content: center;
 
   .container {
-    width: 120rem;
+    width: 100rem;
     padding: 10rem 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
 
     .relatedHeader {
       display: inline-block;
@@ -26,7 +31,6 @@
       display: flex;
       flex-wrap: wrap;
       gap: 3rem;
-      padding-top: 2.7rem;
     }
   }
 }
