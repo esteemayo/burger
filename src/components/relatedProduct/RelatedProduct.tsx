@@ -13,14 +13,12 @@ const RelatedProduct = () => {
               Add to cart
             </button>
           </span>
-          <Link href={`/product/1`}>
-            <Image
-              src='/img/hero.png'
-              width={220}
-              height={170}
-              alt='product image'
-            />
-          </Link>
+          <Image
+            src='/img/hero.png'
+            width={220}
+            height={170}
+            alt='product image'
+          />
         </div>
         <div className='relatedContent'>
           <Link href={`/product/1`}>
