@@ -8,6 +8,11 @@
     a:link,
     a:active {
       .relatedThumbnail {
+        width: 19rem;
+        height: 17rem;
+        position: relative;
+        overflow: hidden;
+
         &:hover .relatedBtn {
           display: inline-block;
           visibility: visible;
@@ -16,6 +21,10 @@
         }
 
         img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
         }
       }
     }
