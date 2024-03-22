@@ -7,83 +7,83 @@
   box-shadow: $box-shadow;
   overflow: hidden;
 
-  a,
-  a:link,
-  a:active {
-    color: $clr-black;
+  .imgWrapper {
+    width: 30rem;
+    height: 27rem;
+    position: relative;
+    transition: all 0.3s;
 
-    .imgWrapper {
-      width: 30rem;
-      height: 27rem;
-      position: relative;
-      transition: all 0.3s;
+    &:hover .overlay {
+      visibility: visible;
+      opacity: 1;
+      z-index: 1000;
 
-      &:hover .overlay {
+      .cartButton {
         visibility: visible;
         opacity: 1;
         z-index: 1000;
-
-        .cartButton {
-          visibility: visible;
-          opacity: 1;
-          z-index: 1000;
-          transform: translate3d(0, 0, 0);
-        }
-      }
-
-      .overlay {
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.3);
-        position: absolute;
-        top: 0;
-        left: 0;
-        visibility: hidden;
-        opacity: 0;
-        z-index: -1;
-        transition: all 0.3s linear;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        .cartButton {
-          all: unset;
-          display: inline-block;
-          text-transform: uppercase;
-          text-align: center;
-          font-weight: 600;
-          font-size: 1.2rem;
-          width: 14.8rem;
-          padding: 0.6rem 0;
-          background-color: $clr-tertiary;
-          color: inherit;
-          border-radius: 2px;
-          visibility: hidden;
-          opacity: 0;
-          z-index: -1;
-          transition: all 0.3s;
-          transform: translate3d(-50%, 0, 0);
-
-          &:hover {
-            color: $clr-secondary;
-          }
-        }
-      }
-
-      img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+        transform: translate3d(0, 0, 0);
       }
     }
 
-    .cardFooter {
-      min-height: 11.7rem;
-      text-align: center;
-      padding: 2.3rem 0 1.4rem;
-      background-color: $clr-tertiary;
+    .overlay {
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.3);
+      position: absolute;
+      top: 0;
+      left: 0;
+      visibility: hidden;
+      opacity: 0;
+      z-index: -1;
+      transition: all 0.3s linear;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .cartButton {
+        all: unset;
+        display: inline-block;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 600;
+        font-size: 1.2rem;
+        width: 14.8rem;
+        padding: 0.6rem 0;
+        background-color: $clr-tertiary;
+        color: inherit;
+        border-radius: 2px;
+        visibility: hidden;
+        opacity: 0;
+        z-index: -1;
+        transition: all 0.3s;
+        transform: translate3d(-50%, 0, 0);
+
+        &:hover {
+          color: $clr-secondary;
+        }
+      }
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .cardFooter {
+    min-height: 11.7rem;
+    text-align: center;
+    padding: 2.3rem 0 1.4rem;
+    background-color: $clr-tertiary;
+
+    a,
+    a:link,
+    a:active {
+      color: $clr-black;
 
       .heading {
         text-transform: uppercase;
