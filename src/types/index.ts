@@ -120,3 +120,10 @@ export interface RegisterErrors {
 export interface ProductListsProps {
   products: CardMenu;
 }
+
+export interface RelatedProductProps {
+  id: number;
+  name: string;
+  image: string;
+  price: number;
+}
