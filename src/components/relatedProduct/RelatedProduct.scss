@@ -1,6 +1,11 @@
 @import '../../styles/variables.scss';
 
 .relatedProduct {
+  -webkit-box-shadow: $box-shadow;
+  box-shadow: $box-shadow;
+  border-radius: 3px;
+  overflow: hidden;
+
   .relatedBox {
     position: relative;
 
