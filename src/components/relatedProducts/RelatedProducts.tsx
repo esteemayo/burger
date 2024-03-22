@@ -9,6 +9,9 @@ const RelatedProducts = () => {
         <h2 className='relatedHeader'>Related products</h2>
         <div className='relatedWrap'>
           <RelatedProduct />
+          <RelatedProduct />
+          <RelatedProduct />
+          <RelatedProduct />
         </div>
       </div>
     </section>
