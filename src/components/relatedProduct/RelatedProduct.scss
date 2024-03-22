@@ -17,8 +17,11 @@
         height: 17rem;
         position: relative;
         overflow: hidden;
+        transition: all 0.3s ease-in;
 
         &:hover {
+          transition: all 0.3s ease-in;
+
           &::before {
             content: '';
             width: 100%;
@@ -34,6 +37,7 @@
             visibility: visible;
             opacity: 1;
             z-index: 999;
+            transition: all 0.3s ease-out;
           }
         }
 
@@ -52,7 +56,7 @@
           font-size: 1.2rem;
           width: 14.8rem;
           padding: 0.6rem 0;
-          background-color: $clr-tertiary;
+          background-color: $clr-white;
           color: inherit;
           border-radius: 2px;
           cursor: pointer;
@@ -60,7 +64,7 @@
 
           position: absolute;
           left: 50%;
-          top: 13rem;
+          top: 11rem;
           transform: translateX(-50%);
 
           display: none;
@@ -79,7 +83,7 @@
       text-align: center;
       min-height: 11.7rem;
       padding: 2.3rem 0 1.4rem;
-      background-color: $clr-tertiary;
+      background-color: #fbfbfc;
 
       a,
       a:link,
