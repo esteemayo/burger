@@ -2,6 +2,8 @@
 
 .relatedProduct {
   .relatedBox {
+    position: relative;
+
     a,
     a:link,
     a:active {
@@ -55,6 +57,15 @@
         color: inherit;
         border-radius: 2px;
         cursor: pointer;
+        transition: all 0.3s;
+
+        position: absolute;
+        left: 12%;
+        top: 13rem;
+
+        &:hover {
+          color: $clr-secondary;
+        }
       }
     }
   }
