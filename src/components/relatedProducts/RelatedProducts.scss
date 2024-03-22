@@ -25,6 +25,21 @@
       line-height: 1.5;
       letter-spacing: 0.5px;
       margin-bottom: 2rem;
+      position: relative;
+
+      &::before {
+        content: '';
+        width: 80%;
+        height: 1px;
+        padding-top: 1px;
+        padding-bottom: 1px;
+        border-top: 1px solid $clr-gray-light;
+        border-bottom: 1px solid $clr-gray-light;
+
+        position: absolute;
+        top: 1rem;
+        left: 17rem;
+      }
     }
 
     .relatedWrap {
