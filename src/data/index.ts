@@ -237,4 +237,10 @@ export const relatedProducts: RelatedProductType = [
     image: '/img/hero.png',
     price: 29999,
   },
+  {
+    id: 4,
+    name: 'Double crunchy chicken burger',
+    image: '/img/hero.png',
+    price: 21999,
+  },
 ];
