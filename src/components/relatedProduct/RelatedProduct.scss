@@ -16,21 +16,18 @@
       position: relative;
       overflow: hidden;
       transform-origin: top;
-      transition: all 0.3s ease-out;
 
       &:hover .relatedOverlay {
         display: inline-block;
         visibility: visible;
         opacity: 1;
         z-index: 999;
-        transition: all 0.3s ease-out;
 
         .relatedBtn {
           display: inline-block;
           visibility: visible;
           opacity: 1;
           z-index: 999;
-          transition: all 0.3s ease-out;
         }
       }
 
