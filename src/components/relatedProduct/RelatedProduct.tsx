@@ -7,19 +7,19 @@ const RelatedProduct = () => {
   return (
     <article className='relatedProduct'>
       <div className='relatedBox'>
-        <Link href={`/product/1`}>
-          <div className='relatedThumbnail'>
+        <div className='relatedThumbnail'>
+          <Link href={`/product/1`}>
             <Image
               src='/img/hero.png'
               width={190}
               height={170}
               alt='product image'
             />
-            <button type='button' className='relatedBtn'>
-              Add to cart
-            </button>
-          </div>
-        </Link>
+          </Link>
+          <button type='button' className='relatedBtn'>
+            Add to cart
+          </button>
+        </div>
         <div className='relatedContent'>
           <Link href={`/product/1`}>
             <h2 className='relatedHeading'>Grilled Chicken Burger</h2>
