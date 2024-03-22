@@ -15,6 +15,9 @@ const RelatedProduct = () => {
               height={170}
               alt='product image'
             />
+            <button type='button' className='relatedBtn'>
+              Add to cart
+            </button>
           </div>
         </Link>
         <div className='relatedContent'>
@@ -22,9 +25,6 @@ const RelatedProduct = () => {
             <h2 className='relatedHeading'>Grilled Chicken Burger</h2>
             <span className='relatedPrice'>$4,000.00</span>
           </Link>
-          <button type='button' className='relatedBtn'>
-            Add to cart
-          </button>
         </div>
       </div>
     </article>
