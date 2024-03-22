@@ -56,6 +56,7 @@
           border-radius: 2px;
           cursor: pointer;
           transition: all 0.3s;
+          animation: moveInBottom 0.3s ease-out 1s backwards;
 
           position: absolute;
           left: 50%;
