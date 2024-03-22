@@ -7,5 +7,22 @@
   .container {
     width: 120rem;
     padding: 10rem 0;
+
+    .relatedHeader {
+      display: inline-block;
+      text-transform: capitalize;
+      text-rendering: optimizeLegibility;
+      font-weight: 500;
+      font-size: var(--default-font-size);
+      background-color: transparent;
+      padding-right: 2rem;
+      color: inherit;
+      line-height: 1.5;
+      letter-spacing: 0.5px;
+      margin-bottom: 2rem;
+    }
+
+    .relatedWrap {
+    }
   }
 }
