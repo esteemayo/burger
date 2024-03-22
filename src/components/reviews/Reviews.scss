@@ -54,9 +54,6 @@
               position: relative;
 
               &::before {
-                position: absolute;
-                left: 0;
-                top: 1.1rem;
                 content: '';
                 width: 100%;
                 height: 1px;
@@ -64,6 +61,10 @@
                 padding-bottom: 1px;
                 border-top: 1px solid $clr-gray-light;
                 border-bottom: 1px solid $clr-gray-light;
+
+                position: absolute;
+                left: 0;
+                top: 1.1rem;
               }
 
               .replyTitle {
