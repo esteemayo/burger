@@ -46,6 +46,13 @@ export type FeaturesType = Feature[];
 
 export type FeatureProps = Feature;
 
+export type RelatedProductType = {
+  id: number;
+  name: string;
+  image: string;
+  price: number;
+}[];
+
 export interface ProductCardProps {
   id: number;
   name: string;
