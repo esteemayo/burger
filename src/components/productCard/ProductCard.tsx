@@ -17,20 +17,20 @@ const ProductCard = ({ id, name, image, price }: ProductCardProps) => {
 
   return (
     <article className='productCard'>
-      <Link href={url}>
-        <div className='imgWrapper'>
-          <span className='overlay'>
-            <button type='button' className='cartButton'>
-              Add to cart
-            </button>
-          </span>
-          <Image src={image} width={300} height={270} alt={name} />
-        </div>
-        <div className='cardFooter'>
+      <div className='imgWrapper'>
+        <span className='overlay'>
+          <button type='button' className='cartButton'>
+            Add to cart
+          </button>
+        </span>
+        <Image src={image} width={300} height={270} alt={name} />
+      </div>
+      <div className='cardFooter'>
+        <Link href={url}>
           <h2 className='heading'>{name}</h2>
           <span className='price'>{formatCurrency(price)}</span>
-        </div>
-      </Link>
+        </Link>
+      </div>
     </article>
   );
 };
