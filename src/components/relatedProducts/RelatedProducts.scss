@@ -37,8 +37,9 @@
         border-bottom: 1px solid $clr-gray-light;
 
         position: absolute;
-        top: 1rem;
+        top: 50%;
         left: 17rem;
+        transform: translateY(-50%);
       }
     }
 
