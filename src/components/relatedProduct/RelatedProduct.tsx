@@ -8,6 +8,11 @@ const RelatedProduct = () => {
     <article className='relatedProduct'>
       <div className='relatedBox'>
         <div className='relatedThumbnail'>
+          <span className='relatedOverlay'>
+            <button type='button' className='relatedBtn'>
+              Add to cart
+            </button>
+          </span>
           <Link href={`/product/1`}>
             <Image
               src='/img/hero.png'
@@ -16,9 +21,6 @@ const RelatedProduct = () => {
               alt='product image'
             />
           </Link>
-          <button type='button' className='relatedBtn'>
-            Add to cart
-          </button>
         </div>
         <div className='relatedContent'>
           <Link href={`/product/1`}>
