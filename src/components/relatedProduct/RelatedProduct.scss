@@ -7,7 +7,16 @@
     a,
     a:link,
     a:active {
-      img {
+      .relatedThumbnail {
+        &:hover .relatedBtn {
+          display: inline-block;
+          visibility: visible;
+          opacity: 1;
+          z-index: 999;
+        }
+
+        img {
+        }
       }
     }
 
@@ -46,7 +55,6 @@
 
       .relatedBtn {
         all: unset;
-        display: inline-block;
         text-align: center;
         text-transform: uppercase;
         font-weight: 600;
@@ -62,6 +70,11 @@
         position: absolute;
         left: 12%;
         top: 13rem;
+
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+        z-index: -1;
 
         &:hover {
           color: $clr-secondary;

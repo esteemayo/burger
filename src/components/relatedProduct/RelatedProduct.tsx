@@ -8,12 +8,14 @@ const RelatedProduct = () => {
     <article className='relatedProduct'>
       <div className='relatedBox'>
         <Link href={`/product/1`}>
-          <Image
-            src='/img/hero.png'
-            width={190}
-            height={170}
-            alt='product image'
-          />
+          <div className='relatedThumbnail'>
+            <Image
+              src='/img/hero.png'
+              width={190}
+              height={170}
+              alt='product image'
+            />
+          </div>
         </Link>
         <div className='relatedContent'>
           <Link href={`/product/1`}>
