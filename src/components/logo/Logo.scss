@@ -10,19 +10,11 @@
   a:active {
     color: inherit;
 
-    h1 {
-      display: inline-block;
-      font-size: 3rem;
-      color: currentColor;
-
-      &::after {
-        display: inline-block;
-        content: '';
-        width: 0.5rem;
-        height: 0.5rem;
-        background-color: $clr-secondary;
-        border-radius: 50%;
-      }
+    img {
+      width: 12rem;
+      height: auto;
+      display: block;
+      object-fit: cover;
     }
   }
 }
