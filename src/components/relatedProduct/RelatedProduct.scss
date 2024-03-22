@@ -56,12 +56,11 @@
           border-radius: 2px;
           cursor: pointer;
           transition: all 0.3s;
-          animation: moveInBottom 0.3s ease-out 1s backwards;
+          animation: moveInBottom 0.3s ease-out 0.5s backwards;
 
           position: absolute;
-          left: 50%;
+          left: 17%;
           top: 11rem;
-          transform: translateX(-50%);
 
           display: none;
           visibility: hidden;
