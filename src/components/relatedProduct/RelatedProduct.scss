@@ -1,4 +1,37 @@
 @import '../../styles/variables.scss';
 
 .relatedProduct {
+  .relatedBox {
+    a,
+    a:link,
+    a:active {
+      img {
+      }
+    }
+
+    .relatedContent {
+      a,
+      a:link,
+      a:active {
+        color: inherit;
+
+        .relatedHeading {
+          text-transform: uppercase;
+          text-rendering: optimizeLegibility;
+          font-weight: 500;
+          font-size: 1.4rem;
+          line-height: 1.5;
+          margin-bottom: 1px;
+          transition: all 0.3s;
+
+          &:hover {
+            color: $clr-secondary;
+          }
+        }
+
+        .relatedPrice {
+        }
+      }
+    }
+  }
 }

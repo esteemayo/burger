@@ -6,7 +6,7 @@ import './RelatedProduct.scss';
 const RelatedProduct = () => {
   return (
     <article className='relatedProduct'>
-      <div className=''>
+      <div className='relatedBox'>
         <Link href={`/product/1`}>
           <Image
             src='/img/hero.png'
