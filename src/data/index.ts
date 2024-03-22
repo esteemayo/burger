@@ -6,7 +6,14 @@ import RoomServiceIcon from '@mui/icons-material/RoomService';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import LocalDiningIcon from '@mui/icons-material/LocalDining';
 
-import { CardMenu, FeaturesType, FooterLinks, Menus, Socials } from '@/types';
+import {
+  CardMenu,
+  FeaturesType,
+  FooterLinks,
+  Menus,
+  RelatedProductType,
+  Socials,
+} from '@/types';
 
 export const footerLinks: FooterLinks = [
   { id: 1, url: '/', label: 'Get Help' },
@@ -205,6 +212,27 @@ export const products: CardMenu = [
   },
   {
     id: 12,
+    name: 'Double crunchy X fries',
+    image: '/img/hero.png',
+    price: 29999,
+  },
+];
+
+export const relatedProducts: RelatedProductType = [
+  {
+    id: 1,
+    name: 'Crunchy chicken burger',
+    image: '/img/hero.png',
+    price: 13999,
+  },
+  {
+    id: 2,
+    name: 'A double crunchy and fries',
+    image: '/img/hero.png',
+    price: 23499,
+  },
+  {
+    id: 3,
     name: 'Double crunchy X fries',
     image: '/img/hero.png',
     price: 29999,
