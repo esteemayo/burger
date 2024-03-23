@@ -61,6 +61,7 @@
       button {
         all: unset;
         display: inline-block;
+        text-transform: capitalize;
         width: fit-content;
         padding: 1.2rem 2.4rem;
         background-color: $clr-primary;
