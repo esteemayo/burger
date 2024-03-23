@@ -121,11 +121,8 @@ export interface ProductListsProps {
   products: CardMenu;
 }
 
-export interface RelatedProductProps {
-  id: number;
-  name: string;
-  image: string;
-  price: number;
+export interface ProductInfoProps {
+  value: number;
 }
 
 export interface ReviewFormProps {
@@ -137,4 +134,11 @@ export interface ReviewFormProps {
       ) => void)
     | undefined;
   onSubmit(e: React.FormEvent<HTMLFormElement>): void;
+}
+
+export interface RelatedProductProps {
+  id: number;
+  name: string;
+  image: string;
+  price: number;
 }
