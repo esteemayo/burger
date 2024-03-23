@@ -78,14 +78,14 @@
           line-height: 1;
           width: fit-content;
           padding: 1.6rem 6rem;
-          background-color: $clr-primary;
+          background-color: $clr-black;
           color: $clr-white;
           border-radius: 0.5rem;
           cursor: pointer;
           transition: all 0.3s;
 
           &:hover {
-            background-color: $clr-secondary;
+            color: $clr-secondary;
           }
         }
       }
