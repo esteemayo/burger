@@ -112,7 +112,7 @@
         letter-spacing: 2px;
         line-height: 1.8rem;
         padding: 1.2rem 2.5rem;
-        background-color: $clr-primary;
+        background-color: $clr-black;
         color: $clr-white;
         border-radius: 0.5rem;
         cursor: pointer;
@@ -124,7 +124,7 @@
         gap: 1rem;
 
         &:hover {
-          background-color: $clr-secondary;
+          color: $clr-secondary;
         }
 
         svg {
