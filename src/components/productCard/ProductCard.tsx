@@ -1,9 +1,8 @@
 'use client';
 
-import { useMemo } from 'react';
-
-import Link from 'next/link';
 import Image from 'next/image';
+import Link from 'next/link';
+import { useMemo } from 'react';
 
 import { ProductCardProps } from '@/types';
 import { formatCurrency } from '@/utils/formatCurrency';
