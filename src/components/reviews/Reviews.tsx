@@ -42,7 +42,7 @@ const Reviews = () => {
                       : 'Be the first to review “Double Grilled Chicken Burger”'}
                   </span>
                   <ReviewForm
-                    value={0}
+                    rating={0}
                     onChangeRating={() => console.log('value')}
                     onSubmit={handleSubmit}
                   />

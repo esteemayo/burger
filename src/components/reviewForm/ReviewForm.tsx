@@ -1,25 +1,20 @@
-import Rating from '@mui/material/Rating';
-import StarIcon from '@mui/icons-material/Star';
-
 import { ReviewFormProps } from '@/types';
+import StarRating from '../starRating/StarRating';
 
 import './ReviewForm.scss';
 
-const ReviewForm = ({ value, onChangeRating, onSubmit }: ReviewFormProps) => {
+const ReviewForm = ({ rating, onChangeRating, onSubmit }: ReviewFormProps) => {
   return (
     <form className='formReview' onSubmit={onSubmit}>
       <div className='ratingWrap'>
         <span>Your rating</span>
         <div className='formRating'>
-          <Rating
+          <StarRating
             name='hover-feedback'
-            value={value}
+            value={rating}
             onChange={(event, newValue) => {
               onChangeRating(event, newValue);
             }}
-            emptyIcon={
-              <StarIcon style={{ opacity: 0.55 }} fontSize='inherit' />
-            }
           />
         </div>
       </div>

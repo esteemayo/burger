@@ -136,7 +136,7 @@ export interface ProductInfoProps {
 }
 
 export interface ReviewFormProps {
-  value: number;
+  rating: number;
   onChangeRating:
     | ((
         event: React.SyntheticEvent<Element, Event>,
