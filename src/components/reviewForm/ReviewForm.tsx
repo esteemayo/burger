@@ -2,6 +2,8 @@ import { FaStar } from 'react-icons/fa';
 
 import { ReviewFormProps } from '@/types';
 
+import './ReviewForm.scss';
+
 const ReviewForm = ({ reviews, onSubmit }: ReviewFormProps) => {
   return (
     <div className='reviewForm'>
