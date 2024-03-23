@@ -1,20 +1,26 @@
-import { FaStar } from 'react-icons/fa';
+import Rating from '@mui/material/Rating';
+import StarIcon from '@mui/icons-material/Star';
 
 import { ReviewFormProps } from '@/types';
 
 import './ReviewForm.scss';
 
-const ReviewForm = ({ onSubmit }: ReviewFormProps) => {
+const ReviewForm = ({ value, onChangeRating, onSubmit }: ReviewFormProps) => {
   return (
     <form className='formReview' onSubmit={onSubmit}>
       <div className='ratingWrap'>
         <span>Your rating</span>
         <div className='formRating'>
-          <FaStar />
-          <FaStar />
-          <FaStar />
-          <FaStar />
-          <FaStar />
+          <Rating
+            name='hover-feedback'
+            value={value}
+            onChange={(event, newValue) => {
+              onChangeRating(event, newValue);
+            }}
+            emptyIcon={
+              <StarIcon style={{ opacity: 0.55 }} fontSize='inherit' />
+            }
+          />
         </div>
       </div>
       <textarea
@@ -40,8 +46,8 @@ const ReviewForm = ({ onSubmit }: ReviewFormProps) => {
       </div>
       <div className='consent'>
         <p>
-          Save my name, email, and website in this browser for the next
-          time I comment.
+          Save my name, email, and website in this browser for the next time I
+          comment.
         </p>
         <div>
           <input type='checkbox' name='consent' id='consent' />

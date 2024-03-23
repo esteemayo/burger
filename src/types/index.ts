@@ -129,5 +129,12 @@ export interface RelatedProductProps {
 }
 
 export interface ReviewFormProps {
+  value: number;
+  onChangeRating:
+    | ((
+        event: React.SyntheticEvent<Element, Event>,
+        value: number | null
+      ) => void)
+    | undefined;
   onSubmit(e: React.FormEvent<HTMLFormElement>): void;
 }
