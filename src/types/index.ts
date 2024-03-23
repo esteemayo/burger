@@ -53,6 +53,16 @@ export type RelatedProductType = {
   price: number;
 }[];
 
+export type ReviewType = {
+  id: string;
+  desc: string;
+  rating: number;
+  user: {
+    name: string;
+    image: string;
+  };
+}[];
+
 export interface ProductCardProps {
   id: number;
   name: string;
