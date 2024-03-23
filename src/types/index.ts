@@ -162,3 +162,14 @@ export interface RelatedProductProps {
   image: string;
   price: number;
 }
+
+export interface StarRatingProps {
+  name: 'read-only' | 'hover-feedback' | 'disabled' | 'no-value';
+  value: number;
+  onChange:
+    | ((
+        event: React.SyntheticEvent<Element, Event>,
+        value: number | null
+      ) => void)
+    | undefined;
+}
