@@ -38,7 +38,7 @@ const ProductInfo = () => {
           <input type='number' defaultValue={1} min={1} />
           <button type='button'>
             <ShoppingCartIcon />
-            Add to cart
+            Add to Cart
           </button>
         </div>
       </div>
