@@ -27,7 +27,11 @@ const Reviews = () => {
                 <p>There are no reviews yet.</p>
               </div>
             ) : (
-              <Review />
+              <>
+                {reviews.map((review) => {
+                  return <Review key={review.id} {...review} />;
+                })}
+              </>
             )}
             <div className='reviewFormWrap'>
               <div className='reviewForm'>
