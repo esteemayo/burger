@@ -5,6 +5,8 @@ import { useCallback } from 'react';
 import Review from '../review/Review';
 import ReviewForm from '../reviewForm/ReviewForm';
 
+import { reviews } from '@/data';
+
 import './Reviews.scss';
 
 const Reviews = () => {
@@ -12,13 +14,11 @@ const Reviews = () => {
     e.preventDefault();
   }, []);
 
-  const reviews = [];
-
   return (
     <div className='reviews'>
       <div className='reviewBox'>
         <ul className='listWrap'>
-          <li className='listItem active'>Reviews (0)</li>
+          <li className='listItem active'>Reviews ({reviews.length})</li>
         </ul>
         <div className='reviewWrap'>
           <div className='reviewContainer'>
