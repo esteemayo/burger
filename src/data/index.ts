@@ -132,13 +132,13 @@ export const cardMenus: CardMenu = [
   {
     id: 11,
     name: 'A double crunchy and fries',
-    image: '/img/burger-11.png',
+    image: '/img/burger-11.jpg',
     price: 23499,
   },
   {
     id: 12,
     name: 'Double crunchy X fries',
-    image: '/img/burger-2.jpg',
+    image: '/img/burger-12.jpg',
     price: 29999,
   },
 ];
@@ -207,13 +207,13 @@ export const products: CardMenu = [
   {
     id: 11,
     name: 'A double crunchy and fries',
-    image: '/img/burger-11.png',
+    image: '/img/burger-11.jpg',
     price: 23499,
   },
   {
     id: 12,
     name: 'Double crunchy X fries',
-    image: '/img/burger-2.jpg',
+    image: '/img/burger-12.jpg',
     price: 29999,
   },
 ];
