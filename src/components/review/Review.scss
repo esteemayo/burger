@@ -4,6 +4,10 @@
   background-color: #fbfbfc;
   border-radius: 0.5rem;
 
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
   .reviewCard {
     padding: 5.6rem 4rem 4rem 4rem;
 
@@ -41,7 +45,7 @@
         }
       }
 
-      .reviewer {  
+      .reviewer {
         .reviewerName {
           text-transform: capitalize;
           font-weight: 500;
