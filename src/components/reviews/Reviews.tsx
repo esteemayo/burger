@@ -12,7 +12,7 @@ const Reviews = () => {
     e.preventDefault();
   }, []);
 
-  const reviews: any[] = [];
+  const reviews = [];
 
   return (
     <div className='reviews'>
@@ -29,7 +29,18 @@ const Reviews = () => {
             ) : (
               <Review />
             )}
-            <ReviewForm reviews={reviews} onSubmit={handleSubmit} />
+            <div className='reviewFormWrap'>
+              <div className='reviewForm'>
+                <div className='respond'>
+                  <span className='replyTitle'>
+                    {reviews.length > 0
+                      ? 'Add a review'
+                      : 'Be the first to review “Double Grilled Chicken Burger”'}
+                  </span>
+                  <ReviewForm onSubmit={handleSubmit} />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
