@@ -146,6 +146,16 @@ export interface ReviewFormProps {
   onSubmit(e: React.FormEvent<HTMLFormElement>): void;
 }
 
+export interface ReviewProps {
+  id: number;
+  desc: string;
+  rating: number;
+  user: {
+    name: string;
+    image: string;
+  };
+}
+
 export interface RelatedProductProps {
   id: number;
   name: string;
