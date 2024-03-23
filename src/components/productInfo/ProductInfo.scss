@@ -107,11 +107,12 @@
       button {
         all: unset;
         text-align: center;
-        font-weight: 600;
+        font-weight: 400;
         font-size: 1.3rem;
         letter-spacing: 2px;
         line-height: 1.8rem;
-        padding: 1.2rem 2.5rem;
+        max-width: 15rem;
+        padding: 1rem 1.5rem;
         background-color: $clr-black;
         color: $clr-white;
         border-radius: 0.5rem;
