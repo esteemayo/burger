@@ -35,7 +35,7 @@ const ProductInfo = () => {
           <span className='price'>$5999.0</span>
         </div>
         <div className='quantity'>
-          <input type='number' defaultValue={1} min={1} />
+          <input type='number' defaultValue={1} min={1} max={10} />
           <button type='button'>
             <ShoppingCartIcon />
             Add to Cart
