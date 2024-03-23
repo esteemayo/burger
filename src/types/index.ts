@@ -127,3 +127,8 @@ export interface RelatedProductProps {
   image: string;
   price: number;
 }
+
+export interface ReviewFormProps {
+  reviews: any[];
+  onSubmit(e: React.FormEvent<HTMLFormElement>): void;
+}
