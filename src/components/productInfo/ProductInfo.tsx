@@ -1,10 +1,15 @@
-import { FaStar } from 'react-icons/fa';
+'use client';
+
 import Image from 'next/image';
+import StarIcon from '@mui/icons-material/Star';
+import Rating from '@mui/material/Rating';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+
+import { ProductInfoProps } from '@/types';
 
 import './ProductInfo.scss';
 
-const ProductInfo = () => {
+const ProductInfo = ({ value }: ProductInfoProps) => {
   return (
     <section className='productInfo'>
       <div className='container'>
@@ -16,11 +21,14 @@ const ProductInfo = () => {
         <div className='wrapper'>
           <div className='reviewWrap'>
             <div className='starRating'>
-              <FaStar />
-              <FaStar />
-              <FaStar />
-              <FaStar />
-              <FaStar />
+              <Rating
+                name='read-only'
+                value={value}
+                emptyIcon={
+                  <StarIcon style={{ opacity: 0.55 }} fontSize='inherit' />
+                }
+                readOnly
+              />
             </div>
             <span className='totalReview'>0 reviews</span>
           </div>
