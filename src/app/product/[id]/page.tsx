@@ -9,7 +9,7 @@ const Product = () => {
   return (
     <div className='product'>
       <Hero />
-      <ProductInfo />
+      <ProductInfo rating={4} />
       <ProductReview />
       <RelatedProducts />
     </div>
