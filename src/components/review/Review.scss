@@ -3,6 +3,8 @@
 .review {
   background-color: #fbfbfc;
   border-radius: 0.5rem;
+  -webkit-box-shadow: $box-shadow;
+  box-shadow: $box-shadow;
 
   &:not(:last-child) {
     margin-bottom: 2rem;
