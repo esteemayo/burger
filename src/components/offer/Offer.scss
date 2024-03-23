@@ -48,7 +48,7 @@
       .heading {
         text-transform: capitalize;
         font-weight: 700;
-        font-size: 4.3rem;
+        font-size: 4.8rem;
         color: inherit;
       }
 
@@ -62,6 +62,8 @@
         all: unset;
         display: inline-block;
         text-transform: capitalize;
+        font-weight: 600;
+        font-size: 100%;
         width: fit-content;
         padding: 1.2rem 2.4rem;
         background-color: $clr-primary;
