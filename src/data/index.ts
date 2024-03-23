@@ -222,25 +222,25 @@ export const relatedProducts: RelatedProductType = [
   {
     id: 1,
     name: 'Crunchy chicken burger',
-    image: '/img/hero.png',
+    image: '/img/burger-1.jpg',
     price: 13999,
   },
   {
     id: 2,
     name: 'A double crunchy and fries',
-    image: '/img/hero.png',
+    image: '/img/burger-2.jpg',
     price: 23499,
   },
   {
     id: 3,
     name: 'Double crunchy X fries',
-    image: '/img/hero.png',
+    image: '/img/burger-3.jpg',
     price: 29999,
   },
   {
     id: 4,
     name: 'Double crunchy chicken burger',
-    image: '/img/hero.png',
+    image: '/img/burger-4.jpg',
     price: 21999,
   },
 ];
