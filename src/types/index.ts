@@ -54,7 +54,7 @@ export type RelatedProductType = {
 }[];
 
 export type ReviewType = {
-  id: string;
+  id: number;
   desc: string;
   rating: number;
   user: {
