@@ -1,16 +1,18 @@
 import Image from 'next/image';
 import { FaStar } from 'react-icons/fa';
 
+import { ReviewProps } from '@/types';
+
 import './Review.scss';
 
-const Review = () => {
+const Review = ({ desc, rating, user }: ReviewProps) => {
   return (
     <article className='review'>
       <div className='reviewCard'>
         <div className='reviewWrapper'>
           <div className='reviewImg'>
             <Image
-              src='/svg/male-avatar.svg'
+              src={user.image ?? '/svg/male-avatar.svg'}
               width={87}
               height={87}
               alt='avatar'
@@ -27,8 +29,8 @@ const Review = () => {
           </div>
           <div className='reviewer'>
             <div className='reviewerWrap'>
-              <div className='reviewerName'>Emmanuel Adebayo</div>
-              <p className='reviewerText'>Looks so delicious!</p>
+              <div className='reviewerName'>{user.name}</div>
+              <p className='reviewerText'>{desc}</p>
             </div>
           </div>
         </div>
