@@ -129,6 +129,5 @@ export interface RelatedProductProps {
 }
 
 export interface ReviewFormProps {
-  reviews: any[];
   onSubmit(e: React.FormEvent<HTMLFormElement>): void;
 }
