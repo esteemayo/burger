@@ -1,15 +1,14 @@
 'use client';
 
 import Image from 'next/image';
-import StarIcon from '@mui/icons-material/Star';
-import Rating from '@mui/material/Rating';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 import { ProductInfoProps } from '@/types';
+import StarRating from '../starRating/StarRating';
 
 import './ProductInfo.scss';
 
-const ProductInfo = ({ value }: ProductInfoProps) => {
+const ProductInfo = ({ rating }: ProductInfoProps) => {
   return (
     <section className='productInfo'>
       <div className='container'>
@@ -21,14 +20,7 @@ const ProductInfo = ({ value }: ProductInfoProps) => {
         <div className='wrapper'>
           <div className='reviewWrap'>
             <div className='starRating'>
-              <Rating
-                name='read-only'
-                value={value}
-                emptyIcon={
-                  <StarIcon style={{ opacity: 0.55 }} fontSize='inherit' />
-                }
-                readOnly
-              />
+              <StarRating name='read-only' value={rating} readOnly />
             </div>
             <span className='totalReview'>0 reviews</span>
           </div>

@@ -132,7 +132,7 @@ export interface ProductListsProps {
 }
 
 export interface ProductInfoProps {
-  value: number;
+  rating: number;
 }
 
 export interface ReviewFormProps {
