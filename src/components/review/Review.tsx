@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import { FaStar } from 'react-icons/fa';
 
 import { ReviewProps } from '@/types';
+import StarRating from '../starRating/StarRating';
 
 import './Review.scss';
 
@@ -20,11 +20,7 @@ const Review = ({ desc, rating, user }: ReviewProps) => {
           </div>
           <div className='reviewRating'>
             <div className='star'>
-              <FaStar />
-              <FaStar />
-              <FaStar />
-              <FaStar />
-              <FaStar />
+              <StarRating name='read-only' value={rating} readOnly />
             </div>
           </div>
           <div className='reviewer'>
