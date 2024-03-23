@@ -166,7 +166,8 @@ export interface RelatedProductProps {
 export interface StarRatingProps {
   name: 'read-only' | 'hover-feedback' | 'disabled' | 'no-value';
   value: number;
-  onChange:
+  readOnly?: boolean;
+  onChange?:
     | ((
         event: React.SyntheticEvent<Element, Event>,
         value: number | null
