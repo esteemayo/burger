@@ -24,10 +24,18 @@
       background-color: $clr-primary;
       color: $clr-white;
       border-radius: 50%;
+      transform: scale(1);
+      backface-visibility: hidden;
+      transition: all 0.3s;
 
       display: flex;
       align-items: center;
       justify-content: center;
+
+      &:hover {
+        background-color: $clr-secondary;
+        transform: scale(1.1);
+      }
 
       svg {
         font-size: inherit;
