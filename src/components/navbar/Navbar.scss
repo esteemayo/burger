@@ -16,29 +16,8 @@
 
   &.active {
     background-color: transparent;
-    color: $clr-secondary;
     backdrop-filter: blur(1rem);
     border-bottom: none;
-
-    .wrapper {
-      .nav {
-        .cart {
-          svg {
-            fill: $clr-secondary;
-          }
-
-          .count {
-            background-color: $clr-primary;
-          }
-        }
-
-        .search {
-          svg {
-            fill: $clr-secondary;
-          }
-        }
-      }
-    }
   }
 
   .wrapper {
