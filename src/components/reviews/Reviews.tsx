@@ -22,6 +22,12 @@ const Reviews = () => {
     return isOpen ? 'collapse show' : 'collapse';
   }, [isOpen]);
 
+  const reviewLabel = useMemo(() => {
+    return reviews.length > 0
+      ? 'Add a review'
+      : 'Be the first to review “Double Grilled Chicken Burger”';
+  }, []);
+
   return (
     <div className='reviews'>
       <div className='reviewBox'>
@@ -51,11 +57,7 @@ const Reviews = () => {
             <div className='reviewFormWrap'>
               <div className='reviewForm'>
                 <div className='respond'>
-                  <span className='replyTitle'>
-                    {reviews.length > 0
-                      ? 'Add a review'
-                      : 'Be the first to review “Double Grilled Chicken Burger”'}
-                  </span>
+                  <span className='replyTitle'>{reviewLabel}</span>
                   <ReviewForm />
                 </div>
               </div>
