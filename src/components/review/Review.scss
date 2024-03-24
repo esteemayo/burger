@@ -41,8 +41,8 @@
           align-items: center;
 
           svg {
-            fill: #00000059;
-            fill: $star;
+            font-size: 100%;
+            fill: currentColor;
           }
         }
       }
