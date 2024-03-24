@@ -40,11 +40,11 @@ const Reviews = () => {
                 <p>There are no reviews yet.</p>
               </div>
             ) : (
-              <>
+              <div className={isOpen ? 'collapse show' : 'collapse'}>
                 {reviews.map((review) => {
                   return <Review key={review.id} {...review} />;
                 })}
-              </>
+              </div>
             )}
             <div className='reviewFormWrap'>
               <div className='reviewForm'>
