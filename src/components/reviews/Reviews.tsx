@@ -1,7 +1,7 @@
 'use client';
 
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
-import { useCallback, useState } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import Review from '../review/Review';
@@ -22,6 +22,10 @@ const Reviews = () => {
     e.preventDefault();
   }, []);
 
+  const toggleClasses = useMemo(() => {
+    return isOpen ? 'collapse show' : 'collapse';
+  }, [isOpen]);
+
   return (
     <div className='reviews'>
       <div className='reviewBox'>
@@ -40,7 +44,7 @@ const Reviews = () => {
                 <p>There are no reviews yet.</p>
               </div>
             ) : (
-              <div className={isOpen ? 'collapse show' : 'collapse'}>
+              <div className={toggleClasses}>
                 {reviews.map((review) => {
                   return <Review key={review.id} {...review} />;
                 })}
