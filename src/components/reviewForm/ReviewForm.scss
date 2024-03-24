@@ -42,7 +42,7 @@
     transition: all 0.3s;
 
     &:focus {
-      border: 1px solid $clr-gray-light;
+      border: 1px solid $line;
     }
 
     &::placeholder {
