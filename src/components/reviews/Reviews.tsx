@@ -18,10 +18,6 @@ const Reviews = () => {
     setIsOpen((value) => !value);
   }, []);
 
-  const handleSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-  }, []);
-
   const toggleClasses = useMemo(() => {
     return isOpen ? 'collapse show' : 'collapse';
   }, [isOpen]);
@@ -60,11 +56,7 @@ const Reviews = () => {
                       ? 'Add a review'
                       : 'Be the first to review “Double Grilled Chicken Burger”'}
                   </span>
-                  <ReviewForm
-                    rating={0}
-                    onChangeRating={() => console.log('value')}
-                    onSubmit={handleSubmit}
-                  />
+                  <ReviewForm />
                 </div>
               </div>
             </div>
