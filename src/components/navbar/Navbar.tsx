@@ -72,7 +72,7 @@ const Navbar = () => {
                   </>
                 ) : (
                   <>
-                    <div className='cardHeader'>Your order</div>
+                    <div className='cardHeader'>Your cart</div>
                     <div className='cardProductBox'>
                       <div className='productBox'>
                         <span className='quantity'>1</span>
