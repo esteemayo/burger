@@ -18,6 +18,10 @@ const Reviews = () => {
     setIsOpen((value) => !value);
   }, []);
 
+  const reviewClasses = useMemo(() => {
+    return !isOpen ? 'reviewWrap hide' : 'reviewWrap';
+  }, [isOpen]);
+
   const toggleClasses = useMemo(() => {
     return isOpen ? 'collapse show' : 'collapse';
   }, [isOpen]);
@@ -41,7 +45,7 @@ const Reviews = () => {
             )}
           </li>
         </ul>
-        <div className={!isOpen ? 'reviewWrap hide' : 'reviewWrap'}>
+        <div className={reviewClasses}>
           <div className='reviewContainer'>
             {reviews.length < 1 ? (
               <div className='allReviews'>
