@@ -27,14 +27,22 @@ const ReviewForm = () => {
     []
   );
 
+  const handleClear = useCallback(() => {
+    setRating(null);
+    setInputs(initialState);
+  }, []);
+
   const handleSubmit = useCallback(
     (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
 
       console.log({ rating, ...inputs });
+      handleClear();
     },
-    [inputs, rating]
+    [handleClear, inputs, rating]
   );
+
+  const { desc, name, email } = inputs;
 
   return (
     <form className='formReview' onSubmit={handleSubmit}>
@@ -55,6 +63,7 @@ const ReviewForm = () => {
         name='desc'
         cols={30}
         rows={10}
+        value={desc}
         placeholder='Message'
         onChange={handleChange}
       />
@@ -62,6 +71,7 @@ const ReviewForm = () => {
         <input
           type='text'
           name='name'
+          value={name}
           placeholder='Name'
           className='formControl'
           onChange={handleChange}
@@ -69,6 +79,7 @@ const ReviewForm = () => {
         <input
           type='email'
           name='email'
+          value={email}
           placeholder='Email address'
           className='formControl'
           onChange={handleChange}
