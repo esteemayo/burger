@@ -218,6 +218,7 @@
                   display: flex;
                   align-items: center;
                   color: $clr-gray-dark;
+                  margin-top: -3px;
 
                   button {
                     display: inline-block;
@@ -229,6 +230,7 @@
 
                     &:disabled {
                       color: $clr-gray-light;
+                      opacity: 0.7;
                     }
 
                     svg {
@@ -239,6 +241,8 @@
                 }
 
                 .deleteBtn {
+                  margin-top: -3px;
+
                   svg {
                     font-size: var(--default-font-size);
                     fill: $clr-gray-light;
