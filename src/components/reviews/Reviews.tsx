@@ -32,9 +32,11 @@ const Reviews = () => {
         <ul className='listWrap'>
           <li className='listItem active'>
             Reviews ({reviews.length})
-            <span className='toggleIcon' onClick={toggleOpen}>
-              {isOpen ? <ExpandLessIcon /> : <ExpandMoreIcon />}
-            </span>
+            {reviews.length > 0 && (
+              <span className='toggleIcon' onClick={toggleOpen}>
+                {isOpen ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+              </span>
+            )}
           </li>
         </ul>
         <div className='reviewWrap'>
