@@ -12,16 +12,8 @@ const Menus = () => {
         <div className='headings'>
           <h2 className='heading'>Popular menu</h2>
           <div className='box'>
-            <div className='left'>
-              <span className='line'>&nbsp;</span>
-              <span className='line'>&nbsp;</span>
-            </div>
             <div className='icon'>
               <RoomServiceIcon />
-            </div>
-            <div className='right'>
-              <span className='line'>&nbsp;</span>
-              <span className='line'>&nbsp;</span>
             </div>
           </div>
         </div>
