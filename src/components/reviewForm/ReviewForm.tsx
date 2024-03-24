@@ -51,8 +51,8 @@ const ReviewForm = () => {
         </div>
       </div>
       <textarea
-        id='review'
-        name='review'
+        id='desc'
+        name='desc'
         cols={30}
         rows={10}
         placeholder='Message'
