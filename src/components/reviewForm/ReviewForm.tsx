@@ -1,29 +1,57 @@
-import { ReviewFormProps } from '@/types';
+import { useCallback, useState } from 'react';
+
 import StarRating from '../starRating/StarRating';
 
 import './ReviewForm.scss';
 
-const ReviewForm = ({ rating, onChangeRating, onSubmit }: ReviewFormProps) => {
+const initialState = {
+  desc: '',
+  name: '',
+  email: '',
+};
+
+const ReviewForm = () => {
+  const [inputs, setInputs] = useState(initialState);
+  const [rating, setRating] = useState<number | null>(null);
+
+  const handleChange = useCallback(
+    ({
+      target: input,
+    }: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+      const { name, value } = input;
+
+      setInputs((prev) => {
+        return { ...prev, [name]: value };
+      });
+    },
+    []
+  );
+
+  const handleSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+  }, []);
+
   return (
-    <form className='formReview' onSubmit={onSubmit}>
+    <form className='formReview' onSubmit={handleSubmit}>
       <div className='ratingWrap'>
         <span>Your rating</span>
         <div className='formRating'>
           <StarRating
             name='hover-feedback'
-            value={rating}
+            value={rating!}
             onChange={(event, newValue) => {
-              onChangeRating(event, newValue);
+              setRating(newValue);
             }}
           />
         </div>
       </div>
       <textarea
-        name='review'
         id='review'
+        name='review'
         cols={30}
         rows={10}
         placeholder='Message'
+        onChange={handleChange}
       />
       <div className='inputWrap'>
         <input
@@ -31,12 +59,14 @@ const ReviewForm = ({ rating, onChangeRating, onSubmit }: ReviewFormProps) => {
           name='name'
           placeholder='Name'
           className='formControl'
+          onChange={handleChange}
         />
         <input
           type='email'
           name='email'
           placeholder='Email address'
           className='formControl'
+          onChange={handleChange}
         />
       </div>
       <div className='consent'>
