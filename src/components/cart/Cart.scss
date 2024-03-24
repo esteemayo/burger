@@ -24,7 +24,7 @@
         padding: 1.5rem;
         background-color: inherit;
         color: inherit;
-        border-bottom: 1px solid $clr-gray-light;
+        border-bottom: 1px solid $line;
       }
 
       .emptyCart {
@@ -75,7 +75,7 @@
           align-items: flex-start;
           justify-content: space-between;
           padding: 1.5rem;
-          border-bottom: 1px solid $clr-gray-light;
+          border-bottom: 1px solid $line;
 
           .cardBox {
             .cardProductWrap {
@@ -172,7 +172,7 @@
 
       .cardFooter {
         padding: 1.5rem;
-        border-top: 1px solid $clr-gray-light;
+        border-top: 1px solid $line;
 
         display: flex;
         align-items: center;
