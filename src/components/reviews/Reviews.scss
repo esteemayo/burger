@@ -30,6 +30,17 @@
           border-top-left-radius: 0.5rem;
           border-top-right-radius: 0.5rem;
         }
+
+        .toggleIcon {
+          position: absolute;
+          top: 3px;
+          right: 1rem;
+
+          svg {
+            font-size: 3rem;
+            fill: $clr-black;
+          }
+        }
       }
     }
 
