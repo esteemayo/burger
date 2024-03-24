@@ -27,9 +27,14 @@ const ReviewForm = () => {
     []
   );
 
-  const handleSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-  }, []);
+  const handleSubmit = useCallback(
+    (e: React.FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
+
+      console.log({ rating, ...inputs });
+    },
+    [inputs, rating]
+  );
 
   return (
     <form className='formReview' onSubmit={handleSubmit}>
