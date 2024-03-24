@@ -8,6 +8,7 @@ const initialState = {
   desc: '',
   name: '',
   email: '',
+  consent: false,
 };
 
 const ReviewForm = () => {
@@ -22,6 +23,17 @@ const ReviewForm = () => {
 
       setInputs((prev) => {
         return { ...prev, [name]: value };
+      });
+    },
+    []
+  );
+
+  const handleConsent = useCallback(
+    ({ target: input }: React.ChangeEvent<HTMLInputElement>) => {
+      const { checked } = input;
+
+      setInputs((prev) => {
+        return { ...prev, consent: checked };
       });
     },
     []
@@ -42,7 +54,7 @@ const ReviewForm = () => {
     [handleClear, inputs, rating]
   );
 
-  const { desc, name, email } = inputs;
+  const { desc, name, email, consent } = inputs;
 
   return (
     <form className='formReview' onSubmit={handleSubmit}>
@@ -91,7 +103,13 @@ const ReviewForm = () => {
           comment.
         </p>
         <div>
-          <input type='checkbox' name='consent' id='consent' />
+          <input
+            type='checkbox'
+            id='consent'
+            name='consent'
+            checked={consent}
+            onChange={handleConsent}
+          />
           <label htmlFor='consent'>Sign me up for the newsletter!</label>
         </div>
       </div>
