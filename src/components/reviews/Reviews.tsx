@@ -41,7 +41,7 @@ const Reviews = () => {
             )}
           </li>
         </ul>
-        <div className='reviewWrap'>
+        <div className={!isOpen ? 'reviewWrap hide' : 'reviewWrap'}>
           <div className='reviewContainer'>
             {reviews.length < 1 ? (
               <div className='allReviews'>
