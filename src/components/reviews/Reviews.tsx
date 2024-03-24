@@ -1,6 +1,8 @@
 'use client';
 
-import { useCallback } from 'react';
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+import { useCallback, useState } from 'react';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import Review from '../review/Review';
 import ReviewForm from '../reviewForm/ReviewForm';
@@ -10,6 +12,12 @@ import { reviews } from '@/data';
 import './Reviews.scss';
 
 const Reviews = () => {
+  const [isOpen, setIsOpen] = useState(true);
+
+  const toggleOpen = useCallback((_e: React.MouseEvent<HTMLSpanElement>) => {
+    setIsOpen((value) => !value);
+  }, []);
+
   const handleSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
   }, []);
@@ -18,7 +26,12 @@ const Reviews = () => {
     <div className='reviews'>
       <div className='reviewBox'>
         <ul className='listWrap'>
-          <li className='listItem active'>Reviews ({reviews.length})</li>
+          <li className='listItem active'>
+            Reviews ({reviews.length})
+            <span className='toggleIcon' onClick={toggleOpen}>
+              {isOpen ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+            </span>
+          </li>
         </ul>
         <div className='reviewWrap'>
           <div className='reviewContainer'>
