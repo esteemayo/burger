@@ -40,6 +40,31 @@
         }
 
         .icon {
+          position: relative;
+
+          &::before,
+          &::after {
+            content: '';
+            display: block;
+            width: 9rem;
+            height: 1px;
+            padding-top: 1px;
+            padding-bottom: 1px;
+            border-top: 1px solid $line;
+            border-bottom: 1px solid $line;
+
+            position: absolute;
+            top: 2.5rem;
+          }
+
+          &::before {
+            left: 6.5rem;
+          }
+
+          &::after {
+            right: 6.5rem;
+          }
+
           svg {
             font-size: 5rem;
             color: $clr-gray-dark;
