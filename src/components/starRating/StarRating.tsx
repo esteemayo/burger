@@ -9,7 +9,12 @@ const StarRating = ({ name, value, ...rest }: StarRatingProps) => {
       {...rest}
       name={name}
       value={value}
-      emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize='inherit' />}
+      emptyIcon={
+        <StarIcon
+          style={{ fill: '#00000059', opacity: 0.55 }}
+          fontSize='inherit'
+        />
+      }
     />
   );
 };
