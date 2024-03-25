@@ -13,7 +13,7 @@ const Profile = () => {
         <aside className='left'>
           <h1>Your profile</h1>
           <div className='menuWrap'>
-            <span className='menuItem'>
+            <span className='menuItem active'>
               <WalletIcon />
               <Link href='/'>My orders</Link>
             </span>
