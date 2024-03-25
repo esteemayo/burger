@@ -14,42 +14,58 @@ const Profile = () => {
           <h1>Your profile</h1>
           <div className='menuWrap'>
             <span className='menuItem active'>
-              <WalletIcon />
-              <Link href='/'>My orders</Link>
+              <Link href='/'>
+                <WalletIcon />
+                My orders
+              </Link>
             </span>
             <span className='menuItem'>
-              <WalletIcon />
-              <Link href='/'>Personal info</Link>
+              <Link href='/'>
+                <WalletIcon />
+                Personal info
+              </Link>
             </span>
             <span className='menuItem'>
-              <WalletIcon />
-              <Link href='/'>Coupons</Link>
-            </span>
-          </div>
-          <hr />
-          <div className='menuWrap'>
-            <span className='menuItem'>
-              <WalletIcon />
-              <Link href='/'>Wallets</Link>
-            </span>
-            <span className='menuItem'>
-              <WalletIcon />
-              <Link href='/'>Loyalty points</Link>
-            </span>
-            <span className='menuItem'>
-              <WalletIcon />
-              <Link href='/'>Referral code</Link>
-            </span>
-            <span className='menuItem'>
-              <WalletIcon />
-              <Link href='/'>Your address</Link>
+              <Link href='/'>
+                <WalletIcon />
+                Coupons
+              </Link>
             </span>
           </div>
           <hr />
           <div className='menuWrap'>
             <span className='menuItem'>
-              <WalletIcon />
-              <Link href='/'>Settings</Link>
+              <Link href='/'>
+                <WalletIcon />
+                Wallets
+              </Link>
+            </span>
+            <span className='menuItem'>
+              <Link href='/'>
+                <WalletIcon />
+                Loyalty points
+              </Link>
+            </span>
+            <span className='menuItem'>
+              <Link href='/'>
+                <WalletIcon />
+                Referral code
+              </Link>
+            </span>
+            <span className='menuItem'>
+              <Link href='/'>
+                <WalletIcon />
+                Your address
+              </Link>
+            </span>
+          </div>
+          <hr />
+          <div className='menuWrap'>
+            <span className='menuItem'>
+              <Link href='/'>
+                <WalletIcon />
+                Settings
+              </Link>
             </span>
           </div>
         </aside>

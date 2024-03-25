@@ -47,30 +47,31 @@
         justify-content: center;
 
         .menuItem {
-          display: flex;
-          align-items: center;
-          gap: 2rem;
           padding: 1.2rem 0.5rem;
           color: $clr-gray-dark;
 
           &.active {
             background-color: $clr-tertiary;
-            color: $clr-primary;
+            color: $clr-secondary;
             border-radius: 2px;
-          }
-
-          svg {
-            font-size: 2.5rem;
-            fill: $clr-primary;
           }
 
           a,
           a:link,
           a:active {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+
             text-transform: capitalize;
             font-weight: 400;
             font-size: 1.5rem;
             color: currentColor;
+
+            svg {
+              font-size: 2.5rem;
+              fill: $clr-primary;
+            }
           }
         }
       }
