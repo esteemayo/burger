@@ -1,15 +1,8 @@
-'use client';
-
 import Image from 'next/image';
-import { useEffect } from 'react';
 
 import './ErrorState.scss';
 
-const ErrorState = ({ error }: { error: Error }) => {
-  useEffect(() => {
-    console.log(error);
-  }, [error]);
-
+const ErrorState = () => {
   return (
     <div className='errorState'>
       <div className='container'>
