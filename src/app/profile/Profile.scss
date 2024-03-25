@@ -19,7 +19,26 @@
         text-transform: capitalize;
         font-weight: 700;
         font-size: 2.3rem;
+        padding: 0 0.5rem;
         color: inherit;
+        margin-bottom: 2rem;
+        position: relative;
+
+        &::after {
+          content: '';
+          display: block;
+          width: 12.5rem;
+          height: 1px;
+          padding-top: 1px;
+          padding-bottom: 1px;
+          border-top: 1px solid $line;
+          border-bottom: 1px solid $line;
+
+          position: absolute;
+          top: 50%;
+          left: 15rem;
+          transform: translateY(-50%);
+        }
       }
 
       .menuWrap {
