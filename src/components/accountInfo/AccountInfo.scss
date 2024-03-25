@@ -4,45 +4,4 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 2rem;
-
-  .accountCard {
-    width: 25rem;
-    padding: 2rem;
-    box-shadow: $box-shadow;
-    border-radius: 0.5rem;
-    position: relative;
-
-    .left {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-
-      h2 {
-        font-weight: 600;
-        font-weight: 3rem;
-        color: $clr-secondary;
-        line-height: 1.3;
-      }
-
-      span {
-        font-size: 1.3rem;
-        color: $clr-gray-dark;
-      }
-    }
-
-    .right {
-      position: absolute;
-      top: 1rem;
-      right: 2rem;
-
-      img {
-        display: block;
-        width: 2.5rem;
-        height: 2.5rem;
-        border-radius: 50%;
-        object-fit: cover;
-      }
-    }
-  }
 }
