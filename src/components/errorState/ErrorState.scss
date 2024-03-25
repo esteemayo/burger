@@ -1,6 +1,6 @@
 .errorState {
   width: 100vw;
-  height: 100vh;
+  height: 80vh;
   display: flex;
   justify-content: center;
 
@@ -15,8 +15,8 @@
 
     img {
       display: block;
-      width: 50rem;
-      height: 50rem;
+      width: 40rem;
+      height: 40rem;
       object-fit: contain;
     }
   }
