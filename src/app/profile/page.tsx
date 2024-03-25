@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
 import AccountInfo from '@/components/accountInfo/AccountInfo';
+import AccountDetails from '@/components/accountDetails/AccountDetails';
 
 import './Profile.scss';
 
@@ -25,7 +26,7 @@ const Profile = () => {
         </aside>
         <section className='right'>
           <AccountInfo />
-          <div className='accountDetails'>accountDetails</div>
+          <AccountDetails />
         </section>
       </div>
     </div>
