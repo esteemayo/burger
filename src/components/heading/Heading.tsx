@@ -13,8 +13,8 @@ const Heading = ({ title, subtitle, center }: HeadingProps) => {
 
   return (
     <div className={headingClasses}>
-      <h1>{title}</h1>
-      <h2>{subtitle}</h2>
+      <h1 className='mainHeading'>{title}</h1>
+      <h2 className='subHeading'>{subtitle}</h2>
     </div>
   );
 };

@@ -1,8 +1,25 @@
+@import '../../styles/variables.scss';
+
 .heading {
   text-align: left;
   margin-bottom: 2rem;
 
   &.center {
     text-align: center;
+  }
+
+  .mainHeading {
+    font-weight: 400;
+    font-size: 2.4rem;
+    color: inherit;
+    line-height: 1.2;
+  }
+
+  .subHeading {
+    font-weight: 300;
+    font-size: 1.7rem;
+    color: $clr-gray-dark;
+    line-height: 1;
+    margin-top: 0.8rem;
   }
 }
