@@ -52,7 +52,7 @@ const Cart = () => {
           )}
           {cart.length > 0 && (
             <div className='cardFooter'>
-              <button type='button'>Proceed to Checkout</button>
+              <Link href='/checkout'>Proceed to Checkout</Link>
             </div>
           )}
         </div>
