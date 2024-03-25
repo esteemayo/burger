@@ -103,7 +103,7 @@ const Navbar = () => {
               </div>
             </div>
           </div>
-          {pathname !== '/' && (
+          {pathname !== '/' && pathname !== '/login' && pathname !== '/register' && (
             <div className='search'>
               <FaSearch />
               <div className='searchForm'>
