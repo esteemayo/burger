@@ -11,7 +11,7 @@ const ErrorState = () => {
         <Image src='/svg/bugs.svg' width={400} height={400} alt='error' />
         <Heading
           title='Something went wrong'
-          subtitle="We're having issues loading this page."
+          subtitle="We're having issues loading this page. Try again"
           center={true}
         />
       </div>
