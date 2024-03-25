@@ -53,6 +53,7 @@ const Navbar = () => {
             <div className='userMenu'>
               <Link href='/login'>Login</Link>
               <Link href='/register'>Register</Link>
+              <Link href='/profile'>User profile</Link>
             </div>
           </div>
           <div className='cart'>
@@ -103,22 +104,24 @@ const Navbar = () => {
               </div>
             </div>
           </div>
-          {pathname !== '/' && pathname !== '/login' && pathname !== '/register' && (
-            <div className='search'>
-              <FaSearch />
-              <div className='searchForm'>
-                <form onSubmit={handleSubmit}>
-                  <input type='search' placeholder='Search products...' />
-                </form>
-                <Image
-                  src='/img/search.png'
-                  width={20}
-                  height={20}
-                  alt='search icon'
-                />
+          {pathname !== '/' &&
+            pathname !== '/login' &&
+            pathname !== '/register' && (
+              <div className='search'>
+                <FaSearch />
+                <div className='searchForm'>
+                  <form onSubmit={handleSubmit}>
+                    <input type='search' placeholder='Search products...' />
+                  </form>
+                  <Image
+                    src='/img/search.png'
+                    width={20}
+                    height={20}
+                    alt='search icon'
+                  />
+                </div>
               </div>
-            </div>
-          )}
+            )}
         </div>
       </div>
     </nav>
