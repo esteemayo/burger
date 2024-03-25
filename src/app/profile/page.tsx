@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import WalletIcon from '@mui/icons-material/Wallet';
 
 import AccountInfo from '@/components/accountInfo/AccountInfo';
 import AccountDetails from '@/components/accountDetails/AccountDetails';
@@ -12,20 +13,44 @@ const Profile = () => {
         <aside className='left'>
           <h1>Your profile</h1>
           <div className='menuWrap'>
-            <Link href='/'>My orders</Link>
-            <Link href='/'>Personal info</Link>
-            <Link href='/'>Coupons</Link>
+            <span className='menuItem'>
+              <WalletIcon />
+              <Link href='/'>My orders</Link>
+            </span>
+            <span className='menuItem'>
+              <WalletIcon />
+              <Link href='/'>Personal info</Link>
+            </span>
+            <span className='menuItem'>
+              <WalletIcon />
+              <Link href='/'>Coupons</Link>
+            </span>
           </div>
           <hr />
           <div className='menuWrap'>
-            <Link href='/'>Wallets</Link>
-            <Link href='/'>Loyalty points</Link>
-            <Link href='/'>Referral code</Link>
-            <Link href='/'>Your address</Link>
+            <span className='menuItem'>
+              <WalletIcon />
+              <Link href='/'>Wallets</Link>
+            </span>
+            <span className='menuItem'>
+              <WalletIcon />
+              <Link href='/'>Loyalty points</Link>
+            </span>
+            <span className='menuItem'>
+              <WalletIcon />
+              <Link href='/'>Referral code</Link>
+            </span>
+            <span className='menuItem'>
+              <WalletIcon />
+              <Link href='/'>Your address</Link>
+            </span>
           </div>
           <hr />
           <div className='menuWrap'>
-            <Link href='/'>Settings</Link>
+            <span className='menuItem'>
+              <WalletIcon />
+              <Link href='/'>Settings</Link>
+            </span>
           </div>
         </aside>
         <section className='right'>
