@@ -5,5 +5,18 @@
   .container {
     width: 144rem;
     padding: 10rem 0;
+
+    display: flex;
+    justify-content: space-between;
+
+    .left {
+      flex: 1;
+      background-color: lemonchiffon;
+    }
+
+    .right {
+      flex: 4;
+      background-color: greenyellow;
+    }
   }
 }
