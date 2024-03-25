@@ -53,6 +53,10 @@
           cursor: pointer;
           transition: all 0.3s;
 
+          &:not(:last-child) {
+            margin-bottom: 1px;
+          }
+
           &.active {
             background-color: $clr-tertiary;
             color: $clr-secondary;
@@ -86,6 +90,7 @@
       hr {
         height: 0;
         border: 0.5px solid $line;
+        margin: 1rem 0;
       }
     }
 
