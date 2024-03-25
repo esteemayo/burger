@@ -48,7 +48,7 @@ const Header = () => {
               ref={inputRef}
               className='search'
               value={query}
-              placeholder='Search burger...'
+              placeholder='Search products...'
               onChange={handleChange}
             />
             {query.length > 0 && (
