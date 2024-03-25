@@ -179,3 +179,5 @@ export interface HeadingProps {
   subtitle: string;
   center?: boolean;
 }
+
+export type AccountCardProps = AccountCard;
