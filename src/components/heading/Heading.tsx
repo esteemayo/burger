@@ -8,7 +8,7 @@ import './Heading.scss';
 
 const Heading = ({ title, subtitle, center }: HeadingProps) => {
   const headingClasses = useMemo(() => {
-    return center.toString() === 'true' ? 'heading center' : 'heading';
+    return center?.toString() === 'true' ? 'heading center' : 'heading';
   }, [center]);
 
   return (
