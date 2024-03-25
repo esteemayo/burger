@@ -20,6 +20,12 @@
         font-size: 2.3rem;
         color: inherit;
       }
+
+      .menuWrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
     }
 
     .right {

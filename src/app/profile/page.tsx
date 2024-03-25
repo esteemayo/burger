@@ -15,12 +15,16 @@ const Profile = () => {
             <Link href='/'>My orders</Link>
             <Link href='/'>Personal info</Link>
             <Link href='/'>Coupons</Link>
-            <hr />
+          </div>
+          <hr />
+          <div className='menuWrap'>
             <Link href='/'>Wallets</Link>
             <Link href='/'>Loyalty points</Link>
             <Link href='/'>Referral code</Link>
             <Link href='/'>Your address</Link>
-            <hr />
+          </div>
+          <hr />
+          <div className='menuWrap'>
             <Link href='/'>Settings</Link>
           </div>
         </aside>
