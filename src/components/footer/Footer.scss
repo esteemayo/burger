@@ -3,12 +3,12 @@
 .footer {
   display: flex;
   justify-content: center;
-  padding: 10rem 0;
   background-color: $clr-black;
   color: $clr-white;
 
   .wrapper {
     width: 144rem;
+    padding: 10rem 3rem;
 
     .top {
       display: flex;
