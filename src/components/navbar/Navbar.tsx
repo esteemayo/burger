@@ -108,7 +108,7 @@ const Navbar = () => {
               <FaSearch />
               <div className='searchForm'>
                 <form onSubmit={handleSubmit}>
-                  <input type='search' placeholder='Search burger...' />
+                  <input type='search' placeholder='Search products...' />
                 </form>
                 <Image
                   src='/img/search.png'
