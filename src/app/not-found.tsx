@@ -6,7 +6,7 @@ const NotFound = () => {
   return (
     <div className='notFound'>
       <div className='container'>
-        <Image src='/svg/blank.svg' width={400} height={400} alt='404' />
+        <Image src='/svg/blank.svg' width={300} height={300} alt='404' />
       </div>
     </div>
   );
