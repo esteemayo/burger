@@ -163,3 +163,9 @@ export interface StarRatingProps {
       ) => void)
     | undefined;
 }
+
+export interface HeadingProps {
+  title: string;
+  subtitle: string;
+  center: boolean;
+}
