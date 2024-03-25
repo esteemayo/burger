@@ -1,4 +1,6 @@
 @import '../../styles/variables.scss';
 
 .accountInfo {
+  display: flex;
+  justify-content: space-between;
 }
