@@ -50,6 +50,7 @@
           padding: 1.2rem 0.5rem;
           color: $clr-gray-dark;
           border-radius: 2px;
+          cursor: pointer;
           transition: all 0.3s;
 
           &.active {
@@ -80,6 +81,11 @@
             }
           }
         }
+      }
+
+      hr {
+        height: 0;
+        border: 0.5px solid $line;
       }
     }
 
