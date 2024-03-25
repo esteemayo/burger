@@ -1,16 +1,18 @@
 import Image from 'next/image';
 
+import { AccountCardProps } from '@/types';
+
 import './AccountCard.scss';
 
-const AccountCard = () => {
+const AccountCard = ({ icon, count, price, label }: AccountCardProps) => {
   return (
     <article className='accountCard'>
       <div className='statsWrap'>
-        <h2>461</h2>
-        <span>Days Since Joining</span>
+        <h2>{count ?? price}</h2>
+        <span>{label}</span>
       </div>
       <div className='accountIconWrap'>
-        <Image src='/svg/male-avatar.svg' width={25} height={25} alt='' />
+        <Image src={icon} width={25} height={25} alt='' />
       </div>
     </article>
   );
