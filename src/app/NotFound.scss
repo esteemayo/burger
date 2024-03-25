@@ -15,6 +15,12 @@
     a,
     a:link,
     a:active {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
+
       img {
         display: block;
         width: 30rem;
