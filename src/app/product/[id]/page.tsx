@@ -6,7 +6,6 @@ import RelatedProducts from '@/components/relatedProducts/RelatedProducts';
 import './Product.scss';
 
 const Product = () => {
-  throw new Error('error')
   return (
     <div className='product'>
       <Hero />
