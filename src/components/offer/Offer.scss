@@ -28,7 +28,7 @@
         position: relative;
         width: 50rem;
         height: 50rem;
-        animation: moveTop 1s infinite;
+        animation: moveTop 3s infinite ease alternate;
 
         img {
           display: block;
