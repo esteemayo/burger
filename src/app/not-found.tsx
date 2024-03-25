@@ -1,9 +1,14 @@
-import Link from 'next/link';
 import Image from 'next/image';
+import Link from 'next/link';
+import type { Metadata } from 'next';
 
 import Heading from '@/components/heading/Heading';
 
 import './NotFound.scss';
+
+export const metadata: Metadata = {
+  title: 'Burger - Not found page',
+};
 
 const NotFound = () => {
   return (
