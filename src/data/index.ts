@@ -7,6 +7,7 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import LocalDiningIcon from '@mui/icons-material/LocalDining';
 
 import {
+  AccountCardType,
   CardMenu,
   FeaturesType,
   FooterLinks,
@@ -273,5 +274,32 @@ export const reviews: ReviewType = [
       name: 'Christian Vega',
       image: '/svg/male-avatar.svg',
     },
+  },
+];
+
+export const accountCards: AccountCardType = [
+  {
+    id: 1,
+    count: 461,
+    label: 'Days Since Joining',
+    icon: '/svg/male-avatar.svg',
+  },
+  {
+    id: 2,
+    price: 0.0,
+    label: 'Amount in Wallet',
+    icon: '/svg/male-avatar.svg',
+  },
+  {
+    id: 3,
+    count: 12,
+    label: 'Orders',
+    icon: '/svg/male-avatar.svg',
+  },
+  {
+    id: 4,
+    count: 157,
+    label: 'Loyalty Points',
+    icon: '/svg/male-avatar.svg',
   },
 ];
