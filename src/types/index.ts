@@ -63,6 +63,16 @@ export type ReviewType = {
   };
 }[];
 
+type AccountCard = {
+  id: number;
+  count?: number;
+  price?: number;
+  label: string;
+  icon: string;
+};
+
+export type AccountCardType = AccountCard[];
+
 export interface ProductCardProps {
   id: number;
   name: string;
