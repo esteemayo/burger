@@ -81,6 +81,7 @@ const Profile = () => {
               </div>
             </article>
           </div>
+          <div className='accountDetails'>accountDetails</div>
         </section>
       </div>
     </div>
