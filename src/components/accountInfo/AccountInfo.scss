@@ -3,4 +3,24 @@
 .accountInfo {
   display: flex;
   justify-content: space-between;
+
+  .accountCard {
+    .left {
+      h2 {
+      }
+
+      span {
+      }
+    }
+
+    .right {
+      img {
+        display: block;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+  }
 }
