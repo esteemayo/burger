@@ -6,12 +6,10 @@
   right: 2rem;
 
   button {
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-
     all: unset;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
     font-weight: 500;
     font-size: 1.3rem;
     padding: 0.5rem 1rem;
@@ -22,6 +20,12 @@
     cursor: pointer;
 
     img {
+      display: inline-block;
+      width: 1.5rem;
+      height: 1.5rem;
+      object-fit: cover;
+      vertical-align: middle;
+      margin-right: 0.5rem;
     }
   }
 }
