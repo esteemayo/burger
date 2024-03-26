@@ -1,7 +1,7 @@
 import { UserData, UserDataErrors } from '@/types';
 
 export const validateAccountData = (data: UserData) => {
-  const { name, email, phone } = data;
+  const { name, email, phone, address } = data;
   const errors: UserDataErrors = {};
 
   if (name.trim() === '') {
@@ -20,6 +20,10 @@ export const validateAccountData = (data: UserData) => {
 
   if (phone.trim() === '') {
     errors.phone = 'Phone is required';
+  }
+
+  if (address.trim() === '') {
+    errors.address = 'Address is required';
   }
 
   return errors;

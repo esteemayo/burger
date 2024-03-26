@@ -141,12 +141,14 @@ export interface UserData {
   name: string;
   email: string;
   phone: string;
+  address: string;
 }
 
 export interface UserDataErrors {
   name?: string;
   email?: string;
   phone?: string;
+  address?: string;
 }
 
 export interface ProductListsProps {
