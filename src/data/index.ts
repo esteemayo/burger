@@ -282,24 +282,24 @@ export const accountCards: AccountCardType = [
     id: 1,
     count: 461,
     label: 'Days Since Joining',
-    icon: '/svg/male-avatar.svg',
+    icon: '/svg/clock.svg',
   },
   {
     id: 2,
     price: 0.0,
     label: 'Amount in Wallet',
-    icon: '/svg/male-avatar.svg',
+    icon: '/svg/wallet.svg',
   },
   {
     id: 3,
     count: 12,
     label: 'Orders',
-    icon: '/svg/male-avatar.svg',
+    icon: '/svg/credit-card.svg',
   },
   {
     id: 4,
     count: 157,
     label: 'Loyalty Points',
-    icon: '/svg/male-avatar.svg',
+    icon: '/svg/arrows-pointing-in.svg',
   },
 ];
