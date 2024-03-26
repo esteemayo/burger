@@ -47,7 +47,15 @@ const AccountData = () => {
     <div className='acccountData'>
       <div className='dataImg'>
         <Image src='/svg/male-avatar.svg' width={50} height={50} alt='' />
-        <Input name='file' type='file' onChange={handleFile} />
+        <label htmlFor='file'>
+          <Image
+            src='/svg/pencil.svg'
+            width={20}
+            height={20}
+            alt='pencil icon'
+          />
+        </label>
+        <input id='file' name='file' type='file' onChange={handleFile} />
       </div>
       <div className='dataForm'>
         <form onSubmit={handleSubmit}>
