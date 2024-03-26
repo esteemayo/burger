@@ -11,7 +11,7 @@ const Profile = () => {
     <div className='profile'>
       <div className='container'>
         <aside className='left'>
-          <h1>Your profile</h1>
+          <h1 className='profileHeader'>Your profile</h1>
           <div className='menuWrap'>
             <span className='menuItem active'>
               <Link href='/'>
