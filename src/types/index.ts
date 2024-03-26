@@ -137,6 +137,18 @@ export interface RegisterErrors {
   confirmPassword?: string;
 }
 
+export interface UserData {
+  name: string;
+  email: string;
+  phone: string;
+}
+
+export interface UserDataErrors {
+  name?: string;
+  email?: string;
+  phone?: string;
+}
+
 export interface ProductListsProps {
   products: CardMenu;
 }
