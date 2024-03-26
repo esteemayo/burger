@@ -18,6 +18,11 @@
     border: 1px solid currentColor;
     border-radius: 0.5rem;
     cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: $clr-tertiary;
+    }
 
     img {
       display: inline-block;
