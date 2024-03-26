@@ -327,9 +327,11 @@
           transition: all 0.5s ease-in;
         }
 
-        svg {
-          font-size: 2rem;
-          fill: $clr-primary;
+        img {
+          display: block;
+          width: 2rem;
+          height: 2rem;
+          object-fit: cover;
         }
 
         .searchForm {
