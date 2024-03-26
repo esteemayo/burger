@@ -50,7 +50,7 @@ const AccountData = () => {
       <div className='avatarWrap'>
         <div className='dataImg'>
           <Image
-            src='/svg/male-avatar.svg'
+            src='/img/avatar.png'
             width={50}
             height={50}
             alt='avatar'
