@@ -68,29 +68,31 @@ const AccountData = () => {
       </div>
       <div className='dataForm'>
         <form onSubmit={handleSubmit}>
-          <Input
-            name='name'
-            label='Name'
-            value={data.name}
-            onChange={handleChange}
-            error={errors.name}
-          />
-          <Input
-            name='email'
-            type='email'
-            label='Email address'
-            value={data.email}
-            onChange={handleChange}
-            error={errors.email}
-          />
-          <Input
-            name='phone'
-            type='tel'
-            label='Phone number'
-            value={data.phone}
-            onChange={handleChange}
-            error={errors.phone}
-          />
+          <div className='inputWrap'>
+            <Input
+              name='name'
+              label='Name'
+              value={data.name}
+              onChange={handleChange}
+              error={errors.name}
+            />
+            <Input
+              name='email'
+              type='email'
+              label='Email address'
+              value={data.email}
+              onChange={handleChange}
+              error={errors.email}
+            />
+            <Input
+              name='phone'
+              type='tel'
+              label='Phone number'
+              value={data.phone}
+              onChange={handleChange}
+              error={errors.phone}
+            />
+          </div>
 
           <button type='submit'>Update</button>
         </form>

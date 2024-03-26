@@ -56,6 +56,20 @@
 
   .dataForm {
     form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      .inputWrap {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+
+        & > * {
+          width: 45%;
+        }
+      }
+
       button {
       }
     }
