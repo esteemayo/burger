@@ -35,7 +35,7 @@ const AccountData = () => {
   }, []);
 
   const onSubmitHandler = () => {
-    console.log({ ...data });
+    console.log({ ...data, file });
   };
 
   const { data, errors, handleChange, handleSubmit } = useForm(
@@ -50,7 +50,11 @@ const AccountData = () => {
       <div className='avatarWrap'>
         <div className='dataImg'>
           <Image
-            src='/img/avatar.png'
+            src={
+              file
+                ? URL.createObjectURL(file as Blob | MediaSource)
+                : '/img/avatar.png'
+            }
             width={50}
             height={50}
             alt='avatar'
