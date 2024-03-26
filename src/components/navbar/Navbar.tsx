@@ -1,14 +1,11 @@
 'use client';
 
-import RoomServiceIcon from '@mui/icons-material/RoomService';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import RoomServiceIcon from '@mui/icons-material/RoomService';
 import Image from 'next/image';
 import RemoveShoppingCartIcon from '@mui/icons-material/RemoveShoppingCart';
-import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import { usePathname } from 'next/navigation';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import Logo from '../logo/Logo';
 
@@ -84,10 +81,20 @@ const Navbar = () => {
                         <div className='cardItem'>Grilled chicken burger</div>
                         <div className='cardButtons'>
                           <button>
-                            <ExpandMoreIcon />
+                            <Image
+                              src='/svg/chevron-down.svg'
+                              width={10}
+                              height={10}
+                              alt='chevron-down icon'
+                            />
                           </button>
                           <button>
-                            <ExpandLessIcon />
+                            <Image
+                              src='/svg/chevron-up.svg'
+                              width={10}
+                              height={10}
+                              alt='chevron-up icon'
+                            />
                           </button>
                         </div>
                         <div className='deleteBtn'>
