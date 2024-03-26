@@ -56,8 +56,8 @@ const AccountData = () => {
         <label htmlFor='file'>
           <Image
             src='/svg/pencil.svg'
-            width={20}
-            height={20}
+            width={17}
+            height={17}
             alt='pencil icon'
             className='icon'
           />
