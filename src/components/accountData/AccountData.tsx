@@ -45,24 +45,26 @@ const AccountData = () => {
 
   return (
     <div className='acccountData'>
-      <div className='dataImg'>
-        <Image
-          src='/svg/male-avatar.svg'
-          width={50}
-          height={50}
-          alt='avatar'
-          className='avatar'
-        />
-        <label htmlFor='file'>
+      <div className='avatarWrap'>
+        <div className='dataImg'>
           <Image
-            src='/svg/pencil.svg'
-            width={17}
-            height={17}
-            alt='pencil icon'
-            className='icon'
+            src='/svg/male-avatar.svg'
+            width={50}
+            height={50}
+            alt='avatar'
+            className='avatar'
           />
-        </label>
-        <input id='file' name='file' type='file' onChange={handleFile} />
+          <label htmlFor='file'>
+            <Image
+              src='/svg/pencil.svg'
+              width={17}
+              height={17}
+              alt='pencil icon'
+              className='icon'
+            />
+          </label>
+          <input id='file' name='file' type='file' onChange={handleFile} />
+        </div>
       </div>
       <div className='dataForm'>
         <form onSubmit={handleSubmit}>

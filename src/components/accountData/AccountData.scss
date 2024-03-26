@@ -1,46 +1,55 @@
 @import '../../styles/variables.scss';
 
 .acccountData {
-  .dataImg {
-    width: 12rem;
-    height: 12rem;
-    background-color: $clr-white;
-    border-radius: 50%;
-    position: relative;
-
+  .avatarWrap {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
 
-    .avatar {
-      width: 90%;
-      height: 90%;
-    }
-
-    label {
-      width: 3.5rem;
-      height: 3.5rem;
-      background-color: $clr-yellow;
+    .dataImg {
+      width: 12rem;
+      height: 12rem;
+      background-color: $clr-white;
       border-radius: 50%;
+      position: relative;
 
       display: flex;
       align-items: center;
       justify-content: center;
 
-      position: absolute;
-      bottom: 0;
-      right: 0;
-
-      .icon {
-        width: 1.7rem;
-        height: 1.7rem;
-        display: inline-block;
-        object-fit: cover;
+      .avatar {
+        width: 90%;
+        height: 90%;
       }
-    }
 
-    input {
-      display: none;
+      label {
+        width: 3.5rem;
+        height: 3.5rem;
+        background-color: $clr-yellow;
+        border-radius: 50%;
+        cursor: pointer;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        .icon {
+          width: 1.7rem;
+          height: 1.7rem;
+          display: inline-block;
+          object-fit: cover;
+        }
+      }
+
+      input {
+        display: none;
+      }
     }
   }
 
