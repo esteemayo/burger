@@ -4,10 +4,9 @@ import RoomServiceIcon from '@mui/icons-material/RoomService';
 import Link from 'next/link';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import Image from 'next/image';
-import { useCallback, useEffect, useMemo, useState } from 'react';
-import { FaSearch } from 'react-icons/fa';
 import RemoveShoppingCartIcon from '@mui/icons-material/RemoveShoppingCart';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
@@ -108,7 +107,12 @@ const Navbar = () => {
             pathname !== '/login' &&
             pathname !== '/register' && (
               <div className='search'>
-                <FaSearch />
+                <Image
+                  src='/svg/magnifying-glass.svg'
+                  width={20}
+                  height={20}
+                  alt='search icon'
+                />
                 <div className='searchForm'>
                   <form onSubmit={handleSubmit}>
                     <input type='search' placeholder='Search products...' />
