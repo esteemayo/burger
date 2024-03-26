@@ -151,6 +151,16 @@ export interface UserDataErrors {
   address?: string;
 }
 
+export interface UserPassword {
+  password: string;
+  confirmPassword: string;
+}
+
+export interface UserPasswordErrors {
+  password?: string;
+  confirmPassword?: string;
+}
+
 export interface ProductListsProps {
   products: CardMenu;
 }
