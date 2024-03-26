@@ -92,6 +92,9 @@ const AccountPassword = () => {
             </span>
           </Input>
         </div>
+        <div className='passwordBtnWrap'>
+          <button type='submit'>Update password</button>
+        </div>
       </form>
     </div>
   );
