@@ -79,9 +79,11 @@
             font-size: 1.5rem;
             color: currentColor;
 
-            svg {
-              font-size: 2.5rem;
-              fill: $clr-secondary;
+            img {
+              display: block;
+              width: 2.5rem;
+              height: 2.5rem;
+              object-fit: cover;
             }
           }
         }
