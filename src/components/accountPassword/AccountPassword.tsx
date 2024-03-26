@@ -4,6 +4,7 @@ import VisibilityIcon from '@mui/icons-material/Visibility';
 import { useCallback, useMemo, useState } from 'react';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 
+import { UserPassword, UserPasswordErrors } from '@/types';
 import { useForm } from '@/hooks/useForm';
 import { validatePasswordInputs } from '@/validations/accountPassword';
 
@@ -11,12 +12,12 @@ import Input from '../input/Input';
 
 import './AccountPassword.scss';
 
-const initialState = {
+const initialState: UserPassword = {
   password: '',
   confirmPassword: '',
 };
 
-const initialErrors = {
+const initialErrors: UserPasswordErrors = {
   password: '',
   confirmPassword: '',
 };
