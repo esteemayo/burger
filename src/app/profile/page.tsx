@@ -1,9 +1,8 @@
 import Link from 'next/link';
 import WalletIcon from '@mui/icons-material/Wallet';
 
-import AccountDetails from '@/components/accountDetails/AccountDetails';
 import AccountInfo from '@/components/accountInfo/AccountInfo';
-import DeactivateAccount from '@/components/deactivateAccount/DeactivateAccount';
+import AccountDetails from '@/components/accountDetails/AccountDetails';
 
 import './Profile.scss';
 
@@ -73,7 +72,6 @@ const Profile = () => {
         <section className='right'>
           <AccountInfo />
           <AccountDetails />
-          <DeactivateAccount />
         </section>
       </div>
     </div>
