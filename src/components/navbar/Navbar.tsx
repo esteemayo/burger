@@ -83,16 +83,16 @@ const Navbar = () => {
                           <button>
                             <Image
                               src='/svg/chevron-down.svg'
-                              width={10}
-                              height={10}
+                              width={17}
+                              height={17}
                               alt='chevron-down icon'
                             />
                           </button>
                           <button>
                             <Image
                               src='/svg/chevron-up.svg'
-                              width={10}
-                              height={10}
+                              width={17}
+                              height={17}
                               alt='chevron-up icon'
                             />
                           </button>
