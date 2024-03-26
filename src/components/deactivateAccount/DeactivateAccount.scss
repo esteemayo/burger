@@ -1,9 +1,26 @@
+@import '../../styles/variables.scss';
+
 .deactivateAccount {
   position: absolute;
   top: 2rem;
   right: 2rem;
 
   button {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    all: unset;
+    font-weight: 500;
+    font-size: 1.3rem;
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    color: $clr-secondary;
+    border: 1px solid currentColor;
+    border-radius: 0.5rem;
+    cursor: pointer;
+
     img {
     }
   }
