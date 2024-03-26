@@ -1,2 +1,28 @@
-.cccountData {
+@import '../../styles/variables.scss';
+
+.acccountData {
+  .dataImg {
+    .avatar {
+    }
+
+    label {
+      .icon {
+        width: 2rem;
+        height: 2rem;
+        display: inline-block;
+        object-fit: cover;
+      }
+    }
+
+    input {
+      display: none;
+    }
+  }
+
+  .dataForm {
+    form {
+      button {
+      }
+    }
+  }
 }

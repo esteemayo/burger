@@ -46,13 +46,20 @@ const AccountData = () => {
   return (
     <div className='acccountData'>
       <div className='dataImg'>
-        <Image src='/svg/male-avatar.svg' width={50} height={50} alt='' />
+        <Image
+          src='/svg/male-avatar.svg'
+          width={50}
+          height={50}
+          alt='avatar'
+          className='avatar'
+        />
         <label htmlFor='file'>
           <Image
             src='/svg/pencil.svg'
             width={20}
             height={20}
             alt='pencil icon'
+            className='icon'
           />
         </label>
         <input id='file' name='file' type='file' onChange={handleFile} />
