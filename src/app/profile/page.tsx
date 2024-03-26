@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import WalletIcon from '@mui/icons-material/Wallet';
+import Image from 'next/image';
 
 import AccountInfo from '@/components/accountInfo/AccountInfo';
 import AccountDetails from '@/components/accountDetails/AccountDetails';
@@ -15,19 +15,29 @@ const Profile = () => {
           <div className='menuWrap'>
             <span className='menuItem active'>
               <Link href='/'>
-                <WalletIcon />
+                <Image
+                  src='/svg/credit-card.svg'
+                  width={25}
+                  height={25}
+                  alt='cog'
+                />
                 My orders
               </Link>
             </span>
             <span className='menuItem'>
               <Link href='/'>
-                <WalletIcon />
+                <Image src='/svg/user.svg' width={25} height={25} alt='cog' />
                 Personal info
               </Link>
             </span>
             <span className='menuItem'>
               <Link href='/'>
-                <WalletIcon />
+                <Image
+                  src='/svg/receipt-percent.svg'
+                  width={25}
+                  height={25}
+                  alt='cog'
+                />
                 Coupons
               </Link>
             </span>
@@ -36,25 +46,35 @@ const Profile = () => {
           <div className='menuWrap'>
             <span className='menuItem'>
               <Link href='/'>
-                <WalletIcon />
+                <Image src='/svg/wallet.svg' width={25} height={25} alt='cog' />
                 Wallets
               </Link>
             </span>
             <span className='menuItem'>
               <Link href='/'>
-                <WalletIcon />
+                <Image
+                  src='/svg/arrows-pointing-out.svg'
+                  width={25}
+                  height={25}
+                  alt='cog'
+                />
                 Loyalty points
               </Link>
             </span>
             <span className='menuItem'>
               <Link href='/'>
-                <WalletIcon />
+                <Image src='/svg/wifi.svg' width={25} height={25} alt='cog' />
                 Referral code
               </Link>
             </span>
             <span className='menuItem'>
               <Link href='/'>
-                <WalletIcon />
+                <Image
+                  src='/svg/map-pin.svg'
+                  width={25}
+                  height={25}
+                  alt='cog'
+                />
                 Your address
               </Link>
             </span>
@@ -63,7 +83,12 @@ const Profile = () => {
           <div className='menuWrap'>
             <span className='menuItem'>
               <Link href='/'>
-                <WalletIcon />
+                <Image
+                  src='/svg/cog-8-tooth.svg'
+                  width={25}
+                  height={25}
+                  alt='cog'
+                />
                 Settings
               </Link>
             </span>
