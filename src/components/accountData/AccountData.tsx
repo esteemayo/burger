@@ -15,12 +15,14 @@ const initialState: UserData = {
   name: '',
   email: '',
   phone: '',
+  address: '',
 };
 
 const initialErrors: UserDataErrors = {
   name: '',
   email: '',
   phone: '',
+  address: '',
 };
 
 const AccountData = () => {
@@ -91,6 +93,13 @@ const AccountData = () => {
               value={data.phone}
               onChange={handleChange}
               error={errors.phone}
+            />
+            <Input
+              name='address'
+              label='Address'
+              value={data.address}
+              onChange={handleChange}
+              error={errors.address}
             />
           </div>
           <div className='dataBtnWrap'>
