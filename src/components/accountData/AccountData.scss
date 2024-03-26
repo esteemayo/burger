@@ -58,7 +58,7 @@
     form {
       display: flex;
       flex-direction: column;
-      gap: 1rem;
+      gap: 2rem;
 
       .inputWrap {
         display: flex;
@@ -70,7 +70,38 @@
         }
       }
 
-      button {
+      .dataBtnWrap {
+        display: block;
+        align-items: center;
+        justify-content: flex-end;
+        text-align: right;
+
+        button {
+          justify-self: flex-end;
+          all: unset;
+          display: inline-block;
+          text-align: center;
+          text-transform: capitalize;
+          font-weight: 400;
+          font-size: 1.4rem;
+          width: fit-content;
+          padding: 0.5rem 6rem;
+          background-color: $clr-yellow;
+          color: $clr-secondary;
+          border-radius: 0.5rem;
+          cursor: pointer;
+          transition: all 0.3s;
+
+          &:hover {
+            background-color: $clr-secondary;
+            color: $clr-yellow;
+          }
+
+          &:disabled {
+            opacity: 0.7;
+            cursor: default;
+          }
+        }
       }
     }
   }

@@ -93,8 +93,9 @@ const AccountData = () => {
               error={errors.phone}
             />
           </div>
-
-          <button type='submit'>Update</button>
+          <div className='dataBtnWrap'>
+            <button type='submit'>Update</button>
+          </div>
         </form>
       </div>
     </div>
