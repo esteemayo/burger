@@ -79,6 +79,7 @@ const AccountData = () => {
               name='name'
               label='Name'
               value={data.name}
+              placeholder='Name'
               onChange={handleChange}
               error={errors.name}
             />
@@ -87,6 +88,7 @@ const AccountData = () => {
               type='email'
               label='Email address'
               value={data.email}
+              placeholder='Email address'
               onChange={handleChange}
               error={errors.email}
             />
@@ -95,6 +97,7 @@ const AccountData = () => {
               type='tel'
               label='Phone number'
               value={data.phone}
+              placeholder='Phone number'
               onChange={handleChange}
               error={errors.phone}
             />
@@ -102,6 +105,7 @@ const AccountData = () => {
               name='address'
               label='Address'
               value={data.address}
+              placeholder='Contact address'
               onChange={handleChange}
               error={errors.address}
             />
