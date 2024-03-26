@@ -56,7 +56,12 @@ const Navbar = () => {
             </div>
           </div>
           <div className='cart'>
-            <ShoppingCartIcon />
+            <Image
+              src='/svg/shopping-cart.svg'
+              width={24}
+              height={24}
+              alt='search icon'
+            />
             <span className='count'>3</span>
             <div className='cartBox'>
               <div className='card'>
