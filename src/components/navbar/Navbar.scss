@@ -317,6 +317,7 @@
 
       .search {
         position: relative;
+        cursor: pointer;
 
         &:hover .searchForm {
           right: 0;
