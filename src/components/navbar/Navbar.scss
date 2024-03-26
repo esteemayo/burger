@@ -130,9 +130,11 @@
           transition: all 0.5s ease-in;
         }
 
-        svg {
-          font-size: 2.4rem;
-          fill: $clr-primary;
+        img {
+          display: block;
+          width: 2.4rem;
+          height: 2.4rem;
+          object-fit: cover;
         }
 
         .count {
