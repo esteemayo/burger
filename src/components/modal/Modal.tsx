@@ -11,8 +11,12 @@ const Modal = () => {
           <div className='modalBody'>Body</div>
           <div className='modalFooter'>
             <div className='modalBtnWrap'>
-              <button type='button'>Prev</button>
-              <button type='button'>Next</button>
+              <button type='button' className='btnSecondary'>
+                Prev
+              </button>
+              <button type='button' className='btnPrimary'>
+                Next
+              </button>
             </div>
             Footer
           </div>
