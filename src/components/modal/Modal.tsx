@@ -9,6 +9,7 @@ const Modal = () => {
         <div className='wrapper'>
           <h1 className='modalHeading'>Header</h1>
           <div className='modalBody'>Body</div>
+          <hr />
           <div className='modalFooter'>
             <div className='modalBtnWrap'>
               <button type='button' className='btnSecondary'>
