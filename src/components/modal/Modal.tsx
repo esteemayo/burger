@@ -1,4 +1,7 @@
+'use client';
+
 import Image from 'next/image';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 
 import { ModalProps } from '@/types';
 
@@ -16,9 +19,40 @@ const Modal = ({
   onSubmit,
   secondaryAction,
 }: ModalProps) => {
+  const [showModal, setShowModal] = useState(false);
+
+  const handleClose = useCallback(
+    (e: React.MouseEvent<HTMLButtonElement>) => {
+      e.stopPropagation();
+
+      if (disabled) {
+        return;
+      }
+
+      setShowModal(false);
+
+      setTimeout(() => {
+        onClose();
+      }, 300);
+    },
+    [disabled, onClose]
+  );
+
+  const modalClasses = useMemo(() => {
+    return showModal?.toString() === 'true' ? 'box active' : 'box ';
+  }, [showModal]);
+
+  useEffect(() => {
+    setShowModal(isOpen);
+  }, [isOpen]);
+
+  if (!isOpen) {
+    return;
+  }
+
   return (
     <aside className='modal'>
-      <div className='box active'>
+      <div className={modalClasses}>
         <div className='wrapper'>
           <h1 className='modalHeading'>{title}</h1>
           <div className='modalBody'>{body}</div>
@@ -47,7 +81,7 @@ const Modal = ({
             {footer}
           </div>
           <div className='modalCloseBtnWrap'>
-            <button onClick={onClose} type='button' className='closeBtn'>
+            <button onClick={handleClose} type='button' className='closeBtn'>
               <Image
                 src='/svg/x-mark.svg'
                 width={25}
