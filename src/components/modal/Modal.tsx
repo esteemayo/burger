@@ -1,28 +1,53 @@
 import Image from 'next/image';
 
+import { ModalProps } from '@/types';
+
 import './Modal.scss';
 
-const Modal = () => {
+const Modal = ({
+  isOpen,
+  title,
+  disabled,
+  actionLabel,
+  secondaryActionLabel,
+  body,
+  footer,
+  onClose,
+  onSubmit,
+  secondaryAction,
+}: ModalProps) => {
   return (
     <aside className='modal'>
       <div className='box active'>
         <div className='wrapper'>
-          <h1 className='modalHeading'>Header</h1>
-          <div className='modalBody'>Body</div>
+          <h1 className='modalHeading'>{title}</h1>
+          <div className='modalBody'>{body}</div>
           <hr />
           <div className='modalFooter'>
             <div className='modalBtnWrap'>
-              <button type='button' className='btnSecondary'>
-                Prev
-              </button>
-              <button type='button' className='btnPrimary'>
-                Next
-              </button>
+              {secondaryActionLabel && secondaryAction && (
+                <button
+                  type='button'
+                  disabled={disabled}
+                  className='btnSecondary'
+                >
+                  Prev
+                </button>
+              )}
+              {actionLabel && onSubmit && (
+                <button
+                  type='button'
+                  disabled={disabled}
+                  className='btnPrimary'
+                >
+                  Next
+                </button>
+              )}
             </div>
-            Footer
+            {footer}
           </div>
           <div className='modalCloseBtnWrap'>
-            <button type='button' className='closeBtn'>
+            <button onClick={onClose} type='button' className='closeBtn'>
               <Image
                 src='/svg/x-mark.svg'
                 width={25}

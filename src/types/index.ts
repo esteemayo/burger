@@ -224,9 +224,9 @@ export interface ModalProps {
   disabled?: boolean;
   actionLabel?: string;
   secondaryActionLabel?: string;
-  body: React.ReactElement;
-  footer: React.ReactElement;
+  body?: React.ReactElement;
+  footer?: React.ReactElement;
   onClose(): void;
-  onSubmit(): void;
-  secondaryAction(): void;
+  onSubmit?(): void;
+  secondaryAction?(): void;
 }
