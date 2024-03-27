@@ -44,6 +44,19 @@ const Modal = ({
     [handleClose]
   );
 
+  const handleSubmit = useCallback(
+    (e: React.MouseEvent<HTMLButtonElement>) => {
+      e.stopPropagation();
+
+      if (disabled || !onSubmit) {
+        return;
+      }
+
+      onSubmit();
+    },
+    [disabled, onSubmit]
+  );
+
   const handleSecondaryAction = useCallback(
     (e: React.MouseEvent<HTMLButtonElement>) => {
       e.stopPropagation();
@@ -93,6 +106,7 @@ const Modal = ({
                   type='button'
                   disabled={disabled}
                   className='btnPrimary'
+                  onClick={handleSubmit}
                 >
                   Next
                 </button>
