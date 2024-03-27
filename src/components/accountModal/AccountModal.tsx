@@ -11,7 +11,10 @@ const AccountModal = () => {
   const isOpen = useAccountModal((state) => state.isOpen);
   const onClose = useAccountModal((state) => state.onClose);
 
-  const onSubmit = useCallback(() => {}, []);
+  const onSubmit = useCallback(() => {
+    console.log('Account deactivated!');
+    onClose();
+  }, [onClose]);
 
   const bodyContent: React.ReactElement = (
     <div className='accountModal'>
