@@ -40,12 +40,9 @@
       padding: 1.2rem 0.5rem;
       color: $clr-gray-dark;
       border-radius: 2px;
+      margin-bottom: 2px;
       cursor: pointer;
       transition: all 0.3s;
-
-      &:not(:last-child) {
-        margin-bottom: 2px;
-      }
 
       &.active {
         background-color: $clr-tertiary;
