@@ -63,6 +63,17 @@ export type ReviewType = {
   };
 }[];
 
+type ProfileLink = {
+  id: string;
+  url: string;
+  icon: string;
+  label: string;
+}[];
+
+export type ProfileMenu = {
+  links: ProfileLink;
+};
+
 type AccountCard = {
   id: number;
   count?: number;
