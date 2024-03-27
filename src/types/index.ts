@@ -64,7 +64,7 @@ export type ReviewType = {
 }[];
 
 type ProfileLink = {
-  id: string;
+  id: number;
   url: string;
   icon: string;
   label: string;
@@ -72,7 +72,7 @@ type ProfileLink = {
 
 export type ProfileMenu = {
   links: ProfileLink;
-};
+}[];
 
 type AccountCard = {
   id: number;

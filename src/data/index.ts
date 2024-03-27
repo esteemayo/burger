@@ -12,6 +12,7 @@ import {
   FeaturesType,
   FooterLinks,
   Menus,
+  ProfileMenu,
   RelatedProductType,
   ReviewType,
   Socials,
@@ -274,6 +275,27 @@ export const reviews: ReviewType = [
       name: 'Christian Vega',
       image: '/svg/male-avatar.svg',
     },
+  },
+];
+
+export const profileMenu: ProfileMenu = [
+  {
+    links: [
+      { id: 1, url: '/', icon: 'credit-card', label: 'My orders' },
+      { id: 2, url: '/', icon: 'user', label: 'Personal info' },
+      { id: 3, url: '/', icon: 'receipt-percent', label: 'Coupons' },
+    ],
+  },
+  {
+    links: [
+      { id: 1, url: '/', icon: 'wallet', label: 'Wallets' },
+      { id: 2, url: '/', icon: 'arrows-pointing-out', label: 'Loyalty points' },
+      { id: 3, url: '/', icon: 'wifi', label: 'Referral code' },
+      { id: 4, url: '/', icon: 'map-pin', label: 'Your address' },
+    ],
+  },
+  {
+    links: [{ id: 1, url: '/', icon: 'cog-8-tooth', label: 'Settings' }],
   },
 ];
 
