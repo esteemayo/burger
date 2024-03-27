@@ -233,6 +233,9 @@ export interface ModalProps {
 
 export interface AccountModalStore {
   isOpen: boolean;
+}
+
+export interface AccountModalActionType {
   onOpen(): void;
   onClose(): void;
 }
