@@ -44,6 +44,19 @@ const Modal = ({
     [handleClose]
   );
 
+  const handleSecondaryAction = useCallback(
+    (e: React.MouseEvent<HTMLButtonElement>) => {
+      e.stopPropagation();
+
+      if (disabled || !secondaryAction) {
+        return;
+      }
+
+      secondaryAction();
+    },
+    [disabled, secondaryAction]
+  );
+
   const modalClasses = useMemo(() => {
     return showModal?.toString() === 'true' ? 'box active' : 'box ';
   }, [showModal]);
@@ -70,6 +83,7 @@ const Modal = ({
                   type='button'
                   disabled={disabled}
                   className='btnSecondary'
+                  onClick={handleSecondaryAction}
                 >
                   Prev
                 </button>
