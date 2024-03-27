@@ -15,7 +15,10 @@ const AccountModal = () => {
 
   const bodyContent: React.ReactElement = (
     <div className='accountModal'>
-      <p classname='accountModalText' style={{ fontSize: '1.3rem', color: '#00000059' }}>
+      <p
+        className='accountModalText'
+        style={{ fontSize: '1.3rem', color: '#00000059' }}
+      >
         Deleting your account will remove all of your information from our
         database. This cannot be undone.
       </p>
