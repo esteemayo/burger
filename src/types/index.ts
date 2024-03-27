@@ -71,6 +71,7 @@ type ProfileLink = {
 }[];
 
 export type ProfileMenu = {
+  label: string;
   links: ProfileLink;
 }[];
 

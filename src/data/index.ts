@@ -280,6 +280,7 @@ export const reviews: ReviewType = [
 
 export const profileMenu: ProfileMenu = [
   {
+    label: 'top',
     links: [
       { id: 1, url: '/', icon: 'credit-card', label: 'My orders' },
       { id: 2, url: '/', icon: 'user', label: 'Personal info' },
@@ -287,6 +288,7 @@ export const profileMenu: ProfileMenu = [
     ],
   },
   {
+    label: 'center',
     links: [
       { id: 1, url: '/', icon: 'wallet', label: 'Wallets' },
       { id: 2, url: '/', icon: 'arrows-pointing-out', label: 'Loyalty points' },
@@ -295,6 +297,7 @@ export const profileMenu: ProfileMenu = [
     ],
   },
   {
+    label: 'bottom',
     links: [{ id: 1, url: '/', icon: 'cog-8-tooth', label: 'Settings' }],
   },
 ];
