@@ -1,8 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
-import AccountInfo from '@/components/accountInfo/AccountInfo';
-import AccountDetails from '@/components/accountDetails/AccountDetails';
+import AccountSettings from '@/components/accountSettings/AccountSettings';
 
 import './Profile.scss';
 
@@ -94,10 +93,7 @@ const Profile = () => {
             </span>
           </div>
         </aside>
-        <section className='right'>
-          <AccountInfo />
-          <AccountDetails />
-        </section>
+        <AccountSettings />
       </div>
     </div>
   );
