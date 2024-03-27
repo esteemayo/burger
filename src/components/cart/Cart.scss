@@ -120,19 +120,16 @@
                     background-color: transparent;
                     color: inherit;
                     cursor: pointer;
-                    transition: all 0.3s;
-
-                    &:hover {
-                      color: #bc2634;
-                    }
 
                     &:disabled {
                       color: $clr-gray-light;
                     }
 
-                    svg {
-                      font-size: 2rem;
-                      color: currentColor;
+                    img {
+                      display: block;
+                      width: 1.7rem;
+                      height: 1.7rem;
+                      object-fit: cover;
                     }
                   }
                 }
