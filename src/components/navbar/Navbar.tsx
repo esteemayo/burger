@@ -80,7 +80,7 @@ const Navbar = () => {
                         <span className='quantity'>1</span>
                         <div className='cardItem'>Grilled chicken burger</div>
                         <div className='cardButtons'>
-                          <button>
+                          <button type='button'>
                             <Image
                               src='/svg/chevron-down.svg'
                               width={17}
@@ -88,7 +88,7 @@ const Navbar = () => {
                               alt='chevron-down icon'
                             />
                           </button>
-                          <button>
+                          <button type='button'>
                             <Image
                               src='/svg/chevron-up.svg'
                               width={17}
