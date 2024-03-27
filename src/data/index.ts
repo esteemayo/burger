@@ -292,7 +292,7 @@ export const profileMenu: ProfileMenu = [
     links: [
       { id: 1, url: '/', icon: 'wallet', label: 'Wallets' },
       { id: 2, url: '/', icon: 'arrows-pointing-out', label: 'Loyalty points' },
-      { id: 3, url: '/', icon: 'wifi', label: 'Referral code' },
+      { id: 3, url: '/', icon: 'user-group', label: 'Referral code' },
       { id: 4, url: '/', icon: 'map-pin', label: 'Your address' },
     ],
   },
