@@ -1,5 +1,3 @@
-@import '../../styles/variables.scss';
-
 .profile {
   display: flex;
   justify-content: center;
@@ -10,91 +8,5 @@
 
     display: flex;
     justify-content: space-between;
-
-    .left {
-      flex: 1;
-      padding: 0 3rem;
-
-      .profileHeader {
-        text-transform: capitalize;
-        font-weight: 700;
-        font-size: 2.3rem;
-        line-height: 0;
-        padding: 0 0.5rem;
-        color: inherit;
-        margin-bottom: 4rem;
-        position: relative;
-
-        &::after {
-          content: '';
-          display: block;
-          width: 12.5rem;
-          height: 1px;
-          padding-top: 1px;
-          padding-bottom: 1px;
-          border-top: 1px solid $line;
-          border-bottom: 1px solid $line;
-
-          position: absolute;
-          top: 50%;
-          left: 15rem;
-          transform: translateY(-50%);
-        }
-      }
-
-      .menuWrap {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-        .menuItem {
-          padding: 1.2rem 0.5rem;
-          color: $clr-gray-dark;
-          border-radius: 2px;
-          cursor: pointer;
-          transition: all 0.3s;
-
-          &:not(:last-child) {
-            margin-bottom: 2px;
-          }
-
-          &.active {
-            background-color: $clr-tertiary;
-            color: $clr-secondary;
-          }
-
-          &:hover {
-            background-color: #fbfbfc;
-            color: $clr-gray-dark;
-          }
-
-          a,
-          a:link,
-          a:active {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-
-            text-transform: capitalize;
-            font-weight: 400;
-            font-size: 1.5rem;
-            color: currentColor;
-
-            img {
-              display: block;
-              width: 2.5rem;
-              height: 2.5rem;
-              object-fit: cover;
-            }
-          }
-        }
-      }
-
-      hr {
-        height: 0;
-        border: 0.5px solid #fbfbfc;
-        margin: 1rem 0;
-      }
-    }
   }
 }
