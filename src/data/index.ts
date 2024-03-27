@@ -283,7 +283,7 @@ export const profileMenu: ProfileMenu = [
     label: 'top',
     links: [
       { id: 1, url: '/', icon: 'credit-card', label: 'My orders' },
-      { id: 2, url: '/', icon: 'user', label: 'Personal info' },
+      { id: 2, url: '/profile', icon: 'user', label: 'Personal info' },
       { id: 3, url: '/', icon: 'receipt-percent', label: 'Coupons' },
     ],
   },

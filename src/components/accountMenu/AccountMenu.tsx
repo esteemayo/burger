@@ -1,11 +1,16 @@
-import Link from 'next/link';
+'use client';
+
 import Image from 'next/image';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 import { profileMenu } from '@/data';
 
 import './AccountMenu.scss';
 
 const AccountMenu = () => {
+  const pathname = usePathname();
+
   return (
     <aside className='accountMenu'>
       <h1 className='profileHeader'>Your profile</h1>
@@ -18,7 +23,11 @@ const AccountMenu = () => {
               return (
                 <>
                   <div key={id} className='menuWrap'>
-                    <span className='menuItem '>
+                    <span
+                      className={
+                        pathname === url ? 'menuItem active' : 'menuItem'
+                      }
+                    >
                       <Link href={url}>
                         <Image
                           src={`/svg/${icon}.svg`}
