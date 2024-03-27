@@ -230,3 +230,9 @@ export interface ModalProps {
   onSubmit?(): void;
   secondaryAction?(): void;
 }
+
+export interface AccountModalStore {
+  isOpen: boolean;
+  onOpen(): void;
+  onClose(): void;
+}
