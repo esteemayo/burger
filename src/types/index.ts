@@ -217,3 +217,16 @@ export interface HeadingProps {
 }
 
 export type AccountCardProps = AccountCard;
+
+export interface ModalProps {
+  isOpen: boolean;
+  title?: string;
+  disabled?: boolean;
+  actionLabel?: string;
+  secondaryActionLabel?: string;
+  body: React.ReactElement;
+  footer: React.ReactElement;
+  onClose(): void;
+  onSubmit(): void;
+  secondaryAction(): void;
+}
