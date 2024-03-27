@@ -2,11 +2,11 @@ import './Modal.scss';
 
 const Modal = () => {
   return (
-    <div className='modal'>
+    <aside className='modal'>
       <div className='box'>
         <div className='wrapper'>Modal</div>
       </div>
-    </div>
+    </aside>
   );
 };
 
