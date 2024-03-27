@@ -98,7 +98,7 @@ const Modal = ({
                   className='btnSecondary'
                   onClick={handleSecondaryAction}
                 >
-                  Prev
+                  {secondaryActionLabel}
                 </button>
               )}
               {actionLabel && (
@@ -108,7 +108,7 @@ const Modal = ({
                   className='btnPrimary'
                   onClick={handleSubmit}
                 >
-                  Next
+                  {actionLabel}
                 </button>
               )}
             </div>
