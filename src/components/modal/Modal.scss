@@ -14,9 +14,22 @@
   justify-content: center;
 
   .box {
+    transform: translateY(100%);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 300ms;
+
+    &.active {
+      transform: translateY(0);
+      visibility: visible;
+      opacity: 1;
+    }
+
     .wrapper {
       min-width: 40rem;
+      padding: 3rem;
       background-color: $clr-white;
+      border-radius: 0.5rem;
     }
   }
 }
