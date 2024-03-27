@@ -21,21 +21,27 @@ const Modal = ({
 }: ModalProps) => {
   const [showModal, setShowModal] = useState(false);
 
-  const handleClose = useCallback(
-    (e: React.MouseEvent<HTMLButtonElement>) => {
-      e.stopPropagation();
+  const handleClose = useCallback(() => {
+    if (disabled) {
+      return;
+    }
 
-      if (disabled) {
-        return;
+    setShowModal(false);
+
+    setTimeout(() => {
+      onClose();
+    }, 300);
+  }, [disabled, onClose]);
+
+  const onCloseHandler = useCallback(
+    (e: React.MouseEvent<HTMLElement>) => {
+      const target = e.target as HTMLElement;
+
+      if (target.classList.contains('modal')) {
+        handleClose();
       }
-
-      setShowModal(false);
-
-      setTimeout(() => {
-        onClose();
-      }, 300);
     },
-    [disabled, onClose]
+    [handleClose]
   );
 
   const modalClasses = useMemo(() => {
@@ -51,7 +57,7 @@ const Modal = ({
   }
 
   return (
-    <aside className='modal'>
+    <aside className='modal' onClick={onCloseHandler}>
       <div className={modalClasses}>
         <div className='wrapper'>
           <h1 className='modalHeading'>{title}</h1>
