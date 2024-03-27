@@ -227,7 +227,7 @@ export interface ModalProps {
   body?: React.ReactElement;
   footer?: React.ReactElement;
   onClose(): void;
-  onSubmit?(): void;
+  onSubmit(): void;
   secondaryAction?(): void;
 }
 

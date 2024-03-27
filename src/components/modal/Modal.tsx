@@ -48,7 +48,7 @@ const Modal = ({
     (e: React.MouseEvent<HTMLButtonElement>) => {
       e.stopPropagation();
 
-      if (disabled || !onSubmit) {
+      if (disabled) {
         return;
       }
 
@@ -101,7 +101,7 @@ const Modal = ({
                   Prev
                 </button>
               )}
-              {actionLabel && onSubmit && (
+              {actionLabel && (
                 <button
                   type='button'
                   disabled={disabled}
