@@ -27,9 +27,11 @@ const AccountModal = () => {
       isOpen={isOpen}
       title='Delete Account'
       actionLabel='Confirm deletion'
+      secondaryActionLabel='Cancel'
       body={bodyContent}
       onClose={onClose}
       onSubmit={onSubmit}
+      secondaryAction={onClose}
     />
   );
 };
