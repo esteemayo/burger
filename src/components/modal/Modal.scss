@@ -26,10 +26,44 @@
     }
 
     .wrapper {
-      min-width: 40rem;
+      width: 50rem;
       padding: 3rem;
       background-color: $clr-white;
       border-radius: 0.5rem;
+      position: relative;
+
+      .modalHeading {
+      }
+
+      .modalBody {
+      }
+
+      .modalFooter {
+        .modalBtnWrap {
+          button {
+          }
+        }
+      }
+
+      .modalCloseBtnWrap {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+
+        .closeBtn {
+          all: unset;
+          display: inline-block;
+          background-color: transparent;
+          cursor: pointer;
+
+          img {
+            display: block;
+            width: 2.5rem;
+            height: 2.5rem;
+            object-fit: cover;
+          }
+        }
+      }
     }
   }
 }

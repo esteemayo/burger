@@ -20,8 +20,8 @@ const Modal = () => {
             <button type='button' className='closeBtn'>
               <Image
                 src='/svg/x-mark.svg'
-                width={20}
-                height={20}
+                width={25}
+                height={25}
                 alt='close icon'
               />
             </button>
