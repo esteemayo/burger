@@ -1,7 +1,6 @@
-import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+import Image from 'next/image';
 import Link from 'next/link';
 import RemoveShoppingCartIcon from '@mui/icons-material/RemoveShoppingCart';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import './Cart.scss';
 
@@ -34,10 +33,20 @@ const Cart = () => {
                       </div>
                       <div className='cardButtons'>
                         <button type='button'>
-                          <ExpandMoreIcon />
+                          <Image
+                            src='/svg/chevron-down.svg'
+                            width={17}
+                            height={17}
+                            alt='chevron-down icon'
+                          />
                         </button>
                         <button type='button'>
-                          <ExpandLessIcon />
+                          <Image
+                            src='/svg/chevron-up.svg'
+                            width={17}
+                            height={17}
+                            alt='chevron-up icon'
+                          />
                         </button>
                       </div>
                       <button type='button' className='deleteCardBtn'>
