@@ -1,3 +1,5 @@
+'use client';
+
 import Modal from '../modal/Modal';
 import { useProductModal } from '@/hooks/useProductModal';
 
