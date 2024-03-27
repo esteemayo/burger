@@ -239,3 +239,12 @@ export interface AccountModalActionType {
   onOpen(): void;
   onClose(): void;
 }
+
+export interface ProductModalStore {
+  isOpen: boolean;
+}
+
+export interface ProductModalActionType {
+  onOpen(): void;
+  onClose(): void;
+}
