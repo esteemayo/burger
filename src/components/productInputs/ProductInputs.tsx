@@ -1,8 +1,13 @@
 import Input from '../input/Input';
+import { ProductInputsProps } from '@/types';
 
 import './ProductInputs.scss';
 
-const ProductInputs = ({ onChange }) => {
+const ProductInputs = ({
+  onAdd,
+  onChange,
+  onChangeIngredient,
+}: ProductInputsProps) => {
   return (
     <div className='productInputs'>
       <Input
@@ -24,14 +29,14 @@ const ProductInputs = ({ onChange }) => {
           name='ingredient'
           label='Ingredients'
           placeholder='Ingredients'
-          onChange={onChange}
+          onChange={onChangeIngredient}
         />
         <div className='ingredientLists'>
           <div className='ingredients'>
             <span>chicken</span>
             <span>fries</span>
           </div>
-          <button type='button'>Add</button>
+          <button type='button' onClick={onAdd}>Add</button>
         </div>
       </div>
     </div>
