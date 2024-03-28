@@ -252,6 +252,7 @@ export interface ProductModalActionType {
 export interface ProductInputsProps {
   name: string;
   price: number;
+  ingredient: string;
   onAdd(e: React.MouseEvent<HTMLButtonElement>): void;
   onChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void;
   onChangeIngredient(e: React.ChangeEvent<HTMLInputElement>): void;

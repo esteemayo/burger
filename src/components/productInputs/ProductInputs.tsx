@@ -6,6 +6,7 @@ import './ProductInputs.scss';
 const ProductInputs = ({
   name,
   price,
+  ingredient,
   onAdd,
   onChange,
   onChangeIngredient,
@@ -32,6 +33,7 @@ const ProductInputs = ({
         <Input
           name='ingredient'
           label='Ingredients'
+          value={ingredient}
           placeholder='Ingredients'
           onChange={onChangeIngredient}
         />
