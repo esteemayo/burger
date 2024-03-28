@@ -261,9 +261,12 @@ export interface ProductInputsProps {
   name: string;
   desc: string;
   price: number;
+  onChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void;
+}
+
+export interface ProductImageProps {
   ingredient: string;
   ingredients?: string[];
   onAdd(e: React.MouseEvent<HTMLButtonElement>): void;
-  onChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void;
-  onChangeIngredient(e: React.ChangeEvent<HTMLInputElement>): void;
+  onChange(e: React.ChangeEvent<HTMLInputElement>): void;
 }
