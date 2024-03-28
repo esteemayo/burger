@@ -112,6 +112,7 @@ const ProductModal = () => {
       name={name}
       price={price}
       ingredient={ingredient}
+      ingredients={ingredients}
       onAdd={handleIngredients}
       onChange={handleChange}
       onChangeIngredient={handleAddIngredient}
