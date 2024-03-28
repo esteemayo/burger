@@ -248,3 +248,9 @@ export interface ProductModalActionType {
   onOpen(): void;
   onClose(): void;
 }
+
+export interface ProductInputsProps {
+  onAdd(): void;
+  onChange(): void;
+  onChangeIngredient(): void;
+}
