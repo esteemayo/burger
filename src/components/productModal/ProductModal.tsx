@@ -10,12 +10,18 @@ import { useProductModal } from '@/hooks/useProductModal';
 
 import './ProductModal.scss';
 
+interface IData {
+  name: string;
+  price: number;
+  ingredients: string[];
+}
+
 const enum STEPS {
   INFO = 0,
   IMAGE = 1,
 }
 
-const initialState = {
+const initialState: IData = {
   name: '',
   price: 1,
   ingredients: [],
@@ -54,7 +60,7 @@ const ProductModal = () => {
     []
   );
 
-  const handleIngredient = useCallback(
+  const handleAddIngredient = useCallback(
     ({ target: input }: React.ChangeEvent<HTMLInputElement>) => {
       const { value } = input;
 
@@ -64,6 +70,12 @@ const ProductModal = () => {
     },
     []
   );
+
+  const handleIngredients = useCallback(() => {
+    setData((prev) => {
+      return { ...prev, ingredients: [...ingredient] };
+    });
+  }, [ingredient]);
 
   const onSubmit = useCallback(() => {
     if (step !== STEPS.IMAGE) {
@@ -88,7 +100,13 @@ const ProductModal = () => {
 
   let bodyContent: JSX.Element;
 
-  bodyContent = <ProductInputs onChange={handleChange} />;
+  bodyContent = (
+    <ProductInputs
+      onAdd={handleAddIngredient}
+      onChange={handleChange}
+      onChangeIngredient={handleIngredients}
+    />
+  );
 
   if (step === STEPS.IMAGE) {
     bodyContent = <DropZone />;
