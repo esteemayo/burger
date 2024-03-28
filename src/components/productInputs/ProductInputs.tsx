@@ -7,6 +7,7 @@ const ProductInputs = ({
   name,
   price,
   ingredient,
+  ingredients,
   onAdd,
   onChange,
   onChangeIngredient,
@@ -39,8 +40,9 @@ const ProductInputs = ({
         />
         <div className='ingredientLists'>
           <div className='ingredients'>
-            <span>chicken</span>
-            <span>fries</span>
+            {ingredients?.map((item) => {
+              return <span key={item}>{item}</span>;
+            })}
           </div>
           <button type='button' onClick={onAdd}>
             Add
