@@ -32,6 +32,15 @@ const ProductModal = () => {
     });
   }, []);
 
+  const handleChange = useCallback(
+    ({
+      target: input,
+    }: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+      const { name, value } = input;
+    },
+    []
+  );
+
   const onSubmit = useCallback(() => {
     if (step !== STEPS.IMAGE) {
       return onNext();
@@ -55,7 +64,7 @@ const ProductModal = () => {
 
   let bodyContent: JSX.Element;
 
-  bodyContent = <ProductInputs />;
+  bodyContent = <ProductInputs onChange={handleChange} />;
 
   return (
     <Modal
