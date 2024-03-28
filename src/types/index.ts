@@ -105,6 +105,14 @@ export interface InputProps
   onChange(e: React.ChangeEvent<HTMLInputElement>): void;
 }
 
+export interface TextareaProps
+  extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
+  name?: string;
+  label?: string;
+  error?: string;
+  onChange(e: React.ChangeEvent<HTMLTextAreaElement>): void;
+}
+
 export interface ButtonProps {
   label: string;
   children?: React.ReactNode;
