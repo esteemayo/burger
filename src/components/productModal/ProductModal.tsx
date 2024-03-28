@@ -2,6 +2,7 @@
 
 import { useCallback, useMemo, useState } from 'react';
 
+import DropZone from '../dropZone/DropZone';
 import Modal from '../modal/Modal';
 import ProductInputs from '../productInputs/ProductInputs';
 
@@ -65,6 +66,10 @@ const ProductModal = () => {
   let bodyContent: JSX.Element;
 
   bodyContent = <ProductInputs onChange={handleChange} />;
+
+  if (step === STEPS.IMAGE) {
+    bodyContent = <DropZone />;
+  }
 
   return (
     <Modal
