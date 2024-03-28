@@ -250,7 +250,7 @@ export interface ProductModalActionType {
 }
 
 export interface ProductInputsProps {
-  onAdd(): void;
-  onChange(): void;
+  onAdd(e: React.ChangeEvent<HTMLInputElement>): void;
+  onChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void;
   onChangeIngredient(): void;
 }

@@ -15,11 +15,19 @@ const enum STEPS {
   IMAGE = 1,
 }
 
+const initialState = {
+  name: '',
+  price: 1,
+  ingredients: [],
+};
+
 const ProductModal = () => {
   const isOpen = useProductModal((state) => state.isOpen);
   const onClose = useProductModal((state) => state.onClose);
 
+  const [data, setData] = useState(initialState);
   const [step, setStep] = useState(STEPS.INFO);
+  const [ingredient, setIngredient] = useState<string[]>([]);
 
   const onPrev = useCallback(() => {
     setStep((value) => {
@@ -38,6 +46,21 @@ const ProductModal = () => {
       target: input,
     }: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
       const { name, value } = input;
+
+      setData((prev) => {
+        return { ...prev, [name]: value };
+      });
+    },
+    []
+  );
+
+  const handleIngredient = useCallback(
+    ({ target: input }: React.ChangeEvent<HTMLInputElement>) => {
+      const { value } = input;
+
+      setIngredient((prev) => {
+        return [...prev, value];
+      });
     },
     []
   );
