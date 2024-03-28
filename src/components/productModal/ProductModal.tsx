@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useState } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 
 import Modal from '../modal/Modal';
 import { useProductModal } from '@/hooks/useProductModal';
@@ -30,14 +30,35 @@ const ProductModal = () => {
     });
   }, []);
 
-  const onSubmit = useCallback(() => {}, []);
+  const onSubmit = useCallback(() => {
+    if (step !== STEPS.IMAGE) {
+      return onNext();
+    }
+
+    console.log('product created');
+    setStep(STEPS.INFO);
+  }, [onNext, step]);
+
+  const secondaryAction = useCallback(() => {
+    return step !== STEPS.INFO ? onPrev : undefined;
+  }, [onPrev, step]);
+
+  const actionLabel = useMemo(() => {
+    return step === STEPS.IMAGE ? 'Create' : 'Next';
+  }, [step]);
+
+  const secondaryActionLabel = useMemo(() => {
+    return step !== STEPS.INFO ? 'Back' : undefined;
+  }, [step]);
 
   return (
     <Modal
       isOpen={isOpen}
-      actionLabel='Create'
+      actionLabel={actionLabel}
+      secondaryActionLabel={secondaryActionLabel}
       onClose={onClose}
       onSubmit={onSubmit}
+      secondaryAction={secondaryAction}
     />
   );
 };
