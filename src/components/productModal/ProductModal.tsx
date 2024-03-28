@@ -80,9 +80,9 @@ const ProductModal = () => {
       return onNext();
     }
 
-    console.log('product created');
+    console.log({ ...data, ingredients });
     setStep(STEPS.INFO);
-  }, [onNext, step]);
+  }, [data, ingredients, onNext, step]);
 
   const actionLabel = useMemo(() => {
     return step === STEPS.IMAGE ? 'Create' : 'Next';
