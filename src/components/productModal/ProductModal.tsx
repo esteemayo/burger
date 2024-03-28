@@ -3,6 +3,8 @@
 import { useCallback, useMemo, useState } from 'react';
 
 import Modal from '../modal/Modal';
+import ProductInputs from '../productInputs/ProductInputs';
+
 import { useProductModal } from '@/hooks/useProductModal';
 
 import './ProductModal.scss';
@@ -51,12 +53,17 @@ const ProductModal = () => {
     return step !== STEPS.INFO ? onPrev : undefined;
   }, [onPrev, step]);
 
+  let bodyContent: JSX.Element;
+
+  bodyContent = <ProductInputs />;
+
   return (
     <Modal
       isOpen={isOpen}
       title='Create a new product'
       actionLabel={actionLabel}
       secondaryActionLabel={secondaryActionLabel}
+      body={bodyContent}
       onClose={onClose}
       onSubmit={onSubmit}
       secondaryAction={secondaryAction}
