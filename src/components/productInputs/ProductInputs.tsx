@@ -36,7 +36,9 @@ const ProductInputs = ({
             <span>chicken</span>
             <span>fries</span>
           </div>
-          <button type='button' onClick={onAdd}>Add</button>
+          <button type='button' onClick={onAdd}>
+            Add
+          </button>
         </div>
       </div>
     </div>
