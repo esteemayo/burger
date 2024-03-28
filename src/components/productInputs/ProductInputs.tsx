@@ -4,6 +4,8 @@ import { ProductInputsProps } from '@/types';
 import './ProductInputs.scss';
 
 const ProductInputs = ({
+  name,
+  price,
   onAdd,
   onChange,
   onChangeIngredient,
@@ -13,6 +15,7 @@ const ProductInputs = ({
       <Input
         name='name'
         label='Product name'
+        value={name}
         placeholder='Product name'
         onChange={onChange}
       />
@@ -20,6 +23,7 @@ const ProductInputs = ({
         name='price'
         type='number'
         label='Price'
+        value={price}
         min={1}
         placeholder='Price'
         onChange={onChange}

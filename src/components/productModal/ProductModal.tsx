@@ -96,10 +96,14 @@ const ProductModal = () => {
     return step !== STEPS.INFO ? onPrev : undefined;
   }, [onPrev, step]);
 
+  const { name, price } = data;
+
   let bodyContent: JSX.Element;
 
   bodyContent = (
     <ProductInputs
+      name={name}
+      price={price}
       onAdd={handleIngredients}
       onChange={handleChange}
       onChangeIngredient={handleAddIngredient}
