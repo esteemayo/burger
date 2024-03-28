@@ -54,6 +54,7 @@ const ProductModal = () => {
   return (
     <Modal
       isOpen={isOpen}
+      title='Create a new product'
       actionLabel={actionLabel}
       secondaryActionLabel={secondaryActionLabel}
       onClose={onClose}
