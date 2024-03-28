@@ -39,10 +39,6 @@ const ProductModal = () => {
     setStep(STEPS.INFO);
   }, [onNext, step]);
 
-  const secondaryAction = useCallback(() => {
-    return step !== STEPS.INFO ? onPrev : undefined;
-  }, [onPrev, step]);
-
   const actionLabel = useMemo(() => {
     return step === STEPS.IMAGE ? 'Create' : 'Next';
   }, [step]);
@@ -50,6 +46,10 @@ const ProductModal = () => {
   const secondaryActionLabel = useMemo(() => {
     return step !== STEPS.INFO ? 'Back' : undefined;
   }, [step]);
+
+  const secondaryAction = useMemo(() => {
+    return step !== STEPS.INFO ? onPrev : undefined;
+  }, [onPrev, step]);
 
   return (
     <Modal
