@@ -16,7 +16,7 @@ const AccountModal = () => {
     onClose();
   }, [onClose]);
 
-  const bodyContent: React.ReactElement = (
+  const bodyContent: JSX.Element = (
     <div className='accountModal'>
       <p
         className='accountModalText'
