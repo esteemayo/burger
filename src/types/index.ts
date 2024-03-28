@@ -259,6 +259,7 @@ export interface ProductModalActionType {
 
 export interface ProductInputsProps {
   name: string;
+  desc: string;
   price: number;
   ingredient: string;
   ingredients?: string[];

@@ -6,6 +6,7 @@ import Textarea from '../textarea/Textarea';
 
 const ProductInputs = ({
   name,
+  desc,
   price,
   ingredient,
   ingredients,
@@ -25,6 +26,7 @@ const ProductInputs = ({
       <Textarea
         name='desc'
         label='Description'
+        value={desc}
         placeholder='Description'
         onChange={onChange}
       />

@@ -12,6 +12,7 @@ import './ProductModal.scss';
 
 interface IData {
   name: string;
+  desc: string;
   price: number;
 }
 
@@ -22,6 +23,7 @@ const enum STEPS {
 
 const initialState: IData = {
   name: '',
+  desc: '',
   price: 1,
 };
 
@@ -103,13 +105,14 @@ const ProductModal = () => {
     return step !== STEPS.INFO ? onPrev : undefined;
   }, [onPrev, step]);
 
-  const { name, price } = data;
+  const { name, desc, price } = data;
 
   let bodyContent: JSX.Element;
 
   bodyContent = (
     <ProductInputs
       name={name}
+      desc={desc}
       price={price}
       ingredient={ingredient}
       ingredients={ingredients}
