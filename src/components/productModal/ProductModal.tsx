@@ -75,14 +75,21 @@ const ProductModal = () => {
     [ingredient]
   );
 
+  const handleClear = useCallback(() => {
+    setData(initialState);
+    setIngredient('');
+    setIngredients([]);
+  }, []);
+
   const onSubmit = useCallback(() => {
     if (step !== STEPS.IMAGE) {
       return onNext();
     }
 
     console.log({ ...data, ingredients });
+    handleClear();
     setStep(STEPS.INFO);
-  }, [data, ingredients, onNext, step]);
+  }, [data, handleClear, ingredients, onNext, step]);
 
   const actionLabel = useMemo(() => {
     return step === STEPS.IMAGE ? 'Create' : 'Next';
