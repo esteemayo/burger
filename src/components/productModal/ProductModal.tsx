@@ -71,11 +71,16 @@ const ProductModal = () => {
     []
   );
 
-  const handleIngredients = useCallback(() => {
-    setData((prev) => {
-      return { ...prev, ingredients: [...ingredient] };
-    });
-  }, [ingredient]);
+  const handleIngredients = useCallback(
+    (e: React.MouseEvent<HTMLButtonElement>) => {
+      e.stopPropagation();
+
+      setData((prev) => {
+        return { ...prev, ingredients: [...ingredient] };
+      });
+    },
+    [ingredient]
+  );
 
   const onSubmit = useCallback(() => {
     if (step !== STEPS.IMAGE) {
@@ -102,9 +107,9 @@ const ProductModal = () => {
 
   bodyContent = (
     <ProductInputs
-      onAdd={handleAddIngredient}
+      onAdd={handleIngredients}
       onChange={handleChange}
-      onChangeIngredient={handleIngredients}
+      onChangeIngredient={handleAddIngredient}
     />
   );
 
