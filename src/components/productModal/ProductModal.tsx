@@ -71,14 +71,14 @@ const ProductModal = () => {
       e.stopPropagation();
 
       setIngredients((prev) => [...prev, ingredient]);
+      setIngredient('');
     },
     [ingredient]
   );
 
   const handleClear = useCallback(() => {
-    setData(initialState);
-    setIngredient('');
     setIngredients([]);
+    setData(initialState);
   }, []);
 
   const onSubmit = useCallback(() => {
