@@ -2,6 +2,7 @@ import Input from '../input/Input';
 import { ProductInputsProps } from '@/types';
 
 import './ProductInputs.scss';
+import Textarea from '../textarea/Textarea';
 
 const ProductInputs = ({
   name,
@@ -19,6 +20,12 @@ const ProductInputs = ({
         label='Product name'
         value={name}
         placeholder='Product name'
+        onChange={onChange}
+      />
+      <Textarea
+        name='desc'
+        label='Description'
+        placeholder='Description'
         onChange={onChange}
       />
       <Input
