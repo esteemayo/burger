@@ -13,7 +13,6 @@ import './ProductModal.scss';
 interface IData {
   name: string;
   price: number;
-  ingredients: string[];
 }
 
 const enum STEPS {
@@ -24,7 +23,6 @@ const enum STEPS {
 const initialState: IData = {
   name: '',
   price: 1,
-  ingredients: [],
 };
 
 const ProductModal = () => {
@@ -33,7 +31,8 @@ const ProductModal = () => {
 
   const [data, setData] = useState(initialState);
   const [step, setStep] = useState(STEPS.INFO);
-  const [ingredient, setIngredient] = useState<string[]>([]);
+  const [ingredient, setIngredient] = useState('');
+  const [ingredients, setIngredients] = useState<string[]>([]);
 
   const onPrev = useCallback(() => {
     setStep((value) => {
@@ -61,12 +60,8 @@ const ProductModal = () => {
   );
 
   const handleAddIngredient = useCallback(
-    ({ target: input }: React.ChangeEvent<HTMLInputElement>) => {
-      const { value } = input;
-
-      setIngredient((prev) => {
-        return [...prev, value];
-      });
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      setIngredient(e.target.value);
     },
     []
   );
@@ -75,9 +70,7 @@ const ProductModal = () => {
     (e: React.MouseEvent<HTMLButtonElement>) => {
       e.stopPropagation();
 
-      setData((prev) => {
-        return { ...prev, ingredients: [...ingredient] };
-      });
+      setIngredients((prev) => [...prev, ingredient]);
     },
     [ingredient]
   );
