@@ -29,10 +29,10 @@ const ProductModal = () => {
   const isOpen = useProductModal((state) => state.isOpen);
   const onClose = useProductModal((state) => state.onClose);
 
-  const [data, setData] = useState(initialState);
-  const [step, setStep] = useState(STEPS.INFO);
   const [ingredient, setIngredient] = useState('');
+  const [step, setStep] = useState(STEPS.INFO);
   const [ingredients, setIngredients] = useState<string[]>([]);
+  const [data, setData] = useState(initialState);
 
   const onPrev = useCallback(() => {
     setStep((value) => {
