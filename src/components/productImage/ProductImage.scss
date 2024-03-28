@@ -1,2 +1,54 @@
+@import '../../styles/variables.scss';
+
 .productImage {
+  .ingredientWrap {
+    .ingredientLists {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+
+      .ingredients {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.5rem;
+
+        span {
+          font-size: 1.3rem;
+          padding: 0.5px 1rem;
+          color: $clr-gray-dark;
+          border: 1px solid $line;
+          border-radius: 0.5rem;
+        }
+      }
+
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        all: unset;
+        text-align: center;
+        font-weight: 400;
+        font-size: 1.3rem;
+        width: 5rem;
+        height: 2.5rem;
+        padding: 0.5rem;
+        background-color: $clr-yellow;
+        color: $clr-secondary;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        transition: all 0.3s;
+
+        &:hover {
+          opacity: 0.9;
+        }
+
+        &:disabled {
+          opacity: 0.7;
+          cursor: default;
+        }
+      }
+    }
+  }
 }
