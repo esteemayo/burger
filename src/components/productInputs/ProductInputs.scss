@@ -1,6 +1,15 @@
 @import '../../styles/variables.scss';
 
 .productInputs {
+  & > * {
+    .formGroup {
+      input {
+        padding: 1rem 2rem;
+        box-shadow: none;
+        border: 1px solid $line;
+      }
+    }
+  }
   .ingredientWrap {
     .ingredientLists {
       display: flex;
