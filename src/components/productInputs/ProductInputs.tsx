@@ -4,16 +4,7 @@ import { ProductInputsProps } from '@/types';
 import './ProductInputs.scss';
 import Textarea from '../textarea/Textarea';
 
-const ProductInputs = ({
-  name,
-  desc,
-  price,
-  ingredient,
-  ingredients,
-  onAdd,
-  onChange,
-  onChangeIngredient,
-}: ProductInputsProps) => {
+const ProductInputs = ({ name, desc, price, onChange }: ProductInputsProps) => {
   return (
     <div className='productInputs'>
       <Input
@@ -39,25 +30,6 @@ const ProductInputs = ({
         placeholder='Price'
         onChange={onChange}
       />
-      <div className='ingredientWrap'>
-        <Input
-          name='ingredient'
-          label='Ingredients'
-          value={ingredient}
-          placeholder='Ingredients'
-          onChange={onChangeIngredient}
-        />
-        <div className='ingredientLists'>
-          <div className='ingredients'>
-            {ingredients?.map((item) => {
-              return <span key={item}>{item}</span>;
-            })}
-          </div>
-          <button type='button' onClick={onAdd}>
-            Add
-          </button>
-        </div>
-      </div>
     </div>
   );
 };

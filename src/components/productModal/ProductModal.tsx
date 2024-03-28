@@ -9,6 +9,7 @@ import ProductInputs from '../productInputs/ProductInputs';
 import { useProductModal } from '@/hooks/useProductModal';
 
 import './ProductModal.scss';
+import ProductImage from '../productImage/ProductImage';
 
 interface IData {
   name: string;
@@ -114,16 +115,19 @@ const ProductModal = () => {
       name={name}
       desc={desc}
       price={price}
-      ingredient={ingredient}
-      ingredients={ingredients}
-      onAdd={handleIngredients}
       onChange={handleChange}
-      onChangeIngredient={handleAddIngredient}
     />
   );
 
   if (step === STEPS.IMAGE) {
-    bodyContent = <DropZone />;
+    bodyContent = (
+      <ProductImage
+        ingredient={ingredient}
+        ingredients={ingredients}
+        onAdd={handleIngredients}
+        onChange={handleAddIngredient}
+      />
+    );
   }
 
   return (
