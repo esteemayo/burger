@@ -9,6 +9,11 @@
       gap: 1rem;
 
       .ingredients {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.5rem;
+
         span {
           font-size: 1.3rem;
           padding: 0.5px 1rem;
@@ -17,7 +22,6 @@
           border-radius: 0.5rem;
         }
       }
-
 
       button {
         display: flex;
