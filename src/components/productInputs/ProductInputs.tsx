@@ -26,8 +26,11 @@ const ProductInputs = ({ onChange }) => {
           placeholder='Ingredients'
           onChange={onChange}
         />
-        <div className='ingredients'>
-          <span>chicken</span>
+        <div className='ingredientLists'>
+          <div className='ingredients'>
+            <span>chicken</span>
+            <span>fries</span>
+          </div>
           <button type='button'>Add</button>
         </div>
       </div>

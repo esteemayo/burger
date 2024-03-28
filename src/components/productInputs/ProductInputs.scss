@@ -2,11 +2,22 @@
 
 .productInputs {
   .ingredientWrap {
-    .ingredients {
+    .ingredientLists {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 1rem;
+
+      .ingredients {
+        span {
+          font-size: 1.3rem;
+          padding: 0.5px 1rem;
+          color: $clr-gray-dark;
+          border: 1px solid $line;
+          border-radius: 0.5rem;
+        }
+      }
+
 
       button {
         display: flex;
