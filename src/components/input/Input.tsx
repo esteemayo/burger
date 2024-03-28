@@ -1,5 +1,4 @@
 import { InputProps } from '@/types';
-
 import ErrorMessage from '../errorMessage/ErrorMessage';
 
 import './Input.scss';
