@@ -5,7 +5,7 @@ import './Textarea.scss';
 
 const Textarea = ({ name, label, error, ...rest }: TextareaProps) => {
   return (
-    <div className='formGroup'>
+    <div className='textareaWrap'>
       <label htmlFor={name}>{label}</label>
       <textarea {...rest} name={name} id={name} />
       {error && <ErrorMessage message={error} />}
