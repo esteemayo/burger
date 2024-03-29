@@ -135,7 +135,6 @@ const ProductModal = () => {
       <ProductImage
         ingredient={ingredient}
         ingredients={ingredients}
-        errors={errors}
         onAdd={handleIngredients}
         onChange={handleAddIngredient}
         onDelete={handleDelete}
