@@ -80,9 +80,9 @@ const ProductModal = () => {
   );
 
   const handleDelete = useCallback(
-    (_e: React.MouseEvent<HTMLSpanElement>, ingredient: string) => {
+    (_e: React.MouseEvent<HTMLSpanElement>, value: string) => {
       setIngredients((prev) => {
-        return [...prev].filter((item) => item !== ingredient);
+        return [...prev].filter((item) => item !== value);
       });
     },
     []
