@@ -18,7 +18,9 @@ const AccountModal = () => {
     onClose();
   }, [onClose]);
 
-  const bodyContent: JSX.Element = <DeleteAccount />;
+  let bodyContent: JSX.Element;
+
+  bodyContent = <DeleteAccount />;
 
   return (
     <Modal
