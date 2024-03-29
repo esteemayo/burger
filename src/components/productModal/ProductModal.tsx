@@ -2,27 +2,22 @@
 
 import { useCallback, useMemo, useState } from 'react';
 
-import DropZone from '../dropZone/DropZone';
+import ProductImage from '../productImage/ProductImage';
 import Modal from '../modal/Modal';
 import ProductInputs from '../productInputs/ProductInputs';
 
 import { useProductModal } from '@/hooks/useProductModal';
+import { ProductData, ProductErrors } from '@/types';
+import { validateProductInput } from '@/validations/product';
 
 import './ProductModal.scss';
-import ProductImage from '../productImage/ProductImage';
-
-interface IData {
-  name: string;
-  desc: string;
-  price: number;
-}
 
 const enum STEPS {
   INFO = 0,
   IMAGE = 1,
 }
 
-const initialState: IData = {
+const initialState: ProductData = {
   name: '',
   desc: '',
   price: 1,
@@ -32,10 +27,11 @@ const ProductModal = () => {
   const isOpen = useProductModal((state) => state.isOpen);
   const onClose = useProductModal((state) => state.onClose);
 
-  const [ingredient, setIngredient] = useState('');
+  const [data, setData] = useState(initialState);
+  const [errors, setErrors] = useState<ProductErrors>({});
   const [step, setStep] = useState(STEPS.INFO);
   const [ingredients, setIngredients] = useState<string[]>([]);
-  const [data, setData] = useState(initialState);
+  const [ingredient, setIngredient] = useState('');
 
   const onPrev = useCallback(() => {
     setStep((value) => {
@@ -98,6 +94,11 @@ const ProductModal = () => {
       return onNext();
     }
 
+    const errors = validateProductInput(data);
+    if (Object.keys(errors).length > 0) return setErrors(errors);
+
+    setErrors({});
+
     console.log({ ...data, ingredients });
     handleClear();
     setStep(STEPS.INFO);
@@ -124,6 +125,7 @@ const ProductModal = () => {
       name={name}
       desc={desc}
       price={price}
+      errors={errors}
       onChange={handleChange}
     />
   );
@@ -133,6 +135,7 @@ const ProductModal = () => {
       <ProductImage
         ingredient={ingredient}
         ingredients={ingredients}
+        errors={errors}
         onAdd={handleIngredients}
         onChange={handleAddIngredient}
         onDelete={handleDelete}

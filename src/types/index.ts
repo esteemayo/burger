@@ -273,6 +273,7 @@ export interface ProductInputsProps {
   name: string;
   desc: string;
   price: number;
+  errors?: ProductErrors;
   onChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void;
 }
 

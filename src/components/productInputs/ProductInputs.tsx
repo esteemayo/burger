@@ -5,7 +5,13 @@ import { ProductInputsProps } from '@/types';
 
 import './ProductInputs.scss';
 
-const ProductInputs = ({ name, desc, price, onChange }: ProductInputsProps) => {
+const ProductInputs = ({
+  name,
+  desc,
+  price,
+  errors,
+  onChange,
+}: ProductInputsProps) => {
   return (
     <div className='productInputs'>
       <Input
@@ -14,6 +20,7 @@ const ProductInputs = ({ name, desc, price, onChange }: ProductInputsProps) => {
         value={name}
         placeholder='Product name'
         onChange={onChange}
+        error={errors?.name}
       />
       <Textarea
         name='desc'
@@ -21,6 +28,7 @@ const ProductInputs = ({ name, desc, price, onChange }: ProductInputsProps) => {
         value={desc}
         placeholder='Description'
         onChange={onChange}
+        error={errors?.desc}
       />
       <Input
         name='price'
@@ -30,6 +38,7 @@ const ProductInputs = ({ name, desc, price, onChange }: ProductInputsProps) => {
         min={1}
         placeholder='Price'
         onChange={onChange}
+        error={errors?.price}
       />
     </div>
   );
