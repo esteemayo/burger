@@ -1,3 +1,7 @@
+'use client';
+
+import { useMemo } from 'react';
+
 import Input from '../input/Input';
 import DropZone from '../dropZone/DropZone';
 
@@ -11,6 +15,10 @@ const ProductImage = ({
   onAdd,
   onChange,
 }: ProductImageProps) => {
+  const disableBtn = useMemo(() => {
+    return ingredient.trim() === '' ? true : false;
+  }, [ingredient]);
+
   return (
     <div className='productImage'>
       <div className='ingredientWrap'>
@@ -27,7 +35,7 @@ const ProductImage = ({
               return <span key={item}>{item}</span>;
             })}
           </div>
-          <button type='button' onClick={onAdd}>
+          <button type='button' disabled={!!disableBtn} onClick={onAdd}>
             Add
           </button>
         </div>
