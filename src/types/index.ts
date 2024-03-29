@@ -190,7 +190,7 @@ export interface ProductData {
 export interface ProductErrors {
   name?: string;
   desc?: string;
-  price?: number;
+  price?: string;
 }
 
 export interface ProductListsProps {
