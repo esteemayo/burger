@@ -3,6 +3,8 @@
 import { useCallback } from 'react';
 
 import Modal from '../modal/Modal';
+import DeleteAccount from '../deleteAccount/DeleteAccount';
+
 import { useAccountModal } from '@/hooks/useAccountModal';
 
 import './AccountModal.scss';
@@ -16,17 +18,7 @@ const AccountModal = () => {
     onClose();
   }, [onClose]);
 
-  const bodyContent: JSX.Element = (
-    <div className='accountModal'>
-      <p
-        className='accountModalText'
-        style={{ fontSize: '1.3rem', color: '#00000059' }}
-      >
-        Deleting your account will remove all of your information from our
-        database. This cannot be undone.
-      </p>
-    </div>
-  );
+  const bodyContent: JSX.Element = <DeleteAccount />;
 
   return (
     <Modal
