@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { Fragment } from 'react';
 
 import { profileMenu } from '@/data';
 
@@ -17,12 +18,12 @@ const AccountMenu = () => {
       {profileMenu.map((item) => {
         const { label, links } = item;
         return (
-          <>
+          <Fragment key={label}>
             {links.map((link) => {
               const { id, url, icon, label } = link;
               return (
-                <>
-                  <div key={id} className='menuWrap'>
+                <Fragment key={id}>
+                  <div className='menuWrap'>
                     <span
                       className={
                         pathname === url ? 'menuItem active' : 'menuItem'
@@ -39,11 +40,11 @@ const AccountMenu = () => {
                       </Link>
                     </span>
                   </div>
-                </>
+                </Fragment>
               );
             })}
             {label !== 'bottom' && <hr />}
-          </>
+          </Fragment>
         );
       })}
     </aside>
