@@ -1,8 +1,9 @@
 import Input from '../input/Input';
+import Textarea from '../textarea/Textarea';
+
 import { ProductInputsProps } from '@/types';
 
 import './ProductInputs.scss';
-import Textarea from '../textarea/Textarea';
 
 const ProductInputs = ({ name, desc, price, onChange }: ProductInputsProps) => {
   return (
