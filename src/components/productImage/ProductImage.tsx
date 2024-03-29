@@ -2,8 +2,9 @@
 
 import { useMemo } from 'react';
 
-import Input from '../input/Input';
 import DropZone from '../dropZone/DropZone';
+import Input from '../input/Input';
+import ErrorMessage from '../errorMessage/ErrorMessage';
 
 import { ProductImageProps } from '@/types';
 
@@ -12,6 +13,7 @@ import './ProductImage.scss';
 const ProductImage = ({
   ingredient,
   ingredients,
+  error,
   onAdd,
   onChange,
   onDelete,
@@ -30,6 +32,7 @@ const ProductImage = ({
           placeholder='Ingredients'
           onChange={onChange}
         />
+        {error && <ErrorMessage message={error} />}
         <div className='ingredientLists'>
           <div className='ingredients'>
             {ingredients?.map((item) => {

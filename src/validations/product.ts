@@ -1,6 +1,9 @@
 import { ProductData, ProductErrors } from '@/types';
 
-export const validateProductInput = (data: ProductData) => {
+export const validateProductInput = (
+  data: ProductData,
+  ingredients: string[]
+) => {
   const { name, desc, price } = data;
   const errors: ProductErrors = {};
 
@@ -16,6 +19,10 @@ export const validateProductInput = (data: ProductData) => {
     errors.price = 'Price is required';
   } else if (price < 1) {
     errors.price = 'Price must be equal or greater than 1';
+  }
+
+  if (ingredients.length < 0) {
+    errors.ingredients = 'Ingredients is required';
   }
 
   return errors;

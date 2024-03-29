@@ -94,7 +94,7 @@ const ProductModal = () => {
       return onNext();
     }
 
-    const errors = validateProductInput(data);
+    const errors = validateProductInput(data, ingredients);
     if (Object.keys(errors).length > 0) return setErrors(errors);
 
     setErrors({});
@@ -135,6 +135,7 @@ const ProductModal = () => {
       <ProductImage
         ingredient={ingredient}
         ingredients={ingredients}
+        error={errors.ingredients}
         onAdd={handleIngredients}
         onChange={handleAddIngredient}
         onDelete={handleDelete}

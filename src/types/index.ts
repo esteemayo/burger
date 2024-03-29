@@ -191,6 +191,7 @@ export interface ProductErrors {
   name?: string;
   desc?: string;
   price?: string;
+  ingredients?: string;
 }
 
 export interface ProductListsProps {
@@ -280,6 +281,7 @@ export interface ProductInputsProps {
 export interface ProductImageProps {
   ingredient: string;
   ingredients?: string[];
+  error?: string;
   onAdd(e: React.MouseEvent<HTMLButtonElement>): void;
   onChange(e: React.ChangeEvent<HTMLInputElement>): void;
   onDelete(e: React.MouseEvent<HTMLSpanElement>, value: string): void;
