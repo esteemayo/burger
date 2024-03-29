@@ -181,6 +181,18 @@ export interface UserPasswordErrors {
   confirmPassword?: string;
 }
 
+export interface ProductData {
+  name: string;
+  desc: string;
+  price: number;
+}
+
+export interface ProductErrors {
+  name?: string;
+  desc?: string;
+  price?: number;
+}
+
 export interface ProductListsProps {
   products: CardMenu;
 }
