@@ -14,6 +14,7 @@ const ProductImage = ({
   ingredients,
   onAdd,
   onChange,
+  onDelete,
 }: ProductImageProps) => {
   const disableBtn = useMemo(() => {
     return ingredient.trim() === '' ? true : false;
@@ -32,7 +33,11 @@ const ProductImage = ({
         <div className='ingredientLists'>
           <div className='ingredients'>
             {ingredients?.map((item) => {
-              return <span key={item}>{item}</span>;
+              return (
+                <span key={item} onDoubleClick={(e) => onDelete(e, item)}>
+                  {item}
+                </span>
+              );
             })}
           </div>
           <button type='button' disabled={!!disableBtn} onClick={onAdd}>

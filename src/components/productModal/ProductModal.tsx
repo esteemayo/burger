@@ -79,6 +79,15 @@ const ProductModal = () => {
     [ingredient]
   );
 
+  const handleDelete = useCallback(
+    (_e: React.MouseEvent<HTMLSpanElement>, ingredient: string) => {
+      setIngredients((prev) => {
+        return [...prev].filter((item) => item !== ingredient);
+      });
+    },
+    []
+  );
+
   const handleClear = useCallback(() => {
     setIngredients([]);
     setData(initialState);
@@ -126,6 +135,7 @@ const ProductModal = () => {
         ingredients={ingredients}
         onAdd={handleIngredients}
         onChange={handleAddIngredient}
+        onDelete={handleDelete}
       />
     );
   }
