@@ -21,7 +21,7 @@ export const validateProductInput = (
     errors.price = 'Price must be equal or greater than 1';
   }
 
-  if (ingredients.length < 0) {
+  if (ingredients.length < 1) {
     errors.ingredients = 'Ingredients is required';
   }
 
