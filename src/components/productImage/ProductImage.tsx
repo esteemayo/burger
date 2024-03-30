@@ -38,13 +38,14 @@ const ProductImage = ({
           <div className='ingredients'>
             {ingredients?.map((item) => {
               return (
-                <span key={item} onDoubleClick={(e) => onDelete(e, item)}>
+                <span key={item}>
                   {item}
                   <Image
                     src='/svg/x-mark.svg'
                     width={15}
                     height={15}
                     alt='delete icon'
+                    onClick={(e) => onDelete(e, item)}
                   />
                 </span>
               );
