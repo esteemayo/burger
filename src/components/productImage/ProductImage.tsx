@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useMemo } from 'react';
 
 import DropZone from '../dropZone/DropZone';
@@ -39,6 +40,12 @@ const ProductImage = ({
               return (
                 <span key={item} onDoubleClick={(e) => onDelete(e, item)}>
                   {item}
+                  <Image
+                    src='/svg/x-mark.svg'
+                    width={10}
+                    height={10}
+                    alt='delete icon'
+                  />
                 </span>
               );
             })}
