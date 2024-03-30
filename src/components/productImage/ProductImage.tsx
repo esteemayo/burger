@@ -42,8 +42,8 @@ const ProductImage = ({
                   {item}
                   <Image
                     src='/svg/x-mark.svg'
-                    width={17}
-                    height={17}
+                    width={15}
+                    height={15}
                     alt='delete icon'
                   />
                 </span>
