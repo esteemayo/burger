@@ -20,6 +20,15 @@
           color: $clr-gray-dark;
           border: 1px solid $line;
           border-radius: 0.5rem;
+          position: relative;
+
+          img {
+            width: 1.5rem;
+            height: 1.5rem;
+            position: absolute;
+            top: 0;
+            right: 0;
+          }
         }
       }
 
