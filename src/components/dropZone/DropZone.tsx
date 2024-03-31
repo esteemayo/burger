@@ -25,7 +25,7 @@ const DropZone = () => {
         {isDragActive ? (
           <p>Drop the file here ...</p>
         ) : (
-          <p>Drag {'n'} drop some file here, or click to select file</p>
+          <p>Drag {'n'} drop your file here, or click to select file</p>
         )}
       </div>
     </div>
