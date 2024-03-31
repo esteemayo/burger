@@ -21,6 +21,7 @@
     "react-confetti-explosion": "^2.1.2",
     "react-countdown": "^2.3.5",
     "react-dom": "^18",
+    "react-dropzone": "^14.2.3",
     "react-hook-form": "^7.51.1",
     "react-icons": "^5.0.1",
     "react-multi-carousel": "^2.8.4",
