@@ -18,6 +18,7 @@ const ProductImage = ({
   onAdd,
   onChange,
   onDelete,
+  onSelect,
 }: ProductImageProps) => {
   const disableBtn = useMemo(() => {
     return ingredient.trim() === '' ? true : false;
@@ -56,7 +57,7 @@ const ProductImage = ({
           </button>
         </div>
       </div>
-      <DropZone />
+      <DropZone onSelect={onSelect} />
     </div>
   );
 };
