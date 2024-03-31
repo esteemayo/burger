@@ -19,8 +19,8 @@ const DropZone = () => {
   }, [acceptedFiles]);
 
   return (
-    <div className='dropZone'>
-      <div {...getRootProps()}>
+    <div className='dropzone'>
+      <div {...getRootProps({ className: 'dropzoneWrap'})}>
         <input {...getInputProps()} />
         {isDragActive ? (
           <p>Drop the files here ...</p>
