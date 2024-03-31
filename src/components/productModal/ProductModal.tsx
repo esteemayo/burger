@@ -27,11 +27,12 @@ const ProductModal = () => {
   const isOpen = useProductModal((state) => state.isOpen);
   const onClose = useProductModal((state) => state.onClose);
 
-  const [data, setData] = useState(initialState);
-  const [errors, setErrors] = useState<ProductErrors>({});
-  const [step, setStep] = useState(STEPS.INFO);
-  const [ingredients, setIngredients] = useState<string[]>([]);
+  const [file, setFile] = useState<File[]>();
   const [ingredient, setIngredient] = useState('');
+  const [step, setStep] = useState(STEPS.INFO);
+  const [errors, setErrors] = useState<ProductErrors>({});
+  const [data, setData] = useState(initialState);
+  const [ingredients, setIngredients] = useState<string[]>([]);
 
   const onPrev = useCallback(() => {
     setStep((value) => {
@@ -99,10 +100,12 @@ const ProductModal = () => {
 
     setErrors({});
 
-    console.log({ ...data, ingredients });
+    const selectedFile = file?.[0];
+
+    console.log({ ...data, ingredients, selectedFile });
     handleClear();
     setStep(STEPS.INFO);
-  }, [data, handleClear, ingredients, onNext, step]);
+  }, [data, file, handleClear, ingredients, onNext, step]);
 
   const actionLabel = useMemo(() => {
     return step === STEPS.IMAGE ? 'Create' : 'Next';
@@ -139,6 +142,7 @@ const ProductModal = () => {
         onAdd={handleIngredients}
         onChange={handleAddIngredient}
         onDelete={handleDelete}
+        onSelect={setFile}
       />
     );
   }
