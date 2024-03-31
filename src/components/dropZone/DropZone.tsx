@@ -3,16 +3,19 @@
 import { useCallback } from 'react';
 import { useDropzone } from 'react-dropzone';
 
+import { DropZoneProps } from '@/types';
+
 import './DropZone.scss';
 
-const DropZone = () => {
-  const onDrop = useCallback((acceptedFiles) => {
-    // Do something with the files
-    console.log(acceptedFiles);
-  }, []);
+const DropZone = ({ onSelect }: DropZoneProps) => {
+  const onDrop = useCallback(
+    (acceptedFiles: File[]) => {
+      onSelect(acceptedFiles);
+    },
+    [onSelect]
+  );
 
-  const { getRootProps, getInputProps, isDragActive, acceptedFiles } =
-    useDropzone({ onDrop });
+  const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
 
   return (
     <div className='dropzone'>

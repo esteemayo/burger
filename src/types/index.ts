@@ -288,5 +288,5 @@ export interface ProductImageProps {
 }
 
 export interface DropZoneProps {
-  onSelect(file: React.Dispatch<File | undefined>): void;
+  onSelect(file: File[]): void;
 }
