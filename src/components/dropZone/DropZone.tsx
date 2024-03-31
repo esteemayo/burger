@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect } from 'react';
+import { useCallback } from 'react';
 import { useDropzone } from 'react-dropzone';
 
 import './DropZone.scss';
@@ -13,10 +13,6 @@ const DropZone = () => {
 
   const { getRootProps, getInputProps, isDragActive, acceptedFiles } =
     useDropzone({ onDrop });
-
-  useEffect(() => {
-    console.log(acceptedFiles);
-  }, [acceptedFiles]);
 
   return (
     <div className='dropzone'>
