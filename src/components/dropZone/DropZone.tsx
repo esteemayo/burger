@@ -20,12 +20,12 @@ const DropZone = () => {
 
   return (
     <div className='dropzone'>
-      <div {...getRootProps({ className: 'dropzoneWrap'})}>
+      <div {...getRootProps({ className: 'dropzoneWrap' })}>
         <input {...getInputProps()} />
         {isDragActive ? (
-          <p>Drop the files here ...</p>
+          <p>Drop the file here ...</p>
         ) : (
-          <p>Drag 'n' drop some files here, or click to select files</p>
+          <p>Drag {'n'} drop some file here, or click to select file</p>
         )}
       </div>
     </div>
