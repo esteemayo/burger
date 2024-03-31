@@ -7,7 +7,13 @@ const Logo = () => {
   return (
     <div className='logo'>
       <Link href='/'>
-        <Image src='/svg/logo.svg' width={100} height={100} alt='logo' />
+        <Image
+          src='/svg/logo.svg'
+          priority
+          width={100}
+          height={100}
+          alt='logo'
+        />
       </Link>
     </div>
   );
