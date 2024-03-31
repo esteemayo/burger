@@ -77,7 +77,7 @@ const ProductModal = () => {
   );
 
   const handleDelete = useCallback(
-    (_e: React.MouseEvent<HTMLSpanElement>, value: string) => {
+    (_e: React.MouseEvent<HTMLImageElement>, value: string) => {
       setIngredients((prev) => {
         return [...prev].filter((item) => item !== value);
       });
