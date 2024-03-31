@@ -286,3 +286,7 @@ export interface ProductImageProps {
   onChange(e: React.ChangeEvent<HTMLInputElement>): void;
   onDelete(e: React.MouseEvent<HTMLSpanElement>, value: string): void;
 }
+
+export interface DropZoneProps {
+  onSelect(file: React.Dispatch<File | undefined>): void;
+}
