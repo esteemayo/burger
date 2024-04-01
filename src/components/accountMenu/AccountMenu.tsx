@@ -29,15 +29,13 @@ const AccountMenu = () => {
                         pathname === url ? 'menuItem active' : 'menuItem'
                       }
                     >
-                      <Link href={url}>
-                        <Image
-                          src={`/svg/${icon}.svg`}
-                          width={25}
-                          height={25}
-                          alt={icon}
-                        />
-                        {label}
-                      </Link>
+                      <Image
+                        src={`/svg/${icon}.svg`}
+                        width={25}
+                        height={25}
+                        alt={icon}
+                      />
+                      <Link href={url}>{label}</Link>
                     </span>
                   </div>
                 </Fragment>

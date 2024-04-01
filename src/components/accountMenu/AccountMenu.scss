@@ -37,6 +37,10 @@
     justify-content: center;
 
     .menuItem {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+
       padding: 1.2rem 0.5rem;
       color: $clr-gray-dark;
       border-radius: 2px;
@@ -57,10 +61,6 @@
       a,
       a:link,
       a:active {
-        display: flex;
-        align-items: center;
-        gap: 2rem;
-
         text-transform: capitalize;
         font-weight: 400;
         font-size: 1.5rem;
