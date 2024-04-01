@@ -18,6 +18,33 @@ import {
   Socials,
 } from '@/types';
 
+export const cart = [
+  {
+    id: 1,
+    name: 'Breakfast burger',
+    image: '/img/burger-4.jpg',
+    price: 13000,
+    ingredients: ['butter', 'flour', 'meat'],
+    quantity: 1,
+  },
+  {
+    id: 2,
+    name: 'Double beef & fries',
+    image: '/img/burger-5.jpg',
+    price: 37000,
+    ingredients: ['beef', 'fries', 'butter', 'flour'],
+    quantity: 1,
+  },
+  {
+    id: 3,
+    name: 'Single beef burger',
+    image: '/img/burger-6.jpg',
+    price: 12700,
+    ingredients: ['butter', 'beef', 'flour', 'butter'],
+    quantity: 1,
+  },
+];
+
 export const footerLinks: FooterLinks = [
   { id: 1, url: '/', label: 'Get Help' },
   { id: 2, url: '/', label: 'Buy gift cards' },
