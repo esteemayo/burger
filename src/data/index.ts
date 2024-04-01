@@ -9,6 +9,7 @@ import LocalDiningIcon from '@mui/icons-material/LocalDining';
 import {
   AccountCardType,
   CardMenu,
+  CartType,
   FeaturesType,
   FooterLinks,
   Menus,
@@ -18,7 +19,7 @@ import {
   Socials,
 } from '@/types';
 
-export const cart = [
+export const cart: CartType = [
   {
     id: 1,
     name: 'Breakfast burger',
