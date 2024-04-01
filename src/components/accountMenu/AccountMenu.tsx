@@ -1,9 +1,9 @@
 'use client';
 
-import { usePathname, useRouter } from 'next/navigation';
 import Link from 'next/link';
-import { Fragment, useCallback, useMemo, useState } from 'react';
+import { Fragment, useMemo } from 'react';
 import Image from 'next/image';
+import { usePathname, useRouter } from 'next/navigation';
 
 import { profileMenu } from '@/data';
 import { useAccountMenu } from '@/hooks/useAccountMenu';
