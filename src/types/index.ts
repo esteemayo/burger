@@ -274,6 +274,11 @@ export interface AccountMenuStore {
   isOpen: boolean;
 }
 
+export interface AccountMenuType {
+  onOpen(): void;
+  onClose(): void;
+}
+
 export interface ProductInputsProps {
   name: string;
   desc: string;
