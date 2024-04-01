@@ -24,7 +24,7 @@ export interface CartActionType {
   reset(): void;
   addToCart(product: CartItem): void;
   clearCart(): void;
-  removeFromCart(payload: number): void;
+  removeFromCart(payload: CartItem): void;
   toggleQuantity(payload: { type: string; id: number }): void;
   calcTotals(): void;
 }
