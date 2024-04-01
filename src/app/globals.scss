@@ -1,3 +1,5 @@
+@import '../styles/variables.scss';
+
 :root {
   --default-font-size: 1.6rem;
 }
@@ -19,7 +21,7 @@ html {
 
 body {
   font-size: var(--default-font-size);
-  color: #000000;
+  color: $clr-black;
   line-height: 1.7;
   overflow-x: hidden;
   cursor: default;
