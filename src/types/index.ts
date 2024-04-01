@@ -270,6 +270,10 @@ export interface ProductModalActionType {
   onClose(): void;
 }
 
+export interface AccountMenuStore {
+  isOpen: boolean;
+}
+
 export interface ProductInputsProps {
   name: string;
   desc: string;
