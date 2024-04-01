@@ -56,13 +56,23 @@ const AccountMenu = () => {
         );
       })}
       <button type='button' className='toggleBtn' onClick={toggle}>
-        <Image
-          src='/svg/chevron-right.svg'
-          width={20}
-          height={20}
-          alt='arrow icon'
-          className='sidebarToggleIcon'
-        />
+        {isOpen ? (
+          <Image
+            src='/svg/chevron-right.svg'
+            width={20}
+            height={20}
+            alt='arrow icon'
+            className='sidebarToggleIcon'
+          />
+        ) : (
+          <Image
+            src='/svg/chevron-left.svg'
+            width={20}
+            height={20}
+            alt='arrow icon'
+            className='sidebarToggleIcon'
+          />
+        )}
       </button>
     </aside>
   );
