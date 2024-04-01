@@ -3,6 +3,7 @@
 .accountMenu {
   flex: 1;
   padding: 0 3rem;
+  position: relative;
 
   .profileHeader {
     text-transform: capitalize;
@@ -80,5 +81,18 @@
     height: 0;
     border: 0.5px solid #fbfbfc;
     margin: 1rem 0;
+  }
+
+  .toggleBtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: inline-block;
+    width: fit-content;
+    height: fit-content;
+
+    .sidebarToggleIcon {
+    }
   }
 }
