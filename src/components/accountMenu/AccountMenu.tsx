@@ -45,7 +45,7 @@ const AccountMenu = () => {
           </Fragment>
         );
       })}
-      <button type='button'>
+      <button type='button' className='toggleBtn'>
         <Image
           src='/svg/chevron-right.svg'
           width={20}
