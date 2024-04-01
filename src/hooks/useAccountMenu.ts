@@ -27,5 +27,13 @@ export const useAccountMenu = create<AccountMenuStore & AccountMenuType>()(
         false,
         'closeMenu'
       ),
+    toggle: () =>
+      set(
+        produce((state) => {
+          state.isOpen = !state.isOpen;
+        }),
+        false,
+        'toggleMenu'
+      ),
   }))
 );
