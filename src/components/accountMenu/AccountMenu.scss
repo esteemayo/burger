@@ -5,6 +5,24 @@
   padding: 0 3rem;
   position: relative;
 
+  &.toggle {
+    flex: 0;
+
+    .profileHeader {
+      display: none;
+    }
+
+    .menuWrap {
+      .menuItem {
+        a,
+        a:link,
+        a:active {
+          display: none;
+        }
+      }
+    }
+  }
+
   .profileHeader {
     text-transform: capitalize;
     font-weight: 700;

@@ -13,7 +13,7 @@ const AccountMenu = () => {
   const pathname = usePathname();
 
   return (
-    <aside className='accountMenu'>
+    <aside className='accountMenu toggle'>
       <h1 className='profileHeader'>Your profile</h1>
       {profileMenu.map((item) => {
         const { label, links } = item;
