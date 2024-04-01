@@ -90,8 +90,12 @@
     transform: translateY(-30%);
 
     display: inline-block;
+    border: none;
+    outline: none;
     width: fit-content;
     height: fit-content;
+    border-radius: 0.5rem;
+    cursor: pointer;
 
     .sidebarToggleIcon {
     }
