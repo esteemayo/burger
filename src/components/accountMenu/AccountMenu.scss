@@ -98,6 +98,10 @@
     cursor: pointer;
 
     .sidebarToggleIcon {
+      display: block;
+      width: 2rem;
+      height: 2rem;
+      object-fit: cover;
     }
   }
 }
