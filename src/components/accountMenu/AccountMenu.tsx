@@ -1,6 +1,6 @@
 'use client';
 
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { Fragment, useCallback, useMemo, useState } from 'react';
 import Image from 'next/image';
@@ -10,6 +10,7 @@ import { profileMenu } from '@/data';
 import './AccountMenu.scss';
 
 const AccountMenu = () => {
+  const router = useRouter();
   const pathname = usePathname();
 
   const [isOpen, setIsOpen] = useState(false);
@@ -46,6 +47,7 @@ const AccountMenu = () => {
                         width={25}
                         height={25}
                         alt={icon}
+                        onClick={() => router.push(url)}
                       />
                       <Link href={url}>{label}</Link>
                     </span>
