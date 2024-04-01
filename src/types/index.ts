@@ -12,6 +12,12 @@ export type CartType = {
   quantity: number;
 }[];
 
+export interface CartStore {
+  cart: CartType;
+  totalItems: number;
+  totalPrice: number;
+}
+
 export type FooterLinks = {
   id: number;
   url: string;
