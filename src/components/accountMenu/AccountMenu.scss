@@ -85,8 +85,9 @@
 
   .toggleBtn {
     position: absolute;
-    top: 0;
+    top: 30%;
     right: 0;
+    transform: translateY(-30%);
 
     display: inline-block;
     width: fit-content;
