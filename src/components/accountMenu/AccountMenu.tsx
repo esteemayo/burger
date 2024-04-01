@@ -1,9 +1,9 @@
 'use client';
 
-import Image from 'next/image';
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Fragment } from 'react';
+import Link from 'next/link';
+import { Fragment, useMemo, useState } from 'react';
+import Image from 'next/image';
 
 import { profileMenu } from '@/data';
 
@@ -12,8 +12,14 @@ import './AccountMenu.scss';
 const AccountMenu = () => {
   const pathname = usePathname();
 
+  const [isOpen, setIsOpen] = useState(false);
+
+  const sidebarClasses = useMemo(() => {
+    return isOpen ? 'accountMenu toggle' : 'accountMenu';
+  }, [isOpen]);
+
   return (
-    <aside className='accountMenu toggle'>
+    <aside className={sidebarClasses}>
       <h1 className='profileHeader'>Your profile</h1>
       {profileMenu.map((item) => {
         const { label, links } = item;
