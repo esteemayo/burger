@@ -3,6 +3,15 @@ import React from 'react';
 import { OverridableComponent } from '@mui/material/OverridableComponent';
 import { IconType } from 'react-icons/lib';
 
+export type CartType = {
+  id: number;
+  name: string;
+  image: string;
+  price: number;
+  ingredients: string[];
+  quantity: number;
+}[];
+
 export type FooterLinks = {
   id: number;
   url: string;
