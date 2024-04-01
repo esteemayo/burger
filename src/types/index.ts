@@ -277,7 +277,7 @@ export interface AccountMenuStore {
 export interface AccountMenuType {
   onOpen(): void;
   onClose(): void;
-  toggle(value: boolean): void;
+  toggle(): void;
 }
 
 export interface ProductInputsProps {
