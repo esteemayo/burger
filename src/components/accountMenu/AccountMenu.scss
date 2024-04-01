@@ -82,6 +82,13 @@
         color: $clr-gray-dark;
       }
 
+      img {
+        display: block;
+        width: 2.5rem;
+        height: 2.5rem;
+        object-fit: cover;
+      }
+
       a,
       a:link,
       a:active {
@@ -90,13 +97,6 @@
         font-size: 1.5rem;
         color: currentColor;
         transition: all 0.5s ease-out;
-
-        img {
-          display: block;
-          width: 2.5rem;
-          height: 2.5rem;
-          object-fit: cover;
-        }
       }
     }
   }
