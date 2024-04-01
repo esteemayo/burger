@@ -3,19 +3,30 @@ import React from 'react';
 import { OverridableComponent } from '@mui/material/OverridableComponent';
 import { IconType } from 'react-icons/lib';
 
-export type CartType = {
+export type CartItem = {
   id: number;
   name: string;
   image: string;
   price: number;
   ingredients: string[];
   quantity: number;
-}[];
+};
+
+export type CartType = CartItem[];
 
 export interface CartStore {
-  cart: CartType;
+  cart: CartItem[];
   totalItems: number;
   totalPrice: number;
+}
+
+export interface CartActionType {
+  reset(): void;
+  addToCart(product: CartItem): void;
+  clearCart(): void;
+  removeFromCart(payload: number): void;
+  toggleQuantity(payload: { type: string; id: number }): void;
+  calcTotals(): void;
 }
 
 export type FooterLinks = {
