@@ -22,7 +22,7 @@ const AccountCard = ({ icon, count, price, label }: AccountCardProps) => {
         <span>{label}</span>
       </div>
       <div className='accountIconWrap'>
-        <Image src={icon} width={22.5} height={22.5} alt='' />
+        <Image src={icon} width={22.5} height={22.5} alt='icon' />
       </div>
     </article>
   );
