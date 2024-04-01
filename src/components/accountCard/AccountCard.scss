@@ -6,11 +6,11 @@
   box-shadow: $box-shadow;
   border-radius: 0.5rem;
   position: relative;
-  transition: all 0.3s ease-out;
+  transition: all 0.5s ease-out;
 
   &.toggle {
     width: 30rem;
-    transition: all 0.3s ease-in;
+    transition: all 0.5s ease-in;
   }
 
   .statsWrap {
