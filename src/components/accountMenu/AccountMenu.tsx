@@ -45,6 +45,15 @@ const AccountMenu = () => {
           </Fragment>
         );
       })}
+      <button type='button'>
+        <Image
+          src='/svg/chevron-right.svg'
+          width={20}
+          height={20}
+          alt='arrow icon'
+          className='sidebarToggleIcon'
+        />
+      </button>
     </aside>
   );
 };
