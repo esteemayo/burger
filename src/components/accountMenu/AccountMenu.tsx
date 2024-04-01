@@ -2,7 +2,7 @@
 
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
-import { Fragment, useMemo, useState } from 'react';
+import { Fragment, useCallback, useMemo, useState } from 'react';
 import Image from 'next/image';
 
 import { profileMenu } from '@/data';
@@ -13,6 +13,12 @@ const AccountMenu = () => {
   const pathname = usePathname();
 
   const [isOpen, setIsOpen] = useState(false);
+
+  const handleToggle = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
+    e.stopPropagation();
+
+    setIsOpen((value) => !value);
+  }, []);
 
   const sidebarClasses = useMemo(() => {
     return isOpen ? 'accountMenu toggle' : 'accountMenu';
@@ -51,7 +57,7 @@ const AccountMenu = () => {
           </Fragment>
         );
       })}
-      <button type='button' className='toggleBtn'>
+      <button type='button' className='toggleBtn' onClick={handleToggle}>
         <Image
           src='/svg/chevron-right.svg'
           width={20}
