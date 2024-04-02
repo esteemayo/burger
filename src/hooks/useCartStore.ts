@@ -4,11 +4,10 @@ import { create } from 'zustand';
 import { produce } from 'immer';
 import { devtools, persist } from 'zustand/middleware';
 
-import { cart } from '@/data';
 import { CartActionType, CartStore } from '@/types';
 
 const INITIAL_STATE = {
-  products: cart,
+  products: [],
   totalItems: 0,
   totalPrice: 0,
 };
