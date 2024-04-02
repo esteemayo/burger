@@ -7,7 +7,7 @@ import { devtools, persist } from 'zustand/middleware';
 import { CartActionType, CartStore } from '@/types';
 
 const INITIAL_STATE = {
-  cart: [],
+  products: [],
   totalItems: 0,
   totalPrice: 0,
 };
@@ -15,13 +15,13 @@ const INITIAL_STATE = {
 export const useCartStore = create<CartStore & CartActionType>()(
   persist(
     devtools((set, get) => ({
-      cart: INITIAL_STATE.cart,
+      products: INITIAL_STATE.products,
       totalItems: INITIAL_STATE.totalItems,
       totalPrice: INITIAL_STATE.totalPrice,
       reset: () =>
         set(
           produce((state) => {
-            state.cart = INITIAL_STATE.cart;
+            state.products = INITIAL_STATE.products;
             state.totalItems = INITIAL_STATE.totalItems;
             state.totalPrice = INITIAL_STATE.totalPrice;
           }),
@@ -31,7 +31,7 @@ export const useCartStore = create<CartStore & CartActionType>()(
       addToCart: (payload) =>
         set(
           produce((state) => {
-            state.cart.push(payload);
+            state.products.push(payload);
             state.totalItems += payload.quantity;
             state.totalPrice += payload.price * payload.quantity;
           }),
@@ -41,7 +41,7 @@ export const useCartStore = create<CartStore & CartActionType>()(
       clearCart: () =>
         set(
           produce((state) => {
-            state.cart = INITIAL_STATE.cart;
+            state.products = INITIAL_STATE.products;
           }),
           false,
           'clearCart'
@@ -49,12 +49,12 @@ export const useCartStore = create<CartStore & CartActionType>()(
       removeFromCart: (payload) =>
         set(
           produce((state) => {
-            const products = get().cart;
+            const products = get().products;
             const productInState = products.findIndex(
               (item) => item.id === payload.id
             );
 
-            state.cart.splice(productInState, 1);
+            state.products.splice(productInState, 1);
             state.totalItems -= payload.quantity;
             state.totalPrice -= payload.price;
           }),
@@ -64,9 +64,9 @@ export const useCartStore = create<CartStore & CartActionType>()(
       toggleQuantity: (payload) =>
         set(
           produce((state) => {
-            const productInState = get().cart;
+            const productInState = get().products;
 
-            state.cart = productInState.map((item) => {
+            state.products = productInState.map((item) => {
               if (item.id === payload.id) {
                 if (payload.type === 'inc') {
                   return {
@@ -92,10 +92,10 @@ export const useCartStore = create<CartStore & CartActionType>()(
       calcTotals: () =>
         set(
           produce((state) => {
-            const productInState = get().cart;
+            const productInState = get().products;
 
             let { totalItems, totalPrice } = productInState.reduce(
-              (total, item) => {
+              (total: { totalItems: number; totalPrice: number }, item) => {
                 const { price, quantity } = item;
                 const itemTotal = price * quantity;
 
