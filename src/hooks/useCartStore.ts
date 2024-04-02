@@ -51,7 +51,7 @@ export const useCartStore = create<CartStore & CartActionType>()(
           produce((state) => {
             const productInState = get().products;
             const index = productInState.findIndex(
-              (item) => item.id === payload
+              (productItem) => productItem.id === payload
             );
 
             state.products = state.products.splice(index, 1);
