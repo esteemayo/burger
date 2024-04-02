@@ -49,14 +49,12 @@ export const useCartStore = create<CartStore & CartActionType>()(
       removeFromCart: (payload) =>
         set(
           produce((state) => {
-            const products = get().products;
-            const productInState = products.findIndex(
-              (item) => item.id === payload.id
+            const productInState = get().products;
+            const index = productInState.findIndex(
+              (item) => item.id === payload
             );
 
-            state.products.splice(productInState, 1);
-            state.totalItems -= payload.quantity;
-            state.totalPrice -= payload.price;
+            state.products = state.products.splice(index, 1);
           }),
           false,
           'removeFromCart'
