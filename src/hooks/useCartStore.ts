@@ -64,25 +64,33 @@ export const useCartStore = create<CartStore & CartActionType>()(
           produce((state) => {
             const productInState = get().products;
 
-            state.products = productInState.map((item) => {
-              if (item.id === payload.id) {
-                if (payload.type === 'inc') {
-                  return {
-                    ...item,
-                    quantity:
-                      item.quantity > 10 ? item.quantity : item.quantity + 1,
-                  };
+            state.products = productInState
+              .map((productItem) => {
+                if (productItem.id === payload.id) {
+                  if (payload.type === 'inc') {
+                    return {
+                      ...productItem,
+                      quantity:
+                        productItem.quantity > 10
+                          ? productItem.quantity
+                          : productItem.quantity + 1,
+                    };
+                  }
+
+                  if (payload.type === 'dec') {
+                    return {
+                      ...productItem,
+                      quantity:
+                        productItem.quantity > 1
+                          ? productItem.quantity - 1
+                          : productItem.quantity,
+                    };
+                  }
                 }
 
-                if (payload.type === 'dec') {
-                  return {
-                    ...item,
-                    quantity:
-                      item.quantity > 1 ? item.quantity - 1 : item.quantity,
-                  };
-                }
-              }
-            });
+                return productItem;
+              })
+              .filter((productItem) => productItem.quantity !== 0);
           }),
           false,
           'toggleQuantity'
