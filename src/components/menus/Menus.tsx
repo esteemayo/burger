@@ -19,7 +19,7 @@ const Menus = () => {
         </div>
         <div className='wrapper'>
           {cardMenus.map((menu) => {
-            return <ProductCard key={menu.id} {...menu} />;
+            return <ProductCard key={menu.id} product={menu} />;
           })}
         </div>
       </div>

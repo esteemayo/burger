@@ -111,11 +111,15 @@ type AccountCard = {
 
 export type AccountCardType = AccountCard[];
 
-export interface ProductCardProps {
+export interface ProductCard {
   id: number;
   name: string;
   image: string;
   price: number;
+}
+
+export interface ProductCardProps {
+  product: ProductCard;
 }
 
 export interface InputProps
