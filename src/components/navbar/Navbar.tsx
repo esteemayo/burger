@@ -36,6 +36,14 @@ const Navbar = () => {
     [toggleQuantity]
   );
 
+  const handleDecrement = useCallback(
+    (e: React.MouseEvent<HTMLButtonElement>, productId: number) => {
+      e.stopPropagation();
+      toggleQuantity({ type: 'dec', id: productId });
+    },
+    [toggleQuantity]
+  );
+
   const handleSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
   }, []);
@@ -97,7 +105,10 @@ const Navbar = () => {
                             <span className='quantity'>{quantity}</span>
                             <div className='cardItem'>{name}</div>
                             <div className='cardButtons'>
-                              <button type='button'>
+                              <button
+                                type='button'
+                                onClick={(e) => handleDecrement(e, id)}
+                              >
                                 <Image
                                   src='/svg/chevron-down.svg'
                                   width={17}
