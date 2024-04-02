@@ -8,7 +8,7 @@ export type CartItem = {
   name: string;
   image: string;
   price: number;
-  ingredients: string[];
+  ingredients?: string[];
   quantity: number;
 };
 
@@ -111,15 +111,16 @@ type AccountCard = {
 
 export type AccountCardType = AccountCard[];
 
-export interface ProductCard {
+interface ProductCard {
   id: number;
   name: string;
   image: string;
   price: number;
+  ingredients?: string[];
 }
 
 export interface ProductCardProps {
-  product: ProductCard;
+  product: ProductCard | CartItem;
 }
 
 export interface InputProps
