@@ -30,7 +30,7 @@ export interface CartActionType {
 }
 
 export interface CartCardProps {
-  products: CartItem;
+  products: CartItem[];
   onIncrement(e: React.MouseEvent<HTMLButtonElement>, productId: number): void;
   onDecrement(e: React.MouseEvent<HTMLButtonElement>, productId: number): void;
   onRemove(productId: number): void;
