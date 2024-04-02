@@ -95,12 +95,15 @@ export const useCartStore = create<CartStore & CartActionType>()(
             const productInState = get().products;
 
             let { totalItems, totalPrice } = productInState.reduce(
-              (total: { totalItems: number; totalPrice: number }, item) => {
-                const { price, quantity } = item;
+              (
+                productTotal: { totalItems: number; totalPrice: number },
+                productItem
+              ) => {
+                const { price, quantity } = productItem;
                 const itemTotal = price * quantity;
 
-                total.totalItems += quantity;
-                total.totalPrice = itemTotal;
+                productTotal.totalItems += quantity;
+                productTotal.totalPrice = itemTotal;
               },
               { totalItems: 0, totalPrice: 0 }
             );
