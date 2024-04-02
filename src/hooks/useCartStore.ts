@@ -50,11 +50,10 @@ export const useCartStore = create<CartStore & CartActionType>()(
         set(
           produce((state) => {
             const productInState = get().products;
-            const index = productInState.findIndex(
-              (productItem) => productItem.id === payload
-            );
 
-            state.products = state.products.splice(index, 1);
+            state.products = productInState.filter(
+              (productItem) => productItem.id !== payload
+            );
           }),
           false,
           'removeFromCart'
