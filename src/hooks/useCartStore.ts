@@ -106,7 +106,7 @@ export const useCartStore = create<CartStore & CartActionType>()(
                 const itemTotal = price * quantity;
 
                 productTotal.totalItems += quantity;
-                productTotal.totalPrice = itemTotal;
+                productTotal.totalPrice += itemTotal;
 
                 return productTotal;
               },
