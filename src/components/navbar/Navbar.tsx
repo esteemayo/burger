@@ -19,6 +19,7 @@ const Navbar = () => {
 
   const totalPrice = useCartStore((store) => store.totalPrice);
   const products = useCartStore((store) => store.products);
+  const toggleQuantity = useCartStore((store) => store.toggleQuantity);
   const totalItems = useCartStore((store) => store.totalItems);
 
   const [isActive, setIsActive] = useState(false);
@@ -26,6 +27,14 @@ const Navbar = () => {
   const isActiveHandler = useCallback(() => {
     setIsActive(window.scrollY > 0 ? true : false);
   }, []);
+
+  const handleIncrement = useCallback(
+    (e: React.MouseEvent<HTMLButtonElement>, productId: number) => {
+      e.stopPropagation();
+      toggleQuantity({ type: 'inc', id: productId });
+    },
+    [toggleQuantity]
+  );
 
   const handleSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -96,7 +105,10 @@ const Navbar = () => {
                                   alt='chevron-down icon'
                                 />
                               </button>
-                              <button type='button'>
+                              <button
+                                type='button'
+                                onClick={(e) => handleIncrement(e, id)}
+                              >
                                 <Image
                                   src='/svg/chevron-up.svg'
                                   width={17}
