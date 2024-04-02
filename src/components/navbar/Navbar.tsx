@@ -17,6 +17,7 @@ import './Navbar.scss';
 const Navbar = () => {
   const pathname = usePathname();
 
+  const totalPrice = useCartStore((store) => store.totalPrice);
   const products = useCartStore((store) => store.products);
   const totalItems = useCartStore((store) => store.totalItems);
 
@@ -116,7 +117,7 @@ const Navbar = () => {
                     </div>
                     <div className='itemTotal'>
                       <span className='subTotal'>Items subtotal:</span>
-                      <span>N subTotal</span>
+                      <span>{formatCurrency(totalPrice)}</span>
                     </div>
                     <Link href='/checkout' className='checkoutBtn'>
                       Proceed to Checkout
