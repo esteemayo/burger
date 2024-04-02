@@ -29,6 +29,13 @@ export interface CartActionType {
   calcTotals(): void;
 }
 
+export interface CartCardProps {
+  products: CartItem;
+  onIncrement(e: React.MouseEvent<HTMLButtonElement>, productId: number): void;
+  onDecrement(e: React.MouseEvent<HTMLButtonElement>, productId: number): void;
+  onRemove(productId: number): void;
+}
+
 export type FooterLinks = {
   id: number;
   url: string;
