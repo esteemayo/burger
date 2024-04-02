@@ -19,8 +19,9 @@ const Navbar = () => {
 
   const totalPrice = useCartStore((store) => store.totalPrice);
   const products = useCartStore((store) => store.products);
-  const toggleQuantity = useCartStore((store) => store.toggleQuantity);
+  const removeFromCart = useCartStore((store) => store.removeFromCart);
   const totalItems = useCartStore((store) => store.totalItems);
+  const toggleQuantity = useCartStore((store) => store.toggleQuantity);
 
   const [isActive, setIsActive] = useState(false);
 
@@ -128,7 +129,10 @@ const Navbar = () => {
                                 />
                               </button>
                             </div>
-                            <div className='deleteBtn'>
+                            <div
+                              className='deleteBtn'
+                              onClick={() => removeFromCart(id)}
+                            >
                               <RemoveShoppingCartIcon />
                             </div>
                             <span className='price'>
