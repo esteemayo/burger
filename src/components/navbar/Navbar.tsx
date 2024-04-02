@@ -17,8 +17,8 @@ import './Navbar.scss';
 const Navbar = () => {
   const pathname = usePathname();
 
-  const products = useCartStore((state) => state.products);
-  const totalItems = useCartStore((state) => state.totalItems);
+  const products = useCartStore((store) => store.products);
+  const totalItems = useCartStore((store) => store.totalItems);
 
   const [isActive, setIsActive] = useState(false);
 
@@ -38,8 +38,6 @@ const Navbar = () => {
     window.addEventListener('scroll', isActiveHandler);
     return () => window.removeEventListener('scroll', isActiveHandler);
   }, [isActiveHandler]);
-
-  const cart = [{ id: 1, name: 'Grilled chicken burger', price: 11999.0 }];
 
   return (
     <nav className={navClasses}>
@@ -82,7 +80,7 @@ const Navbar = () => {
                   <>
                     <div className='cardHeader'>Your cart</div>
                     <div className='cardProductBox'>
-                      {products.map((productItem) => {
+                      {products.slice(0, 3).map((productItem) => {
                         const { id, name, price, quantity } = productItem;
                         return (
                           <div key={id} className='productBox'>
