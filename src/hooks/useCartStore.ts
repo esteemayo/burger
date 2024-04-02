@@ -1,0 +1,120 @@
+'use client';
+
+import { create } from 'zustand';
+import { produce } from 'immer';
+import { devtools, persist } from 'zustand/middleware';
+
+import { CartActionType, CartStore } from '@/types';
+
+const INITIAL_STATE = {
+  cart: [],
+  totalItems: 0,
+  totalPrice: 0,
+};
+
+export const useCartStore = create<CartStore & CartActionType>()(
+  persist(
+    devtools((set, get) => ({
+      cart: INITIAL_STATE.cart,
+      totalItems: INITIAL_STATE.totalItems,
+      totalPrice: INITIAL_STATE.totalPrice,
+      reset: () =>
+        set(
+          produce((state) => {
+            state.cart = INITIAL_STATE.cart;
+            state.totalItems = INITIAL_STATE.totalItems;
+            state.totalPrice = INITIAL_STATE.totalPrice;
+          }),
+          false,
+          'resetCart'
+        ),
+      addToCart: (payload) =>
+        set(
+          produce((state) => {
+            state.cart.push(payload);
+            state.totalItems += payload.quantity;
+            state.totalPrice += payload.price * payload.quantity;
+          }),
+          false,
+          'addToCart'
+        ),
+      clearCart: () =>
+        set(
+          produce((state) => {
+            state.cart = INITIAL_STATE.cart;
+          }),
+          false,
+          'clearCart'
+        ),
+      removeFromCart: (payload) =>
+        set(
+          produce((state) => {
+            const products = get().cart;
+            const productInState = products.findIndex(
+              (item) => item.id === payload.id
+            );
+
+            state.cart.splice(productInState, 1);
+            state.totalItems -= payload.quantity;
+            state.totalPrice -= payload.price;
+          }),
+          false,
+          'removeFromCart'
+        ),
+      toggleQuantity: (payload) =>
+        set(
+          produce((state) => {
+            const productInState = get().cart;
+
+            state.cart = productInState.map((item) => {
+              if (item.id === payload.id) {
+                if (payload.type === 'inc') {
+                  return {
+                    ...item,
+                    quantity:
+                      item.quantity > 10 ? item.quantity : item.quantity + 1,
+                  };
+                }
+
+                if (payload.type === 'dec') {
+                  return {
+                    ...item,
+                    quantity:
+                      item.quantity > 1 ? item.quantity - 1 : item.quantity,
+                  };
+                }
+              }
+            });
+          }),
+          false,
+          'toggleQuantity'
+        ),
+      calcTotals: () =>
+        set(
+          produce((state) => {
+            const productInState = get().cart;
+
+            let { totalItems, totalPrice } = productInState.reduce(
+              (total, item) => {
+                const { price, quantity } = item;
+                const itemTotal = price * quantity;
+
+                total.totalItems += quantity;
+                total.totalPrice = itemTotal;
+              },
+              { totalItems: 0, totalPrice: 0 }
+            );
+
+            totalItems = parseFloat(totalItems.toFixed(2));
+            totalPrice = parseFloat(totalPrice.toFixed(2));
+
+            state.totalItems = totalItems;
+            state.totalPrice = totalPrice;
+          }),
+          false,
+          'calcTotals'
+        ),
+    })),
+    { name: 'cart' }
+  )
+);
