@@ -15,7 +15,7 @@ export type CartItem = {
 export type CartType = CartItem[];
 
 export interface CartStore {
-  cart: CartItem[];
+  products: CartItem[];
   totalItems: number;
   totalPrice: number;
 }
