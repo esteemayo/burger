@@ -5,6 +5,8 @@ import RemoveShoppingCartIcon from '@mui/icons-material/RemoveShoppingCart';
 import { CartCardProps } from '@/types';
 import { formatCurrency } from '@/utils/formatCurrency';
 
+import './CartCard.scss';
+
 const CartCard = ({
   products,
   totalPrice,
