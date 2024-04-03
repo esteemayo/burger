@@ -5,5 +5,21 @@
   .container {
     width: 144rem;
     padding: 8rem 0;
+
+    .checkoutWrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3rem;
+
+      .checkoutInfo {
+        flex: 3;
+        background-color: tomato;
+      }
+
+      .checkoutTotal {
+        flex: 1;
+        background-color: yellowgreen;
+      }
+    }
   }
 }
