@@ -4,16 +4,14 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import RoomServiceIcon from '@mui/icons-material/RoomService';
 import Image from 'next/image';
-import RemoveShoppingCartIcon from '@mui/icons-material/RemoveShoppingCart';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 
-import { useCartStore } from '@/hooks/useCartStore';
-import { formatCurrency } from '@/utils/formatCurrency';
-
 import Logo from '../logo/Logo';
+import CartCard from '../cartCard/CartCard';
+
+import { useCartStore } from '@/hooks/useCartStore';
 
 import './Navbar.scss';
-import CartCard from '../cartCard/CartCard';
 
 const Navbar = () => {
   const pathname = usePathname();
