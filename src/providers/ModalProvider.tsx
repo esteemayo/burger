@@ -1,4 +1,5 @@
 import AccountModal from '@/components/accountModal/AccountModal';
+import RecipientModal from '@/components/recipientModal/RecipientModal';
 import ProductModal from '@/components/productModal/ProductModal';
 
 const ModalProvider = () => {
@@ -6,6 +7,7 @@ const ModalProvider = () => {
     <>
       <AccountModal />
       <ProductModal />
+      <RecipientModal />
     </>
   );
 };
