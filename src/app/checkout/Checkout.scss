@@ -14,6 +14,41 @@
       .checkoutInfo {
         flex: 3;
         background-color: tomato;
+
+        .checkoutInfoWrap {
+          .checkoutInfoBox {
+            .checkoutInfoHeading {
+            }
+          }
+          .addressHeading {
+          }
+
+          hr {
+          }
+
+          .recipientHeading {
+          }
+
+          .customerInfo {
+            .customerName {
+            }
+
+            .customerPhone {
+            }
+          }
+
+          .recipientBtn {
+          }
+
+          .addressHeading {
+          }
+
+          .deliveryBtn {
+          }
+        }
+
+        .paymentSection {
+        }
       }
 
       .checkoutTotal {
