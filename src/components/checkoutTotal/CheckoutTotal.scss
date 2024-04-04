@@ -75,12 +75,21 @@
                   white-space: nowrap;
                   padding: 0.5rem;
                   background-color: #fff3f5;
-                  border-radius: 1rem;
+                  border-radius: 0.5rem;
 
                   button {
+                    all: unset;
+                    display: inline-block;
+                    padding: 0 0.8rem;
+                    background-color: $clr-white;
+                    color: $clr-secondary;
+                    border-radius: 0.5rem;
+                    cursor: pointer;
                   }
 
                   .qty {
+                    font-size: inherit;
+                    color: inherit;
                   }
                 }
               }
