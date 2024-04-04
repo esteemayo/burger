@@ -32,6 +32,7 @@ const Checkout = () => {
                 <button type='button' className='deliveryBtn'>
                   Add delivery address
                 </button>
+                <hr />
               </div>
               <div className='paymentSection'>
                 <button type='button'>Place your order</button>
