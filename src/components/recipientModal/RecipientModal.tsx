@@ -47,7 +47,10 @@ const RecipientModal = () => {
     setErrors(initialErrors);
 
     console.log(data);
+    setData(initialState);
   }, [data]);
+
+  const { name, email, phone } = data;
 
   let bodyContent: JSX.Element;
 
@@ -56,6 +59,7 @@ const RecipientModal = () => {
       <Input
         name='name'
         label='Name'
+        value={name}
         placeholder='Name'
         onChange={handleChange}
         error={errors.name}
@@ -64,6 +68,7 @@ const RecipientModal = () => {
         name='email'
         type='email'
         label='Email address'
+        value={email}
         placeholder='Email address'
         onChange={handleChange}
         error={errors.email}
@@ -72,6 +77,7 @@ const RecipientModal = () => {
         name='phone'
         type='tel'
         label='Phone Number'
+        value={phone}
         placeholder='Phone number'
         onChange={handleChange}
         error={errors.phone}
