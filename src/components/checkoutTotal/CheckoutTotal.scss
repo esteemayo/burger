@@ -126,7 +126,15 @@
           }
 
           .checkoutTotal {
+            display: flex;
+            flex-direction: column;
+
             .checkoutTotalPrice {
+              display: flex;
+              align-items: flex-start;
+              justify-content: space-between;
+              padding: 1.5rem;
+
               span {
               }
             }
