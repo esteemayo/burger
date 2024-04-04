@@ -41,7 +41,6 @@
               border-bottom: 1px solid $line;
 
               .checkoutProductName {
-                flex: 0.6;
                 font-size: 1rem;
                 white-space: nowrap;
                 text-overflow: ellipsis;
@@ -100,8 +99,6 @@
               }
 
               .checkoutDeleteWrap {
-                flex: 0.1;
-
                 button {
                   all: unset;
                   display: inline-block;
@@ -119,8 +116,6 @@
               }
 
               .checkoutPrice {
-                flex: 0.3;
-
                 span {
                   font-weight: 500;
                   font-size: 1.3rem;
