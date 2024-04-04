@@ -63,7 +63,16 @@
             }
 
             .customerInfo {
+              display: flex;
+              flex-direction: column;
+              gap: 1rem;
+              line-height: 1;
+              margin-bottom: 1rem;
+
               .customerName {
+                text-transform: capitalize;
+                font-weight: 400;
+                font-size: 1.3rem;
               }
 
               .customerPhone {
