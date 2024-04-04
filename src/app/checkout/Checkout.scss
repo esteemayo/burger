@@ -54,6 +54,11 @@
             }
 
             .recipientHeading {
+              text-transform: capitalize;
+              font-weight: 600;
+              font-size: 100%;
+              color: inherit;
+              margin-bottom: 0.8rem;
             }
 
             .customerInfo {
