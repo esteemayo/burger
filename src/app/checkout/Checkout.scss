@@ -22,34 +22,40 @@
           box-shadow: $box;
           border-radius: 3px;
 
-          .checkoutInfoBox {
-            .checkoutInfoHeading {
+          .checkoutInfoContainer {
+            margin-bottom: 2rem;
+
+            .checkoutInfoBox {
+              width: 100%;
+
+              .checkoutInfoHeading {
+              }
             }
-          }
-          .addressHeading {
-          }
-
-          hr {
-          }
-
-          .recipientHeading {
-          }
-
-          .customerInfo {
-            .customerName {
+            .addressHeading {
             }
 
-            .customerPhone {
+            hr {
             }
-          }
 
-          .recipientBtn {
-          }
+            .recipientHeading {
+            }
 
-          .addressHeading {
-          }
+            .customerInfo {
+              .customerName {
+              }
 
-          .deliveryBtn {
+              .customerPhone {
+              }
+            }
+
+            .recipientBtn {
+            }
+
+            .addressHeading {
+            }
+
+            .deliveryBtn {
+            }
           }
         }
 
