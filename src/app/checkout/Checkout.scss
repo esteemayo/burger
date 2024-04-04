@@ -122,6 +122,18 @@
             border: 1px solid $clr-green;
             border-radius: 0.5rem;
             cursor: pointer;
+            transition: all 0.3s;
+
+            &:hover {
+              background-color: transparent;
+              color: $clr-primary;
+              border-color: currentColor;
+            }
+
+            &:disabled {
+              opacity: 0.7;
+              cursor: default;
+            }
           }
         }
       }
