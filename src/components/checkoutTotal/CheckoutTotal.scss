@@ -65,6 +65,17 @@
                 }
 
                 .checkoutQty {
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+
+                  width: fit-content;
+                  font-size: 1rem;
+                  white-space: nowrap;
+                  padding: 0.5rem;
+                  background-color: #fff3f5;
+                  border-radius: 1rem;
+
                   button {
                   }
 
