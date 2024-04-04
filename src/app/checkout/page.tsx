@@ -6,7 +6,7 @@ import CheckoutTotal from '@/components/checkoutTotal/CheckoutTotal';
 import './Checkout.scss';
 
 export const metadata: Metadata = {
-  title: 'Checkout page',
+  title: 'Burger - Checkout page',
 };
 
 const Checkout = () => {
