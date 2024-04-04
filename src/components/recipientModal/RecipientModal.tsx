@@ -6,16 +6,18 @@ import Input from '../input/Input';
 import Modal from '../modal/Modal';
 
 import { useRecipient } from '@/hooks/useRecipientModal';
+import { RecipientData, RecipientErrors } from '@/types';
 
 import './RecipientModal.scss';
+import { validateRecipientInputs } from '@/validations/recipient';
 
-const initialState = {
+const initialState: RecipientData = {
   name: '',
   email: '',
   phone: '',
 };
 
-const initialErrors = {
+const initialErrors: RecipientErrors = {
   name: '',
   email: '',
   phone: '',
@@ -40,8 +42,12 @@ const RecipientModal = () => {
   );
 
   const onSubmit = useCallback(() => {
-    console.log('submit');
-  }, []);
+    const errors = validateRecipientInputs(data);
+    if (Object.keys(errors).length > 0) return setErrors(errors);
+    setErrors(initialErrors);
+
+    console.log(data);
+  }, [data]);
 
   let bodyContent: JSX.Element;
 
@@ -52,6 +58,7 @@ const RecipientModal = () => {
         label='Name'
         placeholder='Name'
         onChange={handleChange}
+        error={errors.name}
       />
       <Input
         name='email'
@@ -59,6 +66,7 @@ const RecipientModal = () => {
         label='Email address'
         placeholder='Email address'
         onChange={handleChange}
+        error={errors.email}
       />
       <Input
         name='phone'
@@ -66,6 +74,7 @@ const RecipientModal = () => {
         label='Phone Number'
         placeholder='Phone number'
         onChange={handleChange}
+        error={errors.phone}
       />
     </div>
   );
