@@ -42,10 +42,18 @@
 
               .checkoutProductName {
                 flex: 0.6;
+                font-size: 1rem;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
 
                 a,
                 a:link,
                 a:active {
+                  text-transform: capitalize;
+                  font-weight: 700;
+                  font-size: 1.4rem;
+                  color: $clr-primary;
                 }
 
                 .checkoutQty {
