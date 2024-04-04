@@ -56,7 +56,7 @@ const RecipientModal = () => {
       <Input
         name='email'
         type='email'
-        label='Email'
+        label='Email address'
         placeholder='Email address'
         onChange={handleChange}
       />
