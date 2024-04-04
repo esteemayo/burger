@@ -9,17 +9,17 @@ const Checkout = () => {
           <div className='checkoutInfo'>
             <div className='checkoutInfoWrap'>
               <div className='checkoutInfoBox'>
-                <h3>Review and place order</h3>
+                <h3 className='checkoutInfoHeading'>Review and place order</h3>
               </div>
-              <h6>
+              <h6 className='addressHeading'>
                 Review/Add address and fulfill payments to complete your
                 purchase
               </h6>
               <hr />
-              <h6>Recipient information</h6>
+              <h6 className='recipientHeading'>Recipient information</h6>
               <div className='customerInfo'>
-                <span>Emmanuel adebayo</span>
-                <span>+2348136119251</span>
+                <span className='customerName'>Emmanuel adebayo</span>
+                <span className='customerPhone'>+2348136119251</span>
               </div>
               <button type='button' className='recipientBtn'>
                 Change recipient
