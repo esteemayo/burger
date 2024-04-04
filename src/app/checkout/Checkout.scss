@@ -105,11 +105,24 @@
             }
 
             .addressHeading {
+              text-transform: capitalize;
+              font-weight: 600;
+              font-size: 100%;
+              margin-bottom: 0.5rem;
             }
           }
         }
 
         .paymentSection {
+          button {
+            all: unset;
+            display: inline-block;
+            background-color: $clr-green;
+            color: $clr-white;
+            border: 1px solid $clr-green;
+            border-radius: 0.5rem;
+            cursor: pointer;
+          }
         }
       }
 
