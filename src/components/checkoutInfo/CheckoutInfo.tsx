@@ -1,6 +1,12 @@
+'use client';
+
+import { useRecipient } from '@/hooks/useRecipientModal';
+
 import './CheckoutInfo.scss';
 
 const CheckoutInfo = () => {
+  const recipientModal = useRecipient();
+
   return (
     <div className='checkoutInfo'>
       <div className='checkoutInfoWrap'>
@@ -18,7 +24,11 @@ const CheckoutInfo = () => {
               <span className='customerName'>Emmanuel adebayo</span>
               <span className='customerPhone'>+2348136119251</span>
             </div>
-            <button type='button' className='recipientBtn'>
+            <button
+              onClick={recipientModal.onOpen}
+              type='button'
+              className='recipientBtn'
+            >
               Change recipient
             </button>
             <hr />
