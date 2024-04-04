@@ -319,6 +319,10 @@ export interface AccountMenuType {
   toggle(): void;
 }
 
+export interface RecipientStore {
+  isOpen: boolean;
+}
+
 export interface ProductInputsProps {
   name: string;
   desc: string;
