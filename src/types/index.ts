@@ -349,3 +349,9 @@ export interface ProductImageProps {
 export interface DropZoneProps {
   onSelect(file: File[]): void;
 }
+
+export interface RecipientData {
+  name: string;
+  email: string;
+  phone: string;
+}
