@@ -357,7 +357,7 @@ export interface RecipientData {
 }
 
 export interface RecipientErrors {
-  name: string;
-  email: string;
-  phone: string;
+  name?: string;
+  email?: string;
+  phone?: string;
 }
