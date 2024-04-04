@@ -77,13 +77,34 @@
               }
             }
 
-            .recipientBtn {
+            .recipientBtn,
+            .deliveryBtn {
+              all: unset;
+              display: inline-block;
+              max-width: 30rem;
+              width: 100%;
+              text-align: center;
+              text-transform: capitalize;
+              font-weight: 400;
+              font-size: 1.3rem;
+              padding: 0.8rem 3rem;
+              background-color: $clr-black;
+              color: $clr-white;
+              border-radius: 0.5rem;
+              cursor: pointer;
+              transition: all 0.3s;
+
+              &:hover {
+                color: $clr-secondary;
+              }
+
+              &:disabled {
+                opacity: 0.7;
+                cursor: default;
+              }
             }
 
             .addressHeading {
-            }
-
-            .deliveryBtn {
             }
           }
         }
