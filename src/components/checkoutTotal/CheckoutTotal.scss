@@ -3,5 +3,63 @@
 .checkoutTotal {
   flex: 2;
   width: 41.66666667%;
-  background-color: yellowgreen;
+
+  .checkoutWrap {
+    .checkoutDetail {
+      width: 100%;
+      background-color: transparent;
+      box-shadow: $box;
+      border-radius: 3px;
+
+      .checkoutCard {
+        .checkoutHeader {
+          .checkoutCustomer {
+          }
+        }
+
+        .checkoutBody {
+          .checkoutProductBox {
+            .checkoutProduct {
+              .checkoutProductName {
+                a,
+                a:link,
+                a:active {
+                }
+
+                .checkoutQty {
+                  button {
+                  }
+
+                  .qty {
+                  }
+                }
+              }
+
+              .checkoutDeleteWrap {
+                button {
+                }
+              }
+
+              .checkoutPrice {
+                span {
+                }
+              }
+            }
+          }
+
+          .checkoutTotal {
+            .checkoutTotalPrice {
+              span {
+              }
+            }
+          }
+
+          .totalCheckout {
+            span {
+            }
+          }
+        }
+      }
+    }
+  }
 }
