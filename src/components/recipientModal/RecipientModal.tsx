@@ -6,10 +6,11 @@ import Input from '../input/Input';
 import Modal from '../modal/Modal';
 
 import { useRecipient } from '@/hooks/useRecipientModal';
+import { validateRecipientInputs } from '@/validations/recipient';
+
 import { RecipientData, RecipientErrors } from '@/types';
 
 import './RecipientModal.scss';
-import { validateRecipientInputs } from '@/validations/recipient';
 
 const initialState: RecipientData = {
   name: '',
