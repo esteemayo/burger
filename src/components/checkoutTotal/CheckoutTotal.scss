@@ -13,7 +13,18 @@
 
       .checkoutCard {
         .checkoutHeader {
+          font-weight: 700;
+          font-size: 1.3rem;
+          word-wrap: break-word;
+          padding: 1.5rem;
+          background-color: inherit;
+          border-bottom: 1px solid $line;
+
           .checkoutCustomer {
+            text-transform: capitalize;
+            font-weight: 500;
+            font-size: 1.4rem;
+            color: #6b6b83;
           }
         }
 
