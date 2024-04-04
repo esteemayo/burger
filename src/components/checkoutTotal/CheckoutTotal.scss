@@ -41,6 +41,8 @@
               border-bottom: 1px solid $line;
 
               .checkoutProductName {
+                flex: 0.6;
+
                 a,
                 a:link,
                 a:active {
@@ -56,11 +58,15 @@
               }
 
               .checkoutDeleteWrap {
+                flex: 0.1;
+
                 button {
                 }
               }
 
               .checkoutPrice {
+                flex: 0.3;
+
                 span {
                 }
               }
