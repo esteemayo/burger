@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 import './CheckoutTotal.scss';
 
@@ -29,7 +30,14 @@ const CheckoutTotal = () => {
                     </div>
                   </div>
                   <div className='checkoutDeleteWrap'>
-                    <button type='button'>X</button>
+                    <button type='button'>
+                      <Image
+                        src='/svg/thrash.svg'
+                        width={13}
+                        height={13}
+                        alt='delete icon'
+                      />
+                    </button>
                   </div>
                   <div className='checkoutPrice'>
                     <span>$12999.00</span>
