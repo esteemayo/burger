@@ -103,6 +103,18 @@
                 flex: 0.1;
 
                 button {
+                  all: unset;
+                  display: inline-block;
+                  background-color: transparent;
+                  color: $clr-gray-dark;
+                  cursor: pointer;
+
+                  img {
+                    display: block;
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    object-fit: cover;
+                  }
                 }
               }
 

@@ -33,8 +33,8 @@ const CheckoutTotal = () => {
                     <button type='button'>
                       <Image
                         src='/svg/thrash.svg'
-                        width={13}
-                        height={13}
+                        width={15}
+                        height={15}
                         alt='delete icon'
                       />
                     </button>
