@@ -16,7 +16,12 @@ const CheckoutTotal = () => {
               <div className='checkoutProductBox'>
                 <div className='checkoutProduct'>
                   <div className='checkoutProductName'>
-                    <Link href='/'>Double beef burger</Link>
+                    <Link href='/'>
+                      <p>
+                        <span></span>
+                        Double beef burger
+                      </p>
+                    </Link>
                     <div className='checkoutQty'>
                       <button type='button'>-</button>
                       <span className='qty'>1</span>

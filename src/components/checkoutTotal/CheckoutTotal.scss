@@ -50,10 +50,18 @@
                 a,
                 a:link,
                 a:active {
-                  text-transform: capitalize;
-                  font-weight: 700;
-                  font-size: 1.4rem;
                   color: $clr-primary;
+
+                  p {
+                    text-transform: capitalize;
+                    font-weight: 700;
+                    font-size: 1.4rem;
+                    color: currentColor;
+
+                    span {
+                      margin-right: 1rem;
+                    }
+                  }
                 }
 
                 .checkoutQty {
