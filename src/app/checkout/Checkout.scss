@@ -69,13 +69,11 @@
               line-height: 1;
               margin-bottom: 1rem;
 
-              .customerName {
+              .customerName,
+              .customerPhone {
                 text-transform: capitalize;
                 font-weight: 400;
                 font-size: 1.3rem;
-              }
-
-              .customerPhone {
               }
             }
 
