@@ -66,7 +66,6 @@ const AddressModal = () => {
         onChange={handleChange}
         error={errors.state}
       />
-
       <Input
         name='city'
         label='City'
@@ -75,7 +74,6 @@ const AddressModal = () => {
         onChange={handleChange}
         error={errors.city}
       />
-
       <Input
         name='street'
         label='Street'
