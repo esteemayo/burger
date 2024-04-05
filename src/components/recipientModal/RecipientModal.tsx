@@ -90,6 +90,7 @@ const RecipientModal = () => {
     <Modal
       isOpen={isOpen}
       title='Update Recipient'
+      size='full'
       actionLabel='Submit'
       body={bodyContent}
       onClose={onClose}
