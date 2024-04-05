@@ -75,6 +75,10 @@ const Modal = ({
     return showModal?.toString() === 'true' ? 'box active' : 'box ';
   }, [showModal]);
 
+  const actionLabelClasses = useMemo(() => {
+    return size === 'small' ? 'btnPrimary' : 'btnPrimary full';
+  }, [size]);
+
   useEffect(() => {
     setShowModal(isOpen);
   }, [isOpen]);
@@ -106,9 +110,7 @@ const Modal = ({
                 <button
                   type='button'
                   disabled={disabled}
-                  className={
-                    size === 'small' ? 'btnPrimary' : 'btnPrimary full'
-                  }
+                  className={actionLabelClasses}
                   onClick={handleSubmit}
                 >
                   {actionLabel}
