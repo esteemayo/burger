@@ -56,7 +56,7 @@ const RecipientModal = () => {
   let bodyContent: JSX.Element;
 
   bodyContent = (
-    <div className='recipientModal'>
+    <>
       <Input
         name='name'
         label='Name'
@@ -83,7 +83,7 @@ const RecipientModal = () => {
         onChange={handleChange}
         error={errors.phone}
       />
-    </div>
+    </>
   );
 
   return (
