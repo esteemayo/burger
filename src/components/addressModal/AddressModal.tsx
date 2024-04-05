@@ -5,8 +5,10 @@ import { useCallback, useState } from 'react';
 import Input from '../input/Input';
 import Modal from '../modal/Modal';
 
-import { AddressData, AddressErrors } from '@/types';
 import { useAddressModal } from '@/hooks/useAddressModal';
+import { validateAddressInputs } from '@/validations/address';
+
+import { AddressData, AddressErrors } from '@/types';
 
 import './AddressModal.scss';
 
@@ -41,8 +43,13 @@ const AddressModal = () => {
   );
 
   const onSubmit = useCallback(() => {
-    console.log('clicked');
-  }, []);
+    const errors = validateAddressInputs(data);
+    if (Object.keys(errors).length > 0) return setErrors(errors);
+
+    setErrors(initialErrors);
+
+    console.log({ ...data });
+  }, [data]);
 
   let bodyContent: JSX.Element;
 
@@ -53,6 +60,7 @@ const AddressModal = () => {
         label='State'
         placeholder='State'
         onChange={handleChange}
+        error={errors.state}
       />
 
       <Input
@@ -60,6 +68,7 @@ const AddressModal = () => {
         label='City'
         placeholder='City'
         onChange={handleChange}
+        error={errors.city}
       />
 
       <Input
@@ -67,6 +76,7 @@ const AddressModal = () => {
         label='Street'
         placeholder='Street'
         onChange={handleChange}
+        error={errors.street}
       />
     </>
   );
