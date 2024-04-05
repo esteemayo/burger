@@ -1,17 +1,44 @@
 'use client';
 
-import { useCallback } from 'react';
+import { useCallback, useState } from 'react';
 
 import Input from '../input/Input';
 import Modal from '../modal/Modal';
 
+import { AddressData, AddressErrors } from '@/types';
 import { useAddressModal } from '@/hooks/useAddressModal';
 
 import './AddressModal.scss';
 
+const initialState: AddressData = {
+  state: '',
+  city: '',
+  street: '',
+};
+
+const initialErrors: AddressErrors = {
+  state: '',
+  city: '',
+  street: '',
+};
+
 const AddressModal = () => {
   const isOpen = useAddressModal((store) => store.isOpen);
   const onClose = useAddressModal((store) => store.onClose);
+
+  const [data, setData] = useState(initialState);
+  const [errors, setErrors] = useState(initialErrors);
+
+  const handleChange = useCallback(
+    ({ target: input }: React.ChangeEvent<HTMLInputElement>) => {
+      const { name, value } = input;
+
+      setData((prev) => {
+        return { ...prev, [name]: value };
+      });
+    },
+    []
+  );
 
   const onSubmit = useCallback(() => {
     console.log('clicked');
@@ -25,21 +52,21 @@ const AddressModal = () => {
         name='state'
         label='State'
         placeholder='State'
-        onChange={() => console.log('first')}
+        onChange={handleChange}
       />
 
       <Input
         name='city'
         label='City'
         placeholder='City'
-        onChange={() => console.log('first')}
+        onChange={handleChange}
       />
 
       <Input
-        name='address'
-        label='Address'
-        placeholder='Address'
-        onChange={() => console.log('first')}
+        name='street'
+        label='Street'
+        placeholder='Street'
+        onChange={handleChange}
       />
     </>
   );
