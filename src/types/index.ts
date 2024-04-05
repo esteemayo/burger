@@ -323,7 +323,7 @@ export interface RecipientStore {
   isOpen: boolean;
 }
 
-export interface ReciepientAction {
+export interface RecipientAction {
   onOpen(): void;
   onClose(): void;
 }

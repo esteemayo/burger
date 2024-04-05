@@ -4,13 +4,13 @@ import { create } from 'zustand';
 import { produce } from 'immer';
 import { devtools } from 'zustand/middleware';
 
-import { ReciepientAction, RecipientStore } from '@/types';
+import { RecipientAction, RecipientStore } from '@/types';
 
 const INITIAL_STATE = {
   isOpen: false,
 };
 
-export const useRecipient = create<RecipientStore & ReciepientAction>()(
+export const useRecipient = create<RecipientStore & RecipientAction>()(
   devtools((set) => ({
     isOpen: INITIAL_STATE.isOpen,
     onOpen: () =>
