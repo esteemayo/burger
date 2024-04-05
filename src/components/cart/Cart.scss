@@ -26,6 +26,22 @@
         background-color: inherit;
         color: inherit;
         border-bottom: 1px solid $line;
+        position: relative;
+
+        &::after {
+          display: block;
+          content: '';
+          width: 63%;
+          height: 0;
+          padding: 1px 0;
+          border-top: 1px solid $line;
+          border-bottom: 1px solid $line;
+
+          position: absolute;
+          top: 50%;
+          right: 1.5rem;
+          transform: translateY(-50%);
+        }
       }
 
       .emptyCart {
