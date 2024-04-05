@@ -76,8 +76,12 @@ const Modal = ({
   }, [showModal]);
 
   const actionLabelClasses = useMemo(() => {
-    return size === 'small' ? 'btnPrimary' : 'btnPrimary full';
-  }, [size]);
+    return !secondaryAction || !secondaryActionLabel
+      ? size === 'small'
+        ? 'btnPrimary'
+        : 'btnPrimary full'
+      : 'btnPrimary';
+  }, [secondaryAction, secondaryActionLabel, size]);
 
   useEffect(() => {
     setShowModal(isOpen);
