@@ -281,7 +281,7 @@ export type AccountCardProps = AccountCard;
 export interface ModalProps {
   isOpen: boolean;
   title?: string;
-  size?: 'small' | 'long';
+  size?: 'small' | 'full';
   disabled?: boolean;
   actionLabel?: string;
   secondaryActionLabel?: string;
