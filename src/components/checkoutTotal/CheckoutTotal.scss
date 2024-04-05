@@ -19,6 +19,23 @@
           padding: 1.5rem;
           background-color: inherit;
           border-bottom: 1px solid $line;
+          position: relative;
+
+          &::before {
+            display: inline-block;
+            content: '';
+            width: 38rem;
+            height: 0;
+            padding: 1px 0;
+            border-top: 1px solid $line;
+            border-bottom: 1px solid $line;
+            opacity: 0.7;
+
+            position: absolute;
+            top: 33%;
+            right: 2rem;
+            transform: translateY(-33%);
+          }
 
           .checkoutCustomer {
             text-transform: capitalize;
