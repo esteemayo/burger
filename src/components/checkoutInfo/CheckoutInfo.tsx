@@ -1,11 +1,13 @@
 'use client';
 
 import { useRecipient } from '@/hooks/useRecipientModal';
+import { useAddressModal } from '@/hooks/useAddressModal';
 
 import './CheckoutInfo.scss';
 
 const CheckoutInfo = () => {
   const recipientModal = useRecipient();
+  const addressModal = useAddressModal();
 
   return (
     <div className='checkoutInfo'>
@@ -33,7 +35,11 @@ const CheckoutInfo = () => {
             </button>
             <hr />
             <h6 className='addressHeading'>Delivery Address</h6>
-            <button type='button' className='deliveryBtn'>
+            <button
+              onClick={addressModal.onOpen}
+              type='button'
+              className='deliveryBtn'
+            >
               Add delivery address
             </button>
             <hr />
