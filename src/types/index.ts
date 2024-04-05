@@ -370,3 +370,9 @@ export interface RecipientErrors {
   email?: string;
   phone?: string;
 }
+
+export interface AddressData {
+  state: string;
+  city: string;
+  street: string;
+}
