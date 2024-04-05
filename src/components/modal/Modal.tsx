@@ -10,6 +10,7 @@ import './Modal.scss';
 const Modal = ({
   isOpen,
   title,
+  size = 'small',
   disabled,
   actionLabel,
   secondaryActionLabel,
@@ -105,7 +106,9 @@ const Modal = ({
                 <button
                   type='button'
                   disabled={disabled}
-                  className='btnPrimary'
+                  className={
+                    size === 'small' ? 'btnPrimary' : 'btnPrimary full'
+                  }
                   onClick={handleSubmit}
                 >
                   {actionLabel}
