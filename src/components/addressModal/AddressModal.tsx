@@ -49,7 +49,10 @@ const AddressModal = () => {
     setErrors(initialErrors);
 
     console.log({ ...data });
+    setData(initialState);
   }, [data]);
+
+  const { state, city, street } = data;
 
   let bodyContent: JSX.Element;
 
@@ -58,6 +61,7 @@ const AddressModal = () => {
       <Input
         name='state'
         label='State'
+        value={state}
         placeholder='State'
         onChange={handleChange}
         error={errors.state}
@@ -66,6 +70,7 @@ const AddressModal = () => {
       <Input
         name='city'
         label='City'
+        value={city}
         placeholder='City'
         onChange={handleChange}
         error={errors.city}
@@ -74,6 +79,7 @@ const AddressModal = () => {
       <Input
         name='street'
         label='Street'
+        value={street}
         placeholder='Street'
         onChange={handleChange}
         error={errors.street}
