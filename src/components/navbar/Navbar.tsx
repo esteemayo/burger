@@ -6,8 +6,9 @@ import RoomServiceIcon from '@mui/icons-material/RoomService';
 import Image from 'next/image';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 
-import Logo from '../logo/Logo';
 import CartCard from '../cartCard/CartCard';
+import Logo from '../logo/Logo';
+import UserMenu from '../userMenu/UserMenu';
 
 import { useCartStore } from '@/hooks/useCartStore';
 
@@ -68,11 +69,7 @@ const Navbar = () => {
           </Link>
           <div className='user'>
             <Image src='/img/user.png' width={30} height={30} alt='' />
-            <div className='userMenu'>
-              <Link href='/login'>Login</Link>
-              <Link href='/register'>Register</Link>
-              <Link href='/profile'>User profile</Link>
-            </div>
+            <UserMenu />
           </div>
           <div className='cart'>
             <Image
