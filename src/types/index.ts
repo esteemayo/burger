@@ -376,3 +376,9 @@ export interface AddressData {
   city: string;
   street: string;
 }
+
+export interface AddressErrors {
+  state?: string;
+  city?: string;
+  street?: string;
+}
