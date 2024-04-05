@@ -328,6 +328,10 @@ export interface RecipientAction {
   onClose(): void;
 }
 
+export interface AddressStore {
+  isOpen: boolean;
+}
+
 export interface ProductInputsProps {
   name: string;
   desc: string;
