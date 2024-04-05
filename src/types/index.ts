@@ -383,3 +383,7 @@ export interface AddressErrors {
   city?: string;
   street?: string;
 }
+
+export interface SearchProps {
+  onSubmit(e: React.FormEvent<HTMLFormElement>): void;
+}
