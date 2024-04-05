@@ -89,6 +89,7 @@ const AddressModal = () => {
     <Modal
       isOpen={isOpen}
       title='Add Address'
+      size='full'
       actionLabel='Use this address'
       body={bodyContent}
       onClose={onClose}
