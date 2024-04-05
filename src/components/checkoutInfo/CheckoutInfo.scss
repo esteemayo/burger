@@ -34,10 +34,10 @@
               content: '';
               width: 45rem;
               height: 0;
-              opacity: 0.25;
               padding: 1px 0;
               border-top: 1px solid $line;
               border-bottom: 1px solid $line;
+              opacity: 0.3;
 
               position: absolute;
               top: 50%;
@@ -58,7 +58,7 @@
           height: 0;
           border: 0;
           border: 1px solid $line;
-          opacity: 0.25;
+          opacity: 0.3;
           margin: 1.6rem 0;
         }
 
