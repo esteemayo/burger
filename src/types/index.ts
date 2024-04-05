@@ -332,6 +332,11 @@ export interface AddressStore {
   isOpen: boolean;
 }
 
+export interface AddressAction {
+  onOpen(): void;
+  onClose(): void;
+}
+
 export interface ProductInputsProps {
   name: string;
   desc: string;
