@@ -10,9 +10,10 @@ import { formatCurrency } from '@/utils/formatCurrency';
 import './CheckoutTotal.scss';
 
 const CheckoutTotal = () => {
-  const totalPrice = useCartStore((store) => store.totalPrice);
+  const removeFromCart = useCartStore((store) => store.removeFromCart);
   const products = useCartStore((store) => store.products);
   const toggleQuantity = useCartStore((store) => store.toggleQuantity);
+  const totalPrice = useCartStore((store) => store.totalPrice);
 
   const handleDecrement = useCallback(
     (e: React.MouseEvent<HTMLButtonElement>, productId: number) => {
@@ -71,7 +72,10 @@ const CheckoutTotal = () => {
                         </div>
                       </div>
                       <div className='checkoutDeleteWrap'>
-                        <button type='button'>
+                        <button
+                          type='button'
+                          onClick={() => removeFromCart(id)}
+                        >
                           <Image
                             src='/svg/thrash.svg'
                             width={15}
