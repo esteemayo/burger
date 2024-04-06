@@ -57,6 +57,11 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', isActiveHandler);
   }, [isActiveHandler]);
 
+  const currentUser = {
+    id: 1,
+    name: 'Emmanuel Adebayo',
+  };
+
   return (
     <nav className={navClasses}>
       <div className='wrapper'>
@@ -68,7 +73,7 @@ const Navbar = () => {
           </Link>
           <div className='user'>
             <Image src='/img/user.png' width={30} height={30} alt='' />
-            <UserMenu />
+            <UserMenu currentUser={currentUser} />
           </div>
           <div className='cart'>
             <Image
