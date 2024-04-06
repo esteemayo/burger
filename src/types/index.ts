@@ -385,5 +385,7 @@ export interface AddressErrors {
 }
 
 export interface SearchProps {
+  value: string;
+  onChange(value: string): void;
   onSubmit(e: React.FormEvent<HTMLFormElement>): void;
 }
