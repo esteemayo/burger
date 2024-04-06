@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
 import './UserMenu.scss';
+import Image from 'next/image';
 
 interface UserMenuProps {
   currentUser: object;
@@ -17,8 +18,14 @@ const UserMenu = ({ currentUser }: UserMenuProps) => {
       ) : (
         <div className='userController'>
           <div className='userLinks'>
-            <Link href='/profile'>Upcoming orders</Link>
-            <Link href='/profile'>Account</Link>
+            <Link href='/profile'>
+              <Image src='/svg/user-plus.svg' width={24} height={43} alt='' />
+              Upcoming orders
+            </Link>
+            <Link href='/profile'>
+              <Image src='/svg/user-plus.svg' width={24} height={43} alt='' />
+              Account
+            </Link>
           </div>
           <div className='userFooter'>
             <span>Not Emmanuel</span>
