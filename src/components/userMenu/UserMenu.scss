@@ -52,15 +52,16 @@
 
         img {
           display: block;
-          width: 2.4rem;
-          height: 4.3rem;
+          width: 4rem;
+          height: 4rem;
           object-fit: cover;
         }
 
         span {
-          max-width: 10rem;
-          font-size: 0.8rem;
-          white-space: wrap;
+          max-width: 10rem !important;
+          font-weight: normal !important;
+          font-size: 1.4rem !important;
+          white-space: wrap !important;
 
           flex-direction: column;
           display: flex;
