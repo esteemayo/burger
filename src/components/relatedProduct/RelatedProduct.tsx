@@ -4,12 +4,16 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useMemo } from 'react';
 
-import { RelatedProductProps } from '@/types';
+import { useCart } from '@/hooks/useCart';
 import { formatCurrency } from '@/utils/formatCurrency';
+
+import { RelatedProductProps } from '@/types';
 
 import './RelatedProduct.scss';
 
 const RelatedProduct = ({ product }: RelatedProductProps) => {
+  const { handleClick } = useCart(product);
+
   const url = useMemo(() => {
     return `/product/${encodeURIComponent(product.id)}`;
   }, [product.id]);
@@ -19,7 +23,7 @@ const RelatedProduct = ({ product }: RelatedProductProps) => {
       <div className='relatedBox'>
         <div className='relatedThumbnail'>
           <span className='relatedOverlay'>
-            <button type='button' className='relatedBtn'>
+            <button type='button' className='relatedBtn' onClick={handleClick}>
               Add to cart
             </button>
           </span>
