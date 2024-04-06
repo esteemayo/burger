@@ -11,21 +11,20 @@ import Logo from '../logo/Logo';
 import UserMenu from '../userMenu/UserMenu';
 import Search from '../search/Search';
 
+import { useSearch } from '@/hooks/useSearch';
 import { useCartStore } from '@/hooks/useCartStore';
 
 import './Navbar.scss';
-import { useSearch } from '@/hooks/useSearch';
 
 const Navbar = () => {
   const pathname = usePathname();
+  const { query, handleChange, handleSubmit } = useSearch();
 
   const totalPrice = useCartStore((store) => store.totalPrice);
   const products = useCartStore((store) => store.products);
   const removeFromCart = useCartStore((store) => store.removeFromCart);
   const totalItems = useCartStore((store) => store.totalItems);
   const toggleQuantity = useCartStore((store) => store.toggleQuantity);
-
-  const {query, handleChange, handleSubmit} = useSearch()
 
   const [isActive, setIsActive] = useState(false);
 
