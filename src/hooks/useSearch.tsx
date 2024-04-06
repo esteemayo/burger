@@ -1,12 +1,21 @@
 'use client';
 
-import { useCallback, useState } from 'react';
+import { useCallback, useRef, useState } from 'react';
 
 export const useSearch = () => {
+  const inputRef = useRef<HTMLInputElement>(null);
+
   const [query, setQuery] = useState('');
 
   const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     setQuery(e.target.value);
+  }, []);
+
+  const handleClear = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
+    e.stopPropagation();
+
+    setQuery('');
+    inputRef && inputRef.current?.focus();
   }, []);
 
   const handleSubmit = useCallback(
@@ -21,7 +30,9 @@ export const useSearch = () => {
 
   return {
     query,
+    inputRef,
     handleChange,
+    handleClear,
     handleSubmit,
   };
 };
