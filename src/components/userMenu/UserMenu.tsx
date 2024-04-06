@@ -19,11 +19,11 @@ const UserMenu = ({ currentUser }: UserMenuProps) => {
         <div className='userController'>
           <div className='userLinks'>
             <Link href='/profile'>
-              <Image src='/svg/user-plus.svg' width={24} height={43} alt='' />
+              <Image src='/svg/user-plus.svg' width={30} height={30} alt='' />
               <span className='userLabel'>Upcoming orders</span>
             </Link>
             <Link href='/profile'>
-              <Image src='/svg/user-plus.svg' width={24} height={43} alt='' />
+              <Image src='/svg/user-plus.svg' width={30} height={30} alt='' />
               <span className='userLabel'>Account</span>
             </Link>
           </div>
