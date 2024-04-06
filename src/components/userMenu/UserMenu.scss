@@ -57,11 +57,11 @@
           object-fit: cover;
         }
 
-        span {
-          max-width: 10rem !important;
-          font-weight: normal !important;
-          font-size: 1.4rem !important;
-          white-space: wrap !important;
+        .userLabel {
+          max-width: 10rem;
+          font-weight: normal;
+          font-size: 1.4rem;
+          white-space: wrap;
 
           flex-direction: column;
           display: flex;
