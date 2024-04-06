@@ -40,14 +40,32 @@
   .userController {
     .userLinks {
       display: flex;
-      align-items: center;
       gap: 0.5rem;
       border-bottom: 1px solid $line;
 
       a,
       a:link,
       a:active {
+        display: flex;
+        flex-direction: column;
         background-color: transparent;
+
+        img {
+          display: block;
+          width: 2.4rem;
+          height: 4.3rem;
+          object-fit: cover;
+        }
+
+        span {
+          max-width: 10rem;
+          font-size: 0.8rem;
+          white-space: wrap;
+
+          flex-direction: column;
+          display: flex;
+          text-align: center;
+        }
       }
     }
   }
