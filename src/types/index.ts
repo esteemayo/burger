@@ -252,10 +252,7 @@ export interface ReviewProps {
 }
 
 export interface RelatedProductProps {
-  id: number;
-  name: string;
-  image: string;
-  price: number;
+  product: CartItem;
 }
 
 export interface StarRatingProps {
