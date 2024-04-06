@@ -60,6 +60,7 @@ const Navbar = () => {
   const currentUser = {
     id: 1,
     name: 'Emmanuel Adebayo',
+    image: '/img/avatar.png',
   };
 
   return (
@@ -72,7 +73,16 @@ const Navbar = () => {
             <span>Products</span>
           </Link>
           <div className='user'>
-            <Image src='/img/user.png' width={30} height={30} alt='' />
+            {currentUser ? (
+              <Image
+                src={currentUser.image ?? '/img/default.png'}
+                width={30}
+                height={30}
+                alt=''
+              />
+            ) : (
+              <Image src='/img/user.png' width={30} height={30} alt='' />
+            )}
             <UserMenu currentUser={currentUser} />
           </div>
           <div className='cart'>
