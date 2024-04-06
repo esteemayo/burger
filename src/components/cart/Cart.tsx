@@ -1,8 +1,9 @@
 'use client';
 
-import Image from 'next/image';
+import { useCallback } from 'react';
 import Link from 'next/link';
 import RemoveShoppingCartIcon from '@mui/icons-material/RemoveShoppingCart';
+import Image from 'next/image';
 
 import { useCartStore } from '@/hooks/useCartStore';
 import { formatCurrency } from '@/utils/formatCurrency';
@@ -10,7 +11,27 @@ import { formatCurrency } from '@/utils/formatCurrency';
 import './Cart.scss';
 
 const Cart = () => {
+  const removeFromCart = useCartStore((store) => store.removeFromCart);
   const products = useCartStore((store) => store.products);
+  const toggleQuantity = useCartStore((store) => store.toggleQuantity);
+
+  const handleIncrement = useCallback(
+    (e: React.MouseEvent<HTMLButtonElement>, productId: number) => {
+      e.stopPropagation();
+
+      toggleQuantity({ type: 'inc', id: productId });
+    },
+    [toggleQuantity]
+  );
+
+  const handleDecrement = useCallback(
+    (e: React.MouseEvent<HTMLButtonElement>, productId: number) => {
+      e.stopPropagation();
+
+      toggleQuantity({ type: 'dec', id: productId });
+    },
+    [toggleQuantity]
+  );
 
   return (
     <aside className='productCart'>
@@ -40,7 +61,10 @@ const Cart = () => {
                             </p>
                           </div>
                           <div className='cardButtons'>
-                            <button type='button'>
+                            <button
+                              type='button'
+                              onClick={(e) => handleDecrement(e, id)}
+                            >
                               <Image
                                 src='/svg/chevron-down.svg'
                                 width={17}
@@ -48,7 +72,10 @@ const Cart = () => {
                                 alt='chevron-down icon'
                               />
                             </button>
-                            <button type='button'>
+                            <button
+                              type='button'
+                              onClick={(e) => handleIncrement(e, id)}
+                            >
                               <Image
                                 src='/svg/chevron-up.svg'
                                 width={17}
@@ -57,7 +84,11 @@ const Cart = () => {
                               />
                             </button>
                           </div>
-                          <button type='button' className='deleteCardBtn'>
+                          <button
+                            type='button'
+                            className='deleteCardBtn'
+                            onClick={() => removeFromCart(id)}
+                          >
                             <RemoveShoppingCartIcon />
                           </button>
                           <div className='cardPrice'>
