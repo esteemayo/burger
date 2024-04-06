@@ -9,6 +9,7 @@ import { useCallback, useEffect, useMemo, useState } from 'react';
 import CartCard from '../cartCard/CartCard';
 import Logo from '../logo/Logo';
 import UserMenu from '../userMenu/UserMenu';
+import Search from '../search/Search';
 
 import { useCartStore } from '@/hooks/useCartStore';
 
@@ -99,17 +100,7 @@ const Navbar = () => {
                   height={20}
                   alt='search icon'
                 />
-                <div className='searchForm'>
-                  <form onSubmit={handleSubmit}>
-                    <input type='search' placeholder='Search products...' />
-                  </form>
-                  <Image
-                    src='/img/search.png'
-                    width={20}
-                    height={20}
-                    alt='search icon'
-                  />
-                </div>
+                <Search onSubmit={handleSubmit} />
               </div>
             )}
         </div>
