@@ -7,7 +7,7 @@
 
   min-width: 20rem;
   width: 20rem;
-  padding: 1.4rem;
+  padding: 2.4rem;
   background-color: $clr-white;
   border-radius: 0.8rem;
   -webkit-box-shadow: $box-shadow;
@@ -36,5 +36,8 @@
     &:hover {
       background-color: $line;
     }
+  }
+
+  .userController {
   }
 }
