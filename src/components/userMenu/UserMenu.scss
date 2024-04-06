@@ -73,5 +73,17 @@
         }
       }
     }
+
+    .userFooter {
+      text-align: center;
+
+      span {
+        text-transform: capitalize;
+        font-weight: 400;
+        font-size: 1.3rem;
+        color: #000000de;
+        white-space: nowrap;
+      }
+    }
   }
 }
