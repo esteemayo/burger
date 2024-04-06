@@ -4,11 +4,16 @@ import { SearchProps } from '@/types';
 
 import './Search.scss';
 
-const Search = ({ onSubmit }: SearchProps) => {
+const Search = ({ value, onChange, onSubmit }: SearchProps) => {
   return (
     <div className='searchForm'>
       <form onSubmit={onSubmit}>
-        <input type='search' placeholder='Search products...' />
+        <input
+          type='search'
+          value={value}
+          placeholder='Search products...'
+          onChange={(e) => onChange(e.target.value)}
+        />
       </form>
       <Image src='/img/search.png' width={20} height={20} alt='search icon' />
     </div>
