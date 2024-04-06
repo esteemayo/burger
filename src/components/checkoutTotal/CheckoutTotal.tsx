@@ -1,7 +1,8 @@
 'use client';
 
-import Link from 'next/link';
 import Image from 'next/image';
+import Link from 'next/link';
+import { useCallback } from 'react';
 
 import { useCartStore } from '@/hooks/useCartStore';
 import { formatCurrency } from '@/utils/formatCurrency';
@@ -9,8 +10,27 @@ import { formatCurrency } from '@/utils/formatCurrency';
 import './CheckoutTotal.scss';
 
 const CheckoutTotal = () => {
-  const products = useCartStore((store) => store.products);
   const totalPrice = useCartStore((store) => store.totalPrice);
+  const products = useCartStore((store) => store.products);
+  const toggleQuantity = useCartStore((store) => store.toggleQuantity);
+
+  const handleDecrement = useCallback(
+    (e: React.MouseEvent<HTMLButtonElement>, productId: number) => {
+      e.stopPropagation();
+
+      toggleQuantity({ type: 'dec', id: productId });
+    },
+    [toggleQuantity]
+  );
+
+  const handleIncrement = useCallback(
+    (e: React.MouseEvent<HTMLButtonElement>, productId: number) => {
+      e.stopPropagation();
+
+      toggleQuantity({ type: 'inc', id: productId });
+    },
+    [toggleQuantity]
+  );
 
   return (
     <div className='checkoutTotal'>
@@ -35,9 +55,19 @@ const CheckoutTotal = () => {
                           </p>
                         </Link>
                         <div className='checkoutQty'>
-                          <button type='button'>-</button>
+                          <button
+                            type='button'
+                            onClick={(e) => handleDecrement(e, id)}
+                          >
+                            -
+                          </button>
                           <span className='qty'>{quantity}</span>
-                          <button type='button'>+</button>
+                          <button
+                            type='button'
+                            onClick={(e) => handleIncrement(e, id)}
+                          >
+                            +
+                          </button>
                         </div>
                       </div>
                       <div className='checkoutDeleteWrap'>
