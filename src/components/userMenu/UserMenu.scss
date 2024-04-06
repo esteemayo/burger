@@ -83,6 +83,14 @@
         text-transform: capitalize;
         color: #000000de;
         white-space: nowrap;
+        margin-right: 0.5rem;
+      }
+
+      button {
+        all: unset;
+        display: inline-block;
+        color: $clr-primary;
+        cursor: pointer;
       }
     }
   }
