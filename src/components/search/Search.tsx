@@ -12,7 +12,7 @@ const Search = ({ value, onChange, onSubmit }: SearchProps) => {
           type='search'
           value={value}
           placeholder='Search products...'
-          onChange={(e) => onChange(e.target.value)}
+          onChange={onChange}
         />
       </form>
       <Image src='/img/search.png' width={20} height={20} alt='search icon' />
