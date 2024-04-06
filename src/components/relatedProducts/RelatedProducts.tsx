@@ -10,7 +10,7 @@ const RelatedProducts = () => {
         <h2 className='relatedHeader'>Related products</h2>
         <div className='relatedWrap'>
           {relatedProducts.map((product) => {
-            return <RelatedProduct key={product.id} {...product} />;
+            return <RelatedProduct key={product.id} product={product} />;
           })}
         </div>
       </div>
