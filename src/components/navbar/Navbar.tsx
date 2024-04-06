@@ -14,6 +14,7 @@ import Search from '../search/Search';
 import { useCartStore } from '@/hooks/useCartStore';
 
 import './Navbar.scss';
+import { useSearch } from '@/hooks/useSearch';
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -24,7 +25,8 @@ const Navbar = () => {
   const totalItems = useCartStore((store) => store.totalItems);
   const toggleQuantity = useCartStore((store) => store.toggleQuantity);
 
-  const [query, setQuery] = useState('');
+  const {query, handleChange, handleSubmit} = useSearch()
+
   const [isActive, setIsActive] = useState(false);
 
   const isActiveHandler = useCallback(() => {
@@ -46,10 +48,6 @@ const Navbar = () => {
     },
     [toggleQuantity]
   );
-
-  const handleSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-  }, []);
 
   const navClasses = useMemo(() => {
     return isActive ? 'navbar active' : 'navbar';
@@ -103,7 +101,7 @@ const Navbar = () => {
                 />
                 <Search
                   value={query}
-                  onChange={setQuery}
+                  onChange={handleChange}
                   onSubmit={handleSubmit}
                 />
               </div>
