@@ -12,8 +12,12 @@ const UserMenu = ({ currentUser }: UserMenuProps) => {
     <div className='userMenu'>
       {!currentUser ? (
         <>
-          <Link href='/login'>Login</Link>
-          <Link href='/register'>Register</Link>
+          <Link href='/login' className='loginLink'>
+            Login
+          </Link>
+          <Link href='/register' className='registerLink'>
+            Register
+          </Link>
         </>
       ) : (
         <div className='userController'>
