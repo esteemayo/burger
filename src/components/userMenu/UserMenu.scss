@@ -38,6 +38,10 @@
   }
 
   .userController {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
     .userLinks {
       display: flex;
       gap: 0.5rem;
