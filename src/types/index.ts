@@ -9,7 +9,7 @@ export type CartItem = {
   image: string;
   price: number;
   ingredients?: string[];
-  quantity: number;
+  quantity?: number;
 };
 
 export type CartType = CartItem[];
