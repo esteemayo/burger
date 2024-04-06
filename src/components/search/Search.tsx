@@ -15,7 +15,13 @@ const Search = ({ value, onChange, onSubmit }: SearchProps) => {
           onChange={onChange}
         />
       </form>
-      <Image src='/img/search.png' width={20} height={20} alt='search icon' />
+      <Image
+        src='/img/search.png'
+        width={15}
+        height={15}
+        alt='search icon'
+        className='searchInputIcon'
+      />
     </div>
   );
 };
