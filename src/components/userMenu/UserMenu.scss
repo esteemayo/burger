@@ -98,6 +98,11 @@
         display: inline-block;
         color: $clr-primary;
         cursor: pointer;
+        transition: all 0.3s;
+
+        &:hover {
+          color: $clr-secondary;
+        }
 
         &:disabled {
           opacity: 0.7;
