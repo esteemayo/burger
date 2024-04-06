@@ -15,7 +15,16 @@ const UserMenu = ({ currentUser }: UserMenuProps) => {
           <Link href='/register'>Register</Link>
         </>
       ) : (
-        <Link href='/profile'>User profile</Link>
+        <div className='userController'>
+          <div className='userLinks'>
+            <Link href='/profile'>Upcoming orders</Link>
+            <Link href='/profile'>Account</Link>
+          </div>
+          <div className='userFooter'>
+            <span>Not Emmanuel</span>
+            <button type='button'>Sign out</button>
+          </div>
+        </div>
       )}
     </div>
   );
