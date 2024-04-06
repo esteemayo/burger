@@ -18,7 +18,7 @@ const UserMenu = ({ currentUser }: UserMenuProps) => {
       ) : (
         <div className='userController'>
           <div className='userLinks'>
-            <Link href='/profile'>
+            <Link href='/orders'>
               <Image src='/svg/user-plus.svg' width={30} height={30} alt='' />
               <span className='userLabel'>Upcoming orders</span>
             </Link>

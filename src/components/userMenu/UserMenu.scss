@@ -5,8 +5,8 @@
   top: 4rem;
   right: -60rem;
 
-  min-width: 25rem;
-  width: 25rem;
+  min-width: 20rem;
+  width: 20rem;
   padding: 2.4rem;
   background-color: $clr-white;
   border-radius: 0.8rem;
@@ -52,6 +52,8 @@
       a:active {
         display: flex;
         flex-direction: column;
+        padding-left: 0;
+        padding-right: 0;
         background-color: transparent;
 
         img {
