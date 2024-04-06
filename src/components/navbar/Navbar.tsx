@@ -24,6 +24,7 @@ const Navbar = () => {
   const totalItems = useCartStore((store) => store.totalItems);
   const toggleQuantity = useCartStore((store) => store.toggleQuantity);
 
+  const [query, setQuery] = useState('');
   const [isActive, setIsActive] = useState(false);
 
   const isActiveHandler = useCallback(() => {
@@ -100,7 +101,11 @@ const Navbar = () => {
                   height={20}
                   alt='search icon'
                 />
-                <Search onSubmit={handleSubmit} />
+                <Search
+                  value={query}
+                  onChange={setQuery}
+                  onSubmit={handleSubmit}
+                />
               </div>
             )}
         </div>
