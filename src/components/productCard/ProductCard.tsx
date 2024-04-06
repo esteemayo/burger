@@ -2,24 +2,16 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useCallback, useMemo } from 'react';
+import { useMemo } from 'react';
 
-import { useCartStore } from '@/hooks/useCartStore';
 import { ProductCardProps } from '@/types';
+import { useCart } from '@/hooks/useCart';
 import { formatCurrency } from '@/utils/formatCurrency';
 
 import './ProductCard.scss';
 
 const ProductCard = ({ product }: ProductCardProps) => {
-  const addToCart = useCartStore((state) => state.addToCart);
-
-  const handleClick = useCallback(
-    (e: React.MouseEvent<HTMLButtonElement>) => {
-      e.stopPropagation();
-      addToCart({ ...product, quantity: 1 });
-    },
-    [addToCart, product]
-  );
+  const { handleClick } = useCart(product);
 
   const url = useMemo(() => {
     return `/product/${encodeURIComponent(product.id)}`;

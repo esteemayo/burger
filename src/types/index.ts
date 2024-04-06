@@ -128,7 +128,7 @@ interface ProductCard {
 }
 
 export interface ProductCardProps {
-  product: ProductCard | CartItem;
+  product: CartItem;
 }
 
 export interface InputProps
