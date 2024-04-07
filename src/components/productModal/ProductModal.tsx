@@ -24,8 +24,8 @@ const initialState: ProductData = {
 };
 
 const ProductModal = () => {
-  const isOpen = useProductModal((state) => state.isOpen);
-  const onClose = useProductModal((state) => state.onClose);
+  const isOpen = useProductModal((store) => store.isOpen);
+  const onClose = useProductModal((store) => store.onClose);
 
   const [file, setFile] = useState<File[]>();
   const [ingredient, setIngredient] = useState('');
