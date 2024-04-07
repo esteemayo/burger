@@ -74,6 +74,11 @@
                 color: $clr-primary;
                 border: 1px solid currentColor;
                 border-radius: 0.5rem;
+                transition: all 0.3s;
+
+                &:hover {
+                  color: $clr-secondary;
+                }
               }
             }
           }
