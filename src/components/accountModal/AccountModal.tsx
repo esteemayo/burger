@@ -10,8 +10,8 @@ import { useAccountModal } from '@/hooks/useAccountModal';
 import './AccountModal.scss';
 
 const AccountModal = () => {
-  const isOpen = useAccountModal((state) => state.isOpen);
-  const onClose = useAccountModal((state) => state.onClose);
+  const isOpen = useAccountModal((store) => store.isOpen);
+  const onClose = useAccountModal((store) => store.onClose);
 
   const onSubmit = useCallback(() => {
     console.log('Account deactivated!');
