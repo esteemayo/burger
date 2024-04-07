@@ -128,16 +128,16 @@
     margin-top: 1rem;
 
     .cartBtn {
-      border: none;
       outline: none;
       width: 100%;
+      text-align: center;
       text-transform: capitalize;
       font-weight: 500;
       font-size: 1.3rem;
-      padding: 0.5rem;
+      padding: 1rem;
       background: $clr-secondary;
-      color: $clr-white;
-      border-radius: 0.6rem;
+      color: $clr-white !important;
+      border-radius: 0.5rem;
 
       display: flex;
       align-items: center;
