@@ -1,6 +1,8 @@
 @import '../../styles/variables.scss';
 
 .cartCard {
+  min-width: 20rem;
+
   .cardHeader {
     font-weight: 700;
     font-size: 1.3rem;
