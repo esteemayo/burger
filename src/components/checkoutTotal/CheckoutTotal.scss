@@ -67,16 +67,13 @@
 
             .emptyCartLinkWrap {
               .emptyCartLink {
-                &:link,
-                &:active {
-                  font-weight: 500;
-                  font-size: 1.3rem;
-                  padding: 0.8rem 2.4rem;
-                  background-color: transparent;
-                  color: $clr-primary;
-                  border: 1px solid currentColor;
-                  border-radius: 0.5rem;
-                }
+                font-weight: 500;
+                font-size: 1.3rem;
+                padding: 0.8rem 2.4rem;
+                background-color: transparent;
+                color: $clr-primary;
+                border: 1px solid currentColor;
+                border-radius: 0.5rem;
               }
             }
           }
