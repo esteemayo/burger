@@ -29,6 +29,10 @@
           border-radius: 50%;
 
           .successIcon {
+            display: block;
+            width: 5rem;
+            height: 4rem;
+            object-fit: cover;
           }
         }
 
