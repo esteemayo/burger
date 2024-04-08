@@ -109,8 +109,11 @@
           justify-content: space-between;
 
           span {
+            width: 6rem;
             text-transform: capitalize;
             font-weight: 600;
+            line-height: 1;
+            margin-top: 2rem;
           }
         }
 
