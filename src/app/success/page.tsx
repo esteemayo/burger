@@ -14,6 +14,7 @@ const Success = () => {
                 width={30}
                 height={30}
                 alt='check icon'
+                className='successIcon'
               />
             </div>
             <div className='successMessage'>

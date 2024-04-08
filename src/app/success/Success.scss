@@ -1,3 +1,5 @@
+@import '../../styles/variables.scss';
+
 .success {
   display: flex;
   justify-content: center;
@@ -5,5 +7,31 @@
   .container {
     width: 120rem;
     padding: 8rem 0;
+
+    .successWrap {
+      padding: 5rem 3rem;
+      background-color: #31c07e;
+      color: $clr-white;
+      box-shadow: $box-shadow;
+      border-radius: 0.5rem;
+
+      .successBox {
+        .successIconWrap {
+          .successIcon {
+          }
+        }
+
+        .successMessage {
+          .successHeadingSub {
+          }
+
+          .successHeadingMain {
+          }
+
+          .successText {
+          }
+        }
+      }
+    }
   }
 }
