@@ -123,7 +123,7 @@ const Success = () => {
             </div>
             <div className='orderDelivery'>
               <span>
-                Expected delivery date: <b>16 April 2024</b>
+                Expected delivery date: <time>16 April 2024</time>
               </span>
               <Link href='/'>Track your order</Link>
             </div>
