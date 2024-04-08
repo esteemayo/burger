@@ -135,6 +135,10 @@
           a,
           a:link,
           a:active {
+            text-decoration: underline;
+            text-underline-offset: 0.5rem;
+            font-size: 1.3rem;
+            color: inherit;
           }
         }
       }
