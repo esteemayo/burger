@@ -62,6 +62,38 @@
           }
         }
       }
+
+      .orderStatus {
+        p {
+        }
+
+        .orderIconWrap {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .statusIconWrap {
+            svg {
+              width: 2rem;
+            }
+          }
+
+          .orderStatusText {
+            span {
+            }
+          }
+
+          .orderDelivery {
+            p {
+            }
+
+            a,
+            a:link,
+            a:active {
+            }
+          }
+        }
+      }
     }
   }
 }

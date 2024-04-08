@@ -32,7 +32,7 @@ const Success = () => {
               Order #2059665 was placed on <time>April 8, 2024</time> and is
               currently in progress
             </p>
-            <div>
+            <div className='orderIconWrap'>
               <div className='statusIconWrap'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
