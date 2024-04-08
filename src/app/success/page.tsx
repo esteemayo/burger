@@ -11,8 +11,8 @@ const Success = () => {
             <div className='successIconWrap'>
               <Image
                 src='/svg/check.svg'
-                width={30}
-                height={30}
+                width={50}
+                height={50}
                 alt='check icon'
                 className='successIcon'
               />
