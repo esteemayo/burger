@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import RemoveShoppingCartIcon from '@mui/icons-material/RemoveShoppingCart';
 
-import { CartCardProps } from '@/types';
+import { CartMenuProps } from '@/types';
 import { formatCurrency } from '@/utils/formatCurrency';
 
 import './CartMenu.scss';
@@ -13,7 +13,7 @@ const CartMenu = ({
   onIncrement,
   onDecrement,
   onRemove,
-}: CartCardProps) => {
+}: CartMenuProps) => {
   return (
     <div className='cartCard'>
       {products.length < 1 ? (

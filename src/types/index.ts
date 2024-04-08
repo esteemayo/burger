@@ -29,7 +29,7 @@ export interface CartActionType {
   calcTotals(): void;
 }
 
-export interface CartCardProps {
+export interface CartMenuProps {
   products: CartItem[];
   totalPrice: number;
   onIncrement(e: React.MouseEvent<HTMLButtonElement>, productId: number): void;
