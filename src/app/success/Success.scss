@@ -118,7 +118,11 @@
         }
 
         .orderDelivery {
-          p {
+          display: flex;
+          align-items: center;
+          gap: 3rem;
+
+          span {
           }
 
           a,
