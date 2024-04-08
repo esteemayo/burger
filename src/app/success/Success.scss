@@ -28,6 +28,10 @@
           box-shadow: inset $box;
           border-radius: 50%;
 
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
           .successIcon {
             display: block;
             width: 5rem;
