@@ -16,6 +16,11 @@
       border-radius: 0.5rem;
 
       .successBox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
         .successIconWrap {
           .successIcon {
           }
