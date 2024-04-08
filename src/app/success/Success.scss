@@ -22,11 +22,19 @@
         justify-content: center;
 
         .successIconWrap {
+          width: 7rem;
+          height: 7rem;
+          background-color: $clr-white;
+          box-shadow: inset $box;
+          border-radius: 50%;
+
           .successIcon {
           }
         }
 
         .successMessage {
+          text-align: center;
+
           .successHeadingSub {
           }
 
