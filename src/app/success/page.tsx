@@ -1,4 +1,4 @@
-import './Success';
+import './Success.scss';
 
 const Success = () => {
   return (
