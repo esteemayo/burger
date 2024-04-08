@@ -1,8 +1,6 @@
 @import '../../styles/variables.scss';
 
 .cartCard {
-  min-width: 20rem;
-
   .cardHeader {
     font-weight: 700;
     font-size: 1.3rem;
@@ -127,7 +125,7 @@
   }
 
   .cartFooter {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
 
     .cartBtn {
       outline: none;
