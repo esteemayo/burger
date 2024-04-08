@@ -95,20 +95,24 @@
               stroke: $clr-white;
             }
           }
+        }
 
-          .orderStatusText {
-            span {
-            }
+        .orderStatusText {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          span {
+          }
+        }
+
+        .orderDelivery {
+          p {
           }
 
-          .orderDelivery {
-            p {
-            }
-
-            a,
-            a:link,
-            a:active {
-            }
+          a,
+          a:link,
+          a:active {
           }
         }
       }
