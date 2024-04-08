@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Image from 'next/image';
 
 import './Success.scss';
@@ -24,6 +25,107 @@ const Success = () => {
                 We will be sending you an email confirmation to
                 eadebayo15@gmail.com shortly
               </p>
+            </div>
+          </div>
+          <div className='orderStatus'>
+            <p>
+              Order #2059665 was placed on <time>April 8, 2024</time> and is
+              currently in progress
+            </p>
+            <div>
+              <div className='statusIconWrap'>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  fill='none'
+                  viewBox='0 0 24 24'
+                  strokeWidth={1.5}
+                  stroke='currentColor'
+                  className='w-6 h-6'
+                >
+                  <path
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    d='m4.5 12.75 6 6 9-13.5'
+                  />
+                </svg>
+              </div>
+              <div className='statusIconWrap'>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  fill='none'
+                  viewBox='0 0 24 24'
+                  strokeWidth={1.5}
+                  stroke='currentColor'
+                  className='w-6 h-6'
+                >
+                  <path
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    d='m4.5 12.75 6 6 9-13.5'
+                  />
+                </svg>
+              </div>
+              <div className='statusIconWrap'>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  fill='none'
+                  viewBox='0 0 24 24'
+                  strokeWidth={1.5}
+                  stroke='currentColor'
+                  className='w-6 h-6'
+                >
+                  <path
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    d='m4.5 12.75 6 6 9-13.5'
+                  />
+                </svg>
+              </div>
+              <div className='statusIconWrap'>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  fill='none'
+                  viewBox='0 0 24 24'
+                  strokeWidth={1.5}
+                  stroke='currentColor'
+                  className='w-6 h-6'
+                >
+                  <path
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    d='m4.5 12.75 6 6 9-13.5'
+                  />
+                </svg>
+              </div>
+              <div className='statusIconWrap'>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  fill='none'
+                  viewBox='0 0 24 24'
+                  strokeWidth={1.5}
+                  stroke='currentColor'
+                  className='w-6 h-6'
+                >
+                  <path
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    d='m4.5 12.75 6 6 9-13.5'
+                  />
+                </svg>
+              </div>
+            </div>
+            <div className='orderStatusText'>
+              <span>Order confirmed</span>
+              <span>Start production</span>
+              <span>Quality check</span>
+              <span>Dispatched item</span>
+              <span>Product delivered</span>
+            </div>
+            <div className='orderDelivery'>
+              <p>
+                Expected delivery date: <b>16 April 2024</b>
+              </p>
+              <Link href='/'>Track your order</Link>
             </div>
           </div>
         </div>
