@@ -139,6 +139,11 @@
             text-underline-offset: 0.5rem;
             font-size: 1.3rem;
             color: inherit;
+            transition: all 0.3s;
+
+            &:hover {
+              text-decoration: none;
+            }
           }
         }
       }
