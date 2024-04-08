@@ -6,7 +6,7 @@ import RoomServiceIcon from '@mui/icons-material/RoomService';
 import Image from 'next/image';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 
-import CartCard from '../cartCard/CartCard';
+import CartMenu from '../cartMenu/CartMenu';
 import Logo from '../logo/Logo';
 import UserMenu from '../userMenu/UserMenu';
 import Search from '../search/Search';
@@ -94,7 +94,7 @@ const Navbar = () => {
             />
             <span className='count'>{totalItems}</span>
             <div className='cartBox'>
-              <CartCard
+              <CartMenu
                 products={products}
                 totalPrice={totalPrice}
                 onIncrement={handleIncrement}

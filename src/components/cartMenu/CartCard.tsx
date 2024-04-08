@@ -5,9 +5,9 @@ import RemoveShoppingCartIcon from '@mui/icons-material/RemoveShoppingCart';
 import { CartCardProps } from '@/types';
 import { formatCurrency } from '@/utils/formatCurrency';
 
-import './CartCard.scss';
+import './CartMenu.scss';
 
-const CartCard = ({
+const CartMenu = ({
   products,
   totalPrice,
   onIncrement,
@@ -75,4 +75,4 @@ const CartCard = ({
   );
 };
 
-export default CartCard;
+export default CartMenu;
