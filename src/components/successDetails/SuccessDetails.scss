@@ -52,13 +52,14 @@
     padding: 1rem 0;
 
     .orderSummary {
-      padding: 1rem 2rem;
+      padding: 0.5rem 2rem;
       background-color: $clr-white;
       border: 1px solid $line;
       margin-bottom: 1rem;
 
       h3 {
         display: inline-block;
+        text-transform: capitalize;
         font-weight: 600;
         font-size: 100%;
       }

@@ -30,13 +30,15 @@ const SuccessDetails = () => {
         <div className='orderSummary'>
           <h3>Order summary (3)</h3>
         </div>
-        <div className='summary'>
-          <span>Sub total</span>
-          <span>$21999.00</span>
-        </div>
-        <div className='summary'>
-          <span>Delivery</span>
-          <span>$21999.00</span>
+        <div className='summaryBox'>
+          <div className='summary'>
+            <span>Sub total</span>
+            <span>$21999.00</span>
+          </div>
+          <div className='summary'>
+            <span>Delivery</span>
+            <span>$21999.00</span>
+          </div>
         </div>
         <div className='summaryTotal'>
           <span>Total</span>
