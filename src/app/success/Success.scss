@@ -6,6 +6,8 @@
 
   .container {
     width: 120rem;
-    padding: 8rem 0;
+    padding: 8rem 1.2rem;
+    display: flex;
+    align-items: flex-start;
   }
 }

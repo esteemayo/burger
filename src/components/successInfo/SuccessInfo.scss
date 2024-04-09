@@ -1,147 +1,152 @@
 @import '../../styles/variables.scss';
 
 .successInfo {
-  padding: 5rem 3rem;
-  background-color: #31c07e;
-  color: $clr-white;
-  box-shadow: $box-shadow;
-  border-radius: 0.5rem;
+  flex: 3;
+  padding-right: 1.2rem;
 
-  .successBox {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 3rem;
+  .successWrap {
+    padding: 5rem 3rem;
+    background-color: #31c07e;
+    color: $clr-white;
+    box-shadow: $box-shadow;
+    border-radius: 0.5rem;
 
-    .successIconWrap {
-      width: 10rem;
-      height: 10rem;
-      background-color: $clr-white;
-      box-shadow: inset $box;
-      border-radius: 50%;
-
+    .successBox {
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
+      gap: 3rem;
 
-      .successIcon {
-        display: block;
-        width: 5rem;
-        height: 4rem;
-        object-fit: cover;
-      }
-    }
+      .successIconWrap {
+        width: 10rem;
+        height: 10rem;
+        background-color: $clr-white;
+        box-shadow: inset $box;
+        border-radius: 50%;
 
-    .successMessage {
-      text-align: center;
-      line-height: 1.4;
-
-      .successHeadingSub {
-        text-transform: uppercase;
-        font-weight: 400;
-        font-size: 2rem;
-      }
-
-      .successHeadingMain {
-        text-transform: uppercase;
-        font-weight: 500;
-        font-size: 2.5rem;
-      }
-
-      .successText {
-        font-size: 1.3rem;
-      }
-    }
-  }
-
-  .orderStatus {
-    padding: 3rem;
-    background-color: $clr-white;
-    color: $clr-black;
-    border-radius: 0.5rem;
-    margin-top: 5rem;
-
-    p {
-      text-align: center;
-      font-size: 1.3rem;
-      color: $clr-gray-dark;
-      margin-bottom: 3rem;
-
-      time {
-        font-weight: 700;
-      }
-    }
-
-    .orderIconWrap {
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-
-      .statusIconWrap {
         display: flex;
         align-items: center;
         justify-content: center;
 
-        width: 3rem;
-        height: 3rem;
-        background-color: #dddddd;
-        border-radius: 50%;
-
-        &.active {
-          background-color: #31c07e;
-        }
-
-        svg {
-          width: 2rem;
-          stroke: $clr-white;
-          stroke-width: 4px;
+        .successIcon {
+          display: block;
+          width: 5rem;
+          height: 4rem;
+          object-fit: cover;
         }
       }
-    }
 
-    .orderStatusText {
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-
-      span {
-        width: 10rem;
+      .successMessage {
         text-align: center;
-        text-transform: capitalize;
-        font-weight: 600;
-        line-height: 1;
-        margin-top: 2rem;
+        line-height: 1.4;
+
+        .successHeadingSub {
+          text-transform: uppercase;
+          font-weight: 400;
+          font-size: 2rem;
+        }
+
+        .successHeadingMain {
+          text-transform: uppercase;
+          font-weight: 500;
+          font-size: 2.5rem;
+        }
+
+        .successText {
+          font-size: 1.3rem;
+        }
       }
     }
 
-    .orderDelivery {
-      display: flex;
-      align-items: center;
-      gap: 3rem;
+    .orderStatus {
+      padding: 3rem;
+      background-color: $clr-white;
+      color: $clr-black;
+      border-radius: 0.5rem;
       margin-top: 5rem;
-      margin-left: 6rem;
 
-      span {
+      p {
+        text-align: center;
         font-size: 1.3rem;
         color: $clr-gray-dark;
+        margin-bottom: 3rem;
 
         time {
           font-weight: 700;
         }
       }
 
-      a,
-      a:link,
-      a:active {
-        text-decoration: underline;
-        text-underline-offset: 0.5rem;
-        font-size: 1.3rem;
-        color: inherit;
-        transition: all 0.3s;
+      .orderIconWrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
 
-        &:hover {
-          text-decoration: none;
+        .statusIconWrap {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          width: 3rem;
+          height: 3rem;
+          background-color: #dddddd;
+          border-radius: 50%;
+
+          &.active {
+            background-color: #31c07e;
+          }
+
+          svg {
+            width: 2rem;
+            stroke: $clr-white;
+            stroke-width: 4px;
+          }
+        }
+      }
+
+      .orderStatusText {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        span {
+          width: 10rem;
+          text-align: center;
+          text-transform: capitalize;
+          font-weight: 600;
+          line-height: 1;
+          margin-top: 2rem;
+        }
+      }
+
+      .orderDelivery {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+        margin-top: 5rem;
+        margin-left: 6rem;
+
+        span {
+          font-size: 1.3rem;
+          color: $clr-gray-dark;
+
+          time {
+            font-weight: 700;
+          }
+        }
+
+        a,
+        a:link,
+        a:active {
+          text-decoration: underline;
+          text-underline-offset: 0.5rem;
+          font-size: 1.3rem;
+          color: inherit;
+          transition: all 0.3s;
+
+          &:hover {
+            text-decoration: none;
+          }
         }
       }
     }
