@@ -29,11 +29,10 @@
         align-items: center;
         justify-content: center;
 
-        .successIcon {
-          display: block;
-          width: 5rem;
-          height: 4rem;
-          object-fit: cover;
+        svg {
+          width: 6rem;
+          stroke: #31c07e;
+          stroke-width: 4px;
         }
       }
 

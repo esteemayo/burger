@@ -9,13 +9,20 @@ const SuccessInfo = () => {
       <div className='successWrap'>
         <div className='successBox'>
           <div className='successIconWrap'>
-            <Image
-              src='/svg/check.svg'
-              width={50}
-              height={50}
-              alt='check icon'
-              className='successIcon'
-            />
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              fill='none'
+              viewBox='0 0 24 24'
+              strokeWidth={1.5}
+              stroke='currentColor'
+              className='w-6 h-6'
+            >
+              <path
+                strokeLinecap='round'
+                strokeLinejoin='round'
+                d='m4.5 12.75 6 6 9-13.5'
+              />
+            </svg>
           </div>
           <div className='successMessage'>
             <h2 className='successHeadingSub'>Thank you</h2>
