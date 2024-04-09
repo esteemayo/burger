@@ -25,11 +25,19 @@
   }
 
   .contactDetails {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
     padding: 1rem 2rem;
     background-color: $clr-white;
 
     &:not(:last-child) {
       margin-bottom: 3px;
+    }
+
+    svg {
+      width: 2.5rem;
     }
 
     h3 {
