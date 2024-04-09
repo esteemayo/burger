@@ -55,6 +55,7 @@
       padding: 1rem 2rem;
       background-color: $clr-white;
       border: 1px solid $line;
+      margin-bottom: 1rem;
 
       h3 {
         display: inline-block;
@@ -64,6 +65,8 @@
     }
 
     .summary {
+      padding: 0 2rem;
+
       span {
       }
     }
