@@ -134,14 +134,15 @@
         a,
         a:link,
         a:active {
-          text-decoration: underline;
+          text-decoration: none;
           text-underline-offset: 0.5rem;
           font-size: 1.3rem;
           color: inherit;
           transition: all 0.3s;
 
           &:hover {
-            text-decoration: none;
+            text-decoration: underline;
+            color: $clr-gray-dark;
           }
         }
       }
