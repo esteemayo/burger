@@ -38,11 +38,13 @@
       text-transform: capitalize;
       font-weight: 600;
       font-size: 100%;
+      padding: 1rem 0;
     }
 
     .contactInfo,
     .contactPhone {
       font-size: 1.3rem;
+      color: $clr-gray-dark;
     }
 
     .orderSummaryWrap {
