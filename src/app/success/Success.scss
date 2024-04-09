@@ -84,7 +84,7 @@
         .orderIconWrap {
           display: flex;
           align-items: center;
-          justify-content: space-between;
+          justify-content: space-around;
 
           .statusIconWrap {
             display: flex;
@@ -106,10 +106,11 @@
         .orderStatusText {
           display: flex;
           align-items: center;
-          justify-content: space-between;
+          justify-content: space-around;
 
           span {
-            width: 6rem;
+            width: 10rem;
+            text-align: center;
             text-transform: capitalize;
             font-weight: 600;
             line-height: 1;
