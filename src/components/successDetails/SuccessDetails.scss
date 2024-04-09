@@ -65,14 +65,19 @@
       }
     }
 
-    .summary {
-      padding: 0 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+    .summaryBox {
+      padding-bottom: 2rem;
+      border-bottom: 1px solid $clr-gray-light;
 
-      span {
-        font-size: 1.3rem;
+      .summary {
+        padding: 0 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        span {
+          font-size: 1.3rem;
+        }
       }
     }
 
