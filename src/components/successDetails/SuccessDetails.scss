@@ -46,20 +46,28 @@
       font-size: 1.3rem;
       color: $clr-gray-dark;
     }
+  }
 
-    .orderSummaryWrap {
-      .orderSummary {
-        h3 {
-        }
-      }
+  .orderSummaryWrap {
+    padding: 1rem 0;
 
-      .summary {
-        span {
-        }
-      }
+    .orderSummary {
+      padding: 1rem 2rem;
+      background-color: $clr-white;
 
-      .summaryTotal {
+      h3 {
+        display: inline-block;
+        font-weight: 600;
+        font-size: 100%;
       }
+    }
+
+    .summary {
+      span {
+      }
+    }
+
+    .summaryTotal {
     }
   }
 }
