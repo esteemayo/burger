@@ -7,8 +7,10 @@ const Success = () => {
   return (
     <div className='success'>
       <div className='container'>
-        <SuccessInfo />
-        <SuccessDetails />
+        <div className='wrapper'>
+          <SuccessInfo />
+          <SuccessDetails />
+        </div>
       </div>
     </div>
   );
