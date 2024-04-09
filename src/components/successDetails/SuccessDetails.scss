@@ -66,12 +66,19 @@
 
     .summary {
       padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
 
       span {
+        font-size: 1.3rem;
       }
     }
 
     .summaryTotal {
+      span {
+        font-size: 1.3rem;
+      }
     }
   }
 }
