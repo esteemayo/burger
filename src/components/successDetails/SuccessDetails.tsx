@@ -95,16 +95,16 @@ const SuccessDetails = () => {
         <div className='summaryBox'>
           <div className='summary'>
             <span>Sub total</span>
-            <span>$21999.00</span>
+            <span>$21,999.00</span>
           </div>
           <div className='summary'>
             <span>Delivery</span>
-            <span>$21999.00</span>
+            <span>$21,999.00</span>
           </div>
         </div>
         <div className='summaryTotal'>
           <span>Total</span>
-          <span>$21999.00</span>
+          <span>$21,999.00</span>
         </div>
       </div>
     </div>
