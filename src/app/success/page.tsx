@@ -33,7 +33,7 @@ const Success = () => {
               currently in progress
             </p>
             <div className='orderIconWrap'>
-              <div className='statusIconWrap'>
+              <div className='statusIconWrap active'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   fill='none'
