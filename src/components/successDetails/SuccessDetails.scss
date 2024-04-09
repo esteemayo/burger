@@ -67,7 +67,7 @@
 
     .summaryBox {
       padding-bottom: 2rem;
-      border-bottom: 1px solid $clr-gray-light;
+      border-bottom: 1px solid $line;
 
       .summary {
         padding: 0 2rem;
@@ -82,6 +82,11 @@
     }
 
     .summaryTotal {
+      padding: 1rem 2rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
       span {
         font-size: 1.3rem;
       }
