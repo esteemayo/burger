@@ -26,6 +26,13 @@
   }
 
   .contactDetails {
+    padding: 1rem 2rem;
+    background-color: $clr-white;
+
+    &:not(:last-child) {
+      margin-bottom: 3px;
+    }
+
     h3 {
     }
 
