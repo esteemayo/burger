@@ -48,10 +48,10 @@
   }
 
   .orderSummaryWrap {
-    padding: 1rem 0;
+    padding: 1rem;
 
     .orderSummary {
-      padding: 0.5rem 2rem;
+      padding: 0.5rem 1rem;
       background-color: $clr-white;
       border: 1px solid $line;
       margin-bottom: 1rem;
@@ -69,7 +69,7 @@
       border-bottom: 1px solid $line;
 
       .summary {
-        padding: 0 2rem;
+        padding: 0 1rem;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -81,7 +81,7 @@
     }
 
     .summaryTotal {
-      padding: 1rem 2rem 0;
+      padding: 1rem 1rem 0;
       display: flex;
       align-items: center;
       justify-content: space-between;
