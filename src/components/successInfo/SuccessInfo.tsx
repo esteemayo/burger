@@ -37,95 +37,23 @@ const SuccessInfo = () => {
             Order #2059665 was placed on <time>April 8, 2024</time> and is
             currently in progress
           </p>
-          <div className='orderIconWrap'>
-            <div className='statusIconWrap active'>
-              <svg
-                xmlns='http://www.w3.org/2000/svg'
-                fill='none'
-                viewBox='0 0 24 24'
-                strokeWidth={1.5}
-                stroke='currentColor'
-                className='w-6 h-6'
-              >
-                <path
-                  strokeLinecap='round'
-                  strokeLinejoin='round'
-                  d='m4.5 12.75 6 6 9-13.5'
-                />
-              </svg>
-            </div>
-            <div className='statusIconWrap'>
-              <svg
-                xmlns='http://www.w3.org/2000/svg'
-                fill='none'
-                viewBox='0 0 24 24'
-                strokeWidth={1.5}
-                stroke='currentColor'
-                className='w-6 h-6'
-              >
-                <path
-                  strokeLinecap='round'
-                  strokeLinejoin='round'
-                  d='m4.5 12.75 6 6 9-13.5'
-                />
-              </svg>
-            </div>
-            <div className='statusIconWrap'>
-              <svg
-                xmlns='http://www.w3.org/2000/svg'
-                fill='none'
-                viewBox='0 0 24 24'
-                strokeWidth={1.5}
-                stroke='currentColor'
-                className='w-6 h-6'
-              >
-                <path
-                  strokeLinecap='round'
-                  strokeLinejoin='round'
-                  d='m4.5 12.75 6 6 9-13.5'
-                />
-              </svg>
-            </div>
-            <div className='statusIconWrap'>
-              <svg
-                xmlns='http://www.w3.org/2000/svg'
-                fill='none'
-                viewBox='0 0 24 24'
-                strokeWidth={1.5}
-                stroke='currentColor'
-                className='w-6 h-6'
-              >
-                <path
-                  strokeLinecap='round'
-                  strokeLinejoin='round'
-                  d='m4.5 12.75 6 6 9-13.5'
-                />
-              </svg>
-            </div>
-            <div className='statusIconWrap'>
-              <svg
-                xmlns='http://www.w3.org/2000/svg'
-                fill='none'
-                viewBox='0 0 24 24'
-                strokeWidth={1.5}
-                stroke='currentColor'
-                className='w-6 h-6'
-              >
-                <path
-                  strokeLinecap='round'
-                  strokeLinejoin='round'
-                  d='m4.5 12.75 6 6 9-13.5'
-                />
-              </svg>
-            </div>
-          </div>
-          <div className='orderStatusText'>
-            <span>Order confirmed</span>
-            <span>Start production</span>
-            <span>Quality check</span>
-            <span>Dispatched item</span>
-            <span>Product delivered</span>
-          </div>
+          <ul className='stepper'>
+            <li className='done'>
+              <div className='item'>Order confirmed</div>
+            </li>
+            <li className='done'>
+              <div className='item'>Start production</div>
+            </li>
+            <li className='ready'>
+              <div className='item'>Quality check</div>
+            </li>
+            <li className='ready'>
+              <div className='item'>Dispatched item</div>
+            </li>
+            <li className='ready'>
+              <div className='item'>Product delivered</div>
+            </li>
+          </ul>
           <div className='orderDelivery'>
             <span>
               Expected delivery date: <time>16 April 2024</time>
