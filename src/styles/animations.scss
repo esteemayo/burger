@@ -1,3 +1,5 @@
+@import './variables.scss';
+
 @keyframes moveInBottom {
   from {
     opacity: 0;
@@ -23,6 +25,5 @@
 @keyframes pulse {
   to {
     border-color: $clr-gray-light;
-    opacity: 0.3;
   }
 }
