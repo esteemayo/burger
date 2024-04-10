@@ -26,6 +26,17 @@
         align-items: center;
         justify-content: center;
 
+        &::before {
+          content: '\2713';
+          font-weight: 900;
+          font-size: 6rem;
+          color: #31c07e;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
         svg {
           width: 6rem;
           stroke: #31c07e;
