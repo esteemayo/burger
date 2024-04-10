@@ -16,6 +16,16 @@
       font-weight: 600;
       font-size: 1.4rem;
       line-height: 1.4;
+
+      &::after {
+        display: block;
+        content: '';
+        width: 80%;
+        height: 1px;
+        padding: 1px 0;
+        border-top: 1px solid $line;
+        border-bottom: 1px solid $line;
+      }
     }
 
     span {
