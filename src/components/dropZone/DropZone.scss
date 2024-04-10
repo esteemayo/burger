@@ -1,4 +1,5 @@
 @import '../../styles/variables.scss';
+@import '../../styles/animations.scss';
 
 .dropzone {
   margin-top: 2rem;
@@ -7,6 +8,7 @@
   border: 2px dashed $line;
   border-radius: 0.5rem;
   cursor: pointer;
+  animation: pulse 2s linear infinite;
 
   .dropzoneWrap {
     width: 100%;
