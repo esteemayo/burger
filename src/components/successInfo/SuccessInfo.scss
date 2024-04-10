@@ -148,48 +148,6 @@
         }
       }
 
-      .orderIconWrap {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-
-        .statusIconWrap {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-
-          width: 3rem;
-          height: 3rem;
-          background-color: #dddddd;
-          border-radius: 50%;
-
-          &.active {
-            background-color: #31c07e;
-          }
-
-          svg {
-            width: 2rem;
-            stroke: $clr-white;
-            stroke-width: 4px;
-          }
-        }
-      }
-
-      .orderStatusText {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-
-        span {
-          width: 10rem;
-          text-align: center;
-          text-transform: capitalize;
-          font-weight: 600;
-          line-height: 1;
-          margin-top: 2rem;
-        }
-      }
-
       .orderDelivery {
         display: flex;
         align-items: center;
