@@ -74,6 +74,7 @@ export type CardMenu = {
   name: string;
   image: string;
   price: number;
+  ingredients?: string[];
 }[];
 
 export type FeaturesType = Feature[];
@@ -128,7 +129,7 @@ interface ProductCard {
 }
 
 export interface ProductCardProps {
-  product: CartItem;
+  product: CardMenu;
 }
 
 export interface InputProps
