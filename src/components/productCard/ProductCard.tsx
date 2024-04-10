@@ -4,9 +4,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useMemo } from 'react';
 
-import { ProductCardProps } from '@/types';
 import { useCart } from '@/hooks/useCart';
 import { formatCurrency } from '@/utils/formatCurrency';
+
+import { ProductCardProps } from '@/types';
 
 import './ProductCard.scss';
 

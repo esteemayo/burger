@@ -20,6 +20,16 @@
       align-items: baseline;
       gap: 3rem;
 
+      &::after {
+        display: inline-block;
+        content: '';
+        width: 43.5rem;
+        height: 1px;
+        padding: 1px 0;
+        border-top: 1px solid $line;
+        border-bottom: 1px solid $line;
+      }
+
       small {
         font-size: 0.875em;
         color: $clr-gray-dark;
