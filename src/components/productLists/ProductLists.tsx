@@ -7,7 +7,7 @@ const ProductLists = ({ products }: ProductListsProps) => {
   return (
     <section className='productLists'>
       {products.map((product) => {
-        return <ProductCard key={product.id} {...product} />;
+        return <ProductCard key={product.id} product={product} />;
       })}
     </section>
   );
