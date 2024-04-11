@@ -61,6 +61,8 @@ const LoginForm = () => {
     return data.password.length > 0 ? 'icon show' : 'icon';
   }, [data]);
 
+  const { email, password } = data;
+
   return (
     <div className='formWrap'>
       <div className='headingWrap'>
@@ -73,6 +75,7 @@ const LoginForm = () => {
           name='email'
           type='email'
           label='Email'
+          value={email}
           placeholder='Enter your email address'
           onChange={handleChange}
           error={errors['email']}
@@ -81,6 +84,7 @@ const LoginForm = () => {
           name='password'
           type={showPassword ? 'text' : 'password'}
           label='Password'
+          value={password}
           placeholder='Password'
           onChange={handleChange}
           error={errors['password']}
