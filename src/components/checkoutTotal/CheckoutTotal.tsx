@@ -47,7 +47,7 @@ const CheckoutTotal = () => {
                 <div className='emptyCartWrap'>
                   <div className='emptyCartTitle'>Empty cart</div>
                   <div className='emptyCartLinkWrap'>
-                    <Link href='/' className='emptyCartLink'>
+                    <Link href='/products' className='emptyCartLink'>
                       Continue shopping
                     </Link>
                   </div>
