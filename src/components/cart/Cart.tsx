@@ -42,7 +42,7 @@ const Cart = () => {
             <div className='emptyCart'>
               <div className='emptyHeading'>Empty cart</div>
               <div className='emptyLink'>
-                <Link href='/'>Continue shopping</Link>
+                <Link href='/products'>Continue shopping</Link>
               </div>
             </div>
           ) : (
