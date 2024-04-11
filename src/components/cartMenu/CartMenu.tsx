@@ -4,12 +4,12 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import RemoveShoppingCartIcon from '@mui/icons-material/RemoveShoppingCart';
+import { useCallback } from 'react';
 
 import { CartMenuProps } from '@/types';
 import { formatCurrency } from '@/utils/formatCurrency';
 
 import './CartMenu.scss';
-import { useCallback } from 'react';
 
 const CartMenu = ({
   products,
