@@ -70,7 +70,7 @@ export const useCartStore = create<CartStore & CartActionType>()(
                     return {
                       ...productItem,
                       quantity:
-                        productItem.quantity > 10
+                        productItem.quantity >= 10
                           ? productItem.quantity
                           : productItem.quantity + 1,
                     };
@@ -79,10 +79,7 @@ export const useCartStore = create<CartStore & CartActionType>()(
                   if (payload.type === 'dec') {
                     return {
                       ...productItem,
-                      quantity:
-                        productItem.quantity > 1
-                          ? productItem.quantity - 1
-                          : productItem.quantity,
+                      quantity: productItem.quantity - 1,
                     };
                   }
                 }
