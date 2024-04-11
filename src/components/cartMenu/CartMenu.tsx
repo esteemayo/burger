@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
@@ -7,6 +9,7 @@ import { CartMenuProps } from '@/types';
 import { formatCurrency } from '@/utils/formatCurrency';
 
 import './CartMenu.scss';
+import { useCallback } from 'react';
 
 const CartMenu = ({
   products,
@@ -16,6 +19,13 @@ const CartMenu = ({
   onRemove,
 }: CartMenuProps) => {
   const router = useRouter();
+
+  const url = useCallback(
+    (id: number) => {
+      return router.push(`/product/${encodeURIComponent(id)}`);
+    },
+    [router]
+  );
 
   return (
     <div className='cartCard'>
@@ -38,12 +48,7 @@ const CartMenu = ({
               return (
                 <div key={id} className='productBox'>
                   <span className='quantity'>{quantity}</span>
-                  <div
-                    className='cardItem'
-                    onClick={() =>
-                      router.push(`/product/${encodeURIComponent(id)}`)
-                    }
-                  >
+                  <div className='cardItem' onClick={() => url(id)}>
                     {name}
                   </div>
                   <div className='cardButtons'>
