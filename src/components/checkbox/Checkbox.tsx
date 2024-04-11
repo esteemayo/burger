@@ -5,8 +5,11 @@ import './Checkbox.scss';
 const Checkbox = ({ name, label, ...rest }: CheckboxProps) => {
   return (
     <div className='checkbox'>
-      <input {...rest} type='checkbox' name={name} id={name} />
       <label htmlFor={name}>{label}</label>
+      <label htmlFor={name} className='switch'>
+        <input {...rest} type='checkbox' name={name} id={name} />
+        <span className='slider round' />
+      </label>
     </div>
   );
 };
