@@ -96,14 +96,14 @@
   .itemTotal {
     display: flex;
     justify-content: space-between;
-    padding: 1.5rem;
+    padding: 2rem;
     border-top: 1px solid $line;
     border-bottom: 1px solid $line;
     margin-bottom: 1.6rem;
 
     span.subTotal,
     span {
-      font-weight: 700;
+      font-weight: 600;
       font-size: 1.3rem;
       color: $clr-gray-dark;
     }
