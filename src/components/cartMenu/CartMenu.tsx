@@ -1,5 +1,6 @@
-import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 import RemoveShoppingCartIcon from '@mui/icons-material/RemoveShoppingCart';
 
 import { CartMenuProps } from '@/types';
@@ -14,6 +15,8 @@ const CartMenu = ({
   onDecrement,
   onRemove,
 }: CartMenuProps) => {
+  const router = useRouter();
+
   return (
     <div className='cartCard'>
       {products.length < 1 ? (
@@ -35,7 +38,14 @@ const CartMenu = ({
               return (
                 <div key={id} className='productBox'>
                   <span className='quantity'>{quantity}</span>
-                  <div className='cardItem'>{name}</div>
+                  <div
+                    className='cardItem'
+                    onClick={() =>
+                      router.push(`/product/${encodeURIComponent(id)}`)
+                    }
+                  >
+                    {name}
+                  </div>
                   <div className='cardButtons'>
                     <button type='button' onClick={(e) => onDecrement(e, id)}>
                       <Image
