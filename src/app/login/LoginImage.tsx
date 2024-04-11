@@ -10,6 +10,7 @@ const LoginImage = () => {
         width={400}
         height={350}
         alt='login illustration'
+        priority
       />
     </div>
   );
