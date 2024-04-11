@@ -45,7 +45,11 @@ const CartMenu = ({
                         alt='chevron-down icon'
                       />
                     </button>
-                    <button type='button' onClick={(e) => onIncrement(e, id)}>
+                    <button
+                      type='button'
+                      disabled={quantity >= 10}
+                      onClick={(e) => onIncrement(e, id)}
+                    >
                       <Image
                         src='/svg/chevron-up.svg'
                         width={17}
