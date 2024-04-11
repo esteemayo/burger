@@ -76,6 +76,7 @@ const CheckoutTotal = () => {
                               <span className='qty'>{quantity}</span>
                               <button
                                 type='button'
+                                disabled={quantity >= 10}
                                 onClick={(e) => handleIncrement(e, id)}
                               >
                                 +
