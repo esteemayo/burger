@@ -20,7 +20,7 @@ const CartMenu = ({
 }: CartMenuProps) => {
   const router = useRouter();
 
-  const url = useCallback(
+  const productUrl = useCallback(
     (id: number) => {
       return router.push(`/product/${encodeURIComponent(id)}`);
     },
@@ -48,7 +48,7 @@ const CartMenu = ({
               return (
                 <div key={id} className='productBox'>
                   <span className='quantity'>{quantity}</span>
-                  <div className='cardItem' onClick={() => url(id)}>
+                  <div className='cardItem' onClick={() => productUrl(id)}>
                     {name}
                   </div>
                   <div className='cardButtons'>
