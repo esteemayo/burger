@@ -37,7 +37,7 @@ const Header = () => {
               </button>
             )}
           </div>
-          <button className='searchBtn'>Find burger</button>
+          <button className='searchBtn'>Find products</button>
         </form>
       </div>
     </header>
