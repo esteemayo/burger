@@ -52,7 +52,6 @@
         display: flex;
         align-items: center;
         color: $clr-gray-dark;
-        margin-top: -3px;
 
         button {
           display: inline-block;
@@ -77,8 +76,6 @@
       }
 
       .deleteBtn {
-        margin-top: -3px;
-
         svg {
           font-size: 1.3rem;
           fill: $clr-gray-light;
