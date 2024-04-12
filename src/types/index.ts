@@ -385,6 +385,7 @@ export interface ReviewErrors {
   desc?: string;
   name?: string;
   email?: string;
+  rating?: string;
 }
 
 export interface SearchProps {

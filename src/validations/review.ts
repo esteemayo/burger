@@ -1,6 +1,9 @@
 import { ReviewData, ReviewErrors } from '@/types';
 
-export const validateReviewInputs = (data: ReviewData) => {
+export const validateReviewInputs = (
+  data: ReviewData,
+  rating: null | number
+) => {
   const { desc, name, email } = data;
   const errors: ReviewErrors = {};
 
@@ -14,6 +17,10 @@ export const validateReviewInputs = (data: ReviewData) => {
 
   if (email.trim() === '') {
     errors.email = "A review must have a user's email address";
+  }
+
+  if (!rating) {
+    errors.rating = 'A review must have a rating';
   }
 
   return errors;
