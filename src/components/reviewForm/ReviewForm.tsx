@@ -2,13 +2,13 @@
 
 import { useCallback, useState } from 'react';
 
+import StarRating from '../starRating/StarRating';
+import ErrorMessage from '../errorMessage/ErrorMessage';
+
 import { ReviewData, ReviewErrors } from '@/types';
 import { validateReviewInputs } from '@/validations/review';
 
-import StarRating from '../starRating/StarRating';
-
 import './ReviewForm.scss';
-import ErrorMessage from '../errorMessage/ErrorMessage';
 
 const initialState: ReviewData = {
   desc: '',
@@ -21,6 +21,7 @@ const initialErrorState: ReviewErrors = {
   desc: '',
   name: '',
   email: '',
+  rating: '',
 };
 
 const ReviewForm = () => {
@@ -61,7 +62,7 @@ const ReviewForm = () => {
     (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
 
-      const errors = validateReviewInputs(inputs);
+      const errors = validateReviewInputs(inputs, rating);
       if (Object.keys(errors).length > 0) return setErrors(errors);
 
       setErrors(initialErrorState);
