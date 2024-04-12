@@ -45,6 +45,8 @@ const AccountData = () => {
     validateAccountData
   );
 
+  const { name, email, phone, address } = data;
+
   return (
     <div className='acccountData'>
       <div className='avatarWrap'>
@@ -78,7 +80,7 @@ const AccountData = () => {
             <Input
               name='name'
               label='Name'
-              value={data.name}
+              value={name}
               placeholder='Name'
               onChange={handleChange}
               error={errors.name}
@@ -87,7 +89,7 @@ const AccountData = () => {
               name='email'
               type='email'
               label='Email address'
-              value={data.email}
+              value={email}
               placeholder='Email address'
               onChange={handleChange}
               error={errors.email}
@@ -96,7 +98,7 @@ const AccountData = () => {
               name='phone'
               type='tel'
               label='Phone number'
-              value={data.phone}
+              value={phone}
               placeholder='Phone number'
               onChange={handleChange}
               error={errors.phone}
@@ -104,7 +106,7 @@ const AccountData = () => {
             <Input
               name='address'
               label='Address'
-              value={data.address}
+              value={address}
               placeholder='Contact address'
               onChange={handleChange}
               error={errors.address}
