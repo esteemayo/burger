@@ -1,3 +1,5 @@
+export const userKey = 'currentUser';
+
 export const rememberKey = 'rememberUser';
 
 export const getFromStorage = (key: string) => {
