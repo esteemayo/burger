@@ -1,4 +1,6 @@
+@import '../../styles/variables.scss';
+
 .errorMessage {
   font-size: 1.3rem;
-  color: #ff6347;
+  color: $error;
 }
