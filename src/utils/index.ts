@@ -1,4 +1,4 @@
-export const userKey = 'currentUser';
+export const userKey = 'userCredentials';
 
 export const rememberKey = 'rememberUser';
 
