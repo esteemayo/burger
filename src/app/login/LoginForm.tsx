@@ -1,9 +1,9 @@
 'use client';
 
-import VisibilityIcon from '@mui/icons-material/Visibility';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
-import { useCallback, useMemo, useState } from 'react';
+import VisibilityIcon from '@mui/icons-material/Visibility';
 
 import AuthInfo from '@/components/authInfo/AuthInfo';
 import Input from '@/components/input/Input';
@@ -15,6 +15,7 @@ import { useForm } from '@/hooks/useForm';
 import { validateLoginInputs } from '@/validations/login';
 
 import { LoginData, LoginErrors } from '@/types';
+import { getFromStorage, rememberKey, setToStorage, userKey } from '@/utils';
 
 import './Login.scss';
 
@@ -48,9 +49,12 @@ const LoginForm = () => {
 
   const onSubmitHandler = () => {
     console.log(data);
+
+    setToStorage(rememberKey, rememberMe);
+    setToStorage(userKey, rememberMe ? data : '');
   };
 
-  const { data, errors, handleChange, handleSubmit } = useForm(
+  const { data, errors, handleChange, handleSubmit, setData } = useForm(
     onSubmitHandler,
     initialState,
     initialErrors,
@@ -58,8 +62,21 @@ const LoginForm = () => {
   );
 
   const iconClasses = useMemo(() => {
-    return data.password.length > 0 ? 'icon show' : 'icon';
+    return data?.password?.length > 0 ? 'icon show' : 'icon';
   }, [data]);
+
+  useEffect(() => {
+    const user = getFromStorage(userKey);
+    const rememberMe = getFromStorage(rememberKey);
+
+    const userCredentials = {
+      email: user?.email,
+      password: user?.password,
+    };
+
+    setData(userCredentials);
+    setRememberMe(rememberMe);
+  }, [setData]);
 
   const { email, password } = data;
 
