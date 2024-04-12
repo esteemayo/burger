@@ -381,6 +381,12 @@ export interface ReviewData {
   consent?: boolean;
 }
 
+export interface ReviewErrors {
+  desc?: string;
+  name?: string;
+  email?: string;
+}
+
 export interface SearchProps {
   value: string;
   onChange(e: React.ChangeEvent<HTMLInputElement>): void;
