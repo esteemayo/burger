@@ -26,7 +26,7 @@ const AccountModal = () => {
     <Modal
       isOpen={isOpen}
       title='Delete Account'
-      actionLabel='Confirm deletion'
+      actionLabel='Confirm Deletion'
       body={bodyContent}
       onClose={onClose}
       onSubmit={onSubmit}
