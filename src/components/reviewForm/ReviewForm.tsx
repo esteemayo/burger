@@ -78,16 +78,19 @@ const ReviewForm = () => {
   return (
     <form className='formReview' onSubmit={handleSubmit}>
       <div className='ratingWrap'>
-        <span>Your rating</span>
-        <div className='formRating'>
-          <StarRating
-            name='hover-feedback'
-            value={rating!}
-            onChange={(event, newValue) => {
-              setRating(newValue);
-            }}
-          />
+        <div className='ratingBox'>
+          <span className='ratingLabel'>Your rating</span>
+          <div className='formRating'>
+            <StarRating
+              name='hover-feedback'
+              value={rating!}
+              onChange={(event, newValue) => {
+                setRating(newValue);
+              }}
+            />
+          </div>
         </div>
+        {errors['rating'] && <ErrorMessage message={errors['rating']!} />}
       </div>
       <div>
         <textarea
