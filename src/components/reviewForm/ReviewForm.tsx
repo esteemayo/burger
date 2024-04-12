@@ -104,14 +104,17 @@ const ReviewForm = () => {
           Save my name, email, and website in this browser for the next time I
           comment.
         </p>
-        <div>
-          <input
-            type='checkbox'
-            id='consent'
-            name='consent'
-            checked={consent}
-            onChange={handleConsent}
-          />
+        <div className='toggle'>
+          <label htmlFor='consent' className='switch'>
+            <input
+              type='checkbox'
+              id='consent'
+              name='consent'
+              checked={consent}
+              onChange={handleConsent}
+            />
+            <span className='slider round' />
+          </label>
           <label htmlFor='consent'>Sign me up for the newsletter!</label>
         </div>
       </div>
