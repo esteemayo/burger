@@ -8,6 +8,7 @@ import { validateReviewInputs } from '@/validations/review';
 import StarRating from '../starRating/StarRating';
 
 import './ReviewForm.scss';
+import ErrorMessage from '../errorMessage/ErrorMessage';
 
 const initialState: ReviewData = {
   desc: '',
@@ -87,32 +88,41 @@ const ReviewForm = () => {
           />
         </div>
       </div>
-      <textarea
-        id='desc'
-        name='desc'
-        cols={30}
-        rows={10}
-        value={desc}
-        placeholder='Message'
-        onChange={handleChange}
-      />
+      <div>
+        <textarea
+          id='desc'
+          name='desc'
+          cols={30}
+          rows={10}
+          value={desc}
+          placeholder='Message'
+          onChange={handleChange}
+        />
+        {errors['desc'] && <ErrorMessage message={errors['desc']!} />}
+      </div>
       <div className='inputWrap'>
-        <input
-          type='text'
-          name='name'
-          value={name}
-          placeholder='Name'
-          className='formControl'
-          onChange={handleChange}
-        />
-        <input
-          type='email'
-          name='email'
-          value={email}
-          placeholder='Email address'
-          className='formControl'
-          onChange={handleChange}
-        />
+        <div>
+          <input
+            type='text'
+            name='name'
+            value={name}
+            placeholder='Name'
+            className='formControl'
+            onChange={handleChange}
+          />
+          {errors['name'] && <ErrorMessage message={errors['name']!} />}
+        </div>
+        <div>
+          <input
+            type='email'
+            name='email'
+            value={email}
+            placeholder='Email address'
+            className='formControl'
+            onChange={handleChange}
+          />
+          {errors['email'] && <ErrorMessage message={errors['email']!} />}
+        </div>
       </div>
       <div className='consent'>
         <p>
