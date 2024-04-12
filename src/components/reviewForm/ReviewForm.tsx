@@ -101,7 +101,7 @@ const ReviewForm = () => {
         {errors['desc'] && <ErrorMessage message={errors['desc']!} />}
       </div>
       <div className='inputWrap'>
-        <div>
+        <div className='inputBox'>
           <input
             type='text'
             name='name'
@@ -112,7 +112,7 @@ const ReviewForm = () => {
           />
           {errors['name'] && <ErrorMessage message={errors['name']!} />}
         </div>
-        <div>
+        <div className='inputBox'>
           <input
             type='email'
             name='email'

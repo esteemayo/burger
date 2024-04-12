@@ -66,9 +66,14 @@
     gap: 2rem;
     margin: 1.6rem 0;
 
-    input.formControl {
+    .inputBox{
       width: 100%;
+
+      input.formControl {
+        width: 100%;
+      }
     }
+
   }
 
   .consent {
