@@ -11,3 +11,9 @@ export const setToStorage = <T extends string, U>(key: T, value: U) => {
     return window.localStorage.setItem(key, JSON.stringify(value));
   }
 };
+
+export const removeFromStorage = (key: string) => {
+  if (typeof window !== 'undefined') {
+    return window.localStorage.removeItem(key);
+  }
+};
