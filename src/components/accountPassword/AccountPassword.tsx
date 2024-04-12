@@ -59,6 +59,8 @@ const AccountPassword = () => {
     return data.confirmPassword.length > 0 ? 'icon show' : 'icon';
   }, [data]);
 
+  const { password, confirmPassword } = data;
+
   return (
     <div className='accountPassword'>
       <h3 className='accountHeading'>Account Information</h3>
@@ -68,6 +70,7 @@ const AccountPassword = () => {
             name='password'
             type={showPassword ? 'text' : 'password'}
             label='Password'
+            value={password}
             placeholder='Password'
             onChange={handleChange}
             error={errors['password']}
@@ -80,6 +83,7 @@ const AccountPassword = () => {
             name='confirmPassword'
             type={showConfirmPassword ? 'text' : 'password'}
             label='Confirm Password'
+            value={confirmPassword}
             placeholder='Confirm Password'
             onChange={handleChange}
             error={errors['confirmPassword']}
