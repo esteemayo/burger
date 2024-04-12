@@ -48,5 +48,6 @@ export const useForm = <T extends object, U extends object>(
     errors,
     handleChange,
     handleSubmit,
+    setData,
   };
 };
