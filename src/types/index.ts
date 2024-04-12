@@ -374,6 +374,13 @@ export interface AddressErrors {
   street?: string;
 }
 
+export interface ReviewData {
+  desc: string;
+  name: string;
+  email: string;
+  consent?: boolean;
+}
+
 export interface SearchProps {
   value: string;
   onChange(e: React.ChangeEvent<HTMLInputElement>): void;
