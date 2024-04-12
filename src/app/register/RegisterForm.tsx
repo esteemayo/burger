@@ -74,6 +74,8 @@ const RegisterForm = () => {
     return data.confirmPassword.length > 0 ? 'icon show' : 'icon';
   }, [data]);
 
+  const { name, email, password, confirmPassword } = data;
+
   return (
     <div className='formWrap'>
       <div className='headingWrap'>
@@ -85,6 +87,7 @@ const RegisterForm = () => {
         <Input
           name='name'
           label='Name'
+          value={name}
           placeholder='Enter your name'
           onChange={handleChange}
           error={errors['name']}
@@ -93,6 +96,7 @@ const RegisterForm = () => {
           name='email'
           type='email'
           label='Email'
+          value={email}
           placeholder='Enter your email address'
           onChange={handleChange}
           error={errors['email']}
@@ -101,6 +105,7 @@ const RegisterForm = () => {
           name='password'
           type={showPassword ? 'text' : 'password'}
           label='Password'
+          value={password}
           placeholder='Password'
           onChange={handleChange}
           error={errors['password']}
@@ -113,6 +118,7 @@ const RegisterForm = () => {
           name='confirmPassword'
           type={showConfirmPassword ? 'text' : 'password'}
           label='Confirm Password'
+          value={confirmPassword}
           placeholder='Confirm Password'
           onChange={handleChange}
           error={errors['confirmPassword']}
