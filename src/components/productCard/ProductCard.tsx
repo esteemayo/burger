@@ -29,7 +29,12 @@ const ProductCard = ({ product }: ProductCardProps) => {
     <article className='productCard'>
       <div className='imgWrapper'>
         <span className='overlay'>
-          <button type='button' className='cartButton' onClick={handleClick}>
+          <button
+            type='button'
+            className='cartButton'
+            disabled={inCart}
+            onClick={handleClick}
+          >
             Add to cart
           </button>
         </span>
