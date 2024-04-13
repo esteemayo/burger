@@ -21,6 +21,10 @@ const ProductCard = ({ product }: ProductCardProps) => {
     return !!inCart;
   }, [product.id, products]);
 
+  const btnLabel = useMemo(() => {
+    return inCart ? 'In cart' : 'Add to cart';
+  }, [inCart]);
+
   const url = useMemo(() => {
     return `/product/${encodeURIComponent(product.id)}`;
   }, [product.id]);
@@ -35,7 +39,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
             disabled={inCart}
             onClick={handleClick}
           >
-            Add to cart
+            {btnLabel}
           </button>
         </span>
         <Image
