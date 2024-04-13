@@ -106,7 +106,7 @@ const RegisterForm = () => {
         <PhoneInput
           name='phone'
           label='Phone number'
-          placeholder='Enter your phone number'
+          placeholder='818 000 0000'
           onChange={handleChange}
         />
         <Input
