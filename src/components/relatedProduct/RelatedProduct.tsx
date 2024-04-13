@@ -5,12 +5,12 @@ import Link from 'next/link';
 import { useMemo } from 'react';
 
 import { useCart } from '@/hooks/useCart';
-import { formatCurrency } from '@/utils/formatCurrency';
+import { useCartStore } from '@/hooks/useCartStore';
 
 import { RelatedProductProps } from '@/types';
+import { formatCurrency } from '@/utils/formatCurrency';
 
 import './RelatedProduct.scss';
-import { useCartStore } from '@/hooks/useCartStore';
 
 const RelatedProduct = ({ product }: RelatedProductProps) => {
   const { handleClick } = useCart(product);
