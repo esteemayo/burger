@@ -1,4 +1,5 @@
 import { PhoneInputProps } from '@/types';
+import ErrorMessage from '../errorMessage/ErrorMessage';
 
 import './PhoneInput.scss';
 
@@ -16,6 +17,7 @@ const PhoneInput = ({
         <div className='inputGroupText'>+234</div>
         <input {...rest} type={type} name={name} id={name} />
       </div>
+      {error && <ErrorMessage message={error} />}
     </div>
   );
 };
