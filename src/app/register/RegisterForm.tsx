@@ -20,6 +20,7 @@ import './Register.scss';
 const initialState: RegisterData = {
   name: '',
   email: '',
+  phone: '',
   password: '',
   confirmPassword: '',
 };
@@ -27,6 +28,7 @@ const initialState: RegisterData = {
 const initialErrors: RegisterErrors = {
   name: '',
   email: '',
+  phone: '',
   password: '',
   confirmPassword: '',
 };
