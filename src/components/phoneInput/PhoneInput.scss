@@ -11,4 +11,18 @@
     font-weight: 500;
     font-size: 1.5rem;
   }
+
+  .inputGroup {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem 2rem;
+    border-radius: 0.5rem;
+    box-shadow: inset $box-shadow;
+
+    .inputGroupText {
+      input {
+      }
+    }
+  }
 }
