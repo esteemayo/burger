@@ -18,7 +18,7 @@ export const validateRegisterInputs = (data: RegisterData) => {
     }
   }
 
-  if (phone.trim() === '') {
+  if (!phone) {
     errors.phone = 'Phone number is required';
   }
 
