@@ -59,7 +59,12 @@ const RegisterForm = () => {
   );
 
   const onSubmitHandler = () => {
-    console.log({ ...data, file });
+    const credentials = {
+      ...data,
+      phone: `+234${data.phone}`,
+    };
+
+    console.log({ ...credentials, file });
   };
 
   const { data, errors, handleChange, handleSubmit } = useForm(
