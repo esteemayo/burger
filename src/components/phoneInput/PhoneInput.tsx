@@ -1,12 +1,20 @@
+import { PhoneInputProps } from '@/types';
+
 import './PhoneInput.scss';
 
-const PhoneInput = () => {
+const PhoneInput = ({
+  name,
+  type = 'tel',
+  label,
+  error,
+  ...rest
+}: PhoneInputProps) => {
   return (
     <div className='phoneInput'>
-      <label htmlFor='phone'>Phone number</label>
+      <label htmlFor={name}>{label}</label>
       <div className='inputGroup'>
         <div className='inputGroupText'>+234</div>
-        <input type='tel' name='phone' id='phone' />
+        <input {...rest} type={type} name={name} id={name} />
       </div>
     </div>
   );
