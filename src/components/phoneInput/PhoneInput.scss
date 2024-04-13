@@ -30,6 +30,12 @@
       background-color: #e9ecef;
 
       input {
+        display: inline-block;
+        border: none;
+        outline: none;
+        appearance: none;
+        font-family: inherit;
+        font-size: 100%;
       }
     }
   }
