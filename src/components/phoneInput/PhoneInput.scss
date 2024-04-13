@@ -29,6 +29,10 @@
     overflow: hidden;
 
     .inputGroupText {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
       text-align: center;
       white-space: nowrap;
       font-weight: 400;
