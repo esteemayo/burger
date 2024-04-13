@@ -8,6 +8,7 @@ import AuthInfo from '@/components/authInfo/AuthInfo';
 import Input from '@/components/input/Input';
 import GoogleButton from '@/components/google/GoogleButton';
 import Button from '@/components/button/Button';
+import PhoneInput from '@/components/phoneInput/PhoneInput';
 
 import { useForm } from '@/hooks/useForm';
 import { validateRegisterInputs } from '@/validations/register';
@@ -102,6 +103,7 @@ const RegisterForm = () => {
           onChange={handleChange}
           error={errors['email']}
         />
+        <PhoneInput />
         <Input
           name='password'
           type={showPassword ? 'text' : 'password'}
