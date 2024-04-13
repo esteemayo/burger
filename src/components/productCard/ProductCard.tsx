@@ -5,10 +5,10 @@ import Link from 'next/link';
 import { useMemo } from 'react';
 
 import { useCart } from '@/hooks/useCart';
-import { formatCurrency } from '@/utils/formatCurrency';
+import { useCartStore } from '@/hooks/useCartStore';
 
 import { ProductCardProps } from '@/types';
-import { useCartStore } from '@/hooks/useCartStore';
+import { formatCurrency } from '@/utils/formatCurrency';
 
 import './ProductCard.scss';
 
