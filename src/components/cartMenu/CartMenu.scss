@@ -118,11 +118,19 @@
     padding: 1rem;
     background-color: $clr-green;
     color: $clr-white !important;
+    border: 1px solid transparent;
     border-radius: 0.5rem;
+    transition: all 0.3s ease-in-out;
 
     display: flex;
     align-items: center;
     justify-content: center;
+
+    &:hover {
+      background-color: $clr-white !important;
+      color: $clr-primary !important;
+      border-color: currentColor;
+    }
   }
 
   .cartFooter {
