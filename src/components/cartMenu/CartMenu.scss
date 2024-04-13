@@ -110,6 +110,10 @@
   }
 
   .checkoutBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     border: none;
     outline: none;
     width: 100%;
@@ -121,10 +125,6 @@
     border: 1px solid transparent;
     border-radius: 0.5rem;
     transition: all 0.3s ease-in-out;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
     &:hover {
       background-color: $clr-white !important;
