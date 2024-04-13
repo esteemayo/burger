@@ -97,6 +97,7 @@ const LoginForm = () => {
           placeholder='Enter your email address'
           onChange={handleChange}
           error={errors['email']}
+          autoFocus
         />
         <Input
           name='password'
