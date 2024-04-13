@@ -5,10 +5,8 @@ const PhoneInput = () => {
     <div className='phoneInput'>
       <label htmlFor='phone'>Phone number</label>
       <div className='inputGroup'>
-        <div className='inputGroupText'>
-          +234
-          <input type='tel' name='phone' id='phone' />
-        </div>
+        <div className='inputGroupText'>+234</div>
+        <input type='tel' name='phone' id='phone' />
       </div>
     </div>
   );
