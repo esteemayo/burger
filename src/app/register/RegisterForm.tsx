@@ -103,7 +103,12 @@ const RegisterForm = () => {
           onChange={handleChange}
           error={errors['email']}
         />
-        <PhoneInput />
+        <PhoneInput
+          name='phone'
+          label='Phone number'
+          placeholder='Enter your phone number'
+          onChange={handleChange}
+        />
         <Input
           name='password'
           type={showPassword ? 'text' : 'password'}
