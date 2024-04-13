@@ -164,6 +164,11 @@
         color: $clr-secondary !important;
         border-color: currentColor;
       }
+
+      &:disabled {
+        opacity: 0.7;
+        cursor: default;
+      }
     }
   }
 }
