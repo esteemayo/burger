@@ -8,11 +8,18 @@ import { useCart } from '@/hooks/useCart';
 import { formatCurrency } from '@/utils/formatCurrency';
 
 import { ProductCardProps } from '@/types';
+import { useCartStore } from '@/hooks/useCartStore';
 
 import './ProductCard.scss';
 
 const ProductCard = ({ product }: ProductCardProps) => {
   const { handleClick } = useCart(product);
+  const products = useCartStore((store) => store.products);
+
+  const inCart = useMemo(() => {
+    const inCart = products.find((item) => item.id === product.id);
+    return !!inCart;
+  }, [product.id, products]);
 
   const url = useMemo(() => {
     return `/product/${encodeURIComponent(product.id)}`;
