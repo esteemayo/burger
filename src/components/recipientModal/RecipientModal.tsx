@@ -4,6 +4,7 @@ import { useCallback, useState } from 'react';
 
 import Input from '../input/Input';
 import Modal from '../modal/Modal';
+import PhoneInput from '../phoneInput/PhoneInput';
 
 import { useRecipient } from '@/hooks/useRecipientModal';
 import { validateRecipientInputs } from '@/validations/recipient';
@@ -74,12 +75,12 @@ const RecipientModal = () => {
         onChange={handleChange}
         error={errors.email}
       />
-      <Input
+      <PhoneInput
         name='phone'
-        type='tel'
+        type='number'
         label='Phone Number'
         value={phone}
-        placeholder='Phone number'
+        placeholder='818 000 0000'
         onChange={handleChange}
         error={errors.phone}
       />
