@@ -10,9 +10,16 @@ import { formatCurrency } from '@/utils/formatCurrency';
 import { RelatedProductProps } from '@/types';
 
 import './RelatedProduct.scss';
+import { useCartStore } from '@/hooks/useCartStore';
 
 const RelatedProduct = ({ product }: RelatedProductProps) => {
   const { handleClick } = useCart(product);
+  const products = useCartStore((store) => store.products);
+
+  const inCart = useMemo(() => {
+    const inCart = products.find((item) => item.id === product.id);
+    return !!inCart;
+  }, [product.id, products]);
 
   const url = useMemo(() => {
     return `/product/${encodeURIComponent(product.id)}`;
@@ -23,7 +30,12 @@ const RelatedProduct = ({ product }: RelatedProductProps) => {
       <div className='relatedBox'>
         <div className='relatedThumbnail'>
           <span className='relatedOverlay'>
-            <button type='button' className='relatedBtn' onClick={handleClick}>
+            <button
+              type='button'
+              className='relatedBtn'
+              disabled={inCart}
+              onClick={handleClick}
+            >
               Add to cart
             </button>
           </span>
