@@ -11,42 +11,27 @@ import Logo from '../logo/Logo';
 import UserMenu from '../userMenu/UserMenu';
 import Search from '../search/Search';
 
-import { useSearch } from '@/hooks/useSearch';
 import { useCartStore } from '@/hooks/useCartStore';
+import { useSearch } from '@/hooks/useSearch';
+import { useCartControls } from '@/hooks/useCartControls';
 
 import './Navbar.scss';
 
 const Navbar = () => {
   const pathname = usePathname();
   const { query, handleChange, handleSubmit } = useSearch();
+  const { handleDecrement, handleIncrement } = useCartControls();
 
   const totalPrice = useCartStore((store) => store.totalPrice);
   const products = useCartStore((store) => store.products);
   const removeFromCart = useCartStore((store) => store.removeFromCart);
   const totalItems = useCartStore((store) => store.totalItems);
-  const toggleQuantity = useCartStore((store) => store.toggleQuantity);
 
   const [isActive, setIsActive] = useState(false);
 
   const isActiveHandler = useCallback(() => {
     setIsActive(window.scrollY > 0 ? true : false);
   }, []);
-
-  const handleIncrement = useCallback(
-    (e: React.MouseEvent<HTMLButtonElement>, productId: number) => {
-      e.stopPropagation();
-      toggleQuantity({ type: 'inc', id: productId });
-    },
-    [toggleQuantity]
-  );
-
-  const handleDecrement = useCallback(
-    (e: React.MouseEvent<HTMLButtonElement>, productId: number) => {
-      e.stopPropagation();
-      toggleQuantity({ type: 'dec', id: productId });
-    },
-    [toggleQuantity]
-  );
 
   const navClasses = useMemo(() => {
     return isActive ? 'navbar active' : 'navbar';
