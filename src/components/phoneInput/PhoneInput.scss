@@ -1,3 +1,5 @@
+@import '../../styles/variables.scss';
+
 .phoneInput {
   display: flex;
   flex-direction: column;
@@ -17,6 +19,8 @@
     width: 100%;
     height: 100%;
     padding: 1.5rem 2rem;
+    background-color: transparent;
+    color: $clr-gray-dark;
     border-radius: 0.5rem;
     box-shadow: inset $box-shadow;
 
