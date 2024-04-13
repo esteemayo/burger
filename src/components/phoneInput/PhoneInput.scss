@@ -43,8 +43,13 @@
       background-color: transparent;
       color: $clr-gray-dark;
       border-radius: 0.5rem;
-      box-shadow: inset $box-shadow;
       caret-color: $clr-gray-light;
+
+      &::placeholder {
+        font-weight: 400;
+        font-size: 1.5rem;
+        color: $clr-gray-light;
+      }
     }
   }
 }
