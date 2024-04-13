@@ -137,6 +137,18 @@ export interface InputProps
   onChange(e: React.ChangeEvent<HTMLInputElement>): void;
 }
 
+export interface PhoneInputProps
+  extends React.InputHTMLAttributes<HTMLInputElement> {
+  id?: string;
+  name?: string;
+  type?: 'tel' | 'number';
+  label?: string;
+  error?: string;
+  disabled?: boolean;
+  required?: boolean;
+  onChange(e: React.ChangeEvent<HTMLInputElement>): void;
+}
+
 export interface TextareaProps
   extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
   name?: string;
