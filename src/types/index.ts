@@ -190,6 +190,7 @@ export interface LoginErrors {
 export interface RegisterData {
   name: string;
   email: string;
+  phone: string;
   password: string;
   confirmPassword: string;
 }
@@ -197,6 +198,7 @@ export interface RegisterData {
 export interface RegisterErrors {
   name?: string;
   email?: string;
+  phone?: string;
   password?: string;
   confirmPassword?: string;
 }
