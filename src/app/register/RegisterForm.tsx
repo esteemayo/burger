@@ -77,7 +77,7 @@ const RegisterForm = () => {
     return data.confirmPassword.length > 0 ? 'icon show' : 'icon';
   }, [data]);
 
-  const { name, email, password, confirmPassword } = data;
+  const { name, email, phone, password, confirmPassword } = data;
 
   return (
     <div className='formWrap'>
@@ -108,8 +108,10 @@ const RegisterForm = () => {
         <PhoneInput
           name='phone'
           label='Phone number'
+          value={phone}
           placeholder='818 000 0000'
           onChange={handleChange}
+          error={errors['phone']}
         />
         <Input
           name='password'
