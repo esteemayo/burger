@@ -91,6 +91,7 @@ const RegisterForm = () => {
           placeholder='Enter your name'
           onChange={handleChange}
           error={errors['name']}
+          autoFocus
         />
         <Input
           name='email'
