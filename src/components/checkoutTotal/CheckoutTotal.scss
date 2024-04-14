@@ -197,6 +197,10 @@
                 font-weight: 600;
                 font-size: 1.3rem;
                 color: $clr-gray-dark;
+
+                &:nth-child(2) {
+                  font-variant: tabular-nums;
+                }
               }
             }
           }
