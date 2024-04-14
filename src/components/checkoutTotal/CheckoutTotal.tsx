@@ -1,37 +1,20 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
-import { useCallback } from 'react';
+import Image from 'next/image';
 
-import { useCartStore } from '@/hooks/useCartStore';
 import { formatCurrency } from '@/utils/formatCurrency';
+import { useCartStore } from '@/hooks/useCartStore';
+import { useCartControls } from '@/hooks/useCartControls';
 
 import './CheckoutTotal.scss';
 
 const CheckoutTotal = () => {
-  const removeFromCart = useCartStore((store) => store.removeFromCart);
-  const products = useCartStore((store) => store.products);
-  const toggleQuantity = useCartStore((store) => store.toggleQuantity);
+  const { handleDecrement, handleIncrement } = useCartControls();
+
   const totalPrice = useCartStore((store) => store.totalPrice);
-
-  const handleDecrement = useCallback(
-    (e: React.MouseEvent<HTMLButtonElement>, productId: number) => {
-      e.stopPropagation();
-
-      toggleQuantity({ type: 'dec', id: productId });
-    },
-    [toggleQuantity]
-  );
-
-  const handleIncrement = useCallback(
-    (e: React.MouseEvent<HTMLButtonElement>, productId: number) => {
-      e.stopPropagation();
-
-      toggleQuantity({ type: 'inc', id: productId });
-    },
-    [toggleQuantity]
-  );
+  const products = useCartStore((store) => store.products);
+  const removeFromCart = useCartStore((store) => store.removeFromCart);
 
   return (
     <div className='checkoutTotal'>
