@@ -1,8 +1,8 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import RemoveShoppingCartIcon from '@mui/icons-material/RemoveShoppingCart';
-import Image from 'next/image';
 
 import { formatCurrency } from '@/utils/formatCurrency';
 import { useCartStore } from '@/hooks/useCartStore';
