@@ -114,6 +114,10 @@
         span {
           text-transform: capitalize;
           font-size: 1.3rem;
+
+          &:nth-child(2) {
+            font-variant: tabular-nums;
+          }
         }
       }
     }
@@ -128,6 +132,10 @@
         text-transform: capitalize;
         font-weight: 700;
         font-size: 1.3rem;
+
+        &:nth-child(2) {
+          font-variant: tabular-nums;
+        }
       }
     }
   }
