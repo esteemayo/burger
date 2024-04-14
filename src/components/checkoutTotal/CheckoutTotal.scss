@@ -170,6 +170,7 @@
                 span {
                   font-weight: 500;
                   font-size: 1.3rem;
+                  font-variant: tabular-nums;
                   color: $clr-gray-dark;
                 }
               }
@@ -210,6 +211,10 @@
               font-weight: 600;
               font-size: 1.3rem;
               color: inherit;
+
+              &:nth-child(2) {
+                font-variant: tabular-nums;
+              }
             }
           }
         }
