@@ -6,8 +6,8 @@ import { CartItem } from '@/types';
 import { useCartStore } from './useCartStore';
 
 export const useCartControls = (product?: CartItem) => {
-  const toggleQuantity = useCartStore((store) => store.toggleQuantity);
   const products = useCartStore((store) => store.products);
+  const toggleQuantity = useCartStore((store) => store.toggleQuantity);
 
   const handleDecrement = useCallback(
     (e: React.MouseEvent<HTMLButtonElement>, productId: number) => {
