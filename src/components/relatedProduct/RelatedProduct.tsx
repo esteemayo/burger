@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useMemo } from 'react';
 
 import { useCart } from '@/hooks/useCart';
-import { useCartStore } from '@/hooks/useCartStore';
+import { useCartControls } from '@/hooks/useCartControls';
 
 import { RelatedProductProps } from '@/types';
 import { formatCurrency } from '@/utils/formatCurrency';
@@ -14,16 +14,7 @@ import './RelatedProduct.scss';
 
 const RelatedProduct = ({ product }: RelatedProductProps) => {
   const { handleClick } = useCart(product);
-  const products = useCartStore((store) => store.products);
-
-  const inCart = useMemo(() => {
-    const inCart = products.find((item) => item.id === product.id);
-    return !!inCart;
-  }, [product.id, products]);
-
-  const btnLabel = useMemo(() => {
-    return inCart ? 'In cart' : 'Add to cart';
-  }, [inCart]);
+  const { inCart, btnLabel } = useCartControls(product);
 
   const url = useMemo(() => {
     return `/product/${encodeURIComponent(product.id)}`;
