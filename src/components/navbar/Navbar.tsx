@@ -66,7 +66,12 @@ const Navbar = () => {
                 alt=''
               />
             ) : (
-              <Image src='/img/user.png' width={30} height={30} alt='' />
+              <Image
+                src='/img/user.png'
+                width={30}
+                height={30}
+                alt='Default avatar'
+              />
             )}
             <UserMenu currentUser={currentUser} />
           </div>
