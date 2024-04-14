@@ -102,11 +102,15 @@
     border-bottom: 1px solid $line;
     margin-bottom: 1.6rem;
 
-    span.subTotal,
-    span {
+    .subTotal,
+    .subTotalPrice {
       font-weight: 600;
       font-size: 1.3rem;
       color: $clr-gray-dark;
+    }
+
+    .subTotalPrice {
+      font-variant: tabular-nums;
     }
   }
 

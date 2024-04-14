@@ -83,7 +83,7 @@ const CartMenu = ({
           </div>
           <div className='itemTotal'>
             <span className='subTotal'>Items subtotal:</span>
-            <span>{formatCurrency(totalPrice)}</span>
+            <span className='subTotalPrice'>{formatCurrency(totalPrice)}</span>
           </div>
           <Link href='/checkout' className='checkoutBtn'>
             Proceed to Checkout
