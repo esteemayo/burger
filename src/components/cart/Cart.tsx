@@ -1,37 +1,20 @@
 'use client';
 
-import { useCallback } from 'react';
 import Link from 'next/link';
 import RemoveShoppingCartIcon from '@mui/icons-material/RemoveShoppingCart';
 import Image from 'next/image';
 
-import { useCartStore } from '@/hooks/useCartStore';
 import { formatCurrency } from '@/utils/formatCurrency';
+import { useCartStore } from '@/hooks/useCartStore';
+import { useCartControls } from '@/hooks/useCartControls';
 
 import './Cart.scss';
 
 const Cart = () => {
-  const removeFromCart = useCartStore((store) => store.removeFromCart);
+  const { handleDecrement, handleIncrement } = useCartControls();
+
   const products = useCartStore((store) => store.products);
-  const toggleQuantity = useCartStore((store) => store.toggleQuantity);
-
-  const handleDecrement = useCallback(
-    (e: React.MouseEvent<HTMLButtonElement>, productId: number) => {
-      e.stopPropagation();
-
-      toggleQuantity({ type: 'dec', id: productId });
-    },
-    [toggleQuantity]
-  );
-
-  const handleIncrement = useCallback(
-    (e: React.MouseEvent<HTMLButtonElement>, productId: number) => {
-      e.stopPropagation();
-
-      toggleQuantity({ type: 'inc', id: productId });
-    },
-    [toggleQuantity]
-  );
+  const removeFromCart = useCartStore((store) => store.removeFromCart);
 
   return (
     <aside className='productCart'>
