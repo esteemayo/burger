@@ -418,5 +418,11 @@ export interface SearchProps {
 
 export interface OrderTableProps {
   isAdmin: boolean;
-  data: object[]
+  data: {
+    id: number;
+    name: string;
+    price: number;
+    status: 'preparing' | 'on the way' | 'delivered';
+    createdAt: string;
+  }[];
 }
