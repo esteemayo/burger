@@ -13,6 +13,7 @@ import {
   FeaturesType,
   FooterLinks,
   Menus,
+  OrderType,
   ProfileMenu,
   RelatedProductType,
   ReviewType,
@@ -354,5 +355,29 @@ export const accountCards: AccountCardType = [
     count: 157,
     label: 'Loyalty Points',
     icon: '/svg/arrows-pointing-in.svg',
+  },
+];
+
+export const orders: OrderType = [
+  {
+    id: 2059665,
+    name: 'Double Crunchy Chicken Burger',
+    price: 199.99,
+    status: 'preparing',
+    createdAt: '2024-04-15T18:18:46.712Z',
+  },
+  {
+    id: 2059667,
+    name: 'Double crunchy X fries',
+    price: 299.99,
+    status: 'on the way',
+    createdAt: '2024-04-15T18:25:35.069Z',
+  },
+  {
+    id: 2059669,
+    name: 'Double grilled chicken burger',
+    price: 399.99,
+    status: 'delivered',
+    createdAt: '2024-04-15T18:26:11.725Z',
   },
 ];
