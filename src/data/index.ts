@@ -378,6 +378,6 @@ export const orders: OrderType = [
     name: 'Double grilled chicken burger',
     price: 399.99,
     status: 'delivered',
-    createdAt: '2024-04-15T18:26:11.725+00:00 ',
+    createdAt: '2024-04-15T18:26:11.725+00:00',
   },
 ];
