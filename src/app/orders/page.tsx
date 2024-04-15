@@ -1,3 +1,4 @@
+import { orders } from '@/data';
 import OrderTable from '@/components/orderTable/OrderTable';
 
 import './Orders.scss';
@@ -8,7 +9,7 @@ const Orders = () => {
   return (
     <div className='orders'>
       <div className='container'>
-        <OrderTable isAdmin={isAdmin} />
+        <OrderTable isAdmin={isAdmin} data={orders} />
       </div>
     </div>
   );

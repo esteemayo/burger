@@ -1,12 +1,14 @@
 'use client';
 
+import Image from 'next/image';
 import { useCallback } from 'react';
 
-import Image from 'next/image';
+import { OrderTableProps } from '@/types';
+import { formatCurrency } from '@/utils/formatCurrency';
 
 import './OrderTable.scss';
 
-const OrderTable = ({ isAdmin }: { isAdmin: boolean }) => {
+const OrderTable = ({ isAdmin, data }: OrderTableProps) => {
   const handleSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
   }, []);
@@ -23,29 +25,40 @@ const OrderTable = ({ isAdmin }: { isAdmin: boolean }) => {
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>#2059665</td>
-          <td>April 14, 2024</td>
-          <td>$199.99</td>
-          <td>Double Crunchy Chicken Burger</td>
-          {!isAdmin ? (
-            <td>Preparing</td>
-          ) : (
-            <td>
-              <form onSubmit={handleSubmit}>
-                <input type='text' placeholder='status' />
-                <button type='submit'>
-                  <Image
-                    src='/img/edit.png'
-                    width={20}
-                    height={20}
-                    alt='edit icon'
-                  />
-                </button>
-              </form>
-            </td>
-          )}
-        </tr>
+        {data.map((item) => {
+          const { id, name, price, status, createdAt } = item;
+          return (
+            <tr key={id}>
+              <td>#{id}</td>
+              <td>
+                {createdAt.toLocaleString('en-us', {
+                  month: 'long',
+                  day: 'numeric',
+                  year: 'numeric',
+                })}
+              </td>
+              <td>{formatCurrency(price)}</td>
+              <td>{name}</td>
+              {!isAdmin ? (
+                <td>{status}</td>
+              ) : (
+                <td>
+                  <form onSubmit={handleSubmit}>
+                    <input type='text' placeholder={status} />
+                    <button type='submit'>
+                      <Image
+                        src='/img/edit.png'
+                        width={20}
+                        height={20}
+                        alt='edit icon'
+                      />
+                    </button>
+                  </form>
+                </td>
+              )}
+            </tr>
+          );
+        })}
       </tbody>
     </table>
   );
