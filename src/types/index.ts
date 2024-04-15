@@ -110,6 +110,14 @@ export type ProfileMenu = {
   links: ProfileLink;
 }[];
 
+export type OrderType = {
+  id: number;
+  name: string;
+  price: number;
+  status: 'preparing' | 'on the way' | 'delivered';
+  createdAt: string;
+}[];
+
 type AccountCard = {
   id: number;
   count?: number;
