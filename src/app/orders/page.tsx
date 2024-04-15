@@ -3,7 +3,7 @@ import OrderTable from '@/components/orderTable/OrderTable';
 import './Orders.scss';
 
 const Orders = () => {
-  const isAdmin = true;
+  const isAdmin = false;
 
   return (
     <div className='orders'>
