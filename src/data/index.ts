@@ -364,20 +364,20 @@ export const orders: OrderType = [
     name: 'Double Crunchy Chicken Burger',
     price: 199.99,
     status: 'preparing',
-    createdAt: '2024-04-15T18:18:46.712Z',
+    createdAt: '2024-04-15T18:18:46.712+00:00',
   },
   {
     id: 2059667,
     name: 'Double crunchy X fries',
     price: 299.99,
     status: 'on the way',
-    createdAt: '2024-04-15T18:25:35.069Z',
+    createdAt: '2024-04-15T18:25:35.069+00:00',
   },
   {
     id: 2059669,
     name: 'Double grilled chicken burger',
     price: 399.99,
     status: 'delivered',
-    createdAt: '2024-04-15T18:26:11.725Z',
+    createdAt: '2024-04-15T18:26:11.725+00:00 ',
   },
 ];
