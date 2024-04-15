@@ -1,3 +1,5 @@
+'use client'
+
 import Input from '../input/Input';
 
 import './OrderTable.scss';
