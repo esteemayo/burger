@@ -415,3 +415,8 @@ export interface SearchProps {
   onChange(e: React.ChangeEvent<HTMLInputElement>): void;
   onSubmit(e: React.FormEvent<HTMLFormElement>): void;
 }
+
+export interface OrderTableProps {
+  isAdmin: boolean;
+  data: object[]
+}
