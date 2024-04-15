@@ -41,7 +41,7 @@ const OrderTable = ({ isAdmin, data }: OrderTableProps) => {
                 })}
               </td>
               <td>{formatCurrency(price)}</td>
-              <td>{name}</td>
+              <td className='orderName'>{name}</td>
               {!isAdmin ? (
                 <td>{status}</td>
               ) : (

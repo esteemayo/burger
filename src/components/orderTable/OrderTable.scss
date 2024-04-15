@@ -23,6 +23,10 @@
       td {
         padding: 2.4rem 4px;
 
+        &.orderName {
+          text-transform: capitalize;
+        }
+
         form {
           display: flex;
           align-items: center;
