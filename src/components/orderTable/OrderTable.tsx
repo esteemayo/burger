@@ -1,4 +1,6 @@
-'use client'
+'use client';
+
+import Image from 'next/image';
 
 import './OrderTable.scss';
 
@@ -30,7 +32,14 @@ const OrderTable = ({ isAdmin }: { isAdmin: boolean }) => {
                   onChange={(e) => console.log('changed')}
                   placeholder='status'
                 />
-                <button type='submit'>icon</button>
+                <button type='submit'>
+                  <Image
+                    src='/img/edit.png'
+                    width={20}
+                    height={20}
+                    alt='edit icon'
+                  />
+                </button>
               </form>
             </td>
           )}
