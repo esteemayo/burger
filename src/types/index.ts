@@ -423,6 +423,6 @@ export interface OrderTableProps {
     name: string;
     price: number;
     status: 'preparing' | 'on the way' | 'delivered';
-    createdAt: string;
+    createdAt: Date;
   }[];
 }
