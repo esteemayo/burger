@@ -1,10 +1,16 @@
 'use client';
 
+import { useCallback } from 'react';
+
 import Image from 'next/image';
 
 import './OrderTable.scss';
 
 const OrderTable = ({ isAdmin }: { isAdmin: boolean }) => {
+  const handleSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+  }, []);
+
   return (
     <table className='orderTable'>
       <thead>
@@ -26,7 +32,7 @@ const OrderTable = ({ isAdmin }: { isAdmin: boolean }) => {
             <td>Preparing</td>
           ) : (
             <td>
-              <form onSubmit={() => console.log('submitted')}>
+              <form onSubmit={handleSubmit}>
                 <input
                   type='text'
                   onChange={(e) => console.log('changed')}
