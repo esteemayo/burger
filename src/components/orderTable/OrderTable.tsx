@@ -1,7 +1,5 @@
 'use client'
 
-import Input from '../input/Input';
-
 import './OrderTable.scss';
 
 const OrderTable = ({ isAdmin }: { isAdmin: boolean }) => {
@@ -27,7 +25,8 @@ const OrderTable = ({ isAdmin }: { isAdmin: boolean }) => {
           ) : (
             <td>
               <form onSubmit={() => console.log('submitted')}>
-                <Input
+                <input
+                  type='text'
                   onChange={(e) => console.log('changed')}
                   placeholder='status'
                 />
