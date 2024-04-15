@@ -27,7 +27,16 @@
           gap: 1.6rem;
 
           input {
+            display: inline-block;
+            border: none;
+            outline: none;
+            font-family: inherit;
+            font-size: 100%;
             padding: 0.8rem;
+            background-color: $clr-white;
+            color: $clr-gray-dark;
+            border-radius: 0.5rem;
+            cursor: $clr-gray-light;
           }
 
           button {
