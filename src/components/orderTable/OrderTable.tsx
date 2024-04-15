@@ -33,11 +33,7 @@ const OrderTable = ({ isAdmin }: { isAdmin: boolean }) => {
           ) : (
             <td>
               <form onSubmit={handleSubmit}>
-                <input
-                  type='text'
-                  onChange={(e) => console.log('changed')}
-                  placeholder='status'
-                />
+                <input type='text' placeholder='status' />
                 <button type='submit'>
                   <Image
                     src='/img/edit.png'
