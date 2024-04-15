@@ -110,13 +110,15 @@ export type ProfileMenu = {
   links: ProfileLink;
 }[];
 
-export type OrderType = {
+type OrderItem = {
   id: number;
   name: string;
   price: number;
   status: 'preparing' | 'on the way' | 'delivered';
-  createdAt: string;
-}[];
+  createdAt: string | Date;
+};
+
+export type OrderType = OrderItem[];
 
 type AccountCard = {
   id: number;
@@ -418,11 +420,5 @@ export interface SearchProps {
 
 export interface OrderTableProps {
   isAdmin: boolean;
-  data: {
-    id: number;
-    name: string;
-    price: number;
-    status: 'preparing' | 'on the way' | 'delivered';
-    createdAt: Date;
-  }[];
+  data: OrderItem[];
 }
