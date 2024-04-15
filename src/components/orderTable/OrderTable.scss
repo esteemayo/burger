@@ -25,6 +25,19 @@
           align-items: center;
           justify-content: center;
           gap: 1.6rem;
+
+          input {
+            padding: 0.8rem;
+          }
+
+          button {
+            all: unset;
+            display: inline-block;
+            padding: 0.8rem;
+            background-color: $clr-primary;
+            color: $clr-white;
+            border-radius: 0.5rem;
+          }
         }
       }
     }
