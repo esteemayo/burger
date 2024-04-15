@@ -28,7 +28,10 @@ const OrderTable = ({ isAdmin, data }: OrderTableProps) => {
         {data.map((item) => {
           const { id, name, price, status, createdAt } = item;
           return (
-            <tr key={id}>
+            <tr
+              key={id}
+              className={`${status !== 'delivered' && 'orderStatus'}`}
+            >
               <td>#{id}</td>
               <td>
                 {new Date(createdAt).toLocaleString('en-us', {

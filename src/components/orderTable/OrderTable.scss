@@ -15,7 +15,10 @@
     tr {
       font-size: 1.4rem;
       line-height: 2rem;
-      background-color: $clr-tertiary;
+
+      &.orderStatus {
+        background-color: $clr-tertiary;
+      }
 
       td {
         padding: 2.4rem 4px;
