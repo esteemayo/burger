@@ -19,6 +19,13 @@
 
       td {
         padding: 2.4rem 4px;
+
+        form {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 1.6rem;
+        }
       }
     }
   }
