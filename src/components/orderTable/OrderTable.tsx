@@ -31,7 +31,7 @@ const OrderTable = ({ isAdmin, data }: OrderTableProps) => {
             <tr key={id}>
               <td>#{id}</td>
               <td>
-                {createdAt.toLocaleString('en-us', {
+                {new Date(createdAt).toLocaleString('en-us', {
                   month: 'long',
                   day: 'numeric',
                   year: 'numeric',
