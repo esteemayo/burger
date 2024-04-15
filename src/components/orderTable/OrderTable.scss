@@ -1,3 +1,5 @@
+@import '../../styles/variables.scss';
+
 .orderTable {
   width: 100%;
   border-collapse: separate;
@@ -13,6 +15,11 @@
     tr {
       font-size: 1.4rem;
       line-height: 2rem;
+      background-color: $clr-tertiary;
+
+      td {
+        padding: 2.4rem 4px;
+      }
     }
   }
 }
