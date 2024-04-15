@@ -53,6 +53,11 @@
             background-color: $clr-primary;
             color: $clr-white;
             border-radius: 0.5rem;
+            transition: all 0.3s;
+
+            &:hover {
+              background-color: $clr-secondary;
+            }
           }
         }
       }
