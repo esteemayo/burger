@@ -6,8 +6,12 @@ import { useAccountModal } from '@/hooks/useAccountModal';
 
 import './DeactivateAccount.scss';
 
-const DeactivateAccount = () => {
+const DeactivateAccount = ({ isAdmin }: { isAdmin: boolean }) => {
   const onOpen = useAccountModal((state) => state.onOpen);
+
+  if (!isAdmin) {
+    return;
+  }
 
   return (
     <div className='deactivateAccount'>
