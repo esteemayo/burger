@@ -20,6 +20,10 @@
         background-color: $clr-tertiary;
       }
 
+      &.orderDelivered {
+        background-color: rgba(40, 167, 69, 0.1);
+      }
+
       td {
         padding: 2.4rem 4px;
 
