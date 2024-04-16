@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import RoomServiceIcon from '@mui/icons-material/RoomService';
 
 import ProductCard from '../productCard/ProductCard';
@@ -12,6 +12,12 @@ import './Menus.scss';
 
 const Menus = () => {
   const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, [5000]);
+  }, []);
 
   return (
     <section className='menusContainer'>
