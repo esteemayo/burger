@@ -12,11 +12,11 @@ import './RelatedProducts.scss';
 const RelatedProducts = () => {
   const [isLoading, setIsLoading] = useState(true);
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setIsLoading(false);
-  //   }, 50000);
-  // }, []);
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 50000);
+  }, []);
 
   return (
     <section className='relatedProducts'>
