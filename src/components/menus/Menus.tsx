@@ -26,7 +26,9 @@ const Menus = () => {
         </div>
         <div className='wrapper'>
           {isLoading ? (
-            <ProductCardSkeleton />
+            cardMenus.map((item) => {
+              return <ProductCardSkeleton key={item.id} />
+            })
           ) : (
             cardMenus.map((menu) => {
               return <ProductCard key={menu.id} product={menu} />;
