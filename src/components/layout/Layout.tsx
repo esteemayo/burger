@@ -3,6 +3,7 @@ import Designer from '../designer/Designer';
 import Navbar from '../navbar/Navbar';
 import ClientOnly from '../clientOnly/ClientOnly';
 import ScrollTop from '../scrollTop/ScrollTop';
+
 import ModalProvider from '@/providers/ModalProvider';
 import CartProvider from '@/providers/CartProvider';
 import SkeletonProvider from '@/providers/SkeletonProvider';
