@@ -15,7 +15,7 @@ const RelatedProducts = () => {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 50000);
+    }, 5000);
   }, []);
 
   return (
