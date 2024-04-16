@@ -13,11 +13,11 @@ import './Menus.scss';
 const Menus = () => {
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, [5000]);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setIsLoading(false);
+  //   }, [5000]);
+  // }, []);
 
   return (
     <section className='menusContainer'>
