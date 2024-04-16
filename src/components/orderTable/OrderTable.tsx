@@ -30,7 +30,9 @@ const OrderTable = ({ isAdmin, data }: OrderTableProps) => {
           return (
             <tr
               key={id}
-              className={`${status !== 'delivered' && 'orderStatus'}`}
+              className={`${
+                status !== 'delivered' ? 'orderStatus' : 'orderDelivered'
+              }`}
             >
               <td>#{id}</td>
               <td>
