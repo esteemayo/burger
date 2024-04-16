@@ -9,7 +9,7 @@ import './DeactivateAccount.scss';
 const DeactivateAccount = ({ isAdmin }: { isAdmin: boolean }) => {
   const onOpen = useAccountModal((state) => state.onOpen);
 
-  if (!isAdmin) {
+  if (isAdmin) {
     return;
   }
 
