@@ -115,7 +115,7 @@ type OrderItem = {
   name: string;
   price: number;
   status: 'preparing' | 'on the way' | 'delivered';
-  createdAt: string | Date;
+  createdAt: string;
 };
 
 export type OrderType = OrderItem[];
