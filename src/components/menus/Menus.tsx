@@ -25,10 +25,13 @@ const Menus = () => {
           </div>
         </div>
         <div className='wrapper'>
-          {isLoading && <ProductCardSkeleton />}
-          {cardMenus.map((menu) => {
-            return <ProductCard key={menu.id} product={menu} />;
-          })}
+          {isLoading ? (
+            <ProductCardSkeleton />
+          ) : (
+            cardMenus.map((menu) => {
+              return <ProductCard key={menu.id} product={menu} />;
+            })
+          )}
         </div>
       </div>
     </section>
