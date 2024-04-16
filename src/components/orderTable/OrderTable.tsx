@@ -1,7 +1,8 @@
 'use client';
 
-import Image from 'next/image';
 import { useCallback } from 'react';
+import Image from 'next/image';
+import { toast } from 'react-toastify';
 
 import { OrderTableProps } from '@/types';
 import { formatCurrency } from '@/utils/formatCurrency';
@@ -11,6 +12,15 @@ import './OrderTable.scss';
 const OrderTable = ({ isAdmin, data }: OrderTableProps) => {
   const handleSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    const form = e.target as HTMLFormElement;
+    const input = form.elements[0] as HTMLInputElement;
+    const status = input.value;
+
+    console.log(status);
+
+    form.reset();
+    toast.success("Changed order's status");
   }, []);
 
   return (
