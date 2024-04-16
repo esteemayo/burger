@@ -12,7 +12,7 @@ const AccountDetails = () => {
     <div className='accountDetails'>
       <AccountData />
       <AccountPassword />
-      {isAdmin ? <NewProduct /> : <DeactivateAccount />}
+      {isAdmin ? <NewProduct isAdmin={isAdmin} /> : <DeactivateAccount />}
     </div>
   );
 };

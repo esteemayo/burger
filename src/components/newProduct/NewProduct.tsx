@@ -6,8 +6,12 @@ import { useProductModal } from '@/hooks/useProductModal';
 
 import './NewProduct.scss';
 
-const NewProduct = () => {
+const NewProduct = ({ isAdmin }: { isAdmin: boolean }) => {
   const onOpen = useProductModal((state) => state.onOpen);
+
+  if (!isAdmin) {
+    return;
+  }
 
   return (
     <div className='newProduct'>
