@@ -16,7 +16,7 @@ const Menus = () => {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, [5000]);
+    }, 5000);
   }, []);
 
   return (
