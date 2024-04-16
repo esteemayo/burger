@@ -36,11 +36,13 @@ const OrderTable = ({ isAdmin, data }: OrderTableProps) => {
             >
               <td>#{id}</td>
               <td>
-                {new Date(createdAt).toLocaleString('en-us', {
-                  month: 'long',
-                  day: 'numeric',
-                  year: 'numeric',
-                })}
+                <time dateTime={createdAt}>
+                  {new Date(createdAt).toLocaleString('en-us', {
+                    month: 'long',
+                    day: 'numeric',
+                    year: 'numeric',
+                  })}
+                </time>
               </td>
               <td>{formatCurrency(price)}</td>
               <td className='orderName'>{name}</td>
