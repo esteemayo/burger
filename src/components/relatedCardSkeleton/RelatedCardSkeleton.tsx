@@ -9,7 +9,7 @@ const RelatedCardSkeleton = () => {
         <Skeleton width={220} height={170} />
       </div>
       <div className='relatedCardContent'>
-        <Skeleton count={2} />
+        <Skeleton count={1.5} />
       </div>
     </article>
   );
