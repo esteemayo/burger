@@ -1,11 +1,18 @@
+'use client';
+
+import { useState } from 'react';
 import RoomServiceIcon from '@mui/icons-material/RoomService';
 
-import { cardMenus } from '@/data';
 import ProductCard from '../productCard/ProductCard';
+import ProductCardSkeleton from '../productCardSkeleton/ProductCardSkeleton';
+
+import { cardMenus } from '@/data';
 
 import './Menus.scss';
 
 const Menus = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
   return (
     <section className='menusContainer'>
       <div className='container'>
@@ -18,6 +25,7 @@ const Menus = () => {
           </div>
         </div>
         <div className='wrapper'>
+          {isLoading && <ProductCardSkeleton />}
           {cardMenus.map((menu) => {
             return <ProductCard key={menu.id} product={menu} />;
           })}
