@@ -1,3 +1,6 @@
+'use client';
+
+import { useMemo } from 'react';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 
 import { InputProps } from '@/types';
@@ -15,8 +18,12 @@ const Input = ({
   children,
   ...rest
 }: InputProps) => {
+  const inputClasses = useMemo(() => {
+    return formatPrice ? 'formGroup formatPrice' : 'formGroup';
+  }, [formatPrice]);
+
   return (
-    <div className='formGroup'>
+    <div className={inputClasses}>
       <label htmlFor={name}>{label}</label>
       <input {...rest} id={name} name={name} type={type} />
       {error && <ErrorMessage message={error} />}
