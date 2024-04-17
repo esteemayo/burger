@@ -39,6 +39,7 @@ const ProductInputs = ({
         placeholder='Price'
         onChange={onChange}
         error={errors?.price}
+        formatPrice
       />
     </div>
   );
