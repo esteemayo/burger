@@ -9,7 +9,7 @@ const ProductCardSkeleton = () => {
         <Skeleton width={300} height={270} />
       </div>
       <div className='skeletonFooter'>
-        <Skeleton count={2} />
+        <Skeleton count={1.5} />
       </div>
     </article>
   );
