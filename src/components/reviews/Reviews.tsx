@@ -1,7 +1,7 @@
 'use client';
 
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
-import { useCallback, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import ReviewForm from '../reviewForm/ReviewForm';
@@ -32,6 +32,12 @@ const Reviews = () => {
     return reviews.length > 0
       ? 'Add a review'
       : 'Be the first to review “Double Grilled Chicken Burger”';
+  }, []);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 5000);
   }, []);
 
   return (
