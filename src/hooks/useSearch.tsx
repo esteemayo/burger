@@ -22,8 +22,10 @@ export const useSearch = () => {
     (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
 
-      console.log(query);
-      setQuery('');
+      if (query) {
+        console.log(query);
+        setQuery('');
+      }
     },
     [query]
   );
