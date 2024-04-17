@@ -100,7 +100,7 @@ const AccountData = () => {
               type='number'
               label='Phone number'
               value={phone}
-              placeholder='Phone number'
+              placeholder='818 000 0000'
               onChange={handleChange}
               error={errors.phone}
             />
