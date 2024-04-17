@@ -130,8 +130,17 @@ type AccountCard = {
 
 export type AccountCardType = AccountCard[];
 
+interface ProductType {
+  id: number;
+  name: string;
+  image: string;
+  price: number;
+  ingredients?: string[];
+  quantity?: number;
+}
+
 export interface ProductCardProps {
-  product: CartItem;
+  product: ProductType | CartItem;
 }
 
 export interface InputProps
