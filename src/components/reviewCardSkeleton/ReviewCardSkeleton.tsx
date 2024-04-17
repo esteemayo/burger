@@ -13,7 +13,7 @@ const ReviewCardSkeleton = () => {
           </div>
           <div className='reviewCardUser'>
             <Skeleton width={165} />
-            <Skeleton />
+            <Skeleton count={2} width={600} />
           </div>
         </div>
       </div>
