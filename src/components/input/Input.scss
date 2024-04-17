@@ -9,6 +9,12 @@
     margin-bottom: 1rem;
   }
 
+  &.formatPrice {
+    input {
+      padding-left: 5rem;
+    }
+  }
+
   label {
     display: inline-block;
     width: 15rem;
