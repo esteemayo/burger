@@ -8,6 +8,7 @@ import { useForm } from '@/hooks/useForm';
 import { validateAccountData } from '@/validations/accountData';
 
 import Input from '../input/Input';
+import PhoneInput from '../phoneInput/PhoneInput';
 
 import './AccountData.scss';
 
@@ -94,9 +95,9 @@ const AccountData = () => {
               onChange={handleChange}
               error={errors.email}
             />
-            <Input
+            <PhoneInput
               name='phone'
-              type='tel'
+              type='number'
               label='Phone number'
               value={phone}
               placeholder='Phone number'
