@@ -278,7 +278,7 @@ export interface ReviewProps {
 }
 
 export interface RelatedProductProps {
-  product: CartItem;
+  product: ProductType | CartItem;
 }
 
 export interface StarRatingProps {
