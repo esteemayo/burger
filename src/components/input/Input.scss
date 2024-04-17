@@ -49,7 +49,12 @@
   .priceIcon {
     position: absolute;
     top: 4.35rem;
-    left: 0;
+    left: 2rem;
+
+    svg {
+      font-size: 2.5rem;
+      fill: $clr-gray-dark;
+    }
   }
 
   .icon {
