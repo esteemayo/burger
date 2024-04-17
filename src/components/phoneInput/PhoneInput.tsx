@@ -13,7 +13,7 @@ const PhoneInput = ({
   return (
     <div className='phoneInput'>
       <label htmlFor={name}>{label}</label>
-      <div className='inputGroup'>
+      <div className='inputGroupWrap'>
         <div className='inputGroupText'>+234</div>
         <input {...rest} type={type} name={name} id={name} />
       </div>
