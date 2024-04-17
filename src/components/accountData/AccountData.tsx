@@ -3,12 +3,12 @@
 import Image from 'next/image';
 import { useCallback, useState } from 'react';
 
+import Input from '../input/Input';
+import PhoneInput from '../phoneInput/PhoneInput';
+
 import { UserData, UserDataErrors } from '@/types';
 import { useForm } from '@/hooks/useForm';
 import { validateAccountData } from '@/validations/accountData';
-
-import Input from '../input/Input';
-import PhoneInput from '../phoneInput/PhoneInput';
 
 import './AccountData.scss';
 
