@@ -1,3 +1,5 @@
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+
 import { InputProps } from '@/types';
 import ErrorMessage from '../errorMessage/ErrorMessage';
 
@@ -9,6 +11,7 @@ const Input = ({
   type = 'text',
   label,
   error,
+  formatPrice,
   children,
   ...rest
 }: InputProps) => {
@@ -17,6 +20,11 @@ const Input = ({
       <label htmlFor={name}>{label}</label>
       <input {...rest} id={name} name={name} type={type} />
       {error && <ErrorMessage message={error} />}
+      {formatPrice && (
+        <div className='priceIcon'>
+          <AttachMoneyIcon />
+        </div>
+      )}
       {children}
     </div>
   );
