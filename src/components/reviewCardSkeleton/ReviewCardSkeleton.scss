@@ -1,2 +1,17 @@
 .reviewCardSkeleton {
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  .reviewCardWrap {
+    padding: 5.6rem 4rem 4rem 4rem;
+
+    .reviewCardBox {
+      .reviewCardRating {
+      }
+
+      .reviewCardUser {
+      }
+    }
+  }
 }
