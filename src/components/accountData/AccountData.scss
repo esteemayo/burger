@@ -82,6 +82,17 @@
             box-shadow: none;
           }
         }
+
+        .phoneInput {
+          .inputGroup {
+            & > * {
+              input {
+                border: 1px solid $line;
+                box-shadow: none;
+              }
+            }
+          }
+        }
       }
 
       .dataBtnWrap {
