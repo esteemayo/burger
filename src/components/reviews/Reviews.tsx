@@ -4,8 +4,9 @@ import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import { useCallback, useMemo, useState } from 'react';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-import Review from '../review/Review';
 import ReviewForm from '../reviewForm/ReviewForm';
+import Review from '../review/Review';
+import ReviewCardSkeleton from '../reviewCardSkeleton/ReviewCardSkeleton';
 
 import { reviews } from '@/data';
 
@@ -13,6 +14,7 @@ import './Reviews.scss';
 
 const Reviews = () => {
   const [isOpen, setIsOpen] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
 
   const toggleOpen = useCallback((_e: React.MouseEvent<HTMLSpanElement>) => {
     setIsOpen((value) => !value);
@@ -53,9 +55,13 @@ const Reviews = () => {
               </div>
             ) : (
               <div className={toggleClasses}>
-                {reviews.map((review) => {
-                  return <Review key={review.id} {...review} />;
-                })}
+                {isLoading
+                  ? reviews.map((item) => {
+                      return <ReviewCardSkeleton key={item.id} />;
+                    })
+                  : reviews.map((review) => {
+                      return <Review key={review.id} {...review} />;
+                    })}
               </div>
             )}
             <div className='reviewFormWrap'>
