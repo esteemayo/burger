@@ -7,12 +7,12 @@ const ReviewCardSkeleton = () => {
     <article className='reviewCardSkeleton'>
       <div className='reviewCardWrap'>
         <div className='reviewCardBox'>
-          <Skeleton />
+          <Skeleton circle width={87} height={87} />
           <div className='reviewCardRating'>
             <Skeleton width={75} height={15} />
           </div>
           <div className='reviewCardUser'>
-            <Skeleton width={165} height={27} />
+            <Skeleton width={165} />
             <Skeleton />
           </div>
         </div>
