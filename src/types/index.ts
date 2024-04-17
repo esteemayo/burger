@@ -150,6 +150,7 @@ export interface InputProps
   type?: string;
   label?: string;
   error?: string;
+  formatPrice?: boolean;
   children?: React.ReactNode;
   disabled?: boolean;
   required?: boolean;
