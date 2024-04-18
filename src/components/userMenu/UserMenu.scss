@@ -28,8 +28,6 @@
       font-size: 1.5rem;
       color: currentColor;
       padding: 3px 1rem;
-      background-color: $clr-tertiary;
-      color: $clr-secondary;
       border-radius: 0.5rem;
       transition: all 0.3s;
 
@@ -44,6 +42,11 @@
         object-fit: cover;
       }
     }
+  }
+
+  .loginLink {
+    background-color: $clr-secondary;
+    color: $clr-white !important;
   }
 
   .userController {
