@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 
 import EmptyState from '@/components/emptyState/EmptyState';
 
-const Error = ({ error }: { error: Error }) => {
+const ErrorState = ({ error }: { error: Error }) => {
   useEffect(() => {
     console.log(error);
   }, [error]);
@@ -18,4 +18,4 @@ const Error = ({ error }: { error: Error }) => {
   );
 };
 
-export default Error;
+export default ErrorState;
