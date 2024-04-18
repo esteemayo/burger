@@ -10,9 +10,15 @@ interface UserMenuProps {
 const UserMenu = ({ currentUser }: UserMenuProps) => {
   return (
     <div className='userMenu'>
-      {!currentUser ? (
+      {currentUser ? (
         <>
           <Link href='/login' className='loginLink'>
+            <Image
+              src='/svg/signin.svg'
+              width={13}
+              height={13}
+              alt='login logo'
+            />
             Login
           </Link>
           <Link href='/register' className='registerLink'>
