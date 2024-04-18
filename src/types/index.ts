@@ -439,4 +439,5 @@ export interface EmptyStateProps {
   title: string;
   subtitle: string;
   center?: boolean;
+  imgSrc?: string;
 }

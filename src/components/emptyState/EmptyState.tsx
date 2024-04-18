@@ -5,11 +5,23 @@ import { EmptyStateProps } from '@/types';
 
 import './EmptyState.scss';
 
-const EmptyState = ({ title, subtitle, center = true }: EmptyStateProps) => {
+const EmptyState = ({
+  title,
+  subtitle,
+  center = true,
+  imgSrc,
+}: EmptyStateProps) => {
   return (
     <div className='emptyState'>
       <div className='container'>
-        <Image src='/svg/empty.svg' width={400} height={400} alt='error' />
+        {imgSrc && (
+          <Image
+            src={`/svg/${imgSrc}.svg`}
+            width={400}
+            height={400}
+            alt='error'
+          />
+        )}
         <Heading title={title} subtitle={subtitle} center={center} />
       </div>
     </div>
