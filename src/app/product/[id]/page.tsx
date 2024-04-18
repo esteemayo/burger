@@ -7,10 +7,15 @@ import ProductInfo from '@/components/productInfo/ProductInfo';
 import './Product.scss';
 
 const Product = () => {
-  const product = false
+  const product = false;
 
   if (!product) {
-    return <EmptyState />
+    return (
+      <EmptyState
+        title='Product not found'
+        subtitle="Looks like there's no product with that ID."
+      />
+    );
   }
 
   return (
