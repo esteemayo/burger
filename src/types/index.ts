@@ -434,3 +434,9 @@ export interface OrderTableProps {
   isAdmin: boolean;
   data: OrderItem[];
 }
+
+export interface EmptyStateProps {
+  title: string;
+  subtitle?: string;
+  center?: boolean;
+}
