@@ -121,6 +121,8 @@
                 margin-top: -1rem;
 
                 .cardName {
+                  flex: 2;
+
                   white-space: nowrap;
                   text-overflow: ellipsis;
                   font-weight: 700;
@@ -146,6 +148,8 @@
                 }
 
                 .cardButtons {
+                  flex: 1;
+
                   display: flex;
                   align-items: center;
                   color: $clr-gray-dark;
@@ -168,26 +172,29 @@
                       object-fit: cover;
                     }
                   }
+
+                  .deleteCardBtn {
+                    all: unset;
+                    display: inline-block;
+                    color: #00000059;
+                    margin-right: 2rem;
+                    cursor: pointer;
+                    transition: all 0.3s;
+  
+                    &:hover {
+                      color: #bc2634;
+                    }
+  
+                    svg {
+                      fill: currentColor;
+                    }
+                  }
                 }
 
-                .deleteCardBtn {
-                  all: unset;
-                  display: inline-block;
-                  color: #00000059;
-                  margin-right: 2rem;
-                  cursor: pointer;
-                  transition: all 0.3s;
-
-                  &:hover {
-                    color: #bc2634;
-                  }
-
-                  svg {
-                    fill: currentColor;
-                  }
-                }
 
                 .cardPrice {
+                  flex: 0.5;
+
                   font-weight: 500;
                   font-size: 1.35rem;
                   font-variant: tabular-nums;
