@@ -82,8 +82,11 @@
 
             .registerBtn,
             .googleBtn {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
               all: unset;
-              display: inline-block;
               text-align: center;
               font-size: 1.35rem;
               width: 100%;
