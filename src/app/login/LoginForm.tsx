@@ -31,7 +31,7 @@ const initialErrors: LoginErrors = {
 
 const LoginForm = () => {
   const [rememberMe, setRememberMe] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
 
   const handleChangeRememberMe = useCallback(
