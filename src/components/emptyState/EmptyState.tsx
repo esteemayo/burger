@@ -10,8 +10,8 @@ const EmptyState = () => {
       <div className='container'>
         <Image src='/svg/empty.svg' width={400} height={400} alt='error' />
         <Heading
-          title='Something went wrong'
-          subtitle="We're having issues loading this page. Try again"
+          title='Product not found'
+          subtitle="Looks like there's no product with that ID."
           center={true}
         />
       </div>
