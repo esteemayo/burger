@@ -31,6 +31,7 @@ const initialErrors: LoginErrors = {
 
 const LoginForm = () => {
   const [rememberMe, setRememberMe] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [showPassword, setShowPassword] = useState(false);
 
   const handleChangeRememberMe = useCallback(
@@ -48,11 +49,13 @@ const LoginForm = () => {
   );
 
   const onSubmitHandler = () => {
+    setIsLoading(true);
     console.log(data);
 
     setToStorage(rememberKey, rememberMe);
     setToStorage(userKey, rememberMe ? data : '');
     setRememberMe(false);
+    setIsLoading(false);
   };
 
   const { data, errors, handleChange, handleSubmit, setData } = useForm(
@@ -122,7 +125,13 @@ const LoginForm = () => {
           <Link href='#'>Forgot password</Link>
         </div>
         <div className='buttonWrap'>
-          <Button type='submit' label='Sign in' className='loginBtn' />
+          <Button
+            type='submit'
+            label='Sign in'
+            disabled={isLoading}
+            loading={isLoading}
+            className='loginBtn'
+          />
           <GoogleButton />
         </div>
       </form>
