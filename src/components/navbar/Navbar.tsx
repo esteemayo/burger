@@ -64,6 +64,7 @@ const Navbar = () => {
                 width={30}
                 height={30}
                 alt=''
+                className='userAvatar'
               />
             ) : (
               <Image
@@ -81,6 +82,7 @@ const Navbar = () => {
               width={24}
               height={24}
               alt='search icon'
+              className='shoppingCartLogo'
             />
             <span className='count'>{totalItems}</span>
             <div className='cartBox'>
@@ -102,6 +104,7 @@ const Navbar = () => {
                   width={20}
                   height={20}
                   alt='search icon'
+                  className='searchMenuIcon'
                 />
                 <Search
                   value={query}
