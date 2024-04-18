@@ -19,7 +19,7 @@ const NotFound = () => {
           <Heading
             title='Page not found!'
             subtitle='Try again later.'
-            center={true}
+            center
           />
         </Link>
       </div>
