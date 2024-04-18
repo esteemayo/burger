@@ -437,6 +437,6 @@ export interface OrderTableProps {
 
 export interface EmptyStateProps {
   title: string;
-  subtitle?: string;
+  subtitle: string;
   center?: boolean;
 }
