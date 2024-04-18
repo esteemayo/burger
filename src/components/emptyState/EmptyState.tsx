@@ -19,7 +19,7 @@ const EmptyState = ({
             src={`/svg/${imgSrc}.svg`}
             width={400}
             height={400}
-            alt='error'
+            alt={imgSrc}
           />
         )}
         <Heading title={title} subtitle={subtitle} center={center} />
