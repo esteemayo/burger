@@ -1,8 +1,10 @@
 import { ButtonProps } from '@/types';
+import Spinner from '../spinner/Spinner';
 
 const Button = ({
   label,
   disabled,
+  loading,
   type = 'button',
   className,
   children,
@@ -10,7 +12,7 @@ const Button = ({
   return (
     <button type={type} disabled={disabled} className={className}>
       {children}
-      {label}
+      {loading ? <Spinner /> : label}
     </button>
   );
 };
