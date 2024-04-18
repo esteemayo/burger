@@ -37,6 +37,7 @@ const RegisterForm = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [file, setFile] = useState<File>();
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleFile = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     const target = e.target as HTMLInputElement;
@@ -59,12 +60,18 @@ const RegisterForm = () => {
   );
 
   const onSubmitHandler = () => {
+    setIsLoading(true);
+
     const credentials = {
       ...data,
       phone: `+234${data.phone}`,
     };
 
     console.log({ ...credentials, file });
+
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 5000);
   };
 
   const { data, errors, handleChange, handleSubmit } = useForm(
@@ -153,7 +160,13 @@ const RegisterForm = () => {
           onChange={handleFile}
         />
         <div className='buttonWrap'>
-          <Button type='submit' label='Sign up' className='registerBtn' />
+          <Button
+            type='submit'
+            label='Sign up'
+            disabled={isLoading}
+            loading={isLoading}
+            className='registerBtn'
+          />
           <GoogleButton />
         </div>
       </form>
