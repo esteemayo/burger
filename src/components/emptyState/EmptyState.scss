@@ -1,4 +1,11 @@
 .emptyState {
+  width: 100vw;
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+
   .container {
+    width: 144rem;
+    height: 100%;
   }
 }
