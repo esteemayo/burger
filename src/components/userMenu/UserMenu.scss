@@ -34,21 +34,18 @@
       &:hover {
         background-color: $line;
       }
-
-      .loginLogo {
-        display: inline-block;
-        width: 1.3rem;
-        height: 1.3rem;
-        object-fit: cover;
-      }
     }
   }
 
   .loginLink {
-    &:link,
-    &:active {
-      background-color: $clr-secondary;
-      color: $clr-white !important;
+    background-color: $clr-secondary;
+    color: $clr-white !important;
+
+    .loginLogo {
+      display: inline-block;
+      width: 1.3rem;
+      height: 1.3rem;
+      object-fit: cover;
     }
   }
 
