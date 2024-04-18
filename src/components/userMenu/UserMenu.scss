@@ -31,13 +31,8 @@
 
       font-size: 1.3rem;
       color: currentColor;
-      padding: 1rem 1.6rem;
+      padding: 0.8rem 1.6rem;
       border-radius: 0.5rem;
-      transition: all 0.3s;
-
-      &:hover {
-        background-color: $line;
-      }
 
       .loginLogo,
       .registerLogo {
@@ -59,6 +54,11 @@
     color: $clr-primary;
     border: 1px solid currentColor;
     border-radius: 0.5rem;
+    transition: all 0.3s;
+
+    &:hover {
+      color: $clr-secondary;
+    }
   }
 
   .userController {
