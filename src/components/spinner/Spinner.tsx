@@ -1,7 +1,7 @@
-import { FadeLoader } from 'react-spinners';
+import { ClipLoader } from 'react-spinners';
 
 const Spinner = () => {
-  return <FadeLoader color='white' />;
+  return <ClipLoader size={20} color='#fff' />;
 };
 
 export default Spinner;
