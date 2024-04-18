@@ -29,6 +29,11 @@
   &:hover {
     background-color: $clr-secondary;
   }
+
+  &:disabled {
+    opacity: 0.7;
+    cursor: default;
+  }
 }
 
 .googleBtn {
@@ -43,6 +48,11 @@
   &:hover {
     background-color: $clr-tertiary;
     color: $clr-secondary;
+  }
+
+  &:disabled {
+    opacity: 0.7;
+    cursor: default;
   }
 
   img {
