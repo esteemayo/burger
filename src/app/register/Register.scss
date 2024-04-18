@@ -82,10 +82,6 @@
 
             .registerBtn,
             .googleBtn {
-              display: flex;
-              align-items: center;
-              justify-content: center;
-
               all: unset;
               text-align: center;
               font-size: 1.35rem;
@@ -96,6 +92,10 @@
             }
 
             .registerBtn {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
               text-transform: capitalize;
               background-color: $clr-primary;
               color: $clr-white;
