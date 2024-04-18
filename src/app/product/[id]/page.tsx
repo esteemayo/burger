@@ -14,6 +14,7 @@ const Product = () => {
       <EmptyState
         title='Product not found'
         subtitle="Looks like there's no product with that ID."
+        imgSrc='empty'
       />
     );
   }
