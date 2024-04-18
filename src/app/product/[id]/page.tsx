@@ -7,7 +7,7 @@ import ProductInfo from '@/components/productInfo/ProductInfo';
 import './Product.scss';
 
 const Product = () => {
-  const product = false;
+  const product = true;
 
   if (!product) {
     return (
