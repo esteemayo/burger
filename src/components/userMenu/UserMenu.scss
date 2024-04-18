@@ -54,6 +54,13 @@
     color: $clr-white !important;
   }
 
+  .registerLink {
+    background-color: transparent;
+    color: $clr-primary;
+    border: 1px solid currentColor;
+    border-radius: 0.5rem;
+  }
+
   .userController {
     display: flex;
     flex-direction: column;
