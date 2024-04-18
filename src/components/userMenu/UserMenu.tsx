@@ -18,6 +18,7 @@ const UserMenu = ({ currentUser }: UserMenuProps) => {
               width={13}
               height={13}
               alt='login logo'
+              className='loginLogo'
             />
             Login
           </Link>
