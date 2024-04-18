@@ -179,6 +179,7 @@ export interface TextareaProps
 
 export interface ButtonProps {
   label: string;
+  disabled?: boolean;
   children?: React.ReactNode;
   type?: 'button' | 'reset' | 'submit';
   className: string;
