@@ -25,9 +25,9 @@
   .registerLink {
     &:link,
     &:active {
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       color: currentColor;
-      padding: 3px 1rem;
+      padding: 4px 1.6rem;
       border-radius: 0.5rem;
       transition: all 0.3s;
 
@@ -45,8 +45,11 @@
   }
 
   .loginLink {
-    background-color: $clr-secondary;
-    color: $clr-white !important;
+    &:link,
+    &:active {
+      background-color: $clr-secondary;
+      color: $clr-white !important;
+    }
   }
 
   .userController {
