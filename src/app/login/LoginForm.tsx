@@ -55,7 +55,10 @@ const LoginForm = () => {
     setToStorage(rememberKey, rememberMe);
     setToStorage(userKey, rememberMe ? data : '');
     setRememberMe(false);
-    setIsLoading(false);
+
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 5000);
   };
 
   const { data, errors, handleChange, handleSubmit, setData } = useForm(
