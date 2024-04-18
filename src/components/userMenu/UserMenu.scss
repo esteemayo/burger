@@ -30,7 +30,6 @@
       justify-content: space-between;
 
       font-size: 1.3rem;
-      color: currentColor;
       padding: 0.8rem 1.6rem;
       border-radius: 0.5rem;
 
@@ -54,6 +53,11 @@
     color: $clr-primary;
     border: 1px solid currentColor;
     border-radius: 0.5rem;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: $clr-tertiary;
+    }
   }
 
   .userController {
