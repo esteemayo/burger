@@ -1,7 +1,7 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 import './UserMenu.scss';
-import Image from 'next/image';
 
 interface UserMenuProps {
   currentUser: object;
