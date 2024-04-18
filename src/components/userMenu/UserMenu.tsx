@@ -23,8 +23,8 @@ const UserMenu = ({ currentUser }: UserMenuProps) => {
             Login
           </Link>
           <Link href='/register' className='registerLink'>
-          <Image
-              src='/svg/sign-up.svg'
+            <Image
+              src='/svg/signup.svg'
               width={13}
               height={13}
               alt='register logo'
