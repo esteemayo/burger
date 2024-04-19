@@ -180,23 +180,23 @@
                       opacity: 0.8;
                     }
                   }
+                }
 
-                  .deleteCardBtn {
-                    all: unset;
-                    display: inline-block;
-                    color: #00000059;
-                    margin-right: 2rem;
-                    opacity: 0.6;
-                    cursor: pointer;
-                    transition: all 0.3s;
+                .deleteCardBtn {
+                  all: unset;
+                  display: inline-block;
+                  color: #00000059;
+                  margin-right: 2rem;
+                  opacity: 0.6;
+                  cursor: pointer;
+                  transition: all 0.3s;
 
-                    &:hover {
-                      color: #bc2634;
-                    }
+                  &:hover {
+                    color: #bc2634;
+                  }
 
-                    svg {
-                      fill: currentColor;
-                    }
+                  svg {
+                    fill: currentColor;
                   }
                 }
 
