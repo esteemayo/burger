@@ -146,6 +146,12 @@
                       color: #00000059;
                       margin-right: 1rem;
                     }
+
+                    a,
+                    a:link,
+                    a:visited {
+                      color: currentColor;
+                    }
                   }
                 }
 
