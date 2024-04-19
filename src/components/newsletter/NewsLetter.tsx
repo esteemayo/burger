@@ -11,7 +11,7 @@ const NewsLetter = () => {
       e.preventDefault();
 
       const form = e.target as HTMLFormElement;
-      const input = form.elements[0];
+      const input = form.elements[0] as HTMLInputElement;
       const email = input.value;
 
       console.log(email);
