@@ -92,7 +92,7 @@
         }
 
         &::-webkit-scrollbar-track {
-          background-color: $clr-gray-light;
+          background-color: #f1f1f1;
         }
 
         &::-webkit-scrollbar-thumb {
@@ -182,11 +182,11 @@
                     margin-right: 2rem;
                     cursor: pointer;
                     transition: all 0.3s;
-  
+
                     &:hover {
                       color: #bc2634;
                     }
-  
+
                     svg {
                       fill: currentColor;
                     }
