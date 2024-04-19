@@ -40,7 +40,7 @@ const Cart = () => {
                           <div className='cardName'>
                             <p>
                               <span>{quantity}</span>
-                              {name}
+                              <Link href={`/product/${id}`}>{name}</Link>
                             </p>
                           </div>
                           <div className='cardButtons'>
