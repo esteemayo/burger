@@ -139,6 +139,11 @@
                     overflow: hidden;
                     margin-top: 0;
                     margin-bottom: 0;
+                    transition: all 0.3s;
+
+                    &:hover {
+                      color: #bc2634;
+                    }
 
                     span {
                       font-weight: 500;
@@ -151,6 +156,11 @@
                     a:link,
                     a:visited {
                       color: currentColor;
+                      transition: all 0.3s;
+
+                      &:hover {
+                        color: #bc2634;
+                      }
                     }
                   }
                 }
