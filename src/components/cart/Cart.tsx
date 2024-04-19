@@ -66,14 +66,14 @@ const Cart = () => {
                                 alt='chevron-up icon'
                               />
                             </button>
-                            <button
-                              type='button'
-                              className='deleteCardBtn'
-                              onClick={() => removeFromCart(id)}
-                            >
-                              <RemoveShoppingCartIcon />
-                            </button>
                           </div>
+                          <button
+                            type='button'
+                            className='deleteCardBtn'
+                            onClick={() => removeFromCart(id)}
+                          >
+                            <RemoveShoppingCartIcon />
+                          </button>
                           <div className='cardPrice'>
                             {formatCurrency(price)}
                           </div>
