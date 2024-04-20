@@ -2,6 +2,7 @@
 
 import { useSearch } from '@/hooks/useSearch';
 import ProductLists from '../productLists/ProductLists';
+
 import './SearchClient.scss';
 
 const SearchClient = ({ products }) => {
