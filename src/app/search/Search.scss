@@ -1,4 +1,9 @@
-.search{
+.search {
   display: flex;
   justify-content: center;
+
+  .container {
+    width: 120rem;
+    padding: 12rem 0;
+  }
 }
