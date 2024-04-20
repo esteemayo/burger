@@ -1,3 +1,5 @@
+'use client';
+
 import { useSearch } from '@/hooks/useSearch';
 import ProductLists from '../productLists/ProductLists';
 import './SearchClient.scss';
