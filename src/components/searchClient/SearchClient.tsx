@@ -3,8 +3,9 @@
 import { useSearchParams } from 'next/navigation';
 import './SearchClient.scss';
 import ProductLists from '../productLists/ProductLists';
+import { SearchClientProps } from '@/types';
 
-const SearchClient = ({ products }) => {
+const SearchClient = ({ products }: SearchClientProps) => {
   const params = useSearchParams();
   const query = params.get('q');
   return (
