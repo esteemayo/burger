@@ -2,10 +2,11 @@
 
 import { useSearch } from '@/hooks/useSearch';
 import ProductLists from '../productLists/ProductLists';
+import { SearchClientProps } from '@/data';
 
 import './SearchClient.scss';
 
-const SearchClient = ({ products }) => {
+const SearchClient = ({ products }: SearchClientProps) => {
   const { query } = useSearch();
 
   return (
