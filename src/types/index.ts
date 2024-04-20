@@ -441,3 +441,7 @@ export interface EmptyStateProps {
   center?: boolean;
   imgSrc?: string;
 }
+
+export interface SearchClientProps {
+  products: CartItem | ProductType';
+}
