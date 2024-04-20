@@ -1,8 +1,10 @@
 'use client';
 
+import { useRouter } from 'next/navigation';
 import { useCallback, useRef, useState } from 'react';
 
 export const useSearch = () => {
+  const router = useRouter();
   const inputRef = useRef<HTMLInputElement>(null);
 
   const [query, setQuery] = useState('');
@@ -23,11 +25,12 @@ export const useSearch = () => {
       e.preventDefault();
 
       if (query) {
+        router.push(`/search?q=${query}`);
         console.log(query);
         setQuery('');
       }
     },
-    [query]
+    [query, router]
   );
 
   return {
