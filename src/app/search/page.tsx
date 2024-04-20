@@ -1,8 +1,7 @@
 import type { Metadata } from 'next';
-import { useSearchParams } from 'next/navigation';
 
 import { products } from '@/data';
-import ProductLists from '@/components/productLists/ProductLists';
+import SearchClient from '@/components/searchClient/SearchClient';
 
 import './Search.scss';
 
@@ -11,14 +10,12 @@ export const metadata: Metadata = {
 };
 
 const Search = () => {
-  const params = useSearchParams();
-  const query = params.get('q');
+  
 
   return (
     <div className='search'>
       <div className='container'>
-        <h3>Search results for {`"${query}"`}</h3>
-        <ProductLists products={products} />
+        <SearchClient products={products} />
       </div>
     </div>
   );
