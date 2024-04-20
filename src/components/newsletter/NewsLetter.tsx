@@ -6,18 +6,17 @@ import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import './NewsLetter.scss';
 
 const NewsLetter = () => {
-  const handleSubmit = useCallback(
-    (e: React.FormEvent<HTMLFormElement>) => {
-      e.preventDefault();
+  const handleSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
 
-      const form = e.target as HTMLFormElement;
-      const input = form.elements[0] as HTMLInputElement;
-      const email = input.value;
+    const form = e.target as HTMLFormElement;
+    const input = form.elements[0] as HTMLInputElement;
+    const email = input.value;
 
-      console.log(email);
-    },
-    []
-  );
+    console.log(email);
+
+    form.reset();
+  }, []);
 
   return (
     <section className='newsLetter'>
