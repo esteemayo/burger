@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 import { products } from '@/data';
-import SearchClient from '@/components/searchClient/SearchClient';
+import ProductLists from '@/components/productLists/ProductLists';
 
 import './Search.scss';
 
@@ -13,7 +13,8 @@ const Search = () => {
   return (
     <div className='search'>
       <div className='container'>
-        <SearchClient products={products} />
+      <h3>Search results for {`"${'query'}"`}</h3>
+      <ProductLists products={products} />
       </div>
     </div>
   );
