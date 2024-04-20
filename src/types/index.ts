@@ -443,5 +443,5 @@ export interface EmptyStateProps {
 }
 
 export interface SearchClientProps {
-  products: CardMenu;
+  products: CartItem | ProductType';
 }
