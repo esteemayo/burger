@@ -7,6 +7,7 @@ const Search = () => {
   return (
     <div className='search'>
       <div className='container'>
+        <h3>Search results for {'query'}</h3>
         <ProductLists products={products} />
       </div>
     </div>
