@@ -24,7 +24,7 @@ const EmptyState = ({
           />
         )}
         <Heading title={title} subtitle={subtitle} center={center} />
-        {showReset && <button type='button'>Reset</button>}
+        {showReset && <button type='button'>Return home</button>}
       </div>
     </div>
   );
