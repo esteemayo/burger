@@ -1,9 +1,13 @@
+'use client';
+
 import Image from 'next/image';
 
 import Heading from '../heading/Heading';
 import { EmptyStateProps } from '@/types';
 
 import './EmptyState.scss';
+import { useRouter } from 'next/navigation';
+import { useCallback } from 'react';
 
 const EmptyState = ({
   title,
@@ -12,6 +16,16 @@ const EmptyState = ({
   imgSrc,
   showReset,
 }: EmptyStateProps) => {
+  const router = useRouter();
+
+  const url = useCallback(
+    (e: React.MouseEvent<HTMLButtonElement>) => {
+      e.stopPropagation();
+      return router.push('/');
+    },
+    [router]
+  );
+
   return (
     <div className='emptyState'>
       <div className='container'>
@@ -24,7 +38,11 @@ const EmptyState = ({
           />
         )}
         <Heading title={title} subtitle={subtitle} center={center} />
-        {showReset && <button type='button'>Return home</button>}
+        {showReset && (
+          <button type='button' onClick={url}>
+            Return home
+          </button>
+        )}
       </div>
     </div>
   );
