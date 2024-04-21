@@ -10,6 +10,7 @@ const EmptyState = ({
   subtitle,
   center = true,
   imgSrc,
+  showReset,
 }: EmptyStateProps) => {
   return (
     <div className='emptyState'>

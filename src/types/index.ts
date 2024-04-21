@@ -440,6 +440,7 @@ export interface EmptyStateProps {
   subtitle?: string;
   center?: boolean;
   imgSrc?: string;
+  showReset?: string;
 }
 
 export interface SearchClientProps {
