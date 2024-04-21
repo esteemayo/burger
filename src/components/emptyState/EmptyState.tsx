@@ -32,8 +32,8 @@ const EmptyState = ({
         {imgSrc && (
           <Image
             src={`/svg/${imgSrc}.svg`}
-            width={400}
-            height={400}
+            width={300}
+            height={300}
             alt={imgSrc}
           />
         )}
