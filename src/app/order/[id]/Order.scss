@@ -1,4 +1,9 @@
-.order{
-  .container{
+.order {
+  display: flex;
+  justify-content: center;
+
+  .container {
+    width: 120rem;
+    padding: 8rem 0;
   }
 }
