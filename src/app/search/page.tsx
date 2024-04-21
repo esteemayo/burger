@@ -19,6 +19,7 @@ const Search = () => {
         title='No product found!'
         subtitle='No result matches your search criteria.'
         imgSrc='web-search'
+        showReset
       />
     );
   }
