@@ -9,6 +9,10 @@
     margin-bottom: 3rem;
     margin-left: 9rem;
 
+    display: flex;
+    align-items: baseline;
+    gap: 3rem;
+
     small {
       font-size: 0.875em;
       color: $clr-gray-dark;
