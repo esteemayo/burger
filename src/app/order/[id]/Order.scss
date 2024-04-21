@@ -5,5 +5,21 @@
   .container {
     width: 120rem;
     padding: 8rem 0;
+
+    .orderBox {
+      .orderWrap {
+        h1 {
+        }
+
+        p {
+        }
+      }
+
+      .stepper {
+        list-style: none;
+        width: 100%;
+        display: flex;
+      }
+    }
   }
 }
