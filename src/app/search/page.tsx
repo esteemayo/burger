@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
 
-import { products } from '@/data';
+import EmptyState from '@/components/emptyState/EmptyState';
 import SearchClient from '@/components/searchClient/SearchClient';
 
+import { products } from '@/data';
+
 import './Search.scss';
-import EmptyState from '@/components/emptyState/EmptyState';
 
 export const metadata: Metadata = {
   title: 'Burger - Search page',
