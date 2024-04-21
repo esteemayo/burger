@@ -12,9 +12,7 @@ export const metadata: Metadata = {
 };
 
 const Search = () => {
-  const empty = false;
-
-  if (!empty) {
+  if (products.length < 1) {
     return (
       <EmptyState
         title='No product found!'
@@ -24,6 +22,7 @@ const Search = () => {
       />
     );
   }
+
   return (
     <div className='search'>
       <div className='container'>
