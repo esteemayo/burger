@@ -44,6 +44,7 @@
         list-style: none;
         width: 100%;
         display: flex;
+        margin-bottom: 2rem;
 
         li {
           display: inline-block;
@@ -114,6 +115,11 @@
             height: 4px;
           }
         }
+      }
+
+      .brand {
+        font-size: 1.3rem;
+        color: $clr-gray-dark;
       }
     }
   }

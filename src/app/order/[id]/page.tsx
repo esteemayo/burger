@@ -28,7 +28,7 @@ const Order = () => {
               <div className='item'>Product delivered</div>
             </li>
           </ul>
-          <span>Burger Inc is preparing your order.</span>
+          <span className='brand'>Burger Inc is preparing your order.</span>
         </div>
       </div>
     </div>
