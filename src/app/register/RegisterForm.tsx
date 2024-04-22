@@ -19,7 +19,8 @@ import './Register.scss';
 
 const enum STEPS {
   INFO = 0,
-  AVATAR = 1,
+  CREDENTIALS = 1,
+  AVATAR = 2,
 }
 
 const initialState: RegisterData = {
@@ -119,6 +120,15 @@ const RegisterForm = () => {
         autoFocus
       />
       <Input
+        name='username'
+        label='Username'
+        value={name}
+        placeholder='Enter your username'
+        onChange={handleChange}
+        error={errors['name']}
+        autoFocus
+      />
+      <Input
         name='email'
         type='email'
         label='Email'
@@ -127,21 +137,21 @@ const RegisterForm = () => {
         onChange={handleChange}
         error={errors['email']}
       />
-      <PhoneInput
-        name='phone'
-        type='number'
-        label='Phone number'
-        value={phone}
-        placeholder='818 000 0000'
-        onChange={handleChange}
-        error={errors['phone']}
-      />
     </>
   );
 
-  if (step === STEPS.AVATAR) {
+  if (step === STEPS.CREDENTIALS) {
     bodyContent = (
       <>
+        <PhoneInput
+          name='phone'
+          type='number'
+          label='Phone number'
+          value={phone}
+          placeholder='818 000 0000'
+          onChange={handleChange}
+          error={errors['phone']}
+        />
         <Input
           name='password'
           type={showPassword ? 'text' : 'password'}
@@ -168,6 +178,13 @@ const RegisterForm = () => {
             {showConfirmPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
           </span>
         </Input>
+      </>
+    );
+  }
+  
+  if (step === STEPS.AVATAR) {
+    bodyContent = (
+      <>
         <Input
           type='file'
           name='file'
@@ -176,7 +193,7 @@ const RegisterForm = () => {
           onChange={handleFile}
         />
       </>
-    );
+    )
   }
 
   return (
