@@ -18,13 +18,13 @@ const Order = () => {
               </div>
               <div className='orderDetailItem'>
                 <h3>Ship Date</h3>
-                <span>
+                <time dateTime={order.createdAt}>
                   {new Date(order.createdAt).toLocaleString('en-us', {
                     month: 'long',
                     day: 'numeric',
                     year: 'numeric',
                   })}
-                </span>
+                </time>
               </div>
               <div className='orderDetailItem'>
                 <h3>Customer</h3>
@@ -42,13 +42,13 @@ const Order = () => {
               </div>
               <div className='orderDetailItem'>
                 <h3>Delivery Date</h3>
-                <span>
+                <time dateTime={order.deliveryDate}>
                   {new Date(order.deliveryDate).toLocaleString('en-us', {
                     month: 'long',
                     day: 'numeric',
                     year: 'numeric',
                   })}
-                </span>
+                </time>
               </div>
             </div>
           </div>
