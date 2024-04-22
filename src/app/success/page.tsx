@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 
-import SuccessInfo from '@/components/successInfo/SuccessInfo';
-import SuccessDetails from '@/components/successDetails/SuccessDetails';
+import SuccessClient from './SuccessClient';
 
 import './Success.scss';
 
@@ -13,10 +12,7 @@ const Success = () => {
   return (
     <div className='success'>
       <div className='container'>
-        <div className='wrapper'>
-          <SuccessInfo />
-          <SuccessDetails />
-        </div>
+        <SuccessClient />
       </div>
     </div>
   );
