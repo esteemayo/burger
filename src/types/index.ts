@@ -455,3 +455,14 @@ export interface EmptyStateProps {
 export interface SearchClientProps {
   products: CardMenu;
 }
+
+export interface OrderDetailProps {
+  order: {
+    id: number;
+    name: string;
+    address: string;
+    total: number;
+    createdAt: string;
+    deliveryDate: string;
+  };
+}
