@@ -10,7 +10,7 @@ const Order = () => {
       <div className='container'>
         <div className='orderBox'>
           <div className='orderContainer'>
-            <h1 className='orderHeading'>Your order</h1>
+            <h1 className='orderHeading'>Order Detail</h1>
             <div className='orderDetails'>
               <div className='orderDetailItem'>
                 <h3>Order ID</h3>
