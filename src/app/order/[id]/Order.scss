@@ -95,6 +95,12 @@
         .done > .item::before {
           background-color: #31c07e;
         }
+
+        li + li {
+          flex-grow: 1;
+          display: flex;
+          flex-direction: row;
+        }
       }
     }
   }
