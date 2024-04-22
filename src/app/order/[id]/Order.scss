@@ -59,6 +59,12 @@
             margin-right: 0;
             padding-top: 0.8rem;
             z-index: 1;
+
+            &::before {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
           }
         }
       }
