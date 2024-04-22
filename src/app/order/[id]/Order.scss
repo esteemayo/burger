@@ -47,6 +47,12 @@
           display: inline-block;
           position: relative;
           margin-top: 3.2rem;
+
+          .item {
+            width: 10rem;
+            text-align: center;
+            text-transform: capitalize;
+          }
         }
       }
     }
