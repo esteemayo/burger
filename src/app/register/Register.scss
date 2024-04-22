@@ -83,6 +83,10 @@
               border: 1px solid $line;
               border-radius: 50%;
               cursor: pointer;
+
+              &:not(:last-child) {
+                margin-right: 1rem;
+              }
             }
           }
 
