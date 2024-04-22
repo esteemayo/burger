@@ -53,6 +53,10 @@
               font-size: 1.3rem;
               color: $clr-gray-dark;
             }
+
+            .orderTotal {
+              font-variant: tabular-nums;
+            }
           }
         }
       }

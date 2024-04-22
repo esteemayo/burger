@@ -36,7 +36,9 @@ const Order = () => {
               </div>
               <div className='orderDetailItem'>
                 <h3>Total</h3>
-                <span>{formatCurrency(order.total)}</span>
+                <span className='orderTotal'>
+                  {formatCurrency(order.total)}
+                </span>
               </div>
               <div className='orderDetailItem'>
                 <h3>Delivery Date</h3>
