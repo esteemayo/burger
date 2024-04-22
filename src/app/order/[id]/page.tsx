@@ -1,3 +1,6 @@
+import { order } from '@/data';
+import { formatCurrency } from '@/utils/formatCurrency';
+
 import './Order.scss';
 
 const Order = () => {
@@ -10,30 +13,39 @@ const Order = () => {
             <div className='orderDetails'>
               <div className='orderDetailItem'>
                 <h3>Order ID</h3>
-                <span>#2059665</span>
+                <span>#{order.id}</span>
               </div>
               <div className='orderDetailItem'>
                 <h3>Ship Date</h3>
-                <span>April 22, 2024</span>
-              </div>
-              <div className='orderDetailItem'>
-                <h3>Customer</h3>
-                <span>Emmanuel Adebayo</span>
-              </div>
-              <div className='orderDetailItem'>
-                <h3>Shipping To</h3>
                 <span>
-                  No 10, Twins street, off ijesha road, surulere lagos, Lagos
-                  state
+                  {new Date(order.createdAt).toLocaleString('en-us', {
+                    month: 'long',
+                    day: 'numeric',
+                    year: 'numeric',
+                  })}
                 </span>
               </div>
               <div className='orderDetailItem'>
+                <h3>Customer</h3>
+                <span>{order.name}</span>
+              </div>
+              <div className='orderDetailItem'>
+                <h3>Shipping To</h3>
+                <span>{order.address}</span>
+              </div>
+              <div className='orderDetailItem'>
                 <h3>Total</h3>
-                <span>$199.99</span>
+                <span>{formatCurrency(order.total)}</span>
               </div>
               <div className='orderDetailItem'>
                 <h3>Expected Delivery Date</h3>
-                <span>April 27, 2024</span>
+                <span>
+                  {new Date(order.deliveryDate).toLocaleString('en-us', {
+                    month: 'long',
+                    day: 'numeric',
+                    year: 'numeric',
+                  })}
+                </span>
               </div>
             </div>
           </div>
