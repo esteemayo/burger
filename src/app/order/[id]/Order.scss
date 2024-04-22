@@ -17,7 +17,7 @@
       padding: 2rem;
       background-color: transparent;
       box-shadow: $box-shadow;
-      border-radius: 0.5rem;
+      border-radius: 1.5rem;
 
       .orderWrap {
         h1 {
@@ -32,6 +32,7 @@
           font-size: 1.3rem;
 
           b {
+            font-size: 100%;
             color: $clr-black;
           }
         }
