@@ -39,7 +39,9 @@ const SuccessClient = () => {
         <ConfettiExplosion
           width={dimension.width}
           height={dimension.height}
-          duration={5000}
+          force={0.8}
+          duration={3000}
+          particleCount={250}
         />
       )}
       <SuccessInfo />
