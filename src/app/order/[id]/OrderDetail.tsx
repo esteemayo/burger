@@ -1,3 +1,4 @@
+import { formatDate } from '@/utils/formatDate';
 import { excerpts } from '@/utils';
 import { formatCurrency } from '@/utils/formatCurrency';
 
@@ -17,11 +18,7 @@ const OrderDetail = ({ order }: OrderDetailProps) => {
         <div className='orderItem'>
           <h3>Ship Date</h3>
           <time dateTime={order.createdAt}>
-            {new Date(order.createdAt).toLocaleString('en-us', {
-              month: 'long',
-              day: 'numeric',
-              year: 'numeric',
-            })}
+            {formatDate(new Date(order.createdAt))}
           </time>
         </div>
         <div className='orderItem'>
@@ -39,11 +36,7 @@ const OrderDetail = ({ order }: OrderDetailProps) => {
         <div className='orderItem'>
           <h3>Delivery Date</h3>
           <time dateTime={order.deliveryDate}>
-            {new Date(order.deliveryDate).toLocaleString('en-us', {
-              month: 'long',
-              day: 'numeric',
-              year: 'numeric',
-            })}
+            {formatDate(new Date(order.deliveryDate))}
           </time>
         </div>
       </div>
