@@ -42,6 +42,12 @@
         list-style: none;
         width: 100%;
         display: flex;
+
+        li {
+          display: inline-block;
+          position: relative;
+          margin-top: 3.2rem;
+        }
       }
     }
   }
