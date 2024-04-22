@@ -87,6 +87,11 @@
               &:not(:last-child) {
                 margin-right: 1rem;
               }
+
+              &:disabled {
+                opacity: 0.7;
+                cursor: default;
+              }
             }
           }
 
