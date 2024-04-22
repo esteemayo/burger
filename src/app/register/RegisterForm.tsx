@@ -17,6 +17,11 @@ import { RegisterData, RegisterErrors } from '@/types';
 
 import './Register.scss';
 
+const enum STEPS {
+  INFO = 0,
+  AVATAR = 1,
+}
+
 const initialState: RegisterData = {
   name: '',
   email: '',
@@ -37,6 +42,7 @@ const RegisterForm = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [file, setFile] = useState<File>();
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [step, setStep] = useState(STEPS.INFO);
   const [isLoading, setIsLoading] = useState(false);
 
   const handleFile = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
@@ -91,6 +97,40 @@ const RegisterForm = () => {
 
   const { name, email, phone, password, confirmPassword } = data;
 
+  let bodyContent;
+
+  bodyContent = (
+    <>
+      <Input
+        name='name'
+        label='Name'
+        value={name}
+        placeholder='Enter your name'
+        onChange={handleChange}
+        error={errors['name']}
+        autoFocus
+      />
+      <Input
+        name='email'
+        type='email'
+        label='Email'
+        value={email}
+        placeholder='Enter your email address'
+        onChange={handleChange}
+        error={errors['email']}
+      />
+      <PhoneInput
+        name='phone'
+        type='number'
+        label='Phone number'
+        value={phone}
+        placeholder='818 000 0000'
+        onChange={handleChange}
+        error={errors['phone']}
+      />
+    </>
+  );
+
   return (
     <div className='formWrap'>
       <div className='headingWrap'>
@@ -99,33 +139,7 @@ const RegisterForm = () => {
         </h1>
       </div>
       <form onSubmit={handleSubmit} className='registerForm'>
-        <Input
-          name='name'
-          label='Name'
-          value={name}
-          placeholder='Enter your name'
-          onChange={handleChange}
-          error={errors['name']}
-          autoFocus
-        />
-        <Input
-          name='email'
-          type='email'
-          label='Email'
-          value={email}
-          placeholder='Enter your email address'
-          onChange={handleChange}
-          error={errors['email']}
-        />
-        <PhoneInput
-          name='phone'
-          type='number'
-          label='Phone number'
-          value={phone}
-          placeholder='818 000 0000'
-          onChange={handleChange}
-          error={errors['phone']}
-        />
+        {bodyContent}
         <Input
           name='password'
           type={showPassword ? 'text' : 'password'}
