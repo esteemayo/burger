@@ -1,7 +1,7 @@
 'use client';
 
-import { useCallback, useEffect, useState } from 'react';
 import Confetti from 'react-confetti-explosion';
+import { useCallback, useEffect, useState } from 'react';
 
 import SuccessInfo from '@/components/successInfo/SuccessInfo';
 import SuccessDetails from '@/components/successDetails/SuccessDetails';
