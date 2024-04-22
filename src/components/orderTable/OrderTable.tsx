@@ -1,8 +1,9 @@
 'use client';
 
 import { useCallback } from 'react';
-import Image from 'next/image';
+import Link from 'next/link';
 import { toast } from 'react-toastify';
+import Image from 'next/image';
 
 import { OrderTableProps } from '@/types';
 import { formatCurrency } from '@/utils/formatCurrency';
@@ -44,7 +45,9 @@ const OrderTable = ({ isAdmin, data }: OrderTableProps) => {
                 status !== 'delivered' ? 'orderStatus' : 'orderDelivered'
               }`}
             >
-              <td>#{id}</td>
+              <td>
+                <Link href={`/order/${encodeURIComponent(id)}`}>#{id}</Link>
+              </td>
               <td>
                 <time dateTime={createdAt}>
                   {new Date(createdAt).toLocaleString('en-us', {
