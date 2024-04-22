@@ -1,9 +1,15 @@
+import type { Metadata } from 'next';
+
 import OrderDetail from './OrderDetail';
 import OrderStatus from './OrderStatus';
 
 import { order } from '@/data';
 
 import './Order.scss';
+
+export const metadata: Metadata = {
+  title: 'Burger - Order page',
+};
 
 const Order = () => {
   return (
