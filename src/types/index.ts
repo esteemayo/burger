@@ -120,6 +120,15 @@ type OrderItem = {
 
 export type OrderType = OrderItem[];
 
+export interface SingleOrderType {
+  id: number;
+  name: string;
+  address: string;
+  total: number;
+  createdAt: string;
+  deliveryAt: string;
+}
+
 type AccountCard = {
   id: number;
   count?: number;
