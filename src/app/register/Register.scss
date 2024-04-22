@@ -74,6 +74,10 @@
 
         .registerForm {
           .slideBox {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
             button {
               all: unset;
               display: inline-block;
