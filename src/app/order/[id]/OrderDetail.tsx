@@ -1,9 +1,11 @@
 import { excerpts } from '@/utils';
 import { formatCurrency } from '@/utils/formatCurrency';
 
+import { OrderDetailProps } from '@/types';
+
 import './Order.scss';
 
-const OrderDetail = ({ order }) => {
+const OrderDetail = ({ order }: OrderDetailProps) => {
   return (
     <div className='orderContainer'>
       <h1 className='orderHeading'>Order Detail</h1>
