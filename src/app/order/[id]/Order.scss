@@ -79,6 +79,22 @@
             }
           }
         }
+
+        .ready::before {
+          background-color: #dddddd;
+        }
+
+        .ready > .item::before {
+          background-color: #dddddd;
+        }
+
+        .done::before {
+          background-color: #31c07e;
+        }
+
+        .done > .item::before {
+          background-color: #31c07e;
+        }
       }
     }
   }
