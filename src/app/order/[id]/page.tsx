@@ -50,6 +50,7 @@ const Order = () => {
               </div>
             </div>
           </div>
+          <hr />
           <div className='orderWrap'>
             <h2>Preparing your order</h2>
             <p>
