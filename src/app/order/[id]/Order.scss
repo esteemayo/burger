@@ -15,7 +15,7 @@
     .orderBox {
       width: 50rem;
       padding: 2rem;
-      background-color: $clr-tertiary;
+      background-color: transparent;
       box-shadow: $box-shadow;
       border-radius: 0.5rem;
 
@@ -28,6 +28,8 @@
         }
 
         p {
+          color: $clr-gray-dark;
+          font-size: 1.3rem;
         }
       }
 
