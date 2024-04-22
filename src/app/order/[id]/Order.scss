@@ -19,7 +19,7 @@
       box-shadow: $box-shadow;
       border-radius: 1.5rem;
 
-      .orderContainer {
+      .orderDetail {
         .orderHeading {
           display: flex;
           align-items: center;
@@ -41,14 +41,14 @@
           }
         }
 
-        .orderDetails {
+        .orderContainer {
           display: flex;
           flex-wrap: wrap;
           align-items: center;
           justify-content: space-between;
           margin-top: 2rem;
 
-          .orderDetailItem {
+          .orderItem {
             display: flex;
             flex-direction: column;
             width: 15rem;
