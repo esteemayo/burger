@@ -5,8 +5,40 @@ const Order = () => {
     <div className='order'>
       <div className='container'>
         <div className='orderBox'>
+          <div className='orderContainer'>
+            <h1 className='orderHeading'>Your order</h1>
+            <div className='orderDetails'>
+              <div className='orderDetailItem'>
+                <h3>Order ID</h3>
+                <span>#2059665</span>
+              </div>
+              <div className='orderDetailItem'>
+                <h3>Ship Date</h3>
+                <span>April 22, 2024</span>
+              </div>
+              <div className='orderDetailItem'>
+                <h3>Customer</h3>
+                <span>Emmanuel Adebayo</span>
+              </div>
+              <div className='orderDetailItem'>
+                <h3>Shipping To</h3>
+                <span>
+                  No 10, Twins street, off ijesha road, surulere lagos, Lagos
+                  state
+                </span>
+              </div>
+              <div className='orderDetailItem'>
+                <h3>Total</h3>
+                <span>$199.99</span>
+              </div>
+              <div className='orderDetailItem'>
+                <h3>Expected Delivery Date</h3>
+                <span>April 27, 2024</span>
+              </div>
+            </div>
+          </div>
           <div className='orderWrap'>
-            <h1>Preparing your order</h1>
+            <h2>Preparing your order</h2>
             <p>
               Arrives between <b>11:52PM - 12:02AM</b>
             </p>
