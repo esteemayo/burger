@@ -1,3 +1,4 @@
+import { excerpts } from '@/utils';
 import { order } from '@/data';
 import { formatCurrency } from '@/utils/formatCurrency';
 
@@ -31,7 +32,7 @@ const Order = () => {
               </div>
               <div className='orderDetailItem'>
                 <h3>Shipping To</h3>
-                <span>{order.address}</span>
+                <span>{excerpts(order.address, 15)}</span>
               </div>
               <div className='orderDetailItem'>
                 <h3>Total</h3>
