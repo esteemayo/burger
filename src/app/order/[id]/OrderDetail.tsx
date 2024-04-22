@@ -1,3 +1,6 @@
+import { excerpts } from '@/utils';
+import { formatCurrency } from '@/utils/formatCurrency';
+
 import './Order.scss';
 
 const OrderDetail = ({ order }) => {
