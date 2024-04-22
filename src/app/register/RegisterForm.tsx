@@ -180,13 +180,15 @@ const RegisterForm = () => {
       </div>
       <form onSubmit={handleSubmit} className='registerForm'>
         {bodyContent}
-        {new Array(2).fill(0).map((_, index) => {
-          return (
-            <button key={index} type='button'>
-              &nbsp;
-            </button>
-          );
-        })}
+        <div className='slideBox'>
+          {new Array(2).fill(0).map((_, index) => {
+            return (
+              <button key={index} type='button'>
+                &nbsp;
+              </button>
+            );
+          })}
+        </div>
         <div className='buttonWrap'>
           <Button
             type='submit'
