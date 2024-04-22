@@ -131,15 +131,9 @@ const RegisterForm = () => {
     </>
   );
 
-  return (
-    <div className='formWrap'>
-      <div className='headingWrap'>
-        <h1>
-          Hey there! <br /> Welcome to <span>Burger</span>
-        </h1>
-      </div>
-      <form onSubmit={handleSubmit} className='registerForm'>
-        {bodyContent}
+  if (step === STEPS.AVATAR) {
+    bodyContent = (
+      <>
         <Input
           name='password'
           type={showPassword ? 'text' : 'password'}
@@ -173,6 +167,19 @@ const RegisterForm = () => {
           accept='image/*'
           onChange={handleFile}
         />
+      </>
+    );
+  }
+
+  return (
+    <div className='formWrap'>
+      <div className='headingWrap'>
+        <h1>
+          Hey there! <br /> Welcome to <span>Burger</span>
+        </h1>
+      </div>
+      <form onSubmit={handleSubmit} className='registerForm'>
+        {bodyContent}
         <div className='buttonWrap'>
           <Button
             type='submit'
