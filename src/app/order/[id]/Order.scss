@@ -33,6 +33,7 @@
           flex-wrap: wrap;
           align-items: center;
           justify-content: space-between;
+          margin-top: 2rem;
 
           .orderDetailItem {
             display: flex;
@@ -43,6 +44,7 @@
               display: inline-block;
               font-weight: 600;
               font-size: 1.4rem;
+              line-height: 1;
             }
 
             span {
