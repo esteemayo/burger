@@ -48,7 +48,8 @@
               line-height: 1;
             }
 
-            span {
+            span,
+            time {
               display: inline-block;
               font-size: 1.3rem;
               color: $clr-gray-dark;
