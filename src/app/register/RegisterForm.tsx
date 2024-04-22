@@ -45,6 +45,14 @@ const RegisterForm = () => {
   const [step, setStep] = useState(STEPS.INFO);
   const [isLoading, setIsLoading] = useState(false);
 
+  const onNext = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
+    setStep((value) => value + 1);
+  }, []);
+
+  const onPrev = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
+    setStep((value) => value - 1);
+  }, []);
+
   const handleFile = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     const target = e.target as HTMLInputElement;
     const file = (target.files as FileList)[0];
@@ -181,13 +189,12 @@ const RegisterForm = () => {
       <form onSubmit={handleSubmit} className='registerForm'>
         {bodyContent}
         <div className='slideBox'>
-          {new Array(2).fill(0).map((_, index) => {
-            return (
-              <button key={index} type='button'>
-                &nbsp;
-              </button>
-            );
-          })}
+          <button type='button' onClick={onPrev}>
+            &nbsp;
+          </button>
+          <button type='button' onClick={onNext}>
+            &nbsp;
+          </button>
         </div>
         <div className='buttonWrap'>
           <Button
