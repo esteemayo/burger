@@ -126,7 +126,7 @@ export interface SingleOrderType {
   address: string;
   total: number;
   createdAt: string;
-  deliveryAt: string;
+  deliveryDate: string;
 }
 
 type AccountCard = {

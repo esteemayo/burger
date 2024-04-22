@@ -17,6 +17,7 @@ import {
   ProfileMenu,
   RelatedProductType,
   ReviewType,
+  SingleOrderType,
   Socials,
 } from '@/types';
 
@@ -381,3 +382,12 @@ export const orders: OrderType = [
     createdAt: '2024-04-15T18:26:11.725+00:00',
   },
 ];
+
+export const order: SingleOrderType = {
+  id: 2059665,
+  name: 'Emmanuel Adebayo',
+  address: 'No 10, Twins street, off ijesha road, surulere lagos, Lagos state',
+  total: 199.99,
+  createdAt: '2024-04-22T18:18:46.712+00:00',
+  deliveryDate: '2024-04-27T18:18:46.712+00:00',
+};
