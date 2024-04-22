@@ -39,7 +39,7 @@ const Order = () => {
                 <span>{formatCurrency(order.total)}</span>
               </div>
               <div className='orderDetailItem'>
-                <h3>Expected Delivery Date</h3>
+                <h3>Delivery Date</h3>
                 <span>
                   {new Date(order.deliveryDate).toLocaleString('en-us', {
                     month: 'long',

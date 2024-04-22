@@ -38,7 +38,8 @@
           .orderDetailItem {
             display: flex;
             flex-direction: column;
-            gap: 0.5rem;
+            width: 15rem;
+            margin-bottom: 1rem;
 
             h3 {
               display: inline-block;
