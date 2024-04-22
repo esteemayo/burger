@@ -27,6 +27,12 @@
       td {
         padding: 2.4rem 4px;
 
+        a,
+        a:link,
+        a:visited {
+          color: inherit;
+        }
+
         &.orderName {
           text-transform: capitalize;
         }
