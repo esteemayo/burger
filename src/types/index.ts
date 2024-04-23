@@ -220,6 +220,7 @@ export interface LoginErrors {
 
 export interface RegisterData {
   name: string;
+  username: string;
   email: string;
   phone: string;
   password: string;
@@ -228,6 +229,7 @@ export interface RegisterData {
 
 export interface RegisterErrors {
   name?: string;
+  username?: string;
   email?: string;
   phone?: string;
   password?: string;
