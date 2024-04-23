@@ -3,6 +3,11 @@ import React from 'react';
 import { OverridableComponent } from '@mui/material/OverridableComponent';
 import { IconType } from 'react-icons/lib';
 
+export type GenderType = {
+  value: string;
+  label: string;
+}[];
+
 export type CartItem = {
   id: number;
   name: string;
