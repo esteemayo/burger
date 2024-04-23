@@ -8,6 +8,7 @@
     line-height: 1.2;
     margin-bottom: 3rem;
     margin-left: 9rem;
+    position: relative;
 
     display: flex;
     align-items: baseline;
@@ -21,6 +22,11 @@
       padding: 1px 0;
       border-top: 1px solid $line;
       border-bottom: 1px solid $line;
+
+      position: absolute;
+      top: 50%;
+      right: 9rem;
+      transform: translateY(-50%);
     }
 
     small {
