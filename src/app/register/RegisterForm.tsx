@@ -25,6 +25,7 @@ const enum STEPS {
 
 const initialState: RegisterData = {
   name: '',
+  username: '',
   email: '',
   phone: '',
   password: '',
@@ -33,6 +34,7 @@ const initialState: RegisterData = {
 
 const initialErrors: RegisterErrors = {
   name: '',
+  username: '',
   email: '',
   phone: '',
   password: '',
@@ -110,7 +112,7 @@ const RegisterForm = () => {
     return data.confirmPassword.length > 0 ? 'icon show' : 'icon';
   }, [data]);
 
-  const { name, email, phone, password, confirmPassword } = data;
+  const { name, username, email, phone, password, confirmPassword } = data;
 
   let bodyContent;
 
@@ -128,10 +130,10 @@ const RegisterForm = () => {
       <Input
         name='username'
         label='Username'
-        value={name}
+        value={username}
         placeholder='Enter your username'
         onChange={handleChange}
-        error={errors['name']}
+        error={errors['username']}
         autoFocus
       />
       <Input
