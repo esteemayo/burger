@@ -91,6 +91,8 @@ const RegisterForm = () => {
     setTimeout(() => {
       setIsLoading(false);
     }, 5000);
+
+    setStep(STEPS.INFO);
   };
 
   const { data, errors, handleChange, handleSubmit } = useForm(
