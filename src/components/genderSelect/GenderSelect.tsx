@@ -1,6 +1,6 @@
 import Select from 'react-select';
 
-import './Select.scss';
+import './GenderSelect.scss';
 
 const GenderSelect = () => {
   const options = [
