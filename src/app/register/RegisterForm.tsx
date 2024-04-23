@@ -195,7 +195,7 @@ const RegisterForm = () => {
   if (step === STEPS.AVATAR) {
     bodyContent = (
       <>
-        <DropZone id='avatar' label='Avatar' onSelect={setFile} />
+        <DropZone id='avatar' label='Avatar' small onSelect={setFile} />
         <GenderSelect />
       </>
     );
