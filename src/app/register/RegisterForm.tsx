@@ -211,10 +211,10 @@ const RegisterForm = () => {
         {bodyContent}
         <div className='slideBox'>
           <button type='button' onClick={onPrev}>
-            &nbsp;
+            Prev
           </button>
           <button type='button' onClick={onNext}>
-            &nbsp;
+            Next
           </button>
         </div>
         <div className='buttonWrap'>

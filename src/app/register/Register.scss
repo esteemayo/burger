@@ -81,11 +81,10 @@
             button {
               all: unset;
               display: inline-block;
-              width: 1rem;
-              height: 1rem;
+              padding: 0.5rem;
               background-color: transparent;
               border: 1px solid $clr-gray-dark;
-              border-radius: 50%;
+              border-radius: 0.5rem;
               cursor: pointer;
 
               &:not(:last-child) {
