@@ -9,6 +9,7 @@ import Input from '@/components/input/Input';
 import GoogleButton from '@/components/google/GoogleButton';
 import Button from '@/components/button/Button';
 import PhoneInput from '@/components/phoneInput/PhoneInput';
+import DropZone from '@/components/dropZone/DropZone';
 
 import { useForm } from '@/hooks/useForm';
 import { validateRegisterInputs } from '@/validations/register';
@@ -43,7 +44,7 @@ const initialErrors: RegisterErrors = {
 
 const RegisterForm = () => {
   const [isLoading, setIsLoading] = useState(false);
-  const [file, setFile] = useState<File>();
+  const [file, setFile] = useState<File[]>();
   const [showPassword, setShowPassword] = useState(false);
   const [step, setStep] = useState(STEPS.INFO);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
@@ -64,11 +65,11 @@ const RegisterForm = () => {
     });
   }, []);
 
-  const handleFile = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-    const target = e.target as HTMLInputElement;
-    const file = (target.files as FileList)[0];
-    setFile(file);
-  }, []);
+  // const handleFile = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+  //   const target = e.target as HTMLInputElement;
+  //   const file = (target.files as FileList)[0];
+  //   setFile(file);
+  // }, []);
 
   const togglePassword = useCallback(
     (_e: React.MouseEvent<HTMLSpanElement>) => {
@@ -92,7 +93,9 @@ const RegisterForm = () => {
       phone: `+234${data.phone}`,
     };
 
-    console.log({ ...credentials, file });
+    const selectedFile = file?.[0];
+
+    console.log({ ...credentials, file: selectedFile });
 
     setTimeout(() => {
       setIsLoading(false);
@@ -197,13 +200,7 @@ const RegisterForm = () => {
   if (step === STEPS.AVATAR) {
     bodyContent = (
       <>
-        <Input
-          type='file'
-          name='file'
-          label='Avatar'
-          accept='image/*'
-          onChange={handleFile}
-        />
+        <DropZone onSelect={setFile} />
       </>
     );
   }
