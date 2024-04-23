@@ -30,5 +30,10 @@
     color: $clr-gray-dark;
     border-radius: 0.5rem;
     box-shadow: inset $box-shadow;
+
+    option {
+      color: inherit;
+      font-size: 1.5rem;
+    }
   }
 }
