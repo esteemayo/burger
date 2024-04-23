@@ -5,6 +5,10 @@
   margin-top: 2rem;
   margin-bottom: 1rem;
 
+  &.small {
+    margin-top: 0;
+  }
+
   label {
     display: inline-block;
     width: 15rem;
