@@ -77,6 +77,7 @@
             display: flex;
             align-items: center;
             justify-content: flex-start;
+            gap: 1rem;
 
             button {
               all: unset;
@@ -88,10 +89,6 @@
               border: 1px solid $clr-gray-dark;
               border-radius: 0.5rem;
               cursor: pointer;
-
-              &:not(:last-child) {
-                margin-right: 1rem;
-              }
 
               &:disabled {
                 opacity: 0.7;
