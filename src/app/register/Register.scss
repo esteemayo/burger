@@ -79,9 +79,9 @@
             justify-content: flex-start;
             gap: 1rem;
 
-            button {
+            .btnPrev,
+            .btnNext {
               all: unset;
-              display: inline-block;
               text-align: center;
               text-transform: capitalize;
               font-weight: 500;
@@ -96,6 +96,20 @@
               &:disabled {
                 opacity: 0.7;
                 cursor: default;
+              }
+            }
+
+            .btnPrev {
+              display: none;
+              opacity: 0;
+              visibility: hidden;
+              z-index: -1;
+
+              &.show {
+                display: inline-block;
+                opacity: 1;
+                visibility: visible;
+                z-index: 1000;
               }
             }
           }
