@@ -394,6 +394,8 @@ export interface ProductImageProps {
 }
 
 export interface DropZoneProps {
+  id?: string;
+  label?: string;
   onSelect(file: File[]): void;
 }
 

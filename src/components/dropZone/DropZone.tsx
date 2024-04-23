@@ -7,7 +7,7 @@ import { DropZoneProps } from '@/types';
 
 import './DropZone.scss';
 
-const DropZone = ({ onSelect }: DropZoneProps) => {
+const DropZone = ({ id, label, onSelect }: DropZoneProps) => {
   const onDrop = useCallback(
     (acceptedFiles: File[]) => {
       onSelect(acceptedFiles);
@@ -19,8 +19,9 @@ const DropZone = ({ onSelect }: DropZoneProps) => {
 
   return (
     <div className='dropzone'>
+      <label htmlFor={id}>{label}</label>
       <div {...getRootProps({ className: 'dropzoneWrap' })}>
-        <input {...getInputProps()} />
+        <input id={id} {...getInputProps()} />
         {isDragActive ? (
           <p>Drop the file here ...</p>
         ) : (
