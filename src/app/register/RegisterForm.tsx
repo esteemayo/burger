@@ -50,12 +50,18 @@ const RegisterForm = () => {
 
   const onNext = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
     e.stopPropagation();
-    setStep((value) => value + 1);
+
+    setStep((value) => {
+      return value + 1;
+    });
   }, []);
 
   const onPrev = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
     e.stopPropagation();
-    setStep((value) => value - 1);
+
+    setStep((value) => {
+      return value - 1;
+    });
   }, []);
 
   const handleFile = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
