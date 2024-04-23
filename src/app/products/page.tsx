@@ -5,12 +5,24 @@ import { products } from '@/data';
 import ProductLists from '@/components/productLists/ProductLists';
 
 import './Products.scss';
+import EmptyState from '@/components/emptyState/EmptyState';
 
 export const metadata: Metadata = {
   title: 'Burger - Products page',
 };
 
 const Products = () => {
+  if (products.length < 1) {
+    return (
+      <EmptyState
+        title='No products found!'
+        subtitle='Temporarily, there are no products in the database.'
+        imgSrc='empty'
+        showReset
+      />
+    );
+  }
+
   return (
     <div className='products'>
       <div className='container'>
