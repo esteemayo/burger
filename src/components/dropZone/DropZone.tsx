@@ -1,13 +1,13 @@
 'use client';
 
-import { useCallback } from 'react';
 import { useDropzone } from 'react-dropzone';
+import { useCallback, useMemo } from 'react';
 
 import { DropZoneProps } from '@/types';
 
 import './DropZone.scss';
 
-const DropZone = ({ id, label, onSelect }: DropZoneProps) => {
+const DropZone = ({ id, label, small, onSelect }: DropZoneProps) => {
   const onDrop = useCallback(
     (acceptedFiles: File[]) => {
       onSelect(acceptedFiles);
@@ -15,10 +15,14 @@ const DropZone = ({ id, label, onSelect }: DropZoneProps) => {
     [onSelect]
   );
 
+  const dropzoneClasses = useMemo(() => {
+    return small?.toString() === 'true' ? 'dropzone small' : 'dropzone';
+  }, [small]);
+
   const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
 
   return (
-    <div className='dropzone'>
+    <div className={dropzoneClasses}>
       <label htmlFor={id}>{label}</label>
       <div className='dropzoneBox'>
         <div {...getRootProps({ className: 'dropzoneWrap' })}>
