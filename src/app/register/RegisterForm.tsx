@@ -65,12 +65,6 @@ const RegisterForm = () => {
     });
   }, []);
 
-  // const handleFile = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-  //   const target = e.target as HTMLInputElement;
-  //   const file = (target.files as FileList)[0];
-  //   setFile(file);
-  // }, []);
-
   const togglePassword = useCallback(
     (_e: React.MouseEvent<HTMLSpanElement>) => {
       setShowPassword((value) => !value);
