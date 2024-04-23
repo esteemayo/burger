@@ -6,10 +6,11 @@ import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 
 import AuthInfo from '@/components/authInfo/AuthInfo';
 import Input from '@/components/input/Input';
-import GoogleButton from '@/components/google/GoogleButton';
-import Button from '@/components/button/Button';
-import PhoneInput from '@/components/phoneInput/PhoneInput';
 import DropZone from '@/components/dropZone/DropZone';
+import Button from '@/components/button/Button';
+import GoogleButton from '@/components/google/GoogleButton';
+import Select from '@/components/select/Select';
+import PhoneInput from '@/components/phoneInput/PhoneInput';
 
 import { useForm } from '@/hooks/useForm';
 import { validateRegisterInputs } from '@/validations/register';
@@ -195,6 +196,7 @@ const RegisterForm = () => {
     bodyContent = (
       <>
         <DropZone id='avatar' label='Avatar' onSelect={setFile} />
+        <Select />
       </>
     );
   }
