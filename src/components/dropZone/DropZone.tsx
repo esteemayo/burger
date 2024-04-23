@@ -18,17 +18,19 @@ const DropZone = ({ id, label, onSelect }: DropZoneProps) => {
   const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
 
   return (
-    <div className='dropzone'>
+    <>
       <label htmlFor={id}>{label}</label>
-      <div {...getRootProps({ className: 'dropzoneWrap' })}>
-        <input id={id} {...getInputProps()} />
-        {isDragActive ? (
-          <p>Drop the file here ...</p>
-        ) : (
-          <p>Drag {'n'} drop your file here, or click to select file</p>
-        )}
+      <div className='dropzone'>
+        <div {...getRootProps({ className: 'dropzoneWrap' })}>
+          <input id={id} {...getInputProps()} />
+          {isDragActive ? (
+            <p>Drop the file here ...</p>
+          ) : (
+            <p>Drag {'n'} drop your file here, or click to select file</p>
+          )}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
