@@ -82,11 +82,14 @@
             button {
               all: unset;
               display: inline-block;
+              text-align: center;
+              text-transform: capitalize;
               font-weight: 400;
-              font-size: 1.3rem;
+              font-size: 1.2rem;
               padding: 3px 0.5rem;
               background-color: transparent;
-              border: 1px solid $clr-gray-dark;
+              color: $clr-gray-dark;
+              border: 1px solid currentColor;
               border-radius: 0.5rem;
               cursor: pointer;
 
