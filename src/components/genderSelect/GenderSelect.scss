@@ -3,6 +3,10 @@
   flex-direction: column;
   position: relative;
 
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
   label {
   }
 
