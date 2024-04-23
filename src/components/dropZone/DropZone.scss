@@ -2,26 +2,36 @@
 @import '../../styles/animations.scss';
 
 .dropzone {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  width: 100%;
-  height: 14rem;
-  border: 2px dashed $line;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  animation: pulse 2s linear infinite;
+  label {
+    display: inline-block;
+    width: 15rem;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 1.5rem;
+  }
 
-  .dropzoneWrap {
+  .dropzoneBox {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
     width: 100%;
-    height: 100%;
+    height: 14rem;
+    border: 2px dashed $line;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    animation: pulse 2s linear infinite;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    .dropzoneWrap {
+      width: 100%;
+      height: 100%;
 
-    p {
-      font-size: 1.5rem;
-      color: $clr-gray-dark;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      p {
+        font-size: 1.5rem;
+        color: $clr-gray-dark;
+      }
     }
   }
 }

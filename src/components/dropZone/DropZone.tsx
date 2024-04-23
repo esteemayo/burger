@@ -18,9 +18,9 @@ const DropZone = ({ id, label, onSelect }: DropZoneProps) => {
   const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
 
   return (
-    <>
+    <div className='dropzone'>
       <label htmlFor={id}>{label}</label>
-      <div className='dropzone'>
+      <div className='dropzoneBox'>
         <div {...getRootProps({ className: 'dropzoneWrap' })}>
           <input id={id} {...getInputProps()} />
           {isDragActive ? (
@@ -30,7 +30,7 @@ const DropZone = ({ id, label, onSelect }: DropZoneProps) => {
           )}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
