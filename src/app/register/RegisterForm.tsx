@@ -47,10 +47,14 @@ const RegisterForm = () => {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
   const onNext = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
+    e.stopPropagation();
+
     setStep((value) => value + 1);
   }, []);
 
   const onPrev = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
+    e.stopPropagation();
+
     setStep((value) => value - 1);
   }, []);
 
