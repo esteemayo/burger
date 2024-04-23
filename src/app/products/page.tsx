@@ -1,11 +1,12 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
 
-import { products } from '@/data';
+import EmptyState from '@/components/emptyState/EmptyState';
 import ProductLists from '@/components/productLists/ProductLists';
 
+import { products } from '@/data';
+
 import './Products.scss';
-import EmptyState from '@/components/emptyState/EmptyState';
 
 export const metadata: Metadata = {
   title: 'Burger - Products page',
