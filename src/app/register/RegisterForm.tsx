@@ -210,12 +210,16 @@ const RegisterForm = () => {
       <form onSubmit={handleSubmit} className='registerForm'>
         {bodyContent}
         <div className='slideBox'>
-          <button type='button' onClick={onPrev}>
-            Prev
-          </button>
-          <button type='button' onClick={onNext}>
-            Next
-          </button>
+          {step !== STEPS.INFO && (
+            <button type='button' onClick={onPrev}>
+              Prev
+            </button>
+          )}
+          {step !== STEPS.AVATAR && (
+            <button type='button' onClick={onNext}>
+              Next
+            </button>
+          )}
         </div>
         <div className='buttonWrap'>
           <Button
