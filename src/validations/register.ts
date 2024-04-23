@@ -1,11 +1,15 @@
 import { RegisterData, RegisterErrors } from '@/types';
 
 export const validateRegisterInputs = (data: RegisterData) => {
-  const { name, email, phone, password, confirmPassword } = data;
+  const { name, username, email, phone, password, confirmPassword } = data;
   const errors: RegisterErrors = {};
 
   if (name.trim() === '') {
     errors.name = 'Name is required';
+  }
+
+  if (username.trim() === '') {
+    errors.username = 'Username is required';
   }
 
   if (email.trim() === '') {
