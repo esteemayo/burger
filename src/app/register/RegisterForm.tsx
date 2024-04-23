@@ -9,7 +9,7 @@ import Input from '@/components/input/Input';
 import DropZone from '@/components/dropZone/DropZone';
 import Button from '@/components/button/Button';
 import GoogleButton from '@/components/google/GoogleButton';
-import Select from '@/components/select/Select';
+import GenderSelect from '@/components/genderSelect/GenderSelect';
 import PhoneInput from '@/components/phoneInput/PhoneInput';
 
 import { useForm } from '@/hooks/useForm';
@@ -196,7 +196,7 @@ const RegisterForm = () => {
     bodyContent = (
       <>
         <DropZone id='avatar' label='Avatar' onSelect={setFile} />
-        <Select />
+        <GenderSelect />
       </>
     );
   }

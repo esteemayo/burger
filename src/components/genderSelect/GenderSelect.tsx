@@ -1,8 +1,8 @@
-import ReactSelect from 'react-select';
+import Select from 'react-select';
 
 import './Select.scss';
 
-const Select = () => {
+const GenderSelect = () => {
   const options = [
     { value: 'male', label: 'Male' },
     { value: 'female', label: 'Female' },
@@ -11,7 +11,7 @@ const Select = () => {
 
   return (
     <div className='select'>
-      <ReactSelect
+      <Select
         placeholder='Select your gender'
         isClearable
         options={options}
@@ -34,4 +34,4 @@ const Select = () => {
   );
 };
 
-export default Select;
+export default GenderSelect;
