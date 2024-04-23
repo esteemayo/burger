@@ -40,11 +40,11 @@ const initialErrors: RegisterErrors = {
 };
 
 const RegisterForm = () => {
-  const [showPassword, setShowPassword] = useState(false);
-  const [file, setFile] = useState<File>();
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const [step, setStep] = useState(STEPS.INFO);
   const [isLoading, setIsLoading] = useState(false);
+  const [file, setFile] = useState<File>();
+  const [showPassword, setShowPassword] = useState(false);
+  const [step, setStep] = useState(STEPS.INFO);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
   const onNext = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
     setStep((value) => value + 1);
@@ -181,7 +181,7 @@ const RegisterForm = () => {
       </>
     );
   }
-  
+
   if (step === STEPS.AVATAR) {
     bodyContent = (
       <>
@@ -193,7 +193,7 @@ const RegisterForm = () => {
           onChange={handleFile}
         />
       </>
-    )
+    );
   }
 
   return (
