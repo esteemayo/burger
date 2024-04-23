@@ -28,5 +28,8 @@
     padding: 1.5rem 2rem;
     background-color: transparent;
     color: $clr-gray-dark;
+    border-radius: 0.5rem;
+    box-shadow: inset $box-shadow;
+    caret-color: $clr-gray-light;
   }
 }
