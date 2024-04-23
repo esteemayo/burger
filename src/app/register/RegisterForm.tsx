@@ -114,6 +114,14 @@ const RegisterForm = () => {
     return data.confirmPassword.length > 0 ? 'icon show' : 'icon';
   }, [data]);
 
+  const prevBtnClasses = useMemo(() => {
+    return step !== STEPS.INFO ? 'btnPrev show' : 'btnPrev';
+  }, [step]);
+
+  const nextBtnClasses = useMemo(() => {
+    return step !== STEPS.AVATAR ? 'btnPrev show' : 'btnPrev';
+  }, [step]);
+
   const { name, username, email, phone, password, confirmPassword } = data;
 
   let bodyContent;
@@ -211,16 +219,12 @@ const RegisterForm = () => {
       <form onSubmit={handleSubmit} className='registerForm'>
         {bodyContent}
         <div className='slideBox'>
-          {step !== STEPS.INFO && (
-            <button type='button' onClick={onPrev}>
-              Prev
-            </button>
-          )}
-          {step !== STEPS.AVATAR && (
-            <button type='button' onClick={onNext}>
-              Next
-            </button>
-          )}
+          <button type='button' onClick={onPrev} className={prevBtnClasses}>
+            Prev
+          </button>
+          <button type='button' onClick={onNext} className={nextBtnClasses}>
+            Next
+          </button>
         </div>
         <div className='buttonWrap'>
           <Button
