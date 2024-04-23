@@ -1,5 +1,3 @@
-import Select from 'react-select';
-
 import './GenderSelect.scss';
 
 const GenderSelect = () => {
@@ -10,26 +8,13 @@ const GenderSelect = () => {
   ];
 
   return (
-    <div className='select'>
-      <Select
-        placeholder='Select your gender'
-        isClearable
-        options={options}
-        formatOptionLabel={(option) => (
-          <div className='selectOption'>
-            <span>{option.label}</span>
-          </div>
-        )}
-        theme={(theme) => ({
-          ...theme,
-          borderRadius: 5,
-          colors: {
-            ...theme.colors,
-            primary: '#00000059',
-            primary25: '#f7dbdb',
-          },
-        })}
-      />
+    <div className='genderSelect'>
+      <label htmlFor='gender'>Gender</label>
+      <select name='gender' id='gender'>
+        <option value='male'>Male</option>
+        <option value='female'>Female</option>
+        <option value='other'>Other</option>
+      </select>
     </div>
   );
 };
