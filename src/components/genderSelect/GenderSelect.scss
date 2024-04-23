@@ -16,5 +16,10 @@
   }
 
   select {
+    display: inline-block;
+    border: none;
+    outline: none;
+    font-family: inherit;
+    font-size: var(--default-font-size);
   }
 }
