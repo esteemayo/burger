@@ -1,4 +1,5 @@
 @import '../../styles/variables.scss';
+@import '../../styles/responsive.scss';
 
 .logo {
   a,
@@ -8,6 +9,10 @@
     width: 12rem;
     height: 9rem;
     color: inherit;
+
+    @include sm {
+      width: 10rem;
+    }
 
     img {
       width: 100%;
