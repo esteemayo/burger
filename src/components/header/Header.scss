@@ -37,6 +37,10 @@
       font-size: 3.6rem;
       color: $clr-white;
       line-height: 4.4rem;
+
+      @include sm {
+        font-size: 3.3rem;
+      }
     }
 
     .search {
