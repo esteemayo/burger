@@ -47,6 +47,10 @@
       border-radius: 2px;
       overflow: hidden;
 
+      @include sm {
+        width: 75%;
+      }
+
       .searchInput {
         flex: 1;
         display: flex;
