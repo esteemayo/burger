@@ -22,6 +22,26 @@
       border-radius: 0.5rem;
       overflow: hidden;
 
+      @media only screen and (max-width: 62.5em) {
+        width: 95rem;
+      }
+
+      @include md {
+        width: 50rem;
+      }
+
+      @include sm {
+        width: 45rem;
+      }
+
+      @media only screen and (max-width: 23.4375em) {
+        width: 40rem;
+      }
+
+      @media only screen and (max-width: 17.5em) {
+        width: 30rem;
+      }
+
       .imgWrap {
         flex: 1;
         width: 100%;
