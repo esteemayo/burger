@@ -176,6 +176,10 @@
               border-radius: 0.5rem;
               cursor: pointer;
 
+              @media only screen and (max-width: 26.875em) {
+                font-size: 1.34rem;
+              }
+
               @media only screen and (max-width: 23.4375em) {
                 font-size: 1.23rem;
                 padding: 1rem 0.5rem;
