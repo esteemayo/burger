@@ -124,7 +124,7 @@ const RegisterForm = () => {
 
   const { name, username, email, phone, password, confirmPassword } = data;
 
-  let bodyContent;
+  let bodyContent: JSX.Element | undefined;
 
   bodyContent = (
     <>
