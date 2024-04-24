@@ -54,12 +54,20 @@
 
         svg {
           font-size: 3rem;
+
+          @include sm {
+            font-size: 2.5rem;
+          }
         }
 
         span {
           font-weight: 700;
           font-size: 1.4rem;
           white-space: nowrap;
+
+          @include sm {
+            font-size: 1.3rem;
+          }
         }
       }
 
