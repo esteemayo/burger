@@ -89,6 +89,10 @@
           padding: 2rem;
         }
 
+        @media only screen and (max-width: 17.5em) {
+          padding: 1.5rem;
+        }
+
         .headingWrap {
           h1 {
             font-weight: 500;
@@ -97,6 +101,10 @@
 
             @media only screen and (max-width: 23.4375em) {
               font-size: 2.5rem;
+            }
+
+            @media only screen and (max-width: 17.5em) {
+              font-size: 2rem;
             }
 
             span {
