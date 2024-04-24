@@ -45,6 +45,10 @@
           height: 35rem;
           display: block;
           object-fit: contain;
+
+          @media only screen and (max-width: 62.5em) {
+            width: 35rem;
+          }
         }
       }
 
