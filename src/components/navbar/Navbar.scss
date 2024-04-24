@@ -114,6 +114,11 @@
           width: 2.4rem;
           height: 2.4rem;
           object-fit: cover;
+
+          @include sm {
+            width: 2.12;
+            height: 2.12;
+          }
         }
 
         .count {
