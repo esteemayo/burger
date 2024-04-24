@@ -13,6 +13,10 @@
     align-items: center;
     justify-content: center;
 
+    @include sm {
+      padding: 8rem 0;
+    }
+
     .wrapper {
       width: 100rem;
       height: 100%;
