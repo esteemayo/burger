@@ -36,6 +36,10 @@
         align-items: center;
         justify-content: center;
 
+        @media only screen and (max-width: 62.5em) {
+          padding: 2rem;
+        }
+
         img {
           width: 40rem;
           height: 35rem;
@@ -51,6 +55,10 @@
         gap: 2rem;
         background-color: $clr-white;
         padding: 2rem 3rem;
+
+        @media only screen and (max-width: 62.5em) {
+          padding: 2rem;
+        }
 
         .headingWrap {
           h1 {
