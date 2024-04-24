@@ -31,6 +31,10 @@
         width: 50rem;
       }
 
+      @include sm {
+        width: 45rem;
+      }
+
       .imgWrap {
         flex: 1;
         width: 100%;
