@@ -60,7 +60,7 @@
       }
 
       @media only screen and (max-width: 31.25em) {
-        font-size: 2.8rem; 
+        font-size: 2.8rem;
       }
     }
 
@@ -169,6 +169,10 @@
           @include lg {
             font-size: 2rem;
           }
+
+          @media only screen and (max-width: 31.25em) {
+            font-size: 1.7rem;
+          }
         }
       }
 
@@ -189,6 +193,11 @@
         @include lg {
           width: 17rem;
           font-size: 2rem;
+        }
+
+        @media only screen and (max-width: 31.25em) {
+          width: 12rem;
+          font-size: var(--default-font-size);
         }
 
         &:hover {
