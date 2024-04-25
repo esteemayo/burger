@@ -38,6 +38,11 @@
       align-items: center;
       justify-content: center;
 
+      @include md {
+        width: 12rem;
+        height: 12rem;
+      }
+
       &:hover {
         background-color: $clr-secondary;
         transform: scale(1.1);
