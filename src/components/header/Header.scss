@@ -59,8 +59,8 @@
         font-size: 3.5rem;
       }
 
-      @include sm {
-        font-size: 2.8rem;
+      @media only screen and (max-width: 31.25em) {
+        font-size: 2.8rem; 
       }
     }
 
@@ -108,6 +108,11 @@
           @include lg {
             width: 2.7rem;
             height: 2.7rem;
+          }
+
+          @media only screen and (max-width: 31.25em) {
+            width: 2rem;
+            height: 2rem;
           }
         }
 
