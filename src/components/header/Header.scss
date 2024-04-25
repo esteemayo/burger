@@ -25,6 +25,10 @@
   @media only screen and (max-width: 37.5em) {
     height: calc(60vh - 12rem);
   }
+  
+  @media only screen and (max-width: 17.5em) {
+    height: calc(50vh - 12rem);
+  }
 
   .container {
     width: 100%;
@@ -147,6 +151,11 @@
             width: 2rem;
             height: 2rem;
           }
+
+          @media only screen and (max-width: 17.5em) {
+            width: 1.8rem;
+            height: 1.8rem;
+          }
         }
 
         input {
@@ -172,6 +181,10 @@
             font-size: 2rem;
           }
 
+          @media only screen and (max-width: 17.5em) {
+            font-size: 100%;
+          }
+
           &::placeholder {
             font-weight: 500;
             font-size: 1.5rem;
@@ -183,6 +196,10 @@
 
             @media only screen and (max-width: 31.25em) {
               font-size: 1.7rem;
+            }
+
+            @media only screen and (max-width: 17.5em) {
+              font-size: 1.5rem;
             }
           }
         }
@@ -205,6 +222,10 @@
 
           @media only screen and (max-width: 31.25em) {
             font-size: 1.7rem;
+          }
+
+          @media only screen and (max-width: 17.5em) {
+            font-size: 1.4rem;
           }
         }
       }
@@ -231,6 +252,11 @@
         @media only screen and (max-width: 31.25em) {
           width: 12rem;
           font-size: var(--default-font-size);
+        }
+
+        @media only screen and (max-width: 17.5em) {
+          width: 10rem;
+          font-size: 1.4rem;
         }
 
         &:hover {
