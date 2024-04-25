@@ -101,10 +101,18 @@
           box-shadow: none;
           caret-color: $clr-gray-light;
 
+          @include lg {
+            font-size: 1.8rem;
+          }
+
           &::placeholder {
             font-weight: 500;
             font-size: 1.5rem;
             color: $clr-gray-light;
+
+            @include lg {
+              font-size: 1.7rem;
+            }
           }
         }
 
