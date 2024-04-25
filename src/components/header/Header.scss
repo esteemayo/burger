@@ -13,7 +13,7 @@
   overflow: visible;
 
   @include lg {
-    height: calc(80vh - 12rem);
+    height: calc(90vh - 12rem);
     background-image: url(/svg/hero-1.svg), url(/svg/hero-2.svg);
     background-position: center left, center right;
   }
