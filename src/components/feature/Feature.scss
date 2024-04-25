@@ -8,6 +8,7 @@
     border-right: 1px dotted $clr-gray-light;
 
     @include md {
+      width: 95%;
       border-right: none;
       border-bottom: 1px dotted $clr-gray-light;
     }
