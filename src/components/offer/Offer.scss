@@ -99,6 +99,10 @@
         cursor: pointer;
         transition: all 0.3s;
 
+        @include md {
+          font-size: 2rem;
+        }
+
         &:hover {
           background-color: $clr-secondary;
         }
