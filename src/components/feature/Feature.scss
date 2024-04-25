@@ -53,6 +53,10 @@
       svg {
         font-size: inherit;
         fill: currentColor;
+
+        @include md {
+          font-size: 5rem;
+        }
       }
     }
 
