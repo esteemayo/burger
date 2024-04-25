@@ -102,7 +102,7 @@
           caret-color: $clr-gray-light;
 
           @include lg {
-            font-size: 1.8rem;
+            font-size: 2.5rem;
           }
 
           &::placeholder {
@@ -111,7 +111,7 @@
             color: $clr-gray-light;
 
             @include lg {
-              font-size: 1.7rem;
+              font-size: 2rem;
             }
           }
         }
