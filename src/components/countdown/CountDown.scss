@@ -1,7 +1,12 @@
 @import '../../styles/variables.scss';
+@import '../../styles/responsive.scss';
 
 .countdown {
   font-weight: 700;
   font-variant-numeric: tabular-nums;
   color: $clr-yellow;
+
+  @include md {
+    font-size: 2rem;
+  }
 }
