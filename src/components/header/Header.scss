@@ -21,6 +21,10 @@
     height: calc(70vh - 12rem);
   }
 
+  @include sm {
+    height: calc(60vh - 12rem);
+  }
+
   .container {
     width: 100%;
     height: 100%;
