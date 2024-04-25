@@ -82,6 +82,10 @@
       @media only screen and (max-width: 21.5em) {
         font-size: 2rem;
       }
+
+      @media only screen and (max-width: 17.5em) {
+        font-size: 100%;
+      }
     }
 
     .search {
@@ -116,6 +120,10 @@
       @media only screen and (max-width: 26.875em) {
         width: 90%;
         height: 5.5rem;
+      }
+
+      @media only screen and (max-width: 17.5em) {
+        width: 4rem;
       }
 
       .searchInput {
