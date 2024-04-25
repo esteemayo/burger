@@ -44,6 +44,11 @@
           height: 40rem;
         }
 
+        @media only screen and (max-width: 37.5em) {
+          width: 50rem;
+          height: 35rem;
+        }
+
         img {
           display: block;
           width: 100%;
@@ -60,6 +65,10 @@
       justify-content: center;
       gap: 3.2rem;
       padding: 2.4rem;
+
+      @media only screen and (max-width: 37.5em) {
+        padding: 2.4rem 7rem;
+      }
 
       .heading {
         text-transform: capitalize;
