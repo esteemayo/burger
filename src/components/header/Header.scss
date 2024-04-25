@@ -134,7 +134,7 @@
           cursor: pointer;
 
           @include lg {
-            font-size: 1.8rem;
+            font-size: 2rem;
           }
         }
       }
@@ -152,6 +152,11 @@
         color: $clr-white;
         cursor: pointer;
         transition: all 0.3s;
+
+        @include lg {
+          width: 17rem;
+          font-size: 2rem;
+        }
 
         &:hover {
           opacity: 0.85;
