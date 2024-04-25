@@ -80,6 +80,10 @@
       font-size: 1.5rem;
       color: $clr-gray-light;
       line-height: 1.5;
+
+      @include md {
+        margin-bottom: 4rem;
+      }
     }
   }
 }
