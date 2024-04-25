@@ -93,6 +93,10 @@
         width: 85%;
       }
 
+      @media only screen and (max-width: 31.25em) {
+        height: 6rem;
+      }
+
       .searchInput {
         flex: 1;
         display: flex;
@@ -133,6 +137,10 @@
 
           @include lg {
             font-size: 2.5rem;
+          }
+
+          @media only screen and (max-width: 31.25em) {
+            font-size: 2rem;
           }
 
           &::placeholder {
