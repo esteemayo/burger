@@ -1,4 +1,5 @@
 @import '../../styles/variables.scss';
+@import '../../styles/responsive.scss';
 
 .features {
   display: flex;
@@ -16,6 +17,11 @@
         align-items: center;
         justify-content: flex-start;
         gap: 2rem;
+
+        @include md {
+          flex-direction: column;
+          gap: 7rem;
+        }
       }
     }
   }
