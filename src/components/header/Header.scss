@@ -84,6 +84,11 @@
           width: 2rem;
           height: 2rem;
           margin: 1rem;
+
+          @include lg {
+            width: 2.7rem;
+            height: 2.7rem;
+          }
         }
 
         input {
@@ -129,7 +134,7 @@
           cursor: pointer;
 
           @include lg {
-           font-size: 1.8rem; 
+            font-size: 1.8rem;
           }
         }
       }
