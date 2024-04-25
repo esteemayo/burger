@@ -60,6 +60,12 @@
       margin-top: 1.5rem;
       margin-bottom: 0.5rem;
 
+      @include md {
+        font-size: 2rem;
+        font-weight: 500;
+        letter-spacing: 1px;
+      }
+
       a,
       a:link,
       a:active {
