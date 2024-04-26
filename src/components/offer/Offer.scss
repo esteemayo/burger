@@ -18,6 +18,10 @@
     height: 100vh;
   }
 
+  @include md {
+    height: 110vh;
+  }
+
   @include sm {
     height: 70vh;
   }
