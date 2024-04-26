@@ -50,10 +50,6 @@
         }
 
         @include sm {
-          width: 50rem;
-        }
-
-        @media only screen and (max-width: 25em) {
           display: none;
         }
 
