@@ -57,6 +57,10 @@
           height: 35rem;
         }
 
+        @media only screen and (max-width: 33.75em) {
+          height: 30rem;
+        }
+
         img {
           display: block;
           width: 100%;
