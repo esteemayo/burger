@@ -1,4 +1,5 @@
 @import '../../styles/variables.scss';
+@import '../../styles/responsive.scss';
 
 .newsLetter {
   display: flex;
@@ -10,6 +11,10 @@
     display: flex;
     justify-content: space-between;
     gap: 3rem;
+
+    @include md {
+      flex-direction: column;
+    }
 
     .textWrap {
       flex: 1;
