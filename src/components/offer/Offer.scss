@@ -151,6 +151,10 @@
           font-size: 2rem;
         }
 
+        @media only screen and (max-width: 17.5em) {
+          font-size: 100%;
+        }
+
         &:hover {
           background-color: $clr-secondary;
         }
