@@ -18,6 +18,10 @@
     height: 100vh;
   }
 
+  @include sm {
+    height: 80vh;
+  }
+
   .container {
     width: 144rem;
     padding: 8rem 3rem;
