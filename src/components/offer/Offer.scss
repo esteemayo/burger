@@ -19,7 +19,7 @@
   }
 
   @include sm {
-    height: 80vh;
+    height: 70vh;
   }
 
   .container {
@@ -79,7 +79,7 @@
       }
 
       @include sm {
-        padding: 2.4rem 4rem;
+        padding: 0 1rem;
       }
 
       .heading {
