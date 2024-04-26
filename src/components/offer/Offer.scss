@@ -22,6 +22,10 @@
     height: 110vh;
   }
 
+  @media only screen and (max-width: 46.4375em) {
+    height: 120vh;
+  }
+
   @include sm {
     height: 70vh;
   }
