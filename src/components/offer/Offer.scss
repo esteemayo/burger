@@ -14,7 +14,7 @@
   background-color: $clr-black;
   color: $clr-white;
 
-  @include md {
+  @include lg {
     height: 100vh;
   }
 
