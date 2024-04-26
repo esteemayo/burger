@@ -78,7 +78,7 @@
         padding: 2.4rem 3rem;
       }
 
-      @media only screen and (max-width: 30em) {
+      @include sm {
         padding: 2.4rem 4rem;
       }
 
@@ -96,7 +96,7 @@
           font-size: 4rem;
         }
 
-        @media only screen and (max-width: 30em) {
+        @include sm {
           font-size: 3.8rem;
           line-height: 1.3;
         }
@@ -112,7 +112,7 @@
           font-size: 2.3rem;
         }
 
-        @media only screen and (max-width: 30em) {
+        @include {
           font-size: 2rem;
         }
       }
