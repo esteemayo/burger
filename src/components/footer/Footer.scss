@@ -180,6 +180,10 @@
         flex-direction: column;
         gap: 1rem;
 
+        @include md {
+          text-align: left;
+        }
+
         .menus {
           display: flex;
           align-items: center;
