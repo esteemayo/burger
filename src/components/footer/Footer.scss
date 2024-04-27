@@ -158,6 +158,11 @@
             border-radius: 3px;
             transition: all 0.3s;
 
+            @include sm {
+              width: 3.5rem;
+              height: 3.5rem;
+            }
+
             &:hover {
               color: #ada3a3;
               transform: translateY(-0.5rem);
