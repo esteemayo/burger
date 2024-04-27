@@ -59,6 +59,11 @@
           flex-direction: column;
           gap: 1.6rem;
 
+          @include md {
+            flex-direction: row;
+            flex-wrap: wrap;
+          }
+
           a,
           a:link,
           a:active {
