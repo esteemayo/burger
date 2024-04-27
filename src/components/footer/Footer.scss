@@ -62,6 +62,7 @@
           @include md {
             flex-direction: row;
             flex-wrap: wrap;
+            column-gap: 3rem;
           }
 
           a,
