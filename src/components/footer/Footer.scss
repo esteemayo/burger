@@ -11,6 +11,10 @@
     width: 144rem;
     padding: 10rem 3rem;
 
+    @include sm {
+      padding: 5rem 3rem;
+    }
+
     .top {
       display: flex;
       justify-content: space-between;
