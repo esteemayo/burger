@@ -41,6 +41,11 @@
             gap: 6rem;
           }
 
+          @include sm {
+            flex-direction: row;
+            gap: 1rem;
+          }
+
           .download {
             display: flex;
             align-items: center;
