@@ -17,6 +17,7 @@
 
       @include md {
         flex-direction: column;
+        gap: 5rem;
       }
 
       .left {
