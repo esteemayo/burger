@@ -28,6 +28,10 @@
           justify-content: space-between;
           gap: 12rem;
 
+          @include md {
+            flex-direction: row;
+          }
+
           .download {
             display: flex;
             align-items: center;
