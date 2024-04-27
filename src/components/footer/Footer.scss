@@ -214,6 +214,10 @@
             justify-content: flex-start;
           }
 
+          @media only screen and (max-width: 31.25em) {
+            gap: 0.5rem;
+          }
+
           a,
           a:link,
           a:active {
