@@ -186,6 +186,10 @@
           justify-content: flex-end;
           gap: 2rem;
 
+          @include md {
+            justify-content: flex-start;
+          }
+
           a,
           a:link,
           a:active {
