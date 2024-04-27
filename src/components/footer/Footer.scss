@@ -218,6 +218,12 @@
             gap: 0.5rem;
           }
 
+          @media only screen and (max-width: 28.4375em) {
+            flex-wrap: wrap;
+            column-gap: 3rem;
+            margin-bottom: 2rem;
+          }
+
           a,
           a:link,
           a:active {
