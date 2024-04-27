@@ -38,6 +38,10 @@
             align-items: center;
             gap: 2rem;
 
+            @media only screen and (max-width: 31.25em) {
+              gap: 1rem;
+            }
+
             img {
               width: 13.5rem;
               height: 4rem;
