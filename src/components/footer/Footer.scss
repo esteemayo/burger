@@ -121,6 +121,10 @@
       height: 0;
       border: 0.1px solid $clr-primary;
       margin: 5rem 0;
+
+      @include sm {
+        margin: 2.5rem 0;
+      }
     }
 
     .bottom {
