@@ -55,6 +55,10 @@
               gap: 1rem;
             }
 
+            @include sm {
+              gap: 2rem;
+            }
+
             img {
               width: 13.5rem;
               height: 4rem;
