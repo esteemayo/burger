@@ -55,6 +55,18 @@
       line-height: 1.5;
       color: #212529;
       background-color: #e9ecef;
+
+      @include lg {
+        font-size: 1.7rem;
+      }
+
+      @media only screen and (max-width: 56.25em) {
+        font-size: 1.85rem;
+      }
+
+      @include md {
+        font-size: 1.975rem;
+      }
     }
 
     input {
@@ -74,11 +86,11 @@
       @include lg {
         font-size: 1.7rem;
       }
-  
+
       @media only screen and (max-width: 56.25em) {
         font-size: 1.85rem;
       }
-  
+
       @include md {
         font-size: 1.975rem;
       }
@@ -91,7 +103,7 @@
         @include md {
           font-size: 1.875rem;
         }
-  
+
         @media only screen and (max-width: 23.4375em) {
           font-size: 1.675rem;
         }
