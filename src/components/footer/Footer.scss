@@ -149,7 +149,7 @@
     .bottom {
       display: flex;
 
-      @include md {
+      @include lg {
         flex-direction: column;
         gap: 5rem;
       }
@@ -242,8 +242,9 @@
         flex-direction: column;
         gap: 1rem;
 
-        @include md {
+        @include lg {
           text-align: left;
+          align-self: flex-start;
         }
 
         .menus {
@@ -252,7 +253,7 @@
           justify-content: flex-end;
           gap: 2rem;
 
-          @include md {
+          @include lg {
             justify-content: flex-start;
           }
 
