@@ -22,6 +22,11 @@
     height: 4.5rem;
   }
 
+  @include sm {
+    width: 4rem;
+    height: 4rem;
+  }
+
   &.show {
     bottom: 7.5rem;
     display: block;
