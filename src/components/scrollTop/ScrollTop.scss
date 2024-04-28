@@ -18,8 +18,8 @@
   animation: moveInBottom 0.5s ease-out 1s backwards;
 
   @include md {
-    width: 5rem;
-    height: 5rem;
+    width: 4.5rem;
+    height: 4.5rem;
   }
 
   &.show {
@@ -54,7 +54,7 @@
       fill: currentColor;
 
       @include md {
-        font-size: 4rem;
+        font-size: 3.5rem;
       }
     }
   }
