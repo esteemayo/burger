@@ -44,6 +44,10 @@
     box-shadow: inset $box-shadow;
     caret-color: $clr-gray-light;
 
+    @include md {
+      font-size: 1.975rem;
+    }
+
     &::placeholder {
       font-weight: 400;
       font-size: 1.5rem;
