@@ -1,6 +1,11 @@
 @import '../../styles/variables.scss';
+@import '../../styles/responsive.scss';
 
 .errorMessage {
   font-size: 1.3rem;
   color: $error;
+
+  @include md {
+    font-size: 1.625rem;
+  }
 }
