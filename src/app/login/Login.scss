@@ -169,6 +169,10 @@
             justify-content: space-between;
             gap: 1rem;
 
+            @media only screen and (max-width: 56.25em) {
+              gap: 0.5rem;
+            }
+
             @include sm {
               flex-direction: column;
             }
@@ -185,6 +189,10 @@
 
               @include lg {
                 font-size: 1.45rem;
+              }
+
+              @media only screen and (max-width: 56.25em) {
+                font-size: 1.56rem;
               }
 
               @include md {
