@@ -52,6 +52,10 @@
     box-shadow: inset $box-shadow;
     caret-color: $clr-gray-light;
 
+    @include lg {
+      font-size: 1.7rem;
+    }
+
     @include md {
       font-size: 1.975rem;
     }
