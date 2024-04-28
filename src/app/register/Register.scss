@@ -241,13 +241,14 @@
                 display: block;
                 object-fit: cover;
 
-                @media only screen and (max-width: 23.4375em) {
-                  width: 1.25rem;
-                  height: 1.25rem;
+                @include lg {
+                  width: 1.67rem;
+                  height: 1.67rem;
                 }
 
-                @media only screen and (max-width: 17.5em) {
-                  display: none;
+                @include md {
+                  width: 1.875rem;
+                  height: 1.875rem;
                 }
               }
             }
