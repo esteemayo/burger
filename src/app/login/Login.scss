@@ -215,6 +215,11 @@
                 height: 1.5rem;
                 display: block;
                 object-fit: cover;
+
+                @include md {
+                  width: 1.875rem;
+                  height: 1.875rem;
+                }
               }
             }
           }
