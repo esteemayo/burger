@@ -16,12 +16,20 @@
     }
   }
 
-  label {
+  .inputLabel {
     display: inline-block;
-    width: 15rem;
+    width: 10rem;
     text-transform: capitalize;
     font-weight: 500;
     font-size: 1.5rem;
+
+    &.large {
+      width: 15rem;
+
+      @media only screen and (max-width: 56.25em) {
+        width: 20rem;
+      }
+    }
 
     @include lg {
       font-size: 1.67rem;

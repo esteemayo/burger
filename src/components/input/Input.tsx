@@ -8,23 +8,34 @@ import ErrorMessage from '../errorMessage/ErrorMessage';
 
 import './Input.scss';
 
+interface ILabel {
+  dimension?: 'small' | 'large';
+}
+
 const Input = ({
   id,
   name,
   type = 'text',
   label,
+  dimension = 'small',
   error,
   formatPrice,
   children,
   ...rest
-}: InputProps) => {
+}: InputProps & ILabel) => {
+  const labelClasses = useMemo(() => {
+    return dimension === 'small' ? 'inputLabel' : 'inputLabel large';
+  }, [dimension]);
+
   const inputClasses = useMemo(() => {
     return formatPrice ? 'formGroup formatPrice' : 'formGroup';
   }, [formatPrice]);
 
   return (
     <div className={inputClasses}>
-      <label htmlFor={name}>{label}</label>
+      <label htmlFor={name} className={labelClasses}>
+        {label}
+      </label>
       <input {...rest} id={name} name={name} type={type} />
       {error && <ErrorMessage message={error} />}
       {formatPrice && (
