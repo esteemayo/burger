@@ -14,6 +14,10 @@
     color: inherit;
     cursor: pointer;
 
+    @include lg {
+      font-size: 1.45rem;
+    }
+
     @include md {
       font-size: 1.625rem;
     }

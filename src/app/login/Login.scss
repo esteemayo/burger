@@ -143,6 +143,10 @@
               color: $clr-primary;
               transition: all 0.3s;
 
+              @include lg {
+                font-size: 1.45rem;
+              }
+
               @include md {
                 font-size: 1.625rem;
               }
