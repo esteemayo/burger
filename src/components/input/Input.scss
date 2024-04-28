@@ -23,6 +23,10 @@
     font-weight: 500;
     font-size: 1.5rem;
 
+    @include lg {
+      font-size: 1.67rem;
+    }
+
     @include md {
       font-size: 1.875rem;
     }
