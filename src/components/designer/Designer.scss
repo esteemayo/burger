@@ -1,4 +1,5 @@
 @import '../../styles/variables.scss';
+@import '../../styles/responsive.scss';
 
 .designer {
   text-align: center;
@@ -15,6 +16,11 @@
         font-size: 1.3rem;
         text-align: center;
         letter-spacing: 2px;
+
+        @include md {
+          font-size: 100%;
+          letter-spacing: 1.5px;
+        }
       }
     }
   }
