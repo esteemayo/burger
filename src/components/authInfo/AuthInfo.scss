@@ -8,6 +8,10 @@
     font-size: 1.35rem;
     color: $clr-gray-dark;
 
+    @include lg {
+      font-size: 1.445rem;
+    }
+
     @include md {
       font-size: 1.625rem;
     }
