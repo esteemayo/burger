@@ -126,7 +126,7 @@
       font-size: 2rem;
       fill: $clr-gray-dark;
 
-      @include md {
+      @media only screen and (max-width: 56.25em) {
         font-size: 2.5rem;
       }
     }
