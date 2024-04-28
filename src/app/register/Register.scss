@@ -170,6 +170,14 @@
             justify-content: space-between;
             gap: 1rem;
 
+            @media only screen and (max-width: 56.25em) {
+              gap: 0.5rem;
+            }
+
+            @include sm {
+              flex-direction: column;
+            }
+
             .registerBtn,
             .googleBtn {
               all: unset;
