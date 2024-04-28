@@ -232,6 +232,11 @@
                 display: block;
                 object-fit: cover;
 
+                @include lg {
+                  width: 1.67rem;
+                  height: 1.67rem;
+                }
+
                 @include md {
                   width: 1.875rem;
                   height: 1.875rem;
