@@ -143,6 +143,10 @@
               color: $clr-primary;
               transition: all 0.3s;
 
+              @include md {
+                font-size: 1.625rem;
+              }
+
               &:hover,
               &:visited {
                 color: $clr-secondary;
