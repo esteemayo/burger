@@ -103,6 +103,10 @@
     z-index: -1;
     cursor: pointer;
 
+    @include lg {
+      top: 4.75rem;
+    }
+
     @include md {
       top: 5rem;
     }
