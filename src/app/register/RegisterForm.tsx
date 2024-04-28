@@ -190,6 +190,7 @@ const RegisterForm = () => {
           placeholder='Confirm Password'
           onChange={handleChange}
           error={errors['confirmPassword']}
+          dimension='large'
         >
           <span onClick={toggleConfirmPassword} className={confirmIconClasses}>
             {showConfirmPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}

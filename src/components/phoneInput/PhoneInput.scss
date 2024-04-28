@@ -71,6 +71,18 @@
       color: $clr-gray-dark;
       caret-color: $clr-gray-light;
 
+      @include lg {
+        font-size: 1.7rem;
+      }
+  
+      @media only screen and (max-width: 56.25em) {
+        font-size: 1.85rem;
+      }
+  
+      @include md {
+        font-size: 1.975rem;
+      }
+
       &::placeholder {
         font-weight: 400;
         font-size: 1.5rem;
