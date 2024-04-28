@@ -157,6 +157,10 @@
             justify-content: space-between;
             gap: 1rem;
 
+            @include sm {
+              flex-direction: column;
+            }
+
             .loginBtn,
             .googleBtn {
               all: unset;
