@@ -137,6 +137,10 @@
               border-radius: 0.5rem;
               cursor: pointer;
 
+              @include xl {
+                font-size: 1.34rem;
+              }
+
               @media only screen and (max-width: 17.5em) {
                 padding: 2px 4px;
               }
