@@ -195,6 +195,11 @@
               height: 3.5rem;
             }
 
+            @media only screen and (max-width: 18.75em) {
+              width: 3rem;
+              height: 3rem;
+            }
+
             &:hover {
               color: #ada3a3;
               transform: translateY(-0.5rem);
