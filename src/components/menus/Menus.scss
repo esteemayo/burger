@@ -1,9 +1,15 @@
 @import '../../styles/variables.scss';
+@import '../../styles/responsive.scss';
 
 .menusContainer {
   display: flex;
   justify-content: center;
   padding: 12rem;
+
+  @include sm {
+    padding-top: 6rem;
+    padding-bottom: 8rem;
+  }
 
   .container {
     width: 144rem;
