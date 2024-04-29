@@ -140,6 +140,10 @@
         @include lg {
           font-size: 2rem;
         }
+
+        @include md {
+          font-size: 1.7rem;
+        }
       }
     }
   }
