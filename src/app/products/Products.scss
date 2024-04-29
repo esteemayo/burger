@@ -26,6 +26,10 @@
       align-items: baseline;
       gap: 3rem;
 
+      @include lg {
+        margin-left: 6rem;
+      }
+
       &::after {
         display: inline-block;
         content: '';
