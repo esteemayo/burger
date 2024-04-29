@@ -24,6 +24,10 @@
     width: 35rem;
   }
 
+  @media only screen and (max-width: 18.75em) {
+    width: 28rem;
+  }
+
   .imgWrapper {
     width: 30rem;
     height: 27rem;
@@ -46,6 +50,10 @@
 
     @media only screen and (max-width: 26.875em) {
       width: 35rem;
+    }
+
+    @media only screen and (max-width: 18.75em) {
+      width: 28rem;
     }
 
     &:hover .overlay {
