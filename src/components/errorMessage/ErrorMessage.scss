@@ -5,6 +5,10 @@
   font-size: 1.3rem;
   color: $error;
 
+  @include lg {
+    font-size: 1.44445rem;
+  }
+
   @include md {
     font-size: 1.625rem;
   }
