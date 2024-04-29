@@ -183,6 +183,10 @@
               border-radius: 0.5rem;
               cursor: pointer;
 
+              @include xl {
+                font-size: 1.5rem;
+              }
+
               @include lg {
                 font-size: 1.45rem;
               }
