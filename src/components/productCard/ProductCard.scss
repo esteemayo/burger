@@ -10,6 +10,7 @@
 
   @include md {
     width: 17rem;
+    background-color: $clr-tertiary;
   }
 
   @media only screen and (max-width: 40.4375em) {
