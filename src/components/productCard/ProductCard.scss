@@ -8,6 +8,10 @@
   box-shadow: $box-shadow;
   overflow: hidden;
 
+  @include md {
+    width: 20rem;
+  }
+
   @media only screen and (max-width: 26.875em) {
     width: 35rem;
   }
@@ -17,6 +21,11 @@
     height: 27rem;
     position: relative;
     transition: all 0.3s;
+
+    @include md {
+      width: 20rem;
+      height: 15rem;
+    }
 
     @media only screen and (max-width: 26.875em) {
       width: 35rem;
