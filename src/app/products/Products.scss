@@ -39,6 +39,10 @@
         top: 50%;
         right: 9rem;
         transform: translateY(-50%);
+
+        @include lg {
+          display: none;
+        }
       }
 
       small {
