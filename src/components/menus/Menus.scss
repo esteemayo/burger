@@ -82,6 +82,10 @@
       justify-content: center;
       gap: 6rem;
 
+      @include md {
+        gap: 3rem;
+      }
+
       @include sm {
         margin-top: 5rem;
       }
