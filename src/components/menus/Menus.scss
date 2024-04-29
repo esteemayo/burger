@@ -64,6 +64,10 @@
           svg {
             font-size: 5rem;
             color: $clr-gray-dark;
+
+            @include md {
+              font-size: 4.5rem;
+            }
           }
         }
       }
