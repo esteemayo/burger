@@ -24,6 +24,10 @@
         font-size: 3.4128rem;
         line-height: 1.5;
         color: inherit;
+
+        @include md {
+          font-size: 3rem;
+        }
       }
 
       .box {
