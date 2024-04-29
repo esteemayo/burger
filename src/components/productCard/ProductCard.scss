@@ -9,7 +9,7 @@
   overflow: hidden;
 
   @include md {
-    width: 20rem;
+    width: 17rem;
   }
 
   @media only screen and (max-width: 35em) {
@@ -35,7 +35,7 @@
     transition: all 0.3s;
 
     @include md {
-      width: 20rem;
+      width: 17rem;
       height: 15rem;
     }
 
