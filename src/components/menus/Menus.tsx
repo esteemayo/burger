@@ -13,11 +13,11 @@ import './Menus.scss';
 const Menus = () => {
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 5000);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setIsLoading(false);
+  //   }, 5000);
+  // }, []);
 
   return (
     <section className='menusContainer'>
@@ -31,15 +31,13 @@ const Menus = () => {
           </div>
         </div>
         <div className='wrapper'>
-          {isLoading ? (
-            cardMenus.map((item) => {
-              return <ProductCardSkeleton key={item.id} />
-            })
-          ) : (
-            cardMenus.map((menu) => {
-              return <ProductCard key={menu.id} product={menu} />;
-            })
-          )}
+          {isLoading
+            ? cardMenus.map((item) => {
+                return <ProductCardSkeleton key={item.id} />;
+              })
+            : cardMenus.map((menu) => {
+                return <ProductCard key={menu.id} product={menu} />;
+              })}
         </div>
       </div>
     </section>
