@@ -8,11 +8,19 @@
   box-shadow: $box-shadow;
   overflow: hidden;
 
+  @media only screen and (max-width: 26.875em) {
+    width: 35rem;
+  }
+
   .imgWrapper {
     width: 30rem;
     height: 27rem;
     position: relative;
     transition: all 0.3s;
+
+    @media only screen and (max-width: 26.875em) {
+      width: 35rem;
+    }
 
     &:hover .overlay {
       visibility: visible;
