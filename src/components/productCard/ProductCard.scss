@@ -102,7 +102,7 @@
         line-height: 1.5;
         transition: all 0.3s;
 
-        @include md {
+        @include lg {
           font-size: 1.75rem;
         }
 
@@ -116,7 +116,7 @@
         font-size: 1.8rem;
         color: $clr-secondary;
 
-        @include md {
+        @include lg {
           font-size: 2rem;
         }
       }
