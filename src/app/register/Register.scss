@@ -184,11 +184,12 @@
 
             .registerBtn,
             .googleBtn {
-              all: unset;
+              border: none;
+              outline: none;
               text-align: center;
               font-size: 1.35rem;
               width: 100%;
-              padding: 1.2rem 1rem;
+              padding: 1.4rem 1rem;
               border-radius: 0.5rem;
               cursor: pointer;
 
@@ -197,7 +198,7 @@
               }
 
               @media only screen and (max-width: 56.25em) {
-                font-size: 1.49rem;
+                font-size: 1.56rem;
               }
 
               @include md {
@@ -230,6 +231,8 @@
               align-items: center;
               justify-content: center;
               gap: 1rem;
+
+              background-color: transparent;
               -webkit-box-shadow: inset $box-shadow;
               box-shadow: inset $box-shadow;
               transition: all 0.3s;
