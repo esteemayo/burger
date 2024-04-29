@@ -73,6 +73,10 @@
       align-items: center;
       justify-content: center;
       gap: 6rem;
+
+      @include sm {
+        margin-top: 5rem;
+      }
     }
   }
 }
