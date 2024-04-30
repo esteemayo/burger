@@ -144,6 +144,11 @@
         align-items: center;
         justify-content: center;
 
+        @include lg {
+          width: 4rem;
+          height: 4rem;
+        }
+
         img {
           max-width: 100%;
           width: auto;
