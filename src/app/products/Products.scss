@@ -64,6 +64,10 @@
         margin-left: 8rem;
       }
 
+      @media only screen and (max-width: 23.4375em) {
+        margin-left: 6rem;
+      }
+
       &::after {
         display: inline-block;
         content: '';
