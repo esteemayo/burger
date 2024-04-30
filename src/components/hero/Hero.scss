@@ -97,6 +97,10 @@
         width: 8rem;
         height: 0;
         border-top: 1px solid $clr-white;
+
+        @include sm {
+          width: 5rem;
+        }
       }
 
       .heroText {
