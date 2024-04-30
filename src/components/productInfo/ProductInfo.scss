@@ -16,6 +16,10 @@
       width: 100rem;
     }
 
+    @include md {
+      padding: 6rem 3rem;
+    }
+
     h3 {
       display: inline-block;
       text-transform: capitalize;
