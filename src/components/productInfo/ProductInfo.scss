@@ -62,6 +62,11 @@
         font-size: 1.65rem;
         line-height: 1.2;
       }
+
+      @media only screen and (max-width: 28.4375em) {
+        font-size: 1.63rem;
+        line-height: 1.1;
+      }
     }
 
     .wrapper {
