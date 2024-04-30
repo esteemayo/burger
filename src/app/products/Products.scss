@@ -49,6 +49,7 @@
       @include sm {
         flex-direction: column;
         gap: 1rem;
+        margin-left: 15rem;
       }
 
       &::after {
