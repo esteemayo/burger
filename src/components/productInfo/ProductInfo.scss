@@ -35,6 +35,10 @@
       @media only screen and (max-width: 56.25em) {
         font-size: 3.5rem;
       }
+
+      @include md {
+        font-size: 3.25rem;
+      }
     }
 
     .desc {
