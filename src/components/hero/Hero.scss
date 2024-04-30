@@ -90,6 +90,10 @@
         font-size: 2rem;
       }
 
+      @include sm {
+        font-size: 1.85rem;
+      }
+
       &::before,
       &::after {
         display: table-cell;
