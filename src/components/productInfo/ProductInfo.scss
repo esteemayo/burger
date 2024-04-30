@@ -113,6 +113,10 @@
         .totalReview {
           font-size: 1.2rem;
           color: #000000de;
+
+          @include lg {
+            font-size: 1.34rem;
+          }
         }
       }
 
