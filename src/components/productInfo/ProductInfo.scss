@@ -1,11 +1,12 @@
 @import '../../styles/variables.scss';
+@import '../../styles/responsive.scss';
 
 .productInfo {
   display: flex;
   justify-content: center;
 
   .container {
-    width: 100rem;
+    // width: 100rem;
     padding: 6rem 0;
 
     display: flex;
@@ -19,6 +20,10 @@
       font-size: 2.8rem;
       color: inherit;
       margin-bottom: 0.5rem;
+
+      @include xl {
+        font-size: 3.12rem;
+      }
     }
 
     .desc {
