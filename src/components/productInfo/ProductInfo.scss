@@ -121,6 +121,10 @@
           @include lg {
             font-size: 1.34rem;
           }
+
+          @media only screen and (max-width: 56.25em) {
+            font-size: 1.5rem;
+          }
         }
       }
 
@@ -152,6 +156,10 @@
 
         @include lg {
           font-size: 1.34rem;
+        }
+
+        @media only screen and (max-width: 56.25em) {
+          font-size: 1.5rem;
         }
       }
     }
