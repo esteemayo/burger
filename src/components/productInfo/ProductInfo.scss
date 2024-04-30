@@ -30,6 +30,10 @@
       font-size: 1.4rem;
       line-height: 1;
       margin-bottom: 1rem;
+
+      @include xl {
+        font-size: 1.53rem;
+      }
     }
 
     .wrapper {
