@@ -107,6 +107,10 @@
 
           svg {
             fill: currentColor;
+
+            @include lg {
+              font-size: 1.7rem;
+            }
           }
         }
 
