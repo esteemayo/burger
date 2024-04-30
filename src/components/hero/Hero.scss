@@ -86,6 +86,10 @@
         font-size: 1.78rem;
       }
 
+      @media only screen and (max-width: 56.25em) {
+        font-size: 2rem;
+      }
+
       &::before,
       &::after {
         display: table-cell;
