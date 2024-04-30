@@ -210,6 +210,10 @@
         color: #00000059;
         border-radius: 0.5rem;
         caret-color: $clr-gray-dark;
+
+        @include xl {
+          font-size: 1.7rem;
+        }
       }
 
       button {
@@ -231,6 +235,10 @@
         align-items: center;
         justify-content: center;
         gap: 1rem;
+
+        @include xl {
+          font-size: 1.45rem;
+        }
 
         &:hover {
           color: $clr-secondary;
