@@ -6,12 +6,15 @@
   justify-content: center;
 
   .container {
-    // width: 100rem;
     padding: 6rem 0;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    @media only screen and (max-width: 56.25em) {
+      width: 100rem;
+    }
 
     h3 {
       display: inline-block;
