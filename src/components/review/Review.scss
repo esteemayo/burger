@@ -74,6 +74,10 @@
         .reviewerText {
           font-size: 1.4rem;
           color: $clr-gray-dark;
+
+          @include lg {
+            font-size: 1.56rem;
+          }
         }
       }
     }
