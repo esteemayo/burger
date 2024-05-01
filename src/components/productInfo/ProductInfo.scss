@@ -260,6 +260,10 @@
         svg {
           font-size: 1.7rem;
           fill: currentColor;
+
+          @media only screen and (max-width: 28.4375em) {
+            font-size: 1.5rem;
+          }
         }
       }
     }
