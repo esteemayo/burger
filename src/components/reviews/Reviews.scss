@@ -29,12 +29,25 @@
         color: #777;
         border-bottom: none;
 
+        @media only screen and (max-width: 56.25em) {
+          padding: 4px 2.5rem;
+        }
+
         @include lg {
           font-size: 1.78rem;
         }
 
         @media only screen and (max-width: 56.25em) {
           font-size: 2rem;
+        }
+
+        @include md {
+          padding: 4px 4rem;
+        }
+
+        @media only screen and (max-width: 26.8125em) {
+          font-size: 1.8rem;
+          padding: 4px 2rem;
         }
 
         &.active {
@@ -57,6 +70,14 @@
           cursor: pointer;
           transition: all 0.3s;
 
+          @media only screen and (max-width: 26.875em) {
+            top: 4px;
+          }
+
+          @media only screen and (max-width: 26.8125em) {
+            right: -3px;
+          }
+
           &:hover {
             color: $clr-secondary;
           }
@@ -64,6 +85,14 @@
           svg {
             font-size: 4rem;
             fill: currentColor;
+
+            @include sm {
+              font-size: 3rem;
+            }
+
+            @media only screen and (max-width: 26.8125em) {
+              font-size: 2.8rem;
+            }
           }
         }
       }
@@ -79,6 +108,10 @@
 
       @include sm {
         padding: 5rem 2rem;
+      }
+
+      @media only screen and (max-width: 26.8125em) {
+        padding: 5rem 1rem;
       }
 
       &.hide {
