@@ -223,6 +223,11 @@
                         width: 1.45rem;
                         height: 1.67rem;
                       }
+
+                      @include md {
+                        width: 1.63rem;
+                        height: 2.13rem;
+                      }
                     }
                   }
                 }
@@ -247,6 +252,10 @@
 
                     @include lg {
                       font-size: 1.45rem;
+                    }
+
+                    @include md {
+                      font-size: 1.63rem;
                     }
                   }
                 }
