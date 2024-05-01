@@ -53,6 +53,18 @@
     caret-color: $clr-gray-light;
     transition: all 0.3s;
 
+    @include lg {
+      font-size: 1.7rem;
+    }
+
+    @media only screen and (max-width: 56.25em) {
+      font-size: 1.85rem;
+    }
+
+    @include md {
+      font-size: 1.975rem;
+    }
+
     &:focus {
       border: 1px solid $line;
     }
