@@ -240,6 +240,10 @@
           font-size: 1.45rem;
         }
 
+        @include md {
+          font-size: 1.63rem;
+        }
+
         &:hover {
           color: $clr-secondary;
         }
