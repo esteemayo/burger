@@ -240,6 +240,10 @@
                   svg {
                     font-size: 1.3rem;
                     fill: currentColor;
+
+                    @include lg {
+                      font-size: 1.45rem;
+                    }
                   }
                 }
 
