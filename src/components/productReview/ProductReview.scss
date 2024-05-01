@@ -1,3 +1,5 @@
+@import '../../styles/responsive.scss';
+
 .productReview {
   display: flex;
   justify-content: center;
@@ -11,5 +13,10 @@
     display: flex;
     justify-content: space-between;
     padding: 1.2rem;
+
+    @include md {
+      flex-direction: column;
+      gap: 7rem;
+    }
   }
 }
