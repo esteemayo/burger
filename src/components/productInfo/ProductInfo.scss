@@ -248,6 +248,10 @@
           font-size: 1.5rem;
         }
 
+        @media only screen and (max-width: 26.4375em) {
+          font-size: 1.35rem;
+        }
+
         &:hover {
           color: $clr-secondary;
         }
