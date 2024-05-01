@@ -127,6 +127,10 @@
                 color: inherit;
                 margin-bottom: 3.8rem;
                 position: relative;
+
+                @include lg {
+                  font-size: 1.78rem;
+                }
               }
             }
           }
