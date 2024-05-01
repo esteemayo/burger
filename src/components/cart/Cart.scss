@@ -33,6 +33,10 @@
         border-bottom: 1px solid $line;
         position: relative;
 
+        @include lg {
+          font-size: 1.67rem;
+        }
+
         &::after {
           display: block;
           content: '';
