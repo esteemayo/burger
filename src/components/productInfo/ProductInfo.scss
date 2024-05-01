@@ -16,7 +16,7 @@
       width: 100rem;
     }
 
-    @include md {
+    @media only screen and (max-width: 51.25em) {
       padding: 6rem 3rem;
     }
 
