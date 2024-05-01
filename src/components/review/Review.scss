@@ -24,6 +24,10 @@
       gap: 2.8rem;
       position: relative;
 
+      @media only screen and (max-width: 56.25em) {
+        gap: 2rem;
+      }
+
       .reviewImg {
         width: 8.7rem;
         height: 8.7rem;
