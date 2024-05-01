@@ -102,6 +102,10 @@
     gap: 2rem;
     margin: 1.6rem 0;
 
+    @include sm {
+      flex-direction: column;
+    }
+
     .inputBox {
       width: 100%;
 
@@ -121,11 +125,11 @@
       @include lg {
         font-size: 1.45rem;
       }
-  
+
       @media only screen and (max-width: 56.25em) {
         font-size: 1.625rem;
       }
-  
+
       @media only screen and (max-width: 23.4375em) {
         font-size: 1.45rem;
       }

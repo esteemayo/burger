@@ -73,6 +73,10 @@
       border-top-left-radius: 0;
       transition: all 0.5s ease-in;
 
+      @include sm {
+        padding: 5rem 2rem;
+      }
+
       &.hide {
         padding-top: 0;
         transition: all 0.5s ease-out;
