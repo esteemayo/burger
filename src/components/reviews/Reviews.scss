@@ -25,6 +25,10 @@
         color: #777;
         border-bottom: none;
 
+        @include lg {
+          font-size: 1.78rem;
+        }
+
         &.active {
           position: relative;
           top: 1px;
