@@ -82,6 +82,10 @@
           @include lg {
             font-size: 1.67rem;
           }
+
+          @media only screen and (max-width: 56.25em) {
+            font-size: 1.8rem;
+          }
         }
 
         .reviewerText {
