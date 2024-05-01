@@ -1,4 +1,5 @@
 @import '../../styles/variables.scss';
+@import '../../styles/responsive.scss';
 
 .productCart {
   flex: 1;
@@ -8,6 +9,10 @@
   width: 100%;
   max-height: 47.292rem;
   height: max-content;
+
+  @include md {
+    padding: 0 1.5rem;
+  }
 
   .detailBox {
     width: 100%;
