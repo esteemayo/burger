@@ -54,6 +54,10 @@
           top: 50%;
           right: 1.5rem;
           transform: translateY(-50%);
+
+          @include md {
+            width: 80%;
+          }
         }
       }
 
