@@ -214,6 +214,11 @@
                       height: 1.6rem;
                       object-fit: cover;
                       opacity: 0.8;
+
+                      @include lg {
+                        width: 1.45rem;
+                        height: 1.67rem;
+                      }
                     }
                   }
                 }
