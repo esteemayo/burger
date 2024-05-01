@@ -26,6 +26,10 @@
       padding: 5rem 4rem 4rem 4rem;
     }
 
+    @media only screen and (max-width: 26.8125em) {
+      padding: 5rem 2rem 4rem 2rem;
+    }
+
     .reviewWrapper {
       display: flex;
       align-items: center;
@@ -34,6 +38,10 @@
 
       @media only screen and (max-width: 56.25em) {
         gap: 2rem;
+      }
+
+      @media only screen and (max-width: 26.8125em) {
+        gap: 1.5rem;
       }
 
       .reviewImg {
@@ -48,6 +56,11 @@
         @include md {
           width: 8rem;
           height: 8rem;
+        }
+
+        @media only screen and (max-width: 26.8125em) {
+          width: 5rem;
+          height: 5rem;
         }
 
         img {
