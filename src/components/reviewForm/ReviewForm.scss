@@ -74,6 +74,14 @@
       font-weight: 400;
       font-size: 1.3rem;
       color: $clr-gray-light;
+
+      @include md {
+        font-size: 1.875rem;
+      }
+
+      @media only screen and (max-width: 23.4375em) {
+        font-size: 1.675rem;
+      }
     }
   }
 
