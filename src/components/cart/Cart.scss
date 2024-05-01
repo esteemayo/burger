@@ -146,6 +146,18 @@
                     margin-bottom: 0;
                     transition: all 0.3s;
 
+                    @include lg {
+                      font-size: 1.45rem;
+                    }
+
+                    @media only screen and (max-width: 56.25em) {
+                      font-size: 1.625rem;
+                    }
+
+                    @media only screen and (max-width: 23.4375em) {
+                      font-size: 1.45rem;
+                    }
+
                     &:hover {
                       color: #bc2634;
                     }
