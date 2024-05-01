@@ -28,6 +28,10 @@
         svg {
           font-size: 1.7rem;
           fill: $star;
+
+          @include lg {
+            font-size: 1.9rem;
+          }
         }
       }
     }
