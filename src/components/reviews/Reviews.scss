@@ -13,6 +13,10 @@
     padding: 0 3rem;
   }
 
+  @media only screen and (max-width: 21.875em) {
+    padding: 0 5rem;
+  }
+
   .reviewBox {
     .listWrap {
       list-style: none;

@@ -18,6 +18,10 @@
     padding: 0 3rem;
   }
 
+  @media only screen and (max-width: 21.875em) {
+    padding: 0 5rem;
+  }
+
   .detailBox {
     width: 100%;
     background-color: $clr-white;
