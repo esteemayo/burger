@@ -180,6 +180,10 @@
                     margin-bottom: 0;
                     transition: all 0.3s;
 
+                    @media only screen and (min-width: 87.5em) {
+                      font-size: 1.6rem;
+                    }
+
                     @include lg {
                       font-size: 1.45rem;
                     }
@@ -245,6 +249,11 @@
                       object-fit: cover;
                       opacity: 0.8;
 
+                      @media only screen and (min-width: 87.5em) {
+                        width: 1.6rem;
+                        height: 1.9rem;
+                      }
+
                       @include lg {
                         width: 1.45rem;
                         height: 1.67rem;
@@ -295,6 +304,10 @@
                   color: #00000059;
                   transition: all 0.3s;
 
+                  @media only screen and (min-width: 87.5em) {
+                    font-size: 1.6rem;
+                  }
+
                   @include lg {
                     font-size: 1.45rem;
                   }
@@ -342,6 +355,10 @@
           border-radius: 0.5rem;
           cursor: pointer;
           transition: all 0.3s ease-in-out;
+
+          @media only screen and (min-width: 87.5em) {
+            font-size: 1.6rem;
+          }
 
           @include lg {
             font-size: 1.45rem;
