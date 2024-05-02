@@ -13,6 +13,10 @@
     @include md {
       margin-bottom: 2rem;
     }
+    
+    @media only screen and (max-width: 18.75em) {
+      margin-bottom: 1.5rem;
+    }
   }
 
   .reviewCard {
@@ -29,6 +33,10 @@
     @media only screen and (max-width: 26.8125em) {
       padding: 5rem 2rem 4rem 2rem;
     }
+    
+    @media only screen and (max-width: 18.75em) {
+      padding: 4rem 1.7rem;
+    }
 
     .reviewWrapper {
       display: flex;
@@ -42,6 +50,10 @@
 
       @include sm {
         gap: 1.5rem;
+      }
+
+      @media only screen and (max-width: 18.75em) {
+        gap: 1rem;
       }
 
       .reviewImg {
@@ -61,6 +73,11 @@
         @media only screen and (max-width: 26.8125em) {
           width: 5rem;
           height: 5rem;
+        }
+
+        @media only screen and (max-width: 18.75em) {
+          width: 4rem;
+          height: 4rem;
         }
 
         img {
@@ -95,6 +112,10 @@
             @media only screen and (max-width: 56.25em) {
               font-size: 1.85rem;
             }
+
+            @media only screen and (max-width: 18.75em) {
+              font-size: 1.6rem;
+            }
           }
         }
       }
@@ -112,6 +133,10 @@
           @media only screen and (max-width: 56.25em) {
             font-size: 1.8rem;
           }
+
+          @media only screen and (max-width: 18.75em) {
+            font-size: 1.65rem;
+          }
         }
 
         .reviewerText {
@@ -125,6 +150,11 @@
           @media only screen and (max-width: 56.25em) {
             font-size: 1.75rem;
             line-height: 1.5;
+          }
+
+          @media only screen and (max-width: 18.75em) {
+            font-size: 1.6rem;
+            line-height: 1.3;
           }
         }
       }
