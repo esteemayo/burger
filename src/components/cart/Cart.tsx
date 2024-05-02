@@ -1,8 +1,9 @@
 'use client';
 
-import Image from 'next/image';
+import { useMemo } from 'react';
 import Link from 'next/link';
 import RemoveShoppingCartIcon from '@mui/icons-material/RemoveShoppingCart';
+import Image from 'next/image';
 
 import { formatCurrency } from '@/utils/formatCurrency';
 import { useCartStore } from '@/hooks/useCartStore';
@@ -16,11 +17,17 @@ const Cart = () => {
   const products = useCartStore((store) => store.products);
   const removeFromCart = useCartStore((store) => store.removeFromCart);
 
+  const emptyHeaderClasses = useMemo(() => {
+    return products.length < 1
+      ? 'emptyHeading emptyCartHeading'
+      : 'emptyHeading';
+  }, [products.length]);
+
   return (
     <aside className='productCart'>
       <div className='detailBox'>
         <div className='cardWrap'>
-          <div className='cardHeading'>Your cart</div>
+          <div className={emptyHeaderClasses}>Your cart</div>
           {products.length < 1 ? (
             <div className='emptyCart'>
               <div className='emptyHeading'>Empty cart</div>
