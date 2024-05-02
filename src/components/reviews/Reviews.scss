@@ -70,7 +70,11 @@
           cursor: pointer;
           transition: all 0.3s;
 
-          @media only screen and (max-width: 26.875em) {
+          @media only screen and (max-width: 33.75em) {
+            right: 0.5rem;
+          }
+
+          @include sm {
             top: 4px;
           }
 
