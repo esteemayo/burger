@@ -47,6 +47,11 @@
         border-bottom: 1px solid $line;
         position: relative;
 
+        @media only screen and (min-width: 87.5em) {
+          font-weight: 600;
+          font-size: 2rem;
+        }
+
         @include lg {
           font-size: 1.67rem;
         }
