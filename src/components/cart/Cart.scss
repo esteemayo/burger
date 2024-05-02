@@ -285,6 +285,10 @@
                     font-size: 1.3rem;
                     fill: currentColor;
 
+                    @media only screen and (min-width: 87.5em) {
+                      font-size: 1.6rem;
+                    }
+
                     @include lg {
                       font-size: 1.45rem;
                     }
