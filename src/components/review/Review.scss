@@ -147,6 +147,10 @@
           font-size: 1.4rem;
           color: $clr-gray-dark;
 
+          @media only screen and (min-width: 93.75em) {
+            font-size: 1.8rem;
+          }
+
           @include lg {
             font-size: 1.56rem;
           }
