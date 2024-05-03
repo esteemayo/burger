@@ -44,6 +44,10 @@
         font-size: 2rem;
       }
 
+      @include md {
+        margin-left: 0;
+      }
+
       &::before {
         content: '';
         width: 80%;
@@ -64,6 +68,10 @@
         @media only screen and (max-width: 56.25em) {
           width: 75%;
           left: 22rem;
+        }
+
+        @include md {
+          width: 74.5%;
         }
       }
     }
