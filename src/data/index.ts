@@ -279,33 +279,33 @@ export const relatedProducts: RelatedProductType = [
 ];
 
 export const reviews: ReviewType = [
-  // {
-  //   id: 1,
-  //   desc: 'Looks so delicious...',
-  //   rating: 5,
-  //   user: {
-  //     name: 'Emmanuel Adebayo',
-  //     image: '/svg/male-avatar.svg',
-  //   },
-  // },
-  // {
-  //   id: 2,
-  //   desc: 'The best burger i have had in a very long time.',
-  //   rating: 5,
-  //   user: {
-  //     name: 'Lourdes Browning',
-  //     image: '/svg/female-avatar.svg',
-  //   },
-  // },
-  // {
-  //   id: 3,
-  //   desc: 'Crispy and delicious...love it!',
-  //   rating: 4,
-  //   user: {
-  //     name: 'Christian Vega',
-  //     image: '/svg/male-avatar.svg',
-  //   },
-  // },
+  {
+    id: 1,
+    desc: 'Looks so delicious...',
+    rating: 5,
+    user: {
+      name: 'Emmanuel Adebayo',
+      image: '/svg/male-avatar.svg',
+    },
+  },
+  {
+    id: 2,
+    desc: 'The best burger i have had in a very long time.',
+    rating: 5,
+    user: {
+      name: 'Lourdes Browning',
+      image: '/svg/female-avatar.svg',
+    },
+  },
+  {
+    id: 3,
+    desc: 'Crispy and delicious...love it!',
+    rating: 4,
+    user: {
+      name: 'Christian Vega',
+      image: '/svg/male-avatar.svg',
+    },
+  },
 ];
 
 export const profileMenu: ProfileMenu = [
