@@ -17,12 +17,16 @@ const Cart = () => {
   const products = useCartStore((store) => store.products);
   const removeFromCart = useCartStore((store) => store.removeFromCart);
 
+  const cartClasses = useMemo(() => {
+    return products.length < 1 ? 'productCart emptyproductCart' : 'productCart';
+  }, [products.length]);
+
   const emptyHeaderClasses = useMemo(() => {
     return products.length < 1 ? 'cardHeading emptyCardHeading' : 'cardHeading';
   }, [products.length]);
 
   return (
-    <aside className='productCart'>
+    <aside className={cartClasses}>
       <div className='detailBox'>
         <div className='cardWrap'>
           <div className={emptyHeaderClasses}>Your cart</div>
