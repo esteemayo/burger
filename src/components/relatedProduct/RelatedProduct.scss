@@ -112,6 +112,10 @@
             font-size: 1.45rem;
           }
 
+          @include lg {
+            margin-left: 1.43rem;
+          }
+
           &:hover {
             color: $clr-secondary;
           }
