@@ -106,6 +106,10 @@
           right: 1.5rem;
           transform: translateY(-50%);
 
+          @media only screen and (min-width: 93.75em) {
+            width: 55%;
+          }
+
           @include md {
             width: 80%;
           }
