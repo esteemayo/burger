@@ -59,6 +59,10 @@
       display: flex;
       flex-wrap: wrap;
       gap: 3rem;
+
+      @include lg {
+        justify-content: center;
+      }
     }
   }
 }
