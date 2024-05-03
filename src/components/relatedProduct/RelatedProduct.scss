@@ -9,6 +9,10 @@
   border-radius: 3px;
   overflow: hidden;
 
+  @include md {
+    width: 19rem;
+  }
+
   .relatedBox {
     position: relative;
 
@@ -18,6 +22,10 @@
       position: relative;
       overflow: hidden;
       transform-origin: top;
+
+      @include md {
+        width: 19rem;
+      }
 
       &:hover .relatedOverlay {
         display: inline-block;
