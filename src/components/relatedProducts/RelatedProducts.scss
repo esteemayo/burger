@@ -92,6 +92,10 @@
       @include md {
         justify-content: flex-start;
       }
+
+      @media only screen and (max-width: 37.5em) {
+        gap: 1.5rem;
+      }
     }
   }
 }
