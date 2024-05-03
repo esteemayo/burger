@@ -14,6 +14,10 @@
     justify-content: center;
     gap: 3rem;
 
+    @include md {
+      padding: 10rem 4.5rem;
+    }
+
     .relatedHeader {
       display: inline-block;
       text-transform: capitalize;
@@ -71,6 +75,10 @@
 
       @include lg {
         justify-content: center;
+      }
+
+      @include md {
+        justify-content: flex-start;
       }
     }
   }
