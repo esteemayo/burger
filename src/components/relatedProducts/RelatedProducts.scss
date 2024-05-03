@@ -32,6 +32,10 @@
         font-size: 2rem;
       }
 
+      @include lg {
+        margin-left: 1.5rem;
+      }
+
       &::before {
         content: '';
         width: 80%;
