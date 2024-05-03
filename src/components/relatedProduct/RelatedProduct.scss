@@ -146,6 +146,10 @@
             font-size: 1.35rem;
           }
 
+          @media only screen and (max-width: 37.5em) {
+            font-size: 1.3rem;
+          }
+
           &:hover {
             color: $clr-secondary;
           }
@@ -163,6 +167,10 @@
 
           @include md {
             font-size: 1.7rem;
+          }
+
+          @media only screen and (max-width: 37.5em) {
+            font-size: 1.65rem;
           }
         }
       }
