@@ -13,14 +13,12 @@ const ProductReview = () => {
   const products = useCartStore((store) => store.products);
 
   const productClasses = useMemo(() => {
-    return products.length < 1
-      ? 'productReview emptyProductReview'
-      : 'productReview';
+    return products.length < 1 ? 'container emptyContainer' : 'container';
   }, [products.length]);
 
   return (
-    <section className={productClasses}>
-      <div className='container'>
+    <section className='productReview'>
+      <div className={productClasses}>
         <Reviews />
         <Cart />
       </div>

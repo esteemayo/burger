@@ -34,7 +34,7 @@
       padding: 1.2rem 51.5rem;
     }
 
-    &.emptyProductReview {
+    &.emptyContainer {
       @include md {
         flex-direction: column;
         gap: 7rem;
