@@ -24,11 +24,6 @@
     @include md {
       flex-direction: column;
       gap: 7rem;
-      padding: 1.2rem;
-    }
-
-    @media only screen and (max-width: 21.5em) {
-      padding: 1.2rem 0;
     }
 
     @media only screen and (max-width: 18.75em) {
@@ -37,6 +32,18 @@
 
     @media only screen and (max-width: 17.5em) {
       padding: 1.2rem 51.5rem;
+    }
+
+    &.emptyProductReview {
+      @include md {
+        flex-direction: column;
+        gap: 7rem;
+        padding: 1.2rem;
+      }
+
+      @media only screen and (max-width: 21.5em) {
+        padding: 1.2rem 0;
+      }
     }
   }
 }
