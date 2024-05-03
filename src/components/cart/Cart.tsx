@@ -18,9 +18,7 @@ const Cart = () => {
   const removeFromCart = useCartStore((store) => store.removeFromCart);
 
   const emptyHeaderClasses = useMemo(() => {
-    return products.length < 1
-      ? 'emptyHeading emptyCartHeading'
-      : 'emptyHeading';
+    return products.length < 1 ? 'cardHeading emptyCardHeading' : 'cardHeading';
   }, [products.length]);
 
   return (

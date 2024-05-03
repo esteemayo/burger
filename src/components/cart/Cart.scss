@@ -60,6 +60,18 @@
           font-size: 1.88rem;
         }
 
+        &.emptyCardHeading {
+          &::after {
+            @include md {
+              width: 70%;
+            }
+
+            @include sm {
+              width: 65%;
+            }
+          }
+        }
+
         &::after {
           display: block;
           content: '';
