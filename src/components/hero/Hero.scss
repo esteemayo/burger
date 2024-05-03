@@ -9,10 +9,6 @@
   background-position: center center;
   background-repeat: no-repeat;
 
-  @media only screen and (min-width: 93.75em) {
-    font-size: 6rem;
-  }
-
   @media only screen and (max-width: 31.25em) {
     height: 60vh;
   }
@@ -42,6 +38,10 @@
       font-weight: 700;
       font-size: 5.8rem;
       line-height: normal;
+
+      @media only screen and (min-width: 93.75em) {
+        font-size: 6rem;
+      }
 
       @media only screen and (max-width: 50em) {
         font-size: 5rem;
@@ -90,8 +90,12 @@
       letter-spacing: 3.5px;
       margin: 1.2rem auto 0;
 
+      @media only screen and (min-width: 93.75em) {
+        font-size: 2rem;
+      }
+
       @media only screen and (min-width: 112.5em) {
-        font-size: 3rem;
+        font-size: 2.5rem;
       }
 
       @include lg {
