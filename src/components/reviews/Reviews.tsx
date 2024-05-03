@@ -9,16 +9,23 @@ import Review from '../review/Review';
 import ReviewCardSkeleton from '../reviewCardSkeleton/ReviewCardSkeleton';
 
 import { reviews } from '@/data';
+import { useCartStore } from '@/hooks/useCartStore';
 
 import './Reviews.scss';
 
 const Reviews = () => {
+  const products = useCartStore((store) => store.products);
+
   const [isOpen, setIsOpen] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
 
   const toggleOpen = useCallback((_e: React.MouseEvent<HTMLSpanElement>) => {
     setIsOpen((value) => !value);
   }, []);
+
+  const reviewsContainer = useMemo(() => {
+    return products.length < 1 ? 'reviews emptyReviews' : 'reviews';
+  }, [products.length]);
 
   const reviewClasses = useMemo(() => {
     return !isOpen ? 'reviewWrap hide' : 'reviewWrap';
@@ -41,7 +48,7 @@ const Reviews = () => {
   }, []);
 
   return (
-    <div className='reviews'>
+    <div className={reviewsContainer}>
       <div className='reviewBox'>
         <ul className='listWrap'>
           <li className='listItem active'>
