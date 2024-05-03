@@ -28,6 +28,12 @@
     width: 91%;
   }
 
+  &.emptyProductCart {
+    @media only screen and (max-width: 26.8125em) {
+      padding: 0 1.5rem;
+    }
+  }
+
   .detailBox {
     width: 100%;
     background-color: $clr-white;
