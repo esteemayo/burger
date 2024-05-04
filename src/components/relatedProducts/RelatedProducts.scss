@@ -104,6 +104,10 @@
       @media only screen and (max-width: 32.9375em) {
         gap: 1rem;
       }
+
+      @include sm {
+        gap: 2rem;
+      }
     }
   }
 }
