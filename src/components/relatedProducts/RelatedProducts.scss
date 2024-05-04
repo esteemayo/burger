@@ -106,7 +106,8 @@
       }
 
       @include sm {
-        gap: 2rem;
+        row-gap: 5rem;
+        column-gap: 2rem;
       }
     }
   }
