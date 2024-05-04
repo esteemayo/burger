@@ -93,6 +93,14 @@
         @media only screen and (max-width: 31.25em) {
           width: 59%;
         }
+
+        @media only screen and (max-width: 28.125em) {
+          width: 54%;
+        }
+
+        @media only screen and (max-width: 25.875em) {
+          width: 45%;
+        }
       }
     }
 
@@ -123,7 +131,7 @@
 
       @include sm {
         row-gap: 5rem;
-        column-gap: 2rem;
+        column-gap: 3rem;
       }
 
       @media only screen and (max-width: 25.875em) {
