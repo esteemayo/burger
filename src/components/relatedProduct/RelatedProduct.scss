@@ -128,6 +128,10 @@
       padding: 2.3rem 0 1.4rem;
       background-color: #fbfbfc;
 
+      @media only screen and (max-width: 34.6875em) {
+        min-height: 10rem;
+      }
+
       a,
       a:link,
       a:active {
