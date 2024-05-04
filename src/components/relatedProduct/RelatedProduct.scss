@@ -41,6 +41,10 @@
     width: 20rem;
   }
 
+  @media only screen and (max-width: 25em) {
+    width: 18rem;
+  }
+
   .relatedBox {
     position: relative;
 
@@ -85,6 +89,10 @@
       @media only screen and (max-width: 27.4375em) {
         width: 20rem;
         height: 14rem;
+      }
+
+      @media only screen and (max-width: 25em) {
+        width: 18rem;
       }
 
       &:hover .relatedOverlay {
