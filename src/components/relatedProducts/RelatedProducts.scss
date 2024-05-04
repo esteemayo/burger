@@ -89,6 +89,10 @@
         @media only screen and (max-width: 32.9375em) {
           width: 62%;
         }
+
+        @media only screen and (max-width: 31.25em) {
+          width: 59%;
+        }
       }
     }
 
@@ -114,7 +118,7 @@
       }
 
       @media only screen and (max-width: 32.9375em) {
-        gap: 1rem;
+        gap: 1.7rem;
       }
 
       @include sm {
