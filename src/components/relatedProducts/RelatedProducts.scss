@@ -49,7 +49,7 @@
       }
 
       @include md {
-        margin-left: 0;
+        margin: 0;
       }
 
       &::before {
@@ -143,7 +143,7 @@
       }
 
       @media only screen and (max-width: 25.875em) {
-        row-gap: 3rem;
+        gap: 3rem;
       }
 
       @media only screen and (max-width: 22.4375em) {
