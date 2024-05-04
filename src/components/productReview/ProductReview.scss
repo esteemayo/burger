@@ -26,6 +26,10 @@
       gap: 7rem;
     }
 
+    @media only screen and (max-width: 23.4375em) {
+      padding: 1.2rem 48rem;
+    }
+
     @media only screen and (max-width: 21.5em) {
       padding: 1.2rem 52rem;
     }
