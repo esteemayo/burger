@@ -18,6 +18,10 @@
       padding: 10rem 4.5rem;
     }
 
+    @media only screen and (max-width: 44.9375em) {
+      padding: 10rem 3rem;
+    }
+
     .relatedHeader {
       display: inline-block;
       text-transform: capitalize;
