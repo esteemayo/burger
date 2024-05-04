@@ -53,11 +53,15 @@
     width: 18rem;
   }
 
-  @media only screen and (max-width: 23.4375em) {
+  // @media only screen and (max-width: 23.4375em) {
+  //   width: 17rem;
+  // }
+
+  @media only screen and (max-width: 22.4375em) {
     width: 17rem;
   }
 
-  @media only screen and (max-width: 22.4375em) {
+  @media only screen and (max-width: 20.9375em) {
     width: 16rem;
   }
 
@@ -127,14 +131,18 @@
         width: 18rem;
       }
 
-      @media only screen and (max-width: 23.4375em) {
-        width: 17rem;
-        height: 13rem;
-      }
+      // @media only screen and (max-width: 23.4375em) {
+      //   width: 17rem;
+      //   height: 13rem;
+      // }
 
       @media only screen and (max-width: 22.4375em) {
-        width: 16rem;
+        width: 17rem;
         height: 10rem;
+      }
+
+      @media only screen and (max-width: 20.9375em) {
+        width: 16rem;
       }
 
       @media only screen and (max-width: 19.9375em) {
