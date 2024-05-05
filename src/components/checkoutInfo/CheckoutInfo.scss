@@ -153,6 +153,10 @@
             @include xl {
               font-size: 1.44444rem;
             }
+
+            @media only screen and (max-width: 56.25em) {
+              font-size: 1.625rem;
+            }
           }
         }
 
@@ -175,6 +179,10 @@
 
           @include xl {
             font-size: 1.44444rem;
+          }
+
+          @media only screen and (max-width: 56.25em) {
+            font-size: 1.625rem;
           }
 
           @media only screen and (min-width: 93.75em) {
@@ -236,6 +244,10 @@
 
       @include xl {
         font-size: 1.44444rem;
+      }
+
+      @media only screen and (max-width: 56.25em) {
+        font-size: 1.625rem;
       }
 
       @media only screen and (min-width: 93.75em) {
