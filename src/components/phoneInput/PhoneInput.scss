@@ -17,6 +17,10 @@
     font-weight: 500;
     font-size: 1.5rem;
 
+    @include xl {
+      font-size: 1.666665rem;
+    }
+
     @include lg {
       font-size: 1.67rem;
     }
@@ -61,6 +65,10 @@
       color: #212529;
       background-color: #e9ecef;
 
+      @include xl {
+        font-size: 1.777778rem;
+      }
+
       @include lg {
         font-size: 1.7rem;
       }
@@ -92,6 +100,10 @@
       color: $clr-gray-dark;
       caret-color: $clr-gray-light;
 
+      @include xl {
+        font-size: 1.777778rem;
+      }
+
       @include lg {
         font-size: 1.7rem;
       }
@@ -112,6 +124,10 @@
         font-weight: 400;
         font-size: 1.5rem;
         color: $clr-gray-light;
+
+        @include xl {
+          font-size: 1.666665rem;
+        }
 
         @include md {
           font-size: 1.875rem;
