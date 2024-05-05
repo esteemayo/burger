@@ -49,6 +49,11 @@
         padding: 2rem 1.5rem;
       }
 
+      @media only screen and (max-width: 22.5em) {
+        width: 40rem;
+        padding: 2rem;
+      }
+
       @media only screen and (min-width: 93.75em) {
         width: 60rem;
       }
@@ -70,6 +75,10 @@
 
         @media only screen and (max-width: 26.25em) {
           font-size: 3.5rem;
+        }
+
+        @media only screen and (max-width: 22.5em) {
+          font-size: 3rem;
         }
 
         @media only screen and (min-width: 93.75em) {
