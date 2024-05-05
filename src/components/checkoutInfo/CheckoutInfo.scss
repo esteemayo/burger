@@ -63,9 +63,9 @@
               opacity: 0.3;
 
               position: absolute;
-              top: 50%;
+              top: 30%;
               right: 0;
-              transform: translateY(-50%);
+              transform: translateY(-30%);
 
               @include xl {
                 width: 33rem;
@@ -77,8 +77,6 @@
 
               @media only screen and (max-width: 56.25em) {
                 width: 14rem;
-                top: 30%;
-                transform: translateY(-30%);
               }
 
               @include md {
