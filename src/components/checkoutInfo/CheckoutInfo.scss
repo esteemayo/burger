@@ -34,6 +34,10 @@
               font-size: 3rem;
             }
 
+            @include xl {
+              font-size: 3.11111rem;
+            }
+
             &::after {
               display: inline-block;
               content: '';
@@ -69,6 +73,10 @@
           @media only screen and (min-width: 93.75em) {
             font-size: 1.8rem;
           }
+
+          @include xl {
+            font-size: 1.777777rem;
+          }
         }
 
         hr {
@@ -89,6 +97,10 @@
 
           @media only screen and (min-width: 93.75em) {
             font-size: 1.75rem;
+          }
+
+          @include xl {
+            font-size: 1.777777rem;
           }
         }
 
