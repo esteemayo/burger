@@ -152,13 +152,13 @@
     padding: 0 0.75rem;
 
     button {
-      all: unset;
       display: inline-block;
+      outline: none;
       text-align: center;
       text-transform: capitalize;
       font-weight: 500;
       font-size: 1.3rem;
-      width: 98%;
+      width: 100%;
       padding: 0.8rem;
       line-height: 1.595;
       vertical-align: middle;
