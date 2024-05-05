@@ -34,7 +34,7 @@ const CheckoutInfo = () => {
               Change recipient
             </button>
             <hr />
-            <h6 className='addressHeading'>Delivery Address</h6>
+            <h6 className='deliveryHeading'>Delivery Address</h6>
             <button
               onClick={addressModal.onOpen}
               type='button'
