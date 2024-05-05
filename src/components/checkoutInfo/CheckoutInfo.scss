@@ -59,7 +59,7 @@
           margin: 0 0 2rem;
 
           @media only screen and (min-width: 93.75em) {
-            font-size: 1.75rem;
+            font-size: 1.8rem;
           }
         }
 
@@ -120,6 +120,10 @@
           cursor: pointer;
           transition: all 0.3s;
 
+          @media only screen and (min-width: 93.75em) {
+            font-size: 1.6rem;
+          }
+
           &:hover {
             color: $clr-secondary;
           }
@@ -137,7 +141,7 @@
           margin-bottom: 0.5rem;
 
           @media only screen and (min-width: 93.75em) {
-            font-size: 1.75rem;
+            font-size: 1.8rem;
           }
         }
       }
@@ -164,6 +168,10 @@
       border-radius: 0.5rem;
       cursor: pointer;
       transition: all 0.3s ease-in-out;
+
+      @media only screen and (min-width: 93.75em) {
+        font-size: 1.6rem;
+      }
 
       &:hover {
         background-color: transparent;
