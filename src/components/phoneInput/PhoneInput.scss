@@ -72,6 +72,10 @@
       @include md {
         font-size: 1.975rem;
       }
+
+      @media only screen and (min-width: 93.75em) {
+        font-size: 2rem;
+      }
     }
 
     input {
@@ -100,6 +104,10 @@
         font-size: 1.975rem;
       }
 
+      @media only screen and (min-width: 93.75em) {
+        font-size: 2rem;
+      }
+
       &::placeholder {
         font-weight: 400;
         font-size: 1.5rem;
@@ -111,6 +119,10 @@
 
         @media only screen and (max-width: 23.4375em) {
           font-size: 1.675rem;
+        }
+
+        @media only screen and (min-width: 93.75em) {
+          font-size: 1.8rem;
         }
       }
     }
