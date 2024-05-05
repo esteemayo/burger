@@ -126,6 +126,10 @@
                 text-overflow: ellipsis;
                 overflow: hidden;
 
+                @media only screen and (min-width: 93.75em) {
+                  flex: 3;
+                }
+
                 a,
                 a:link,
                 a:active {
