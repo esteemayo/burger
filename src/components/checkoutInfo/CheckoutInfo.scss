@@ -48,6 +48,10 @@
               top: 50%;
               right: 0;
               transform: translateY(-50%);
+
+              @media only screen and (min-width: 93.75em) {
+                width: 41rem;
+              }
             }
           }
         }
