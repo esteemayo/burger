@@ -39,10 +39,6 @@
       font-size: 1.666665rem;
     }
 
-    @include lg {
-      font-size: 1.67rem;
-    }
-
     @media only screen and (max-width: 56.25em) {
       font-size: 1.875rem;
     }
@@ -75,10 +71,6 @@
 
     @include xl {
       font-size: 1.777778rem;
-    }
-
-    @include lg {
-      font-size: 1.7rem;
     }
 
     @media only screen and (max-width: 56.25em) {
