@@ -137,6 +137,10 @@
                     font-size: 1.3rem;
                     color: currentColor;
 
+                    @media only screen and (min-width: 93.75em) {
+                      font-size: 1.6rem;
+                    }
+
                     span {
                       margin-right: 1rem;
                     }
@@ -155,6 +159,10 @@
                   padding: 0.5rem;
                   background-color: #fff3f5;
                   border-radius: 0.5rem;
+
+                  @media only screen and (min-width: 93.75em) {
+                    font-size: 1.3rem;
+                  }
 
                   button {
                     all: unset;
@@ -193,6 +201,11 @@
                     width: 1.5rem;
                     height: 1.5rem;
                     object-fit: cover;
+
+                    @media only screen and (min-width: 93.75em) {
+                      width: 1.8rem;
+                      height: 1.8rem;
+                    }
                   }
                 }
               }
@@ -205,6 +218,10 @@
                   font-size: 1.3rem;
                   font-variant: tabular-nums;
                   color: $clr-gray-dark;
+
+                  @media only screen and (min-width: 93.75em) {
+                    font-size: 1.6rem;
+                  }
                 }
               }
             }
