@@ -101,10 +101,6 @@
             font-size: 100%;
             fill: currentColor;
 
-            @media only screen and (min-width: 93.75em) {
-              font-size: 2rem;
-            }
-
             @include lg {
               font-size: 1.7rem;
             }
@@ -116,6 +112,10 @@
             @media only screen and (max-width: 18.75em) {
               font-size: 1.6rem;
             }
+
+            @media only screen and (min-width: 112.5em) {
+              font-size: 2rem;
+            }
           }
         }
       }
@@ -125,10 +125,6 @@
           text-transform: capitalize;
           font-weight: 500;
           font-size: 100%;
-
-          @media only screen and (min-width: 93.75em) {
-            font-size: 2rem;
-          }
 
           @include lg {
             font-size: 1.67rem;
@@ -141,15 +137,15 @@
           @media only screen and (max-width: 18.75em) {
             font-size: 1.65rem;
           }
+
+          @media only screen and (min-width: 112.5em) {
+            font-size: 2rem;
+          }
         }
 
         .reviewerText {
           font-size: 1.4rem;
           color: $clr-gray-dark;
-
-          @media only screen and (min-width: 93.75em) {
-            font-size: 1.8rem;
-          }
 
           @include lg {
             font-size: 1.56rem;
@@ -163,6 +159,10 @@
           @media only screen and (max-width: 18.75em) {
             font-size: 1.6rem;
             line-height: 1.3;
+          }
+
+          @media only screen and (min-width: 112.5em) {
+            font-size: 1.8rem;
           }
         }
       }
