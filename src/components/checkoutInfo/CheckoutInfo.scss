@@ -70,6 +70,11 @@
                 width: 22rem;
               }
 
+              @media only screen and (max-width: 56.25em) {
+                top: 30%;
+                transform: translateY(-30%);
+              }
+
               @media only screen and (min-width: 93.75em) {
                 width: 41rem;
               }
