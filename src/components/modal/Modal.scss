@@ -34,6 +34,10 @@
       border-radius: 0.5rem;
       position: relative;
 
+      @media only screen and (min-width: 93.75em) {
+        width: 60rem;
+      }
+
       .modalHeading {
         display: inline-block;
         font-weight: 400;
