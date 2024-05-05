@@ -138,6 +138,10 @@
                   flex: 3;
                 }
 
+                @include xl {
+                  flex: 2.5;
+                }
+
                 a,
                 a:link,
                 a:active {
@@ -151,6 +155,10 @@
 
                     @media only screen and (min-width: 93.75em) {
                       font-size: 1.6rem;
+                    }
+
+                    @include xl {
+                      font-size: 1.445rem;
                     }
 
                     span {
@@ -174,6 +182,10 @@
 
                   @media only screen and (min-width: 93.75em) {
                     font-size: 1.3rem;
+                  }
+
+                  @include xl {
+                    font-size: 1.111111rem;
                   }
 
                   button {
@@ -218,6 +230,11 @@
                       width: 1.8rem;
                       height: 1.8rem;
                     }
+
+                    @include xl {
+                      width: 1.65rem;
+                      height: 1.65rem;
+                    }
                   }
                 }
               }
@@ -233,6 +250,10 @@
 
                   @media only screen and (min-width: 93.75em) {
                     font-size: 1.6rem;
+                  }
+
+                  @include xl {
+                    font-size: 1.445rem;
                   }
                 }
               }
@@ -264,6 +285,10 @@
                   font-size: 1.6rem;
                 }
 
+                @include xl {
+                  font-size: 1.445rem;
+                }
+
                 &:nth-child(2) {
                   font-variant: tabular-nums;
                 }
@@ -284,6 +309,10 @@
 
               @media only screen and (min-width: 93.75em) {
                 font-size: 1.6rem;
+              }
+
+              @include xl {
+                font-size: 1.445rem;
               }
 
               &:nth-child(2) {
