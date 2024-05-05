@@ -171,6 +171,10 @@
           @media only screen and (min-width: 93.75em) {
             font-size: 1.8rem;
           }
+
+          @include xl {
+            font-size: 1.777777rem;
+          }
         }
       }
     }
