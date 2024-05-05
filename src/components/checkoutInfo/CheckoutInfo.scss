@@ -6,6 +6,11 @@
   width: 58.33333333%;
   padding-right: 1.2rem;
 
+  @include md {
+    width: 100%;
+    padding-right: 0;
+  }
+
   .checkoutInfoWrap {
     padding: 2rem 0;
     background-color: $clr-white;

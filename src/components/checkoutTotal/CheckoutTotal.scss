@@ -5,7 +5,11 @@
   flex: 2;
   width: 41.66666667%;
 
-  .checkoutWrap {
+  @include md {
+    width: 100%;
+  }
+
+  .checkoutBox {
     .checkoutDetail {
       width: 100%;
       background-color: transparent;

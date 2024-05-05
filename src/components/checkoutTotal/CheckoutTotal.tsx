@@ -18,7 +18,7 @@ const CheckoutTotal = () => {
 
   return (
     <div className='checkoutTotal'>
-      <div className='checkoutWrap'>
+      <div className='checkoutBox'>
         <div className='checkoutDetail'>
           <div className='checkoutCard'>
             <div className='checkoutHeader'>
