@@ -1,4 +1,5 @@
 @import '../../styles/variables.scss';
+@import '../../styles/responsive.scss';
 
 .textareaWrap {
   display: flex;
@@ -15,6 +16,10 @@
     text-transform: capitalize;
     font-weight: 500;
     font-size: 1.5rem;
+
+    @include xl {
+      font-size: 1.666665rem;
+    }
 
     @media only screen and (min-width: 93.75em) {
       width: 17rem;
@@ -38,6 +43,10 @@
     caret-color: $clr-gray-light;
     resize: none;
 
+    @include xl {
+      font-size: 1.777778rem;
+    }
+
     @media only screen and (min-width: 93.75em) {
       font-size: 2rem;
     }
@@ -46,6 +55,10 @@
       font-weight: 400;
       font-size: 1.5rem;
       color: $clr-gray-light;
+
+      @include xl {
+        font-size: 1.666665rem;
+      }
 
       @media only screen and (min-width: 93.75em) {
         font-size: 1.8rem;
