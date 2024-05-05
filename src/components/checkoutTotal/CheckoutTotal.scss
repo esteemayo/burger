@@ -128,6 +128,10 @@
 
           &::-webkit-scrollbar {
             width: 0.6rem;
+
+            @include xl {
+              width: 0.75rem;
+            }
           }
 
           &::-webkit-scrollbar-track {
