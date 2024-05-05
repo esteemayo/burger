@@ -22,12 +22,12 @@
           border-bottom: 1px solid $line;
           position: relative;
 
-          @media only screen and (min-width: 93.75em) {
-            font-size: 1.6rem;
-          }
-
           @include xl {
             font-size: 1.44444rem;
+          }
+
+          @media only screen and (min-width: 93.75em) {
+            font-size: 1.6rem;
           }
 
           &::before {
@@ -45,12 +45,12 @@
             right: 2rem;
             transform: translateY(-33%);
 
-            @media only screen and (min-width: 93.75em) {
-              width: 34rem;
-            }
-
             @include xl {
               width: 32rem;
+            }
+
+            @media only screen and (min-width: 93.75em) {
+              width: 34rem;
             }
           }
 
@@ -60,12 +60,12 @@
             font-size: 1.4rem;
             color: #6b6b83;
 
-            @media only screen and (min-width: 93.75em) {
-              font-size: 1.7rem;
-            }
-
             @include xl {
               font-size: 1.55555rem;
+            }
+
+            @media only screen and (min-width: 93.75em) {
+              font-size: 1.7rem;
             }
           }
         }
@@ -142,12 +142,16 @@
                 text-overflow: ellipsis;
                 overflow: hidden;
 
-                @media only screen and (min-width: 93.75em) {
+                @include xl {
+                  flex: 2.5;
+                }
+
+                @media only screen and (max-width: 64rem) {
                   flex: 3;
                 }
 
-                @include xl {
-                  flex: 2.5;
+                @media only screen and (min-width: 93.75em) {
+                  flex: 3;
                 }
 
                 a,
@@ -161,12 +165,12 @@
                     font-size: 1.3rem;
                     color: currentColor;
 
-                    @media only screen and (min-width: 93.75em) {
-                      font-size: 1.6rem;
-                    }
-
                     @include xl {
                       font-size: 1.44444rem;
+                    }
+
+                    @media only screen and (min-width: 93.75em) {
+                      font-size: 1.6rem;
                     }
 
                     span {
@@ -188,12 +192,12 @@
                   background-color: #fff3f5;
                   border-radius: 0.5rem;
 
-                  @media only screen and (min-width: 93.75em) {
-                    font-size: 1.3rem;
-                  }
-
                   @include xl {
                     font-size: 1.111111rem;
+                  }
+
+                  @media only screen and (min-width: 93.75em) {
+                    font-size: 1.3rem;
                   }
 
                   button {
@@ -234,14 +238,14 @@
                     height: 1.5rem;
                     object-fit: cover;
 
-                    @media only screen and (min-width: 93.75em) {
-                      width: 1.8rem;
-                      height: 1.8rem;
-                    }
-
                     @include xl {
                       width: 1.65rem;
                       height: 1.65rem;
+                    }
+
+                    @media only screen and (min-width: 93.75em) {
+                      width: 1.8rem;
+                      height: 1.8rem;
                     }
                   }
                 }
@@ -256,12 +260,12 @@
                   font-variant: tabular-nums;
                   color: $clr-gray-dark;
 
-                  @media only screen and (min-width: 93.75em) {
-                    font-size: 1.6rem;
-                  }
-
                   @include xl {
                     font-size: 1.44444rem;
+                  }
+
+                  @media only screen and (min-width: 93.75em) {
+                    font-size: 1.6rem;
                   }
                 }
               }
@@ -289,12 +293,12 @@
                 font-size: 1.3rem;
                 color: $clr-gray-dark;
 
-                @media only screen and (min-width: 93.75em) {
-                  font-size: 1.6rem;
-                }
-
                 @include xl {
                   font-size: 1.44444rem;
+                }
+
+                @media only screen and (min-width: 93.75em) {
+                  font-size: 1.6rem;
                 }
 
                 &:nth-child(2) {
@@ -315,12 +319,12 @@
               font-size: 1.3rem;
               color: inherit;
 
-              @media only screen and (min-width: 93.75em) {
-                font-size: 1.6rem;
-              }
-
               @include xl {
                 font-size: 1.44444rem;
+              }
+
+              @media only screen and (min-width: 93.75em) {
+                font-size: 1.6rem;
               }
 
               &:nth-child(2) {
