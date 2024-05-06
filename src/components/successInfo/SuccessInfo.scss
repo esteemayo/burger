@@ -117,6 +117,14 @@
         color: $clr-gray-dark;
         margin-bottom: 3rem;
 
+        @include xl {
+          font-size: 1.44444rem;
+        }
+
+        @media only screen and (max-width: 56.25em) {
+          font-size: 1.625rem;
+        }
+
         @media only screen and (min-width: 112.5em) {
           font-size: 2rem;
         }
@@ -226,6 +234,14 @@
           font-size: 1.3rem;
           color: $clr-gray-dark;
 
+          @include xl {
+            font-size: 1.44444rem;
+          }
+
+          @media only screen and (max-width: 56.25em) {
+            font-size: 1.625rem;
+          }
+
           @media only screen and (min-width: 112.5em) {
             font-size: 2rem;
           }
@@ -243,6 +259,14 @@
           font-size: 1.3rem;
           color: inherit;
           transition: all 0.3s;
+
+          @include xl {
+            font-size: 1.44444rem;
+          }
+
+          @media only screen and (max-width: 56.25em) {
+            font-size: 1.625rem;
+          }
 
           @media only screen and (min-width: 112.5em) {
             font-size: 2rem;
