@@ -149,6 +149,10 @@
         width: 1.8rem;
         stroke: currentColor;
         stroke-width: 3px;
+
+        @include xl {
+          font-size: 2rem;
+        }
       }
 
       h3 {
