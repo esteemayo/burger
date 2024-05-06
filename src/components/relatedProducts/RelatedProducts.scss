@@ -36,10 +36,6 @@
       margin-bottom: 2rem;
       position: relative;
 
-      @media only screen and (min-width: 93.75em) {
-        font-size: 2rem;
-      }
-
       @include lg {
         margin-left: 1.5rem;
       }
@@ -50,6 +46,10 @@
 
       @include md {
         margin: 0;
+      }
+
+      @media only screen and (min-width: 112.5em) {
+        font-size: 2rem;
       }
 
       &::before {
@@ -64,10 +64,6 @@
         top: 50%;
         left: 17rem;
         transform: translateY(-50%);
-
-        @media only screen and (min-width: 93.75em) {
-          left: 21rem;
-        }
 
         @media only screen and (max-width: 56.25em) {
           width: 75%;
@@ -108,6 +104,10 @@
 
         @media only screen and (max-width: 20.9375em) {
           display: none;
+        }
+
+        @media only screen and (min-width: 112.5em) {
+          left: 21rem;
         }
       }
     }
