@@ -93,6 +93,7 @@
 
       @media only screen and (min-width: 112.5em) {
         font-size: 1.9rem;
+        line-height: 1.5;
       }
     }
   }
@@ -122,6 +123,10 @@
         text-transform: capitalize;
         font-weight: 600;
         font-size: 100%;
+
+        @media only screen and (min-width: 112.5em) {
+          font-size: 2.125rem;
+        }
       }
     }
 
@@ -138,6 +143,10 @@
         span {
           text-transform: capitalize;
           font-size: 1.3rem;
+
+          @media only screen and (min-width: 112.5em) {
+            font-size: 2rem;
+          }
 
           &:nth-child(2) {
             font-variant: tabular-nums;
@@ -156,6 +165,10 @@
         text-transform: capitalize;
         font-weight: 700;
         font-size: 1.3rem;
+
+        @media only screen and (min-width: 112.5em) {
+          font-size: 2rem;
+        }
 
         &:nth-child(2) {
           font-variant: tabular-nums;
