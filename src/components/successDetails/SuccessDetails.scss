@@ -21,6 +21,10 @@
       align-items: center;
       justify-content: space-between;
 
+      @include xl {
+        font-size: 1.55555rem;
+      }
+
       @media only screen and (min-width: 112.5em) {
         font-size: 2.33333rem;
       }
@@ -33,6 +37,10 @@
         padding: 1px 0;
         border-top: 1px solid $line;
         border-bottom: 1px solid $line;
+
+        @include xl {
+          width: 50%;
+        }
 
         @media only screen and (min-width: 112.5em) {
           width: 40%;
