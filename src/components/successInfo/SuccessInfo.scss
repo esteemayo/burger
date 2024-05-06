@@ -4,6 +4,10 @@
 .successInfo {
   flex: 3;
 
+  @media only screen and (max-width: 62.5em) {
+    flex: 2.25;
+  }
+
   .successWrap {
     padding: 5rem 3rem;
     background-color: #31c07e;
