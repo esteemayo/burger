@@ -27,6 +27,11 @@
         align-items: center;
         justify-content: center;
 
+        @include xl {
+          width: 11.1125rem;
+          height: 11.1125rem;
+        }
+
         @media only screen and (min-width: 112.5em) {
           width: 15rem;
           height: 15rem;
@@ -77,8 +82,8 @@
           font-weight: 500;
           font-size: 2.5rem;
 
-          @include lg {
-            font-size: 2.777775rem;
+          @include xl {
+            font-size: 2.77778rem;
           }
 
           @media only screen and (min-width: 112.5em) {
