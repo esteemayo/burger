@@ -48,7 +48,7 @@
         border-bottom: none;
 
         @include lg {
-          font-size: 1.78rem;
+          font-size: 1.77778rem;
         }
 
         @media only screen and (max-width: 56.25em) {
@@ -220,12 +220,8 @@
                 margin-bottom: 3.8rem;
                 position: relative;
 
-                @media only screen and (min-width: 87.5em) {
-                  font-size: 1.8rem;
-                }
-
                 @include lg {
-                  font-size: 1.78rem;
+                  font-size: 1.77778rem;
                 }
 
                 @media only screen and (max-width: 56.25em) {
@@ -245,6 +241,7 @@
                 }
 
                 @media only screen and (min-width: 112.5em) {
+                  font-size: 1.8rem;
                   margin-bottom: 3rem;
                 }
               }
