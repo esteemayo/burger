@@ -69,6 +69,10 @@
     caret-color: $clr-gray-light;
     transition: all 0.3s;
 
+    @include xl {
+      font-size: 1.777778rem;
+    }
+
     @include lg {
       font-size: 1.7rem;
     }
@@ -95,6 +99,10 @@
       font-size: 1.3rem;
       color: $clr-gray-light;
 
+      @include xl {
+        font-size: 1.666665rem;
+      }
+
       @include md {
         font-size: 1.875rem;
       }
@@ -104,7 +112,7 @@
       }
 
       @media only screen and (min-width: 112.5em) {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
       }
     }
   }
