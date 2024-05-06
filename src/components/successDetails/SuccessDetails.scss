@@ -50,6 +50,10 @@
           width: 50%;
         }
 
+        @media only screen and (max-width: 56.25em) {
+          width: 80%;
+        }
+
         @media only screen and (min-width: 112.5em) {
           width: 40%;
         }
@@ -142,7 +146,7 @@
 
       @media only screen and (max-width: 56.25em) {
         font-size: 1.625rem;
-        line-height: 1.4;
+        line-height: 1.7;
       }
 
       @media only screen and (min-width: 112.5em) {
