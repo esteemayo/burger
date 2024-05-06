@@ -17,7 +17,7 @@
         line-height: 2rem;
 
         @include lg {
-          font-size: 1.45rem;
+          font-size: 1.44445rem;
         }
 
         @media only screen and (max-width: 56.25em) {
@@ -143,7 +143,7 @@
       font-size: 100%;
 
       @include lg {
-        font-size: 1.45rem;
+        font-size: 1.5rem;
       }
 
       @media only screen and (max-width: 56.25em) {
@@ -171,7 +171,7 @@
         cursor: pointer;
 
         @include lg {
-          font-size: 1.45rem;
+          font-size: 1.44445rem;
         }
 
         @media only screen and (max-width: 56.25em) {
@@ -261,9 +261,9 @@
     transition: all 0.3s;
 
     @include lg {
-      font-size: 1.45rem;
+      font-size: 1.44445rem;
     }
-    
+
     @media only screen and (max-width: 56.25em) {
       font-size: 1.625rem;
     }
