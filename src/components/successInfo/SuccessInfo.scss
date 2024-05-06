@@ -135,6 +135,7 @@
 
             @media only screen and (min-width: 112.5em) {
               font-size: 2.25rem;
+              padding-top: 3rem;
             }
 
             &::before {
@@ -153,6 +154,11 @@
               margin: auto;
               border-radius: 50%;
               box-sizing: border-box;
+
+              @media only screen and (min-width: 112.5em) {
+                width: 5rem;
+                height: 5rem;
+              }
             }
           }
         }
