@@ -62,16 +62,28 @@
           text-transform: uppercase;
           font-weight: 400;
           font-size: 2rem;
+
+          @media only screen and (min-width: 112.5em) {
+            font-size: 3rem;
+          }
         }
 
         .successHeadingMain {
           text-transform: uppercase;
           font-weight: 500;
           font-size: 2.5rem;
+
+          @media only screen and (min-width: 112.5em) {
+            font-size: 3.5rem;
+          }
         }
 
         .successText {
           font-size: 1.3rem;
+
+          @media only screen and (min-width: 112.5em) {
+            font-size: 2rem;
+          }
         }
       }
     }
