@@ -188,6 +188,11 @@
               border-radius: 50%;
               box-sizing: border-box;
 
+              @include xl {
+                width: 3.5558rem;
+                height: 3.5558rem;
+              }
+
               @media only screen and (min-width: 112.5em) {
                 width: 5rem;
                 height: 5rem;
