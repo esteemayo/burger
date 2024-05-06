@@ -314,9 +314,14 @@
                       object-fit: cover;
                       opacity: 0.8;
 
-                      @include lg {
-                        width: 1.45rem;
-                        height: 1.67rem;
+                      @include xl {
+                        width: 1.445rem;
+                        height: 1.778rem;
+                      }
+
+                      @media only screen and (max-width: 56.25em) {
+                        width: 1.625rem;
+                        height: 2rem;
                       }
 
                       @include md {
