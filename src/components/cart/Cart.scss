@@ -245,16 +245,12 @@
                     margin-bottom: 0;
                     transition: all 0.3s;
 
-                    @include lg {
+                    @include xl {
                       font-size: 1.44445rem;
                     }
 
                     @media only screen and (max-width: 56.25em) {
                       font-size: 1.625rem;
-                    }
-
-                    @media only screen and (max-width: 23.4375em) {
-                      font-size: 1.45rem;
                     }
 
                     @media only screen and (min-width: 112.5em) {
@@ -383,10 +379,6 @@
 
                   @media only screen and (max-width: 56.25em) {
                     font-size: 1.625rem;
-                  }
-
-                  @media only screen and (max-width: 23.4375em) {
-                    font-size: 1.45rem;
                   }
 
                   @media only screen and (min-width: 112.5em) {
