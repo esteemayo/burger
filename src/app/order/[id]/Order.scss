@@ -191,6 +191,10 @@
       }
 
       .orderStatus {
+        @media only screen and (max-width: 26.875em) {
+          display: none;
+        }
+
         .orderWrap {
           margin-bottom: 1rem;
 
