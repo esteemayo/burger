@@ -21,6 +21,10 @@
       padding: 5rem 2.5rem;
     }
 
+    @media only screen and (max-width: 25em) {
+      padding: 4rem 1rem;
+    }
+
     .successBox {
       display: flex;
       flex-direction: column;
