@@ -25,6 +25,11 @@
         padding: 2.22222rem;
       }
 
+      @media only screen and (max-width: 56.25em) {
+        width: 63.75rem;
+        padding: 2.5rem;
+      }
+
       @media only screen and (min-width: 112.5em) {
         width: 65rem;
       }
