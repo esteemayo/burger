@@ -165,6 +165,10 @@
               padding-top: 0.8rem;
               z-index: 1;
 
+              @media only screen and (min-width: 112.5em) {
+                padding-top: 2.5rem;
+              }
+
               &::before {
                 display: flex;
                 align-items: center;
