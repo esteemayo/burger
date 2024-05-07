@@ -20,6 +20,11 @@
       box-shadow: $box-shadow;
       border-radius: 1.5rem;
 
+      @include xl {
+        width: 55.556rem;
+        padding: 2.22222rem;
+      }
+
       @media only screen and (min-width: 112.5em) {
         width: 65rem;
       }
