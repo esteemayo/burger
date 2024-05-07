@@ -62,6 +62,10 @@
             border-top: 1px solid $line;
             border-bottom: 1px solid $line;
 
+            @media only screen and (max-width: 56.25em) {
+              width: 25rem;
+            }
+
             @media only screen and (min-width: 112.5em) {
               width: 32rem;
             }
@@ -94,6 +98,10 @@
 
               @include xl {
                 font-size: 1.55555rem;
+              }
+
+              @media only screen and (max-width: 56.25em) {
+                font-size: 1.75rem;
               }
 
               @media only screen and (min-width: 112.5em) {
@@ -197,6 +205,10 @@
               @include xl {
                 font-size: 1.55555rem;
                 padding-top: 0.888889rem;
+              }
+
+              @media only screen and (max-width: 56.25em) {
+                font-size: 1.75rem;
               }
 
               @media only screen and (min-width: 112.5em) {
