@@ -39,6 +39,10 @@
         padding: 1.5rem;
       }
 
+      @include sm {
+        width: 50rem;
+      }
+
       @media only screen and (min-width: 112.5em) {
         width: 65rem;
       }
