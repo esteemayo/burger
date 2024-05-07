@@ -190,6 +190,11 @@
               padding-top: 0.8rem;
               z-index: 1;
 
+              @include xl {
+                font-size: 1.55555rem;
+                padding-top: 0.888889rem;
+              }
+
               @media only screen and (min-width: 112.5em) {
                 font-size: 1.8rem;
                 padding-top: 2.5rem;
