@@ -231,6 +231,10 @@
             b {
               font-size: 100%;
               color: #6b6b83;
+
+              @include sm {
+                font-weight: 500;
+              }
             }
           }
         }
