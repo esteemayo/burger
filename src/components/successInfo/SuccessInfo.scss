@@ -21,10 +21,6 @@
       padding: 5rem 2.5rem;
     }
 
-    @include sm {
-      padding: 3rem 1rem;
-    }
-
     .successBox {
       display: flex;
       flex-direction: column;
@@ -155,6 +151,10 @@
 
       @media only screen and (max-width: 37.5em) {
         padding: 3rem 1rem;
+      }
+
+      @include sm {
+        display: none;
       }
 
       p {
