@@ -88,6 +88,10 @@
               color: #6b6b83;
               line-height: 1;
 
+              @include xl {
+                font-size: 1.55555rem;
+              }
+
               @media only screen and (min-width: 112.5em) {
                 font-size: 1.8rem;
               }
@@ -98,6 +102,10 @@
               display: inline-block;
               font-size: 1.3rem;
               color: $clr-gray-dark;
+
+              @include xl {
+                font-size: 1.44445rem;
+              }
 
               @media only screen and (min-width: 112.5em) {
                 font-size: 1.7rem;
