@@ -40,6 +40,12 @@
             display: none;
           }
         }
+
+        @include sm {
+          &:nth-child(3) {
+            display: none;
+          }
+        }
       }
     }
   }
@@ -78,6 +84,12 @@
 
         @media only screen and (max-width: 37.5em) {
           &:nth-child(2) {
+            display: none;
+          }
+        }
+
+        @include sm {
+          &:nth-child(3) {
             display: none;
           }
         }
