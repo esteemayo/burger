@@ -33,6 +33,14 @@
       @media only screen and (min-width: 112.5em) {
         font-size: 2rem;
       }
+
+      th {
+        @media only screen and (max-width: 37.5em) {
+          &:nth-child(2) {
+            display: none;
+          }
+        }
+      }
     }
   }
 
@@ -67,6 +75,12 @@
 
       td {
         padding: 2.4rem 4px;
+
+        @media only screen and (max-width: 37.5em) {
+          &:nth-child(2) {
+            display: none;
+          }
+        }
 
         a,
         a:link,
