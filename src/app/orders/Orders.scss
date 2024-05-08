@@ -15,5 +15,9 @@
     @include lg {
       padding: 8rem 3rem;
     }
+
+    @include sm {
+      padding: 6rem 2.5rem;
+    }
   }
 }
