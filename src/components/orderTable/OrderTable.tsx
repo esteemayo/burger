@@ -34,7 +34,7 @@ const OrderTable = ({ isAdmin, data }: OrderTableProps) => {
 
   useEffect(() => {
     window.addEventListener('resize', handleDimension);
-    return window.removeEventListener('resize', handleDimension);
+    return () => window.removeEventListener('resize', handleDimension);
   }, [handleDimension]);
 
   return (
@@ -83,7 +83,7 @@ const OrderTable = ({ isAdmin, data }: OrderTableProps) => {
                       />
                     </button>
                   </form>
-                  {dimension === 768 && (
+                  {dimension <= 768 && (
                     <button type='button'>
                       <Image
                         src='/img/edit.png'
