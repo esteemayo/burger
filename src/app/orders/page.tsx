@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 };
 
 const Orders = () => {
-  const isAdmin = false;
+  const isAdmin = true;
 
   return (
     <div className='orders'>

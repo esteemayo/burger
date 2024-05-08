@@ -122,6 +122,10 @@
           justify-content: center;
           gap: 1.6rem;
 
+          @include md {
+            display: none;
+          }
+
           input {
             display: inline-block;
             border: none;
