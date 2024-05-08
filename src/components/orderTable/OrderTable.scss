@@ -208,6 +208,14 @@
             }
           }
         }
+
+        button {
+          all: unset;
+          display: inline-block;
+          padding: 1rem 1rem;
+          background-color: $clr-primary;
+          color: $clr-white;
+        }
       }
     }
   }
