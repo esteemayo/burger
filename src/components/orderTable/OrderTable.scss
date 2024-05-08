@@ -10,6 +10,10 @@
     tr {
       text-align: left;
 
+      @include xl {
+        font-size: 1.77778rem;
+      }
+
       @media only screen and (min-width: 112.5em) {
         font-size: 2rem;
       }
