@@ -18,6 +18,10 @@
     border-spacing: 3px 3px;
   }
 
+  @media only screen and (max-width: 18.75em) {
+    border-spacing: 1px 1px;
+  }
+
   thead {
     tr {
       text-align: left;
