@@ -64,6 +64,10 @@
             border-radius: 0.5rem;
             cursor: $clr-gray-light;
 
+            @media only screen and (max-width: 112.5em) {
+              font-size: 2rem;
+            }
+
             &::placeholder {
               font-weight: 400;
               font-size: 1.5rem;
