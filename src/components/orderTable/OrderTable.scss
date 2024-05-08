@@ -132,7 +132,7 @@
             background-color: $clr-white;
             color: $clr-gray-dark;
             border-radius: 0.5rem;
-            cursor: $clr-gray-light;
+            caret-color: $clr-gray-light;
 
             @include xl {
               font-size: 1.777778rem;
