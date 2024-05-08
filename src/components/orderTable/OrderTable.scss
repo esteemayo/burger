@@ -6,6 +6,10 @@
   border-collapse: separate;
   border-spacing: 1.2rem 1.2rem;
 
+  @include lg {
+    width: 90%;
+  }
+
   thead {
     tr {
       text-align: left;
