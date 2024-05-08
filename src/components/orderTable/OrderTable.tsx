@@ -1,8 +1,8 @@
 'use client';
 
-import { useCallback } from 'react';
-import Link from 'next/link';
 import { toast } from 'react-toastify';
+import Link from 'next/link';
+import { useCallback, useEffect, useState } from 'react';
 import Image from 'next/image';
 
 import { formatDate } from '@/utils/formatDate';
@@ -13,6 +13,12 @@ import { OrderTableProps } from '@/types';
 import './OrderTable.scss';
 
 const OrderTable = ({ isAdmin, data }: OrderTableProps) => {
+  const [dimension, setDimension] = useState(window.innerWidth);
+
+  const handleDimension = useCallback(() => {
+    setDimension(window.innerWidth);
+  }, []);
+
   const handleSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -25,6 +31,11 @@ const OrderTable = ({ isAdmin, data }: OrderTableProps) => {
     form.reset();
     toast.success("Changed order's status");
   }, []);
+
+  useEffect(() => {
+    window.addEventListener('resize', handleDimension);
+    return window.removeEventListener('resize', handleDimension);
+  }, [handleDimension]);
 
   return (
     <table className='orderTable'>
@@ -72,6 +83,16 @@ const OrderTable = ({ isAdmin, data }: OrderTableProps) => {
                       />
                     </button>
                   </form>
+                  {dimension === 768 && (
+                    <button type='button'>
+                      <Image
+                        src='/img/edit.png'
+                        width={20}
+                        height={20}
+                        alt='edit icon'
+                      />
+                    </button>
+                  )}
                 </td>
               )}
             </tr>
