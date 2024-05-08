@@ -5,8 +5,10 @@ import Link from 'next/link';
 import { toast } from 'react-toastify';
 import Image from 'next/image';
 
-import { OrderTableProps } from '@/types';
+import { formatDate } from '@/utils/formatDate';
 import { formatCurrency } from '@/utils/formatCurrency';
+
+import { OrderTableProps } from '@/types';
 
 import './OrderTable.scss';
 
@@ -50,11 +52,7 @@ const OrderTable = ({ isAdmin, data }: OrderTableProps) => {
               </td>
               <td>
                 <time dateTime={createdAt}>
-                  {new Date(createdAt).toLocaleString('en-us', {
-                    month: 'long',
-                    day: 'numeric',
-                    year: 'numeric',
-                  })}
+                  {formatDate(new Date(createdAt))}
                 </time>
               </td>
               <td>{formatCurrency(price)}</td>
