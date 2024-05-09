@@ -218,19 +218,16 @@
         }
 
         .statusContainer {
-          display: flex;
-          align-items: center;
-          gap: 1rem;
-
-          @include sm {
-            flex-direction: column;
-            gap: 0.5rem;
-          }
+          position: relative;
 
           button {
             all: unset;
             display: inline-block;
             cursor: pointer;
+
+            position: absolute;
+            top: -2rem;
+            right: -0.5rem;
 
             &:disabled {
               opacity: 0.7;
