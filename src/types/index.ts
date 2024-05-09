@@ -380,6 +380,15 @@ export interface AddressAction {
   onClose(): void;
 }
 
+export interface StatusStore {
+  isOpen: boolean;
+}
+
+export interface StatusAction {
+  onOpen(): void;
+  onClose(): void;
+}
+
 export interface ProductInputsProps {
   name: string;
   desc: string;
