@@ -8,19 +8,30 @@ import Image from 'next/image';
 import { formatDate } from '@/utils/formatDate';
 import { formatCurrency } from '@/utils/formatCurrency';
 
-import { OrderTableProps } from '@/types';
+import { OrderItem, OrderTableProps } from '@/types';
 import { useStatusModal } from '@/hooks/useStatusModal';
 
 import './OrderTable.scss';
 
 const OrderTable = ({ isAdmin, data }: OrderTableProps) => {
   const onOpen = useStatusModal((store) => store.onOpen);
+  const onSelect = useStatusModal((store) => store.onSelect);
 
   const [dimension, setDimension] = useState(window.innerWidth);
 
   const handleDimension = useCallback(() => {
     setDimension(window.innerWidth);
   }, []);
+
+  const handleClick = useCallback(
+    (e: React.MouseEvent<HTMLButtonElement>, order: OrderItem) => {
+      e.stopPropagation();
+
+      onOpen();
+      onSelect(order);
+    },
+    [onOpen, onSelect]
+  );
 
   const handleSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -89,7 +100,10 @@ const OrderTable = ({ isAdmin, data }: OrderTableProps) => {
                   {dimension <= 768 && (
                     <div className='statusContainer'>
                       {status}
-                      <button type='button' onClick={onOpen}>
+                      <button
+                        type='button'
+                        onClick={(e) => handleClick(e, item)}
+                      >
                         <Image
                           src='/svg/pencil.svg'
                           width={20}
