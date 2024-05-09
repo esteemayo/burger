@@ -115,7 +115,7 @@ export type ProfileMenu = {
   links: ProfileLink;
 }[];
 
-type OrderItem = {
+export type OrderItem = {
   id: number;
   name: string;
   price: number;
