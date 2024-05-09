@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 };
 
 const Search = () => {
-  if (products.length < 1) {
+  if (!products.length < 1) {
     return (
       <EmptyState
         title='No product found!'
