@@ -20,12 +20,14 @@ const StatusModal = () => {
   }, []);
 
   const onSubmit = useCallback(() => {
-    console.log('status');
-  }, []);
+    console.log(status);
+  }, [status]);
 
   let bodyContent: JSX.Element | undefined;
 
-  bodyContent = <Input value={status} placeholder='status' onChange={handleChange} />
+  bodyContent = (
+    <Input value={status} placeholder='status' onChange={handleChange} />
+  );
 
   return (
     <Modal
