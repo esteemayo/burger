@@ -1,3 +1,4 @@
+@import '../../styles/variables.scss';
 @import '../../styles/responsive.scss';
 
 .heading {
@@ -31,11 +32,11 @@
     margin-top: 1rem;
 
     @include xl {
-      font-size: 2.66667rem;
+      font-size: 1.88889rem;
     }
 
     @media only screen and (min-width: 112.5em) {
-      font-size: 1.88889rem;
+      font-size: 2.66667rem;
     }
   }
 }
