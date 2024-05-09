@@ -1,7 +1,8 @@
 import AccountModal from '@/components/accountModal/AccountModal';
+import StatusModal from '@/components/statusModal/StatusModal';
 import ProductModal from '@/components/productModal/ProductModal';
-import AddressModal from '@/components/addressModal/AddressModal';
 import RecipientModal from '@/components/recipientModal/RecipientModal';
+import AddressModal from '@/components/addressModal/AddressModal';
 
 const ModalProvider = () => {
   return (
@@ -10,6 +11,7 @@ const ModalProvider = () => {
       <ProductModal />
       <RecipientModal />
       <AddressModal />
+      <StatusModal />
     </>
   );
 };
