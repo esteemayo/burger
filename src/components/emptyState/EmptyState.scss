@@ -1,4 +1,5 @@
 @import '../../styles/variables.scss';
+@import '../../styles/responsive.scss';
 
 .emptyState {
   width: 100vw;
@@ -20,6 +21,11 @@
       width: 30rem;
       height: 30rem;
       object-fit: contain;
+
+      @include xl {
+        width: 33.335rem;
+        height: 33.335rem;
+      }
     }
 
     button {
