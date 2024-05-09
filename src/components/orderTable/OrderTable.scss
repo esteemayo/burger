@@ -215,9 +215,12 @@
         }
 
         button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
           all: unset;
-          display: inline-block;
-          padding: 1rem 1rem;
+          padding: 0.8rem 1rem;
           background-color: $clr-primary;
           color: $clr-white;
           border-radius: 0.5rem;
