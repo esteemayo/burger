@@ -84,14 +84,17 @@ const OrderTable = ({ isAdmin, data }: OrderTableProps) => {
                     </button>
                   </form>
                   {dimension <= 768 && (
-                    <button type='button'>
-                      <Image
-                        src='/img/edit.png'
-                        width={20}
-                        height={20}
-                        alt='edit icon'
-                      />
-                    </button>
+                    <div className='statusContainer'>
+                      {status}
+                      <button type='button'>
+                        <Image
+                          src='/img/edit.png'
+                          width={20}
+                          height={20}
+                          alt='edit icon'
+                        />
+                      </button>
+                    </div>
                   )}
                 </td>
               )}
