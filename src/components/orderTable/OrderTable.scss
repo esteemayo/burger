@@ -232,6 +232,13 @@
             opacity: 0.7;
             cursor: default;
           }
+
+          img {
+            display: inline-block;
+            width: 2rem;
+            height: 2rem;
+            object-fit: cover;
+          }
         }
       }
     }
