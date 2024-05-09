@@ -9,10 +9,13 @@ import { formatDate } from '@/utils/formatDate';
 import { formatCurrency } from '@/utils/formatCurrency';
 
 import { OrderTableProps } from '@/types';
+import { useStatusModal } from '@/hooks/useStatusModal';
 
 import './OrderTable.scss';
 
 const OrderTable = ({ isAdmin, data }: OrderTableProps) => {
+  const onOpen = useStatusModal((store) => store.onOpen);
+
   const [dimension, setDimension] = useState(window.innerWidth);
 
   const handleDimension = useCallback(() => {
@@ -86,7 +89,7 @@ const OrderTable = ({ isAdmin, data }: OrderTableProps) => {
                   {dimension <= 768 && (
                     <div className='statusContainer'>
                       {status}
-                      <button type='button'>
+                      <button type='button' onClick={onOpen}>
                         <Image
                           src='/svg/pencil.svg'
                           width={20}
