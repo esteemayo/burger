@@ -19,6 +19,10 @@
       font-size: 2.66667rem;
     }
 
+    @media only screen and (max-width: 56.25em) {
+      font-size: 3rem;
+    }
+
     @media only screen and (min-width: 112.5em) {
       font-size: 3.33333rem;
     }
@@ -33,6 +37,10 @@
 
     @include xl {
       font-size: 1.88889rem;
+    }
+
+    @media only screen and (max-width: 56.25em) {
+      font-size: 2.125rem;
     }
 
     @media only screen and (min-width: 112.5em) {
