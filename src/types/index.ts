@@ -387,6 +387,7 @@ export interface StatusStore {
 export interface StatusAction {
   onOpen(): void;
   onClose(): void;
+  onSelect(value: OrderItem): void;
 }
 
 export interface ProductInputsProps {
