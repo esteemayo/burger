@@ -26,6 +26,11 @@
         width: 33.335rem;
         height: 33.335rem;
       }
+
+      @media only screen and (max-width: 56.25em) {
+        width: 37.5rem;
+        height: 37.5rem;
+      }
     }
 
     button {
