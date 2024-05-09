@@ -83,7 +83,7 @@ const OrderTable = ({ isAdmin, data }: OrderTableProps) => {
               <td>{formatCurrency(price)}</td>
               <td className='orderName'>{name}</td>
               {!isAdmin ? (
-                <td>{status}</td>
+                <td>{`${status[0].toUpperCase()}${status.substring(1)}`}</td>
               ) : (
                 <td>
                   <form onSubmit={handleSubmit}>
@@ -99,7 +99,7 @@ const OrderTable = ({ isAdmin, data }: OrderTableProps) => {
                   </form>
                   {dimension <= 768 && (
                     <div className='statusContainer'>
-                      {status}
+                      {`${status[0].toUpperCase()}${status.substring(1)}`}
                       <button
                         type='button'
                         onClick={(e) => handleClick(e, item)}
