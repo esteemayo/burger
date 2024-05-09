@@ -1,5 +1,6 @@
 'use client';
 
+import { toast } from 'react-toastify';
 import { useCallback, useEffect, useState } from 'react';
 
 import Input from '../input/Input';
@@ -25,6 +26,8 @@ const StatusModal = () => {
 
     setStatus('');
     onClose();
+
+    toast.success('Status changed!');
   }, [onClose, status]);
 
   useEffect(() => {
