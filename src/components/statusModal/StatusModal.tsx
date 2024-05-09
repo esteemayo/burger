@@ -40,7 +40,7 @@ const StatusModal = () => {
   return (
     <Modal
       isOpen={isOpen}
-      title='Edit order status'
+      title="Edit order's status"
       actionLabel='Update'
       body={bodyContent}
       size='full'
