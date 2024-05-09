@@ -35,7 +35,11 @@ const StatusModal = () => {
   let bodyContent: JSX.Element | undefined;
 
   bodyContent = (
-    <Input value={status} placeholder='status' onChange={handleChange} />
+    <Input
+      value={status}
+      placeholder={order?.status ?? 'status'}
+      onChange={handleChange}
+    />
   );
 
   return (
