@@ -8,8 +8,6 @@ import Modal from '../modal/Modal';
 
 import { useStatusModal } from '@/hooks/useStatusModal';
 
-import './StatusModal.scss';
-
 const StatusModal = () => {
   const isOpen = useStatusModal((store) => store.isOpen);
   const order = useStatusModal((store) => store.order);
