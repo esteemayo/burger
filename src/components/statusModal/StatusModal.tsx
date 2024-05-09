@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 import Input from '../input/Input';
 import Modal from '../modal/Modal';
@@ -11,6 +11,7 @@ import './StatusModal.scss';
 
 const StatusModal = () => {
   const isOpen = useStatusModal((store) => store.isOpen);
+  const order = useStatusModal((store) => store.order);
   const onClose = useStatusModal((store) => store.onClose);
 
   const [status, setStatus] = useState('');
@@ -21,7 +22,14 @@ const StatusModal = () => {
 
   const onSubmit = useCallback(() => {
     console.log(status);
-  }, [status]);
+
+    setStatus('');
+    onClose();
+  }, [onClose, status]);
+
+  useEffect(() => {
+    setStatus(order?.status || '');
+  }, [order?.status]);
 
   let bodyContent: JSX.Element | undefined;
 
