@@ -87,7 +87,12 @@ const OrderTable = ({ isAdmin, data }: OrderTableProps) => {
               ) : (
                 <td>
                   <form onSubmit={handleSubmit}>
-                    <input type='text' placeholder={status} />
+                    <input
+                      type='text'
+                      placeholder={`${status[0].toUpperCase()}${status.substring(
+                        1
+                      )}`}
+                    />
                     <button type='submit'>
                       <Image
                         src='/img/edit.png'
