@@ -23,6 +23,13 @@ const OrderTable = ({ isAdmin, data }: OrderTableProps) => {
     setDimension(window.innerWidth);
   }, []);
 
+  const orderStatus = useCallback(
+    (status: 'preparing' | 'on the way' | 'delivered') => {
+      return `${status[0].toUpperCase()}${status.substring(1)}`;
+    },
+    []
+  );
+
   const handleClick = useCallback(
     (e: React.MouseEvent<HTMLButtonElement>, order: OrderItem) => {
       e.stopPropagation();
@@ -83,16 +90,11 @@ const OrderTable = ({ isAdmin, data }: OrderTableProps) => {
               <td>{formatCurrency(price)}</td>
               <td className='orderName'>{name}</td>
               {!isAdmin ? (
-                <td>{`${status[0].toUpperCase()}${status.substring(1)}`}</td>
+                <td>{orderStatus(status)}</td>
               ) : (
                 <td>
                   <form onSubmit={handleSubmit}>
-                    <input
-                      type='text'
-                      placeholder={`${status[0].toUpperCase()}${status.substring(
-                        1
-                      )}`}
-                    />
+                    <input type='text' placeholder={orderStatus(status)} />
                     <button type='submit'>
                       <Image
                         src='/img/edit.png'
@@ -104,7 +106,7 @@ const OrderTable = ({ isAdmin, data }: OrderTableProps) => {
                   </form>
                   {dimension <= 768 && (
                     <div className='statusContainer'>
-                      {`${status[0].toUpperCase()}${status.substring(1)}`}
+                      {orderStatus(status)}
                       <button
                         type='button'
                         onClick={(e) => handleClick(e, item)}
