@@ -381,6 +381,7 @@ export interface AddressAction {
 }
 
 export interface StatusStore {
+  order: OrderItem | null;
   isOpen: boolean;
 }
 
