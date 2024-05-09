@@ -9,7 +9,7 @@ import './Product.scss';
 const Product = () => {
   const product = true;
 
-  if (product) {
+  if (!product) {
     return (
       <EmptyState
         title='Product not found'
