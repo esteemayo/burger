@@ -238,6 +238,11 @@
             width: 2rem;
             height: 2rem;
             object-fit: cover;
+
+            @media only screen and (min-width: 112.5em) {
+              width: 2.5rem;
+              height: 2.5rem;
+            }
           }
         }
       }
