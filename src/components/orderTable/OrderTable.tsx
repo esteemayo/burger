@@ -88,7 +88,7 @@ const OrderTable = ({ isAdmin, data }: OrderTableProps) => {
                       {status}
                       <button type='button'>
                         <Image
-                          src='/img/edit.png'
+                          src='/svg/pencil.svg'
                           width={20}
                           height={20}
                           alt='edit icon'
