@@ -1,4 +1,4 @@
-@import '../../styles/variables.scss';
+@import '../../styles/responsive.scss';
 
 .heading {
   text-align: left;
@@ -14,6 +14,10 @@
     color: inherit;
     line-height: 1.4;
 
+    @include xl {
+      font-size: 2.66667rem;
+    }
+
     @media only screen and (min-width: 112.5em) {
       font-size: 3.33333rem;
     }
@@ -26,8 +30,12 @@
     line-height: 1;
     margin-top: 1rem;
 
-    @media only screen and (min-width: 112.5em) {
+    @include xl {
       font-size: 2.66667rem;
+    }
+
+    @media only screen and (min-width: 112.5em) {
+      font-size: 1.88889rem;
     }
   }
 }
