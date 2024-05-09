@@ -217,33 +217,39 @@
           }
         }
 
-        button {
+        .statusContainer {
           display: flex;
           align-items: center;
-          justify-content: center;
+          gap: 0.5rem;
+          
+          button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-          all: unset;
-          padding: 0.8rem 1rem;
-          background-color: $clr-primary;
-          color: $clr-white;
-          border-radius: 0.5rem;
-          cursor: pointer;
-          transition: all 0.3s;
+            all: unset;
+            padding: 0.8rem 1rem;
+            background-color: $clr-primary;
+            color: $clr-white;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: all 0.3s;
 
-          &:hover {
-            background-color: $clr-secondary;
-          }
+            &:hover {
+              background-color: $clr-secondary;
+            }
 
-          &:disabled {
-            opacity: 0.7;
-            cursor: default;
-          }
+            &:disabled {
+              opacity: 0.7;
+              cursor: default;
+            }
 
-          img {
-            display: inline-block;
-            width: 2rem;
-            height: 2rem;
-            object-fit: cover;
+            img {
+              display: inline-block;
+              width: 2rem;
+              height: 2rem;
+              object-fit: cover;
+            }
           }
         }
       }
