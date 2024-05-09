@@ -31,6 +31,11 @@
         width: 37.5rem;
         height: 37.5rem;
       }
+
+      @include sm {
+        width: 31.25rem;
+        height: 31.25rem;
+      }
     }
 
     button {
