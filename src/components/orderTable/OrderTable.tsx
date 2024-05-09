@@ -112,7 +112,7 @@ const OrderTable = ({ isAdmin, data }: OrderTableProps) => {
                         onClick={(e) => handleClick(e, item)}
                       >
                         <Image
-                          src='/svg/pencil.svg'
+                          src='/svg/edit.svg'
                           width={20}
                           height={20}
                           alt='edit icon'
