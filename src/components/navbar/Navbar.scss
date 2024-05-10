@@ -59,10 +59,6 @@
         svg {
           font-size: 3rem;
 
-          @include xl {
-            font-size: 1.55556rem;
-          }
-
           @include sm {
             font-size: 2.5rem;
           }
@@ -76,6 +72,10 @@
           font-weight: 700;
           font-size: 1.4rem;
           white-space: nowrap;
+
+          @include xl {
+            font-size: 1.55556rem;
+          }
 
           @include sm {
             font-size: 1.3rem;
