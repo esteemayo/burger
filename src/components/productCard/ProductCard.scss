@@ -127,6 +127,11 @@
         transition: all 0.3s;
         transform: translate3d(-50%, 0, 0);
 
+        @media only screen and (min-width: 112.5em) {
+          font-size: 1.416665rem;
+          padding: 1rem 0;
+        }
+
         &:hover {
           color: $clr-secondary;
         }
