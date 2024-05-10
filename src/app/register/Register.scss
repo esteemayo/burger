@@ -98,6 +98,18 @@
         background-color: $clr-white;
         padding: 2rem 3rem;
 
+        @media only screen and (max-width: 62.5em) {
+          padding: 2rem;
+        }
+
+        @media only screen and (max-width: 17.5em) {
+          padding: 1.5rem;
+        }
+
+        @media only screen and (min-width: 112.5em) {
+          padding: 4rem;
+        }
+
         .headingWrap {
           h1 {
             font-weight: 500;
