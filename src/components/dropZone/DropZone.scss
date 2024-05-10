@@ -38,6 +38,10 @@
     cursor: pointer;
     animation: pulse 2s linear infinite;
 
+    @include xl {
+      height: 15.557rem;
+    }
+
     @media only screen and (min-width: 112.5em) {
       height: 15.9832rem;
     }
