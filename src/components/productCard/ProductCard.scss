@@ -152,6 +152,10 @@
     padding: 2.3rem 0 1.4rem;
     background-color: $clr-tertiary;
 
+    @media only screen and (min-width: 112.5em) {
+      padding: 2.5rem 0 1.66667rem;
+    }
+
     a,
     a:link,
     a:active {
