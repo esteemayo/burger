@@ -75,6 +75,10 @@
       height: 20rem;
     }
 
+    @media only screen and (min-width: 112.5em) {
+      width: 35rem;
+    }
+
     &:hover .overlay {
       visibility: visible;
       opacity: 1;
