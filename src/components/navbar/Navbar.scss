@@ -110,6 +110,11 @@
           border-radius: 50%;
           object-fit: cover;
 
+          @include xl {
+            width: 3.335rem;
+            height: 3.335rem;
+          }
+
           @include sm {
             width: 2.5rem;
             height: 2.5rem;
