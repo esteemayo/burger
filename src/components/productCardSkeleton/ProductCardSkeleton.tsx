@@ -36,6 +36,9 @@ const ProductCardSkeleton = () => {
   } else if (dimension <= 300) {
     width = 280;
     height = 200;
+  } else if (dimension >= 1800) {
+    width = 420;
+    height = 324;
   } else {
     width = 300;
     height = 270;
