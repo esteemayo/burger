@@ -7,7 +7,7 @@ const GenderSelect = () => {
     <div className='genderSelect'>
       <label htmlFor='gender'>Gender</label>
       <select name='gender' id='gender'>
-        <option value=''>Choose a gender</option>
+        <option value=''>Select a gender</option>
         {options.map((option) => {
           const { value, label } = option;
           return (
