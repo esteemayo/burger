@@ -139,6 +139,11 @@
                 height: 0.5rem;
                 background-color: currentColor;
                 border-radius: 50%;
+
+                @media only screen and (min-width: 112.5em) {
+                  width: 0.8335rem;
+                  height: 0.8335rem;
+                }
               }
             }
           }
