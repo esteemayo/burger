@@ -156,6 +156,11 @@
                 background-color: currentColor;
                 border-radius: 50%;
 
+                @include xl {
+                  width: 0.556rem;
+                  height: 0.556rem;
+                }
+
                 @media only screen and (min-width: 112.5em) {
                   width: 0.8335rem;
                   height: 0.8335rem;
