@@ -155,6 +155,10 @@
                 font-size: 1.45rem;
               }
 
+              @media only screen and (min-width: 112.5em) {
+                font-size: 1.66667rem;
+              }
+
               &:hover,
               &:visited {
                 color: $clr-secondary;
