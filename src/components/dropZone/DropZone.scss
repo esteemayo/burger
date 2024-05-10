@@ -17,8 +17,8 @@
     font-weight: 500;
     font-size: 1.5rem;
 
-    @include lg {
-      font-size: 1.67rem;
+    @include xl {
+      font-size: 1.666665rem;
     }
 
     @media only screen and (max-width: 56.25em) {
@@ -27,6 +27,10 @@
 
     @media only screen and (max-width: 23.4375em) {
       font-size: 1.675rem;
+    }
+
+    @media only screen and (min-width: 112.5em) {
+      font-size: 2rem;
     }
   }
 
