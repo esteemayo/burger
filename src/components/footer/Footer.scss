@@ -213,6 +213,11 @@
               height: 3rem;
             }
 
+            @media only screen and (min-width: 112.5em) {
+              width: 5.167rem;
+              height: 5.167rem;
+            }
+
             &:hover {
               color: #ada3a3;
               transform: translateY(-0.5rem);
@@ -240,6 +245,10 @@
               svg {
                 font-size: 2rem;
                 color: currentColor;
+
+                @media only screen and (min-width: 112.5em) {
+                  font-size: 3rem;
+                }
               }
             }
           }
