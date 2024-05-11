@@ -324,6 +324,10 @@
             gap: 0.5rem;
           }
 
+          @media only screen and (min-width: 112.5em) {
+            font-size: 1.58333rem;
+          }
+
           a,
           a:link,
           a:active {
