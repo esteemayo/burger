@@ -65,6 +65,10 @@
               display: inline-block;
               object-fit: cover;
               cursor: pointer;
+
+              @media only screen and (min-width: 112.5em) {
+                width: 15rem;
+              }
             }
           }
         }
