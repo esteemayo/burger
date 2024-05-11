@@ -138,6 +138,11 @@
             img {
               width: 1.6rem;
               height: 1.6rem;
+
+              @media only screen and (min-width: 112.5em) {
+                width: 1.66667rem;
+                height: 1.66667rem;
+              }
             }
           }
         }
