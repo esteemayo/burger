@@ -258,6 +258,11 @@
             height: 2.223rem;
           }
 
+          @media only screen and (max-width: 56.25em) {
+            width: 2.5rem;
+            height: 2.5rem;
+          }
+
           @media only screen and (min-width: 112.5em) {
             width: 3.25rem;
             height: 3.25rem;
