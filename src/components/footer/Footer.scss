@@ -354,6 +354,10 @@
           align-self: flex-start;
         }
 
+        @include sm {
+          gap: 3rem;
+        }
+
         .menus {
           display: flex;
           align-items: center;
