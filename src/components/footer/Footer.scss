@@ -318,6 +318,10 @@
             font-size: 1.4rem;
             transition: all 0.3s;
 
+            @include xl {
+              font-size: 1.55556rem;
+            }
+
             @media only screen and (min-width: 112.5em) {
               font-size: 1.58333rem;
             }
@@ -340,6 +344,10 @@
           align-items: center;
           justify-content: flex-end;
           gap: 1rem;
+
+          @include xl {
+            font-size: 1.55556rem;
+          }
 
           @include md {
             flex-wrap: wrap;
