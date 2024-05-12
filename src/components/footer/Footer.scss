@@ -102,6 +102,11 @@
           gap: 3rem;
         }
 
+        @include sm {
+          flex-direction: column;
+          gap: 5rem;
+        }
+
         .links {
           display: flex;
           flex-direction: column;
