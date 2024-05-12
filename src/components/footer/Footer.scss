@@ -43,7 +43,7 @@
 
           @include sm {
             flex-direction: column;
-            gap: 3rem;
+            gap: 6rem;
           }
 
           .download {
@@ -79,6 +79,10 @@
               @media only screen and (max-width: 35.375em) {
                 width: 15rem;
                 height: 4.25rem;
+              }
+
+              @include sm {
+                width: 16.875rem;
               }
 
               @media only screen and (min-width: 112.5em) {
