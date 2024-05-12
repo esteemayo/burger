@@ -384,6 +384,10 @@
               font-size: 1.75rem;
             }
 
+            @media only screen and (max-width: 37.5em) {
+              font-size: 1.6875rem;
+            }
+
             @media only screen and (min-width: 112.5em) {
               font-size: 1.58333rem;
             }
@@ -419,6 +423,10 @@
             font-size: 1.75rem;
             flex-wrap: wrap;
             justify-content: flex-start;
+          }
+
+          @media only screen and (max-width: 37.5em) {
+            font-size: 1.6875rem;
           }
 
           @media only screen and (max-width: 18.75em) {
