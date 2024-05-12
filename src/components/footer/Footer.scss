@@ -296,7 +296,7 @@
           justify-content: flex-end;
           gap: 2rem;
 
-          @include lg {
+          @media only screen and (max-width: 68.75em) {
             justify-content: flex-start;
           }
 
