@@ -7,6 +7,10 @@
   background-color: transparent;
   color: $clr-black;
 
+  @include xl {
+    padding: 1.77778rem;
+  }
+
   .wrapper {
     padding: 0 3rem;
 
