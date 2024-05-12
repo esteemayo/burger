@@ -281,6 +281,10 @@
         flex-direction: column;
         gap: 1rem;
 
+        @include xl {
+          flex: 4;
+        }
+
         @include lg {
           text-align: left;
           align-self: flex-start;
