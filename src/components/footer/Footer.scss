@@ -130,6 +130,10 @@
             gap: 1rem;
           }
 
+          @include sm {
+            column-gap: 2rem;
+          }
+
           a,
           a:link,
           a:active {
