@@ -11,6 +11,10 @@
     padding: 1.77778rem;
   }
 
+  @media only screen and (max-width: 56.25em) {
+    padding: 2rem;
+  }
+
   .wrapper {
     padding: 0 3rem;
 
