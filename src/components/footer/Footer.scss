@@ -375,6 +375,10 @@
           gap: 3rem;
         }
 
+        @media only screen and (max-width: 18.75em) {
+          gap: 2rem;
+        }
+
         .menus {
           display: flex;
           align-items: center;
