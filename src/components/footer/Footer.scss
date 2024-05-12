@@ -354,6 +354,10 @@
             justify-content: flex-start;
           }
 
+          @media only screen and (max-width: 37.5em) {
+            gap: 1rem;
+          }
+
           @media only screen and (max-width: 31.25em) {
             gap: 0.5rem;
           }
@@ -386,10 +390,6 @@
 
             @media only screen and (max-width: 56.25em) {
               font-size: 1.75rem;
-            }
-
-            @media only screen and (max-width: 37.5em) {
-              font-size: 1.6875rem;
             }
 
             @media only screen and (min-width: 112.5em) {
@@ -427,10 +427,6 @@
             font-size: 1.75rem;
             flex-wrap: wrap;
             justify-content: flex-start;
-          }
-
-          @media only screen and (max-width: 37.5em) {
-            font-size: 1.6875rem;
           }
 
           @media only screen and (max-width: 18.75em) {
