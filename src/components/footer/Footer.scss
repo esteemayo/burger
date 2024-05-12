@@ -182,6 +182,10 @@
           font-size: var(--default-font-size);
           margin-bottom: 2rem;
 
+          @include xl {
+            font-size: 1.77778rem;
+          }
+
           @media only screen and (max-width: 18.75em) {
             font-weight: 700;
             font-size: 1.5rem;
