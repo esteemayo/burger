@@ -162,7 +162,7 @@
     .bottom {
       display: flex;
 
-      @include lg {
+      @media only screen and (max-width: 68.75em) {
         flex-direction: column;
         gap: 5rem;
       }
