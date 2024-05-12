@@ -111,6 +111,10 @@
           gap: 5rem;
         }
 
+        @media only screen and (max-width: 18.75em) {
+          gap: 3rem;
+        }
+
         .links {
           display: flex;
           flex-direction: column;
