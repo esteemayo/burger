@@ -207,6 +207,11 @@
             border-radius: 3px;
             transition: all 0.3s;
 
+            @include xl {
+              width: 4.223rem;
+              height: 4.223rem;
+            }
+
             @include sm {
               width: 3.5rem;
               height: 3.5rem;
@@ -249,6 +254,10 @@
               svg {
                 font-size: 2rem;
                 color: currentColor;
+
+                @include xl {
+                  font-size: 2.223rem;
+                }
 
                 @media only screen and (min-width: 112.5em) {
                   font-size: 3rem;
