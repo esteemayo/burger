@@ -17,6 +17,10 @@
         text-align: center;
         letter-spacing: 2px;
 
+        @include xl {
+          font-size: 1.44445rem;
+        }
+
         @include md {
           font-size: 100%;
           letter-spacing: 1.5px;
