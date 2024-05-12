@@ -374,7 +374,8 @@
             font-size: 1.5rem;
           }
 
-          @include md {
+          @media only screen and (max-width: 56.25em) {
+            font-size: 1.75rem;
             flex-wrap: wrap;
             justify-content: flex-start;
           }
