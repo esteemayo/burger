@@ -20,6 +20,10 @@
   align-items: center;
   gap: 1rem;
 
+  @media only screen and (min-width: 112.5em) {
+    width: 40rem;
+  }
+
   form {
     input {
       display: inline-block;
@@ -39,7 +43,7 @@
       caret-color: $clr-gray-light;
 
       @media only screen and (min-width: 112.5em) {
-        width: 30rem;
+        width: 40rem;
         height: 5rem;
         font-size: 2rem;
         padding-left: 4rem;
