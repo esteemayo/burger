@@ -8,6 +8,10 @@
     padding: 2rem;
     color: $clr-black;
 
+    @media only screen and (min-width: 112.5em) {
+      font-size: 1.66667rem;
+    }
+
     &.empty {
       text-align: center;
     }
@@ -34,6 +38,10 @@
       .quantity {
         font-weight: 500;
         font-size: 1.3rem;
+
+        @media only screen and (min-width: 112.5em) {
+          font-size: 1.6rem;
+        }
       }
 
       .cardItem {
@@ -47,6 +55,10 @@
         color: $clr-primary;
         overflow: hidden;
         cursor: pointer;
+
+        @media only screen and (min-width: 112.5em) {
+          font-size: 1.6rem;
+        }
       }
 
       .cardButtons {
@@ -73,6 +85,11 @@
             height: 1.6rem;
             object-fit: cover;
             opacity: 0.8;
+
+            @media only screen and (min-width: 112.5em) {
+              width: 1.6rem;
+              height: 1.9rem;
+            }
           }
         }
       }
@@ -82,6 +99,10 @@
           font-size: 1.3rem;
           fill: $clr-gray-light;
           cursor: pointer;
+
+          @media only screen and (min-width: 112.5em) {
+            font-size: 1.6rem;
+          }
         }
       }
 
@@ -91,6 +112,10 @@
         font-variant: tabular-nums;
         color: $clr-gray-light;
         white-space: nowrap;
+
+        @media only screen and (min-width: 112.5em) {
+          font-size: 1.6rem;
+        }
       }
     }
   }
@@ -108,6 +133,10 @@
       font-weight: 600;
       font-size: 1.3rem;
       color: $clr-gray-dark;
+
+      @media only screen and (min-width: 112.5em) {
+        font-size: 1.6rem;
+      }
     }
 
     .subTotalPrice {
@@ -131,6 +160,10 @@
     border: 1px solid transparent;
     border-radius: 0.5rem;
     transition: all 0.3s ease-in-out;
+
+    @media only screen and (min-width: 112.5em) {
+      font-size: 1.6rem;
+    }
 
     &:hover {
       background-color: $clr-white !important;
@@ -164,6 +197,10 @@
       border: 1px solid transparent;
       border-radius: 0.5rem;
       transition: all 0.3s ease-in-out;
+
+      @media only screen and (min-width: 112.5em) {
+        font-size: 1.6rem;
+      }
 
       &:hover {
         background-color: $clr-white !important;
