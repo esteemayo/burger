@@ -64,6 +64,11 @@
         height: 1.3rem;
         object-fit: cover;
 
+        @include xl {
+          width: 1.445rem;
+          height: 1.445rem;
+        }
+
         @media only screen and (min-width: 112.5em) {
           width: 1.8rem;
           height: 1.8rem;
