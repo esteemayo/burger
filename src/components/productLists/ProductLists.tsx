@@ -9,7 +9,7 @@ import { ProductListsProps } from '@/types';
 
 import './ProductLists.scss';
 
-const ProductLists = ({ type, products }: ProductListsProps) => {
+const ProductLists = ({ type, data }: ProductListsProps) => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -21,14 +21,14 @@ const ProductLists = ({ type, products }: ProductListsProps) => {
   return (
     <section className='productLists'>
       {isLoading
-        ? products.map((item) => {
+        ? data.map((item) => {
             return <ProductCardSkeleton key={item.id} />;
           })
         : type === 'products'
-        ? products.map((product) => {
+        ? data.map((product) => {
             return <ProductCard key={product.id} product={product} />;
           })
-        : products.map((product) => {
+        : data.map((product) => {
             return <ProductCard key={product.id} product={product} />;
           })}
     </section>

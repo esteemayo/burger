@@ -279,7 +279,7 @@ export interface ProductErrors {
 }
 
 export interface ProductListsProps {
-  products: CardMenu;
+  data: CardMenu;
   type?: 'products' | 'search';
   productToShow?: number;
 }

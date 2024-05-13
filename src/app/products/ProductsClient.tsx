@@ -45,7 +45,7 @@ const ProductsClient = () => {
             <Link href='/products'>{products.length} main features</Link>
           </small>
         </h3>
-        <ProductLists products={products} />
+        <ProductLists data={products} productToShow={productToShow} />
         {productToShow < products.length && (
           <div className='btnContainer'>
             <button type='button' onClick={handleSeeMore}>
