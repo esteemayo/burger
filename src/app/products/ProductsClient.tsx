@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { useCallback, useState } from 'react';
 
 import EmptyState from '@/components/emptyState/EmptyState';
 import ProductLists from '@/components/productLists/ProductLists';
@@ -10,6 +11,20 @@ import { products } from '@/data';
 import './Products.scss';
 
 const ProductsClient = () => {
+  const [data] = useState(products);
+  const [productToShow, setProductToShow] = useState(6);
+
+  const handleSeeMore = useCallback(
+    (e: React.MouseEvent<HTMLButtonElement>) => {
+      e.stopPropagation();
+
+      setProductToShow((prev) => {
+        return prev + 6;
+      });
+    },
+    []
+  );
+
   if (products.length < 1) {
     return (
       <EmptyState
@@ -31,9 +46,13 @@ const ProductsClient = () => {
           </small>
         </h3>
         <ProductLists products={products} />
-        <div className='btnContainer'>
-          <button type='button'>See more...</button>
-        </div>
+        {productToShow < products.length && (
+          <div className='btnContainer'>
+            <button type='button' onClick={handleSeeMore}>
+              See more...
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );
