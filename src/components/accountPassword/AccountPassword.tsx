@@ -87,6 +87,7 @@ const AccountPassword = () => {
             placeholder='Confirm Password'
             onChange={handleChange}
             error={errors['confirmPassword']}
+            dimension='large'
           >
             <span
               onClick={toggleConfirmPassword}

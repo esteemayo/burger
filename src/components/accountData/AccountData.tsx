@@ -95,6 +95,7 @@ const AccountData = () => {
               placeholder='Email address'
               onChange={handleChange}
               error={errors.email}
+              dimension='large'
             />
             <PhoneInput
               name='phone'
