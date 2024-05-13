@@ -20,6 +20,10 @@
   align-items: center;
   gap: 1rem;
 
+  @include xl {
+    width: 29.778rem;
+  }
+
   @media only screen and (min-width: 112.5em) {
     width: 40rem;
   }
@@ -47,6 +51,24 @@
         height: 5rem;
         font-size: 2rem;
         padding-left: 5rem;
+      }
+
+      @include xl {
+        width: 100%;
+        height: 4.445rem;
+        font-size: 1.777778rem;
+      }
+
+      @media only screen and (max-width: 56.25em) {
+        font-size: 1.85rem;
+      }
+
+      @include md {
+        font-size: 1.975rem;
+      }
+
+      @media only screen and (min-width: 106.25em) {
+        font-size: 1.85rem;
       }
 
       &::placeholder {
