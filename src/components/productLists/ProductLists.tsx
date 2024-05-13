@@ -1,7 +1,3 @@
-'use client';
-
-import { useEffect, useState } from 'react';
-
 import ProductCard from '../productCard/ProductCard';
 import ProductCardSkeleton from '../productCardSkeleton/ProductCardSkeleton';
 
@@ -9,18 +5,15 @@ import { ProductListsProps } from '@/types';
 
 import './ProductLists.scss';
 
-const ProductLists = ({ type, data, productToShow }: ProductListsProps) => {
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 5000);
-  }, []);
-
+const ProductLists = ({
+  type,
+  data,
+  loading,
+  productToShow,
+}: ProductListsProps) => {
   return (
     <section className='productLists'>
-      {isLoading
+      {loading
         ? data.map((item) => {
             return <ProductCardSkeleton key={item.id} />;
           })

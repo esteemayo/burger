@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useCallback, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 
 import EmptyState from '@/components/emptyState/EmptyState';
 import ProductLists from '@/components/productLists/ProductLists';
@@ -11,6 +11,7 @@ import { products } from '@/data';
 import './Products.scss';
 
 const ProductsClient = () => {
+  const [isLoading, setIsLoading] = useState(true);
   const [data] = useState(products);
   const [productToShow, setProductToShow] = useState(6);
 
@@ -32,6 +33,12 @@ const ProductsClient = () => {
   const btnWrapClasses = useMemo(() => {
     return productToShow < data.length ? 'btnContainer show' : 'btnContainer';
   }, [data.length, productToShow]);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 5000);
+  }, []);
 
   if (products.length < 1) {
     return (
@@ -56,6 +63,7 @@ const ProductsClient = () => {
         <ProductLists
           type='products'
           data={data}
+          loading={isLoading}
           productToShow={productToShow}
         />
         <div className={btnWrapClasses}>
