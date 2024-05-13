@@ -185,6 +185,10 @@
           opacity: 1;
           z-index: 1000;
           transition: all 0.5s ease-in;
+
+          @include sm {
+            right: -5rem;
+          }
         }
 
         .shoppingCartLogo {
@@ -294,6 +298,11 @@
             min-width: 27.5rem;
             width: 37.5rem;
             padding: 1rem 0.625rem;
+          }
+
+          @include sm {
+            min-width: 25rem;
+            width: 35rem;
           }
 
           @media only screen and (min-width: 112.5em) {
