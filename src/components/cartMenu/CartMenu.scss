@@ -16,6 +16,10 @@
       font-size: 1.625rem;
     }
 
+    @media only screen and (max-width: 18.75em) {
+      padding: 1.5rem;
+    }
+
     @media only screen and (min-width: 112.5em) {
       font-size: 1.66667rem;
     }
@@ -43,6 +47,10 @@
       color: $clr-gray-light;
       border-top: 1px solid $line;
 
+      @media only screen and (max-width: 18.75em) {
+        padding: 1.5rem;
+      }
+
       .quantity {
         font-weight: 500;
         font-size: 1.3rem;
@@ -53,6 +61,10 @@
 
         @media only screen and (max-width: 56.25em) {
           font-size: 1.625rem;
+        }
+
+        @media only screen and (max-width: 18.75em) {
+          font-size: 1.5rem;
         }
 
         @media only screen and (min-width: 112.5em) {
@@ -78,6 +90,10 @@
 
         @media only screen and (max-width: 56.25em) {
           font-size: 1.625rem;
+        }
+
+        @media only screen and (max-width: 18.75em) {
+          font-size: 1.5rem;
         }
 
         @media only screen and (min-width: 112.5em) {
@@ -120,6 +136,11 @@
               height: 2rem;
             }
 
+            @media only screen and (max-width: 18.75em) {
+              width: 1.5rem;
+              height: 1.875rem;
+            }
+
             @media only screen and (min-width: 112.5em) {
               width: 1.6rem;
               height: 1.9rem;
@@ -140,6 +161,10 @@
 
           @media only screen and (max-width: 56.25em) {
             font-size: 1.625rem;
+          }
+
+          @media only screen and (max-width: 18.75em) {
+            font-size: 1.5rem;
           }
 
           @media only screen and (min-width: 112.5em) {
@@ -163,6 +188,10 @@
           font-size: 1.625rem;
         }
 
+        @media only screen and (max-width: 18.75em) {
+          font-size: 1.5rem;
+        }
+
         @media only screen and (min-width: 112.5em) {
           font-size: 1.6rem;
         }
@@ -178,6 +207,11 @@
     border-bottom: 1px solid $line;
     margin-bottom: 1.6rem;
 
+    @media only screen and (max-width: 18.75em) {
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
     .subTotal,
     .subTotalPrice {
       font-weight: 600;
@@ -190,6 +224,10 @@
 
       @media only screen and (max-width: 56.25em) {
         font-size: 1.625rem;
+      }
+
+      @media only screen and (max-width: 18.75em) {
+        font-size: 1.5rem;
       }
 
       @media only screen and (min-width: 112.5em) {
@@ -225,6 +263,10 @@
 
     @media only screen and (max-width: 56.25em) {
       font-size: 1.625rem;
+    }
+
+    @media only screen and (max-width: 18.75em) {
+      font-size: 1.5rem;
     }
 
     @media only screen and (min-width: 112.5em) {
@@ -270,6 +312,10 @@
 
       @media only screen and (max-width: 56.25em) {
         font-size: 1.625rem;
+      }
+
+      @media only screen and (max-width: 18.75em) {
+        font-size: 1.5rem;
       }
 
       @media only screen and (min-width: 112.5em) {

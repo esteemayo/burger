@@ -305,6 +305,11 @@
             width: 35rem;
           }
 
+          @media only screen and (max-width: 18.75em) {
+            min-width: 22rem;
+            width: 32rem;
+          }
+
           @media only screen and (min-width: 112.5em) {
             min-width: 30rem;
             width: 40rem;
