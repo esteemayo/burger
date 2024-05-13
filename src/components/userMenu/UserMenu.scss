@@ -22,6 +22,11 @@
   flex-direction: column;
   gap: 1rem;
 
+  @media only screen and (min-width: 112.5em) {
+    min-width: 25rem;
+    width: 25rem;
+  }
+
   .loginLink,
   .registerLink {
     &:link,
@@ -71,6 +76,10 @@
       gap: 0.5rem;
       border-bottom: 1px solid $line;
 
+      @media only screen and (min-width: 112.5em) {
+        gap: 1rem;
+      }
+
       a,
       a:link,
       a:active {
@@ -118,6 +127,10 @@
       font-size: 1.3rem;
       line-height: 1.7;
       cursor: default;
+
+      @media only screen and (min-width: 112.5em) {
+        font-size: 1.5rem;
+      }
 
       span {
         color: #000000de;
