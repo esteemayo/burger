@@ -282,6 +282,7 @@ export interface ProductListsProps {
   data: CardMenu;
   type?: 'products' | 'search';
   productToShow?: number;
+  loading: boolean;
 }
 
 export interface ProductInfoProps {
