@@ -21,6 +21,7 @@ const ProductInputs = ({
         placeholder='Product name'
         onChange={onChange}
         error={errors?.name}
+        dimension='large'
       />
       <Textarea
         name='desc'
