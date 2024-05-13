@@ -144,6 +144,10 @@
     .btnContainer {
       margin-top: 3rem;
       text-align: center;
+      display: none;
+      visibility: hidden;
+      opacity: 0;
+      z-index: -1;
 
       button {
         all: unset;
