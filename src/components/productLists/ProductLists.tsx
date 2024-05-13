@@ -9,7 +9,7 @@ import { ProductListsProps } from '@/types';
 
 import './ProductLists.scss';
 
-const ProductLists = ({ products }: ProductListsProps) => {
+const ProductLists = ({ type, products }: ProductListsProps) => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -23,6 +23,10 @@ const ProductLists = ({ products }: ProductListsProps) => {
       {isLoading
         ? products.map((item) => {
             return <ProductCardSkeleton key={item.id} />;
+          })
+        : type === 'products'
+        ? products.map((product) => {
+            return <ProductCard key={product.id} product={product} />;
           })
         : products.map((product) => {
             return <ProductCard key={product.id} product={product} />;
