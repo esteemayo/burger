@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useCallback, useState } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 
 import EmptyState from '@/components/emptyState/EmptyState';
 import ProductLists from '@/components/productLists/ProductLists';
@@ -24,6 +24,10 @@ const ProductsClient = () => {
     },
     []
   );
+
+  const btnWrapClasses = useMemo(() => {
+    return productToShow < data.length ? 'btnContainer show' : 'btnContainer';
+  }, [data.length, productToShow]);
 
   if (products.length < 1) {
     return (
@@ -50,13 +54,11 @@ const ProductsClient = () => {
           data={data}
           productToShow={productToShow}
         />
-        {productToShow < data.length && (
-          <div className='btnContainer'>
-            <button type='button' onClick={handleSeeMore}>
-              See more...
-            </button>
-          </div>
-        )}
+        <div className={btnWrapClasses}>
+          <button type='button' onClick={handleSeeMore}>
+            See more...
+          </button>
+        </div>
       </div>
     </div>
   );
