@@ -284,6 +284,12 @@
           transition-duration: 700ms;
           cursor: default;
 
+          @include xl {
+            min-width: 23.335rem;
+            width: 33.335rem;
+            padding: 0.888889rem 0.555556rem;
+          }
+
           @media only screen and (min-width: 112.5em) {
             min-width: 30rem;
             width: 40rem;

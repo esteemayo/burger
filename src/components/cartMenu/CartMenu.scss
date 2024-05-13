@@ -8,6 +8,10 @@
     padding: 2rem;
     color: $clr-black;
 
+    @include xl {
+      font-size: 1.44445rem;
+    }
+
     @media only screen and (min-width: 112.5em) {
       font-size: 1.66667rem;
     }
@@ -39,6 +43,10 @@
         font-weight: 500;
         font-size: 1.3rem;
 
+        @include xl {
+          font-size: 1.44445rem;
+        }
+
         @media only screen and (min-width: 112.5em) {
           font-size: 1.6rem;
         }
@@ -55,6 +63,10 @@
         color: $clr-primary;
         overflow: hidden;
         cursor: pointer;
+
+        @include xl {
+          font-size: 1.44445rem;
+        }
 
         @media only screen and (min-width: 112.5em) {
           font-size: 1.6rem;
@@ -110,6 +122,10 @@
           fill: $clr-gray-light;
           cursor: pointer;
 
+          @include xl {
+            font-size: 1.44445rem;
+          }
+
           @include lg {
             font-size: 1.45rem;
           }
@@ -131,7 +147,7 @@
         color: $clr-gray-light;
         white-space: nowrap;
 
-        @include lg {
+        @include xl {
           font-size: 1.44445rem;
         }
 
@@ -160,7 +176,7 @@
       font-size: 1.3rem;
       color: $clr-gray-dark;
 
-      @include lg {
+      @include xl {
         font-size: 1.44445rem;
       }
 
@@ -195,7 +211,7 @@
     border-radius: 0.5rem;
     transition: all 0.3s ease-in-out;
 
-    @include lg {
+    @include xl {
       font-size: 1.44445rem;
     }
 
@@ -240,7 +256,7 @@
       border-radius: 0.5rem;
       transition: all 0.3s ease-in-out;
 
-      @include lg {
+      @include xl {
         font-size: 1.44445rem;
       }
 

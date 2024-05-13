@@ -67,7 +67,7 @@
         border-bottom: 1px solid $line;
         position: relative;
 
-        @include lg {
+        @include xl {
           font-size: 1.77778rem;
         }
 
@@ -138,8 +138,8 @@
           font-size: 1.3rem;
           color: inherit;
 
-          @include lg {
-            font-size: 1.5rem;
+          @include xl {
+            font-size: 1.44445rem;
           }
 
           @media only screen and (max-width: 56.25em) {
@@ -164,8 +164,8 @@
             border: 1px solid currentColor;
             border-radius: 0.5rem;
 
-            @include lg {
-              font-size: 1.5rem;
+            @include xl {
+              font-size: 1.44445rem;
             }
 
             @media only screen and (max-width: 56.25em) {
@@ -267,7 +267,7 @@
                       color: #00000059;
                       margin-right: 1rem;
 
-                      @include lg {
+                      @include xl {
                         font-size: 1.44445rem;
                       }
 
@@ -350,8 +350,8 @@
                     font-size: 1.3rem;
                     fill: currentColor;
 
-                    @include lg {
-                      font-size: 1.45rem;
+                    @include xl {
+                      font-size: 1.44445rem;
                     }
 
                     @include md {
@@ -373,7 +373,7 @@
                   color: #00000059;
                   transition: all 0.3s;
 
-                  @include lg {
+                  @include xl {
                     font-size: 1.44445rem;
                   }
 
@@ -421,7 +421,7 @@
           cursor: pointer;
           transition: all 0.3s ease-in-out;
 
-          @include lg {
+          @include xl {
             font-size: 1.44445rem;
           }
 
