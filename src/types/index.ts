@@ -280,9 +280,9 @@ export interface ProductErrors {
 
 export interface ProductListsProps {
   data: CardMenu;
-  type?: 'products' | 'search';
-  productToShow?: number;
   loading: boolean;
+  productToShow?: number;
+  type?: 'products' | 'search';
 }
 
 export interface ProductInfoProps {
