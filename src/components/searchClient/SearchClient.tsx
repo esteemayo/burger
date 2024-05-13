@@ -17,7 +17,7 @@ const SearchClient = ({ products }: SearchClientProps) => {
         Search results for
         <small>{`"${query}"`}</small>
       </h3>
-      <ProductLists products={products} />
+      <ProductLists data={products} />
     </div>
   );
 };
