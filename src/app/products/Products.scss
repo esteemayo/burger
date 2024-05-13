@@ -149,6 +149,13 @@
       opacity: 0;
       z-index: -1;
 
+      &.show {
+        display: block;
+        visibility: visible;
+        opacity: 1;
+        z-index: 1000;
+      }
+
       button {
         all: unset;
         display: inline-block;
