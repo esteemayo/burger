@@ -25,11 +25,11 @@ const ProductLists = ({ type, data, productToShow }: ProductListsProps) => {
             return <ProductCardSkeleton key={item.id} />;
           })
         : type === 'products'
-        ? data.slice(0, productToShow).map((product) => {
-            return <ProductCard key={product.id} product={product} />;
+        ? data.slice(0, productToShow).map((item) => {
+            return <ProductCard key={item.id} product={item} />;
           })
-        : data.map((product) => {
-            return <ProductCard key={product.id} product={product} />;
+        : data.map((item) => {
+            return <ProductCard key={item.id} product={item} />;
           })}
     </section>
   );
