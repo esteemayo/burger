@@ -42,15 +42,15 @@ const ProductsClient = () => {
         <h3>
           Most popular near you
           <small>
-            <Link href='/products'>{products.length} main features</Link>
+            <Link href='/products'>{data.length} main features</Link>
           </small>
         </h3>
         <ProductLists
           type='products'
-          data={products}
+          data={data}
           productToShow={productToShow}
         />
-        {productToShow < products.length && (
+        {productToShow < data.length && (
           <div className='btnContainer'>
             <button type='button' onClick={handleSeeMore}>
               See more...
