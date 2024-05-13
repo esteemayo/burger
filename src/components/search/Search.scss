@@ -58,5 +58,10 @@
     left: 1rem;
     width: 1.5rem !important;
     height: 1.5rem !important;
+
+    @media only screen and (min-width: 112.5em) {
+      width: 2rem !important;
+      height: 2rem !important;
+    }
   }
 }
