@@ -116,6 +116,11 @@
       height: 1.667rem !important;
     }
 
+    @media only screen and (max-width: 56.25em) {
+      width: 1.875rem !important;
+      height: 1.875rem !important;
+    }
+
     @media only screen and (min-width: 112.5em) {
       top: 1.8rem;
       left: 1.5rem;
