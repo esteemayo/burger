@@ -27,6 +27,11 @@
     width: 22.223rem;
   }
 
+  @media only screen and (max-width: 56.25em) {
+    min-width: 25rem;
+    width: 25rem;
+  }
+
   @media only screen and (min-width: 112.5em) {
     min-width: 25rem;
     width: 25rem;
@@ -113,6 +118,11 @@
             height: 3.335rem;
           }
 
+          @media only screen and (max-width: 56.25em) {
+            width: 3.75rem;
+            height: 3.75rem;
+          }
+
           @media only screen and (min-width: 112.5em) {
             width: 4rem;
             height: 4rem;
@@ -135,6 +145,10 @@
             font-size: 1.44445rem;
           }
 
+          @media only screen and (max-width: 56.25em) {
+            font-size: 1.625rem;
+          }
+
           @media only screen and (min-width: 112.5em) {
             font-size: 1.5rem;
           }
@@ -152,6 +166,10 @@
 
       @include xl {
         font-size: 1.44445rem;
+      }
+
+      @media only screen and (max-width: 56.25em) {
+        font-size: 1.625rem;
       }
 
       @media only screen and (min-width: 112.5em) {
