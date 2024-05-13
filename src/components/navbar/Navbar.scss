@@ -290,6 +290,12 @@
             padding: 0.888889rem 0.555556rem;
           }
 
+          @media only screen and (max-width: 56.25em) {
+            min-width: 27.5rem;
+            width: 37.5rem;
+            padding: 1rem 0.625rem;
+          }
+
           @media only screen and (min-width: 112.5em) {
             min-width: 30rem;
             width: 40rem;
