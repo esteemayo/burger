@@ -53,6 +53,10 @@
         font-size: 1.44445rem;
       }
 
+      @media only screen and (max-width: 56.25em) {
+        font-size: 1.625rem;
+      }
+
       @media only screen and (min-width: 112.5em) {
         font-size: 1.8rem;
       }
@@ -67,6 +71,11 @@
         @include xl {
           width: 1.445rem;
           height: 1.445rem;
+        }
+
+        @media only screen and (max-width: 56.25em) {
+          width: 1.625rem;
+          height: 1.625rem;
         }
 
         @media only screen and (min-width: 112.5em) {
