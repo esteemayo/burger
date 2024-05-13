@@ -25,6 +25,10 @@ const ProductsClient = () => {
     []
   );
 
+  const productLabel = useMemo(() => {
+    return `${data.length} main features`;
+  }, [data.length]);
+
   const btnWrapClasses = useMemo(() => {
     return productToShow < data.length ? 'btnContainer show' : 'btnContainer';
   }, [data.length, productToShow]);
@@ -46,7 +50,7 @@ const ProductsClient = () => {
         <h3>
           Most popular near you
           <small>
-            <Link href='/products'>{data.length} main features</Link>
+            <Link href='/products'>{productLabel}</Link>
           </small>
         </h3>
         <ProductLists
