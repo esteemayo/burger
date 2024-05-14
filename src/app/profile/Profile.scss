@@ -16,33 +16,33 @@
       line-height: 0;
       padding: 0 0.5rem;
       color: inherit;
-      margin-bottom: 4rem;
+      margin-bottom: 5rem;
+      margin-left: 3rem;
       position: relative;
-      transition: all 0.5s ease-out;
-  
+
       @include xl {
         font-size: 2.55555rem;
       }
-  
+
       @media only screen and (min-width: 112.5em) {
         font-size: 2.5rem;
       }
-  
+
       &::after {
         content: '';
         display: block;
-        width: 12.5rem;
+        width: 86%;
         height: 1px;
         padding-top: 1px;
         padding-bottom: 1px;
         border-top: 1px solid $line;
         border-bottom: 1px solid $line;
-  
+
         position: absolute;
         top: 50%;
-        left: 15rem;
+        left: 20rem;
         transform: translateY(-50%);
-  
+
         @media only screen and (min-width: 112.5em) {
           width: 11rem;
           left: 18rem;
