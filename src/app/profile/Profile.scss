@@ -25,7 +25,7 @@
       }
 
       @media only screen and (min-width: 112.5em) {
-        font-size: 2.5rem;
+        font-size: 3rem;
       }
 
       &::after {
@@ -44,8 +44,8 @@
         transform: translateY(-50%);
 
         @media only screen and (min-width: 112.5em) {
-          width: 30rem;
-          left: 79%;
+          width: 79%;
+          left: 30rem;
         }
       }
     }
