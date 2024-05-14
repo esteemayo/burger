@@ -22,6 +22,10 @@
     align-items: center;
     gap: 0.5rem;
 
+    @include xl {
+      font-size: 1.44445rem;
+    }
+
     @media only screen and (min-width: 112.5em) {
       font-size: 1.6rem;
     }
@@ -40,6 +44,11 @@
       width: 1.5rem;
       height: 1.5rem;
       object-fit: cover;
+
+      @include xl {
+        width: 1.667rem;
+        height: 1.667rem;
+      }
 
       @media only screen and (min-width: 112.5em) {
         width: 2rem;
