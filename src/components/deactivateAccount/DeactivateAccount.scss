@@ -21,6 +21,10 @@
     cursor: pointer;
     transition: all 0.3s;
 
+    @include xl {
+      font-size: 1.44445rem;
+    }
+
     @media only screen and (min-width: 112.5em) {
       font-size: 1.6rem;
     }
@@ -41,6 +45,11 @@
       object-fit: cover;
       vertical-align: middle;
       margin-right: 0.5rem;
+
+      @include xl {
+        width: 1.667rem;
+        height: 1.667rem;
+      }
 
       @media only screen and (min-width: 112.5em) {
         width: 2rem;
