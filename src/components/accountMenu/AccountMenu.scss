@@ -11,6 +11,10 @@
     flex: 0.8;
   }
 
+  @media only screen and (max-width: 68.75em) {
+    flex: 0;
+  }
+
   &.toggle {
     flex: 0;
     transition: all 0.5s ease-in;
