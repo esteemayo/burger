@@ -23,7 +23,6 @@ const AccountMenu = () => {
 
   return (
     <aside className={sidebarClasses}>
-      <h1 className='profileHeader'>Your profile</h1>
       {profileMenu.map((item) => {
         const { label, links } = item;
         return (

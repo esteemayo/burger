@@ -13,8 +13,11 @@ const Profile = () => {
   return (
     <div className='profile'>
       <div className='container'>
-        <AccountMenu />
-        <AccountSettings />
+        <h1 className='profileHeader'>Your profile</h1>
+        <div className='profileWrap'>
+          <AccountMenu />
+          <AccountSettings />
+        </div>
       </div>
     </div>
   );
