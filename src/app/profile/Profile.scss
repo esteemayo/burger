@@ -43,6 +43,11 @@
         left: 20rem;
         transform: translateY(-50%);
 
+        @include xl {
+          width: 80%;
+          left: 28rem;
+        }
+
         @media only screen and (min-width: 112.5em) {
           width: 79%;
           left: 30rem;

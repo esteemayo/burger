@@ -7,6 +7,10 @@
   position: relative;
   transition: all 0.5s ease-out;
 
+  @include xl {
+    flex: 0.8;
+  }
+
   &.toggle {
     flex: 0;
     transition: all 0.5s ease-in;
