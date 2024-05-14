@@ -21,6 +21,12 @@
       align-items: center;
       justify-content: center;
 
+      @include xl {
+        width: 13.334rem;
+        height: 13.334rem;
+        padding: 1.111112rem;
+      }
+
       @media only screen and (min-width: 112.5em) {
         width: 14rem;
         height: 14rem;
