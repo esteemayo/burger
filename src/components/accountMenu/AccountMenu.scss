@@ -39,6 +39,10 @@
     position: relative;
     transition: all 0.5s ease-out;
 
+    @include xl {
+      font-size: 2.55555rem;
+    }
+
     @media only screen and (min-width: 112.5em) {
       font-size: 2.5rem;
     }
@@ -98,6 +102,11 @@
         height: 2.5rem;
         object-fit: cover;
 
+        @include xl {
+          width: 2.778rem;
+          height: 2.778rem;
+        }
+
         @media only screen and (min-width: 112.5em) {
           width: 3rem;
           height: 3rem;
@@ -112,6 +121,10 @@
         font-size: 1.5rem;
         color: currentColor;
         transition: all 0.5s ease-out;
+
+        @include xl {
+          font-size: 1.66667rem;
+        }
 
         @media only screen and (min-width: 112.5em) {
           font-size: 1.83333rem;
