@@ -84,6 +84,10 @@
           font-size: 1.66667rem;
         }
 
+        @media only screen and (max-width: 68.75em) {
+          display: none;
+        }
+
         @media only screen and (min-width: 112.5em) {
           font-size: 1.83333rem;
         }
@@ -111,6 +115,10 @@
     background-color: $clr-yellow;
     border-radius: 0.5rem;
     cursor: pointer;
+
+    @media only screen and (max-width: 68.75em) {
+      display: none;
+    }
 
     @media only screen and (min-width: 112.5em) {
       width: 2.25rem;
