@@ -50,11 +50,21 @@
         bottom: 0;
         right: 0;
 
+        @media only screen and (min-width: 112.5em) {
+          width: 5rem;
+          height: 5rem;
+        }
+
         .icon {
           width: 1.7rem;
           height: 1.7rem;
           display: inline-block;
           object-fit: cover;
+
+          @media only screen and (min-width: 112.5em) {
+            width: 2rem;
+            height: 2rem;
+          }
         }
       }
 
