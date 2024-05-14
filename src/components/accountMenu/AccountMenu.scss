@@ -141,11 +141,21 @@
     border-radius: 0.5rem;
     cursor: pointer;
 
+    @media only screen and (min-width: 112.5em) {
+      width: 2.25rem;
+      height: 7rem;
+    }
+
     .sidebarToggleIcon {
       display: block;
       width: 2rem;
       height: 2rem;
       object-fit: cover;
+
+      @media only screen and (min-width: 112.5em) {
+        width: 2.25rem;
+        height: 2.25rem;
+      }
     }
   }
 }
