@@ -6,6 +6,11 @@
   justify-content: space-between;
   margin-bottom: 2rem;
 
+  @media only screen and (max-width: 59.375em) {
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
   @media only screen and (min-width: 112.5em) {
     margin-bottom: 3rem;
   }
