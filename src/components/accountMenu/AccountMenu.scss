@@ -47,6 +47,10 @@
       width: 22rem;
     }
 
+    @media only screen and (max-width: 56.25em) {
+      width: 25rem;
+    }
+
     .menuItem {
       display: flex;
       align-items: center;
@@ -84,6 +88,11 @@
           width: 3rem;
           height: 3rem;
         }
+
+        @media only screen and (max-width: 56.25em) {
+          width: 3.125rem;
+          height: 3.125rem;
+        }
       }
 
       a,
@@ -105,6 +114,10 @@
 
         @include lg {
           display: block;
+        }
+
+        @media only screen and (max-width: 56.25em) {
+          font-size: 1.875rem;
         }
 
         @media only screen and (min-width: 112.5em) {
