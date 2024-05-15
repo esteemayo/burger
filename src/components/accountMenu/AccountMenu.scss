@@ -90,6 +90,10 @@
       width: 20rem;
     }
 
+    @media only screen and (max-width: 24.4375em) {
+      width: 18rem;
+    }
+
     .menuItem {
       display: flex;
       align-items: center;
