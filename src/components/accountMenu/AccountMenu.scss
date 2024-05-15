@@ -120,6 +120,11 @@
     border-radius: 0.5rem;
     cursor: pointer;
 
+    @include xl {
+      width: 2.223rem;
+      height: 5.556rem;
+    }
+
     @media only screen and (max-width: 68.75em) {
       display: none;
     }
