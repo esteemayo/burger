@@ -7,6 +7,12 @@
   position: relative;
   transition: all 0.5s ease-out;
 
+  @include lg {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
   @include xl {
     flex: 0.8;
   }
@@ -92,6 +98,10 @@
           display: none;
         }
 
+        @include lg {
+          display: block;
+        }
+
         @media only screen and (min-width: 112.5em) {
           font-size: 1.83333rem;
         }
@@ -127,6 +137,10 @@
 
     @media only screen and (max-width: 68.75em) {
       display: none;
+    }
+
+    @include lg {
+      display: block;
     }
 
     @media only screen and (min-width: 112.5em) {

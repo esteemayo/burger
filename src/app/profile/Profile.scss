@@ -63,6 +63,11 @@
     .profileWrap {
       display: flex;
       justify-content: space-between;
+
+      @include lg {
+        flex-direction: column;
+        gap: 2rem;
+      }
     }
   }
 }
