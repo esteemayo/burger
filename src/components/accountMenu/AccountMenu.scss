@@ -60,6 +60,14 @@
       width: 25rem;
     }
 
+    @media only screen and (max-width: 42.9375em) {
+      width: 23rem;
+    }
+
+    @media only screen and (max-width: 40em) {
+      width: 20rem;
+    }
+
     .menuItem {
       display: flex;
       align-items: center;
