@@ -159,15 +159,16 @@
 
         button {
           justify-self: flex-end;
-          all: unset;
           display: inline-block;
+          border: none;
+          outline: none;
           text-align: center;
           text-transform: capitalize;
           font-weight: 400;
           font-size: 1.35rem;
           width: fit-content;
           max-width: 15rem;
-          padding: 1.2rem 6rem;
+          padding: 1.655rem 6rem;
           background-color: $clr-yellow;
           color: $clr-secondary;
           border-radius: 0.5rem;
@@ -180,6 +181,10 @@
 
           @media only screen and (max-width: 56.25em) {
             font-size: 1.6875rem;
+          }
+
+          @media only screen and (max-width: 34em) {
+            max-width: 100%;
           }
 
           @media only screen and (min-width: 112.5em) {
