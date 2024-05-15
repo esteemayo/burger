@@ -49,6 +49,18 @@
     width: 36rem;
   }
 
+  @media only screen and (max-width: 39.6875em) {
+    width: 34rem;
+  }
+
+  @media only screen and (max-width: 37.5em) {
+    width: 32rem;
+  }
+
+  @media only screen and (max-width: 35.625em) {
+    width: 30rem;
+  }
+
   @media only screen and (min-width: 112.5em) {
     width: 26rem;
     padding: 3rem;
