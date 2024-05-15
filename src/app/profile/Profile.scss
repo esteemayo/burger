@@ -9,6 +9,10 @@
     width: 144rem;
     padding: 10rem 0;
 
+    @include xl {
+      padding: 10rem 3rem;
+    }
+
     .profileHeader {
       text-transform: capitalize;
       font-weight: 700;
