@@ -102,6 +102,10 @@
       width: 17rem;
     }
 
+    @media only screen and (max-width: 21.4375em) {
+      width: 15rem;
+    }
+
     .menuItem {
       display: flex;
       align-items: center;
@@ -129,6 +133,10 @@
       @include sm {
         gap: 1rem;
         padding: 0.8rem 0.5rem;
+      }
+
+      @media only screen and (max-width: 21.4375em) {
+        gap: 0.5rem;
       }
 
       &.active {
