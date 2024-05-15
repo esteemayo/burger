@@ -33,6 +33,11 @@
         padding: 1.25rem;
       }
 
+      @media only screen and (max-width: 34em) {
+        width: 13.75rem;
+        height: 13.75rem;
+      }
+
       @media only screen and (min-width: 112.5em) {
         width: 14rem;
         height: 14rem;
@@ -72,6 +77,11 @@
           height: 4.375rem;
         }
 
+        @media only screen and (max-width: 34em) {
+          width: 4rem;
+          height: 4rem;
+        }
+
         @media only screen and (min-width: 112.5em) {
           width: 5rem;
           height: 5rem;
@@ -91,6 +101,11 @@
           @media only screen and (max-width: 56.25em) {
             width: 2.125rem;
             height: 2.125rem;
+          }
+
+          @media only screen and (max-width: 34em) {
+            width: 1.875rem;
+            height: 1.875rem;
           }
 
           @media only screen and (min-width: 112.5em) {
