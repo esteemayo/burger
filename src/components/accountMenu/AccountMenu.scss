@@ -27,6 +27,10 @@
     gap: 1rem;
   }
 
+  @media only screen and (max-width: 33.75em) {
+    gap: 0;
+  }
+
   @include sm {
     justify-content: space-between;
     row-gap: 1rem;
