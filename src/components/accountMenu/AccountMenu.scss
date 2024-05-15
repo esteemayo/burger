@@ -27,6 +27,12 @@
     gap: 1rem;
   }
 
+  @include sm {
+    justify-content: space-between;
+    row-gap: 1rem;
+    column-gap: 0;
+  }
+
   &.toggle {
     flex: 0;
     transition: all 0.5s ease-in;
@@ -78,6 +84,10 @@
 
     @media only screen and (max-width: 28.9375em) {
       width: 22rem;
+    }
+
+    @media only screen and (max-width: 26.9375em) {
+      width: 20rem;
     }
 
     .menuItem {
