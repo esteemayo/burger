@@ -74,6 +74,10 @@
           left: 23rem;
         }
 
+        @media only screen and (max-width: 50em) {
+          width: 75.5%;
+        }
+
         @media only screen and (min-width: 112.5em) {
           width: 79%;
           left: 30rem;
