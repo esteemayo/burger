@@ -72,6 +72,10 @@
       width: 19rem;
     }
 
+    @include sm {
+      width: 24rem;
+    }
+
     .menuItem {
       display: flex;
       align-items: center;
