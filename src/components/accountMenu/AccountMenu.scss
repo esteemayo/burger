@@ -22,6 +22,11 @@
     padding-left: 0;
   }
 
+  @media only screen and (max-width: 45.9375em) {
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
   &.toggle {
     flex: 0;
     transition: all 0.5s ease-in;
@@ -49,6 +54,10 @@
 
     @media only screen and (max-width: 48.4375em) {
       width: 20rem;
+    }
+
+    @media only screen and (max-width: 45.9375em) {
+      width: 25rem;
     }
 
     .menuItem {
