@@ -13,6 +13,10 @@
       margin-bottom: 4rem;
     }
 
+    @include sm {
+      margin-top: 8rem;
+    }
+
     .dataImg {
       width: 12rem;
       height: 12rem;
