@@ -9,6 +9,10 @@
     margin-top: 6rem;
     margin-bottom: 2rem;
 
+    @media only screen and (max-width: 34em) {
+      margin-bottom: 4rem;
+    }
+
     .dataImg {
       width: 12rem;
       height: 12rem;
