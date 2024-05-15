@@ -61,6 +61,10 @@
     width: 30rem;
   }
 
+  @include sm {
+    width: 25rem;
+  }
+
   @media only screen and (min-width: 112.5em) {
     width: 26rem;
     padding: 3rem;
@@ -145,6 +149,11 @@
     @media only screen and (max-width: 34em) {
       width: 4rem;
       height: 4rem;
+    }
+
+    @include sm {
+      top: 0.5rem;
+      right: 1rem;
     }
 
     @media only screen and (min-width: 112.5em) {
