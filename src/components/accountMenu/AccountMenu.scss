@@ -42,6 +42,10 @@
     flex-direction: column;
     justify-content: center;
 
+    @include lg {
+      width: 22rem;
+    }
+
     .menuItem {
       display: flex;
       align-items: center;
@@ -137,10 +141,6 @@
 
     @media only screen and (max-width: 68.75em) {
       display: none;
-    }
-
-    @include lg {
-      display: block;
     }
 
     @media only screen and (min-width: 112.5em) {
