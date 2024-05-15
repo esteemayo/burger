@@ -126,6 +126,14 @@
           width: 48%;
         }
 
+        @media only screen and (max-width: 21.5em) {
+          width: 42%;
+        }
+
+        @media only screen and (max-width: 18.55em) {
+          display: none;
+        }
+
         @media only screen and (min-width: 112.5em) {
           width: 79%;
           left: 30rem;
