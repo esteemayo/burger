@@ -122,7 +122,12 @@
         gap: 1rem;
       }
 
+      @media only screen and (max-width: 33.75em) {
+        gap: 0.5rem;
+      }
+
       @include sm {
+        gap: 1rem;
         padding: 0.8rem 0.5rem;
       }
 
