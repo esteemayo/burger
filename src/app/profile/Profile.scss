@@ -48,6 +48,11 @@
           left: 28rem;
         }
 
+        @media only screen and (max-width: 68.75em) {
+          width: 83%;
+          left: 20rem;
+        }
+
         @media only screen and (min-width: 112.5em) {
           width: 79%;
           left: 30rem;
