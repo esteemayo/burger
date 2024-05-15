@@ -110,6 +110,14 @@
           width: 63%;
         }
 
+        @include sm {
+          width: 60%;
+        }
+
+        @media only screen and (max-width: 27.75em) {
+          width: 57%;
+        }
+
         @media only screen and (min-width: 112.5em) {
           width: 79%;
           left: 30rem;
