@@ -58,11 +58,19 @@
             @include xl {
               width: 1.89rem;
               height: 1.89rem;
+              top: -0.9rem;
+              right: -0.875rem;
             }
 
             @media only screen and (max-width: 56.25em) {
               width: 2.125rem;
               height: 2.125rem;
+              top: -1.2rem;
+              right: -0.9rem;
+            }
+
+            @include md {
+              top: -1.05rem;
             }
 
             @media only screen and (max-width: 18.75em) {
