@@ -6,4 +6,8 @@
   box-shadow: $box-shadow;
   border-radius: 0.5rem;
   position: relative;
+
+  @media only screen and (max-width: 19.4375em) {
+    padding: 1rem;
+  }
 }
