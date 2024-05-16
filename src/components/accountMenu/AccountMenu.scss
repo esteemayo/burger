@@ -251,6 +251,7 @@
     background-color: $clr-yellow;
     border-radius: 0.5rem;
     cursor: pointer;
+    display: none;
 
     @include xl {
       width: 2.223rem;
