@@ -7,11 +7,7 @@
 
   .container {
     width: 144rem;
-    padding: 10rem 0;
-
-    @include xl {
-      padding: 10rem 3rem;
-    }
+    padding: 10rem 3rem;
 
     .profileHeader {
       text-transform: capitalize;
@@ -144,6 +140,7 @@
     .profileWrap {
       display: flex;
       justify-content: space-between;
+      gap: 1rem;
 
       @include lg {
         flex-direction: column;
