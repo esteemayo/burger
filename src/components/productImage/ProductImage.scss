@@ -27,6 +27,11 @@
           border-radius: 0.5rem;
           position: relative;
 
+          @include xl {
+            font-size: 1.44445rem;
+            padding: 0.5px 1.111111rem;
+          }
+
           @media only screen and (min-width: 112.5em) {
             font-size: 1.6rem;
             padding: 3px 1.2rem;
@@ -39,6 +44,11 @@
             top: -0.8rem;
             right: -0.8rem;
             cursor: pointer;
+
+            @include xl {
+              width: 1.89rem;
+              height: 1.89rem;
+            }
 
             @media only screen and (min-width: 112.5em) {
               width: 2rem;
