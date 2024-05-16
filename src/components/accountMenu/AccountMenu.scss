@@ -3,7 +3,6 @@
 
 .accountMenu {
   flex: 1;
-  padding: 0 3rem;
   position: relative;
   transition: all 0.5s ease-out;
 
@@ -19,7 +18,6 @@
 
   @media only screen and (max-width: 68.75em) {
     flex: 0;
-    padding-left: 0;
   }
 
   @media only screen and (max-width: 45.9375em) {
