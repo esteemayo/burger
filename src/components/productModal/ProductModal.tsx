@@ -107,7 +107,8 @@ const ProductModal = () => {
     console.log({ ...data, ingredients, selectedFile });
     handleClear();
     setStep(STEPS.INFO);
-  }, [data, file, handleClear, ingredients, onNext, step]);
+    onClose();
+  }, [data, file, handleClear, ingredients, onClose, onNext, step]);
 
   const actionLabel = useMemo(() => {
     return step === STEPS.IMAGE ? 'Create' : 'Next';
