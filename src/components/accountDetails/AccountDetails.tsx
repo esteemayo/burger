@@ -6,7 +6,7 @@ import AccountData from '../accountData/AccountData';
 import './AccountDetails.scss';
 
 const AccountDetails = () => {
-  const isAdmin = false;
+  const isAdmin = true;
 
   return (
     <div className='accountDetails'>
