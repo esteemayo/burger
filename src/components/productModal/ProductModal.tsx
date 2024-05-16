@@ -10,8 +10,6 @@ import { useProductModal } from '@/hooks/useProductModal';
 import { ProductData, ProductErrors } from '@/types';
 import { validateProductInput } from '@/validations/product';
 
-import './ProductModal.scss';
-
 const enum STEPS {
   INFO = 0,
   IMAGE = 1,
