@@ -34,6 +34,10 @@
       border-radius: 0.5rem;
       position: relative;
 
+      @include xl {
+        width: 55.556rem;
+      }
+
       @media only screen and (max-width: 26.25em) {
         width: 47rem;
         padding: 3rem 2rem;
