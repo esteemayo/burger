@@ -123,7 +123,7 @@ const ProductModal = () => {
 
   const { name, desc, price } = data;
 
-  let bodyContent: JSX.Element;
+  let bodyContent: JSX.Element | undefined;
 
   bodyContent = (
     <ProductInputs
