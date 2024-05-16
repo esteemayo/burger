@@ -3,8 +3,6 @@ import Textarea from '../textarea/Textarea';
 
 import { ProductInputsProps } from '@/types';
 
-import './ProductInputs.scss';
-
 const ProductInputs = ({
   name,
   desc,
