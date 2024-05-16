@@ -15,6 +15,10 @@
         align-items: center;
         gap: 1rem;
 
+        @media only screen and (min-width: 112.5em) {
+          gap: 1.2rem;
+        }
+
         span {
           font-size: 1.3rem;
           padding: 0.5px 1rem;
