@@ -57,8 +57,12 @@
         }
 
         @media only screen and (max-width: 68.75em) {
-          width: 81%;
+          width: 83%;
           left: 20rem;
+        }
+
+        @include lg {
+          width: 81.5%;
         }
 
         @media only screen and (max-width: 59.375em) {
