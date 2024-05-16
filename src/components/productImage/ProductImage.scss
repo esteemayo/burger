@@ -73,6 +73,10 @@
               top: -1.05rem;
             }
 
+            @media only screen and (max-width: 25em) {
+              top: -1.1rem;
+            }
+
             @media only screen and (max-width: 18.75em) {
               width: 1.875rem;
               height: 1.875rem;
