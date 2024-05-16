@@ -39,7 +39,7 @@
       &::after {
         content: '';
         display: block;
-        width: 86%;
+        width: 81.5%;
         height: 1px;
         padding-top: 1px;
         padding-bottom: 1px;
@@ -48,7 +48,7 @@
 
         position: absolute;
         top: 50%;
-        left: 20rem;
+        left: 25rem;
         transform: translateY(-50%);
 
         @include xl {
