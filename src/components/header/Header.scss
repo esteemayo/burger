@@ -112,6 +112,14 @@
       border-radius: 2px;
       overflow: hidden;
 
+      @media only screen and (max-width: 93.75em) {
+        width: 58.667%;
+      }
+
+      @include xl {
+        width: 62.858%;
+      }
+
       @include lg {
         width: 70%;
         height: 8rem;
@@ -269,12 +277,16 @@
         text-transform: capitalize;
         font-weight: 600;
         font-size: 100%;
-        width: 12rem;
-        height: 7rem;
+        width: 15rem;
+        height: 8rem;
         background-color: $clr-secondary;
         color: $clr-white;
         cursor: pointer;
         transition: all 0.3s;
+
+        @media only screen and (max-width: 93.75em) {
+          height: 10rem;
+        }
 
         @include lg {
           width: 17rem;
