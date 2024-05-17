@@ -25,9 +25,13 @@
   @media only screen and (max-width: 37.5em) {
     height: calc(60vh - 12rem);
   }
-  
+
   @media only screen and (max-width: 17.5em) {
     height: calc(50vh - 12rem);
+  }
+
+  @media only screen and (min-width: 112.5em) {
+    height: calc(100vh - 12rem);
   }
 
   .container {
