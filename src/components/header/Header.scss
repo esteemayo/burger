@@ -51,6 +51,10 @@
       color: $clr-white;
       line-height: 4.4rem;
 
+      @include xl {
+        font-size: 4rem;
+      }
+
       @include lg {
         font-size: 4.5rem;
       }
@@ -124,6 +128,11 @@
         width: 67.693%;
       }
 
+      @include xl {
+        width: 73.334%;
+        height: 5.556rem;
+      }
+
       @include lg {
         width: 70%;
         height: 8rem;
@@ -167,6 +176,12 @@
           height: 2rem;
           margin: 1rem;
 
+          @include xl {
+            width: 2.372rem;
+            height: 2.372rem;
+            margin: 1.5rem;
+          }
+
           @include lg {
             width: 2.7rem;
             height: 2.7rem;
@@ -205,16 +220,20 @@
           box-shadow: none;
           caret-color: $clr-gray-light;
 
-          @include lg {
-            font-size: 2.5rem;
+          @include xl {
+            font-size: 1.777778rem;
           }
 
-          @media only screen and (max-width: 31.25em) {
-            font-size: 2rem;
+          @media only screen and (max-width: 56.25em) {
+            font-size: 1.85rem;
           }
 
-          @media only screen and (max-width: 17.5em) {
-            font-size: 100%;
+          @include md {
+            font-size: 1.975rem;
+          }
+
+          @media only screen and (min-width: 106.25em) {
+            font-size: 1.85rem;
           }
 
           @media only screen and (min-width: 112.5em) {
@@ -226,16 +245,20 @@
             font-size: 1.5rem;
             color: $clr-gray-light;
 
-            @include lg {
-              font-size: 2rem;
+            @include xl {
+              font-size: 1.666665rem;
             }
 
-            @media only screen and (max-width: 31.25em) {
-              font-size: 1.7rem;
+            @include md {
+              font-size: 1.875rem;
             }
 
-            @media only screen and (max-width: 17.5em) {
-              font-size: 1.5rem;
+            @media only screen and (max-width: 23.4375em) {
+              font-size: 1.675rem;
+            }
+
+            @media only screen and (min-width: 106.25em) {
+              font-size: 1.75rem;
             }
 
             @media only screen and (min-width: 112.5em) {
@@ -255,6 +278,10 @@
           margin-right: 2rem;
           line-height: 1.6rem;
           cursor: pointer;
+
+          @include xl {
+            font-size: 1.55556rem;
+          }
 
           @include lg {
             font-size: 2rem;
@@ -298,6 +325,10 @@
 
         @media only screen and (max-width: 81.25em) {
           height: 17rem;
+        }
+
+        @include xl {
+          font-size: 1.77778rem;
         }
 
         @include lg {
