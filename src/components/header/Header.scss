@@ -25,6 +25,10 @@
     height: calc(90vh - 12rem);
   }
 
+  @include md {
+    height: calc(80vh - 12rem);
+  }
+
   @media only screen and (max-width: 41.5625em) {
     height: calc(70vh - 12rem);
   }
@@ -64,6 +68,10 @@
 
       @media only screen and (max-width: 56.25em) {
         font-size: 3.75rem;
+      }
+
+      @include md {
+        font-size: 3.5rem;
       }
 
       @media only screen and (max-width: 37.5em) {
@@ -142,7 +150,7 @@
       }
 
       @include md {
-        width: 80%;
+        width: 85%;
       }
 
       @media only screen and (max-width: 37.5em) {
@@ -186,8 +194,8 @@
           }
 
           @media only screen and (max-width: 56.25em) {
-            width: 3.047rem;
-            height: 3.047rem;
+            width: 2.5rem;
+            height: 2.5rem;
             margin: 1.25rem;
           }
 
