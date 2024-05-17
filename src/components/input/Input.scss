@@ -140,6 +140,10 @@
       top: 4.5rem;
     }
 
+    @include md {
+      top: 4.7rem;
+    }
+
     @media only screen and (min-width: 112.5em) {
       top: 4.75rem;
     }
