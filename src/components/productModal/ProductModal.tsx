@@ -104,7 +104,7 @@ const ProductModal = () => {
 
     const selectedFile = file?.[0];
 
-    console.log({ ...data, ingredients, selectedFile });
+    console.log({ ...data, ingredients, image: selectedFile });
     handleClear();
     setStep(STEPS.INFO);
     onClose();
