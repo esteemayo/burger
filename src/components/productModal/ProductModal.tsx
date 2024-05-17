@@ -1,5 +1,6 @@
 'use client';
 
+import { toast } from 'react-toastify';
 import { useCallback, useMemo, useState } from 'react';
 
 import ProductImage from '../productImage/ProductImage';
@@ -110,8 +111,10 @@ const ProductModal = () => {
       ingredients,
       image: selectedFile,
     });
+
     handleClear();
     setStep(STEPS.INFO);
+    toast.success('Product created!');
     onClose();
   }, [data, file, handleClear, ingredients, onClose, onNext, step]);
 
