@@ -17,7 +17,6 @@
   }
 
   @include lg {
-    height: calc(90vh - 12rem);
     background-image: url(/svg/hero-1.svg), url(/svg/hero-2.svg);
     background-position: center left, center right;
   }
@@ -57,10 +56,6 @@
 
       @include xl {
         font-size: 4rem;
-      }
-
-      @include lg {
-        font-size: 4.5rem;
       }
 
       @media only screen and (max-width: 46.5625em) {
@@ -137,9 +132,8 @@
         height: 5.556rem;
       }
 
-      @include lg {
-        width: 70%;
-        height: 8rem;
+      @media only screen and (max-width: 68.75em) {
+        width: 80%;
       }
 
       @include md {
@@ -181,14 +175,9 @@
           margin: 1rem;
 
           @include xl {
-            width: 2.372rem;
-            height: 2.372rem;
-            margin: 1.5rem;
-          }
-
-          @include lg {
-            width: 2.7rem;
-            height: 2.7rem;
+            width: 2.223rem;
+            height: 2.223rem;
+            margin: 1.111111rem;
           }
 
           @media only screen and (max-width: 31.25em) {
@@ -287,10 +276,6 @@
             font-size: 1.55556rem;
           }
 
-          @include lg {
-            font-size: 2rem;
-          }
-
           @media only screen and (max-width: 31.25em) {
             font-size: 1.7rem;
           }
@@ -333,11 +318,6 @@
 
         @include xl {
           font-size: 1.77778rem;
-        }
-
-        @include lg {
-          width: 17rem;
-          font-size: 2rem;
         }
 
         @media only screen and (max-width: 31.25em) {
