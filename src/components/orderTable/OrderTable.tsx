@@ -84,7 +84,7 @@ const OrderTable = ({ isAdmin, data }: OrderTableProps) => {
               </td>
               <td>
                 <time dateTime={createdAt}>
-                  {formatDate(new Date(createdAt))}
+                  {formatDate(createdAt)}
                 </time>
               </td>
               <td>{formatCurrency(price)}</td>
