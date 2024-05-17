@@ -104,7 +104,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      width: 50%;
+      width: 55%;
       height: 5.5rem;
       background-color: $clr-white;
       -webkit-box-shadow: $box-shadow;
@@ -294,6 +294,7 @@
 
         @media only screen and (min-width: 112.5em) {
           width: 18rem;
+          height: 10rem;
           font-size: 2rem;
         }
 
