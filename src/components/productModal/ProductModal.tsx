@@ -104,7 +104,12 @@ const ProductModal = () => {
 
     const selectedFile = file?.[0];
 
-    console.log({ ...data, ingredients, image: selectedFile });
+    console.log({
+      ...data,
+      price: +data.price,
+      ingredients,
+      image: selectedFile,
+    });
     handleClear();
     setStep(STEPS.INFO);
     onClose();
