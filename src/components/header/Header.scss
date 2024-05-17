@@ -25,14 +25,6 @@
     height: calc(80vh - 12rem);
   }
 
-  @media only screen and (max-width: 56.25em) {
-    height: calc(90vh - 12rem);
-  }
-
-  @include md {
-    height: calc(80vh - 12rem);
-  }
-
   @media only screen and (max-width: 37.5em) {
     height: calc(75vh - 12rem);
   }
