@@ -244,6 +244,10 @@
           @media only screen and (max-width: 17.5em) {
             font-size: 1.4rem;
           }
+
+          @media only screen and (min-width: 112.5em) {
+            font-size: 1.8rem;
+          }
         }
       }
 
@@ -275,6 +279,11 @@
           width: 10rem;
           font-weight: 500;
           font-size: 1.4rem;
+        }
+
+        @media only screen and (min-width: 112.5em) {
+          width: 18rem;
+          font-size: 2rem;
         }
 
         &:hover {
