@@ -45,6 +45,12 @@
         height: 12rem;
       }
 
+      @media only screen and (min-width: 112.5em) {
+        width: 13rem;
+        height: 13rem;
+        font-size: 7rem;
+      }
+
       &:hover {
         background-color: $clr-secondary;
         transform: scale(1.1);
@@ -77,6 +83,10 @@
         letter-spacing: 1px;
       }
 
+      @media only screen and (min-width: 112.5em) {
+        font-size: 2.08333rem;
+      }
+
       a,
       a:link,
       a:active {
@@ -101,6 +111,10 @@
       @include md {
         font-size: 1.8rem;
         margin-bottom: 3.5rem;
+      }
+
+      @media only screen and (min-width: 112.5em) {
+        font-size: 1.66667rem;
       }
     }
   }
