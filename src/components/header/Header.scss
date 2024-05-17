@@ -12,6 +12,10 @@
   background-repeat: no-repeat;
   overflow: visible;
 
+  @include xl {
+    height: calc(100vh - 12rem);
+  }
+
   @include lg {
     height: calc(90vh - 12rem);
     background-image: url(/svg/hero-1.svg), url(/svg/hero-2.svg);
