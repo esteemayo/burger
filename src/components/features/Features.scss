@@ -6,6 +6,10 @@
   justify-content: center;
   padding: 10rem 0;
 
+  @media only screen and (min-width: 112.5em) {
+    padding: 12rem 0;
+  }
+
   .container {
     width: 120rem;
 
