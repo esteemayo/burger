@@ -40,6 +40,12 @@
       align-items: center;
       justify-content: center;
 
+      @include xl {
+        width: 10.556rem;
+        height: 10.556rem;
+        font-size: 4.445rem;
+      }
+
       @include md {
         width: 12rem;
         height: 12rem;
@@ -77,6 +83,10 @@
       margin-top: 1.5rem;
       margin-bottom: 0.5rem;
 
+      @include xl {
+        font-size: 1.77778rem;
+      }
+
       @include md {
         font-size: 2rem;
         font-weight: 500;
@@ -107,6 +117,10 @@
       font-size: 1.5rem;
       color: $clr-gray-light;
       line-height: 1.5;
+
+      @include xl {
+        font-size: 1.66667rem;
+      }
 
       @include md {
         font-size: 1.8rem;
