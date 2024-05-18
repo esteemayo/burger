@@ -4,6 +4,14 @@
 .feature {
   padding: 0 5rem;
 
+  @media only screen and (max-width: 59.375em) {
+    padding: 0 4rem;
+  }
+
+  @media only screen and (max-width: 57.5em) {
+    padding: 0 3.5rem;
+  }
+
   @media only screen and (max-width: 56.25em) {
     padding: 0 3rem;
   }
