@@ -7,6 +7,10 @@
   font-variant-numeric: tabular-nums;
   color: $clr-yellow;
 
+  @include xl {
+    font-size: 1.77778rem;
+  }
+
   @include md {
     font-size: 2rem;
   }

@@ -168,6 +168,10 @@
         cursor: pointer;
         transition: all 0.3s;
 
+        @include xl {
+          font-size: 1.77778rem;
+        }
+
         @include md {
           font-size: 2rem;
         }
