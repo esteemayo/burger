@@ -4,6 +4,10 @@
 .feature {
   padding: 0 5rem;
 
+  @media only screen and (max-width: 56.25em) {
+    padding: 0 3rem;
+  }
+
   &:not(:last-child) {
     border-right: 1px dotted $clr-gray-light;
 
@@ -30,6 +34,10 @@
 
     @include lg {
       width: 25.556rem;
+    }
+
+    @media only screen and (max-width: 56.25em) {
+      width: 28.75rem;
     }
 
     @media only screen and (min-width: 112.5em) {
