@@ -30,6 +30,10 @@
           flex-direction: column;
           gap: 7rem;
         }
+
+        @include sm {
+          gap: 5rem;
+        }
       }
     }
   }
