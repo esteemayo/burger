@@ -19,6 +19,10 @@
     .textWrap {
       flex: 1;
 
+      @media only screen and (min-width: 112.5em) {
+        flex: 1.5;
+      }
+
       .headingWrap {
         display: flex;
         align-items: center;
@@ -63,6 +67,10 @@
           @media only screen and (max-width: 18.75em) {
             font-size: 1.4rem;
             letter-spacing: 0.1px;
+          }
+
+          @media only screen and (min-width: 112.5em) {
+            font-size: 2rem;
           }
         }
       }
