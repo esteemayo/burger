@@ -18,8 +18,8 @@
     height: 93.53vh;
   }
 
-  @include lg {
-    height: 100vh;
+  @media only screen and (max-width: 56.25em) {
+    height: 80vh;
   }
 
   @include md {
