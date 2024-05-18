@@ -7,7 +7,7 @@ import './Feature.scss';
 const Feature = ({ title, desc, icon: Icon }: FeatureProps) => {
   return (
     <article className='feature'>
-      <div className='wrapper'>
+      <div className='box'>
         <div className='icon'>
           <Icon />
         </div>
