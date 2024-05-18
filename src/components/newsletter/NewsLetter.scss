@@ -102,11 +102,19 @@
           letter-spacing: 1px;
           caret-color: $clr-gray-light;
 
+          @media only screen and (min-width: 112.5em) {
+            font-size: 1.8rem;
+          }
+
           &::placeholder {
             text-transform: uppercase;
             font-weight: 300;
             font-size: 1.3rem;
             color: $clr-gray-light;
+
+            @media only screen and (min-width: 112.5em) {
+              font-size: 1.6rem;
+            }
           }
         }
 
