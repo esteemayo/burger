@@ -24,6 +24,14 @@
     align-items: center;
     justify-content: center;
 
+    @include xl {
+      width: 29.445rem;
+    }
+
+    @include lg {
+      width: 25.556rem;
+    }
+
     @media only screen and (min-width: 112.5em) {
       width: 35rem;
     }
