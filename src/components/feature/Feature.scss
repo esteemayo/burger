@@ -80,11 +80,6 @@
         font-size: 5rem;
       }
 
-      @include md {
-        width: 12rem;
-        height: 12rem;
-      }
-
       @media only screen and (min-width: 112.5em) {
         width: 13rem;
         height: 13rem;
@@ -165,7 +160,7 @@
       }
 
       @include md {
-        font-size: 1.8rem;
+        font-size: 1.875rem;
         margin-bottom: 3.5rem;
       }
 
