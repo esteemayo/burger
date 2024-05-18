@@ -59,6 +59,11 @@
         height: 50rem;
         animation: moveToTop 3s infinite ease alternate;
 
+        @include xl {
+          width: 55.556rem;
+          height: 55.556rem;
+        }
+
         @include md {
           width: 70rem;
           height: 30rem;
