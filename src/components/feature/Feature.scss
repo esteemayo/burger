@@ -80,6 +80,12 @@
         font-size: 5rem;
       }
 
+      @include sm {
+        width: 10rem;
+        height: 10rem;
+        font-size: 3.75rem;
+      }
+
       @media only screen and (min-width: 112.5em) {
         width: 13rem;
         height: 13rem;
@@ -94,10 +100,6 @@
       svg {
         font-size: inherit;
         fill: currentColor;
-
-        @include md {
-          font-size: 5rem;
-        }
       }
     }
 
