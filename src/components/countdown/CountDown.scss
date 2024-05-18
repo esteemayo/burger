@@ -3,6 +3,7 @@
 
 .countdown {
   font-weight: 700;
+  font-size: 100%;
   font-variant-numeric: tabular-nums;
   color: $clr-yellow;
 
@@ -16,5 +17,9 @@
 
   @media only screen and (max-width: 17.5em) {
     font-size: 100%;
+  }
+
+  @media only screen and (min-width: 112.5em) {
+    font-size: 2rem;
   }
 }
