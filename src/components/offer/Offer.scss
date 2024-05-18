@@ -73,6 +73,11 @@
           height: 50rem;
         }
 
+        @media only screen and (max-width: 50em) {
+          width: 45rem;
+          height: 45rem;
+        }
+
         @include md {
           width: 70rem;
           height: 30rem;
