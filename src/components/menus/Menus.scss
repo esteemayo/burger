@@ -30,6 +30,10 @@
         line-height: 1.5;
         color: inherit;
 
+        @include xl {
+          font-size: 3.88889rem;
+        }
+
         @include md {
           font-size: 3rem;
         }
@@ -61,6 +65,10 @@
             position: absolute;
             top: 2.5rem;
 
+            @include xl {
+              width: 11rem;
+            }
+
             @media only screen and (min-width: 112.5em) {
               width: 10.5rem;
             }
@@ -77,6 +85,10 @@
           svg {
             font-size: 5rem;
             color: $clr-gray-dark;
+
+            @include xl {
+              font-size: 5.557rem;
+            }
 
             @include md {
               font-size: 4.5rem;
