@@ -26,12 +26,16 @@
         text-align: center;
         text-rendering: optimizeLegibility;
         font-weight: 600;
-        font-size: 3.4128rem;
+        font-size: 3.5rem;
         line-height: 1.5;
         color: inherit;
 
         @include md {
           font-size: 3rem;
+        }
+
+        @media only screen and (min-width: 112.5em) {
+          font-size: 3.75rem;
         }
       }
 
@@ -56,6 +60,10 @@
 
             position: absolute;
             top: 2.5rem;
+
+            @media only screen and (min-width: 112.5em) {
+              width: 10.5rem;
+            }
           }
 
           &::before {
@@ -72,6 +80,10 @@
 
             @include md {
               font-size: 4.5rem;
+            }
+
+            @media only screen and (min-width: 112.5em) {
+              font-size: 5.834rem;
             }
           }
         }
