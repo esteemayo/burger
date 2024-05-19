@@ -299,7 +299,11 @@
         }
 
         .btnClear {
-          display: inline-block;
+          display: none;
+          visibility: hidden;
+          opacity: 0;
+          z-index: -1;
+
           border: none;
           outline: none;
           font-weight: 700;
@@ -309,6 +313,13 @@
           margin-right: 2rem;
           line-height: 1.6rem;
           cursor: pointer;
+
+          &.show {
+            display: inline-block;
+            visibility: visible;
+            opacity: 1;
+            z-index: 1000;
+          }
 
           @include xl {
             font-size: 1.55556rem;
