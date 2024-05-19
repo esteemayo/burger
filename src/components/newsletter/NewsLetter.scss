@@ -16,6 +16,10 @@
       flex-direction: column;
     }
 
+    @media only screen and (min-width: 112.5em) {
+      padding: 10rem 3rem;
+    }
+
     .textWrap {
       flex: 1;
 
@@ -40,6 +44,10 @@
           font-size: 4.2rem;
           fill: $clr-gray-dark;
 
+          @include xl {
+            font-size: 4.667rem;
+          }
+
           @media only screen and (max-width: 60.9375em) {
             font-size: 3.8rem;
           }
@@ -51,6 +59,10 @@
           @media only screen and (max-width: 18.75em) {
             font-size: 3rem;
           }
+
+          @media only screen and (min-width: 112.5em) {
+            font-size: 4.5rem;
+          }
         }
 
         h5 {
@@ -58,6 +70,10 @@
           font-size: var(--default-font-size);
           color: $clr-black;
           letter-spacing: 0.5px;
+
+          @include xl {
+            font-size: 1.77778rem;
+          }
 
           @media only screen and (max-width: 60.9375em) {
             font-size: 1.5rem;
@@ -102,6 +118,10 @@
           letter-spacing: 1px;
           caret-color: $clr-gray-light;
 
+          @include xl {
+            font-size: 1.44445rem;
+          }
+
           @media only screen and (min-width: 112.5em) {
             font-size: 1.8rem;
           }
@@ -111,6 +131,10 @@
             font-weight: 300;
             font-size: 1.3rem;
             color: $clr-gray-light;
+
+            @include xl {
+              font-size: 1.44445rem;
+            }
 
             @media only screen and (min-width: 112.5em) {
               height: 7rem;
@@ -135,6 +159,10 @@
           border-radius: 0.5rem;
           cursor: pointer;
           transition: all 0.3s;
+
+          @include xl {
+            font-size: 1.44445rem;
+          }
 
           @media only screen and (max-width: 26.875em) {
             width: 100%;
