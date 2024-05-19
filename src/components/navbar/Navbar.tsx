@@ -19,7 +19,7 @@ import './Navbar.scss';
 
 const Navbar = () => {
   const pathname = usePathname();
-  const { query, handleChange, handleSubmit } = useSearch();
+  const { searchQuery, handleChange, handleSubmit } = useSearch();
   const { handleDecrement, handleIncrement } = useCartControls();
 
   const totalPrice = useCartStore((store) => store.totalPrice);
@@ -107,7 +107,7 @@ const Navbar = () => {
                   className='searchMenuIcon'
                 />
                 <Search
-                  value={query}
+                  value={searchQuery}
                   onChange={handleChange}
                   onSubmit={handleSubmit}
                 />

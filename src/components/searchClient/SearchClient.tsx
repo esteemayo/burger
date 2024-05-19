@@ -12,8 +12,10 @@ const SearchClient = ({ products }: SearchClientProps) => {
   const params = useSearchParams();
   const query = params ? params.get('q') : null;
 
-  const encodedQuery = encodeURI(query ?? '');
-  console.log(encodedQuery);
+  const encodedSearchQuery = encodeURI(query ?? '');
+  console.log(encodedSearchQuery);
+  const decodedSearchQuery = decodeURI(encodedSearchQuery);
+  console.log(decodedSearchQuery);
 
   const [isLoading, setIsLoading] = useState(true);
 
@@ -27,7 +29,7 @@ const SearchClient = ({ products }: SearchClientProps) => {
     <div className='searchClient'>
       <h3>
         Search results for
-        <small>{`"${query}"`}</small>
+        <small>{`"${decodedSearchQuery}"`}</small>
       </h3>
       <ProductLists data={products} loading={isLoading} />
     </div>

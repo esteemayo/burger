@@ -7,16 +7,16 @@ export const useSearch = () => {
   const router = useRouter();
   const inputRef = useRef<HTMLInputElement>(null);
 
-  const [query, setQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState('');
 
   const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-    setQuery(e.target.value);
+    setSearchQuery(e.target.value);
   }, []);
 
   const handleClear = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
     e.stopPropagation();
 
-    setQuery('');
+    setSearchQuery('');
     inputRef && inputRef.current?.focus();
   }, []);
 
@@ -24,19 +24,19 @@ export const useSearch = () => {
     (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
 
-      if (query) {
-        const encodedQuery = encodeURI(query);
+      if (searchQuery) {
+        const encodedSearchQuery = encodeURI(searchQuery);
 
-        router.push(`/search?q=${encodedQuery}`);
-        console.log(query);
-        setQuery('');
+        router.push(`/search?q=${encodedSearchQuery}`);
+        console.log(searchQuery);
+        setSearchQuery('');
       }
     },
-    [query, router]
+    [router, searchQuery]
   );
 
   return {
-    query,
+    searchQuery,
     inputRef,
     handleChange,
     handleClear,

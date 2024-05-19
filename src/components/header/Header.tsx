@@ -7,7 +7,7 @@ import { useSearch } from '@/hooks/useSearch';
 import './Header.scss';
 
 const Header = () => {
-  const { query, inputRef, handleChange, handleClear, handleSubmit } =
+  const { searchQuery, inputRef, handleChange, handleClear, handleSubmit } =
     useSearch();
 
   return (
@@ -27,11 +27,11 @@ const Header = () => {
               type='text'
               ref={inputRef}
               className='search'
-              value={query}
+              value={searchQuery}
               placeholder='Search products...'
               onChange={handleChange}
             />
-            {query.length > 0 && (
+            {searchQuery.length > 0 && (
               <button className='btnClear' onClick={handleClear}>
                 Clear
               </button>
