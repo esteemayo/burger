@@ -38,8 +38,8 @@
           font-size: 4.375rem;
         }
 
-        @include md {
-          font-size: 3rem;
+        @include sm {
+          font-size: 3.75rem;
         }
 
         @media only screen and (min-width: 112.5em) {
@@ -102,8 +102,8 @@
               font-size: 6.25rem;
             }
 
-            @include md {
-              font-size: 4.5rem;
+            @include sm {
+              font-size: 5rem;
             }
 
             @media only screen and (min-width: 112.5em) {
