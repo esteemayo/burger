@@ -25,7 +25,9 @@ export const useSearch = () => {
       e.preventDefault();
 
       if (query) {
-        router.push(`/search?q=${query}`);
+        const encodedQuery = encodeURI(query);
+
+        router.push(`/search?q=${encodedQuery}`);
         console.log(query);
         setQuery('');
       }
