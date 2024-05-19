@@ -32,7 +32,7 @@ const Header = () => {
               onChange={handleChange}
             />
             {searchQuery.length > 0 && (
-              <button className='btnClear' onClick={handleClear}>
+              <button className='btnClear' type='button' onClick={handleClear}>
                 Clear
               </button>
             )}

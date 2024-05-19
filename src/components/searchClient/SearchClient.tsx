@@ -10,12 +10,10 @@ import './SearchClient.scss';
 
 const SearchClient = ({ products }: SearchClientProps) => {
   const params = useSearchParams();
-  const query = params ? params.get('q') : null;
+  const searchQuery = params ? params.get('q') : null;
 
-  const encodedSearchQuery = encodeURI(query ?? '');
-  console.log(encodedSearchQuery);
+  const encodedSearchQuery = encodeURI(searchQuery ?? '');
   const decodedSearchQuery = decodeURI(encodedSearchQuery);
-  console.log(decodedSearchQuery);
 
   const [isLoading, setIsLoading] = useState(true);
 
