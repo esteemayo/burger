@@ -10,7 +10,7 @@ import './SearchClient.scss';
 
 const SearchClient = ({ products }: SearchClientProps) => {
   const params = useSearchParams();
-  const searchQuery = params ? params.get('q') : null;
+  const searchQuery = params.get('q') ?? null;
 
   const encodedSearchQuery = encodeURI(searchQuery ?? '');
   const decodedSearchQuery = decodeURI(encodedSearchQuery);
