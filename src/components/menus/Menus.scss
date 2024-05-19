@@ -18,7 +18,12 @@
       text-align: center;
 
       .heading {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
         text-transform: uppercase;
+        text-align: center;
         text-rendering: optimizeLegibility;
         font-weight: 600;
         font-size: 3.4128rem;
