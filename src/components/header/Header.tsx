@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import { useMemo } from 'react';
 
 import { useSearch } from '@/hooks/useSearch';
 
@@ -9,6 +10,10 @@ import './Header.scss';
 const Header = () => {
   const { searchQuery, inputRef, handleChange, handleClear, handleSubmit } =
     useSearch();
+
+  const btnClearClasses = useMemo(() => {
+    return searchQuery.length > 0 ? 'btnClear show' : 'btnClear';
+  }, [searchQuery.length]);
 
   return (
     <header className='header'>
@@ -31,11 +36,13 @@ const Header = () => {
               placeholder='Search products...'
               onChange={handleChange}
             />
-            {searchQuery.length > 0 && (
-              <button className='btnClear' type='button' onClick={handleClear}>
-                Clear
-              </button>
-            )}
+            <button
+              className={btnClearClasses}
+              type='button'
+              onClick={handleClear}
+            >
+              Clear
+            </button>
           </div>
           <button className='searchBtn'>Find products</button>
         </form>
