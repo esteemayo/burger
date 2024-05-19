@@ -20,6 +20,10 @@
       padding: 10rem 3.75rem;
     }
 
+    @media only screen and (max-width: 51.25em) {
+      gap: 2rem;
+    }
+
     @include md {
       flex-direction: column;
     }
