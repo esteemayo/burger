@@ -225,6 +225,7 @@
           }
 
           @include md {
+            font-size: 1.375rem;
             left: 10.5%;
             top: 10rem;
           }
@@ -250,6 +251,12 @@
 
           @media only screen and (max-width: 34.6875em) {
             width: 9.5rem;
+          }
+
+          @include sm {
+            width: 17rem;
+            left: 16%;
+            top: 9rem;
           }
 
           @media only screen and (min-width: 112.5em) {
