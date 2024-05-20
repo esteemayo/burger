@@ -1,13 +1,43 @@
+@import '../../styles/responsive.scss';
+
 .reviewCardSkeleton {
   background-color: #fdfdfd;
   border-radius: 0.5rem;
 
   &:not(:last-child) {
     margin-bottom: 1rem;
+
+    @include md {
+      margin-bottom: 2rem;
+    }
+
+    @media only screen and (max-width: 18.75em) {
+      margin-bottom: 1.5rem;
+    }
+
+    @media only screen and (min-width: 112.5em) {
+      margin-bottom: 2rem;
+    }
   }
 
   .reviewCardWrap {
     padding: 5.6rem 4rem 4rem 4rem;
+
+    @media only screen and (max-width: 56.25em) {
+      padding: 5rem 2.5rem 2.5rem 2.5rem;
+    }
+
+    @include md {
+      padding: 5rem 4rem 4rem 4rem;
+    }
+
+    @media only screen and (max-width: 26.8125em) {
+      padding: 5rem 2rem 4rem 2rem;
+    }
+
+    @media only screen and (max-width: 18.75em) {
+      padding: 4rem 1.7rem;
+    }
 
     .reviewCardBox {
       display: flex;
