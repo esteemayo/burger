@@ -17,6 +17,10 @@
     @media only screen and (max-width: 18.75em) {
       margin-bottom: 1.5rem;
     }
+
+    @media only screen and (min-width: 112.5em) {
+      margin-bottom: 2rem;
+    }
   }
 
   .reviewCard {
