@@ -10,7 +10,7 @@
   &:not(:last-child) {
     margin-bottom: 1rem;
 
-    @include md {
+    @media only screen and (max-width: 56.25em) {
       margin-bottom: 2rem;
     }
 
@@ -70,8 +70,8 @@
         }
 
         @media only screen and (max-width: 56.25em) {
-          width: 7.5rem;
-          height: 7.5rem;
+          width: 10.875rem;
+          height: 10.875rem;
         }
 
         @include md {
@@ -120,7 +120,7 @@
             }
 
             @media only screen and (max-width: 56.25em) {
-              font-size: 1.85rem;
+              font-size: 2rem;
             }
 
             @media only screen and (max-width: 18.75em) {
@@ -145,7 +145,7 @@
           }
 
           @media only screen and (max-width: 56.25em) {
-            font-size: 1.8rem;
+            font-size: 2rem;
           }
 
           @media only screen and (max-width: 18.75em) {
