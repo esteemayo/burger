@@ -10,7 +10,7 @@ import { relatedProducts } from '@/data';
 import './RelatedProducts.scss';
 
 const RelatedProducts = () => {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {
