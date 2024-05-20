@@ -32,8 +32,11 @@ const RelatedCardSkeleton = () => {
   } else if (dimension <= 359) {
     width = 136;
     height = 80;
+  } else if (dimension <= 375) {
+    width = 151.19;
+    height = 112;
   } else if (dimension <= 400) {
-    width = 144;
+    width = 164;
     height = 112;
   } else if (dimension <= 439) {
     width = 180;
