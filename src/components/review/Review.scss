@@ -64,6 +64,11 @@
         width: 8.7rem;
         height: 8.7rem;
 
+        @include xl {
+          width: 9.667rem;
+          height: 9.667rem;
+        }
+
         @media only screen and (max-width: 56.25em) {
           width: 7.5rem;
           height: 7.5rem;
@@ -135,8 +140,8 @@
           font-weight: 500;
           font-size: 100%;
 
-          @include lg {
-            font-size: 1.67rem;
+          @include xl {
+            font-size: 1.77778rem;
           }
 
           @media only screen and (max-width: 56.25em) {
@@ -156,8 +161,8 @@
           font-size: 1.4rem;
           color: $clr-gray-dark;
 
-          @include lg {
-            font-size: 1.56rem;
+          @include xl {
+            font-size: 1.55556rem;
           }
 
           @media only screen and (max-width: 56.25em) {
