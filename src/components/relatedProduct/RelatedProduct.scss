@@ -65,6 +65,10 @@
     width: 18.3rem;
   }
 
+  @media only screen and (max-width: 21.5em) {
+    width: 17.5rem;
+  }
+
   @media only screen and (max-width: 20.9375em) {
     width: 16rem;
   }
@@ -145,6 +149,10 @@
 
       @media only screen and (max-width: 22.5em) {
         width: 18rem;
+      }
+
+      @media only screen and (max-width: 21.5em) {
+        width: 17.5rem;
       }
 
       @media only screen and (max-width: 22.4375em) {
