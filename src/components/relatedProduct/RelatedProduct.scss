@@ -205,6 +205,10 @@
           opacity: 0;
           z-index: -1;
 
+          @media only screen and (min-width: 112.5em) {
+            font-size: 1.4rem;
+          }
+
           &:hover {
             color: $clr-secondary;
           }
