@@ -229,6 +229,16 @@
             top: 10rem;
           }
 
+          @media only screen and (max-width: 46.9375em) {
+            left: 8%;
+          }
+
+          @media only screen and (max-width: 37.5em) {
+            width: 12rem;
+            left: 12.5%;
+            top: 6rem;
+          }
+
           @media only screen and (min-width: 112.5em) {
             font-size: 1.4rem;
             left: 24%;
