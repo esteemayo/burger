@@ -24,8 +24,8 @@ const Reviews = () => {
   }, []);
 
   const reviewsContainer = useMemo(() => {
-    return products.length < 1 ? 'reviews emptyReviews' : 'reviews';
-  }, [products.length]);
+    return products?.length < 1 ? 'reviews emptyReviews' : 'reviews';
+  }, [products?.length]);
 
   const reviewClasses = useMemo(() => {
     return !isOpen ? 'reviewWrap hide' : 'reviewWrap';
