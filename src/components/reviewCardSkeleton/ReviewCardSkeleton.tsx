@@ -1,8 +1,26 @@
+'use client';
+
+import { useCallback, useEffect, useState } from 'react';
+
 import Skeleton from 'react-loading-skeleton';
 
 import './ReviewCardSkeleton.scss';
 
 const ReviewCardSkeleton = () => {
+  const [dimension, setDimension] = useState(window.innerWidth);
+
+  const handleScreenSize = useCallback(() => {
+    setDimension(window.innerWidth);
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener('resize', handleScreenSize);
+    return () => window.removeEventListener('resize', handleScreenSize);
+  }, [handleScreenSize]);
+
+  let width;
+  let height;
+
   return (
     <article className='reviewCardSkeleton'>
       <div className='reviewCardWrap'>
