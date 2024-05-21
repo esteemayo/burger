@@ -1,7 +1,18 @@
+@import '../../styles/responsive.scss';
+
 .relatedCardSkeleton {
   outline: none;
 
-  .relatedCardContent{
+  .relatedCardBox {
+    span.react-loading-skeleton {
+      @media only screen and (min-width: 112.5em) {
+        width: 27rem !important;
+        height: 20rem !important;
+      }
+    }
+  }
+
+  .relatedCardContent {
     text-align: center;
     min-height: 11.7rem;
     padding: 2.3rem 0 1.4rem;
