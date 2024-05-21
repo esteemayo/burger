@@ -47,7 +47,7 @@ const ReviewCardSkeleton = () => {
             <Skeleton width={75} height={15} />
           </div>
           <div className='reviewCardUser'>
-            <Skeleton width={165} />
+            <Skeleton className='reviewer' width={165} />
             <Skeleton count={2} width={600} />
           </div>
         </div>
