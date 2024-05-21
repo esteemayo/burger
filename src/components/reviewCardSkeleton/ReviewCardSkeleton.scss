@@ -73,6 +73,11 @@
           height: 8.75rem !important;
         }
 
+        @include md {
+          width: 10.875rem !important;
+          height: 10.875rem !important;
+        }
+
         @media only screen and (max-width: 37.5em) {
           width: 8.75rem !important;
           height: 8.75rem !important;
@@ -193,11 +198,15 @@
               height: 1.5rem !important;
             }
 
-            @media only screen and (max-width: 26.8125em) {
-              width: 13rem !important;
+            @media only screen and (max-width: 33.75em) {
+              width: 12rem !important;
             }
 
-            @media only screen and (max-width: 18.75em) {
+            @media only screen and (max-width: 31.25em) {
+              width: 10rem !important;
+            }
+
+            @media only screen and (max-width: 25em) {
               width: 10rem !important;
             }
 
@@ -238,13 +247,29 @@
             width: 62rem !important;
           }
 
+          @media only screen and (max-width: 43.75em) {
+            width: 52rem !important;
+          }
+
           @media only screen and (max-width: 37.5em) {
             width: 41rem !important;
             height: 1.5rem !important;
           }
 
-          @media only screen and (max-width: 26.8125em) {
-            width: 33rem !important;
+          @media only screen and (max-width: 36.875em) {
+            width: 37rem !important;
+          }
+
+          @media only screen and (max-width: 33.75em) {
+            width: 34rem !important;
+          }
+
+          @media only screen and (max-width: 31.25em) {
+            width: 29rem !important;
+          }
+
+          @media only screen and (max-width: 28.125em) {
+            width: 26rem !important;
           }
 
           @media only screen and (max-width: 18.75em) {
