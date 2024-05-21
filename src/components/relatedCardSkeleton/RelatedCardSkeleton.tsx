@@ -87,7 +87,7 @@ const RelatedCardSkeleton = () => {
   return (
     <article className='relatedCardSkeleton'>
       <div className='relatedCardBox'>
-        <Skeleton width={width} height={height} />
+        <Skeleton width={220} height={170} />
       </div>
       <div className='relatedCardContent'>
         <Skeleton count={1.5} />

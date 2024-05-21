@@ -5,6 +5,83 @@
 
   .relatedCardBox {
     span.react-loading-skeleton {
+      width: 22rem !important;
+      height: 17rem !important;
+
+      @include md {
+        width: 19rem !important;
+      }
+
+      @media only screen and (max-width: 46.9375em) {
+        width: 18rem !important;
+      }
+
+      @media only screen and (max-width: 37.5em) {
+        width: 16rem !important;
+        height: 13rem !important;
+      }
+
+      @media only screen and (max-width: 37.1875em) {
+        width: 15rem !important;
+      }
+
+      @media only screen and (max-width: 35.1875em) {
+        width: 14rem !important;
+      }
+
+      @media only screen and (max-width: 34.6875em) {
+        width: 13rem !important;
+        height: 11rem !important;
+      }
+
+      @include sm {
+        width: 25rem !important;
+        height: 17rem !important;
+      }
+
+      @media only screen and (max-width: 29.4375em) {
+        width: 24.5rem !important;
+      }
+
+      @media only screen and (max-width: 28.4375em) {
+        width: 23.5rem !important;
+      }
+
+      @media only screen and (max-width: 27.4375em) {
+        width: 22.5rem !important;
+        height: 14rem !important;
+      }
+
+      @media only screen and (max-width: 25em) {
+        width: 20.5rem !important;
+      }
+
+      @media only screen and (max-width: 23.4375em) {
+        width: 18.9rem !important;
+      }
+
+      @media only screen and (max-width: 22.5em) {
+        width: 18rem !important;
+      }
+
+      @media only screen and (max-width: 21.5em) {
+        width: 17.5rem !important;
+      }
+
+      @media only screen and (max-width: 22.4375em) {
+        width: 18.3rem !important;
+        height: 10rem !important;
+      }
+
+      @media only screen and (max-width: 20.9375em) {
+        width: 100% !important;
+        height: 20rem !important;
+      }
+
+      @media only screen and (max-width: 18.75em) {
+        height: 17rem !important;
+      }
+
       @media only screen and (min-width: 112.5em) {
         width: 27rem !important;
         height: 20rem !important;
