@@ -95,6 +95,15 @@
         right: -1.6rem;
 
         span.react-loading-skeleton {
+          @include xxl {
+            width: 14rem !important;
+          }
+
+          @include xl {
+            width: 12rem !important;
+            height: 1.6rem !important;
+          }
+
           @media only screen and (max-width: 56.25em) {
             width: 10rem !important;
             height: 1.8rem !important;
@@ -118,8 +127,20 @@
       .reviewCardUser {
         span.react-loading-skeleton {
           &.reviewer {
-            @media only screen and (max-width: 56.25em) {
+            @include xxl {
+              width: 22rem !important;
+            }
+
+            @include xl {
+              width: 20rem !important;
+              height: 1.8rem !important;
+            }
+
+            @include xl {
               width: 18rem !important;
+            }
+
+            @media only screen and (max-width: 56.25em) {
               height: 2rem !important;
             }
 
@@ -135,6 +156,19 @@
             @media only screen and (max-width: 18.75em) {
               width: 10rem !important;
             }
+          }
+
+          @include xxl {
+            width: 72rem !important;
+          }
+
+          @include xl {
+            width: 62rem !important;
+            height: 1.8rem !important;
+          }
+
+          @include xl {
+            width: 32rem !important;
           }
 
           @media only screen and (max-width: 56.25em) {
