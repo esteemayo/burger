@@ -116,7 +116,23 @@
     padding: 2.3rem 0 1.4rem;
     background-color: #fdfdfd;
 
-    .react-loading-skeleton {
+    @media only screen and (max-width: 34.6875em) {
+      min-height: 10rem;
+    }
+
+    @include sm {
+      min-height: 11.7rem;
+    }
+
+    @media only screen and (max-width: 25em) {
+      min-height: 10rem;
+    }
+
+    @media only screen and (max-width: 19.9375em) {
+      min-height: 11.7rem;
+    }
+
+    span.react-loading-skeleton {
       width: 80%;
     }
   }
