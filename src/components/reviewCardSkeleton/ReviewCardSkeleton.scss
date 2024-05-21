@@ -45,6 +45,25 @@
       gap: 2.8rem;
       position: relative;
 
+      @media only screen and (max-width: 56.25em) {
+        gap: 2rem;
+      }
+
+      @include sm {
+        gap: 1.5rem;
+      }
+
+      @media only screen and (max-width: 18.75em) {
+        gap: 1rem;
+      }
+
+      span.react-loading-skeleton {
+        @media only screen and (max-width: 18.75em) {
+          width: 4rem !important;
+          height: 4rem !important;
+        }
+      }
+
       .reviewCardRating {
         position: absolute;
         top: -2.6rem;
