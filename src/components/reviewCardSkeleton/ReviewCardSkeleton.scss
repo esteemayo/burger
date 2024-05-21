@@ -58,9 +58,34 @@
       }
 
       span.react-loading-skeleton {
+        @include xl {
+          width: 9.667rem !important;
+          height: 9.667rem !important;
+        }
+
+        @media only screen and (max-width: 56.25em) {
+          width: 10.875rem !important;
+          height: 10.875rem !important;
+        }
+
+        @media only screen and (max-width: 37.5em) {
+          width: 8.75rem !important;
+          height: 8.75rem !important;
+        }
+
+        @media only screen and (max-width: 26.8125em) {
+          width: 6.25rem !important;
+          height: 6.25rem !important;
+        }
+
         @media only screen and (max-width: 18.75em) {
           width: 4rem !important;
           height: 4rem !important;
+        }
+
+        @media only screen and (min-width: 112.5em) {
+          width: 10rem !important;
+          height: 10rem !important;
         }
       }
 
