@@ -9,18 +9,6 @@
     padding: 0;
   }
 
-  @media only screen and (max-width: 26.8125em) {
-    padding: 0 3rem;
-  }
-
-  @media only screen and (max-width: 21.875em) {
-    padding: 0 3.5rem;
-  }
-
-  @media only screen and (max-width: 21.5em) {
-    padding: 0 1rem;
-  }
-
   &.emptyReviews {
     @media only screen and (max-width: 26.8125em) {
       padding: 0 1.5rem;

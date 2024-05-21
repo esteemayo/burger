@@ -28,6 +28,10 @@
       width: 40rem;
     }
 
+    @media only screen and (max-width: 17.5em) {
+      width: 36rem;
+    }
+
     h3 {
       display: inline-block;
       text-transform: capitalize;
@@ -109,6 +113,10 @@
       display: flex;
       align-items: center;
       gap: 3rem;
+
+      @media only screen and (max-width: 17.5em) {
+        gap: 1rem;
+      }
 
       .reviewWrap {
         width: 25rem;
