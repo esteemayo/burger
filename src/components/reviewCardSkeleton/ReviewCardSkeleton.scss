@@ -87,6 +87,11 @@
           width: 10rem !important;
           height: 10rem !important;
         }
+
+        @media only screen and (min-width: 112.5em) {
+          width: 10rem !important;
+          height: 10rem !important;
+        }
       }
 
       .reviewCardRating {
@@ -124,6 +129,11 @@
 
           @media only screen and (max-width: 18.75em) {
             width: 7rem !important;
+          }
+
+          @media only screen and (min-width: 112.5em) {
+            width: 9rem !important;
+            height: 1.8rem !important;
           }
         }
       }
