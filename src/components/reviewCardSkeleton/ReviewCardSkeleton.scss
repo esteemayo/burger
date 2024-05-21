@@ -112,6 +112,10 @@
             height: 1.6rem !important;
           }
 
+          @include lg {
+            width: 8rem !important;
+          }
+
           @media only screen and (max-width: 56.25em) {
             width: 10rem !important;
             height: 1.8rem !important;
@@ -153,6 +157,10 @@
               height: 1.8rem !important;
             }
 
+            @include lg {
+              width: 12rem !important;
+            }
+
             @media only screen and (max-width: 56.25em) {
               height: 2rem !important;
             }
@@ -187,6 +195,10 @@
           @include xl {
             width: 62rem !important;
             height: 1.8rem !important;
+          }
+
+          @include lg {
+            width: 34rem !important;
           }
 
           @media only screen and (max-width: 56.25em) {
