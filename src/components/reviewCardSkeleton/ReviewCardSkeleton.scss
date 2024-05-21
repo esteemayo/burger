@@ -105,11 +105,10 @@
           }
 
           @include xxl {
-            width: 14rem !important;
+            width: 10rem !important;
           }
 
           @include xl {
-            width: 12rem !important;
             height: 1.6rem !important;
           }
 
@@ -150,12 +149,8 @@
             }
 
             @include xl {
-              width: 20rem !important;
-              height: 1.8rem !important;
-            }
-
-            @include xl {
               width: 18rem !important;
+              height: 1.8rem !important;
             }
 
             @media only screen and (max-width: 56.25em) {
@@ -182,20 +177,16 @@
           }
 
           @media only screen and (max-width: 93.75em) {
-            width: 76rem !important;
+            width: 73rem !important;
           }
 
           @include xxl {
-            width: 72rem !important;
+            width: 70rem !important;
           }
 
           @include xl {
             width: 62rem !important;
             height: 1.8rem !important;
-          }
-
-          @include xl {
-            width: 32rem !important;
           }
 
           @media only screen and (max-width: 56.25em) {
