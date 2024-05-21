@@ -47,7 +47,7 @@ const ProductCardSkeleton = () => {
   return (
     <article className='productCardSkeleton'>
       <div className='skeletonImgWrap'>
-        <Skeleton width={width} height={height} />
+        <Skeleton width={300} height={270} />
       </div>
       <div className='skeletonFooter'>
         <Skeleton count={1.5} />

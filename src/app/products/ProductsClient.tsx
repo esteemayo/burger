@@ -36,7 +36,7 @@ const ProductsClient = () => {
 
   useEffect(() => {
     setTimeout(() => {
-      setIsLoading(false);
+      // setIsLoading(false);
     }, 5000);
   }, []);
 

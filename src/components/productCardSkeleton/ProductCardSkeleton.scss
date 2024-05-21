@@ -1,5 +1,19 @@
+@import '../../styles/responsive.scss';
+
 .productCardSkeleton {
   outline: none;
+
+  .skeletonImgWrap {
+    span.react-loading-skeleton {
+      width: 30rem !important;
+      height: 27rem !important;
+
+      @media only screen and (min-width: 112.5em) {
+        width: 35rem !important;
+        height: 22.5rem !important;
+      }
+    }
+  }
 
   .skeletonFooter {
     min-height: 11.7rem;
