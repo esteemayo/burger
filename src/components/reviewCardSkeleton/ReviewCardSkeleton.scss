@@ -95,6 +95,10 @@
         right: -1.6rem;
 
         span.react-loading-skeleton {
+          @media only screen and (max-width: 93.75em) {
+            width: 14rem !important;
+          }
+
           @include xxl {
             width: 14rem !important;
           }
@@ -127,6 +131,10 @@
       .reviewCardUser {
         span.react-loading-skeleton {
           &.reviewer {
+            @media only screen and (max-width: 93.75em) {
+              width: 22rem !important;
+            }
+
             @include xxl {
               width: 22rem !important;
             }
@@ -156,6 +164,10 @@
             @media only screen and (max-width: 18.75em) {
               width: 10rem !important;
             }
+          }
+
+          @media only screen and (max-width: 93.75em) {
+            width: 76rem !important;
           }
 
           @include xxl {
