@@ -8,6 +8,11 @@
       width: 30rem !important;
       height: 27rem !important;
 
+      @include xl {
+        width: 33.335rem !important;
+        height: 30rem !important;
+      }
+
       @include md {
         width: 17rem !important;
         height: 15rem !important;
