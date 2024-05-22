@@ -1,0 +1,13 @@
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: devayo
+      POSTGRES_PASSWORD: burgerapppassword
+      POSTGRES_DB: burger
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
