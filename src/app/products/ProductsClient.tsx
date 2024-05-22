@@ -66,11 +66,13 @@ const ProductsClient = () => {
           loading={isLoading}
           productToShow={productToShow}
         />
-        <div className={btnWrapClasses}>
-          <button type='button' onClick={handleSeeMore}>
-            See more...
-          </button>
-        </div>
+        {!isLoading && (
+          <div className={btnWrapClasses}>
+            <button type='button' onClick={handleSeeMore}>
+              See more...
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );
