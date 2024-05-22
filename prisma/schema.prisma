@@ -53,6 +53,7 @@ model User {
   state           String?
   city            String?
   street          String?
+  address         String?
   password        String
   confirmPassword String?
   gender          String?
@@ -83,6 +84,7 @@ model Product {
   desc            String
   image           String
   price           Decimal
+  ingredients     String[]
   isFeatured      Boolean  @default(false)
   ratingsAverage  Decimal
   ratingsQuantity Int
