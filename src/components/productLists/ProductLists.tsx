@@ -14,9 +14,11 @@ const ProductLists = ({
   return (
     <section className='productLists'>
       {loading
-        ? data.map((item) => {
-            return <ProductCardSkeleton key={item.id} />;
-          })
+        ? Array(3)
+            .fill(0)
+            .map((_, index) => {
+              return <ProductCardSkeleton key={index} />;
+            })
         : type === 'products'
         ? data.slice(0, productToShow).map((item) => {
             return <ProductCard key={item.id} product={item} />;
