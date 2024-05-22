@@ -88,6 +88,7 @@ model Product {
   isFeatured      Boolean  @default(false)
   ratingsAverage  Decimal
   ratingsQuantity Int
+  likes           String[]
   Review          Review[]
 
   @@map("products")

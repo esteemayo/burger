@@ -51,7 +51,7 @@ export const authOptions: NextAuthOptions = {
 
         const isMatch = await bcrypt.compare(
           credentials.password,
-          user.password
+          user?.password!
         );
 
         if (!user || !isMatch) {
@@ -72,11 +72,11 @@ export const authOptions: NextAuthOptions = {
     async jwt({ token }) {
       const userInDb = await prisma.user.findUnique({
         where: {
-          email: token.email,
+          email: token.email!,
         },
       });
 
-      token.isAdmin = userInDb?.isAdmin;
+      token.isAdmin = userInDb?.isAdmin!;
       return token;
     },
   },
