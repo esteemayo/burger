@@ -230,6 +230,9 @@ export interface RegisterData {
   name: string;
   username: string;
   email: string;
+  street: string;
+  city: string;
+  state: string;
   phone: string;
   password: string;
   confirmPassword: string;
@@ -239,6 +242,9 @@ export interface RegisterErrors {
   name?: string;
   username?: string;
   email?: string;
+  street?: string;
+  city?: string;
+  state?: string;
   phone?: string;
   password?: string;
   confirmPassword?: string;
