@@ -90,8 +90,10 @@ export type FeatureProps = Feature;
 export type RelatedProductType = {
   id: number;
   name: string;
+  desc: string;
   image: string;
   price: number;
+  ingredients?: string[];
 }[];
 
 export type ReviewType = {
