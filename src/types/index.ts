@@ -77,6 +77,7 @@ type Feature = {
 export type CardMenu = {
   id: number;
   name: string;
+  desc: string;
   image: string;
   price: number;
   ingredients?: string[];
