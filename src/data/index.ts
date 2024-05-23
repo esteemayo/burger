@@ -210,12 +210,14 @@ export const products: CardMenu = [
   {
     id: 6,
     name: 'Single beef burger',
+    desc: 'Our "Single Beef Burger" Is Prepared With The Best Quality Of Burger buns and beef That Gives A Great Taste And Texture plus our beef patty is marinated in an aromatic mixture of olive oil, garlic, lemon and spices that wakes you up once you take a bite!',
     image: '/img/burger-6.jpg',
-    price: 12700,
+    price: 10999,
   },
   {
     id: 7,
     name: 'Double beef burger',
+    desc: 'Our "Double Beef Burger" Is Prepared With The Best Quality Of Burger buns and beef That Gives A Great Taste And Texture plus our beef patty is marinated in an aromatic mixture of olive oil, garlic, lemon and spices that wakes you up once you take a bite!',
     image: '/img/burger-7.jpg',
     price: 16000,
   },
