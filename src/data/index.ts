@@ -305,7 +305,7 @@ export const products: CardMenu = [
     id: 17,
     name: 'Single Chicken Burger',
     desc: 'A Single Chicken Burger with cheese, tomato, cucumber, lettuce and caramelized onions, Topped with lettuce, tomatoes, cheese and spicy mayo, they are the most delicious, easy dinner and a guaranteed crowd pleaser. Unlike ground chicken burgers that require chicken patties made with ground chicken (or ground turkey), bread crumbs, etc. these juicy chicken burgers need only a handful of ingredients and can be made in a fraction of the time. The chicken is marinated in an aromatic mixture of olive oil, garlic, lemon and spices.',
-    image: '/img/burger-17.jpg',
+    image: '/img/burger-22.jpg',
     price: 11999,
   },
   {
