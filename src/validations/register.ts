@@ -1,7 +1,17 @@
 import { RegisterData, RegisterErrors } from '@/types';
 
 export const validateRegisterInputs = (data: RegisterData) => {
-  const { name, username, email, phone, password, confirmPassword } = data;
+  const {
+    name,
+    username,
+    email,
+    street,
+    city,
+    state,
+    phone,
+    password,
+    confirmPassword,
+  } = data;
   const errors: RegisterErrors = {};
 
   if (name.trim() === '') {
@@ -20,6 +30,18 @@ export const validateRegisterInputs = (data: RegisterData) => {
     if (!email.match(regEx)) {
       errors.email = 'Email must be a valid email address';
     }
+  }
+
+  if (street.trim() === '') {
+    errors.street = 'Street is required';
+  }
+
+  if (city.trim() === '') {
+    errors.city = 'City is required';
+  }
+
+  if (state.trim() === '') {
+    errors.state = 'State is required';
   }
 
   if (!phone) {

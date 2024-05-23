@@ -21,14 +21,18 @@ import './Register.scss';
 
 const enum STEPS {
   INFO = 0,
-  CREDENTIALS = 1,
-  AVATAR = 2,
+  LOCATION = 1,
+  CREDENTIALS = 2,
+  AVATAR = 3,
 }
 
 const initialState: RegisterData = {
   name: '',
   username: '',
   email: '',
+  street: '',
+  city: '',
+  state: '',
   phone: '',
   password: '',
   confirmPassword: '',
@@ -38,6 +42,9 @@ const initialErrors: RegisterErrors = {
   name: '',
   username: '',
   email: '',
+  street: '',
+  city: '',
+  state: '',
   phone: '',
   password: '',
   confirmPassword: '',
@@ -122,7 +129,17 @@ const RegisterForm = () => {
     return step !== STEPS.AVATAR ? 'btnPrev show' : 'btnPrev';
   }, [step]);
 
-  const { name, username, email, phone, password, confirmPassword } = data;
+  const {
+    name,
+    username,
+    email,
+    street,
+    city,
+    state,
+    phone,
+    password,
+    confirmPassword,
+  } = data;
 
   let bodyContent: JSX.Element | undefined;
 
@@ -156,6 +173,38 @@ const RegisterForm = () => {
       />
     </>
   );
+
+  if (step === STEPS.LOCATION) {
+    bodyContent = (
+      <>
+        <Input
+          name='street'
+          label='Street'
+          value={street}
+          placeholder='Enter your street'
+          onChange={handleChange}
+          error={errors['street']}
+        />
+        <Input
+          name='city'
+          label='City'
+          value={city}
+          placeholder='Enter your city'
+          onChange={handleChange}
+          error={errors['city']}
+          autoFocus
+        />
+        <Input
+          name='state'
+          label='State'
+          value={state}
+          placeholder='Enter your state'
+          onChange={handleChange}
+          error={errors['state']}
+        />
+      </>
+    );
+  }
 
   if (step === STEPS.CREDENTIALS) {
     bodyContent = (
