@@ -1,7 +1,7 @@
 import bcrypt from 'bcryptjs';
-import { NextAuthOptions, User, getServerSession } from 'next-auth';
-import GoogleProvider from 'next-auth/providers/google';
 import CredentialsProvider from 'next-auth/providers/credentials';
+import GoogleProvider from 'next-auth/providers/google';
+import { NextAuthOptions, User, getServerSession } from 'next-auth';
 import { PrismaAdapter } from '@next-auth/prisma-adapter';
 
 import { prisma } from './connect';
