@@ -194,12 +194,14 @@ export const products: CardMenu = [
   {
     id: 3,
     name: 'A crunchy chicken',
+    desc: 'Our "A Crunchy Chicken" Is Prepared With The Best Quality Of Jazzy® buns and beef That Gives A Great Taste And Texture plus our beef patty is marinated in an aromatic mixture of olive oil, garlic, lemon and spices that wakes you up once you take a bite!',
     image: '/img/burger-3.jpg',
     price: 30000,
   },
   {
     id: 4,
     name: 'Breakfast burger',
+    desc: 'Our Breakfast Burger with cheese, tomato, cucumber, lettuce and caramelized onions topped with lettuce, tomatoes and spicy mayo are super crispy and the most delicious!',
     image: '/img/burger-4.jpg',
     price: 13000,
   },
@@ -227,6 +229,7 @@ export const products: CardMenu = [
   {
     id: 8,
     name: 'Single beef & fries',
+    desc: "Our Single Beef & Fries Burger are specially curated to let you shake things up a lil bit and let's the Jazz from every burger hit hard.",
     image: '/img/burger-8.jpg',
     price: 27499,
   },
@@ -240,6 +243,7 @@ export const products: CardMenu = [
   {
     id: 10,
     name: 'Crunchy chicken burger',
+    desc: 'Our "Crunchy Chicken Burger" Is Prepared With The Best Quality Of Jazzy® buns and beef That Gives A Great Taste And Texture plus our beef patty is marinated in an aromatic mixture of olive oil, garlic, lemon and spices that wakes you up once you take a bite!',
     image: '/img/burger-10.jpg',
     price: 13999,
   },
