@@ -180,12 +180,14 @@ export const products: CardMenu = [
   {
     id: 1,
     name: 'Double grilled chicken burger',
+    desc: 'A Double Patty Grilled Chicken Burger with cheese, tomato, cucumber, lettuce and caramelized onions, Topped with lettuce, tomatoes, cheese and spicy mayo, they are the most delicious, easy dinner and a guaranteed crowd pleaser. Unlike ground chicken burgers that require chicken patties made with ground chicken (or ground turkey), bread crumbs, etc. these juicy chicken burgers need only a handful of ingredients and can be made in a fraction of the time. The chicken is marinated in an aromatic mixture of olive oil, garlic, lemon and spices.',
     image: '/img/burger-1.jpg',
     price: 26000,
   },
   {
     id: 2,
     name: 'Grilled Chicken Burger',
+    desc: 'Our Single Patty Grilled Chicken Burger with cheese, tomato, cucumber, lettuce and caramelized onions, Topped with lettuce, tomatoes, cheese and spicy mayo, they are the most delicious, easy dinner and a guaranteed crowd pleaser. Unlike ground chicken burgers that require chicken patties made with ground chicken (or ground turkey), bread crumbs, etc. these juicy chicken burgers need only a handful of ingredients and can be made in a fraction of the time. The chicken is marinated in an aromatic mixture of olive oil, garlic, lemon and spices.',
     image: '/img/burger-2.jpg',
     price: 23500,
   },
@@ -204,6 +206,7 @@ export const products: CardMenu = [
   {
     id: 5,
     name: 'Double beef & fries',
+    desc: 'Our "Double beef x fries" Is Prepared With The Best Quality Of Burger buns and beef That Gives A Great Taste And Texture plus our beef patty is marinated in an aromatic mixture of olive oil, garlic, lemon and spices that wakes you up once you take a bite!',
     image: '/img/burger-5.jpg',
     price: 37000,
   },
@@ -230,6 +233,7 @@ export const products: CardMenu = [
   {
     id: 9,
     name: 'Double crunchy chicken burger',
+    desc: 'Our "Double Crunchy Chicken Burger" Is Prepared With The Best Quality Of Burger buns and beef That Gives A Great Taste And Texture plus our beef patty is marinated in an aromatic mixture of olive oil, garlic, lemon and spices that wakes you up once you take a bite!',
     image: '/img/burger-9.jpg',
     price: 21999,
   },
@@ -242,14 +246,16 @@ export const products: CardMenu = [
   {
     id: 11,
     name: 'A double crunchy and fries',
+    desc: 'Our Crunchy chicken x fries x jazzy baby are ultra crispy and absolutely bursting with flavour topped with fresh lettuce , cucumbers ,Onions , our special sauce and cheese! Its an absolute crowd pleaser',
     image: '/img/burger-11.jpg',
-    price: 23499,
+    price: 21499,
   },
   {
     id: 12,
     name: 'Double crunchy X fries',
+    desc: 'Our Crunchy chicken x fries x jazzy baby are ultra crispy and absolutely bursting with flavour topped with fresh lettuce , cucumbers ,Onions , our special sauce and cheese! Its an absolute crowd pleaser',
     image: '/img/burger-12.jpg',
-    price: 29999,
+    price: 21999,
   },
 ];
 
