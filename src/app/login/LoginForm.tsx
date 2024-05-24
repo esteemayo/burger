@@ -1,9 +1,10 @@
 'use client';
 
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import VisibilityIcon from '@mui/icons-material/Visibility';
 import Link from 'next/link';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
-import VisibilityIcon from '@mui/icons-material/Visibility';
+import { useRouter } from 'next/navigation';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 
 import AuthInfo from '@/components/authInfo/AuthInfo';
 import Input from '@/components/input/Input';
@@ -20,16 +21,18 @@ import { getFromStorage, rememberKey, setToStorage, userKey } from '@/utils';
 import './Login.scss';
 
 const initialState: LoginData = {
-  email: '',
+  username: '',
   password: '',
 };
 
 const initialErrors: LoginErrors = {
-  email: '',
+  username: '',
   password: '',
 };
 
 const LoginForm = () => {
+  const router = useRouter();
+
   const [rememberMe, setRememberMe] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
@@ -77,7 +80,7 @@ const LoginForm = () => {
     const rememberMe = getFromStorage(rememberKey);
 
     const userCredentials = {
-      email: user?.email,
+      username: user?.username,
       password: user?.password,
     };
 
@@ -85,7 +88,7 @@ const LoginForm = () => {
     setRememberMe(rememberMe);
   }, [setData]);
 
-  const { email, password } = data;
+  const { username, password } = data;
 
   return (
     <div className='formWrap'>
@@ -96,13 +99,12 @@ const LoginForm = () => {
       </div>
       <form onSubmit={handleSubmit} className='loginForm'>
         <Input
-          name='email'
-          type='email'
-          label='Email'
-          value={email}
-          placeholder='Enter your email address'
+          name='username'
+          label='Username'
+          value={username}
+          placeholder='Enter your username'
           onChange={handleChange}
-          error={errors['email']}
+          error={errors['username']}
           autoFocus
         />
         <Input
