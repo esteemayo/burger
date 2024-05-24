@@ -107,7 +107,7 @@ const RegisterForm = () => {
       console.log({ ...credentials, file: selectedFile });
       router.push('/login');
     } catch (err: unknown) {
-      console.log(err.response.data.message);
+      console.log(err);
     } finally {
       setIsLoading(false);
       setStep(STEPS.INFO);
