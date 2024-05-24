@@ -194,6 +194,11 @@ export interface TextareaProps
   onChange(e: React.ChangeEvent<HTMLTextAreaElement>): void;
 }
 
+export interface GenderSelectProps
+  extends React.SelectHTMLAttributes<HTMLSelectElement> {
+  onChange(e: React.ChangeEvent<HTMLSelectElement>): void;
+}
+
 export interface ButtonProps {
   label: string;
   disabled?: boolean;
