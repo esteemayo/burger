@@ -15,9 +15,11 @@ import PhoneInput from '@/components/phoneInput/PhoneInput';
 import { useForm } from '@/hooks/useForm';
 import { validateRegisterInputs } from '@/validations/register';
 
+import { registerUser } from '@/services/authService';
 import { RegisterData, RegisterErrors } from '@/types';
 
 import './Register.scss';
+import { useRouter } from 'next/navigation';
 
 const enum STEPS {
   INFO = 0,
@@ -51,6 +53,8 @@ const initialErrors: RegisterErrors = {
 };
 
 const RegisterForm = () => {
+  const router = useRouter();
+
   const [isLoading, setIsLoading] = useState(false);
   const [file, setFile] = useState<File[]>();
   const [showPassword, setShowPassword] = useState(false);
@@ -87,7 +91,7 @@ const RegisterForm = () => {
     []
   );
 
-  const onSubmitHandler = () => {
+  const onSubmitHandler = async () => {
     setIsLoading(true);
 
     const credentials = {
@@ -97,13 +101,17 @@ const RegisterForm = () => {
 
     const selectedFile = file?.[0];
 
-    console.log({ ...credentials, file: selectedFile });
-
-    setTimeout(() => {
+    try {
+      const res = await registerUser({ ...credentials });
+      console.log('user', res.data);
+      console.log({ ...credentials, file: selectedFile });
+      router.push('/login');
+    } catch (err: unknown) {
+      console.log(err.response.data.message);
+    } finally {
       setIsLoading(false);
-    }, 5000);
-
-    setStep(STEPS.INFO);
+      setStep(STEPS.INFO);
+    }
   };
 
   const { data, errors, handleChange, handleSubmit } = useForm(
