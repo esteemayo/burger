@@ -53,31 +53,26 @@ const LoginForm = () => {
     []
   );
 
-  const onSubmitHandler = () => {
+  const onSubmitHandler = async () => {
     setIsLoading(true);
 
-    signIn('credentials', {
-      ...data,
-      redirect: true,
-    })
-      .then((callback) => {
-        if (callback?.ok) {
-          toast.success('You are logged in...');
-          router.push('/');
+    try {
+      await signIn('credentials', {
+        ...data,
+        redirect: false,
+      });
 
-          setToStorage(rememberKey, rememberMe);
-          setToStorage(userKey, rememberMe ? data : '');
-          setRememberMe(false);
-        }
+      toast.success('You are logged in...');
+      router.push('/');
 
-        if (callback?.error) {
-          toast.error(callback.error);
-        }
-      })
-      .catch((err: unknown) => {
-        console.log(err);
-      })
-      .finally(() => setIsLoading(false));
+      setToStorage(rememberKey, rememberMe);
+      setToStorage(userKey, rememberMe ? data : '');
+      setRememberMe(false);
+    } catch (err: unknown) {
+      console.log(err);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const { data, errors, handleChange, handleSubmit, setData } = useForm(
