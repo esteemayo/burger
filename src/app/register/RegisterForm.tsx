@@ -1,8 +1,10 @@
 'use client';
 
 import axios from 'axios';
-import VisibilityIcon from '@mui/icons-material/Visibility';
 import { useCallback, useMemo, useState } from 'react';
+import { toast } from 'react-toastify';
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import { useRouter } from 'next/navigation';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 
 import AuthInfo from '@/components/authInfo/AuthInfo';
@@ -19,7 +21,6 @@ import { validateRegisterInputs } from '@/validations/register';
 import { RegisterData, RegisterErrors } from '@/types';
 
 import './Register.scss';
-import { useRouter } from 'next/navigation';
 
 const enum STEPS {
   INFO = 0,
@@ -106,6 +107,7 @@ const RegisterForm = () => {
       console.log('user', res.data);
       console.log({ ...credentials, file: selectedFile });
       router.push('/login');
+      toast.success('Account created...');
     } catch (err: unknown) {
       console.log(err);
     } finally {
