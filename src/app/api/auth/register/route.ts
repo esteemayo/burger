@@ -12,6 +12,7 @@ export const POST = async (req: NextRequest) => {
     const newUser = {
       ...body,
       password: hashedPassword,
+      confirmPassword: undefined,
     };
 
     const user = await prisma.user.create({
@@ -19,7 +20,12 @@ export const POST = async (req: NextRequest) => {
     });
 
     if (user) {
-      return new NextResponse(JSON.stringify(user), { status: 201 });
+      const userObj = {
+        ...user,
+        password: undefined,
+      };
+
+      return new NextResponse(JSON.stringify(userObj), { status: 201 });
     }
   } catch (err) {
     return new NextResponse(
