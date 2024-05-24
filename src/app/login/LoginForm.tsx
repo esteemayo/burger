@@ -1,9 +1,11 @@
 'use client';
 
-import VisibilityIcon from '@mui/icons-material/Visibility';
-import Link from 'next/link';
-import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import { toast } from 'react-toastify';
+import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
+import { signIn } from 'next-auth/react';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 
 import AuthInfo from '@/components/authInfo/AuthInfo';
@@ -53,15 +55,29 @@ const LoginForm = () => {
 
   const onSubmitHandler = () => {
     setIsLoading(true);
-    console.log(data);
 
-    setToStorage(rememberKey, rememberMe);
-    setToStorage(userKey, rememberMe ? data : '');
-    setRememberMe(false);
+    signIn('credentials', {
+      ...data,
+      redirect: true,
+    })
+      .then((callback) => {
+        if (callback?.ok) {
+          toast.success('You are logged in...');
+          router.push('/');
 
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 5000);
+          setToStorage(rememberKey, rememberMe);
+          setToStorage(userKey, rememberMe ? data : '');
+          setRememberMe(false);
+        }
+
+        if (callback?.error) {
+          toast.error(callback.error);
+        }
+      })
+      .catch((err: unknown) => {
+        console.log(err);
+      })
+      .finally(() => setIsLoading(false));
   };
 
   const { data, errors, handleChange, handleSubmit, setData } = useForm(
