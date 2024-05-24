@@ -103,8 +103,8 @@ const RegisterForm = () => {
     const selectedFile = file?.[0];
 
     try {
-      const res = await axios.post('/api/auth/register', credentials);
-      console.log('user', res.data);
+      await axios.post('/api/auth/register', credentials);
+
       console.log({ ...credentials, file: selectedFile });
       router.push('/login');
       toast.success('Account created...');
