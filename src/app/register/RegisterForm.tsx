@@ -1,6 +1,5 @@
 'use client';
 
-import axios from 'axios';
 import { useCallback, useMemo, useState } from 'react';
 import { toast } from 'react-toastify';
 import VisibilityIcon from '@mui/icons-material/Visibility';
@@ -18,6 +17,7 @@ import PhoneInput from '@/components/phoneInput/PhoneInput';
 import { useForm } from '@/hooks/useForm';
 import { validateRegisterInputs } from '@/validations/register';
 
+import { registerUser } from '@/services/authService';
 import { RegisterData, RegisterErrors } from '@/types';
 
 import './Register.scss';
@@ -103,7 +103,7 @@ const RegisterForm = () => {
     const selectedFile = file?.[0];
 
     try {
-      await axios.post('/api/auth/register', credentials);
+      await registerUser({ ...credentials });
 
       console.log({ ...credentials, file: selectedFile });
       router.push('/login');
