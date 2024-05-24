@@ -1,11 +1,11 @@
 import { LoginData, LoginErrors } from '@/types';
 
 export const validateLoginInputs = (data: LoginData) => {
-  const { email, password } = data;
+  const { username, password } = data;
   const errors: LoginErrors = {};
 
-  if (email.trim() === '') {
-    errors.email = 'Email address is required';
+  if (username.trim() === '') {
+    errors.username = 'username is required';
   }
 
   if (password === '') {
