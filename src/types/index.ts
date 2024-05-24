@@ -222,12 +222,12 @@ export interface AuthInfoProps {
 }
 
 export interface LoginData {
-  email: string;
+  username: string;
   password: string;
 }
 
 export interface LoginErrors {
-  email?: string;
+  username?: string;
   password?: string;
 }
 
