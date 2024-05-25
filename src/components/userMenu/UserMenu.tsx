@@ -1,16 +1,17 @@
-import Link from 'next/link';
+'use client';
+
 import Image from 'next/image';
+import Link from 'next/link';
+import { useSession } from 'next-auth/react';
 
 import './UserMenu.scss';
 
-interface UserMenuProps {
-  currentUser: object;
-}
+const UserMenu = () => {
+  const { data: session } = useSession();
 
-const UserMenu = ({ currentUser }: UserMenuProps) => {
   return (
     <div className='userMenu'>
-      {!currentUser ? (
+      {!session ? (
         <>
           <Link href='/login' className='loginLink'>
             <Image
