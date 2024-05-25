@@ -5,6 +5,7 @@ import Link from 'next/link';
 import RoomServiceIcon from '@mui/icons-material/RoomService';
 import Image from 'next/image';
 import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useSession } from 'next-auth/react';
 
 import CartMenu from '../cartMenu/CartMenu';
 import Logo from '../logo/Logo';
@@ -18,6 +19,8 @@ import { useCartControls } from '@/hooks/useCartControls';
 import './Navbar.scss';
 
 const Navbar = () => {
+  const { data: session } = useSession();
+
   const pathname = usePathname();
   const { searchQuery, handleChange, handleSubmit } = useSearch();
   const { handleDecrement, handleIncrement } = useCartControls();
@@ -58,9 +61,9 @@ const Navbar = () => {
             <span>Products</span>
           </Link>
           <div className='user'>
-            {currentUser ? (
+            {!!session ? (
               <Image
-                src={currentUser.image ?? '/img/default.png'}
+                src={session.user.image ?? '/img/default.png'}
                 width={30}
                 height={30}
                 alt=''
