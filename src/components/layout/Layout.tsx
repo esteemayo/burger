@@ -6,25 +6,28 @@ import ScrollTop from '../scrollTop/ScrollTop';
 
 import ModalProvider from '@/providers/ModalProvider';
 import CartProvider from '@/providers/CartProvider';
-import SkeletonProvider from '@/providers/SkeletonProvider';
 import ToasterProvider from '@/providers/ToasterProvider';
+import AuthProvider from '@/providers/AuthProvider';
+import SkeletonProvider from '@/providers/SkeletonProvider';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <main>
-      <ClientOnly>
-        <SkeletonProvider>
-          <CartProvider>
-            <Navbar />
-            <ToasterProvider />
-            <ModalProvider />
-            {children}
-            <Footer />
-            <Designer />
-            <ScrollTop />
-          </CartProvider>
-        </SkeletonProvider>
-      </ClientOnly>
+      <AuthProvider>
+        <ClientOnly>
+          <SkeletonProvider>
+            <CartProvider>
+              <Navbar />
+              <ToasterProvider />
+              <ModalProvider />
+              {children}
+              <Footer />
+              <Designer />
+              <ScrollTop />
+            </CartProvider>
+          </SkeletonProvider>
+        </ClientOnly>
+      </AuthProvider>
     </main>
   );
 };
