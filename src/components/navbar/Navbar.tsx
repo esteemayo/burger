@@ -66,7 +66,7 @@ const Navbar = () => {
                 src={session.user.image ?? '/img/default.png'}
                 width={30}
                 height={30}
-                alt=''
+                alt='avatar'
                 className='userAvatar'
               />
             ) : (
@@ -74,7 +74,7 @@ const Navbar = () => {
                 src='/img/user.png'
                 width={30}
                 height={30}
-                alt='Default avatar'
+                alt='default avatar'
               />
             )}
             <UserMenu />
