@@ -6,6 +6,7 @@ import RoomServiceIcon from '@mui/icons-material/RoomService';
 import ProductCard from '../productCard/ProductCard';
 import ProductCardSkeleton from '../productCardSkeleton/ProductCardSkeleton';
 
+import { ProductType } from '@/types';
 import { getFeaturedProducts } from '@/services/productService';
 
 import './Menus.scss';
@@ -32,10 +33,10 @@ const Menus = () => {
         </div>
         <div className='wrapper'>
           {isLoading
-            ? products?.map((item) => {
+            ? products?.map((item: ProductType) => {
                 return <ProductCardSkeleton key={item.id} />;
               })
-            : products?.map((product) => {
+            : products?.map((product: ProductType) => {
                 return <ProductCard key={product.id} product={product} />;
               })}
         </div>
