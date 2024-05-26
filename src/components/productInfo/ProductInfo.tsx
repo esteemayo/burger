@@ -1,5 +1,6 @@
 'use client';
 
+import { useMemo } from 'react';
 import Image from 'next/image';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
@@ -17,6 +18,10 @@ const ProductInfo = ({
   ratingsAverage,
   ratingsQuantity,
 }: ProductInfoProps) => {
+  const reviewLabel = useMemo(() => {
+    return ratingsQuantity < 2 ? `${ratingsQuantity} review` : `${ratingsQuantity} reviews`
+  }, [ratingsQuantity])
+
   return (
     <section className='productInfo'>
       <div className='container'>
@@ -27,7 +32,7 @@ const ProductInfo = ({
             <div className='starRating'>
               <StarRating name='read-only' value={ratingsAverage} readOnly />
             </div>
-            <span className='totalReview'>{ratingsQuantity} reviews</span>
+            <span className='totalReview'>{reviewLabel}</span>
           </div>
           <span className='heartWrap'>
             <Image
