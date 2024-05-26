@@ -1,9 +1,6 @@
 import type { Metadata } from 'next';
 
-import RegisterForm from './RegisterForm';
-import RegisterImage from './RegisterImage';
-
-import './Register.scss';
+import RegisterClient from './RegisterClient';
 
 export const metadata: Metadata = {
   title: 'Burger - Register page',
@@ -12,16 +9,7 @@ export const metadata: Metadata = {
 };
 
 const Register = () => {
-  return (
-    <div className='register'>
-      <div className='container'>
-        <div className='wrapper'>
-          <RegisterImage />
-          <RegisterForm />
-        </div>
-      </div>
-    </div>
-  );
+  return <RegisterClient />;
 };
 
 export default Register;
