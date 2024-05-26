@@ -20,10 +20,10 @@ const ProductLists = ({
               return <ProductCardSkeleton key={index} />;
             })
         : type === 'products'
-        ? data.slice(0, productToShow).map((item) => {
+        ? data?.slice(0, productToShow).map((item) => {
             return <ProductCard key={item.id} product={item} />;
           })
-        : data.map((item) => {
+        : data?.map((item) => {
             return <ProductCard key={item.id} product={item} />;
           })}
     </section>

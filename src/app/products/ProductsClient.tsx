@@ -1,18 +1,26 @@
 'use client';
 
+import { useQuery } from '@tanstack/react-query';
 import Link from 'next/link';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 
 import EmptyState from '@/components/emptyState/EmptyState';
 import ProductLists from '@/components/productLists/ProductLists';
 
-import { products } from '@/data';
+import { getProducts } from '@/services/productService';
 
 import './Products.scss';
 
 const ProductsClient = () => {
-  const [isLoading, setIsLoading] = useState(true);
-  const [data] = useState(products);
+  const { isLoading, data: products } = useQuery({
+    queryKey: ['products'],
+    queryFn: async () => {
+      const { data } = await getProducts();
+      return data;
+    },
+  });
+
+  const [data, setData] = useState([]);
   const [productToShow, setProductToShow] = useState(6);
 
   const handleSeeMore = useCallback(
@@ -27,20 +35,18 @@ const ProductsClient = () => {
   );
 
   const productLabel = useMemo(() => {
-    return `${data.length} main features`;
-  }, [data.length]);
+    return `${isLoading ? 0 : data?.length} main features`;
+  }, [data?.length, isLoading]);
 
   const btnWrapClasses = useMemo(() => {
-    return productToShow < data.length ? 'btnContainer show' : 'btnContainer';
-  }, [data.length, productToShow]);
+    return productToShow < data?.length ? 'btnContainer show' : 'btnContainer';
+  }, [data?.length, productToShow]);
 
   useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 5000);
-  }, []);
+    setData(products);
+  }, [products]);
 
-  if (products.length < 1) {
+  if (products?.length < 1) {
     return (
       <EmptyState
         title='No products found!'
