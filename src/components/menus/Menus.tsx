@@ -1,23 +1,23 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useQuery } from '@tanstack/react-query';
 import RoomServiceIcon from '@mui/icons-material/RoomService';
 
 import ProductCard from '../productCard/ProductCard';
 import ProductCardSkeleton from '../productCardSkeleton/ProductCardSkeleton';
 
-import { cardMenus } from '@/data';
+import { getFeaturedProducts } from '@/services/productService';
 
 import './Menus.scss';
 
 const Menus = () => {
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 5000);
-  }, []);
+  const { isLoading, data: products } = useQuery({
+    queryKey: ['products'],
+    queryFn: async () => {
+      const { data } = await getFeaturedProducts();
+      return data;
+    },
+  });
 
   return (
     <section className='menusContainer'>
@@ -32,11 +32,11 @@ const Menus = () => {
         </div>
         <div className='wrapper'>
           {isLoading
-            ? cardMenus.map((item) => {
+            ? products?.map((item) => {
                 return <ProductCardSkeleton key={item.id} />;
               })
-            : cardMenus.map((menu) => {
-                return <ProductCard key={menu.id} product={menu} />;
+            : products?.map((product) => {
+                return <ProductCard key={product.id} product={product} />;
               })}
         </div>
       </div>
