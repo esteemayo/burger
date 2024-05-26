@@ -1,12 +1,10 @@
+import { HeroProps } from '@/types';
+
 import './Hero.scss';
 
-interface HeroProps {
-  name: string;
-}
-
-const Hero = ({ name }: HeroProps) => {
+const Hero = ({ name, image }: HeroProps) => {
   return (
-    <header className='hero'>
+    <header className='hero' style={{ backgroundImage: `url(${image})` }}>
       <div className='headingWrap'>
         <h1 className='heroHeading'>{name}</h1>
         <div className='heroSubHeading'>

@@ -317,6 +317,11 @@ export interface ProductClientProps {
   product: SingleProductType;
 }
 
+export interface HeroProps {
+  name: string;
+  image: string;
+}
+
 export interface ProductInfoProps {
   name: string;
   desc: string;

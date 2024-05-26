@@ -10,8 +10,14 @@ import './Product.scss';
 const ProductClient = ({ product }: ProductClientProps) => {
   return (
     <div className='product'>
-      <Hero name={product.name} />
-      <ProductInfo name={product.name} desc={product.desc} price={product.price} ratingsAverage={product.ratingsAverage} ratingsQuantity={product.ratingsQuantity} />
+      <Hero name={product.name} image={product.image} />
+      <ProductInfo
+        name={product.name}
+        desc={product.desc}
+        price={product.price}
+        ratingsAverage={product.ratingsAverage}
+        ratingsQuantity={product.ratingsQuantity}
+      />
       <ProductReview />
       <RelatedProducts />
     </div>
