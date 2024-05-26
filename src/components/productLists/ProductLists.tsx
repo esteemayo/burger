@@ -23,8 +23,8 @@ const ProductLists = ({
         ? data?.slice(0, productToShow).map((item) => {
             return <ProductCard key={item.id} product={item} />;
           })
-        : data?.map((item) => {
-            return <ProductCard key={item.id} product={item} />;
+        : data?.map((product) => {
+            return <ProductCard key={product.id} product={product} />;
           })}
     </section>
   );
