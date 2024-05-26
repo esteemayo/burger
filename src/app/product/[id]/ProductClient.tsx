@@ -3,9 +3,11 @@ import ProductReview from '@/components/productReview/ProductReview';
 import ProductInfo from '@/components/productInfo/ProductInfo';
 import RelatedProducts from '@/components/relatedProducts/RelatedProducts';
 
+import { ProductClientProps } from '@/types';
+
 import './Product.scss';
 
-const ProductClient = () => {
+const ProductClient = ({ product }: ProductClientProps) => {
   return (
     <div className='product'>
       <Hero />
