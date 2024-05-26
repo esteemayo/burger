@@ -300,6 +300,23 @@ export interface ProductListsProps {
   type?: 'products' | 'search';
 }
 
+type SingleProductType = {
+  id: string;
+  createdAt: string;
+  name: string;
+  desc: string;
+  image: string;
+  price: number;
+  ingredients: string[];
+  isFeatured: boolean;
+  ratingsAverage: number;
+  ratingsQuantity: number;
+};
+
+export interface ProductClientProps {
+  product: SingleProductType;
+}
+
 export interface ProductInfoProps {
   rating: number;
 }
