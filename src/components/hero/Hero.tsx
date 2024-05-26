@@ -1,10 +1,14 @@
 import './Hero.scss';
 
-const Hero = () => {
+interface HeroProps {
+  name: string;
+}
+
+const Hero = ({ name }: HeroProps) => {
   return (
     <header className='hero'>
       <div className='headingWrap'>
-        <h1 className='heroHeading'>Double grilled chicken burger</h1>
+        <h1 className='heroHeading'>{name}</h1>
         <div className='heroSubHeading'>
           <span className='heroText'>Welcome to burger</span>
         </div>

@@ -1,6 +1,7 @@
 import ProductClient from './ProductClient';
 import EmptyState from '@/components/emptyState/EmptyState';
 
+import { SingleProductType } from '@/types';
 import { getProduct } from '@/services/productService';
 
 const getData = async (productId: string) => {
@@ -20,7 +21,7 @@ interface IParams {
 }
 
 const Product = async ({ params: { id } }: IParams) => {
-  const product = await getData(id);
+  const product: SingleProductType = await getData(id);
   console.log(product);
 
   if (!product) {

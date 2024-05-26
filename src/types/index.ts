@@ -300,7 +300,7 @@ export interface ProductListsProps {
   type?: 'products' | 'search';
 }
 
-type SingleProductType = {
+export type SingleProductType = {
   id: string;
   createdAt: string;
   name: string;
@@ -318,7 +318,11 @@ export interface ProductClientProps {
 }
 
 export interface ProductInfoProps {
-  rating: number;
+  name: string;
+  desc: string;
+  price: number;
+  ratingsAverage: number;
+  ratingsQuantity: number;
 }
 
 export interface ReviewProps {
