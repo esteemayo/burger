@@ -294,7 +294,7 @@ export interface ProductErrors {
 }
 
 export interface ProductListsProps {
-  data: CardMenu;
+  data: ProductType[];
   loading: boolean;
   productToShow?: number;
   type?: 'products' | 'search';
