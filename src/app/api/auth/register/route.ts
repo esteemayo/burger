@@ -27,7 +27,7 @@ export const POST = async (req: NextRequest) => {
 
       return new NextResponse(JSON.stringify(userObj), { status: 201 });
     }
-  } catch (err) {
+  } catch (err: unknown) {
     return new NextResponse(
       JSON.stringify({ message: 'Something went wrong' }),
       { status: 500 }
