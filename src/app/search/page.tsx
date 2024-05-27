@@ -1,9 +1,6 @@
 import type { Metadata } from 'next';
 
-import EmptyState from '@/components/emptyState/EmptyState';
 import SearchClient from '@/components/searchClient/SearchClient';
-
-import { products } from '@/data';
 
 import './Search.scss';
 
@@ -12,21 +9,10 @@ export const metadata: Metadata = {
 };
 
 const Search = () => {
-  if (products.length < 1) {
-    return (
-      <EmptyState
-        title='No product found!'
-        subtitle='No result matches your search criteria.'
-        imgSrc='web-search'
-        showReset
-      />
-    );
-  }
-
   return (
     <div className='search'>
       <div className='container'>
-        <SearchClient products={products} />
+        <SearchClient />
       </div>
     </div>
   );

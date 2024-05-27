@@ -517,10 +517,6 @@ export interface EmptyStateProps {
   showReset?: boolean;
 }
 
-export interface SearchClientProps {
-  products: CardMenu;
-}
-
 export interface OrderDetailProps {
   order: {
     id: number;
