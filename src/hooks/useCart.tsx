@@ -29,8 +29,9 @@ export const useCart = (product: CartItem) => {
       }
 
       addToCart({ ...product, quantity });
+      setQuantity(1);
     },
-    [addToCart, product, quantity]
+    [addToCart, product, quantity, router, session]
   );
 
   return {

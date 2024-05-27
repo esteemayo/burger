@@ -48,7 +48,14 @@ const ProductInfo = ({ product }: ProductInfoProps) => {
           <span className='price'>{formatCurrency(product.price)}</span>
         </div>
         <div className='quantity'>
-          <input type='number' value={quantity} defaultValue={1} min={1} max={10} onChange={handleChange} />
+          <input
+            type='number'
+            value={quantity}
+            defaultValue={1}
+            min={1}
+            max={10}
+            onChange={handleChange}
+          />
           <button type='button' onClick={handleClick}>
             <ShoppingCartIcon />
             Add to Cart
