@@ -19,9 +19,9 @@ const ProductInfo = ({ product }: ProductInfoProps) => {
   const { quantity, handleChange, handleClick } = useCart(product);
 
   const reviewLabel = useMemo(() => {
-    return product.ratingsQuantity < 2
-      ? `${product.ratingsQuantity} review`
-      : `${product.ratingsQuantity} reviews`;
+    return (product.ratingsQuantity === 0 || product.ratingsQuantity > 1)
+      ? `${product.ratingsQuantity} reviews`
+      : `${product.ratingsQuantity} review`;
   }, [product.ratingsQuantity]);
 
   return (
