@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: IParams): Promise<Metadata> {
   const { data } = await getProduct(id);
 
   return {
-    title: `Burger - ${data.name}` page,
+    title: `Burger - ${data.name} page`,
   };
 }
 
