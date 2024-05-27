@@ -19,7 +19,12 @@ export const GET = async (req: NextRequest, { params }: IParams) => {
     });
 
     if (!product) {
-      throw new Error(`No product found with the given ID → ${productId}`);
+      return new NextResponse(
+        JSON.stringify({
+          message: `No product found with the given ID → ${productId}`,
+        }),
+        { status: 400 }
+      );
     }
 
     return new NextResponse(JSON.stringify(product), { status: 200 });
