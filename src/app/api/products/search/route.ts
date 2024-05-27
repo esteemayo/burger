@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 
 import { prisma } from '@/utils/connect';
 
-export const POST = async (req: NextRequest) => {
+export const GET = async (req: NextRequest) => {
   const { searchParams } = new URL(req.url);
   const searchQuery = searchParams.get('q');
 
