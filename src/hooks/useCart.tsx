@@ -10,6 +10,10 @@ export const useCart = (product: CartItem) => {
 
   const [quantity, setQuantity] = useState(1);
 
+  const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+    setQuantity(+e.target.value);
+  }, []);
+
   const handleClick = useCallback(
     (e: React.MouseEvent<HTMLButtonElement>) => {
       e.stopPropagation();
@@ -22,6 +26,7 @@ export const useCart = (product: CartItem) => {
   return {
     quantity,
     setQuantity,
+    handleChange,
     handleClick,
   };
 };

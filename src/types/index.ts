@@ -323,11 +323,7 @@ export interface HeroProps {
 }
 
 export interface ProductInfoProps {
-  name: string;
-  desc: string;
-  price: number;
-  ratingsAverage: number;
-  ratingsQuantity: number;
+  product: SingleProductType;
 }
 
 export interface ReviewProps {

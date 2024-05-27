@@ -11,13 +11,7 @@ const ProductClient = ({ product }: ProductClientProps) => {
   return (
     <div className='product'>
       <Hero name={product.name} image={product.image} />
-      <ProductInfo
-        name={product.name}
-        desc={product.desc}
-        price={product.price}
-        ratingsAverage={product.ratingsAverage}
-        ratingsQuantity={product.ratingsQuantity}
-      />
+      <ProductInfo product={product} />
       <ProductReview />
       <RelatedProducts />
     </div>
