@@ -22,7 +22,6 @@ interface IParams {
 
 const Product = async ({ params: { id } }: IParams) => {
   const product: SingleProductType = await getData(id);
-  console.log(product);
 
   if (!product) {
     return (
