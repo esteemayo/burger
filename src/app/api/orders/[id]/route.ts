@@ -22,6 +22,15 @@ export const GET = async (req: NextRequest, { params }: IParams) => {
           },
         });
 
+        if (!order) {
+          return new NextResponse(
+            JSON.stringify({
+              message: `No order found with the given ID → ${orderId}`,
+            }),
+            { status: 400 }
+          );
+        }
+
         return new NextResponse(JSON.stringify(order), { status: 200 });
       }
 
@@ -32,7 +41,60 @@ export const GET = async (req: NextRequest, { params }: IParams) => {
         },
       });
 
+      if (!order) {
+        return new NextResponse(
+          JSON.stringify({
+            message: `No order found with the given ID → ${orderId}`,
+          }),
+          { status: 400 }
+        );
+      }
+
       return new NextResponse(JSON.stringify(order), { status: 200 });
+    } catch (err: unknown) {
+      return new NextResponse(
+        JSON.stringify({ message: 'Something went wrong' }),
+        { status: 500 }
+      );
+    }
+  }
+  return new NextResponse(
+    JSON.stringify({ message: 'You are not authenticated' }),
+    { status: 401 }
+  );
+};
+
+export const PATCH = async (req: NextRequest, { params }: IParams) => {
+  const { id: orderId } = params;
+  const session = await getAuthSession();
+
+  if (session) {
+    try {
+      const body = await req.json();
+
+      if (session.user.isAdmin) {
+        const order = await prisma.order.update({
+          where: {
+            id: orderId,
+          },
+          data: { ...body },
+        });
+
+        if (!order) {
+          return new NextResponse(
+            JSON.stringify({
+              message: `No order found with the given ID → ${orderId}`,
+            }),
+            { status: 400 }
+          );
+        }
+
+        return new NextResponse(JSON.stringify(order), { status: 200 });
+      }
+      return new NextResponse(
+        JSON.stringify({ message: 'You are not authorized' }),
+        { status: 403 }
+      );
     } catch (err: unknown) {
       return new NextResponse(
         JSON.stringify({ message: 'Something went wrong' }),
