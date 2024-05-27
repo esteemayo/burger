@@ -30,7 +30,7 @@ export const useCart = (product: CartItem) => {
       }
 
       if (session.user.isAdmin) {
-        toast.warn('You are not authorized to perfoem this action!');
+        toast.warn('You are not authorized!');
         return;
       }
 
