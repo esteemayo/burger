@@ -29,6 +29,11 @@ export const useCart = (product: CartItem) => {
         return;
       }
 
+      if (session.user.isAdmin) {
+        toast.warn('You are not authorized to perfoem this action!');
+        return;
+      }
+
       addToCart({ ...product, quantity });
       setQuantity(1);
 
