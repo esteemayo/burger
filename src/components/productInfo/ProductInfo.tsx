@@ -19,8 +19,10 @@ const ProductInfo = ({
   ratingsQuantity,
 }: ProductInfoProps) => {
   const reviewLabel = useMemo(() => {
-    return ratingsQuantity < 2 ? `${ratingsQuantity} review` : `${ratingsQuantity} reviews`
-  }, [ratingsQuantity])
+    return ratingsQuantity < 2
+      ? `${ratingsQuantity} review`
+      : `${ratingsQuantity} reviews`;
+  }, [ratingsQuantity]);
 
   return (
     <section className='productInfo'>
