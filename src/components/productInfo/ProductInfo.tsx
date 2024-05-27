@@ -4,11 +4,11 @@ import { useMemo } from 'react';
 import Image from 'next/image';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
-import { ProductInfoProps } from '@/types';
-import { formatCurrency } from '@/utils/formatCurrency';
-
 import { useCart } from '@/hooks/useCart';
 import { useCartControls } from '@/hooks/useCartControls';
+
+import { ProductInfoProps } from '@/types';
+import { formatCurrency } from '@/utils/formatCurrency';
 
 import StarRating from '../starRating/StarRating';
 

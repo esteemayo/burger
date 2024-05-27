@@ -1,7 +1,7 @@
 'use client';
 
 import { useSession } from 'next-auth/react';
-import { toast } from 'react-taostify';
+import { toast } from 'react-toastify';
 import { useCallback, useState } from 'react';
 import { useRouter } from 'next/navigation';
 
