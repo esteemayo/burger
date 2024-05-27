@@ -10,10 +10,15 @@ export type GenderType = {
 
 export type CartItem = {
   id: string;
+  createdAt: string;
   name: string;
+  desc: string;
   image: string;
   price: number;
   ingredients?: string[];
+  isFeatured: boolean;
+  ratingsAverage: number;
+  ratingsQuantity: number;
   quantity: number;
 };
 
@@ -149,12 +154,16 @@ export type AccountCardType = AccountCard[];
 
 export type ProductType = {
   id: string;
+  createdAt: string;
   name: string;
+  desc: string;
   image: string;
   price: number;
   ingredients?: string[];
-  quantity?: number;
-  createdAt: string;
+  isFeatured: boolean;
+  ratingsAverage: number;
+  ratingsQuantity: number;
+  quantity: number;
 };
 
 export interface ProductCardProps {
@@ -307,10 +316,11 @@ export type SingleProductType = {
   desc: string;
   image: string;
   price: number;
-  ingredients: string[];
+  ingredients?: string[];
   isFeatured: boolean;
   ratingsAverage: number;
   ratingsQuantity: number;
+  quantity: number;
 };
 
 export interface ProductClientProps {
@@ -323,7 +333,7 @@ export interface HeroProps {
 }
 
 export interface ProductInfoProps {
-  product: SingleProductType;
+  product: SingleProductType | CartItem;
 }
 
 export interface ReviewProps {
