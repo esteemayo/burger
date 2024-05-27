@@ -15,7 +15,6 @@ export const GET = async (req: NextRequest) => {
 
     return new NextResponse(JSON.stringify(products), { status: 200 });
   } catch (err: unknown) {
-    console.log(err);
     return new NextResponse(
       JSON.stringify({ message: 'Something went wrong' }),
       { status: 500 }
@@ -33,7 +32,6 @@ export const POST = async (req: NextRequest) => {
 
     return new NextResponse(JSON.stringify(product), { status: 201 });
   } catch (err: unknown) {
-    console.log(err);
     return new NextResponse(
       JSON.stringify({ message: 'Something went wrong' }),
       { status: 500 }

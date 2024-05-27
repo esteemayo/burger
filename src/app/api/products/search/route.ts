@@ -31,7 +31,7 @@ export const POST = async (req: NextRequest) => {
     });
 
     return new NextResponse(JSON.stringify(products), { status: 200 });
-  } catch (err) {
+  } catch (err: unknown) {
     return new NextResponse(
       JSON.stringify({ message: 'Something went wrong' }),
       { status: 500 }
