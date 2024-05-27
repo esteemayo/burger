@@ -10,7 +10,7 @@ export const useCartControls = (product?: CartItem) => {
   const toggleQuantity = useCartStore((store) => store.toggleQuantity);
 
   const handleDecrement = useCallback(
-    (e: React.MouseEvent<HTMLButtonElement>, productId: number) => {
+    (e: React.MouseEvent<HTMLButtonElement>, productId: string) => {
       e.stopPropagation();
       toggleQuantity({ type: 'dec', id: productId });
     },
@@ -18,7 +18,7 @@ export const useCartControls = (product?: CartItem) => {
   );
 
   const handleIncrement = useCallback(
-    (e: React.MouseEvent<HTMLButtonElement>, productId: number) => {
+    (e: React.MouseEvent<HTMLButtonElement>, productId: string) => {
       e.stopPropagation();
       toggleQuantity({ type: 'inc', id: productId });
     },

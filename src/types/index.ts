@@ -9,7 +9,7 @@ export type GenderType = {
 }[];
 
 export type CartItem = {
-  id: number;
+  id: string;
   name: string;
   image: string;
   price: number;
@@ -29,8 +29,8 @@ export interface CartActionType {
   reset(): void;
   addToCart(product: CartItem): void;
   clearCart(): void;
-  removeFromCart(payload: number): void;
-  toggleQuantity(payload: { type: string; id: number }): void;
+  removeFromCart(payload: string): void;
+  toggleQuantity(payload: { type: string; id: string }): void;
   calcTotals(): void;
 }
 
