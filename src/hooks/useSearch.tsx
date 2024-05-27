@@ -28,7 +28,6 @@ export const useSearch = () => {
         const encodedSearchQuery = encodeURI(searchQuery);
 
         router.push(`/search?q=${encodedSearchQuery}`);
-        console.log(searchQuery);
         setSearchQuery('');
       }
     },
