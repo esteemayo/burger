@@ -1,3 +1,5 @@
+import type { Metadata } from 'next';
+
 import ProductClient from './ProductClient';
 import EmptyState from '@/components/emptyState/EmptyState';
 
@@ -17,6 +19,16 @@ const getData = async (productId: string) => {
 interface IParams {
   params: {
     id: string;
+  };
+}
+
+export async function generateMetadata({ params }: IParams): Promise<Metadata> {
+  const { id } = params;
+
+  const { data } = await getProduct(id);
+
+  return {
+    title: `Burger - ${data.name}` page,
   };
 }
 
