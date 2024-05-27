@@ -8,11 +8,14 @@ import { ProductInfoProps } from '@/types';
 import { formatCurrency } from '@/utils/formatCurrency';
 
 import { useCart } from '@/hooks/useCart';
+import { useCartControls } from '@/hooks/useCartControls';
+
 import StarRating from '../starRating/StarRating';
 
 import './ProductInfo.scss';
 
 const ProductInfo = ({ product }: ProductInfoProps) => {
+  const { btnLabel, inCart } = useCartControls(product);
   const { quantity, handleChange, handleClick } = useCart(product);
 
   const reviewLabel = useMemo(() => {
@@ -56,9 +59,9 @@ const ProductInfo = ({ product }: ProductInfoProps) => {
             max={10}
             onChange={handleChange}
           />
-          <button type='button' onClick={handleClick}>
+          <button type='button' disabled={inCart} onClick={handleClick}>
             <ShoppingCartIcon />
-            Add to Cart
+            {btnLabel}
           </button>
         </div>
       </div>

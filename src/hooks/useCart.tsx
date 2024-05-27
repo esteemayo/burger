@@ -1,8 +1,9 @@
 'use client';
 
 import { useSession } from 'next-auth/react';
-import { useRouter } from 'next/navigation';
+import { toast } from 'react-taostify';
 import { useCallback, useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 import { CartItem } from '@/types';
 import { useCartStore } from './useCartStore';
@@ -30,6 +31,8 @@ export const useCart = (product: CartItem) => {
 
       addToCart({ ...product, quantity });
       setQuantity(1);
+
+      toast.success('Product added to cart!');
     },
     [addToCart, product, quantity, router, session]
   );
