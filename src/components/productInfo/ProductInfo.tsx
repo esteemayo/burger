@@ -11,9 +11,9 @@ import { ProductInfoProps } from '@/types';
 import { formatCurrency } from '@/utils/formatCurrency';
 
 import StarRating from '../starRating/StarRating';
+import HeartButton from '../heartButton/HeartButton';
 
 import './ProductInfo.scss';
-import FavoriteButton from '../favoriteButton/FavoriteButton';
 
 const ProductInfo = ({ product }: ProductInfoProps) => {
   const { btnLabel, inCart } = useCartControls(product);
@@ -41,7 +41,7 @@ const ProductInfo = ({ product }: ProductInfoProps) => {
             </div>
             <span className='totalReview'>{reviewLabel}</span>
           </div>
-          <FavoriteButton />
+          <HeartButton />
           <span className='price'>{formatCurrency(product.price)}</span>
         </div>
         <div className='quantity'>
