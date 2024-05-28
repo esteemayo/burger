@@ -1,9 +1,9 @@
 'use client';
 
-import Link from 'next/link';
 import { useCallback } from 'react';
+import Link from 'next/link';
+import { signOut } from 'next-auth/react';
 import Image from 'next/image';
-import { signOut, useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 
 import { UserMenuProps } from '@/types';
@@ -12,7 +12,6 @@ import './UserMenu.scss';
 
 const UserMenu = ({ currentUser }: UserMenuProps) => {
   const router = useRouter();
-  const { data: session } = useSession();
 
   const handleLogout = useCallback(
     (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -26,7 +25,7 @@ const UserMenu = ({ currentUser }: UserMenuProps) => {
 
   return (
     <div className='userMenu'>
-      {!session ? (
+      {!currentUser ? (
         <>
           <Link href='/login' className='loginLink'>
             <Image
@@ -67,7 +66,7 @@ const UserMenu = ({ currentUser }: UserMenuProps) => {
             </Link>
           </div>
           <div className='userFooter'>
-            <span>{session.user.name}</span>
+            <span>{currentUser.user.name}</span>
             <button type='button' onClick={handleLogout}>
               Sign out
             </button>

@@ -77,7 +77,7 @@ const Navbar = () => {
                 alt='default avatar'
               />
             )}
-            <UserMenu />
+            <UserMenu currentUser={session} />
           </div>
           <div className='cart'>
             <Image

@@ -40,7 +40,7 @@ export interface CartActionType {
 }
 
 export interface UserMenuProps {
-  currentUser: CurrentUserType;
+  currentUser: CurrentUserType | null;
 }
 
 export interface CartMenuProps {
@@ -550,7 +550,7 @@ export type CurrentUserType = {
 };
 
 export interface IFavorite {
-  (actionId: string, currentUser: CurrentUserType, likes: string[]): {
+  (actionId: string, currentUser: CurrentUserType | null, likes: string[]): {
     hasFavorited: boolean;
     toggleFavorite: (e: React.MouseEvent<HTMLButtonElement>) => Promise<void>;
   };
