@@ -23,7 +23,7 @@ const useFavorite: IFavorite = (
   }, [currentUser, likes]);
 
   const toggleFavorite = useCallback(
-    async (e: React.MouseEvent<HTMLButtonElement>) => {
+    async (e: React.MouseEvent<HTMLSpanElement>) => {
       e.stopPropagation();
 
       if (!currentUser) {

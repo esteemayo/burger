@@ -16,6 +16,7 @@ export type CartItem = {
   image: string;
   price: number;
   ingredients?: string[];
+  likes: string[];
   isFeatured: boolean;
   ratingsAverage: number;
   ratingsQuantity: number;
@@ -321,6 +322,7 @@ export type SingleProductType = {
   image: string;
   price: number;
   ingredients?: string[];
+  likes: string[];
   isFeatured: boolean;
   ratingsAverage: number;
   ratingsQuantity: number;
@@ -338,6 +340,7 @@ export interface HeroProps {
 
 export interface ProductInfoProps {
   product: SingleProductType | CartItem;
+  currentUser: CurrentUserType | undefined;
 }
 
 export interface ReviewProps {
