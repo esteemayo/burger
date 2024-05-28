@@ -6,9 +6,11 @@ import Image from 'next/image';
 import { signOut, useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 
+import { UserMenuProps } from '@/types';
+
 import './UserMenu.scss';
 
-const UserMenu = () => {
+const UserMenu = ({ currentUser }: UserMenuProps) => {
   const router = useRouter();
   const { data: session } = useSession();
 

@@ -39,6 +39,10 @@ export interface CartActionType {
   calcTotals(): void;
 }
 
+export interface UserMenuProps {
+  currentUser: CurrentUserType;
+}
+
 export interface CartMenuProps {
   products: CartItem[];
   totalPrice: number;
