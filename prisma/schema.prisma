@@ -83,10 +83,10 @@ model Product {
   name            String   @unique
   desc            String
   image           String
-  price           Decimal
+  price           Int
   ingredients     String[]
   isFeatured      Boolean  @default(false)
-  ratingsAverage  Decimal
+  ratingsAverage  Int
   ratingsQuantity Int
   likes           String[]
   Review          Review[]
@@ -110,7 +110,7 @@ model Review {
 model Order {
   id        String   @id @default(cuid())
   createdAt DateTime @default(now())
-  price     Decimal
+  price     Int
   products  Json[]
   status    String
   intent_id String?  @unique
