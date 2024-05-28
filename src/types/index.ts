@@ -2,6 +2,7 @@ import { SvgIconTypeMap } from '@mui/material';
 import React from 'react';
 import { OverridableComponent } from '@mui/material/OverridableComponent';
 import { IconType } from 'react-icons/lib';
+import { User } from 'next-auth';
 
 export type GenderType = {
   value: string;
@@ -40,7 +41,7 @@ export interface CartActionType {
 }
 
 export interface UserMenuProps {
-  currentUser: CurrentUserType | null;
+  currentUser?: CurrentUserType;
 }
 
 export interface CartMenuProps {
@@ -539,18 +540,15 @@ export interface OrderDetailProps {
 }
 
 export type CurrentUserType = {
-  expires: string;
-  user: {
-    id: string;
-    name: string;
-    email: string;
-    image?: string;
-    isAdmin: boolean;
-  };
+  id: string;
+  name: string;
+  email: string;
+  image?: string;
+  isAdmin: Boolean;
 };
 
 export interface IFavorite {
-  (actionId: string, currentUser: CurrentUserType | null, likes: string[]): {
+  (actionId: string, currentUser?: CurrentUserType, likes: string[]): {
     hasFavorited: boolean;
     toggleFavorite: (e: React.MouseEvent<HTMLButtonElement>) => Promise<void>;
   };

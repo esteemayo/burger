@@ -66,7 +66,7 @@ const UserMenu = ({ currentUser }: UserMenuProps) => {
             </Link>
           </div>
           <div className='userFooter'>
-            <span>{currentUser.user.name}</span>
+            <span>{currentUser.name}</span>
             <button type='button' onClick={handleLogout}>
               Sign out
             </button>
