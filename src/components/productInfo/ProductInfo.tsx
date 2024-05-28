@@ -13,13 +13,14 @@ import { formatCurrency } from '@/utils/formatCurrency';
 import StarRating from '../starRating/StarRating';
 
 import './ProductInfo.scss';
+import FavoriteButton from '../favoriteButton/FavoriteButton';
 
 const ProductInfo = ({ product }: ProductInfoProps) => {
   const { btnLabel, inCart } = useCartControls(product);
   const { quantity, handleChange, handleClick } = useCart(product);
 
   const reviewLabel = useMemo(() => {
-    return (product.ratingsQuantity === 0 || product.ratingsQuantity > 1)
+    return product.ratingsQuantity === 0 || product.ratingsQuantity > 1
       ? `${product.ratingsQuantity} reviews`
       : `${product.ratingsQuantity} review`;
   }, [product.ratingsQuantity]);
@@ -40,14 +41,7 @@ const ProductInfo = ({ product }: ProductInfoProps) => {
             </div>
             <span className='totalReview'>{reviewLabel}</span>
           </div>
-          <span className='heartWrap'>
-            <Image
-              src='/svg/heart-1.svg'
-              width={20}
-              height={20}
-              alt='heart icon'
-            />
-          </span>
+          <FavoriteButton />
           <span className='price'>{formatCurrency(product.price)}</span>
         </div>
         <div className='quantity'>

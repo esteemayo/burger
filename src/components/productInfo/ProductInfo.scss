@@ -169,38 +169,6 @@
         }
       }
 
-      .heartWrap {
-        width: 3.6rem;
-        height: 3.6rem;
-        font-size: var(--default-font-size);
-        background-color: $clr-white;
-        border-radius: 50%;
-        cursor: pointer;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        @media only screen and (min-width: 112.5em) {
-          width: 4rem;
-          height: 4rem;
-        }
-
-        @include lg {
-          width: 4rem;
-          height: 4rem;
-        }
-
-        img {
-          max-width: 100%;
-          width: auto;
-          height: auto;
-          padding: 0.8rem;
-          vertical-align: middle;
-          border-radius: 3px;
-        }
-      }
-
       .price {
         font-size: 1.2rem;
         color: #000000de;
