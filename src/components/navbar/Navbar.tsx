@@ -45,12 +45,6 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', isActiveHandler);
   }, [isActiveHandler]);
 
-  const currentUser = {
-    id: 1,
-    name: 'Emmanuel Adebayo',
-    image: '/img/avatar.png',
-  };
-
   return (
     <nav className={navClasses}>
       <div className='wrapper'>
