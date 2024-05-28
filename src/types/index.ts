@@ -2,7 +2,6 @@ import { SvgIconTypeMap } from '@mui/material';
 import React from 'react';
 import { OverridableComponent } from '@mui/material/OverridableComponent';
 import { IconType } from 'react-icons/lib';
-import { User } from 'next-auth';
 
 export type GenderType = {
   value: string;
@@ -556,4 +555,10 @@ export interface IFavorite {
     hasFavorited: boolean;
     toggleFavorite: (e: React.MouseEvent<HTMLButtonElement>) => Promise<void>;
   };
+}
+
+export interface HeartButtonProps {
+  actionId: string;
+  likes: string[];
+  currentUser: CurrentUserType | undefined;
 }
