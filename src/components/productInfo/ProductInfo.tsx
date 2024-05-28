@@ -1,7 +1,6 @@
 'use client';
 
 import { useMemo } from 'react';
-import Image from 'next/image';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 import { useCart } from '@/hooks/useCart';
@@ -15,7 +14,7 @@ import HeartButton from '../heartButton/HeartButton';
 
 import './ProductInfo.scss';
 
-const ProductInfo = ({ product }: ProductInfoProps) => {
+const ProductInfo = ({ product, currentUser }: ProductInfoProps) => {
   const { btnLabel, inCart } = useCartControls(product);
   const { quantity, handleChange, handleClick } = useCart(product);
 
@@ -41,7 +40,11 @@ const ProductInfo = ({ product }: ProductInfoProps) => {
             </div>
             <span className='totalReview'>{reviewLabel}</span>
           </div>
-          <HeartButton />
+          <HeartButton
+            actionId={product.id}
+            likes={product.likes}
+            currentUser={currentUser}
+          />
           <span className='price'>{formatCurrency(product.price)}</span>
         </div>
         <div className='quantity'>
