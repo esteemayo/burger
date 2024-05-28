@@ -548,7 +548,11 @@ export type CurrentUserType = {
 };
 
 export interface IFavorite {
-  (actionId: string, currentUser?: CurrentUserType, likes: string[]): {
+  (
+    actionId: string,
+    currentUser: CurrentUserType | undefined,
+    likes: string[]
+  ): {
     hasFavorited: boolean;
     toggleFavorite: (e: React.MouseEvent<HTMLButtonElement>) => Promise<void>;
   };

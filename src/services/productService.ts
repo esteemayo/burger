@@ -14,3 +14,6 @@ export const searchProducts = (searchQuery: string) =>
 
 export const getProduct = (productId: string) =>
   http.get(productUrl(productId));
+
+export const likeProduct = (productId: string) =>
+  http.patch(`/api/products/like/${productId}`);
