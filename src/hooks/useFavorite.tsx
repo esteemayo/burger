@@ -16,9 +16,9 @@ const useFavorite: IFavorite = (
 
   const hasFavorited = useMemo(() => {
     const product = likes || [];
-    const userId = currentUser?.id;
+    const userId = currentUser?.id || '';
 
-    const list = product.includes(userId!);
+    const list = product.includes(userId);
     return !!list;
   }, [currentUser, likes]);
 
