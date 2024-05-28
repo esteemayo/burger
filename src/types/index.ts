@@ -533,3 +533,21 @@ export interface OrderDetailProps {
     deliveryDate: string;
   };
 }
+
+export type CurrentUserType = {
+  expires: string;
+  user: {
+    id: string;
+    name: string;
+    email: string;
+    image?: string;
+    isAdmin: boolean;
+  };
+};
+
+export interface IFavorite {
+  (actionId: string, currentUser: CurrentUserType, likes: string[]): {
+    hasFavorited: boolean;
+    toggleFavorite: (e: React.MouseEvent<HTMLButtonElement>) => Promise<void>;
+  };
+}
