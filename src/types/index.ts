@@ -42,9 +42,9 @@ export interface CartActionType {
 export interface CartMenuProps {
   products: CartItem[];
   totalPrice: number;
-  onIncrement(e: React.MouseEvent<HTMLButtonElement>, productId: number): void;
-  onDecrement(e: React.MouseEvent<HTMLButtonElement>, productId: number): void;
-  onRemove(productId: number): void;
+  onIncrement(e: React.MouseEvent<HTMLButtonElement>, productId: string): void;
+  onDecrement(e: React.MouseEvent<HTMLButtonElement>, productId: string): void;
+  onRemove(productId: string): void;
 }
 
 export type FooterLinks = {

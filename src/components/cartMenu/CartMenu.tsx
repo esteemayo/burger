@@ -21,7 +21,7 @@ const CartMenu = ({
   const router = useRouter();
 
   const productUrl = useCallback(
-    (id: number) => {
+    (id: string) => {
       return router.push(`/product/${encodeURIComponent(id)}`);
     },
     [router]
