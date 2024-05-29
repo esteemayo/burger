@@ -43,3 +43,53 @@ export const GET = async (req: NextRequest, { params }: IParams) => {
     { status: 401 }
   );
 };
+
+export const PATCH = async (req: NextRequest, { params }: IParams) => {
+  const { id: reviewId } = params;
+  const session = await getAuthSession();
+
+  if (session) {
+    try {
+      const body = await req.json();
+
+      const review = await prisma.review.findUnique({
+        where: {
+          id: reviewId,
+        },
+      });
+
+      if (!review) {
+        return new NextResponse(
+          JSON.stringify({
+            message: `No review found with the given ID → ${reviewId}`,
+          }),
+          { status: 400 }
+        );
+      }
+
+      if (session.user.isAdmin || session.user.id === review.userId) {
+        const updatedReview = await prisma.review.update({
+          where: {
+            id: reviewId,
+          },
+          data: { ...body },
+        });
+
+        return new NextResponse(JSON.stringify(updatedReview), { status: 200 });
+      }
+      return new NextResponse(
+        JSON.stringify({ message: 'You are not authorized' }),
+        { status: 403 }
+      );
+    } catch (err: unknown) {
+      return new NextResponse(
+        JSON.stringify({ message: 'Something went wrong' }),
+        { status: 500 }
+      );
+    }
+  }
+  return new NextResponse(
+    JSON.stringify({ message: 'You are not authenticated' }),
+    { status: 401 }
+  );
+};
