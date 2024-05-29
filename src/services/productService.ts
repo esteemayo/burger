@@ -17,3 +17,8 @@ export const getProduct = (productId: string) =>
 
 export const likeProduct = (productId: string) =>
   http.patch(`/api/products/like/${productId}`);
+
+export const createReviewOnProduct = <T extends object>(
+  data: T,
+  productId: string
+) => http.post(`/api/products/${productId}/reviews`, data);
