@@ -9,6 +9,8 @@ import { ReviewData, ReviewErrors } from '@/types';
 import { validateReviewInputs } from '@/validations/review';
 
 import './ReviewForm.scss';
+import { useMutation, useQueryClient } from '@tanstack/react-query';
+import { createReviewOnProduct } from '@/services/productService';
 
 const initialState: ReviewData = {
   desc: '',
@@ -28,6 +30,24 @@ const ReviewForm = () => {
   const [errors, setErrors] = useState(initialErrorState);
   const [inputs, setInputs] = useState(initialState);
   const [rating, setRating] = useState<number | null>(null);
+
+  const queryClient = useQueryClient();
+
+  const { mutate } = useMutation({
+    mutationFn: async ({
+      data,
+      productId,
+    }: {
+      data: object;
+      productId: string;
+    }) => {
+      const res = await createReviewOnProduct(data, productId);
+      return res.data;
+    },
+    onSuccess() {
+      queryClient.invalidateQueries({ queryKey: ['reviews'] });
+    },
+  });
 
   const handleChange = useCallback(
     ({
