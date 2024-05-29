@@ -26,11 +26,11 @@ const initialErrorState: ReviewErrors = {
   rating: '',
 };
 
-const ReviewForm = () => {
-  const [errors, setErrors] = useState(initialErrorState);
-  const [inputs, setInputs] = useState(initialState);
-  const [rating, setRating] = useState<number | null>(null);
+interface ReviewFormProps {
+  productId: string;
+}
 
+const ReviewForm = ({ productId }: ReviewFormProps) => {
   const queryClient = useQueryClient();
 
   const { mutate } = useMutation({
@@ -48,6 +48,10 @@ const ReviewForm = () => {
       queryClient.invalidateQueries({ queryKey: ['reviews'] });
     },
   });
+
+  const [errors, setErrors] = useState(initialErrorState);
+  const [inputs, setInputs] = useState(initialState);
+  const [rating, setRating] = useState<number | null>(null);
 
   const handleChange = useCallback(
     ({
@@ -87,10 +91,16 @@ const ReviewForm = () => {
 
       setErrors(initialErrorState);
 
+      const data = {
+        rating,
+        ...inputs,
+      };
+
+      mutate({ data, productId });
       console.log({ rating, ...inputs });
       handleClear();
     },
-    [handleClear, inputs, rating]
+    [handleClear, inputs, mutate, productId, rating]
   );
 
   const { desc, name, email, consent } = inputs;

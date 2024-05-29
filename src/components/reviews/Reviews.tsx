@@ -13,7 +13,11 @@ import { useCartStore } from '@/hooks/useCartStore';
 
 import './Reviews.scss';
 
-const Reviews = () => {
+interface ReviewsProps {
+  actionId: string
+}
+
+const Reviews = ({ actionId }: ReviewsProps) => {
   const products = useCartStore((store) => store.products);
 
   const [isOpen, setIsOpen] = useState(true);
@@ -81,7 +85,7 @@ const Reviews = () => {
               <div className='reviewForm'>
                 <div className='respond'>
                   <span className='replyTitle'>{reviewLabel}</span>
-                  <ReviewForm />
+                  <ReviewForm productId={actionId} />
                 </div>
               </div>
             </div>
