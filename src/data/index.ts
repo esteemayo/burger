@@ -207,8 +207,8 @@ export const cardMenus: CardMenu = [
   },
   {
     id: 12,
-    name: 'Double Crunchy X fries',
-    desc: 'Our Double Crunchy chicken x fries are ultra crispy and absolutely bursting with flavour topped with fresh lettuce , cucumbers, Onions, our special sauce and cheese! Its an absolute crowd pleaser',
+    name: 'Double Crunchy Chicken X Fries',
+    desc: 'Our Double Crunchy Chicken x Fries are ultra crispy and absolutely bursting with flavour topped with fresh lettuce , cucumbers, Onions, our special sauce and cheese! Its an absolute crowd pleaser',
     image: '/img/burger-12.jpg',
     ingredients: ['cheese', 'tomato', 'cucumber', 'lettuce', 'onions'],
     price: 21999,
@@ -321,8 +321,8 @@ export const products: CardMenu = [
   },
   {
     id: 12,
-    name: 'Double Crunchy X fries',
-    desc: 'Our Double Crunchy chicken x fries are ultra crispy and absolutely bursting with flavour topped with fresh lettuce , cucumbers, Onions, our special sauce and cheese! Its an absolute crowd pleaser',
+    name: 'Double Crunchy Chicken X fries',
+    desc: 'Our Double Crunchy chicken x Fries are ultra crispy and absolutely bursting with flavour topped with fresh lettuce , cucumbers, Onions, our special sauce and cheese! Its an absolute crowd pleaser',
     image: '/img/burger-12.jpg',
     ingredients: ['cheese', 'tomato', 'cucumber', 'lettuce', 'onions'],
     price: 21999,
@@ -379,7 +379,14 @@ export const products: CardMenu = [
     name: 'A Double Chicken Burger',
     desc: 'A Double Patty A Double Chicken Burger with cheese, tomato, cucumber, lettuce and caramelized onions, Topped with lettuce, tomatoes, cheese and spicy mayo, they are the most delicious, easy dinner and a guaranteed crowd pleaser. Unlike ground chicken burgers that require chicken patties made with ground chicken (or ground turkey), bread crumbs, etc. these juicy chicken burgers need only a handful of ingredients and can be made in a fraction of the time. The chicken is marinated in an aromatic mixture of olive oil, garlic, lemon and spices.',
     image: '/img/burger-18.jpg',
-    ingredients: ['cheese', 'tomato', 'cucumber', 'lettuce', 'onions', 'spicies'],
+    ingredients: [
+      'cheese',
+      'tomato',
+      'cucumber',
+      'lettuce',
+      'onions',
+      'spicies',
+    ],
     price: 15999,
   },
   {
@@ -395,7 +402,14 @@ export const products: CardMenu = [
     name: 'Crunchy Beef Burger X2',
     desc: 'A Double Patty Crunchy Beef x2 Burger with cheese, tomato, cucumber, lettuce and caramelized onions, Topped with lettuce, tomatoes, cheese and spicy mayo, they are the most delicious, easy dinner and a guaranteed crowd pleaser. Unlike ground chicken burgers that require chicken patties made with ground chicken (or ground turkey), bread crumbs, etc. these juicy chicken burgers need only a handful of ingredients and can be made in a fraction of the time. The chicken is marinated in an aromatic mixture of olive oil, garlic, lemon and spices.',
     image: '/img/burger-20.jpg',
-    ingredients: ['cheese', 'tomato', 'cucumber', 'lettuce', 'onions', 'spicies'],
+    ingredients: [
+      'cheese',
+      'tomato',
+      'cucumber',
+      'lettuce',
+      'onions',
+      'spicies',
+    ],
     price: 8999,
   },
   {
@@ -404,7 +418,7 @@ export const products: CardMenu = [
     desc: 'Our Single Patty Single Chicken x Fries Burger with cheese, tomato, cucumber, lettuce and caramelized onions, Topped with lettuce, tomatoes, cheese and spicy mayo, they are the most delicious, easy dinner and a guaranteed crowd pleaser. Unlike ground chicken burgers that require chicken patties made with ground chicken (or ground turkey), bread crumbs, etc. these juicy chicken burgers need only a handful of ingredients and can be made in a fraction of the time. The chicken is marinated in an aromatic mixture of olive oil, garlic, lemon and spices.',
     image: '/img/burger-21.jpg',
     ingredients: ['chicken', 'spicies', 'flour', 'lettuce', 'garlic'],
-    price: 8999,
+    price: 7999,
   },
 ];
 
