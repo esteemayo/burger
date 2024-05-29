@@ -103,6 +103,7 @@ model Review {
   productId String   @map("product_id")
   user      User     @relation(fields: [userId], references: [id])
   userId    String   @map("user_id")
+  consent   Boolean  @default(false)
 
   @@map("reviews")
 }
