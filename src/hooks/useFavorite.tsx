@@ -15,8 +15,8 @@ const useFavorite: IFavorite = (
   const router = useRouter();
 
   const hasFavorited = useMemo(() => {
-    const product = likes || [];
-    const userId = currentUser?.id || '';
+    const product = likes ?? [];
+    const userId = currentUser?.id ?? '';
 
     const list = product.includes(userId);
     return !!list;
