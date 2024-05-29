@@ -97,7 +97,7 @@ model Product {
 model Review {
   id        String   @id @default(cuid())
   createdAt DateTime @default(now())
-  rating    Decimal
+  rating    Int
   desc      String
   product   Product  @relation(fields: [productId], references: [id])
   productId String   @map("product_id")
