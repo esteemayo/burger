@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 
 import { prisma } from '@/utils/connect';
+import { getAuthSession } from '@/utils/auth';
 
 export const GET = async (req: NextRequest) => {
   const { searchParams } = new URL(req.url);
@@ -23,18 +24,32 @@ export const GET = async (req: NextRequest) => {
 };
 
 export const POST = async (req: NextRequest) => {
-  try {
-    const body = await req.json();
+  const session = await getAuthSession();
 
-    const product = await prisma.product.create({
-      data: { ...body },
-    });
+  if (session) {
+    try {
+      if (session.user.isAdmin) {
+        const body = await req.json();
 
-    return new NextResponse(JSON.stringify(product), { status: 201 });
-  } catch (err: unknown) {
-    return new NextResponse(
-      JSON.stringify({ message: 'Something went wrong' }),
-      { status: 500 }
-    );
+        const product = await prisma.product.create({
+          data: { ...body },
+        });
+
+        return new NextResponse(JSON.stringify(product), { status: 201 });
+      }
+      return new NextResponse(
+        JSON.stringify({ message: 'You are not authorized' }),
+        { status: 403 }
+      );
+    } catch (err: unknown) {
+      return new NextResponse(
+        JSON.stringify({ message: 'Something went wrong' }),
+        { status: 500 }
+      );
+    }
   }
+  return new NextResponse(
+    JSON.stringify({ message: 'You are not authenticated' }),
+    { status: 401 }
+  );
 };
