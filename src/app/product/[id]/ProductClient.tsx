@@ -18,7 +18,7 @@ const ProductClient = ({ product }: ProductClientProps) => {
     <div className='product'>
       <Hero name={product.name} image={product.image} />
       <ProductInfo product={product} currentUser={session?.user} />
-      <ProductReview />
+      <ProductReview actionId={product.id} />
       <RelatedProducts />
     </div>
   );

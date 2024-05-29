@@ -9,7 +9,11 @@ import { useCartStore } from '@/hooks/useCartStore';
 
 import './ProductReview.scss';
 
-const ProductReview = () => {
+interface ProductReviewProps {
+  actionId: string;
+}
+
+const ProductReview = ({ actionId }: ProductReviewProps) => {
   const products = useCartStore((store) => store.products);
 
   const productClasses = useMemo(() => {
@@ -19,7 +23,7 @@ const ProductReview = () => {
   return (
     <section className='productReview'>
       <div className={productClasses}>
-        <Reviews />
+        <Reviews actionId={actionId} />
         <Cart />
       </div>
     </section>
