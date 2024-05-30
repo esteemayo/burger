@@ -2,7 +2,7 @@ import './Payment.scss';
 
 const Payment  = () => {
   return (
-    <div>Payment</div>
+    <div className='payment'>Payment</div>
   );
 };
 
