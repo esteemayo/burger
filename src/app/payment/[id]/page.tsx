@@ -2,7 +2,9 @@ import './Payment.scss';
 
 const Payment  = () => {
   return (
-    <div className='payment'>Payment</div>
+    <div className='payment'>
+      <div className='container'>Payment</div>
+    </div>
   );
 };
 
