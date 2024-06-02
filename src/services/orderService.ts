@@ -12,3 +12,6 @@ export const createOrder = <T extends object>(data: T) =>
 
 export const updateOrder = <T extends object>(orderId: string, data: T) =>
   http.patch(`${apiEndpoint}/${orderId}`, data);
+
+export const updatePaymentIntent = (paymentIntent: string | null) =>
+  http.patch(`${apiEndpoint}/confirm/${paymentIntent}`);
