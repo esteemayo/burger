@@ -9,3 +9,6 @@ export const getOrder = (orderId: string) =>
 
 export const createOrder = <T extends object>(data: T) =>
   http.post('/api/orders', data);
+
+export const updateOrder = <T extends object>(orderId: string, data: T) =>
+  http.patch(`${apiEndpoint}/${orderId}`, data);
