@@ -4,11 +4,12 @@ import { Elements } from '@stripe/react-stripe-js';
 import { useEffect, useState } from 'react';
 import { StripeElementsOptions, loadStripe } from '@stripe/stripe-js';
 
+import { useCartStore } from '@/hooks/useCartStore';
+import { makePayment } from '@/services/paymentService';
+
 import CheckoutForm from '@/components/checkoutForm/CheckoutForm';
 
 import './Payment.scss';
-import { makePayment } from '@/services/paymentService';
-import { useCartStore } from '@/hooks/useCartStore';
 
 interface IParams {
   params: {
