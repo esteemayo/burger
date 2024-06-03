@@ -1,21 +1,50 @@
 'use client';
 
+import { useRouter } from 'next/navigation';
 import { useCallback } from 'react';
+import { useSession } from 'next-auth/react';
 
 import { useRecipient } from '@/hooks/useRecipientModal';
+import { useCartStore } from '@/hooks/useCartStore';
 import { useAddressModal } from '@/hooks/useAddressModal';
 
 import './CheckoutInfo.scss';
+import { createOrder } from '@/services/orderService';
 
 const CheckoutInfo = () => {
+  const router = useRouter();
+  const { data: session } = useSession();
+
   const recipientModal = useRecipient();
   const addressModal = useAddressModal();
 
+  const products = useCartStore((store) => store.products);
+  const totalPrice = useCartStore((store) => store.totalPrice);
+
   const handleCheckout = useCallback(
-    (e: React.MouseEvent<HTMLButtonElement>) => {
+    async (e: React.MouseEvent<HTMLButtonElement>) => {
       e.stopPropagation();
+
+      const newOrder = {
+        price: totalPrice,
+        products,
+        status: 'Not Paid',
+        userId: session?.user.id,
+      };
+
+      if (!session) {
+        router.push('/login');
+        return;
+      }
+
+      try {
+        const { data } = await createOrder({ ...newOrder });
+        console.log(data);
+      } catch (err: unknown) {
+        console.log(err);
+      }
     },
-    []
+    [products, router, session, totalPrice]
   );
 
   return (
