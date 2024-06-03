@@ -8,8 +8,9 @@ import { useRecipient } from '@/hooks/useRecipientModal';
 import { useCartStore } from '@/hooks/useCartStore';
 import { useAddressModal } from '@/hooks/useAddressModal';
 
-import './CheckoutInfo.scss';
 import { createOrder } from '@/services/orderService';
+
+import './CheckoutInfo.scss';
 
 const CheckoutInfo = () => {
   const router = useRouter();
