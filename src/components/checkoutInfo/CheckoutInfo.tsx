@@ -1,5 +1,7 @@
 'use client';
 
+import { useCallback } from 'react';
+
 import { useRecipient } from '@/hooks/useRecipientModal';
 import { useAddressModal } from '@/hooks/useAddressModal';
 
@@ -8,6 +10,13 @@ import './CheckoutInfo.scss';
 const CheckoutInfo = () => {
   const recipientModal = useRecipient();
   const addressModal = useAddressModal();
+
+  const handleCheckout = useCallback(
+    (e: React.MouseEvent<HTMLButtonElement>) => {
+      e.stopPropagation();
+    },
+    []
+  );
 
   return (
     <div className='checkoutInfo'>
@@ -46,7 +55,9 @@ const CheckoutInfo = () => {
           </div>
         </div>
         <div className='paymentSection'>
-          <button type='button'>Place your order</button>
+          <button type='button' onClick={handleCheckout}>
+            Place your order
+          </button>
         </div>
       </div>
     </div>
