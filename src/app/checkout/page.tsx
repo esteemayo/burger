@@ -1,25 +1,13 @@
 import type { Metadata } from 'next';
 
-import CheckoutInfo from '@/components/checkoutInfo/CheckoutInfo';
-import CheckoutTotal from '@/components/checkoutTotal/CheckoutTotal';
-
-import './Checkout.scss';
+import CheckoutClient from './CheckoutClient';
 
 export const metadata: Metadata = {
   title: 'Burger - Checkout page',
 };
 
 const Checkout = () => {
-  return (
-    <div className='checkout'>
-      <div className='container'>
-        <div className='checkoutWrap'>
-          <CheckoutInfo />
-          <CheckoutTotal />
-        </div>
-      </div>
-    </div>
-  );
+  return <CheckoutClient />
 };
 
 export default Checkout;

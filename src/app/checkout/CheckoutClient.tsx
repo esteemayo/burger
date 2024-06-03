@@ -1,5 +1,8 @@
 'use client';
 
+import CheckoutInfo from '@/components/checkoutInfo/CheckoutInfo';
+import CheckoutTotal from '@/components/checkoutTotal/CheckoutTotal';
+
 import './Checkout.scss';
 
 const CheckoutClient = () => {
