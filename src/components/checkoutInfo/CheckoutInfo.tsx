@@ -40,7 +40,7 @@ const CheckoutInfo = () => {
 
       try {
         const { data } = await createOrder({ ...newOrder });
-        console.log(data);
+        router.push(`/payment/${data.id}`);
       } catch (err: unknown) {
         console.log(err);
       }
