@@ -24,7 +24,7 @@ const OrderTable = ({ isAdmin, data }: OrderTableProps) => {
   }, []);
 
   const orderStatus = useCallback(
-    (status: 'preparing' | 'on the way' | 'delivered') => {
+    (status: 'not paid' | 'preparing' | 'on the way' | 'delivered') => {
       return `${status[0].toUpperCase()}${status.substring(1)}`;
     },
     []
@@ -83,14 +83,16 @@ const OrderTable = ({ isAdmin, data }: OrderTableProps) => {
                 <Link href={`/order/${encodeURIComponent(id)}`}>#{id}</Link>
               </td>
               <td>
-                <time dateTime={createdAt}>
-                  {formatDate(createdAt)}
-                </time>
+                <time dateTime={createdAt}>{formatDate(createdAt)}</time>
               </td>
               <td>{formatCurrency(price)}</td>
               <td className='orderName'>
                 {products?.map((product) => {
-                  return <span>{product.name} <br /></span>
+                  return (
+                    <span key={product.id}>
+                      {product.name} <br />
+                    </span>
+                  );
                 })}
               </td>
               {!isAdmin ? (
