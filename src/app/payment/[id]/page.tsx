@@ -2,7 +2,7 @@
 
 import { Elements } from '@stripe/react-stripe-js';
 import { useEffect, useState } from 'react';
-import { StripeElementsOptions, loadStripe } from '@stripe/stripe-js';
+import { Appearance, StripeElementsOptions, loadStripe } from '@stripe/stripe-js';
 
 import { useCartStore } from '@/hooks/useCartStore';
 import { makePayment } from '@/services/paymentService';
@@ -42,7 +42,7 @@ const Payment = ({ params }: IParams) => {
     })();
   }, [orderId, reset]);
 
-  const appearance = {
+  const appearance: Appearance = {
     theme: 'stripe',
   }
 
