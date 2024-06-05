@@ -7,6 +7,10 @@ import {
   useElements,
   PaymentElement,
 } from '@stripe/react-stripe-js';
+import {
+  StripeLinkAuthenticationElementChangeEvent,
+  StripePaymentElementOptions,
+} from '@stripe/stripe-js';
 
 const CheckoutForm = () => {
   const stripe = useStripe();
@@ -16,9 +20,12 @@ const CheckoutForm = () => {
   const [email, setEmail] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-    setEmail(e.target.value);
-  }, []);
+  const handleChange = useCallback(
+    (e: StripeLinkAuthenticationElementChangeEvent) => {
+      setEmail(e.target.value);
+    },
+    []
+  );
 
   useEffect(() => {
     if (!stripe) {
@@ -79,18 +86,19 @@ const CheckoutForm = () => {
     [elements, stripe]
   );
 
-  const paymentElementOptions = {
+  const paymentElementOptions: StripePaymentElementOptions = {
     layout: 'tabs',
   };
 
   return (
     <form onSubmit={handleSubmit}>
-      <LinkAuthenticationElement id='link-authentication-element' onChange={handleChange} />
+      <LinkAuthenticationElement
+        id='link-authentication-element'
+        onChange={handleChange}
+      />
       <PaymentElement id='payment-element' options={paymentElementOptions} />
       <button id='submit' disabled={isLoading || !stripe || !elements}>
-        <span id='button-text'>
-          Pay now
-        </span>
+        <span id='button-text'>Pay now</span>
       </button>
       {message && <div id='payment-message'>{message}</div>}
     </form>
