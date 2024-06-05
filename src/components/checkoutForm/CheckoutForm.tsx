@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useState } from 'react';
 import {
+  LinkAuthenticationElement,
   useStripe,
   useElements,
   PaymentElement,
@@ -12,6 +13,7 @@ const CheckoutForm = () => {
   const elements = useElements();
 
   const [message, setMessage] = useState('');
+  const [email, setEmail] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
@@ -73,11 +75,23 @@ const CheckoutForm = () => {
     [elements, stripe]
   );
 
+  const paymentElementOptions = {
+    layout: 'tabs',
+  };
+
   return (
     <form onSubmit={handleSubmit}>
-      <PaymentElement />
-      <button id='submit' disabled={isLoading || !stripe || !elements}>Pay now</button>
-      {message && <span>{message}</span>}
+      <LinkAuthenticationElement
+        id='link-authentication-element'
+        onChange={(e) => setEmail(e.target.value)}
+      />
+      <PaymentElement id='payment-element' options={paymentElementOptions} />
+      <button id='submit' disabled={isLoading || !stripe || !elements}>
+        <span id='button-text'>
+          Pay now
+        </span>
+      </button>
+      {message && <div id='payment-message'>{message}</div>}
     </form>
   );
 };
