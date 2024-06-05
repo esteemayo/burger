@@ -16,6 +16,10 @@ const CheckoutForm = () => {
   const [email, setEmail] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
+  const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(e.target.value);
+  }, []);
+
   useEffect(() => {
     if (!stripe) {
       return;
@@ -81,10 +85,7 @@ const CheckoutForm = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <LinkAuthenticationElement
-        id='link-authentication-element'
-        onChange={(e) => setEmail(e.target.value)}
-      />
+      <LinkAuthenticationElement id='link-authentication-element' onChange={handleChange} />
       <PaymentElement id='payment-element' options={paymentElementOptions} />
       <button id='submit' disabled={isLoading || !stripe || !elements}>
         <span id='button-text'>
