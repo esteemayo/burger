@@ -19,8 +19,6 @@ const OrdersClient = () => {
     },
   });
 
-  console.log(orders)
-
   return (
     <div className='orders'>
       <div className='container'>
