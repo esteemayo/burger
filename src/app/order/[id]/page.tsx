@@ -6,8 +6,16 @@ export const metadata: Metadata = {
   title: 'Burger - Order page',
 };
 
-const Order = () => {
-  return <OrderClient />;
+interface IParams {
+  params: {
+    id: string;
+  };
+}
+
+const Order = ({ params }: IParams) => {
+  const { id } = params;
+
+  return <OrderClient orderId={id} />;
 };
 
 export default Order;
