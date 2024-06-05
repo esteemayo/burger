@@ -27,24 +27,27 @@ const Payment = ({ params }: IParams) => {
   const reset = useCartStore((store) => store.reset);
   const [clientSecret, setClientSecret] = useState('');
 
+  console.log(clientSecret)
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const { data } = await makePayment(orderId);
+        console.log(data.clientSecret)
+        setClientSecret(data.clientSecret);
+        // reset();
+      } catch (err: unknown) {
+        console.log(err);
+      }
+    })();
+  }, [orderId, reset]);
+
   const options: StripeElementsOptions = {
     clientSecret,
     appearance: {
       theme: 'stripe',
     },
   };
-
-  useEffect(() => {
-    (async () => {
-      const { data } = await makePayment(orderId);
-      setClientSecret(data.clentSecret);
-      reset();
-      try {
-      } catch (err: unknown) {
-        console.log(err);
-      }
-    })();
-  }, [orderId, reset]);
 
   return (
     <div className='payment'>
