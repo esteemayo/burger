@@ -70,8 +70,8 @@ const OrderTable = ({ isAdmin, data }: OrderTableProps) => {
         </tr>
       </thead>
       <tbody>
-        {data.map((item) => {
-          const { id, name, price, status, createdAt } = item;
+        {data?.map((item) => {
+          const { id, price, status, products, createdAt } = item;
           return (
             <tr
               key={id}
@@ -88,7 +88,11 @@ const OrderTable = ({ isAdmin, data }: OrderTableProps) => {
                 </time>
               </td>
               <td>{formatCurrency(price)}</td>
-              <td className='orderName'>{name}</td>
+              <td className='orderName'>
+                {products?.map((product) => {
+                  return <span>{product.name} <br /></span>
+                })}
+              </td>
               {!isAdmin ? (
                 <td>{orderStatus(status)}</td>
               ) : (
