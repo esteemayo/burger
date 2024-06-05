@@ -9,9 +9,9 @@ import OrderTable from '@/components/orderTable/OrderTable';
 import './Orders.scss';
 
 const OrdersClient = () => {
-  const { isLoading, data: session } = useSession();
+  const { data: session } = useSession();
 
-  const { data: orders } = useQuery({
+  const { isLoading, data: orders } = useQuery({
     queryKey: ['orders'],
     queryFn: async () => {
       const { data } = await getOrders();

@@ -5,7 +5,7 @@ const apiEndpoint = '/orders';
 export const getOrders = () => http.get('/api/orders');
 
 export const getOrder = (orderId: string) =>
-  http.get(`${apiEndpoint}/${orderId}`);
+  http.get(`/api/orders/${orderId}`);
 
 export const createOrder = <T extends object>(data: T) =>
   http.post('/api/orders', data);
