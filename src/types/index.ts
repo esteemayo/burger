@@ -129,10 +129,11 @@ export type ProfileMenu = {
 }[];
 
 export type OrderItem = {
-  id: number;
+  id: string;
   name: string;
   price: number;
-  status: 'preparing' | 'on the way' | 'delivered';
+  products: ProductType[];
+  status: 'not paid' | 'preparing' | 'on the way' | 'delivered';
   createdAt: string;
 };
 
