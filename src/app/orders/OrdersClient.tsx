@@ -9,7 +9,7 @@ import OrderTable from '@/components/orderTable/OrderTable';
 import './Orders.scss';
 
 const OrdersClient = () => {
-  const { data: session } = useSession();
+  const { isLoading, data: session } = useSession();
 
   const { data: orders } = useQuery({
     queryKey: ['orders'],
@@ -18,6 +18,10 @@ const OrdersClient = () => {
       return data;
     },
   });
+
+  if (isLoading) {
+    return 'Loading...';
+  }
 
   return (
     <div className='orders'>
