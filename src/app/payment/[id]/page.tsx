@@ -2,7 +2,11 @@
 
 import { Elements } from '@stripe/react-stripe-js';
 import { useEffect, useState } from 'react';
-import { Appearance, StripeElementsOptions, loadStripe } from '@stripe/stripe-js';
+import {
+  Appearance,
+  StripeElementsOptions,
+  loadStripe,
+} from '@stripe/stripe-js';
 
 import { useCartStore } from '@/hooks/useCartStore';
 import { makePayment } from '@/services/paymentService';
@@ -27,13 +31,13 @@ const Payment = ({ params }: IParams) => {
 
   const [clientSecret, setClientSecret] = useState('');
 
-  console.log(clientSecret)
+  console.log(clientSecret);
 
   useEffect(() => {
     (async () => {
       try {
         const { data } = await makePayment(orderId);
-        console.log(data.clientSecret)
+        console.log(data.clientSecret);
         setClientSecret(data.clientSecret);
         // reset();
       } catch (err: unknown) {
@@ -44,7 +48,7 @@ const Payment = ({ params }: IParams) => {
 
   const appearance: Appearance = {
     theme: 'stripe',
-  }
+  };
 
   const options: StripeElementsOptions = {
     clientSecret,
