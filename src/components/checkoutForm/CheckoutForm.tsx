@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import {
   useStripe,
   useElements,
@@ -45,30 +45,33 @@ const CheckoutForm = () => {
     });
   }, [stripe]);
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const handleSubmit = useCallback(
+    async (e: React.FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
 
-    if (!stripe || !elements) {
-      return;
-    }
+      if (!stripe || !elements) {
+        return;
+      }
 
-    setIsLoading(true);
+      setIsLoading(true);
 
-    const { error } = await stripe.confirmPayment({
-      elements,
-      confirmParams: {
-        return_url: 'http://localhost:3000/success',
-      },
-    });
+      const { error } = await stripe.confirmPayment({
+        elements,
+        confirmParams: {
+          return_url: 'http://localhost:3000/success',
+        },
+      });
 
-    if (error.type === 'card_error' || error.type === 'validation_error') {
-      setMessage(error.message || 'Something went wrong!');
-    } else {
-      setMessage('An unexpected error occurred.');
-    }
+      if (error.type === 'card_error' || error.type === 'validation_error') {
+        setMessage(error.message || 'Something went wrong!');
+      } else {
+        setMessage('An unexpected error occurred.');
+      }
 
-    setIsLoading(false);
-  };
+      setIsLoading(false);
+    },
+    [elements, stripe]
+  );
 
   return (
     <form onSubmit={handleSubmit}>

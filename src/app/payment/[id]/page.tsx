@@ -23,8 +23,8 @@ const stripePromise = loadStripe(
 
 const Payment = ({ params }: IParams) => {
   const { id: orderId } = params;
-
   const reset = useCartStore((store) => store.reset);
+
   const [clientSecret, setClientSecret] = useState('');
 
   console.log(clientSecret)
@@ -42,17 +42,19 @@ const Payment = ({ params }: IParams) => {
     })();
   }, [orderId, reset]);
 
+  const appearance = {
+    theme: 'stripe',
+  }
+
   const options: StripeElementsOptions = {
     clientSecret,
-    appearance: {
-      theme: 'stripe',
-    },
+    appearance,
   };
 
   return (
     <div className='payment'>
       <div className='container'>
-        <Elements stripe={stripePromise} options={options}>
+        <Elements options={options} stripe={stripePromise}>
           <CheckoutForm />
         </Elements>
       </div>
