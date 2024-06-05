@@ -15,7 +15,7 @@ interface OrderClientProps {
 }
 
 const OrderClient = ({ orderId }: OrderClientProps) => {
-  const { isLoading, data} = useQuery({
+  const { isLoading, data } = useQuery({
     queryKey: ['order'],
     queryFn: async ({ orderId }: { orderId: string}) => {
       const { data } = await getOrder(orderId);
