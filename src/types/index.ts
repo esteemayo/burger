@@ -519,7 +519,7 @@ export interface SearchProps {
 }
 
 export interface OrderTableProps {
-  isAdmin: boolean;
+  isAdmin: Boolean | undefined;
   data: OrderItem[];
 }
 
