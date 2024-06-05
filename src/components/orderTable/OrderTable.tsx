@@ -6,6 +6,7 @@ import { useCallback, useEffect, useState } from 'react';
 import Image from 'next/image';
 
 import { formatDate } from '@/utils/formatDate';
+import { excerpts } from '@/utils';
 import { formatCurrency } from '@/utils/formatCurrency';
 
 import { OrderItem, OrderTableProps } from '@/types';
@@ -80,7 +81,9 @@ const OrderTable = ({ isAdmin, data }: OrderTableProps) => {
               }`}
             >
               <td>
-                <Link href={`/order/${encodeURIComponent(id)}`}>#{id}</Link>
+                <Link href={`/order/${encodeURIComponent(id)}`}>
+                  #{excerpts(id, 10)}
+                </Link>
               </td>
               <td>
                 <time dateTime={createdAt}>{formatDate(createdAt)}</time>
