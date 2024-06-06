@@ -5,8 +5,23 @@ import { formatCurrency } from '@/utils/formatCurrency';
 import { OrderDetailProps } from '@/types';
 
 import './Order.scss';
+import { useQuery } from '@tanstack/react-query';
+import { getUser } from '@/services/userService';
 
 const OrderDetail = ({ order }: OrderDetailProps) => {
+  const userId = order.userId;
+
+  const { data: user } = useQuery({
+    queryKey: [`${userId}`],
+    queryFn: async () => {
+      const { data } = await getUser(userId);
+      return data;
+    },
+    enabled: !!userId,
+  });
+
+  console.log(user);
+
   return (
     <div className='orderDetail'>
       <h1 className='orderHeading'>Order Detail</h1>
@@ -21,11 +36,11 @@ const OrderDetail = ({ order }: OrderDetailProps) => {
         </div>
         <div className='orderItem'>
           <h3>Customer</h3>
-          <span>{excerpts(order?.userId, 10)}</span>
+          <span>{excerpts(user?.name, 10)}</span>
         </div>
         <div className='orderItem'>
           <h3>Shipping To</h3>
-          {/* <span>{excerpts(order?.address, 15)}</span> */}
+          <span>{excerpts(user?.address ?? user?.street, 15)}</span>
         </div>
         <div className='orderItem'>
           <h3>Total</h3>
@@ -33,9 +48,9 @@ const OrderDetail = ({ order }: OrderDetailProps) => {
         </div>
         <div className='orderItem'>
           <h3>Delivery Date</h3>
-          {/* <time dateTime={order?.deliveryDate}>
-            {formatDate(order?.deliveryDate)}
-          </time> */}
+          <time dateTime={order?.createdAt}>
+            {formatDate(order?.createdAt)}
+          </time>
         </div>
       </div>
     </div>
