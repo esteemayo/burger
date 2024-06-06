@@ -17,10 +17,11 @@ interface OrderClientProps {
 const OrderClient = ({ orderId }: OrderClientProps) => {
   const { isLoading, data } = useQuery({
     queryKey: ['order'],
-    queryFn: async ({ orderId }: { orderId: string}) => {
+    queryFn: async () => {
       const { data } = await getOrder(orderId);
       return data;
     },
+    enabled: !!orderId,
   });
 
   console.log(data)
