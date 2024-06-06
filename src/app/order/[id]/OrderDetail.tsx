@@ -1,12 +1,15 @@
+'use client';
+
+import { useQuery } from '@tanstack/react-query';
+
 import { formatDate } from '@/utils/formatDate';
 import { excerpts } from '@/utils';
 import { formatCurrency } from '@/utils/formatCurrency';
 
 import { OrderDetailProps } from '@/types';
+import { getUser } from '@/services/userService';
 
 import './Order.scss';
-import { useQuery } from '@tanstack/react-query';
-import { getUser } from '@/services/userService';
 
 const OrderDetail = ({ order }: OrderDetailProps) => {
   const userId = order.userId;
@@ -19,8 +22,6 @@ const OrderDetail = ({ order }: OrderDetailProps) => {
     },
     enabled: !!userId,
   });
-
-  console.log(user);
 
   return (
     <div className='orderDetail'>
