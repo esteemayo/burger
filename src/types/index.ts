@@ -533,12 +533,12 @@ export interface EmptyStateProps {
 
 export interface OrderDetailProps {
   order: {
-    id: number;
+    id: string;
     name: string;
-    address: string;
-    total: number;
+    price: number;
     createdAt: string;
-    deliveryDate: string;
+    userId: string;
+    status: 'not paid' | 'preparing' | 'on the way' | 'delivered';
   };
 }
 
