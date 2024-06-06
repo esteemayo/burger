@@ -1,5 +1,7 @@
 'use client';
 
+import { useSession } from 'next-auth/react';
+import { useRouter } from 'next/navigation';
 import { useCallback, useState } from 'react';
 
 import Input from '../input/Input';
@@ -9,6 +11,7 @@ import PhoneInput from '../phoneInput/PhoneInput';
 import { useRecipient } from '@/hooks/useRecipientModal';
 import { validateRecipientInputs } from '@/validations/recipient';
 
+import { updateUserData } from '@/services/userService';
 import { RecipientData, RecipientErrors } from '@/types';
 
 import './RecipientModal.scss';
@@ -26,6 +29,10 @@ const initialErrors: RecipientErrors = {
 };
 
 const RecipientModal = () => {
+  const router = useRouter()
+  const { data: session } = useSession();
+  const userId = session?.user.id;
+
   const isOpen = useRecipient((store) => store.isOpen);
   const onClose = useRecipient((store) => store.onClose);
 
@@ -43,14 +50,20 @@ const RecipientModal = () => {
     []
   );
 
-  const onSubmit = useCallback(() => {
+  const onSubmit = useCallback(async () => {
     const errors = validateRecipientInputs(data);
     if (Object.keys(errors).length > 0) return setErrors(errors);
     setErrors(initialErrors);
 
-    console.log(data);
-    setData(initialState);
-  }, [data]);
+    try {
+      const res = await updateUserData(userId!, { ...data });
+      console.log(res.data);
+      setData(initialState);
+      router.refresh();
+    } catch (err: unknown) {
+      console.log(err);
+    }
+  }, [data, userId]);
 
   const { name, email, phone } = data;
 
