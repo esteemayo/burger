@@ -42,8 +42,6 @@ export const POST = async (req: NextRequest, { params }: IParams) => {
           },
         });
 
-        console.log(paymentIntent.client_secret)
-
         return new NextResponse(
           JSON.stringify({ clientSecret: paymentIntent.client_secret }),
           { status: 200 }
