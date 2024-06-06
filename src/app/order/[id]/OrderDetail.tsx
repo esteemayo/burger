@@ -45,7 +45,7 @@ const OrderDetail = ({ order }: OrderDetailProps) => {
         </div>
         <div className='orderItem'>
           <h3>Total</h3>
-          <span className='orderTotal'>{formatCurrency(order?.price)}</span>
+          <span className='orderTotal'>{formatCurrency(order.price)}</span>
         </div>
         <div className='orderItem'>
           <h3>Delivery Date</h3>
