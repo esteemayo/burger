@@ -5,7 +5,6 @@ import { useQuery } from '@tanstack/react-query';
 import OrderDetail from './OrderDetail';
 import OrderStatus from './OrderStatus';
 
-import { order } from '@/data';
 import { getOrder } from '@/services/orderService';
 
 import './Order.scss';
@@ -15,7 +14,7 @@ interface OrderClientProps {
 }
 
 const OrderClient = ({ orderId }: OrderClientProps) => {
-  const { isLoading, data } = useQuery({
+  const { isLoading, data: order } = useQuery({
     queryKey: ['order'],
     queryFn: async () => {
       const { data } = await getOrder(orderId);
@@ -24,7 +23,7 @@ const OrderClient = ({ orderId }: OrderClientProps) => {
     enabled: !!orderId,
   });
 
-  console.log(data)
+  console.log(order)
 
   if (isLoading) {
     return 'Loading...';
