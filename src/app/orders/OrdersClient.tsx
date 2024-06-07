@@ -3,8 +3,10 @@
 import { useSession } from 'next-auth/react';
 import { useQuery } from '@tanstack/react-query';
 
-import { getOrders } from '@/services/orderService';
+import EmptyState from '@/components/emptyState/EmptyState';
 import OrderTable from '@/components/orderTable/OrderTable';
+
+import { getOrders } from '@/services/orderService';
 
 import './Orders.scss';
 
@@ -21,6 +23,16 @@ const OrdersClient = () => {
 
   if (isLoading) {
     return 'Loading...';
+  }
+
+  if (orders?.length < 1) {
+    return (
+      <EmptyState
+        title='Empty order(s)'
+        subtitle='You have not made any order yet!'
+        imgSrc='empty'
+      />
+    );
   }
 
   return (
