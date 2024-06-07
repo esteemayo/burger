@@ -28,7 +28,7 @@ const CheckoutTotal = () => {
               <p className='checkoutCustomer'>{session?.user.name}</p>
             </div>
             <div className='checkoutBody'>
-              {products.length < 1 ? (
+              {products.length < 1 || !session ? (
                 <div className='emptyCartWrap'>
                   <div className='emptyCartTitle'>Empty cart</div>
                   <div className='emptyCartLinkWrap'>
