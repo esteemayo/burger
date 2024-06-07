@@ -5,6 +5,7 @@ import { useQuery } from '@tanstack/react-query';
 import OrderDetail from './OrderDetail';
 import OrderStatus from './OrderStatus';
 
+import Loader from '@/components/loader/Loader';
 import { getOrder } from '@/services/orderService';
 
 import './Order.scss';
@@ -24,7 +25,7 @@ const OrderClient = ({ orderId }: OrderClientProps) => {
   });
 
   if (isLoading) {
-    return 'Loading...';
+    return <Loader />;
   }
 
   return (
