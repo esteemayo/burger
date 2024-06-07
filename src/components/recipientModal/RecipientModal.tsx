@@ -36,6 +36,7 @@ const RecipientModal = () => {
   const isOpen = useRecipient((store) => store.isOpen);
   const onClose = useRecipient((store) => store.onClose);
 
+  const [isLoading, setIsLoading] = useState(false);
   const [data, setData] = useState(initialState);
   const [errors, setErrors] = useState(initialErrors);
 
@@ -55,6 +56,8 @@ const RecipientModal = () => {
     if (Object.keys(errors).length > 0) return setErrors(errors);
     setErrors(initialErrors);
 
+    setIsLoading(true);
+
     try {
       const res = await updateUserData(userId!, { ...data });
       console.log(res.data);
@@ -62,6 +65,8 @@ const RecipientModal = () => {
       router.refresh();
     } catch (err: unknown) {
       console.log(err);
+    } finally {
+      setIsLoading(false);
     }
   }, [data, router, userId]);
 
@@ -106,6 +111,7 @@ const RecipientModal = () => {
       isOpen={isOpen}
       title='Update Recipient'
       size='full'
+      loading={isLoading}
       actionLabel='Submit'
       body={bodyContent}
       onClose={onClose}
