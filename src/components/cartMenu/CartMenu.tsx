@@ -3,8 +3,9 @@
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
-import RemoveShoppingCartIcon from '@mui/icons-material/RemoveShoppingCart';
+import { useSession } from 'next-auth/react';
 import { useCallback } from 'react';
+import RemoveShoppingCartIcon from '@mui/icons-material/RemoveShoppingCart';
 
 import { CartMenuProps } from '@/types';
 import { formatCurrency } from '@/utils/formatCurrency';
@@ -19,6 +20,7 @@ const CartMenu = ({
   onRemove,
 }: CartMenuProps) => {
   const router = useRouter();
+  const { data: session } = useSession();
 
   const productUrl = useCallback(
     (id: string) => {
@@ -29,7 +31,7 @@ const CartMenu = ({
 
   return (
     <div className='cartCard'>
-      {products.length < 1 ? (
+      {products.length < 1 || !session ? (
         <>
           <div className='cardHeader empty'>Empty cart</div>
           <hr />
