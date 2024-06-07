@@ -53,6 +53,11 @@ const RecipientModal = () => {
   );
 
   const onSubmit = useCallback(async () => {
+    if (!session) {
+      router.push('/login');
+      return;
+    }
+
     const errors = validateRecipientInputs(data);
     if (Object.keys(errors).length > 0) return setErrors(errors);
     setErrors(initialErrors);
