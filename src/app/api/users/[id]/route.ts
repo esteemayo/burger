@@ -94,7 +94,12 @@ export const PATCH = async (req: NextRequest, { params }: IParams) => {
           data: { ...filterBody },
         });
 
-        return new NextResponse(JSON.stringify(updatedUser), { status: 200 });
+        const userObj = {
+          ...updatedUser,
+          password: undefined,
+        };
+
+        return new NextResponse(JSON.stringify(userObj), { status: 200 });
       }
       return new NextResponse(
         JSON.stringify({ message: 'You are not authorized' }),
