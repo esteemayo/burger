@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 
 import { ModalProps } from '@/types';
+import Spinner from '../spinner/Spinner';
 
 import './Modal.scss';
 
@@ -11,6 +12,7 @@ const Modal = ({
   isOpen,
   title,
   size = 'small',
+  loading,
   disabled,
   actionLabel,
   secondaryActionLabel,
@@ -117,7 +119,7 @@ const Modal = ({
                   className={actionLabelClasses}
                   onClick={handleSubmit}
                 >
-                  {actionLabel}
+                  {loading ? <Spinner />: actionLabel}
                 </button>
               )}
             </div>
