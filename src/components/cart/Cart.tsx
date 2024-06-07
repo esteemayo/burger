@@ -2,8 +2,9 @@
 
 import { useMemo } from 'react';
 import Link from 'next/link';
-import RemoveShoppingCartIcon from '@mui/icons-material/RemoveShoppingCart';
+import { useSession } from 'next-auth/react';
 import Image from 'next/image';
+import RemoveShoppingCartIcon from '@mui/icons-material/RemoveShoppingCart';
 
 import { formatCurrency } from '@/utils/formatCurrency';
 import { useCartStore } from '@/hooks/useCartStore';
@@ -12,6 +13,7 @@ import { useCartControls } from '@/hooks/useCartControls';
 import './Cart.scss';
 
 const Cart = () => {
+  const { data: session } = useSession();
   const { handleDecrement, handleIncrement } = useCartControls();
 
   const products = useCartStore((store) => store.products);
@@ -30,7 +32,7 @@ const Cart = () => {
       <div className='detailBox'>
         <div className='cardWrap'>
           <div className={emptyHeaderClasses}>Your cart</div>
-          {products.length < 1 ? (
+          {products.length < 1 || !session ? (
             <div className='emptyCart'>
               <div className='emptyHeading'>Empty cart</div>
               <div className='emptyLink'>
