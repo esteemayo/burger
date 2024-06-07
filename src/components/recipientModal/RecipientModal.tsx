@@ -78,7 +78,6 @@ const RecipientModal = () => {
       onClose();
 
       toast.success('Information updated');
-      router.refresh();
     } catch (err: unknown) {
       console.log(err);
     } finally {
