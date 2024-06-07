@@ -76,7 +76,7 @@ const RecipientModal = () => {
     } finally {
       setIsLoading(false);
     }
-  }, [data, onClose, router, userId]);
+  }, [data, onClose, router, session, userId]);
 
   const { name, email, phone } = data;
 
