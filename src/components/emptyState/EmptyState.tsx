@@ -18,7 +18,7 @@ const EmptyState = ({
 }: EmptyStateProps) => {
   const router = useRouter();
 
-  const url = useCallback(
+  const handleClick = useCallback(
     (e: React.MouseEvent<HTMLButtonElement>) => {
       e.stopPropagation();
       return router.push('/');
@@ -39,7 +39,7 @@ const EmptyState = ({
         )}
         <Heading title={title} subtitle={subtitle} center={center} />
         {showReset && (
-          <button type='button' onClick={url}>
+          <button type='button' onClick={handleClick}>
             Return home
           </button>
         )}
