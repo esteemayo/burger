@@ -67,12 +67,13 @@ const AddressModal = () => {
       console.log(res);
       router.refresh();
       setData(initialState);
+      onClose();
     } catch (err: unknown) {
       console.log(err);
     } finally {
       setIsLoading(false);
     }
-  }, [data, router, session, userId]);
+  }, [data, onClose, router, session, userId]);
 
   const { state, city, street } = data;
 
