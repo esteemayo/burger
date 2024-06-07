@@ -30,7 +30,7 @@ const initialErrors: AddressErrors = {
 
 const AddressModal = () => {
   const router = useRouter();
-  const { data: session } = useSession();
+  const { data: session, update } = useSession();
   const userId = session?.user.id;
 
   const isOpen = useAddressModal((store) => store.isOpen);
@@ -65,18 +65,24 @@ const AddressModal = () => {
 
     try {
       const res = await updateUserData(userId!, { ...data });
-      console.log(res);
+
+      const updatedData = {
+        state: res.data.state,
+        city: res.data.city,
+        street: res.data.street,
+      };
+
+      update({ ...updatedData });
       setData(initialState);
       onClose();
 
       toast.success('Address updated');
-      router.refresh();
     } catch (err: unknown) {
       console.log(err);
     } finally {
       setIsLoading(false);
     }
-  }, [data, onClose, router, session, userId]);
+  }, [data, onClose, router, session, update, userId]);
 
   const { state, city, street } = data;
 
