@@ -29,7 +29,7 @@ const initialErrors: RecipientErrors = {
 };
 
 const RecipientModal = () => {
-  const router = useRouter()
+  const router = useRouter();
   const { data: session } = useSession();
   const userId = session?.user.id;
 
@@ -63,7 +63,7 @@ const RecipientModal = () => {
     } catch (err: unknown) {
       console.log(err);
     }
-  }, [data, userId]);
+  }, [data, router, userId]);
 
   const { name, email, phone } = data;
 
