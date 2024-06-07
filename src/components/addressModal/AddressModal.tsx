@@ -1,8 +1,9 @@
 'use client';
 
 import { useSession } from 'next-auth/react';
-import { useRouter } from 'next/navigation';
+import { toast } from 'react-toastify';
 import { useCallback, useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 import Input from '../input/Input';
 import Modal from '../modal/Modal';
@@ -65,9 +66,10 @@ const AddressModal = () => {
     try {
       const res = await updateUserData(userId!, { ...data });
       console.log(res);
-      router.refresh();
       setData(initialState);
       onClose();
+      toast.success('Address updated');
+      router.refresh();
     } catch (err: unknown) {
       console.log(err);
     } finally {
