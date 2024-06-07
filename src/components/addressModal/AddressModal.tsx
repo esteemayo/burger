@@ -1,6 +1,7 @@
 'use client';
 
 import { useSession } from 'next-auth/react';
+import { useRouter } from 'next/navigation';
 import { useCallback, useState } from 'react';
 
 import Input from '../input/Input';
@@ -27,6 +28,7 @@ const initialErrors: AddressErrors = {
 };
 
 const AddressModal = () => {
+  const router = useRouter();
   const { data: session } = useSession();
   const userId = session?.user.id;
 
@@ -49,6 +51,11 @@ const AddressModal = () => {
   );
 
   const onSubmit = useCallback(async () => {
+    if (!session) {
+      router.push('/login');
+      return;
+    }
+
     const errors = validateAddressInputs(data);
     if (Object.keys(errors).length > 0) return setErrors(errors);
     setErrors(initialErrors);
@@ -58,13 +65,14 @@ const AddressModal = () => {
     try {
       const res = await updateUserData(userId!, { ...data });
       console.log(res);
+      router.refresh();
       setData(initialState);
     } catch (err: unknown) {
       console.log(err);
     } finally {
       setIsLoading(false);
     }
-  }, [data, userId]);
+  }, [data, router, session, userId]);
 
   const { state, city, street } = data;
 
