@@ -1,6 +1,12 @@
+@import '../../styles/responsive.scss';
+
 .loader {
   width: 100vw;
   height: 85vh;
+
+  @include sm {
+    height: 70vh;
+  }
 
   .container {
     width: 100%;
