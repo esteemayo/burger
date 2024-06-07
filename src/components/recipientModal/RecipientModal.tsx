@@ -31,7 +31,7 @@ const initialErrors: RecipientErrors = {
 
 const RecipientModal = () => {
   const router = useRouter();
-  const { data: session } = useSession();
+  const { data: session, update } = useSession();
   const userId = session?.user.id;
 
   const isOpen = useRecipient((store) => store.isOpen);
@@ -66,7 +66,14 @@ const RecipientModal = () => {
 
     try {
       const res = await updateUserData(userId!, { ...data });
-      console.log(res.data);
+
+      const updatedData = {
+        name: res.data.name,
+        email: res.data.email,
+        phone: res.data.phone,
+      };
+
+      update({ ...updatedData });
       setData(initialState);
       onClose();
 
@@ -77,7 +84,7 @@ const RecipientModal = () => {
     } finally {
       setIsLoading(false);
     }
-  }, [data, onClose, router, session, userId]);
+  }, [data, onClose, router, session, update, userId]);
 
   const { name, email, phone } = data;
 
