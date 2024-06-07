@@ -6,6 +6,8 @@ import OrderDetail from './OrderDetail';
 import OrderStatus from './OrderStatus';
 
 import Loader from '@/components/loader/Loader';
+import EmptyState from '@/components/emptyState/EmptyState';
+
 import { getOrder } from '@/services/orderService';
 
 import './Order.scss';
@@ -26,6 +28,16 @@ const OrderClient = ({ orderId }: OrderClientProps) => {
 
   if (isLoading) {
     return <Loader />;
+  }
+
+  if (!order) {
+    return (
+      <EmptyState
+        title='Order not found'
+        subtitle='There is no order with the ID!'
+        imgSrc='empty'
+      />
+    );
   }
 
   return (
