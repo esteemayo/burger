@@ -10,6 +10,10 @@ declare module 'next-auth' {
   interface Session {
     user: User & {
       id: string;
+      phone: string;
+      city: string;
+      state: string;
+      street: string;
       isAdmin: Boolean;
     };
   }
@@ -18,6 +22,10 @@ declare module 'next-auth' {
 declare module 'next-auth/jwt' {
   interface JWT {
     id: string;
+    phone: string;
+    city: string;
+    state: string;
+    street: string;
     isAdmin: Boolean;
   }
 }
@@ -65,14 +73,24 @@ export const authOptions: NextAuthOptions = {
     }),
   ],
   callbacks: {
-    async session({ session, token }) {
+    async session({ session, token, trigger, newSession }) {
       if (token) {
         session.user.id = token?.id;
         session.user.isAdmin = token.isAdmin;
       }
+
+      if (trigger === 'update') {
+        session.user.name = newSession.name;
+        session.user.email = newSession.email;
+        session.user.phone = newSession.phone;
+        session.user.state = newSession.state;
+        session.user.city = newSession.city;
+        session.user.street = newSession.street;
+      }
+
       return session;
     },
-    async jwt({ token }) {
+    async jwt({ token, trigger, session }) {
       const userInDb = await prisma.user.findUnique({
         where: {
           email: token.email!,
@@ -81,6 +99,16 @@ export const authOptions: NextAuthOptions = {
 
       token.id = userInDb?.id!;
       token.isAdmin = userInDb?.isAdmin!;
+
+      if (trigger === 'update') {
+        token.name = session.name;
+        token.email = session.email;
+        token.phone = session.phone;
+        token.state = session.state;
+        token.city = session.city;
+        token.street = session.street;
+      }
+
       return token;
     },
   },

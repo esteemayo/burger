@@ -62,8 +62,8 @@ const CheckoutInfo = () => {
             <hr />
             <h6 className='recipientHeading'>Recipient information</h6>
             <div className='customerInfo'>
-              <span className='customerName'>Emmanuel adebayo</span>
-              <span className='customerPhone'>+2348136119251</span>
+              <span className='customerName'>{session?.user.name}</span>
+              <span className='customerPhone'>{session?.user.phone}</span>
             </div>
             <button
               onClick={recipientModal.onOpen}
