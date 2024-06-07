@@ -68,6 +68,7 @@ const AddressModal = () => {
       console.log(res);
       setData(initialState);
       onClose();
+
       toast.success('Address updated');
       router.refresh();
     } catch (err: unknown) {
