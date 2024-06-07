@@ -29,11 +29,11 @@ const OrderDetail = ({ order }: OrderDetailProps) => {
       <div className='orderContainer'>
         <div className='orderItem'>
           <h3>Order ID</h3>
-          <span>#{excerpts(order.id, 7)}</span>
+          <span>#{excerpts(order?.id, 7)}</span>
         </div>
         <div className='orderItem'>
           <h3>Ship Date</h3>
-          <time dateTime={order.createdAt}>{formatDate(order.createdAt)}</time>
+          <time dateTime={order.createdAt}>{formatDate(order?.createdAt)}</time>
         </div>
         <div className='orderItem'>
           <h3>Customer</h3>
@@ -45,7 +45,7 @@ const OrderDetail = ({ order }: OrderDetailProps) => {
         </div>
         <div className='orderItem'>
           <h3>Total</h3>
-          <span className='orderTotal'>{formatCurrency(order.price)}</span>
+          <span className='orderTotal'>{formatCurrency(order?.price)}</span>
         </div>
         <div className='orderItem'>
           <h3>Delivery Date</h3>
