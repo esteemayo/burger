@@ -11,7 +11,14 @@ export const GET = async () => {
       if (session.user.isAdmin) {
         const users = await prisma.user.findMany();
 
-        return new NextResponse(JSON.stringify(users), { status: 200 });
+        const userObj = {
+          ...users.map((user) => ({
+            ...user,
+            password: undefined,
+          })),
+        };
+
+        return new NextResponse(JSON.stringify(userObj), { status: 200 });
       }
     } catch (err: unknown) {
       return new NextResponse(
