@@ -40,6 +40,10 @@ const Navbar = () => {
     return isActive ? 'navbar active' : 'navbar';
   }, [isActive]);
 
+  const totalItemsLabel = useMemo(() => {
+    return !session ? 0 : totalItems;
+  }, [session, totalItems]);
+
   useEffect(() => {
     window.addEventListener('scroll', isActiveHandler);
     return () => window.removeEventListener('scroll', isActiveHandler);
@@ -81,7 +85,7 @@ const Navbar = () => {
               alt='search icon'
               className='shoppingCartLogo'
             />
-            <span className='count'>{totalItems}</span>
+            <span className='count'>{totalItemsLabel}</span>
             <div className='cartBox'>
               <CartMenu
                 products={products}
