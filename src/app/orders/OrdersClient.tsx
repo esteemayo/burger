@@ -22,7 +22,7 @@ const OrdersClient = () => {
     },
   });
 
-  if (isLoading) {
+  if (1) {
     return <Loader />;
   }
 
