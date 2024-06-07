@@ -1,5 +1,6 @@
 'use client';
 
+import { useSession } from 'next-auth/react';
 import { useCallback, useState } from 'react';
 
 import Input from '../input/Input';
@@ -9,10 +10,9 @@ import { useAddressModal } from '@/hooks/useAddressModal';
 import { validateAddressInputs } from '@/validations/address';
 
 import { AddressData, AddressErrors } from '@/types';
+import { updateUserData } from '@/services/userService';
 
 import './AddressModal.scss';
-import { updateUserData } from '@/services/userService';
-import { useSession } from 'next-auth/react';
 
 const initialState: AddressData = {
   state: '',
