@@ -65,12 +65,13 @@ const RecipientModal = () => {
       setData(initialState);
       toast.success('Information updated');
       router.refresh();
+      onClose();
     } catch (err: unknown) {
       console.log(err);
     } finally {
       setIsLoading(false);
     }
-  }, [data, router, userId]);
+  }, [data, onClose, router, userId]);
 
   const { name, email, phone } = data;
 
