@@ -11,6 +11,8 @@ import { validateAddressInputs } from '@/validations/address';
 import { AddressData, AddressErrors } from '@/types';
 
 import './AddressModal.scss';
+import { updateUserData } from '@/services/userService';
+import { useSession } from 'next-auth/react';
 
 const initialState: AddressData = {
   state: '',
@@ -25,9 +27,13 @@ const initialErrors: AddressErrors = {
 };
 
 const AddressModal = () => {
+  const { data: session } = useSession();
+  const userId = session?.user.id;
+
   const isOpen = useAddressModal((store) => store.isOpen);
   const onClose = useAddressModal((store) => store.onClose);
 
+  const [isLoading, setIsLoading] = useState(false);
   const [data, setData] = useState(initialState);
   const [errors, setErrors] = useState(initialErrors);
 
@@ -42,15 +48,23 @@ const AddressModal = () => {
     []
   );
 
-  const onSubmit = useCallback(() => {
+  const onSubmit = useCallback(async () => {
     const errors = validateAddressInputs(data);
     if (Object.keys(errors).length > 0) return setErrors(errors);
-
     setErrors(initialErrors);
 
-    console.log({ ...data });
-    setData(initialState);
-  }, [data]);
+    setIsLoading(true);
+
+    try {
+      const res = await updateUserData(userId!, { ...data });
+      console.log(res);
+      setData(initialState);
+    } catch (err: unknown) {
+      console.log(err);
+    } finally {
+      setIsLoading(false);
+    }
+  }, [data, userId]);
 
   const { state, city, street } = data;
 
@@ -90,6 +104,7 @@ const AddressModal = () => {
       isOpen={isOpen}
       title='Add Address'
       size='full'
+      loading={isLoading}
       actionLabel='Use this address'
       body={bodyContent}
       onClose={onClose}
