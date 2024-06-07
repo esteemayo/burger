@@ -4,6 +4,7 @@ import { useSession } from 'next-auth/react';
 import { useQuery } from '@tanstack/react-query';
 
 import EmptyState from '@/components/emptyState/EmptyState';
+import Loader from '@/components/loader/Loading';
 import OrderTable from '@/components/orderTable/OrderTable';
 
 import { getOrders } from '@/services/orderService';
@@ -22,7 +23,7 @@ const OrdersClient = () => {
   });
 
   if (isLoading) {
-    return 'Loading...';
+    return <Loader />;
   }
 
   if (orders?.length < 1) {
