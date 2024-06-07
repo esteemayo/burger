@@ -68,9 +68,10 @@ const RecipientModal = () => {
       const res = await updateUserData(userId!, { ...data });
       console.log(res.data);
       setData(initialState);
+      onClose();
+
       toast.success('Information updated');
       router.refresh();
-      onClose();
     } catch (err: unknown) {
       console.log(err);
     } finally {
