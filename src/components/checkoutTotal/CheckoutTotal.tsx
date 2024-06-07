@@ -1,7 +1,8 @@
 'use client';
 
-import Link from 'next/link';
 import Image from 'next/image';
+import Link from 'next/link';
+import { useSession } from 'next-auth/react';
 
 import { formatCurrency } from '@/utils/formatCurrency';
 import { useCartStore } from '@/hooks/useCartStore';
@@ -10,6 +11,7 @@ import { useCartControls } from '@/hooks/useCartControls';
 import './CheckoutTotal.scss';
 
 const CheckoutTotal = () => {
+  const { data: session } = useSession();
   const { handleDecrement, handleIncrement } = useCartControls();
 
   const totalPrice = useCartStore((store) => store.totalPrice);
@@ -23,7 +25,7 @@ const CheckoutTotal = () => {
           <div className='checkoutCard'>
             <div className='checkoutHeader'>
               Your order from
-              <p className='checkoutCustomer'>Emmanuel adebayo</p>
+              <p className='checkoutCustomer'>{session?.user.name}</p>
             </div>
             <div className='checkoutBody'>
               {products.length < 1 ? (
