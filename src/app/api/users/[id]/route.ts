@@ -32,7 +32,12 @@ export const GET = async (req: NextRequest, { params }: IParams) => {
           );
         }
 
-        return new NextResponse(JSON.stringify(user), { status: 200 });
+        const userObj = {
+          ...user,
+          password: undefined,
+        };
+
+        return new NextResponse(JSON.stringify(userObj), { status: 200 });
       }
       return new NextResponse(
         JSON.stringify({ message: 'You are not authorized' }),
