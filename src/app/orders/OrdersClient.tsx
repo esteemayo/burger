@@ -4,7 +4,7 @@ import { useSession } from 'next-auth/react';
 import { useQuery } from '@tanstack/react-query';
 
 import EmptyState from '@/components/emptyState/EmptyState';
-import Loader from '@/components/loader/Loading';
+import Loader from '@/components/loader/Loader';
 import OrderTable from '@/components/orderTable/OrderTable';
 
 import { getOrders } from '@/services/orderService';
