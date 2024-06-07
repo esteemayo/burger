@@ -3,7 +3,7 @@ export const userKey = 'userCredentials';
 export const rememberKey = 'rememberUser';
 
 export const excerpts = (str: string, count: number) => {
-  if (str.length > count) {
+  if (str?.length > count) {
     str = str.substring(0, count).concat('...');
   }
 
