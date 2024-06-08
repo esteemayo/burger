@@ -546,6 +546,11 @@ export interface TableBodyProps {
   onSubmit(e: React.FormEvent<HTMLFormElement>): void;
 }
 
+export interface ColumnType {
+  path: string;
+  label: string;
+}
+
 export interface EmptyStateProps {
   title: string;
   subtitle?: string;
