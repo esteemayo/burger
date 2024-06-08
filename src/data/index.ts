@@ -570,3 +570,26 @@ export const order: SingleOrderType = {
   createdAt: '2024-04-22T18:18:46.712+00:00',
   deliveryDate: '2024-04-27T18:18:46.712+00:00',
 };
+
+export const orderColumns = [
+  {
+    path: 'id',
+    label: 'Order ID',
+  },
+  {
+    path: 'createdAt',
+    label: 'Date',
+  },
+  {
+    path: 'price',
+    label: 'Price',
+  },
+  {
+    path: 'products',
+    label: 'Products',
+  },
+  {
+    path: 'status',
+    label: 'Status',
+  },
+];
