@@ -524,6 +524,11 @@ export interface OrderTableProps {
   data: OrderItem[];
 }
 
+export interface TableProps {
+  isAdmin: Boolean | undefined;
+  data: OrderItem[];
+}
+
 export interface EmptyStateProps {
   title: string;
   subtitle?: string;
