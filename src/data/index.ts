@@ -10,6 +10,7 @@ import {
   AccountCardType,
   CardMenu,
   CartType,
+  ColumnType,
   FeaturesType,
   FooterLinks,
   Menus,
@@ -571,7 +572,7 @@ export const order: SingleOrderType = {
   deliveryDate: '2024-04-27T18:18:46.712+00:00',
 };
 
-export const orderColumns = [
+export const orderColumns: ColumnType = [
   {
     path: 'id',
     label: 'Order ID',
