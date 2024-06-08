@@ -1,0 +1,248 @@
+@import '../../styles/variables.scss';
+@import '../../styles/responsive.scss';
+
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 1.2rem 1.2rem;
+
+  @media only screen and (max-width: 43.75em) {
+    border-spacing: 0.5rem 0.5rem;
+  }
+
+  @media only screen and (max-width: 25em) {
+    border-spacing: 3px 3px;
+  }
+
+  @media only screen and (max-width: 18.75em) {
+    border-spacing: 1px 1px;
+  }
+
+  thead {
+    tr {
+      text-align: left;
+
+      @include xl {
+        font-size: 1.77778rem;
+      }
+
+      @media only screen and (max-width: 56.25em) {
+        font-size: 2rem;
+      }
+
+      @media only screen and (max-width: 43.75em) {
+        font-size: 1.75rem;
+      }
+
+      @media only screen and (min-width: 112.5em) {
+        font-size: 2rem;
+      }
+
+      th {
+        @media only screen and (max-width: 37.5em) {
+          &:nth-child(2) {
+            display: none;
+          }
+        }
+
+        @include sm {
+          &:nth-child(3) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      font-size: 1.4rem;
+      line-height: 2rem;
+
+      @include xl {
+        font-size: 1.55556rem;
+      }
+
+      @media only screen and (max-width: 56.25em) {
+        font-size: 1.75rem;
+      }
+
+      @media only screen and (max-width: 43.75em) {
+        font-size: 1.625rem;
+      }
+
+      @media only screen and (max-width: 25em) {
+        font-size: 1.5625rem;
+      }
+
+      @media only screen and (max-width: 18.75em) {
+        font-size: 1.5rem;
+      }
+
+      @media only screen and (min-width: 112.5em) {
+        font-size: 1.83333rem;
+      }
+
+      &.orderStatus {
+        background-color: $clr-tertiary;
+      }
+
+      &.orderDelivered {
+        background-color: rgba(40, 167, 69, 0.1);
+      }
+
+      td {
+        padding: 2.4rem 4px;
+
+        @media only screen and (max-width: 37.5em) {
+          &:nth-child(2) {
+            display: none;
+          }
+        }
+
+        @include sm {
+          &:nth-child(3) {
+            display: none;
+          }
+        }
+
+        a,
+        a:link,
+        a:visited {
+          color: inherit;
+        }
+
+        &.orderName {
+          text-transform: capitalize;
+        }
+
+        form {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 1.6rem;
+
+          @include md {
+            display: none;
+          }
+
+          input {
+            display: inline-block;
+            border: none;
+            outline: none;
+            font-family: inherit;
+            font-size: 100%;
+            padding: 0.8rem;
+            background-color: $clr-white;
+            color: $clr-gray-dark;
+            border-radius: 0.5rem;
+            caret-color: $clr-gray-light;
+
+            @include xl {
+              font-size: 1.777778rem;
+            }
+
+            @media only screen and (max-width: 56.25em) {
+              font-size: 1.85rem;
+            }
+
+            @include md {
+              font-size: 1.975rem;
+            }
+
+            @media only screen and (min-width: 112.5em) {
+              font-size: 2rem;
+            }
+
+            &::placeholder {
+              font-weight: 400;
+              font-size: 1.5rem;
+              color: $clr-gray-light;
+
+              @include xl {
+                font-size: 1.666665rem;
+              }
+
+              @include md {
+                font-size: 1.875rem;
+              }
+
+              @media only screen and (max-width: 23.4375em) {
+                font-size: 1.675rem;
+              }
+
+              @media only screen and (min-width: 112.5em) {
+                font-size: 1.8rem;
+              }
+            }
+          }
+
+          button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            all: unset;
+            padding: 0.5rem 0.8rem;
+            background-color: $clr-primary;
+            color: $clr-white;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: all 0.3s;
+
+            @media only screen and (min-width: 112.5em) {
+              padding: 0.8rem 1.5rem;
+            }
+
+            &:hover {
+              background-color: $clr-secondary;
+            }
+
+            &:disabled {
+              opacity: 0.7;
+              cursor: default;
+            }
+
+            img {
+              display: inline-block;
+              width: 2rem;
+              height: 2rem;
+              object-fit: cover;
+
+              @media only screen and (min-width: 112.5em) {
+                width: 2.5rem;
+                height: 2.5rem;
+              }
+            }
+          }
+        }
+
+        .statusContainer {
+          position: relative;
+
+          button {
+            all: unset;
+            display: inline-block;
+            cursor: pointer;
+
+            position: absolute;
+            top: -2rem;
+            right: -0.5rem;
+
+            &:disabled {
+              opacity: 0.7;
+              cursor: default;
+            }
+
+            img {
+              display: inline-block;
+              width: 1.75rem;
+              height: 1.75rem;
+              object-fit: cover;
+            }
+          }
+        }
+      }
+    }
+  }
+}
