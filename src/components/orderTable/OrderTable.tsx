@@ -4,6 +4,7 @@ import { toast } from 'react-toastify';
 import { useCallback, useEffect, useState } from 'react';
 
 import { OrderItem, OrderTableProps } from '@/types';
+import { orderColumns } from '@/data';
 import { useStatusModal } from '@/hooks/useStatusModal';
 
 import Table from '../table/Table';
@@ -56,6 +57,7 @@ const OrderTable = ({ isAdmin, data }: OrderTableProps) => {
   return (
     <Table
       data={data}
+      columns={orderColumns}
       isAdmin={isAdmin}
       dimension={dimension}
       orderStatus={orderStatus}

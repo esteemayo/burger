@@ -7,6 +7,7 @@ import './Table.scss';
 
 const Table = ({
   data,
+  columns,
   isAdmin,
   dimension,
   orderStatus,

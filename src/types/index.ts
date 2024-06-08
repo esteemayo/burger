@@ -526,6 +526,7 @@ export interface OrderTableProps {
 
 export interface TableProps {
   data: OrderItem[];
+  columns: ColumnType;
   isAdmin: Boolean | undefined;
   dimension: number;
   orderStatus(
