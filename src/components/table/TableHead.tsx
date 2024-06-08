@@ -6,11 +6,9 @@ const TableHead = ({ columns }: TableHeadProps) => {
   return (
     <thead>
       <tr>
-        <th>Order ID</th>
-        <th>Date</th>
-        <th>Price</th>
-        <th>Products</th>
-        <th>Status</th>
+        {columns.map((column) => {
+          return <th key={column.path}>{column.label}</th>;
+        })}
       </tr>
     </thead>
   );
