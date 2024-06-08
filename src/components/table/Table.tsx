@@ -7,6 +7,7 @@ import { formatDate } from '@/utils/formatDate';
 import { excerpts } from '@/utils';
 import { formatCurrency } from '@/utils/formatCurrency';
 
+import TableHead from './TableHead';
 import { TableProps } from '@/types';
 
 import './Table.scss';
@@ -21,15 +22,7 @@ const Table = ({
 }: TableProps) => {
   return (
     <table className='table'>
-      <thead>
-        <tr>
-          <th>Order ID</th>
-          <th>Date</th>
-          <th>Price</th>
-          <th>Products</th>
-          <th>Status</th>
-        </tr>
-      </thead>
+      <TableHead />
       <tbody>
         {data?.map((item) => {
           const { id, price, status, products, createdAt } = item;
