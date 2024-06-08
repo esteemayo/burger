@@ -1,6 +1,24 @@
-import './Table.scss'
+'use client';
 
-const Table = ({ data, isAdmin }) => {
+import Link from 'next/link';
+import Image from 'next/image';
+
+import { formatDate } from '@/utils/formatDate';
+import { excerpts } from '@/utils';
+import { formatCurrency } from '@/utils/formatCurrency';
+
+import { TableProps } from '@/types';
+
+import './Table.scss';
+
+const Table = ({
+  data,
+  isAdmin,
+  dimension,
+  orderStatus,
+  onClick,
+  onSubmit,
+}: TableProps) => {
   return (
     <table className='table'>
       <thead>
@@ -44,7 +62,7 @@ const Table = ({ data, isAdmin }) => {
                 <td>{orderStatus(status)}</td>
               ) : (
                 <td>
-                  <form onSubmit={handleSubmit}>
+                  <form onSubmit={onSubmit}>
                     <input type='text' placeholder={orderStatus(status)} />
                     <button type='submit'>
                       <Image
@@ -58,10 +76,7 @@ const Table = ({ data, isAdmin }) => {
                   {dimension <= 768 && (
                     <div className='statusContainer'>
                       {orderStatus(status)}
-                      <button
-                        type='button'
-                        onClick={(e) => handleClick(e, item)}
-                      >
+                      <button type='button' onClick={(e) => onClick(e, item)}>
                         <Image
                           src='/svg/edit.svg'
                           width={20}
