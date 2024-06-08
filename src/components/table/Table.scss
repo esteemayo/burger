@@ -110,6 +110,12 @@
         a:link,
         a:visited {
           color: inherit;
+          transition: all 0.3s;
+
+          &:hover {
+            text-decoration: underline;
+            text-underline-offset: 0.6rem;
+          }
         }
 
         &.orderName {
