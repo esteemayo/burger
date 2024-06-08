@@ -24,7 +24,7 @@ import {
 
 export const cart: CartType = [
   {
-    id: 1,
+    id: '1',
     name: 'Breakfast burger',
     image: '/img/burger-4.jpg',
     price: 13000,
@@ -32,7 +32,7 @@ export const cart: CartType = [
     quantity: 1,
   },
   {
-    id: 2,
+    id: '2',
     name: 'Double beef & fries',
     image: '/img/burger-5.jpg',
     price: 37000,
@@ -40,7 +40,7 @@ export const cart: CartType = [
     quantity: 1,
   },
   {
-    id: 3,
+    id: '3',
     name: 'Single beef burger',
     image: '/img/burger-6.jpg',
     price: 12700,
