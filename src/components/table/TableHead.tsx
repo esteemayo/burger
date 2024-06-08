@@ -1,6 +1,8 @@
+import { TableHeadProps } from '@/types';
+
 import './Table.scss';
 
-const TableHead = () => {
+const TableHead = ({ columns }: TableHeadProps) => {
   return (
     <thead>
       <tr>
