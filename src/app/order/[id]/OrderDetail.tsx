@@ -13,7 +13,7 @@ import { getUser } from '@/services/userService';
 import './Order.scss';
 
 const OrderDetail = ({ order }: OrderDetailProps) => {
-  const userId = order.userId;
+  const userId = order?.userId;
 
   const { isLoading, data: user } = useQuery({
     queryKey: [`${userId}`],
