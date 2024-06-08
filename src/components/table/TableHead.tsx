@@ -7,7 +7,8 @@ const TableHead = ({ columns }: TableHeadProps) => {
     <thead>
       <tr>
         {columns.map((column) => {
-          return <th key={column.path}>{column.label}</th>;
+          const { path, label } = column;
+          return <th key={path}>{label}</th>;
         })}
       </tr>
     </thead>
