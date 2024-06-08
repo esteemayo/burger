@@ -16,7 +16,7 @@ const Table = ({
 }: TableProps) => {
   return (
     <table className='table'>
-      <TableHead />
+      <TableHead columns={columns} />
       <TableBody
         data={data}
         isAdmin={isAdmin}
