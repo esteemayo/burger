@@ -536,6 +536,10 @@ export interface TableProps {
   onSubmit(e: React.FormEvent<HTMLFormElement>): void;
 }
 
+export interface TableHeadProps {
+  columns: ColumnType;
+}
+
 export interface TableBodyProps {
   data: OrderItem[];
   isAdmin: Boolean | undefined;
