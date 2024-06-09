@@ -74,7 +74,7 @@ const TableBody = ({
               <td>{orderStatus(status)}</td>
             ) : (
               <td>
-                <form onSubmit={() => handleSubmit(id)}>
+                <form onSubmit={(e) => handleSubmit(e, id)}>
                   <input type='text' placeholder={orderStatus(status)} />
                   <button type='submit'>
                     <Image
