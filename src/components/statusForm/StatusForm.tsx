@@ -24,7 +24,7 @@ const StatusForm = ({ actionId, status }: StatusFormProps) => {
         console.log(err);
       }
     },
-    []
+    [actionId]
   );
 
   return (
