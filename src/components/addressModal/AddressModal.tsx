@@ -86,7 +86,7 @@ const AddressModal = () => {
 
   const { state, city, street } = data;
 
-  let bodyContent: JSX.Element;
+  let bodyContent: JSX.Element | undefined;
 
   bodyContent = (
     <>
