@@ -2,9 +2,10 @@ import { useCallback } from 'react';
 import Image from 'next/image';
 import { toast } from 'react-toastify';
 
+import { StatusFormProps } from '@/types';
 import { updateOrder } from '@/services/orderService';
 
-const StatusForm = ({ actionId, status, orderStatus }) => {
+const StatusForm = ({ actionId, status }: StatusFormProps) => {
   const handleSubmit = useCallback(
     async (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
@@ -28,7 +29,7 @@ const StatusForm = ({ actionId, status, orderStatus }) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input type='text' placeholder={orderStatus(status)} />
+      <input type='text' placeholder={status} />
       <button type='submit'>
         <Image src='/img/edit.png' width={20} height={20} alt='edit icon' />
       </button>
