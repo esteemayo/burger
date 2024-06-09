@@ -550,6 +550,11 @@ export interface TableBodyProps {
   onClick(e: React.MouseEvent<HTMLButtonElement>, order: OrderItem): void;
 }
 
+export interface StatusFormProps {
+  actionId: string;
+  status: string;
+}
+
 export type ColumnType = {
   path: string;
   label: string;
