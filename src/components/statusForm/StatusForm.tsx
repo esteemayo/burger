@@ -19,6 +19,11 @@ const StatusForm = ({ actionId, status }: StatusFormProps) => {
       const input = form.elements[0] as HTMLInputElement;
       const status = input.value;
 
+      if (input.value.length < 1) {
+        toast.error('Status must not be empty');
+        return;
+      }
+
       try {
         await updateOrder(actionId, { status });
 
