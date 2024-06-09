@@ -1,13 +1,10 @@
 'use client';
 
-import { toast } from 'react-toastify';
 import { useCallback, useEffect, useState } from 'react';
 
-import { updateOrder } from '@/services/orderService';
-import { useStatusModal } from '@/hooks/useStatusModal';
-
-import { orderColumns } from '@/data';
 import { OrderItem, OrderTableProps } from '@/types';
+import { orderColumns } from '@/data';
+import { useStatusModal } from '@/hooks/useStatusModal';
 
 import Table from '../table/Table';
 
