@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
+import { useCallback } from 'react';
 
 import { formatDate } from '@/utils/formatDate';
 import { excerpts } from '@/utils';
@@ -19,17 +20,25 @@ const TableBody = ({
   orderStatus,
   onClick,
 }: TableBodyProps) => {
+  const statusClasses = useCallback(
+    (status: 'not paid' | 'preparing' | 'on the way' | 'delivered') => {
+      return status === 'not paid'
+        ? 'orderNotPaid'
+        : status === 'preparing'
+        ? 'orderPreparing'
+        : status === 'on the way'
+        ? 'orderOntheway'
+        : 'orderDelivered';
+    },
+    []
+  );
+
   return (
     <tbody>
       {data?.map((item) => {
         const { id, price, status, products, createdAt } = item;
         return (
-          <tr
-            key={id}
-            className={`${
-              status !== 'delivered' ? 'orderStatus' : 'orderDelivered'
-            }`}
-          >
+          <tr key={id} className={statusClasses(status)} >
             <td>
               <Link href={`/order/${encodeURIComponent(id)}`}>
                 #{excerpts(id, 10)}
