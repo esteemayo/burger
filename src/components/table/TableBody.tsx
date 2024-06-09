@@ -12,6 +12,8 @@ import { formatCurrency } from '@/utils/formatCurrency';
 import { TableBodyProps } from '@/types';
 import { updateOrder } from '@/services/orderService';
 
+import StatusForm from '../statusForm/StatusForm';
+
 import './Table.scss';
 
 const TableBody = ({
@@ -74,17 +76,7 @@ const TableBody = ({
               <td>{orderStatus(status)}</td>
             ) : (
               <td>
-                <form onSubmit={(e) => handleSubmit(e, id)}>
-                  <input type='text' placeholder={orderStatus(status)} />
-                  <button type='submit'>
-                    <Image
-                      src='/img/edit.png'
-                      width={20}
-                      height={20}
-                      alt='edit icon'
-                    />
-                  </button>
-                </form>
+                <StatusForm actionId={id} status={orderStatus(status)} />
                 {dimension <= 768 && (
                   <div className='statusContainer'>
                     {orderStatus(status)}
