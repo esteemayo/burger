@@ -18,6 +18,7 @@ const StatusModal = () => {
   const onClose = useStatusModal((store) => store.onClose);
 
   const [status, setStatus] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     setStatus(e.target.value);
@@ -25,6 +26,8 @@ const StatusModal = () => {
 
   const onSubmit = useCallback(async () => {
     const orderId = order?.id;
+
+    setIsLoading(true);
 
     try {
       await updateOrder(orderId!, { status });
@@ -36,6 +39,8 @@ const StatusModal = () => {
       onClose();
     } catch (err: unknown) {
       console.log(err);
+    } finally {
+      setIsLoading(false);
     }
   }, [onClose, order, router, status]);
 
@@ -61,6 +66,7 @@ const StatusModal = () => {
     <Modal
       isOpen={isOpen}
       title="Edit order's status"
+      loading={isLoading}
       disabled={disabledBtn}
       actionLabel='Update'
       body={bodyContent}
