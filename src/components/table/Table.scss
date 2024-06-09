@@ -84,7 +84,7 @@
       }
 
       &.orderNotPaid {
-        background-color: $error;
+        background-color: rgba(255, 99, 71, 0.25);
       }
 
       &.orderPreparing {
