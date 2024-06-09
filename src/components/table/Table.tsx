@@ -12,7 +12,6 @@ const Table = ({
   dimension,
   orderStatus,
   onClick,
-  onSubmit,
 }: TableProps) => {
   return (
     <table className='table'>
@@ -23,7 +22,6 @@ const Table = ({
         dimension={dimension}
         orderStatus={orderStatus}
         onClick={onClick}
-        onSubmit={onSubmit}
       />
     </table>
   );

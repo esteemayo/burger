@@ -533,7 +533,6 @@ export interface TableProps {
     status: 'not paid' | 'preparing' | 'on the way' | 'delivered'
   ): string;
   onClick(e: React.MouseEvent<HTMLButtonElement>, order: OrderItem): void;
-  onSubmit(e: React.FormEvent<HTMLFormElement>): void;
 }
 
 export interface TableHeadProps {
