@@ -27,8 +27,7 @@ const StatusModal = () => {
     const orderId = order?.id;
 
     try {
-      const { data } = await updateOrder(orderId!, { status });
-      console.log(data);
+      await updateOrder(orderId!, { status });
 
       setStatus('');
       router.refresh();
