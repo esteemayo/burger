@@ -84,7 +84,15 @@
       }
 
       &.orderNotPaid {
+        background-color: $error;
+      }
+
+      &.orderPreparing {
         background-color: $clr-tertiary;
+      }
+
+      &.orderOntheway {
+        background-color: $star;
       }
 
       &.orderDelivered {
