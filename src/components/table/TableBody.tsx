@@ -2,16 +2,12 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { toast } from 'react-toastify';
-import { useCallback } from 'react';
 
 import { formatDate } from '@/utils/formatDate';
 import { excerpts } from '@/utils';
 import { formatCurrency } from '@/utils/formatCurrency';
 
 import { TableBodyProps } from '@/types';
-import { updateOrder } from '@/services/orderService';
-
 import StatusForm from '../statusForm/StatusForm';
 
 import './Table.scss';
@@ -23,26 +19,6 @@ const TableBody = ({
   orderStatus,
   onClick,
 }: TableBodyProps) => {
-  const handleSubmit = useCallback(
-    async (e: React.FormEvent<HTMLFormElement>, orderId: string) => {
-      e.preventDefault();
-
-      const form = e.target as HTMLFormElement;
-      const input = form.elements[0] as HTMLInputElement;
-      const status = input.value;
-
-      try {
-        const { data } = await updateOrder(orderId, { status });
-        console.log(data);
-
-        form.reset();
-        toast.success("Changed order's status");
-      } catch (err: unknown) {
-        console.log(err);
-      }
-    },
-    []
-  );
   return (
     <tbody>
       {data?.map((item) => {
