@@ -92,7 +92,7 @@ const RecipientModal = () => {
 
   const { name, email, phone } = data;
 
-  let bodyContent: JSX.Element;
+  let bodyContent: JSX.Element | undefined;
 
   bodyContent = (
     <>
