@@ -1,14 +1,18 @@
 'use client';
 
+import { useRouter } from 'next/navigation';
 import { toast } from 'react-toastify';
 import { useCallback, useEffect, useState } from 'react';
 
 import Input from '../input/Input';
 import Modal from '../modal/Modal';
 
+import { updateOrder } from '@/services/orderService';
 import { useStatusModal } from '@/hooks/useStatusModal';
 
 const StatusModal = () => {
+  const router = useRouter();
+
   const isOpen = useStatusModal((store) => store.isOpen);
   const order = useStatusModal((store) => store.order);
   const onClose = useStatusModal((store) => store.onClose);
@@ -19,14 +23,22 @@ const StatusModal = () => {
     setStatus(e.target.value);
   }, []);
 
-  const onSubmit = useCallback(() => {
-    console.log(status);
+  const onSubmit = useCallback(async () => {
+    const orderId = order?.id;
 
-    setStatus('');
-    onClose();
+    try {
+      const { data } = await updateOrder(orderId!, { status });
+      console.log(data);
 
-    toast.success('Status changed!');
-  }, [onClose, status]);
+      setStatus('');
+      router.refresh();
+      toast.success('Status changed!');
+
+      onClose();
+    } catch (err: unknown) {
+      console.log(err);
+    }
+  }, [onClose, order, router, status]);
 
   useEffect(() => {
     setStatus(order?.status || '');
