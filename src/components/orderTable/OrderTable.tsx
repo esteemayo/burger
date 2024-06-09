@@ -3,9 +3,11 @@
 import { toast } from 'react-toastify';
 import { useCallback, useEffect, useState } from 'react';
 
-import { OrderItem, OrderTableProps } from '@/types';
-import { orderColumns } from '@/data';
+import { updateOrder } from '@/services/orderService';
 import { useStatusModal } from '@/hooks/useStatusModal';
+
+import { orderColumns } from '@/data';
+import { OrderItem, OrderTableProps } from '@/types';
 
 import Table from '../table/Table';
 
@@ -36,19 +38,6 @@ const OrderTable = ({ isAdmin, data }: OrderTableProps) => {
     [onOpen, onSelect]
   );
 
-  const handleSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    const form = e.target as HTMLFormElement;
-    const input = form.elements[0] as HTMLInputElement;
-    const status = input.value;
-
-    console.log(status);
-
-    form.reset();
-    toast.success("Changed order's status");
-  }, []);
-
   useEffect(() => {
     window.addEventListener('resize', handleDimension);
     return () => window.removeEventListener('resize', handleDimension);
@@ -62,7 +51,6 @@ const OrderTable = ({ isAdmin, data }: OrderTableProps) => {
       dimension={dimension}
       orderStatus={orderStatus}
       onClick={handleClick}
-      onSubmit={handleSubmit}
     />
   );
 };
