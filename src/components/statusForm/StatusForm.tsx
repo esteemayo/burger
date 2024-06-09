@@ -1,11 +1,16 @@
-import { useCallback } from 'react';
-import Image from 'next/image';
+'use client';
+
 import { toast } from 'react-toastify';
+import Image from 'next/image';
+import { useRouter } from 'next/navigation';
+import { useCallback } from 'react';
 
 import { StatusFormProps } from '@/types';
 import { updateOrder } from '@/services/orderService';
 
 const StatusForm = ({ actionId, status }: StatusFormProps) => {
+  const router = useRouter();
+
   const handleSubmit = useCallback(
     async (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
@@ -15,16 +20,16 @@ const StatusForm = ({ actionId, status }: StatusFormProps) => {
       const status = input.value;
 
       try {
-        const { data } = await updateOrder(actionId, { status });
-        console.log(data);
+        await updateOrder(actionId, { status });
 
         form.reset();
         toast.success("Changed order's status");
+        router.refresh();
       } catch (err: unknown) {
         console.log(err);
       }
     },
-    [actionId]
+    [actionId, router]
   );
 
   return (
