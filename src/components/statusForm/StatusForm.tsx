@@ -28,7 +28,7 @@ const StatusForm = ({ actionId, status }: StatusFormProps) => {
         await updateOrder(actionId, { status });
 
         form.reset();
-        toast.success("Changed order's status");
+        toast.success('Status updated!');
         router.refresh();
       } catch (err: unknown) {
         console.log(err);
