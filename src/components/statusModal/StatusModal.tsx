@@ -2,7 +2,7 @@
 
 import { useRouter } from 'next/navigation';
 import { toast } from 'react-toastify';
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 
 import Input from '../input/Input';
 import Modal from '../modal/Modal';
@@ -39,6 +39,10 @@ const StatusModal = () => {
     }
   }, [onClose, order, router, status]);
 
+  const disabledBtn = useMemo(() => {
+    return status.length < 1;
+  }, [status]);
+
   useEffect(() => {
     setStatus(order?.status || '');
   }, [order?.status]);
@@ -57,6 +61,7 @@ const StatusModal = () => {
     <Modal
       isOpen={isOpen}
       title="Edit order's status"
+      disabled={disabledBtn}
       actionLabel='Update'
       body={bodyContent}
       size='full'

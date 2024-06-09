@@ -105,7 +105,7 @@ const Modal = ({
               {secondaryActionLabel && secondaryAction && (
                 <button
                   type='button'
-                  disabled={disabled}
+                  disabled={!!disabled}
                   className='btnSecondary'
                   onClick={handleSecondaryAction}
                 >
@@ -115,7 +115,7 @@ const Modal = ({
               {actionLabel && (
                 <button
                   type='button'
-                  disabled={disabled}
+                  disabled={!!disabled}
                   className={actionLabelClasses}
                   onClick={handleSubmit}
                 >
