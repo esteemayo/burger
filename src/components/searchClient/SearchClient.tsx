@@ -8,7 +8,7 @@ import ProductLists from '../productLists/ProductLists';
 
 import { searchProducts } from '@/services/productService';
 
-import './SearchClient.scss';
+import '../../app/search/Search.scss';
 
 const SearchClient = () => {
   const params = useSearchParams();
@@ -37,12 +37,14 @@ const SearchClient = () => {
   }
 
   return (
-    <div className='searchClient'>
-      <h3>
-        Search results for
-        <small>{`"${decodedSearchQuery}"`}</small>
-      </h3>
-      <ProductLists data={products} loading={isLoading} />
+    <div className='search'>
+      <div className='container'>
+        <h3>
+          Search results for
+          <small>{`"${decodedSearchQuery}"`}</small>
+        </h3>
+        <ProductLists data={products} loading={isLoading} />
+      </div>
     </div>
   );
 };
