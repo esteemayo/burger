@@ -56,8 +56,13 @@ const AccountData = ({ userId }: AccountDataProps) => {
   const onSubmitHandler = async () => {
     setIsLOading(true);
 
+    const updatedData = {
+      ...data,
+      phone: `+234${data.phone}`,
+    };
+
     try {
-      const res = await updateUserData(userId!, { ...data });
+      const res = await updateUserData(userId!, { ...updatedData });
       console.log(res.data);
     } catch (err: unknown) {
       console.log(err);
@@ -127,8 +132,8 @@ const AccountData = ({ userId }: AccountDataProps) => {
               name='phone'
               type='number'
               label='Phone number'
-              value={user?.phone ?? phone}
-              placeholder='818 000 0000'
+              value={phone}
+              placeholder={user?.phone ?? '818 000 0000'}
               onChange={handleChange}
               error={errors.phone}
             />
