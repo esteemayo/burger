@@ -1,5 +1,6 @@
 'use client';
 
+import { useQuery } from '@tanstack/react-query';
 import Image from 'next/image';
 import { useCallback, useState } from 'react';
 
@@ -11,7 +12,7 @@ import { useForm } from '@/hooks/useForm';
 import { validateAccountData } from '@/validations/accountData';
 
 import { UserData, UserDataErrors } from '@/types';
-import {  updateUserData } from '@/services/userService';
+import { getUser, updateUserData } from '@/services/userService';
 
 import './AccountData.scss';
 
@@ -34,6 +35,15 @@ const initialErrors: UserDataErrors = {
 };
 
 const AccountData = ({ userId }: AccountDataProps) => {
+  const { data: user } = useQuery({
+    queryKey: ['user'],
+    queryFn: async () => {
+      const { data } = await getUser(userId);
+      return data;
+    },
+    enabled: !!userId,
+  });
+
   const [file, setFile] = useState<File>();
   const [isLoading, setIsLOading] = useState(false);
 
@@ -47,7 +57,7 @@ const AccountData = ({ userId }: AccountDataProps) => {
     setIsLOading(true);
 
     try {
-      const res = await updateUserData(userId, { ...data })
+      const res = await updateUserData(userId, { ...data });
       console.log(res.data);
     } catch (err: unknown) {
       console.log(err);
@@ -98,7 +108,7 @@ const AccountData = ({ userId }: AccountDataProps) => {
             <Input
               name='name'
               label='Name'
-              value={name}
+              value={user.name ?? name}
               placeholder='Name'
               onChange={handleChange}
               error={errors.name}
@@ -107,7 +117,7 @@ const AccountData = ({ userId }: AccountDataProps) => {
               name='email'
               type='email'
               label='Email address'
-              value={email}
+              value={user.email ?? email}
               placeholder='Email address'
               onChange={handleChange}
               error={errors.email}
@@ -117,7 +127,7 @@ const AccountData = ({ userId }: AccountDataProps) => {
               name='phone'
               type='number'
               label='Phone number'
-              value={phone}
+              value={user.phone ?? phone}
               placeholder='818 000 0000'
               onChange={handleChange}
               error={errors.phone}
@@ -125,16 +135,14 @@ const AccountData = ({ userId }: AccountDataProps) => {
             <Input
               name='address'
               label='Address'
-              value={address}
+              value={user.address ?? address}
               placeholder='Contact address'
               onChange={handleChange}
               error={errors.address}
             />
           </div>
           <div className='dataBtnWrap'>
-            <button type='submit'>
-              {isLoading ? <Spinner /> : 'Update'}
-            </button>
+            <button type='submit'>{isLoading ? <Spinner /> : 'Update'}</button>
           </div>
         </form>
       </div>
