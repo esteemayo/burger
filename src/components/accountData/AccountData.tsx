@@ -43,7 +43,7 @@ const AccountData = ({ userId }: AccountDataProps) => {
     },
     enabled: !!userId,
   });
-
+console.log(user)
   const [file, setFile] = useState<File>();
   const [isLoading, setIsLOading] = useState(false);
 

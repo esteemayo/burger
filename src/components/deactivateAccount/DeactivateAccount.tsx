@@ -6,7 +6,11 @@ import { useAccountModal } from '@/hooks/useAccountModal';
 
 import './DeactivateAccount.scss';
 
-const DeactivateAccount = ({ isAdmin }: { isAdmin: boolean }) => {
+interface DeactivateAccountProps { 
+  isAdmin: Boolean | undefined;
+}
+
+const DeactivateAccount = ({ isAdmin }: DeactivateAccountProps) => {
   const onOpen = useAccountModal((state) => state.onOpen);
 
   if (isAdmin) {
