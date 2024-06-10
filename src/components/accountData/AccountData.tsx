@@ -17,7 +17,7 @@ import { getUser, updateUserData } from '@/services/userService';
 import './AccountData.scss';
 
 interface AccountDataProps {
-  userId: string;
+  userId: string | undefined;
 }
 
 const initialState: UserData = {
@@ -38,7 +38,7 @@ const AccountData = ({ userId }: AccountDataProps) => {
   const { data: user } = useQuery({
     queryKey: ['user'],
     queryFn: async () => {
-      const { data } = await getUser(userId);
+      const { data } = await getUser(userId!);
       return data;
     },
     enabled: !!userId,
@@ -57,7 +57,7 @@ console.log(user)
     setIsLOading(true);
 
     try {
-      const res = await updateUserData(userId, { ...data });
+      const res = await updateUserData(userId!, { ...data });
       console.log(res.data);
     } catch (err: unknown) {
       console.log(err);
