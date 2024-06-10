@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { useCallback, useState } from 'react';
 
+import Spinner from '../spinner/Spinner';
 import Input from '../input/Input';
 import PhoneInput from '../phoneInput/PhoneInput';
 
@@ -34,6 +35,7 @@ const initialErrors: UserDataErrors = {
 
 const AccountData = ({ userId }: AccountDataProps) => {
   const [file, setFile] = useState<File>();
+  const [isLoading, setIsLOading] = useState(false);
 
   const handleFile = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     const target = e.target as HTMLInputElement;
@@ -42,11 +44,15 @@ const AccountData = ({ userId }: AccountDataProps) => {
   }, []);
 
   const onSubmitHandler = async () => {
+    setIsLOading(true);
+
     try {
       const res = await updateUserData(userId, { ...data })
       console.log(res.data);
     } catch (err: unknown) {
       console.log(err);
+    } finally {
+      setIsLOading(false);
     }
   };
 
@@ -126,7 +132,9 @@ const AccountData = ({ userId }: AccountDataProps) => {
             />
           </div>
           <div className='dataBtnWrap'>
-            <button type='submit'>Update</button>
+            <button type='submit'>
+              {isLoading ? <Spinner /> : 'Update'}
+            </button>
           </div>
         </form>
       </div>
