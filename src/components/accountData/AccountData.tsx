@@ -108,7 +108,7 @@ const AccountData = ({ userId }: AccountDataProps) => {
             <Input
               name='name'
               label='Name'
-              value={user.name ?? name}
+              value={user?.name ?? name}
               placeholder='Name'
               onChange={handleChange}
               error={errors.name}
@@ -117,7 +117,7 @@ const AccountData = ({ userId }: AccountDataProps) => {
               name='email'
               type='email'
               label='Email address'
-              value={user.email ?? email}
+              value={user?.email ?? email}
               placeholder='Email address'
               onChange={handleChange}
               error={errors.email}
@@ -127,7 +127,7 @@ const AccountData = ({ userId }: AccountDataProps) => {
               name='phone'
               type='number'
               label='Phone number'
-              value={user.phone ?? phone}
+              value={user?.phone ?? phone}
               placeholder='818 000 0000'
               onChange={handleChange}
               error={errors.phone}
@@ -135,7 +135,7 @@ const AccountData = ({ userId }: AccountDataProps) => {
             <Input
               name='address'
               label='Address'
-              value={user.address ?? address}
+              value={user?.address ?? address}
               placeholder='Contact address'
               onChange={handleChange}
               error={errors.address}
