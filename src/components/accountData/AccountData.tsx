@@ -1,8 +1,8 @@
 'use client';
 
-import { useQuery } from '@tanstack/react-query';
-import Image from 'next/image';
 import { useCallback, useState } from 'react';
+import Image from 'next/image';
+import { useQuery } from '@tanstack/react-query';
 
 import Spinner from '../spinner/Spinner';
 import Input from '../input/Input';
