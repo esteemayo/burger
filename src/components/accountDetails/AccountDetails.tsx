@@ -14,7 +14,7 @@ const AccountDetails = () => {
 
   return (
     <div className='accountDetails'>
-      <AccountData />
+      <AccountData userId={session?.user.id} />
       <AccountPassword />
       <DeactivateAccount isAdmin={session?.user.isAdmin} />
       <NewProduct isAdmin={session?.user.isAdmin} />
