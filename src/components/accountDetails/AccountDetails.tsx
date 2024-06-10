@@ -1,3 +1,7 @@
+'use client';
+
+import { useSession } from 'next-auth/react';
+
 import AccountPassword from '../accountPassword/AccountPassword';
 import NewProduct from '../newProduct/NewProduct';
 import DeactivateAccount from '../deactivateAccount/DeactivateAccount';
@@ -6,14 +10,14 @@ import AccountData from '../accountData/AccountData';
 import './AccountDetails.scss';
 
 const AccountDetails = () => {
-  const isAdmin = true;
+  const { data: session } = useSession()
 
   return (
     <div className='accountDetails'>
       <AccountData />
       <AccountPassword />
-      <DeactivateAccount isAdmin={isAdmin} />
-      <NewProduct isAdmin={isAdmin} />
+      <DeactivateAccount isAdmin={session?.user.isAdmin} />
+      <NewProduct isAdmin={session?.user.isAdmin} />
     </div>
   );
 };
