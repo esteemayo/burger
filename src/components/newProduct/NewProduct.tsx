@@ -6,7 +6,11 @@ import { useProductModal } from '@/hooks/useProductModal';
 
 import './NewProduct.scss';
 
-const NewProduct = ({ isAdmin }: { isAdmin: boolean }) => {
+interface NewProductProps { 
+  isAdmin: Boolean | undefined;
+}
+
+const NewProduct = ({ isAdmin }: NewProductProps) => {
   const onOpen = useProductModal((state) => state.onOpen);
 
   if (!isAdmin) {
