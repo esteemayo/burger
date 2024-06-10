@@ -10,8 +10,13 @@ import { useForm } from '@/hooks/useForm';
 import { validateAccountData } from '@/validations/accountData';
 
 import { UserData, UserDataErrors } from '@/types';
+import {  updateUserData } from '@/services/userService';
 
 import './AccountData.scss';
+
+interface AccountDataProps {
+  userId: string;
+}
 
 const initialState: UserData = {
   name: '',
@@ -27,7 +32,7 @@ const initialErrors: UserDataErrors = {
   address: '',
 };
 
-const AccountData = () => {
+const AccountData = ({ userId }: AccountDataProps) => {
   const [file, setFile] = useState<File>();
 
   const handleFile = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
@@ -36,8 +41,13 @@ const AccountData = () => {
     setFile(file);
   }, []);
 
-  const onSubmitHandler = () => {
-    console.log({ ...data, file });
+  const onSubmitHandler = async () => {
+    try {
+      const res = await updateUserData(userId, { ...data })
+      console.log(res.data);
+    } catch (err: unknown) {
+      console.log(err);
+    }
   };
 
   const { data, errors, handleChange, handleSubmit } = useForm(
