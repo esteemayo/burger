@@ -1,9 +1,11 @@
 'use client';
 
-import { useCallback, useState } from 'react';
-import Image from 'next/image';
-import { useQuery } from '@tanstack/react-query';
 import { useSession } from 'next-auth/react';
+import Image from 'next/image';
+import { useCallback, useState } from 'react';
+import { toast } from 'react-toastify';
+import { useQuery } from '@tanstack/react-query';
+import { useRouter } from 'next/navigation';
 
 import Spinner from '../spinner/Spinner';
 import Input from '../input/Input';
@@ -36,6 +38,7 @@ const initialErrors: UserDataErrors = {
 };
 
 const AccountData = ({ userId }: AccountDataProps) => {
+  const router = useRouter();
   const { update } = useSession();
 
   const { data: user } = useQuery({
@@ -75,6 +78,8 @@ const AccountData = ({ userId }: AccountDataProps) => {
       };
 
       update({ ...updatedData });
+      toast.success('Account updated!');
+      router.refresh();
     } catch (err: unknown) {
       console.log(err);
     } finally {
