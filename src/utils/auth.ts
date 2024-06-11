@@ -83,6 +83,11 @@ export const authOptions: NextAuthOptions = {
       if (token) {
         session.user.id = token?.id;
         session.user.isAdmin = token.isAdmin;
+        session.user.phone = token.phone;
+        session.user.state = token.state;
+        session.user.city = token.city;
+        session.user.street = token.street;
+        session.user.address = token.address;
       }
 
       if (trigger === 'update') {
