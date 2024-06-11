@@ -14,6 +14,7 @@ declare module 'next-auth' {
       city: string;
       state: string;
       street: string;
+      address: string;
       isAdmin: Boolean;
     };
   }
@@ -26,6 +27,7 @@ declare module 'next-auth/jwt' {
     city: string;
     state: string;
     street: string;
+    address: string;
     isAdmin: Boolean;
   }
 }
