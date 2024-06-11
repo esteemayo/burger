@@ -46,7 +46,7 @@ const AccountData = ({ userId }: AccountDataProps) => {
     },
     enabled: !!userId,
   });
-console.log(user?.address)
+  console.log(user?.address);
   const [file, setFile] = useState<File>();
   const [isLoading, setIsLOading] = useState(false);
 
@@ -59,13 +59,13 @@ console.log(user?.address)
   const onSubmitHandler = async () => {
     setIsLOading(true);
 
-    const updatedData = {
+    const userData = {
       ...data,
       phone: `+234${data.phone}`,
     };
 
     try {
-      const res = await updateUserData(userId!, { ...updatedData });
+      const res = await updateUserData(userId!, { ...userData });
       console.log(res.data);
 
       const updatedData = {
