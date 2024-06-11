@@ -66,7 +66,6 @@ const AccountData = ({ userId }: AccountDataProps) => {
 
     try {
       const res = await updateUserData(userId!, { ...userData });
-      console.log(res.data);
 
       const updatedData = {
         name: res.data.name,
