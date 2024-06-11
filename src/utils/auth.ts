@@ -92,6 +92,7 @@ export const authOptions: NextAuthOptions = {
         session.user.state = newSession.state;
         session.user.city = newSession.city;
         session.user.street = newSession.street;
+        session.user.address = newSession.address;
       }
 
       return session;
@@ -109,6 +110,7 @@ export const authOptions: NextAuthOptions = {
       token.state = userInDb?.state!;
       token.city = userInDb?.city!;
       token.street = userInDb?.street!;
+      token.address = userInDb?.address!;
 
       if (trigger === 'update') {
         token.name = session.name;
@@ -117,6 +119,7 @@ export const authOptions: NextAuthOptions = {
         token.state = session.state;
         token.city = session.city;
         token.street = session.street;
+        token.address = session.address;
       }
 
       return token;
