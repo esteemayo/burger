@@ -103,6 +103,10 @@ export const authOptions: NextAuthOptions = {
 
       token.id = userInDb?.id!;
       token.isAdmin = userInDb?.isAdmin!;
+      token.phone = userInDb?.phone!;
+      token.state = userInDb?.state!;
+      token.city = userInDb?.city!;
+      token.street = userInDb?.street!;
 
       if (trigger === 'update') {
         token.name = session.name;
