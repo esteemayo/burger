@@ -3,6 +3,7 @@
 import { useCallback, useState } from 'react';
 import Image from 'next/image';
 import { useQuery } from '@tanstack/react-query';
+import { useSession } from 'next-auth/react';
 
 import Spinner from '../spinner/Spinner';
 import Input from '../input/Input';
@@ -35,6 +36,8 @@ const initialErrors: UserDataErrors = {
 };
 
 const AccountData = ({ userId }: AccountDataProps) => {
+  const { update } = useSession();
+
   const { data: user } = useQuery({
     queryKey: ['user'],
     queryFn: async () => {
@@ -43,7 +46,7 @@ const AccountData = ({ userId }: AccountDataProps) => {
     },
     enabled: !!userId,
   });
-
+console.log(user?.address)
   const [file, setFile] = useState<File>();
   const [isLoading, setIsLOading] = useState(false);
 
@@ -64,6 +67,15 @@ const AccountData = ({ userId }: AccountDataProps) => {
     try {
       const res = await updateUserData(userId!, { ...updatedData });
       console.log(res.data);
+
+      const updatedData = {
+        name: res.data.name,
+        email: res.data.email,
+        phone: res.data.phone,
+        address: res.data.address,
+      };
+
+      update({ ...updatedData });
     } catch (err: unknown) {
       console.log(err);
     } finally {
