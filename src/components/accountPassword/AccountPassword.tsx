@@ -109,7 +109,7 @@ const AccountPassword = () => {
         </div>
         <div className='passwordBtnWrap'>
           <button type='submit'>
-            {isLoading ? <Spinner /> : 'Update password'}
+            {isLoading ? <Spinner /> : 'Reset password'}
           </button>
         </div>
       </form>
