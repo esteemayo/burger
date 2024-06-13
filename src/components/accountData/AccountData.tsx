@@ -41,7 +41,7 @@ const AccountData = ({ currentUser }: AccountDataProps) => {
   const router = useRouter();
   const { update } = useSession();
 
-  const userId = currentUser.id;
+  const userId = currentUser?.id;
 
   const { data: user } = useQuery({
     queryKey: ['user'],
