@@ -39,7 +39,7 @@ const AccountData = ({ currentUser }: AccountDataProps) => {
   const { update } = useSession();
 
   const [file, setFile] = useState<File>();
-  const [isLoading, setIsLOading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleFile = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     const target = e.target as HTMLInputElement;
@@ -48,7 +48,7 @@ const AccountData = ({ currentUser }: AccountDataProps) => {
   }, []);
 
   const onSubmitHandler = async () => {
-    setIsLOading(true);
+    setIsLoading(true);
 
     const userData = {
       ...data,
@@ -72,7 +72,7 @@ const AccountData = ({ currentUser }: AccountDataProps) => {
     } catch (err: unknown) {
       console.log(err);
     } finally {
-      setIsLOading(false);
+      setIsLoading(false);
     }
   };
 
