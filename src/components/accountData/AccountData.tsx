@@ -1,11 +1,10 @@
 'use client';
 
-import { useSession } from 'next-auth/react';
-import Image from 'next/image';
-import { useCallback, useState } from 'react';
-import { toast } from 'react-toastify';
-import { useQuery } from '@tanstack/react-query';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
+import { useSession } from 'next-auth/react';
+import { toast } from 'react-toastify';
+import { useCallback, useState } from 'react';
 
 import Spinner from '../spinner/Spinner';
 import Input from '../input/Input';
@@ -15,7 +14,7 @@ import { useForm } from '@/hooks/useForm';
 import { validateAccountData } from '@/validations/accountData';
 
 import { UserData, UserDataErrors } from '@/types';
-import { getUser, updateUserData } from '@/services/userService';
+import { updateUserData } from '@/services/userService';
 
 import './AccountData.scss';
 
@@ -38,7 +37,6 @@ const initialErrors: UserDataErrors = {
 };
 
 const AccountData = ({ currentUser }: AccountDataProps) => {
-  const router = useRouter();
   const { update } = useSession();
 
   const [file, setFile] = useState<File>();
@@ -72,7 +70,6 @@ const AccountData = ({ currentUser }: AccountDataProps) => {
 
       update({ ...updatedData });
       toast.success('Account updated!');
-      router.refresh();
     } catch (err: unknown) {
       console.log(err);
     } finally {
