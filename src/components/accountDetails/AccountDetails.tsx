@@ -10,11 +10,11 @@ import AccountData from '../accountData/AccountData';
 import './AccountDetails.scss';
 
 const AccountDetails = () => {
-  const { data: session } = useSession()
+  const { data: session } = useSession();
 
   return (
     <div className='accountDetails'>
-      <AccountData userId={session?.user.id} />
+      <AccountData currentUser={session?.user} userId={session?.user.id} />
       <AccountPassword />
       <DeactivateAccount isAdmin={session?.user.isAdmin} />
       <NewProduct isAdmin={session?.user.isAdmin} />
