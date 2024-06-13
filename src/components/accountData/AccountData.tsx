@@ -20,7 +20,7 @@ import { getUser, updateUserData } from '@/services/userService';
 import './AccountData.scss';
 
 interface AccountDataProps {
-  userId: string | undefined;
+  currentUser: any;
 }
 
 const initialState: UserData = {
@@ -37,9 +37,11 @@ const initialErrors: UserDataErrors = {
   address: '',
 };
 
-const AccountData = ({ userId }: AccountDataProps) => {
+const AccountData = ({ currentUser }: AccountDataProps) => {
   const router = useRouter();
   const { update } = useSession();
+
+  const userId = currentUser.id;
 
   const { data: user } = useQuery({
     queryKey: ['user'],
