@@ -41,17 +41,6 @@ const AccountData = ({ currentUser }: AccountDataProps) => {
   const router = useRouter();
   const { update } = useSession();
 
-  const userId = currentUser?.id;
-
-  const { data: user } = useQuery({
-    queryKey: ['user'],
-    queryFn: async () => {
-      const { data } = await getUser(userId!);
-      return data;
-    },
-    enabled: !!userId,
-  });
-
   const [file, setFile] = useState<File>();
   const [isLoading, setIsLOading] = useState(false);
 
@@ -70,6 +59,8 @@ const AccountData = ({ currentUser }: AccountDataProps) => {
     };
 
     try {
+      const userId = currentUser?.id;
+
       const res = await updateUserData(userId!, { ...userData });
 
       const updatedData = {
@@ -132,7 +123,7 @@ const AccountData = ({ currentUser }: AccountDataProps) => {
               name='name'
               label='Name'
               value={name}
-              placeholder={user?.name ?? 'Name'}
+              placeholder={currentUser?.name ?? 'Name'}
               onChange={handleChange}
               error={errors.name}
             />
@@ -141,7 +132,7 @@ const AccountData = ({ currentUser }: AccountDataProps) => {
               type='email'
               label='Email address'
               value={email}
-              placeholder={user?.email ?? 'Email address'}
+              placeholder={currentUser?.email ?? 'Email address'}
               onChange={handleChange}
               error={errors.email}
               dimension='large'
@@ -151,7 +142,7 @@ const AccountData = ({ currentUser }: AccountDataProps) => {
               type='number'
               label='Phone number'
               value={phone}
-              placeholder={user?.phone ?? '818 000 0000'}
+              placeholder={currentUser?.phone ?? '818 000 0000'}
               onChange={handleChange}
               error={errors.phone}
             />
@@ -159,7 +150,7 @@ const AccountData = ({ currentUser }: AccountDataProps) => {
               name='address'
               label='Address'
               value={address}
-              placeholder={user?.address ?? 'Contact address'}
+              placeholder={currentUser?.address ?? 'Contact address'}
               onChange={handleChange}
               error={errors.address}
             />
