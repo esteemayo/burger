@@ -9,6 +9,7 @@ import { useForm } from '@/hooks/useForm';
 import { validatePasswordInputs } from '@/validations/accountPassword';
 
 import Input from '../input/Input';
+import Spinner from '../spinner/Spinner';
 
 import './AccountPassword.scss';
 
@@ -24,6 +25,7 @@ const initialErrors: UserPasswordErrors = {
 
 const AccountPassword = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
   const togglePassword = useCallback(
@@ -40,8 +42,16 @@ const AccountPassword = () => {
     []
   );
 
-  const onSubmithandler = () => {
-    console.log({ ...data });
+  const onSubmithandler = async () => {
+    setIsLoading(true);
+
+    try {
+      console.log({ ...data });
+    } catch (err: unknown) {
+      console.log(err);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const { data, errors, handleChange, handleSubmit } = useForm(
@@ -98,7 +108,9 @@ const AccountPassword = () => {
           </Input>
         </div>
         <div className='passwordBtnWrap'>
-          <button type='submit'>Update password</button>
+          <button type='submit'>
+            {isLoading ? <Spinner /> : 'Update password'}
+          </button>
         </div>
       </form>
     </div>
