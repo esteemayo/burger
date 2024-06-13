@@ -93,7 +93,7 @@ const AccountData = ({ currentUser }: AccountDataProps) => {
             src={
               file
                 ? URL.createObjectURL(file as Blob | MediaSource)
-                : '/img/avatar.png'
+                : `${currentUser?.image ?? '/img/avatar.png'}`
             }
             width={50}
             height={50}
