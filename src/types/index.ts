@@ -2,6 +2,7 @@ import { SvgIconTypeMap } from '@mui/material';
 import React from 'react';
 import { OverridableComponent } from '@mui/material/OverridableComponent';
 import { IconType } from 'react-icons/lib';
+import { User } from 'next-auth';
 
 export type GenderType = {
   value: string;
@@ -578,11 +579,8 @@ export interface OrderDetailProps {
   };
 }
 
-export type CurrentUserType = {
+export type CurrentUserType = User & {
   id: string;
-  name: string;
-  email: string;
-  image: string;
   phone: string;
   city: string;
   state: string;

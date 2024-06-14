@@ -12,23 +12,13 @@ import PhoneInput from '../phoneInput/PhoneInput';
 import { useForm } from '@/hooks/useForm';
 import { validateAccountData } from '@/validations/accountData';
 
-import { UserData, UserDataErrors } from '@/types';
 import { updateUserData } from '@/services/userService';
+import { CurrentUserType, UserData, UserDataErrors } from '@/types';
 
 import './AccountData.scss';
 
 interface AccountDataProps {
-  currentUser:
-    | {
-        id: string;
-        phone: string;
-        city: string;
-        state: string;
-        street: string;
-        address: string;
-        isAdmin: Boolean;
-      }
-    | undefined;
+  currentUser: CurrentUserType | undefined;
 }
 
 const initialState: UserData = {
