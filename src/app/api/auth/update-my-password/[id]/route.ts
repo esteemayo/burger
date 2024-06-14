@@ -59,7 +59,7 @@ export const PATCH = async (req: NextRequest, { params }: IParams) => {
 
         updatedUser = {
           ...updatedUser,
-          password: undefined,
+          password: undefined!,
         };
 
         return new NextResponse(JSON.stringify(updatedUser), { status: 200 });
