@@ -30,7 +30,7 @@ const initialErrors: UserPasswordErrors = {
   confirmPassword: '',
 };
 
-const AccountPassword = ({ userId }:AccountPasswordProps) => {
+const AccountPassword = ({ userId }: AccountPasswordProps) => {
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
@@ -53,7 +53,7 @@ const AccountPassword = ({ userId }:AccountPasswordProps) => {
     setIsLoading(true);
 
     try {
-      const res = await updatePassword(userId!, { ...data })
+      const res = await updatePassword(userId!, { ...data });
       console.log(res.data);
       toast.success('Password changed successfully');
     } catch (err: unknown) {
