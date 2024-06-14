@@ -1,5 +1,6 @@
 'use client';
 
+import { toast } from 'react-toastify';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import { useCallback, useMemo, useState } from 'react';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
@@ -54,6 +55,7 @@ const AccountPassword = ({ userId }:AccountPasswordProps) => {
     try {
       const res = await updatePassword(userId!, { ...data })
       console.log(res.data);
+      toast.success('Password changed successfully');
     } catch (err: unknown) {
       console.log(err);
     } finally {
