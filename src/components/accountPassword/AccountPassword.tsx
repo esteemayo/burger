@@ -1,8 +1,9 @@
 'use client';
 
+import { useCallback, useMemo, useState } from 'react';
 import { toast } from 'react-toastify';
 import VisibilityIcon from '@mui/icons-material/Visibility';
-import { useCallback, useMemo, useState } from 'react';
+import { useSession } from 'next-auth/react';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 
 import Input from '../input/Input';
@@ -31,6 +32,8 @@ const initialErrors: UserPasswordErrors = {
 };
 
 const AccountPassword = ({ userId }: AccountPasswordProps) => {
+  const { update } = useSession();
+
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
@@ -54,7 +57,7 @@ const AccountPassword = ({ userId }: AccountPasswordProps) => {
 
     try {
       const res = await updatePassword(userId!, { ...data });
-      console.log(res.data);
+      update({ ...res.data });
       toast.success('Password changed successfully');
     } catch (err: unknown) {
       console.log(err);
