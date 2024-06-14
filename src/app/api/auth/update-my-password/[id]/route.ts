@@ -34,7 +34,7 @@ export const PATCH = async (req: NextRequest, { params }: IParams) => {
         );
       }
 
-      const updPassword = _.pick(body, ['password', 'confirmPssword']);
+      const updPassword = _.pick(body, ['password', 'confirmPassword']);
       const comparePassword = await bcrypt.compare(
         updPassword.password,
         user?.password!
