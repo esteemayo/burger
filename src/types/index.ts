@@ -580,9 +580,11 @@ export interface OrderDetailProps {
 
 export type CurrentUserType = {
   id: string;
-  name: string;
-  email: string;
-  image?: string;
+  phone: string;
+  city: string;
+  state: string;
+  street: string;
+  address: string;
   isAdmin: Boolean;
 };
 
