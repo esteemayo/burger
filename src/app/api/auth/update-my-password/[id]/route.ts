@@ -49,12 +49,17 @@ export const PATCH = async (req: NextRequest, { params }: IParams) => {
         );
       }
 
+      const dataObj = {
+        ...updPassword,
+        confirmPassword: undefined,
+      };
+
       if (session.user.isAdmin || session.user.id === userId) {
         let updatedUser = await prisma.user.update({
           where: {
             id: userId,
           },
-          data: { ...updPassword },
+          data: { ...dataObj },
         });
 
         updatedUser = {
