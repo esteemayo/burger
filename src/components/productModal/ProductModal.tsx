@@ -10,6 +10,7 @@ import ProductInputs from '../productInputs/ProductInputs';
 import { useProductModal } from '@/hooks/useProductModal';
 import { ProductData, ProductErrors } from '@/types';
 import { validateProductInput } from '@/validations/product';
+import { createProduct } from '@/services/productService';
 
 const enum STEPS {
   INFO = 0,
@@ -93,7 +94,7 @@ const ProductModal = () => {
     setData(initialState);
   }, []);
 
-  const onSubmit = useCallback(() => {
+  const onSubmit = useCallback(async () => {
     if (step !== STEPS.IMAGE) {
       return onNext();
     }
@@ -104,18 +105,25 @@ const ProductModal = () => {
     setErrors({});
 
     const selectedFile = file?.[0];
-
-    console.log({
+    const newProduct = {
       ...data,
       price: +data.price,
       ingredients,
-      image: selectedFile,
-    });
+      // image: selectedFile,
+    };
 
-    handleClear();
-    setStep(STEPS.INFO);
-    toast.success('Product created!');
-    onClose();
+    try {
+      const res = await createProduct({ ...newProduct });
+      console.log(res.data);
+
+      handleClear();
+      setStep(STEPS.INFO);
+
+      toast.success('Product created!');
+      onClose();
+    } catch (err: unknown) {
+      console.log(err);
+    }
   }, [data, file, handleClear, ingredients, onClose, onNext, step]);
 
   const actionLabel = useMemo(() => {
