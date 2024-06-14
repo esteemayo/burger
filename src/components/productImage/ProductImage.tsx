@@ -57,7 +57,7 @@ const ProductImage = ({
           </button>
         </div>
       </div>
-      <DropZone label='Image' onSelect={onSelect} />
+      <DropZone id='image' label='Image' onSelect={onSelect} />
     </div>
   );
 };
