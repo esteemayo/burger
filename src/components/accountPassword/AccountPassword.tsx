@@ -4,14 +4,14 @@ import VisibilityIcon from '@mui/icons-material/Visibility';
 import { useCallback, useMemo, useState } from 'react';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 
-import { UserPassword, UserPasswordErrors } from '@/types';
-import { useForm } from '@/hooks/useForm';
-import { validatePasswordInputs } from '@/validations/accountPassword';
-
 import Input from '../input/Input';
 import Spinner from '../spinner/Spinner';
 
+import { useForm } from '@/hooks/useForm';
+import { validatePasswordInputs } from '@/validations/accountPassword';
+
 import { updatePassword } from '@/services/authService';
+import { UserPassword, UserPasswordErrors } from '@/types';
 
 import './AccountPassword.scss';
 
@@ -29,7 +29,7 @@ const initialErrors: UserPasswordErrors = {
   confirmPassword: '',
 };
 
-const AccountPassword = ({userId}:AccountPasswordProps) => {
+const AccountPassword = ({ userId }:AccountPasswordProps) => {
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
@@ -52,7 +52,7 @@ const AccountPassword = ({userId}:AccountPasswordProps) => {
     setIsLoading(true);
 
     try {
-      const res = await updatePassword(userId, { ...data })
+      const res = await updatePassword(userId!, { ...data })
       console.log(res.data);
     } catch (err: unknown) {
       console.log(err);
