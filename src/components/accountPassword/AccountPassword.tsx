@@ -11,7 +11,13 @@ import { validatePasswordInputs } from '@/validations/accountPassword';
 import Input from '../input/Input';
 import Spinner from '../spinner/Spinner';
 
+import { updatePassword } from '@/services/authService';
+
 import './AccountPassword.scss';
+
+interface AccountPasswordProps {
+  userId: string | undefined;
+}
 
 const initialState: UserPassword = {
   password: '',
@@ -23,7 +29,7 @@ const initialErrors: UserPasswordErrors = {
   confirmPassword: '',
 };
 
-const AccountPassword = () => {
+const AccountPassword = ({userId}:AccountPasswordProps) => {
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
@@ -46,7 +52,8 @@ const AccountPassword = () => {
     setIsLoading(true);
 
     try {
-      console.log({ ...data });
+      const res = await updatePassword(userId, { ...data })
+      console.log(res.data);
     } catch (err: unknown) {
       console.log(err);
     } finally {
