@@ -35,19 +35,6 @@ export const PATCH = async (req: NextRequest, { params }: IParams) => {
       }
 
       const updPassword = _.pick(body, ['password', 'confirmPassword']);
-      const comparePassword = await bcrypt.compare(
-        updPassword.password,
-        user?.password!
-      );
-
-      if (!comparePassword) {
-        return new NextResponse(
-          JSON.stringify({
-            message: 'Your password is wrong',
-          }),
-          { status: 401 }
-        );
-      }
 
       const dataObj = {
         ...updPassword,
