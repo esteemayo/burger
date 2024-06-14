@@ -1,8 +1,8 @@
-import { SvgIconTypeMap } from '@mui/material';
-import React from 'react';
-import { OverridableComponent } from '@mui/material/OverridableComponent';
 import { IconType } from 'react-icons/lib';
+import React from 'react';
+import { SvgIconTypeMap } from '@mui/material';
 import { User } from 'next-auth';
+import { OverridableComponent } from '@mui/material/OverridableComponent';
 
 export type GenderType = {
   value: string;
