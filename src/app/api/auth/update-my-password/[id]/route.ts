@@ -1,3 +1,4 @@
+import bcrypt from 'bcryptjs';
 import _ from 'lodash';
 import { NextRequest, NextResponse } from 'next/server';
 
@@ -34,9 +35,11 @@ export const PATCH = async (req: NextRequest, { params }: IParams) => {
       }
 
       const updPassword = _.pick(body, ['password', 'confirmPassword']);
+      const hashedPassword = await bcrypt.hash(updPassword.password, 12);
 
       const dataObj = {
         ...updPassword,
+        password: hashedPassword,
         confirmPassword: undefined,
       };
 
