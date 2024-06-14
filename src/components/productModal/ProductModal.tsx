@@ -110,6 +110,7 @@ const ProductModal = () => {
       price: +data.price,
       ingredients,
       // image: selectedFile,
+      image: '/img/burger-22.jpg',
     };
 
     try {

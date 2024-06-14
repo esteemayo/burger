@@ -86,10 +86,10 @@ model Product {
   price           Int
   ingredients     String[]
   isFeatured      Boolean  @default(false)
-  ratingsAverage  Int
-  ratingsQuantity Int
+  ratingsAverage  Int      @default(0)
+  ratingsQuantity Int      @default(0)
   likes           String[]
-  Review          Review[]
+  reviews         Review[]
 
   @@map("products")
 }
