@@ -18,7 +18,17 @@ import { updateUserData } from '@/services/userService';
 import './AccountData.scss';
 
 interface AccountDataProps {
-  currentUser: any;
+  currentUser:
+    | {
+        id: string;
+        phone: string;
+        city: string;
+        state: string;
+        street: string;
+        address: string;
+        isAdmin: Boolean;
+      }
+    | undefined;
 }
 
 const initialState: UserData = {
