@@ -41,7 +41,7 @@ export interface CartActionType {
 }
 
 export interface UserMenuProps {
-  currentUser?: CurrentUserType;
+  currentUser: CurrentUserType | undefined;
 }
 
 export interface CartMenuProps {
@@ -580,6 +580,9 @@ export interface OrderDetailProps {
 
 export type CurrentUserType = {
   id: string;
+  name: string;
+  email: string;
+  image: string;
   phone: string;
   city: string;
   state: string;
