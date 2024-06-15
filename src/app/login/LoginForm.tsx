@@ -57,17 +57,21 @@ const LoginForm = () => {
     setIsLoading(true);
 
     try {
-      await signIn('credentials', {
+      const res = await signIn('credentials', {
         ...data,
         redirect: false,
       });
 
-      toast.success('You are logged in...');
-      router.push('/');
+      if (res?.ok) {
+        toast.success('You are logged in...');
+        router.push('/');
 
-      setToStorage(rememberKey, rememberMe);
-      setToStorage(userKey, rememberMe ? data : '');
-      setRememberMe(false);
+        setToStorage(rememberKey, rememberMe);
+        setToStorage(userKey, rememberMe ? data : '');
+        setRememberMe(false);
+      } else {
+        toast.error(res?.error);
+      }
     } catch (err: unknown) {
       console.log(err);
     } finally {
