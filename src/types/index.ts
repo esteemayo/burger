@@ -252,6 +252,7 @@ export interface RegisterData {
   name: string;
   username: string;
   email: string;
+  image?: string;
   street: string;
   city: string;
   state: string;
