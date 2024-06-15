@@ -109,11 +109,13 @@ const RegisterForm = () => {
         credentials.image = url;
       }
 
-      await registerUser({ ...credentials });
+      const res = await registerUser({ ...credentials });
 
-      console.log({ ...credentials, file: selectedFile });
-      router.push('/login');
-      toast.success('Account created...');
+      if (res.status === 201) {
+        router.push('/login');
+        toast.success('Account created...');
+        return;
+      }
     } catch (err: unknown) {
       console.log(err);
     } finally {
