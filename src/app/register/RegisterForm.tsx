@@ -100,6 +100,7 @@ const RegisterForm = () => {
     const credentials = {
       ...data,
       phone: `+234${data.phone}`,
+      address: `${data.street}, ${data.city}, ${data.state}`,
     };
 
     const selectedFile = file?.[0];
