@@ -21,6 +21,7 @@ import { registerUser } from '@/services/authService';
 import { RegisterData, RegisterErrors } from '@/types';
 
 import './Register.scss';
+import { upload } from '@/utils/upload';
 
 const enum STEPS {
   INFO = 0,
@@ -103,6 +104,11 @@ const RegisterForm = () => {
     const selectedFile = file?.[0];
 
     try {
+      if (file) {
+        const url = await upload(selectedFile);
+        credentials.image = url;
+      }
+
       await registerUser({ ...credentials });
 
       console.log({ ...credentials, file: selectedFile });
