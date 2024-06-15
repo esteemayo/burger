@@ -34,6 +34,7 @@ const initialState: RegisterData = {
   name: '',
   username: '',
   email: '',
+  image: '',
   street: '',
   city: '',
   state: '',
