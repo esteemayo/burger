@@ -15,13 +15,13 @@ import GenderSelect from '@/components/genderSelect/GenderSelect';
 import PhoneInput from '@/components/phoneInput/PhoneInput';
 
 import { useForm } from '@/hooks/useForm';
+import { upload } from '@/utils/upload';
 import { validateRegisterInputs } from '@/validations/register';
 
 import { registerUser } from '@/services/authService';
 import { RegisterData, RegisterErrors } from '@/types';
 
 import './Register.scss';
-import { upload } from '@/utils/upload';
 
 const enum STEPS {
   INFO = 0,
