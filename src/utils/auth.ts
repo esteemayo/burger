@@ -52,7 +52,7 @@ export const authOptions: NextAuthOptions = {
       },
       async authorize(credentials, req) {
         if (!credentials?.username || !credentials.password) {
-          throw new Error('Invalid credentials');
+          throw new Error('Please provide username and password');
         }
 
         const user = await prisma.user.findUnique({
