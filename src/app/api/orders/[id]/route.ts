@@ -126,7 +126,7 @@ export const DELETE = async (req: NextRequest, { params }: IParams) => {
             JSON.stringify({
               message: `No order found with the given ID → ${orderId}`,
             }),
-            { status: 400 }
+            { status: 404 }
           );
         }
 
