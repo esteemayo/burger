@@ -1,8 +1,9 @@
 'use client';
 
-import { useSession } from 'next-auth/react';
+import { signOut, useSession } from 'next-auth/react';
 import { toast } from 'react-toastify';
 import { useCallback, useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 import Modal from '../modal/Modal';
 import DeleteAccount from '../deleteAccount/DeleteAccount';
@@ -13,6 +14,7 @@ import { useAccountModal } from '@/hooks/useAccountModal';
 import './AccountModal.scss';
 
 const AccountModal = () => {
+  const router = useRouter();
   const { data: session } = useSession();
 
   const isOpen = useAccountModal((store) => store.isOpen);
@@ -29,13 +31,15 @@ const AccountModal = () => {
       const { data } = await deleteUser(userId as string);
       console.log('Account deactivated!', data);
       toast.success('Account deactivated!');
+      signOut();
+      router.push('/');
       onClose();
     } catch (err: unknown) {
       console.log(err);
     } finally {
       setIsLoading(false);
     }
-  }, [onClose, session]);
+  }, [onClose, router, session]);
 
   let bodyContent: JSX.Element;
 
