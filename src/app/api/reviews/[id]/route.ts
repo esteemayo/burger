@@ -63,7 +63,7 @@ export const PATCH = async (req: NextRequest, { params }: IParams) => {
           JSON.stringify({
             message: `No review found with the given ID → ${reviewId}`,
           }),
-          { status: 400 }
+          { status: 404 }
         );
       }
 
@@ -111,7 +111,7 @@ export const DELETE = async (req: NextRequest, { params }: IParams) => {
           JSON.stringify({
             message: `No review found with the given ID → ${reviewId}`,
           }),
-          { status: 400 }
+          { status: 404 }
         );
       }
 
