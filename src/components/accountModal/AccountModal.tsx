@@ -1,6 +1,7 @@
 'use client';
 
 import { useSession } from 'next-auth/react';
+import { toast } from 'react-toastify';
 import { useCallback, useState } from 'react';
 
 import Modal from '../modal/Modal';
@@ -27,6 +28,7 @@ const AccountModal = () => {
 
       const { data } = await deleteUser(userId as string);
       console.log('Account deactivated!', data);
+      toast.success('Account deactivated!');
       onClose();
     } catch (err: unknown) {
       console.log(err);
