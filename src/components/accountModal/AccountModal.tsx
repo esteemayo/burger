@@ -6,10 +6,10 @@ import { useSession } from 'next-auth/react';
 import Modal from '../modal/Modal';
 import DeleteAccount from '../deleteAccount/DeleteAccount';
 
+import { deleteUser } from '@/services/userService';
 import { useAccountModal } from '@/hooks/useAccountModal';
 
 import './AccountModal.scss';
-import { deleteUser } from '@/services/userService';
 
 const AccountModal = () => {
   const { data: session } = useSession();
