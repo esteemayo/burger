@@ -1,7 +1,7 @@
 'use client';
 
-import { useCallback, useState } from 'react';
 import { useSession } from 'next-auth/react';
+import { useCallback, useState } from 'react';
 
 import Modal from '../modal/Modal';
 import DeleteAccount from '../deleteAccount/DeleteAccount';
