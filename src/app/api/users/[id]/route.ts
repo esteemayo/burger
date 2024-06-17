@@ -76,7 +76,7 @@ export const PATCH = async (req: NextRequest, { params }: IParams) => {
             JSON.stringify({
               message: `No user found with the given ID → ${userId}`,
             }),
-            { status: 400 }
+            { status: 404 }
           );
         }
 
@@ -141,7 +141,7 @@ export const DELETE = async (req: NextRequest, { params }: IParams) => {
             JSON.stringify({
               message: `No user found with the given ID → ${userId}`,
             }),
-            { status: 400 }
+            { status: 404 }
           );
         }
 
