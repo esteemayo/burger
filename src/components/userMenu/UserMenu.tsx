@@ -5,8 +5,8 @@ import Link from 'next/link';
 import { signOut } from 'next-auth/react';
 import Image from 'next/image';
 
-import { authLinks } from '@/data';
 import { UserMenuProps } from '@/types';
+import { authLinks, userLinks } from '@/data';
 
 import './UserMenu.scss';
 
@@ -42,19 +42,15 @@ const UserMenu = ({ currentUser }: UserMenuProps) => {
       ) : (
         <div className='userController'>
           <div className='userLinks'>
-            <Link href='/orders'>
-              <Image
-                src='/svg/shopping-cart.svg'
-                width={30}
-                height={30}
-                alt=''
-              />
-              <span className='userLabel'>Upcoming orders</span>
-            </Link>
-            <Link href='/profile'>
-              <Image src='/svg/user.svg' width={30} height={30} alt='' />
-              <span className='userLabel'>Account</span>
-            </Link>
+            {userLinks.map((item) => {
+              const { id, url, icon, label } = item;
+              return (
+                <Link href={url}>
+                  <Image src={`/svg/${icon}.svg`} width={30} height={30} alt='' />
+                  <span className='userLabel'>{label}</span>
+                </Link>
+              );
+            })}
           </div>
           <div className='userFooter'>
             <span>{currentUser.name}</span>
