@@ -4,6 +4,15 @@ import { SvgIconTypeMap } from '@mui/material';
 import { User } from 'next-auth';
 import { OverridableComponent } from '@mui/material/OverridableComponent';
 
+export type AuthLinkType = {
+  id: number;
+  url: string;
+  label: string;
+  logo: string;
+  urlName: string;
+  imgName: string;
+};
+
 export type GenderType = {
   value: string;
   label: string;
