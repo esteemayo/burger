@@ -45,7 +45,7 @@ const UserMenu = ({ currentUser }: UserMenuProps) => {
             {userLinks.map((item) => {
               const { id, url, icon, label } = item;
               return (
-                <Link href={url}>
+                <Link key={id} href={url}>
                   <Image src={`/svg/${icon}.svg`} width={30} height={30} alt='' />
                   <span className='userLabel'>{label}</span>
                 </Link>
