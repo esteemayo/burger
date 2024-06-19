@@ -5,46 +5,39 @@ import Link from 'next/link';
 import { signOut } from 'next-auth/react';
 import Image from 'next/image';
 
+import { authLinks } from '@/data';
 import { UserMenuProps } from '@/types';
 
 import './UserMenu.scss';
 
 const UserMenu = ({ currentUser }: UserMenuProps) => {
-  const handleLogout = useCallback(
-    (e: React.MouseEvent<HTMLButtonElement>) => {
-      e.stopPropagation();
+  const handleLogout = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
+    e.stopPropagation();
 
-      signOut({
-        callbackUrl: '/',
-      });
-    },
-    []
-  );
+    signOut({
+      callbackUrl: '/',
+    });
+  }, []);
 
   return (
     <div className='userMenu'>
       {!currentUser ? (
         <>
-          <Link href='/login' className='loginLink'>
-            <Image
-              src='/svg/signin.svg'
-              width={13}
-              height={13}
-              alt='login logo'
-              className='loginLogo'
-            />
-            Login
-          </Link>
-          <Link href='/register' className='registerLink'>
-            <Image
-              src='/svg/signup.svg'
-              width={13}
-              height={13}
-              alt='register logo'
-              className='registerLogo'
-            />
-            Register
-          </Link>
+          {authLinks.map((item) => {
+            const { id, url, label, logo, urlName, imgName } = item;
+            return (
+              <Link key={id} href={url} className={urlName}>
+                <Image
+                  src={`/svg/${logo}.svg`}
+                  width={13}
+                  height={13}
+                  alt={`${label.toLowerCase()} logo`}
+                  className={imgName}
+                />
+                {label}
+              </Link>
+            );
+          })}
         </>
       ) : (
         <div className='userController'>
