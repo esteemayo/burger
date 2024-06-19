@@ -29,6 +29,7 @@ const OrdersClient = () => {
   if (orders?.length < 1) {
     return (
       <EmptyState
+        url='products'
         title='Empty order(s)'
         subtitle='You have not made any order yet!'
         imgSrc='empty'

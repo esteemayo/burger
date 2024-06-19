@@ -579,6 +579,7 @@ export type ColumnType = {
 }[];
 
 export interface EmptyStateProps {
+  url?: string;
   title: string;
   subtitle?: string;
   center?: boolean;

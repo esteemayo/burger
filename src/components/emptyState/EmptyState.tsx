@@ -10,6 +10,7 @@ import { EmptyStateProps } from '@/types';
 import './EmptyState.scss';
 
 const EmptyState = ({
+  url,
   title,
   subtitle,
   center = true,
@@ -23,7 +24,9 @@ const EmptyState = ({
     (e: React.MouseEvent<HTMLButtonElement>) => {
       e.stopPropagation();
 
-      router.push('/');
+      const redirectUrl = url ? `/${url}` : '/';
+
+      router.push(redirectUrl);
       return
     },
     [router]
