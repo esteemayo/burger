@@ -22,6 +22,25 @@ import {
   Socials,
 } from '@/types';
 
+export const authLinks = [
+  {
+    id: 1,
+    url: '/login',
+    label: 'Login',
+    logo: 'signin',
+    urlName: 'loginLink',
+    imgName: 'loginLogo',
+  },
+  {
+    id: 2,
+    url: '/register',
+    label: 'Register',
+    logo: 'signup',
+    urlName: 'registerLink',
+    imgName: 'registerLogo',
+  },
+];
+
 export const cart: CartType = [
   {
     id: '1',
