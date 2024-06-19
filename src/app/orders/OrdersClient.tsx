@@ -33,6 +33,7 @@ const OrdersClient = () => {
         subtitle='You have not made any order yet!'
         imgSrc='empty'
         label='Continue shopping'
+        showReset
       />
     );
   }
