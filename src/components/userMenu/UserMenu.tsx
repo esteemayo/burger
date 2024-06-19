@@ -24,11 +24,11 @@ const UserMenu = ({ currentUser }: UserMenuProps) => {
       {!currentUser ? (
         <>
           {authLinks.map((item) => {
-            const { id, url, label, logo, urlName, imgName } = item;
+            const { id, url, icon, label, urlName, imgName } = item;
             return (
               <Link key={id} href={url} className={urlName}>
                 <Image
-                  src={`/svg/${logo}.svg`}
+                  src={`/svg/${icon}.svg`}
                   width={13}
                   height={13}
                   alt={`${label.toLowerCase()} logo`}

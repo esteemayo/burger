@@ -28,16 +28,16 @@ export const authLinks: AuthLinkType = [
   {
     id: 1,
     url: '/login',
+    icon: 'signin',
     label: 'Login',
-    logo: 'signin',
     urlName: 'loginLink',
     imgName: 'loginLogo',
   },
   {
     id: 2,
     url: '/register',
+    icon: 'signup',
     label: 'Register',
-    logo: 'signup',
     urlName: 'registerLink',
     imgName: 'registerLogo',
   },

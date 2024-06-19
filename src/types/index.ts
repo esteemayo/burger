@@ -7,8 +7,8 @@ import { OverridableComponent } from '@mui/material/OverridableComponent';
 export type AuthLinkType = {
   id: number;
   url: string;
+  icon: string;
   label: string;
-  logo: string;
   urlName: string;
   imgName: string;
 }[];
