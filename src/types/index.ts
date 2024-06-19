@@ -11,7 +11,7 @@ export type AuthLinkType = {
   logo: string;
   urlName: string;
   imgName: string;
-};
+}[];
 
 export type GenderType = {
   value: string;
