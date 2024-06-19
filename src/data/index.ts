@@ -21,6 +21,7 @@ import {
   ReviewType,
   SingleOrderType,
   Socials,
+  UserLinkType,
 } from '@/types';
 
 export const authLinks: AuthLinkType = [
@@ -42,7 +43,7 @@ export const authLinks: AuthLinkType = [
   },
 ];
 
-export const userLinks = [
+export const userLinks: UserLinkType = [
   {
     id: 1,
     url: '/orders',
