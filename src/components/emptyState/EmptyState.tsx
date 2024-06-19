@@ -22,7 +22,9 @@ const EmptyState = ({
   const handleClick = useCallback(
     (e: React.MouseEvent<HTMLButtonElement>) => {
       e.stopPropagation();
-      return router.push('/');
+
+      router.push('/');
+      return
     },
     [router]
   );
