@@ -14,6 +14,7 @@ const EmptyState = ({
   subtitle,
   center = true,
   imgSrc,
+  label = 'Return home',
   showReset,
 }: EmptyStateProps) => {
   const router = useRouter();
@@ -40,7 +41,7 @@ const EmptyState = ({
         <Heading title={title} subtitle={subtitle} center={center} />
         {showReset && (
           <button type='button' onClick={handleClick}>
-            Return home
+            {label}
           </button>
         )}
       </div>
