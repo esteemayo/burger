@@ -11,16 +11,15 @@ import { UserMenuProps } from '@/types';
 import './UserMenu.scss';
 
 const UserMenu = ({ currentUser }: UserMenuProps) => {
-  const router = useRouter();
-
   const handleLogout = useCallback(
     (e: React.MouseEvent<HTMLButtonElement>) => {
       e.stopPropagation();
 
-      signOut();
-      router.push('/');
+      signOut({
+        callbackUrl: '/',
+      });
     },
-    [router]
+    []
   );
 
   return (
