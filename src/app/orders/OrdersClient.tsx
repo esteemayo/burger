@@ -32,6 +32,7 @@ const OrdersClient = () => {
         title='Empty order(s)'
         subtitle='You have not made any order yet!'
         imgSrc='empty'
+        label='Continue shopping'
       />
     );
   }
