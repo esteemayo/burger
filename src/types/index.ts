@@ -13,6 +13,13 @@ export type AuthLinkType = {
   imgName: string;
 }[];
 
+export type UserLinkType = {
+  id: number;
+  url: string;
+  icon: string;
+  label: string;
+}[];
+
 export type GenderType = {
   value: string;
   label: string;
