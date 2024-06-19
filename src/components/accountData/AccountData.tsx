@@ -10,6 +10,7 @@ import Input from '../input/Input';
 import PhoneInput from '../phoneInput/PhoneInput';
 
 import { useForm } from '@/hooks/useForm';
+import { upload } from '@/utils/upload';
 import { validateAccountData } from '@/validations/accountData';
 
 import { updateUserData } from '@/services/userService';
@@ -56,6 +57,11 @@ const AccountData = ({ currentUser }: AccountDataProps) => {
     };
 
     try {
+      if (file) {
+        const url = await upload(file);
+        userData.image = url;
+      }
+
       const userId = currentUser?.id;
 
       const res = await updateUserData(userId!, { ...userData });
