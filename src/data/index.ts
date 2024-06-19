@@ -42,6 +42,21 @@ export const authLinks: AuthLinkType = [
   },
 ];
 
+export const userLinks = [
+  {
+    id: 1,
+    url: '/orders',
+    icon: 'shopping-cart',
+    label: 'Upcoming orders',
+  },
+  {
+    id: 2,
+    url: '/profile',
+    icon: 'user',
+    label: 'Account',
+  },
+];
+
 export const cart: CartType = [
   {
     id: '1',
