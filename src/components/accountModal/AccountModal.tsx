@@ -31,9 +31,10 @@ const AccountModal = () => {
       const { data } = await deleteUser(userId as string);
       console.log('Account deactivated!', data);
       toast.success('Account deactivated!');
-      signOut();
-      router.push('/');
       onClose();
+      signOut({
+        callbackUrl: '/',
+      });
     } catch (err: unknown) {
       console.log(err);
     } finally {
