@@ -8,6 +8,7 @@ import LocalDiningIcon from '@mui/icons-material/LocalDining';
 
 import {
   AccountCardType,
+  AuthLinkType,
   CardMenu,
   CartType,
   ColumnType,
@@ -22,7 +23,7 @@ import {
   Socials,
 } from '@/types';
 
-export const authLinks = [
+export const authLinks: AuthLinkType = [
   {
     id: 1,
     url: '/login',
