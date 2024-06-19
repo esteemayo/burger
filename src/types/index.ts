@@ -583,6 +583,7 @@ export interface EmptyStateProps {
   subtitle?: string;
   center?: boolean;
   imgSrc?: string;
+  label?: string;
   showReset?: boolean;
 }
 
