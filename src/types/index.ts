@@ -72,6 +72,7 @@ export interface CartMenuProps {
 export interface CartMenuItemProps {
   id: string;
   name: string;
+  price: number;
   quantity: number;
   onIncrement(e: React.MouseEvent<HTMLButtonElement>, productId: string): void;
   onDecrement(e: React.MouseEvent<HTMLButtonElement>, productId: string): void;

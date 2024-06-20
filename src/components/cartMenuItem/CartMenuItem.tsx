@@ -5,6 +5,7 @@ import Image from 'next/image';
 import RemoveShoppingCartIcon from '@mui/icons-material/RemoveShoppingCart';
 import { useCallback } from 'react';
 
+import { CartMenuItemProps } from '@/types';
 import { formatCurrency } from '@/utils/formatCurrency';
 
 import './CartMenuItem.scss';
@@ -12,11 +13,12 @@ import './CartMenuItem.scss';
 const CartMenuItem = ({
   id,
   name,
+  price,
   quantity,
   onIncrement,
   onDecrement,
   onRemove,
-}) => {
+}: CartMenuItemProps) => {
   const router = useRouter();
 
   const productUrl = useCallback(
