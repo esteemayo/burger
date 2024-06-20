@@ -69,6 +69,15 @@ export interface CartMenuProps {
   onRemove(productId: string): void;
 }
 
+export interface CartMenuItemProps {
+  id: string;
+  name: string;
+  quantity: number;
+  onIncrement(e: React.MouseEvent<HTMLButtonElement>, productId: string): void;
+  onDecrement(e: React.MouseEvent<HTMLButtonElement>, productId: string): void;
+  onRemove(productId: string): void;
+}
+
 export type FooterLinks = {
   id: number;
   url: string;
