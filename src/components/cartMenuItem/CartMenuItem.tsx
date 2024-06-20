@@ -30,7 +30,7 @@ const CartMenuItem = ({
   );
 
   return (
-    <div key={id} className='cartMenuItem'>
+    <article className='cartMenuItem'>
       <span className='quantity'>{quantity}</span>
       <div className='cardItem' onClick={productUrl}>
         {name}
@@ -61,7 +61,7 @@ const CartMenuItem = ({
         <RemoveShoppingCartIcon />
       </div>
       <span className='price'>{formatCurrency(price)}</span>
-    </div>
+    </article>
   );
 };
 
