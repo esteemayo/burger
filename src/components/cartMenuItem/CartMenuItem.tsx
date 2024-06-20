@@ -1,21 +1,30 @@
 'use client';
 
-import { useMemo } from 'react';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
+import RemoveShoppingCartIcon from '@mui/icons-material/RemoveShoppingCart';
+import { useCallback } from 'react';
 
 import { formatCurrency } from '@/utils/formatCurrency';
 
-import './CartMenuItem.scss' ;
+import './CartMenuItem.scss';
 
-const CartMenuItem = ({ id, quantity, onIncrement, onDecrement, onRemove }) => {
+const CartMenuItem = ({
+  id,
+  name,
+  quantity,
+  onIncrement,
+  onDecrement,
+  onRemove,
+}) => {
   const router = useRouter();
 
-  const productUrl = useMemo(
-    () => {
+  const productUrl = useCallback(
+    (_e: React.MouseEvent<HTMLDivElement>) => {
       router.push(`/product/${encodeURIComponent(id)}`);
       return;
     },
-    [router]
+    [id, router]
   );
 
   return (
