@@ -5,7 +5,7 @@ import './EmptyCartMenu.scss';
 const EmptyCartMenu = () => {
   return (
     <div className='emptyCartMenu'>
-      <div className='cardHeader empty'>Empty cart</div>
+      <div className='emptyHeader'>Empty cart</div>
       <hr />
       <div className='cartFooter'>
         <Link href='/products' className='cartBtn'>

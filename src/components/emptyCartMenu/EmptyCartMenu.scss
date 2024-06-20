@@ -2,7 +2,8 @@
 @import '../../styles/responsive.scss';
 
 .emptyCartMenu {
-  .cardHeader {
+  .emptyHeader {
+    text-align: center;
     font-weight: 700;
     font-size: 1.3rem;
     padding: 2rem;
@@ -22,10 +23,6 @@
 
     @media only screen and (min-width: 112.5em) {
       font-size: 1.66667rem;
-    }
-
-    &.empty {
-      text-align: center;
     }
   }
 
