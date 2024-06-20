@@ -1,17 +1,15 @@
 'use client';
 
-import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import Image from 'next/image';
+import Link from 'next/link';
 import { useSession } from 'next-auth/react';
 import { useCallback } from 'react';
-import RemoveShoppingCartIcon from '@mui/icons-material/RemoveShoppingCart';
 
-import { CartMenuProps } from '@/types';
+
+import CartMenuItem from '../cartMenuItem/CartMenuItem';
 import { formatCurrency } from '@/utils/formatCurrency';
 
 import './CartMenu.scss';
-import CartMenuItem from '../cartMenuItem/CartMenuItem';
 
 const CartMenu = ({
   products,
