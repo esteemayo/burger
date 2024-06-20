@@ -1,9 +1,8 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
+import { useCallback } from 'react';
 import Link from 'next/link';
 import { useSession } from 'next-auth/react';
-import { useCallback } from 'react';
 
 
 import CartMenuItem from '../cartMenuItem/CartMenuItem';
@@ -18,16 +17,7 @@ const CartMenu = ({
   onDecrement,
   onRemove,
 }: CartMenuProps) => {
-  const router = useRouter();
   const { data: session } = useSession();
-
-  const productUrl = useCallback(
-    (id: string) => {
-      router.push(`/product/${encodeURIComponent(id)}`);
-      return;
-    },
-    [router]
-  );
 
   return (
     <div className='cartCard'>
