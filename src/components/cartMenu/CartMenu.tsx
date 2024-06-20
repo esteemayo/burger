@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { useSession } from 'next-auth/react';
 
 import CartMenuItem from '../cartMenuItem/CartMenuItem';
+import EmptyCartMenu from '../emptyCartMenu/EmptyCartMenu';
+
 import { formatCurrency } from '@/utils/formatCurrency';
 
 import './CartMenu.scss';
@@ -20,15 +22,7 @@ const CartMenu = ({
   return (
     <div className='cartCard'>
       {products.length < 1 || !session ? (
-        <>
-          <div className='cardHeader empty'>Empty cart</div>
-          <hr />
-          <div className='cartFooter'>
-            <Link href='/products' className='cartBtn'>
-              Continue shopping
-            </Link>
-          </div>
-        </>
+        <EmptyCartMenu />
       ) : (
         <>
           <div className='cardHeader'>Your cart</div>
