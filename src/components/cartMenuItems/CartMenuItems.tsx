@@ -1,6 +1,8 @@
 import Link from 'next/link';
 
 import CartMenuItem from '../cartMenuItem/CartMenuItem';
+
+import { CartMenuItemsProps } from '@/types';
 import { formatCurrency } from '@/utils/formatCurrency';
 
 import './CartMenuItems.scss';
@@ -11,7 +13,7 @@ const CartMenuItems = ({
   onIncrement,
   onDecrement,
   onRemove,
-}) => {
+}: CartMenuItemsProps) => {
   return (
     <div className='cartMenuItems'>
       <div className='cardHeader'>Your cart</div>
