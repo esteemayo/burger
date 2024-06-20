@@ -4,7 +4,7 @@ import './EmptyCartMenu.scss';
 
 const EmptyCartMenu = () => {
   return (
-    <>
+    <div className='emptyCartMenu'>
       <div className='cardHeader empty'>Empty cart</div>
       <hr />
       <div className='cartFooter'>
@@ -12,7 +12,7 @@ const EmptyCartMenu = () => {
           Continue shopping
         </Link>
       </div>
-    </>
+    </div>
   );
 };
 
