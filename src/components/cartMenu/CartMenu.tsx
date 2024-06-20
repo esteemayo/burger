@@ -5,6 +5,8 @@ import { useSession } from 'next-auth/react';
 import EmptyCartMenu from '../emptyCartMenu/EmptyCartMenu';
 import CartMenuItems from '../cartMenuItems/CartMenuItems';
 
+import { CartMenuProps } from '@/types';
+
 import './CartMenu.scss';
 
 const CartMenu = ({
