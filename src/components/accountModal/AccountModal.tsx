@@ -29,7 +29,7 @@ const AccountModal = () => {
       const res = await deleteUser(userId as string);
       console.log('Account deactivated!', res.data);
 
-      if (res.status === 204) {
+      if (res.status === 200) {
         toast.success('Account deactivated!');
         onClose();
         signOut({
@@ -38,7 +38,7 @@ const AccountModal = () => {
       }
     } catch (err: unknown) {
       console.log(err);
-      toast.success(err.response.data.message);
+      toast.error(err?.response.data.message);
     } finally {
       setIsLoading(false);
     }
