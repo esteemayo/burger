@@ -26,13 +26,16 @@ const AccountModal = () => {
     try {
       const userId = session?.user.id;
 
-      const { data } = await deleteUser(userId as string);
-      console.log('Account deactivated!', data);
-      toast.success('Account deactivated!');
-      onClose();
-      signOut({
-        callbackUrl: '/',
-      });
+      const res = await deleteUser(userId as string);
+      console.log('Account deactivated!', res.data);
+
+      if (res.status === 204) {
+        toast.success('Account deactivated!');
+        onClose();
+        signOut({
+          callbackUrl: '/',
+        });
+      }
     } catch (err: unknown) {
       console.log(err);
       toast.success(err.response.data.message);
