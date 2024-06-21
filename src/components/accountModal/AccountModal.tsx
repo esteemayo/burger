@@ -35,6 +35,7 @@ const AccountModal = () => {
       });
     } catch (err: unknown) {
       console.log(err);
+      toast.success(err.response.data.message);
     } finally {
       setIsLoading(false);
     }
