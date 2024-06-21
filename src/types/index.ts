@@ -201,6 +201,7 @@ export type ProductType = {
   image: string;
   price: number;
   ingredients?: string[];
+  likes: string[];
   isFeatured: boolean;
   ratingsAverage: number;
   ratingsQuantity: number;
