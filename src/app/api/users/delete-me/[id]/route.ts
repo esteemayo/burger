@@ -37,7 +37,7 @@ export const DELETE = async (req: NextRequest, { params }: IParams) => {
           },
         });
 
-        return new NextResponse(JSON.stringify(user), { status: 204 });
+        return new NextResponse(JSON.stringify(user), { status: 200 });
       }
       return new NextResponse(
         JSON.stringify({ message: 'You are not authorized' }),
