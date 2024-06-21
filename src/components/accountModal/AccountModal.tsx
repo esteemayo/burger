@@ -40,7 +40,7 @@ const AccountModal = () => {
     }
   }, [onClose, session]);
 
-  let bodyContent: JSX.Element;
+  let bodyContent: JSX.Element | undefined;
 
   bodyContent = <DeleteAccount />;
 
