@@ -129,22 +129,22 @@ export const DELETE = async (req: NextRequest, { params }: IParams) => {
 
   if (session) {
     try {
+      let user = await prisma.user.findUnique({
+        where: {
+          id: userId,
+        },
+      });
+      
+      if (!user) {
+        return new NextResponse(
+          JSON.stringify({
+            message: `No user found with the given ID → ${userId}`,
+          }),
+          { status: 404 }
+        );
+      }
+        
       if (session.user.isAdmin || session.user.id === userId) {
-        let user = await prisma.user.findUnique({
-          where: {
-            id: userId,
-          },
-        });
-
-        if (!user) {
-          return new NextResponse(
-            JSON.stringify({
-              message: `No user found with the given ID → ${userId}`,
-            }),
-            { status: 404 }
-          );
-        }
-
         user = await prisma.user.delete({
           where: {
             id: userId,
