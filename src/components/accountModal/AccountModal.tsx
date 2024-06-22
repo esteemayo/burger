@@ -29,7 +29,7 @@ const AccountModal = () => {
       const res = await deleteUser(userId as string);
 
       if (res.status === 200) {
-        toast.success('Account deactivated!');
+        toast.success(res.message);
         onClose();
         signOut({
           callbackUrl: '/',
