@@ -27,7 +27,6 @@ const AccountModal = () => {
       const userId = session?.user.id;
 
       const res = await deleteUser(userId as string);
-      console.log('Account deactivated!', res.data);
 
       if (res.status === 200) {
         toast.success('Account deactivated!');
