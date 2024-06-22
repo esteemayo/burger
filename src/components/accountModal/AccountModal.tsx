@@ -36,7 +36,7 @@ const AccountModal = () => {
           callbackUrl: '/',
         });
       }
-    } catch (err: unknown) {
+    } catch (err: any) {
       console.log(err);
       toast.error(err?.response.data.message);
     } finally {
