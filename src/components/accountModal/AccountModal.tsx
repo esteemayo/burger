@@ -29,7 +29,7 @@ const AccountModal = () => {
       const res = await deleteUser(userId as string);
 
       if (res.status === 200) {
-        toast.success(res.message);
+        toast.success(res.data.message);
         onClose();
         signOut({
           callbackUrl: '/',
