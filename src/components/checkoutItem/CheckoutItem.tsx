@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
+import { CheckoutItemProps } from '@/types';
 import { formatCurrency } from '@/utils/formatCurrency';
 
 import './CheckoutItem.scss';
@@ -13,7 +14,7 @@ const CheckoutItem = ({
   onIncrement,
   onDecrement,
   onRemove,
-}) => {
+}: CheckoutItemProps) => {
   return (
     <article className='checkoutProduct'>
       <div className='checkoutProductName'>
