@@ -7,7 +7,7 @@ import { formatCurrency } from '@/utils/formatCurrency';
 import { useCartStore } from '@/hooks/useCartStore';
 import { useCartControls } from '@/hooks/useCartControls';
 
-import CheckoutItem from '../checkoutItem/CheckoutItem';
+import CheckoutProduct from '../checkoutProduct/CheckoutProduct';
 
 import './CheckoutTotal.scss';
 
@@ -43,7 +43,7 @@ const CheckoutTotal = () => {
                   <div className='checkoutProductBox'>
                     {products.map((product) => {
                       return (
-                        <CheckoutItem
+                        <CheckoutProduct
                           key={product.id}
                           onIncrement={handleIncrement}
                           onDecrement={handleDecrement}

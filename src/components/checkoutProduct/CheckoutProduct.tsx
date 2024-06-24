@@ -1,12 +1,12 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
-import { CheckoutItemProps } from '@/types';
+import { CheckoutProductProps } from '@/types';
 import { formatCurrency } from '@/utils/formatCurrency';
 
-import './CheckoutItem.scss';
+import './CheckoutProduct.scss';
 
-const CheckoutItem = ({
+const CheckoutProduct = ({
   id,
   name,
   price,
@@ -14,7 +14,7 @@ const CheckoutItem = ({
   onIncrement,
   onDecrement,
   onRemove,
-}: CheckoutItemProps) => {
+}: CheckoutProductProps) => {
   return (
     <article className='checkoutProduct'>
       <div className='checkoutProductName'>
@@ -55,4 +55,4 @@ const CheckoutItem = ({
   );
 };
 
-export default CheckoutItem;
+export default CheckoutProduct;

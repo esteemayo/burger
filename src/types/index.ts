@@ -645,7 +645,7 @@ export interface HeartButtonProps {
   currentUser: CurrentUserType | undefined;
 }
 
-export interface CheckoutItemProps {
+export interface CheckoutProductProps {
   id: string;
   name: string;
   price: number;
