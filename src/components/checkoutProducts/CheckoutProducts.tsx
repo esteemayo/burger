@@ -3,6 +3,8 @@ import { formatCurrency } from '@/utils/formatCurrency';
 
 import CheckoutProduct from '../checkoutProduct/CheckoutProduct';
 
+import './CheckoutProducts.scss';
+
 const CheckoutProducts = ({
   products,
   totalPrice,
