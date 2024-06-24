@@ -43,7 +43,7 @@ const CheckoutTotal = () => {
                     {products.map((product) => {
                       const { id, name, price, quantity } = product;
                       return (
-                        <div key={id} className='checkoutProduct'>
+                        <article key={id} className='checkoutProduct'>
                           <div className='checkoutProductName'>
                             <Link href={`/product/${id}`}>
                               <p>
@@ -84,7 +84,7 @@ const CheckoutTotal = () => {
                           <div className='checkoutPrice'>
                             <span>{formatCurrency(price)}</span>
                           </div>
-                        </div>
+                        </article>
                       );
                     })}
                   </div>
