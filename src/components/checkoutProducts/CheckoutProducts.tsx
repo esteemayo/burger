@@ -1,4 +1,6 @@
+import { CheckoutProductsProps } from '@/types';
 import { formatCurrency } from '@/utils/formatCurrency';
+
 import CheckoutProduct from '../checkoutProduct/CheckoutProduct';
 
 const CheckoutProducts = ({
@@ -7,7 +9,7 @@ const CheckoutProducts = ({
   onIncrement,
   onDecrement,
   onRemove,
-}) => {
+}: CheckoutProductsProps) => {
   return (
     <div className='checkoutProducts'>
       <div className='checkoutProductBox'>
