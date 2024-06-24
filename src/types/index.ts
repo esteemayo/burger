@@ -645,6 +645,14 @@ export interface HeartButtonProps {
   currentUser: CurrentUserType | undefined;
 }
 
+export interface CheckoutProductsProps {
+  products: CartItem[];
+  totalPrice: number;
+  onIncrement(e: React.MouseEvent<HTMLButtonElement>, productId: string): void;
+  onDecrement(e: React.MouseEvent<HTMLButtonElement>, productId: string): void;
+  onRemove(payload: string): void;
+}
+
 export interface CheckoutProductProps {
   id: string;
   name: string;
