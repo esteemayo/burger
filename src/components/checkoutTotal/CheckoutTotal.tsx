@@ -1,11 +1,11 @@
 'use client';
 
-import Link from 'next/link';
 import { useSession } from 'next-auth/react';
 
 import { useCartStore } from '@/hooks/useCartStore';
 import { useCartControls } from '@/hooks/useCartControls';
 
+import EmptyCheckout from '../emptyCheckout/EmptyCheckout';
 import CheckoutProducts from '../checkoutProducts/CheckoutProducts';
 
 import './CheckoutTotal.scss';
@@ -29,14 +29,7 @@ const CheckoutTotal = () => {
             </div>
             <div className='checkoutBody'>
               {products.length < 1 || !session ? (
-                <div className='emptyCartWrap'>
-                  <div className='emptyCartTitle'>Empty cart</div>
-                  <div className='emptyCartLinkWrap'>
-                    <Link href='/products' className='emptyCartLink'>
-                      Continue shopping
-                    </Link>
-                  </div>
-                </div>
+                <EmptyCheckout />
               ) : (
                 <CheckoutProducts
                   products={products}
