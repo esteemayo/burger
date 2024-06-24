@@ -1,2 +1,175 @@
-.checkoutItem {
+@import '../../styles/variables.scss';
+@import '../../styles/responsive.scss';
+
+.checkoutProduct {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1.5rem;
+  border-bottom: 1px solid $line;
+
+  .checkoutProductName {
+    flex: 2;
+
+    font-size: 1rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    @include xl {
+      flex: 2.5;
+    }
+
+    @media only screen and (max-width: 64rem) {
+      flex: 3;
+    }
+
+    @include md {
+      flex: 2;
+    }
+
+    @media only screen and (max-width: 26.875rem) {
+      flex: 4;
+    }
+
+    @media only screen and (min-width: 112.5em) {
+      flex: 3;
+    }
+
+    a,
+    a:link,
+    a:active {
+      color: $clr-primary;
+
+      p {
+        text-transform: capitalize;
+        font-weight: 700;
+        font-size: 1.3rem;
+        color: currentColor;
+
+        @include xl {
+          font-size: 1.44444rem;
+        }
+
+        @media only screen and (max-width: 56.25em) {
+          font-size: 1.625rem;
+        }
+
+        @media only screen and (min-width: 112.5em) {
+          font-size: 1.6rem;
+        }
+
+        span {
+          margin-right: 1rem;
+        }
+      }
+    }
+
+    .checkoutQty {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      width: 10.356rem;
+      height: 2.6rem;
+      font-size: 1rem;
+      white-space: nowrap;
+      padding: 0.5rem;
+      background-color: #fff3f5;
+      border-radius: 0.5rem;
+
+      @include xl {
+        font-size: 1.111111rem;
+      }
+
+      @media only screen and (max-width: 56.25em) {
+        font-size: 1.25rem;
+      }
+
+      @media only screen and (min-width: 112.5em) {
+        font-size: 1.3rem;
+      }
+
+      button {
+        all: unset;
+        display: inline-block;
+        padding: 0 0.8rem;
+        background-color: $clr-white;
+        color: $clr-secondary;
+        border-radius: 0.5rem;
+        cursor: pointer;
+
+        &:disabled {
+          opacity: 0.7;
+          cursor: default;
+        }
+      }
+
+      .qty {
+        font-size: inherit;
+        color: inherit;
+      }
+    }
+  }
+
+  .checkoutDeleteWrap {
+    flex: 1;
+
+    @media only screen and (max-width: 26.875rem) {
+      flex: 0.8;
+    }
+
+    button {
+      all: unset;
+      display: inline-block;
+      background-color: transparent;
+      color: $clr-gray-dark;
+      cursor: pointer;
+
+      img {
+        display: block;
+        width: 1.5rem;
+        height: 1.5rem;
+        object-fit: cover;
+
+        @include xl {
+          width: 1.65rem;
+          height: 1.65rem;
+        }
+
+        @media only screen and (max-width: 56.25em) {
+          width: 1.8rem;
+          height: 1.8rem;
+        }
+
+        @media only screen and (min-width: 112.5em) {
+          width: 1.8rem;
+          height: 1.8rem;
+        }
+      }
+    }
+  }
+
+  .checkoutPrice {
+    flex: 0.5;
+
+    span {
+      font-weight: 500;
+      font-size: 1.3rem;
+      font-variant: tabular-nums;
+      color: $clr-gray-dark;
+
+      @include xl {
+        font-size: 1.44444rem;
+      }
+
+      @media only screen and (max-width: 56.25em) {
+        font-size: 1.625rem;
+      }
+
+      @media only screen and (min-width: 112.5em) {
+        font-size: 1.6rem;
+      }
+    }
+  }
 }
