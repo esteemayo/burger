@@ -1,12 +1,13 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { useSession } from 'next-auth/react';
 
 import { formatCurrency } from '@/utils/formatCurrency';
 import { useCartStore } from '@/hooks/useCartStore';
 import { useCartControls } from '@/hooks/useCartControls';
+
+import CheckoutItem from '../checkoutItem/CheckoutItem';
 
 import './CheckoutTotal.scss';
 
@@ -41,50 +42,14 @@ const CheckoutTotal = () => {
                 <>
                   <div className='checkoutProductBox'>
                     {products.map((product) => {
-                      const { id, name, price, quantity } = product;
                       return (
-                        <article key={id} className='checkoutProduct'>
-                          <div className='checkoutProductName'>
-                            <Link href={`/product/${id}`}>
-                              <p>
-                                <span></span>
-                                {name}
-                              </p>
-                            </Link>
-                            <div className='checkoutQty'>
-                              <button
-                                type='button'
-                                onClick={(e) => handleDecrement(e, id)}
-                              >
-                                -
-                              </button>
-                              <span className='qty'>{quantity}</span>
-                              <button
-                                type='button'
-                                disabled={quantity >= 10}
-                                onClick={(e) => handleIncrement(e, id)}
-                              >
-                                +
-                              </button>
-                            </div>
-                          </div>
-                          <div className='checkoutDeleteWrap'>
-                            <button
-                              type='button'
-                              onClick={() => removeFromCart(id)}
-                            >
-                              <Image
-                                src='/svg/thrash.svg'
-                                width={15}
-                                height={15}
-                                alt='delete icon'
-                              />
-                            </button>
-                          </div>
-                          <div className='checkoutPrice'>
-                            <span>{formatCurrency(price)}</span>
-                          </div>
-                        </article>
+                        <CheckoutItem
+                          key={product.id}
+                          onIncrement={handleIncrement}
+                          onDecrement={handleDecrement}
+                          onRemove={removeFromCart}
+                          {...product}
+                        />
                       );
                     })}
                   </div>
