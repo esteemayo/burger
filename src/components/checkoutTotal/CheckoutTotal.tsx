@@ -3,11 +3,10 @@
 import Link from 'next/link';
 import { useSession } from 'next-auth/react';
 
-import { formatCurrency } from '@/utils/formatCurrency';
 import { useCartStore } from '@/hooks/useCartStore';
 import { useCartControls } from '@/hooks/useCartControls';
 
-import CheckoutProduct from '../checkoutProduct/CheckoutProduct';
+import CheckoutProducts from '../checkoutProducts/CheckoutProducts';
 
 import './CheckoutTotal.scss';
 
@@ -39,39 +38,13 @@ const CheckoutTotal = () => {
                   </div>
                 </div>
               ) : (
-                <>
-                  <div className='checkoutProductBox'>
-                    {products.map((product) => {
-                      return (
-                        <CheckoutProduct
-                          key={product.id}
-                          onIncrement={handleIncrement}
-                          onDecrement={handleDecrement}
-                          onRemove={removeFromCart}
-                          {...product}
-                        />
-                      );
-                    })}
-                  </div>
-                  <div className='checkoutTotal'>
-                    <div className='checkoutTotalPrice'>
-                      <span>Items total</span>
-                      <span>{formatCurrency(totalPrice)}</span>
-                    </div>
-                    <div className='checkoutTotalPrice'>
-                      <span>Discount</span>
-                      <span>$0.00</span>
-                    </div>
-                    <div className='checkoutTotalPrice'>
-                      <span>Delivery charge</span>
-                      <span>$0.00</span>
-                    </div>
-                  </div>
-                  <div className='totalCheckout'>
-                    <span>Total:</span>
-                    <span>{formatCurrency(totalPrice)}</span>
-                  </div>
-                </>
+                <CheckoutProducts
+                  products={products}
+                  totalPrice={totalPrice}
+                  onIncrement={handleIncrement}
+                  onDecrement={handleDecrement}
+                  onRemove={removeFromCart}
+                />
               )}
             </div>
           </div>
