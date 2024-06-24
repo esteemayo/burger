@@ -291,6 +291,10 @@
           max-height: 34.6rem;
           overflow-y: scroll;
 
+          &.noScroll {
+            overflow-y: hidden;
+          }
+
           &::-webkit-scrollbar {
             width: 0.6rem;
           }
