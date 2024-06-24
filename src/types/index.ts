@@ -644,3 +644,13 @@ export interface HeartButtonProps {
   likes: string[];
   currentUser: CurrentUserType | undefined;
 }
+
+export interface CheckoutItemProps {
+  id: string;
+  name: string;
+  price: number;
+  quantity: number;
+  onIncrement(e: React.MouseEvent<HTMLButtonElement>, productId: string): void;
+  onDecrement(e: React.MouseEvent<HTMLButtonElement>, productId: string): void;
+  onRemove(payload: string): void;
+}
