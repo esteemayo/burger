@@ -44,10 +44,6 @@ const Navbar = () => {
     return !session ? 0 : totalItems;
   }, [session, totalItems]);
 
-  const cartBoxClasses = useMemo(() => {
-    return (!session || totalItems < 1) ? 'cartBox noScroll' : 'cartBox';
-  }, [session, totalItems]);
-
   useEffect(() => {
     window.addEventListener('scroll', isActiveHandler);
     return () => window.removeEventListener('scroll', isActiveHandler);
@@ -90,7 +86,7 @@ const Navbar = () => {
               className='shoppingCartLogo'
             />
             <span className='count'>{totalItemsLabel}</span>
-            <div className={cartBoxClasses}>
+            <div className='cartBox'>
               <CartMenu
                 products={products}
                 totalPrice={totalPrice}
