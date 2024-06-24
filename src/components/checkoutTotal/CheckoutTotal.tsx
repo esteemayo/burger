@@ -2,11 +2,11 @@
 
 import { useSession } from 'next-auth/react';
 
-import { useCartStore } from '@/hooks/useCartStore';
-import { useCartControls } from '@/hooks/useCartControls';
-
 import EmptyCheckout from '../emptyCheckout/EmptyCheckout';
 import CheckoutProducts from '../checkoutProducts/CheckoutProducts';
+
+import { useCartStore } from '@/hooks/useCartStore';
+import { useCartControls } from '@/hooks/useCartControls';
 
 import './CheckoutTotal.scss';
 
