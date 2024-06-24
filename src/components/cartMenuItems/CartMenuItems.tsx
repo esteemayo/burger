@@ -18,7 +18,7 @@ const CartMenuItems = ({
     <div className='cartMenuItems'>
       <div className='cardHeader'>Your cart</div>
       <div className='cardProductBox'>
-        {products.slice(0, 3).map((productItem) => {
+        {products.map((productItem) => {
           return (
             <CartMenuItem
               key={productItem.id}
