@@ -19,11 +19,11 @@ import { useCartControls } from '@/hooks/useCartControls';
 import './Navbar.scss';
 
 const Navbar = () => {
+  const pathname = usePathname();
   const { data: session } = useSession();
 
-  const pathname = usePathname();
-  const { searchQuery, handleChange, handleSubmit } = useSearch();
   const { handleDecrement, handleIncrement } = useCartControls();
+  const { searchQuery, handleChange, handleSubmit } = useSearch();
 
   const totalPrice = useCartStore((store) => store.totalPrice);
   const products = useCartStore((store) => store.products);
