@@ -129,12 +129,12 @@ export const DELETE = async (req: NextRequest, { params }: IParams) => {
 
   if (session) {
     try {
-      let user = await prisma.user.findUnique({
+      const user = await prisma.user.findUnique({
         where: {
           id: userId,
         },
       });
-      
+
       if (!user) {
         return new NextResponse(
           JSON.stringify({
@@ -143,20 +143,17 @@ export const DELETE = async (req: NextRequest, { params }: IParams) => {
           { status: 404 }
         );
       }
-        
+
       if (session.user.isAdmin || session.user.id === userId) {
-        user = await prisma.user.delete({
+        await prisma.user.delete({
           where: {
             id: userId,
           },
         });
 
-        const userObj = {
-          ...user,
-          password: undefined,
-        };
-
-        return new NextResponse(JSON.stringify(userObj), { status: 200 });
+        return new NextResponse(JSON.stringify({ messgae: 'User deleted!' }), {
+          status: 200,
+        });
       }
       return new NextResponse(
         JSON.stringify({ message: 'You are not authorized' }),
