@@ -45,7 +45,6 @@ model Session {
 
 model User {
   id              String    @id @default(cuid())
-  createdAt       DateTime  @default(now())
   name            String?
   username        String?   @unique
   email           String?   @unique
@@ -65,6 +64,9 @@ model User {
   Order           Order[]
   Review          Review[]
 
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
   @@map("users")
 }
 
@@ -79,7 +81,6 @@ model VerificationToken {
 
 model Product {
   id              String   @id @default(cuid())
-  createdAt       DateTime @default(now())
   name            String   @unique
   desc            String
   image           String
@@ -91,32 +92,39 @@ model Product {
   likes           String[]
   reviews         Review[]
 
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
   @@map("products")
 }
 
 model Review {
-  id        String   @id @default(cuid())
-  createdAt DateTime @default(now())
+  id        String  @id @default(cuid())
   rating    Int
   desc      String
-  product   Product  @relation(fields: [productId], references: [id])
-  productId String   @map("product_id")
-  user      User     @relation(fields: [userId], references: [id])
-  userId    String   @map("user_id")
-  consent   Boolean  @default(false)
+  product   Product @relation(fields: [productId], references: [id])
+  productId String  @map("product_id")
+  user      User    @relation(fields: [userId], references: [id])
+  userId    String  @map("user_id")
+  consent   Boolean @default(false)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   @@map("reviews")
 }
 
 model Order {
-  id        String   @id @default(cuid())
-  createdAt DateTime @default(now())
+  id        String  @id @default(cuid())
   price     Int
   products  Json[]
   status    String
-  intent_id String?  @unique
-  user      User     @relation(fields: [userId], references: [id])
-  userId    String   @map("user_id")
+  intent_id String? @unique
+  user      User    @relation(fields: [userId], references: [id])
+  userId    String  @map("user_id")
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   @@map("orders")
 }
