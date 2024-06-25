@@ -65,7 +65,7 @@ model User {
   Review          Review[]
 
   createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  updatedAt DateTime @default(now()) @updatedAt
 
   @@map("users")
 }
@@ -93,7 +93,7 @@ model Product {
   reviews         Review[]
 
   createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  updatedAt DateTime @default(now()) @updatedAt
 
   @@map("products")
 }
@@ -109,7 +109,7 @@ model Review {
   consent   Boolean @default(false)
 
   createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  updatedAt DateTime @default(now()) @updatedAt
 
   @@map("reviews")
 }
@@ -124,7 +124,7 @@ model Order {
   userId    String  @map("user_id")
 
   createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  updatedAt DateTime @default(now()) @updatedAt
 
   @@map("orders")
 }
