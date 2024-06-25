@@ -36,6 +36,7 @@ const ProductModal = () => {
   const [errors, setErrors] = useState<ProductErrors>({});
   const [data, setData] = useState(initialState);
   const [ingredients, setIngredients] = useState<string[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   const onPrev = useCallback(() => {
     setStep((value) => {
@@ -99,6 +100,8 @@ const ProductModal = () => {
 
   const handleCreate = useCallback(
     async <T extends object>(product: T) => {
+      setIsLoading(true);
+
       try {
         const res = await createProduct({ ...product });
 
@@ -113,6 +116,8 @@ const ProductModal = () => {
         }
       } catch (err: unknown) {
         console.log(err);
+      } finally {
+        setIsLoading(false);
       }
     },
     [handleClear, onClose, router]
@@ -184,6 +189,8 @@ const ProductModal = () => {
     <Modal
       isOpen={isOpen}
       title='Create a new product'
+      loading={isLoading}
+      disabled={isLoading}
       actionLabel={actionLabel}
       secondaryActionLabel={secondaryActionLabel}
       body={bodyContent}
