@@ -98,7 +98,7 @@ const ProductModal = () => {
   }, []);
 
   const handleCreate = useCallback(
-    async (product: object) => {
+    async <T extends object>(product: T) => {
       try {
         const res = await createProduct({ ...product });
 
