@@ -97,6 +97,27 @@ const ProductModal = () => {
     setData(initialState);
   }, []);
 
+  const handleCreate = useCallback(
+    async (product: object) => {
+      try {
+        const res = await createProduct({ ...product });
+
+        if (res.status === 201) {
+          handleClear();
+          setStep(STEPS.INFO);
+
+          toast.success('Product created!');
+          onClose();
+
+          router.push('/products');
+        }
+      } catch (err: unknown) {
+        console.log(err);
+      }
+    },
+    [handleClear, onClose, router]
+  );
+
   const onSubmit = useCallback(async () => {
     if (step !== STEPS.IMAGE) {
       return onNext();
@@ -116,22 +137,8 @@ const ProductModal = () => {
       image: '/img/burger-22.jpg',
     };
 
-    try {
-      const res = await createProduct({ ...newProduct });
-
-      if (res.status === 201) {
-        handleClear();
-        setStep(STEPS.INFO);
-
-        toast.success('Product created!');
-        onClose();
-
-        router.push('/products');
-      }
-    } catch (err: unknown) {
-      console.log(err);
-    }
-  }, [data, file, handleClear, ingredients, onClose, onNext, router, step]);
+    await handleCreate({ ...newProduct });
+  }, [data, file, handleCreate, ingredients, onNext, step]);
 
   const actionLabel = useMemo(() => {
     return step === STEPS.IMAGE ? 'Create' : 'Next';
