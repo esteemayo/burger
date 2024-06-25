@@ -2,10 +2,11 @@
 
 import { useSession } from 'next-auth/react';
 
-import AccountPassword from '../accountPassword/AccountPassword';
 import NewProduct from '../newProduct/NewProduct';
-import DeactivateAccount from '../deactivateAccount/DeactivateAccount';
 import AccountData from '../accountData/AccountData';
+
+import AccountPassword from '../accountPassword/AccountPassword';
+import DeactivateAccount from '../deactivateAccount/DeactivateAccount';
 
 import './AccountDetails.scss';
 
