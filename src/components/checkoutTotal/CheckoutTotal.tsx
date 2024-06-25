@@ -1,5 +1,6 @@
 'use client';
 
+import { useMemo } from 'react';
 import { useSession } from 'next-auth/react';
 
 import EmptyCheckout from '../emptyCheckout/EmptyCheckout';
@@ -18,6 +19,10 @@ const CheckoutTotal = () => {
   const products = useCartStore((store) => store.products);
   const removeFromCart = useCartStore((store) => store.removeFromCart);
 
+  const customerLabel = useMemo(() => {
+    return session?.user.name;
+  }, [session]);
+
   return (
     <div className='checkoutTotal'>
       <div className='checkoutBox'>
@@ -25,7 +30,7 @@ const CheckoutTotal = () => {
           <div className='checkoutCard'>
             <div className='checkoutHeader'>
               Your order from
-              <p className='checkoutCustomer'>{session?.user.name}</p>
+              <p className='checkoutCustomer'>{customerLabel}</p>
             </div>
             <div className='checkoutBody'>
               {products.length < 1 || !session ? (
