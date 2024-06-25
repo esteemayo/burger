@@ -1,5 +1,6 @@
 'use client';
 
+import { useRouter } from 'next/navigation';
 import { toast } from 'react-toastify';
 import { useCallback, useMemo, useState } from 'react';
 
@@ -24,6 +25,8 @@ const initialState: ProductData = {
 };
 
 const ProductModal = () => {
+  const router = useRouter();
+
   const isOpen = useProductModal((store) => store.isOpen);
   const onClose = useProductModal((store) => store.onClose);
 
@@ -115,17 +118,20 @@ const ProductModal = () => {
 
     try {
       const res = await createProduct({ ...newProduct });
-      console.log(res.data);
 
-      handleClear();
-      setStep(STEPS.INFO);
+      if (res.status === 201) {
+        handleClear();
+        setStep(STEPS.INFO);
 
-      toast.success('Product created!');
-      onClose();
+        toast.success('Product created!');
+        onClose();
+
+        router.push('/products');
+      }
     } catch (err: unknown) {
       console.log(err);
     }
-  }, [data, file, handleClear, ingredients, onClose, onNext, step]);
+  }, [data, file, handleClear, ingredients, onClose, onNext, router, step]);
 
   const actionLabel = useMemo(() => {
     return step === STEPS.IMAGE ? 'Create' : 'Next';
