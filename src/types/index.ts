@@ -20,8 +20,14 @@ export type UserLinkType = {
   label: string;
 }[];
 
+export const enum Gender {
+  MALE = 'MALE',
+  FEMALE = 'FEMALE',
+  OTHER = 'OTHER',
+}
+
 export type GenderType = {
-  value: string;
+  value: Gender;
   label: string;
 }[];
 
