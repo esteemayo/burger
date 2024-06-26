@@ -297,7 +297,7 @@ export const products: CardMenu = [
   },
   {
     id: 3,
-    name: 'A crunchy chicken',
+    name: 'A Crunchy Chicken',
     desc: 'Our "A Crunchy Chicken" Is Prepared With The Best Quality Of Burger buns and chicken That Gives A Great Taste And Texture plus our chicken patty is marinated in an aromatic mixture of olive oil, garlic, lemon and spices that wakes you up once you take a bite!',
     image: '/img/burger-3.jpg',
     ingredients: ['olive oil', 'garlic', 'lemon', ' spices', 'flour'],
@@ -305,7 +305,7 @@ export const products: CardMenu = [
   },
   {
     id: 4,
-    name: 'Breakfast burger',
+    name: 'Breakfast Burger',
     desc: 'Our Breakfast Burger with cheese, tomato, cucumber, lettuce and caramelized onions topped with lettuce, tomatoes and spicy mayo are super crispy and the most delicious!',
     image: '/img/burger-4.jpg',
     ingredients: [
