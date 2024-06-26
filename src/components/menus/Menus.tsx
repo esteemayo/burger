@@ -9,6 +9,8 @@ import ProductCardSkeleton from '../productCardSkeleton/ProductCardSkeleton';
 import { ProductType } from '@/types';
 import { getFeaturedProducts } from '@/services/productService';
 
+import EmptyState from '@/components/emptyState/EmptyState';
+
 import './Menus.scss';
 
 const Menus = () => {
@@ -19,6 +21,16 @@ const Menus = () => {
       return data;
     },
   });
+
+  if (products?.length < 1) {
+    return (
+      <EmptyState
+        title='No featured products found!'
+        subtitle='Temporarily, there are no featured products in the database.'
+        imgSrc='empty'
+      />
+    );
+  }
 
   return (
     <section className='menusContainer'>
