@@ -55,7 +55,7 @@ model User {
   address         String?
   password        String
   confirmPassword String?
-  gender          Gender    @default(OTHER)
+  gender          String
   isAdmin         Boolean   @default(false)
   emailVerified   DateTime? @map("email_verified")
   image           String?
@@ -127,10 +127,4 @@ model Order {
   updatedAt DateTime @default(now()) @updatedAt
 
   @@map("orders")
-}
-
-enum Gender {
-  MALE
-  FEMALE
-  OTHER
 }
