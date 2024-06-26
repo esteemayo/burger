@@ -1,7 +1,7 @@
-import { GenderType } from '@/types';
+import { Gender, GenderType } from '@/types';
 
 export const options: GenderType = [
-  { value: 'male', label: 'Male' },
-  { value: 'female', label: 'Female' },
-  { value: 'other', label: 'Other' },
+  { value: Gender.MALE, label: 'Male' },
+  { value: Gender.FEMALE, label: 'Female' },
+  { value: Gender.OTHER, label: 'Other' },
 ];
