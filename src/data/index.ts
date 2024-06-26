@@ -328,7 +328,7 @@ export const products: CardMenu = [
   },
   {
     id: 6,
-    name: 'Single beef burger',
+    name: 'Single Beef Burger',
     desc: 'Our "Single Beef Burger" Is Prepared With The Best Quality Of Burger buns and beef That Gives A Great Taste And Texture plus our beef patty is marinated in an aromatic mixture of olive oil, garlic, lemon and spices that wakes you up once you take a bite!',
     image: '/img/burger-6.jpg',
     ingredients: ['spicies', 'tomato', 'flour', 'lettuce', 'garlic'],
@@ -336,7 +336,7 @@ export const products: CardMenu = [
   },
   {
     id: 7,
-    name: 'Double beef burger',
+    name: 'Double Beef Burger',
     desc: 'Our "Double Beef Burger" Is Prepared With The Best Quality Of Burger buns and beef That Gives A Great Taste And Texture plus our beef patty is marinated in an aromatic mixture of olive oil, garlic, lemon and spices that wakes you up once you take a bite!',
     image: '/img/burger-7.jpg',
     ingredients: ['cheese', 'tomato', 'cucumber', 'lettuce', 'onions'],
