@@ -9,6 +9,7 @@ export const validateRegisterInputs = (data: RegisterData) => {
     city,
     state,
     phone,
+    gender,
     password,
     confirmPassword,
   } = data;
@@ -46,6 +47,10 @@ export const validateRegisterInputs = (data: RegisterData) => {
 
   if (!phone) {
     errors.phone = 'Phone number is required';
+  }
+
+  if (gender.trim() === '') {
+    errors.gender = 'Gender is required';
   }
 
   if (password === '') {
