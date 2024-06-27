@@ -9,9 +9,11 @@ import Modal from '../modal/Modal';
 import ProductInputs from '../productInputs/ProductInputs';
 
 import { useProductModal } from '@/hooks/useProductModal';
-import { ProductData, ProductErrors } from '@/types';
 import { validateProductInput } from '@/validations/product';
 import { createProduct } from '@/services/productService';
+
+import { upload } from '@/utils/upload';
+import { ProductData, ProductErrors } from '@/types';
 
 const enum STEPS {
   INFO = 0,
@@ -134,12 +136,13 @@ const ProductModal = () => {
     setErrors({});
 
     const selectedFile = file?.[0];
+    const url = await upload(selectedFile);
+
     const newProduct = {
       ...data,
       price: +data.price,
       ingredients,
-      // image: selectedFile,
-      image: '/img/burger-22.jpg',
+      image: url,
     };
 
     await handleCreate({ ...newProduct });
