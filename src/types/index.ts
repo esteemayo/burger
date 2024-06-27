@@ -298,6 +298,7 @@ export interface RegisterData {
   city: string;
   state: string;
   phone: string;
+  gender: string;
   password: string;
   confirmPassword: string;
 }
@@ -310,6 +311,7 @@ export interface RegisterErrors {
   city?: string;
   state?: string;
   phone?: string;
+  gender?: string;
   password?: string;
   confirmPassword?: string;
 }
