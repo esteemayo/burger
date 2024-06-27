@@ -1,10 +1,11 @@
 import { options } from '@/data/formData';
 
 import { GenderSelectProps } from '@/types';
+import ErrorMessage from '../errorMessage/ErrorMessage';
 
 import './GenderSelect.scss';
 
-const GenderSelect = ({ onChange }: GenderSelectProps) => {
+const GenderSelect = ({ error, onChange }: GenderSelectProps) => {
   return (
     <div className='genderSelect'>
       <label htmlFor='gender'>Gender</label>
@@ -19,6 +20,7 @@ const GenderSelect = ({ onChange }: GenderSelectProps) => {
           );
         })}
       </select>
+      {error && <ErrorMessage message={error} />}
     </div>
   );
 };

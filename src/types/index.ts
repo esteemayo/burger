@@ -254,6 +254,7 @@ export interface TextareaProps
 
 export interface GenderSelectProps
   extends React.SelectHTMLAttributes<HTMLSelectElement> {
+  error?: string;
   onChange(e: React.ChangeEvent<HTMLSelectElement>): void;
 }
 

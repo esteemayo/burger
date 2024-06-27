@@ -38,6 +38,7 @@ const initialState: RegisterData = {
   city: '',
   state: '',
   phone: '',
+  gender: '',
   password: '',
   confirmPassword: '',
 };
@@ -50,6 +51,7 @@ const initialErrors: RegisterErrors = {
   city: '',
   state: '',
   phone: '',
+  gender: '',
   password: '',
   confirmPassword: '',
 };
@@ -156,6 +158,7 @@ const RegisterForm = () => {
     city,
     state,
     phone,
+    gender,
     password,
     confirmPassword,
   } = data;
@@ -272,7 +275,7 @@ const RegisterForm = () => {
     bodyContent = (
       <>
         <DropZone id='avatar' label='Avatar' small onSelect={setFile} />
-        <GenderSelect onChange={handleChange} />
+        <GenderSelect error={errors['gender']} onChange={handleChange} />
       </>
     );
   }
