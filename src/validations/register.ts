@@ -49,7 +49,7 @@ export const validateRegisterInputs = (data: RegisterData) => {
     errors.phone = 'Phone number is required';
   }
 
-  if (gender.trim() === '') {
+  if (!gender) {
     errors.gender = 'Gender is required';
   }
 
