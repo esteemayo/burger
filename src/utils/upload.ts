@@ -7,7 +7,7 @@ export const upload = async (file: File | undefined) => {
   data.append('upload_preset', 'burger');
 
   try {
-    const res = await uploadImage(file);
+    const res = await uploadImage(data);
 
     const { url } = res.data;
     return url;
