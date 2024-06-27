@@ -159,7 +159,7 @@ export const features: FeaturesType = [
 export const cardMenus: CardMenu = [
   {
     id: 1,
-    name: 'Double grilled chicken burger',
+    name: 'Double grilled Chicken Burger',
     desc: 'A Double Patty Grilled Chicken Burger with cheese, tomato, cucumber, lettuce and caramelized onions, Topped with lettuce, tomatoes, cheese and spicy mayo, they are the most delicious, easy dinner and a guaranteed crowd pleaser. Unlike ground chicken burgers that require chicken patties made with ground chicken (or ground turkey), bread crumbs, etc. these juicy chicken burgers need only a handful of ingredients and can be made in a fraction of the time. The chicken is marinated in an aromatic mixture of olive oil, garlic, lemon and spices.',
     image: '/img/burger-1.jpg',
     ingredients: ['cheese', 'tomato', 'cucumber', 'lettuce', 'onions'],
@@ -183,7 +183,7 @@ export const cardMenus: CardMenu = [
   },
   {
     id: 3,
-    name: 'A crunchy chicken',
+    name: 'A Crunchy Chicken',
     desc: 'Our "A Crunchy Chicken" Is Prepared With The Best Quality Of Burger buns and chicken That Gives A Great Taste And Texture plus our chicken patty is marinated in an aromatic mixture of olive oil, garlic, lemon and spices that wakes you up once you take a bite!',
     image: '/img/burger-3.jpg',
     ingredients: ['olive oil', 'garlic', 'lemon', ' spices', 'flour'],
@@ -191,7 +191,7 @@ export const cardMenus: CardMenu = [
   },
   {
     id: 4,
-    name: 'Breakfast burger',
+    name: 'Breakfast Burger',
     desc: 'Our Breakfast Burger with cheese, tomato, cucumber, lettuce and caramelized onions topped with lettuce, tomatoes and spicy mayo are super crispy and the most delicious!',
     image: '/img/burger-4.jpg',
     ingredients: [
@@ -214,7 +214,7 @@ export const cardMenus: CardMenu = [
   },
   {
     id: 6,
-    name: 'Single beef burger',
+    name: 'Single Beef Burger',
     desc: 'Our "Single Beef Burger" Is Prepared With The Best Quality Of Burger buns and beef That Gives A Great Taste And Texture plus our beef patty is marinated in an aromatic mixture of olive oil, garlic, lemon and spices that wakes you up once you take a bite!',
     image: '/img/burger-6.jpg',
     ingredients: ['spicies', 'tomato', 'flour', 'lettuce', 'garlic'],
@@ -222,7 +222,7 @@ export const cardMenus: CardMenu = [
   },
   {
     id: 7,
-    name: 'Double beef burger',
+    name: 'Double Beef Burger',
     desc: 'Our "Double Beef Burger" Is Prepared With The Best Quality Of Burger buns and beef That Gives A Great Taste And Texture plus our beef patty is marinated in an aromatic mixture of olive oil, garlic, lemon and spices that wakes you up once you take a bite!',
     image: '/img/burger-7.jpg',
     ingredients: ['cheese', 'tomato', 'cucumber', 'lettuce', 'onions'],
@@ -230,8 +230,8 @@ export const cardMenus: CardMenu = [
   },
   {
     id: 8,
-    name: 'Single beef & fries',
-    desc: "Our Single Beef & Fries Burger are specially curated to let you shake things up a lil bit and let's the Bite from every burger hit hard.",
+    name: 'Single Beef X Fries',
+    desc: "Our Single Beef X Fries Burger are specially curated to let you shake things up a lil bit and let's the Bite from every burger hit hard.",
     image: '/img/burger-8.jpg',
     ingredients: ['cheese', 'beef', 'onions', 'parsley'],
     price: 27499,
