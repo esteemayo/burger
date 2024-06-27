@@ -275,7 +275,7 @@ const RegisterForm = () => {
     bodyContent = (
       <>
         <DropZone id='avatar' label='Avatar' small onSelect={setFile} />
-        <GenderSelect error={errors['gender']} onChange={handleChange} />
+        <GenderSelect value={gender} error={errors['gender']} onChange={handleChange} />
       </>
     );
   }

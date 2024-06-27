@@ -5,11 +5,11 @@ import ErrorMessage from '../errorMessage/ErrorMessage';
 
 import './GenderSelect.scss';
 
-const GenderSelect = ({ error, onChange }: GenderSelectProps) => {
+const GenderSelect = ({ value, error, onChange }: GenderSelectProps) => {
   return (
     <div className='genderSelect'>
       <label htmlFor='gender'>Gender</label>
-      <select name='gender' id='gender' onChange={onChange}>
+      <select name='gender' value={value} id='gender' onChange={onChange}>
         <option value=''>Select a gender</option>
         {options.map((option) => {
           const { value, label } = option;
