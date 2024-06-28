@@ -269,6 +269,13 @@ export interface ButtonProps {
   onClick?(e: React.MouseEvent<HTMLButtonElement>): void;
 }
 
+export interface SlideButtonsProps {
+  onPrev(e: React.MouseEvent<HTMLButtonElement>): void;
+  onNext(e: React.MouseEvent<HTMLButtonElement>): void;
+  prevBtnClasses: 'btnPrev show' | 'btnPrev';
+  nextBtnClasses: 'btnPrev show' | 'btnPrev';
+}
+
 export interface CheckboxProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
   name: string;
