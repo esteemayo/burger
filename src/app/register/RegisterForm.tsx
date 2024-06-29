@@ -13,6 +13,7 @@ import Button from '@/components/button/Button';
 import GoogleButton from '@/components/google/GoogleButton';
 import GenderSelect from '@/components/genderSelect/GenderSelect';
 import PhoneInput from '@/components/phoneInput/PhoneInput';
+import SlideButtons from '@/components/slideButtons/SlideButtons';
 
 import { useForm } from '@/hooks/useForm';
 import { upload } from '@/utils/upload';
@@ -22,7 +23,6 @@ import { registerUser } from '@/services/authService';
 import { RegisterData, RegisterErrors } from '@/types';
 
 import './Register.scss';
-import SlideButtons from '@/components/slideButtons/SlideButtons';
 
 const enum STEPS {
   INFO = 0,
