@@ -22,6 +22,7 @@ import { registerUser } from '@/services/authService';
 import { RegisterData, RegisterErrors } from '@/types';
 
 import './Register.scss';
+import SlideButtons from '@/components/slideButtons/SlideButtons';
 
 const enum STEPS {
   INFO = 0,
@@ -293,14 +294,12 @@ const RegisterForm = () => {
       </div>
       <form onSubmit={handleSubmit} className='registerForm'>
         {bodyContent}
-        <div className='slideBox'>
-          <button type='button' onClick={onPrev} className={prevBtnClasses}>
-            Prev
-          </button>
-          <button type='button' onClick={onNext} className={nextBtnClasses}>
-            Next
-          </button>
-        </div>
+        <SlideButtons
+          onPrev={onPrev}
+          onNext={onNext}
+          prevBtnClasses={prevBtnClasses}
+          nextBtnClasses={nextBtnClasses}
+        />
         <div className='buttonWrap'>
           <Button
             type='submit'
