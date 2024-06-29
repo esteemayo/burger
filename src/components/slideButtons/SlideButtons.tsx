@@ -1,4 +1,7 @@
+'use client';
+
 import { SlideButtonsProps } from '@/types';
+import SlideButton from '../slideButton/SlideButton';
 
 import './SlideButtons.scss';
 
@@ -10,12 +13,8 @@ const SlideButtons = ({
 }: SlideButtonsProps) => {
   return (
     <div className='slideButtons'>
-      <button type='button' onClick={onPrev} className={prevBtnClasses}>
-        Prev
-      </button>
-      <button type='button' onClick={onNext} className={nextBtnClasses}>
-        Next
-      </button>
+      <SlideButton label='Prev' onClick={onPrev} className={prevBtnClasses} />
+      <SlideButton label='Next' onClick={onNext} className={nextBtnClasses} />
     </div>
   );
 };
