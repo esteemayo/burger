@@ -1,6 +1,11 @@
 import { SlideButtonProps } from '@/types';
 
-const SlideButton = ({ label, disabled, className, onClick }: SlideButtonProps) => {
+const SlideButton = ({
+  label,
+  disabled,
+  className,
+  onClick,
+}: SlideButtonProps) => {
   return (
     <button
       type='button'
