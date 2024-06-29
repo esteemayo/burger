@@ -56,6 +56,9 @@ const LoginForm = () => {
   const onSubmitHandler = async () => {
     setIsLoading(true);
 
+    const now = new Date().getTime()
+    const expires = now + 30 * 24 * 60 * 60 * 1000
+
     try {
       const res = await signIn('credentials', {
         ...data,
@@ -67,7 +70,7 @@ const LoginForm = () => {
         router.push('/');
 
         setToStorage(rememberKey, rememberMe);
-        setToStorage(userKey, rememberMe ? data : '');
+        setToStorage(userKey, rememberMe ? { ...data, expires } : '');
         setRememberMe(false);
       } else {
         toast.error(res?.error);
