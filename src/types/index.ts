@@ -270,9 +270,9 @@ export interface ButtonProps {
 }
 
 export interface SlideButtonsProps {
-  disabled?: boolean;
   onPrev(e: React.MouseEvent<HTMLButtonElement>): void;
   onNext(e: React.MouseEvent<HTMLButtonElement>): void;
+  disabled?: boolean;
   prevBtnClasses: 'btnPrev show' | 'btnPrev';
   nextBtnClasses: 'btnPrev show' | 'btnPrev';
 }
