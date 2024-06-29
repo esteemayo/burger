@@ -1,6 +1,13 @@
+import { SlideButtonsProps } from '@/types';
+
 import './SlideButtons.scss';
 
-const SlideButtons = ({ onPrev, onNext, prevBtnClasses, nextBtnClasses }) => {
+const SlideButtons = ({
+  onPrev,
+  onNext,
+  prevBtnClasses,
+  nextBtnClasses,
+}: SlideButtonsProps) => {
   return (
     <div className='slideButtons'>
       <button type='button' onClick={onPrev} className={prevBtnClasses}>
