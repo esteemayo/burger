@@ -18,7 +18,13 @@ import { useForm } from '@/hooks/useForm';
 import { validateLoginInputs } from '@/validations/login';
 
 import { LoginData, LoginErrors } from '@/types';
-import { getFromStorage, rememberKey, setToStorage, userKey } from '@/utils';
+import {
+  getFromStorage,
+  rememberKey,
+  removeFromStorage,
+  setToStorage,
+  userKey,
+} from '@/utils';
 
 import './Login.scss';
 
@@ -53,11 +59,23 @@ const LoginForm = () => {
     []
   );
 
+  const handleDeleteRememberMe = useCallback(() => {
+    const now = new Date().getTime();
+
+    Object.keys(localStorage).forEach((key) => {
+      const item = getFromStorage(key);
+
+      if (item?.expires && item?.expires < now) {
+        removeFromStorage(key);
+      }
+    });
+  }, []);
+
   const onSubmitHandler = async () => {
     setIsLoading(true);
 
-    const now = new Date().getTime()
-    const expires = now + 30 * 24 * 60 * 60 * 1000
+    const now = new Date().getTime();
+    const expires = now + 30 * 24 * 60 * 60 * 1000;
 
     try {
       const res = await signIn('credentials', {
@@ -105,6 +123,11 @@ const LoginForm = () => {
     setData(userCredentials);
     setRememberMe(rememberMe);
   }, [setData]);
+
+  useEffect(() => {
+    const timer = setInterval(handleDeleteRememberMe, 60 * 60 * 1000);
+    return () => clearInterval(timer);
+  }, [handleDeleteRememberMe]);
 
   const { username, password } = data;
 
