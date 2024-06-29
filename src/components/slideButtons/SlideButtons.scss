@@ -1,2 +1,60 @@
+@import '../../styles/variables.scss';
+@import '../../styles/responsive.scss';
+
 .slideButtons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+
+  .btnPrev,
+  .btnNext {
+    all: unset;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding: 3px 0.5rem;
+    background-color: transparent;
+    color: $clr-gray-dark;
+    border: 1px solid currentColor;
+    border-radius: 0.5rem;
+    cursor: pointer;
+
+    @include xl {
+      font-size: 1.33333rem;
+    }
+
+    @media only screen and (max-width: 56.25em) {
+      font-size: 1.5rem;
+    }
+
+    @media only screen and (max-width: 17.5em) {
+      padding: 2px 4px;
+    }
+
+    @media only screen and (min-width: 112.5em) {
+      font-size: 1.5rem;
+    }
+
+    &:disabled {
+      opacity: 0.7;
+      cursor: default;
+    }
+  }
+
+  .btnPrev,
+  .btnNext {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+
+    &.show {
+      display: inline-block;
+      opacity: 1;
+      visibility: visible;
+      z-index: 1000;
+    }
+  }
 }
