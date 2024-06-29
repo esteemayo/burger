@@ -297,6 +297,7 @@ const RegisterForm = () => {
         <SlideButtons
           onPrev={onPrev}
           onNext={onNext}
+          disabled={isLoading}
           prevBtnClasses={prevBtnClasses}
           nextBtnClasses={nextBtnClasses}
         />
