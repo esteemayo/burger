@@ -67,6 +67,7 @@ const LoginForm = () => {
 
       if (item?.expires && item?.expires < now) {
         removeFromStorage(key);
+        setRememberMe(false);
       }
     });
   }, []);
