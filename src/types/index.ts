@@ -276,6 +276,13 @@ export interface SlideButtonsProps {
   nextBtnClasses: 'btnPrev show' | 'btnPrev';
 }
 
+export interface SlideButtonProps {
+  label: string;
+  disabled?: boolean;
+  className?: string;
+  onClick(e: React.MouseEvent<HTMLButtonElement>): void;
+}
+
 export interface CheckboxProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
   name: string;
