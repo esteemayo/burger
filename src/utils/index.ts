@@ -16,9 +16,16 @@ export const getFromStorage = (key: string) => {
   }
 };
 
-export const setToStorage = <T extends string, U>(key: T, value: U) => {
+export const setToStorage = <T extends string, U>(
+  key: T,
+  value: U,
+  options?: undefined
+) => {
   if (typeof window !== 'undefined') {
-    return window.localStorage.setItem(key, JSON.stringify(value));
+    return window.localStorage.setItem(
+      key,
+      JSON.stringify({ ...value, options })
+    );
   }
 };
 
