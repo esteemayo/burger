@@ -689,6 +689,7 @@ export interface CheckoutProductProps {
 }
 
 export interface PaginationProps {
+  query: string;
   currentPage: number;
   itemsPerPage: number;
   totalItems: number;
