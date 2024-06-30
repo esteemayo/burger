@@ -23,6 +23,11 @@
       color: $clr-black;
       border: 1px solid currentColor;
       cursor: pointer;
+
+      &:disabled {
+        opacity: 0.7;
+        cursor: default;
+      }
     }
   }
 }
