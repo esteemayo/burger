@@ -31,7 +31,7 @@ const SearchClient = () => {
 
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(6);
-  const [totalItems, setTotalItems] = useState<number | null>(null);
+  const [totalItems, setTotalItems] = useState<number>(0);
 
   if (products?.length < 1) {
     return (

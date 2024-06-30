@@ -9,6 +9,7 @@ const Pagination = ({
   totalItems,
   onPageChange,
 }: PaginationProps) => {
+  console.log(totalItems);
   return (
     <div className='pagination'>
       <div className='wrapper'>

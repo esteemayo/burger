@@ -691,6 +691,6 @@ export interface CheckoutProductProps {
 export interface PaginationProps {
   currentPage: number;
   itemsPerPage: number;
-  totalItems: number | null;
+  totalItems: number;
   onPageChange: React.Dispatch<React.SetStateAction<number>>;
 }
