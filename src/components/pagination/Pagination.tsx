@@ -3,7 +3,12 @@ import { PaginationProps } from '@/types';
 
 import './Pagination.scss';
 
-const Pagination = () => {
+const Pagination = ({
+  currentPage,
+  itemsPerPage,
+  totalItems,
+  onPageChange,
+}: PaginationProps) => {
   return (
     <div className='pagination'>
       <div className='wrapper'>
