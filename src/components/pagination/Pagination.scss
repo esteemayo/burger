@@ -15,14 +15,15 @@
 
     button {
       display: inline-block;
-      all: unset;
+      outline: none;
       text-align: center;
       font-weight: 700;
       font-size: 100%;
-      padding: 0.8rem 2rem;
+      padding: 0.8rem 1.2rem;
       background-color: transparent;
       color: $clr-black;
       border: 1px solid currentColor;
+      border-radius: 3px;
       cursor: pointer;
 
       &:disabled {
