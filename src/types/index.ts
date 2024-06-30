@@ -687,3 +687,7 @@ export interface CheckoutProductProps {
   onDecrement(e: React.MouseEvent<HTMLButtonElement>, productId: string): void;
   onRemove(payload: string): void;
 }
+
+export interface PaginationProps {
+  disabled?: boolean;
+}
