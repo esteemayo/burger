@@ -1,4 +1,5 @@
 import Link from 'next/link';
+
 import { PaginationProps } from '@/types';
 
 import './Pagination.scss';
@@ -17,7 +18,13 @@ const Pagination = ({
       <div className='wrapper'>
         {pageNumbers.map((page) => {
           return (
-            <Link key={page} href='#' className='btnPagination'>
+            <Link
+              key={page}
+              href='#'
+              className={`${
+                currentPage === page ? 'btnPagination active' : 'btnPagination'
+              }`}
+            >
               {page}
             </Link>
           );
