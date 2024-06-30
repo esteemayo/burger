@@ -1,6 +1,7 @@
 'use client';
 
 import { useQuery } from '@tanstack/react-query';
+import { useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 
 import Heading from './Heading';
@@ -28,6 +29,10 @@ const SearchClient = () => {
     },
   });
 
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage, setItemsPerPage] = useState(6);
+  const [totalItems, setTotalItems] = useState<number | null>(null);
+
   if (products?.length < 1) {
     return (
       <EmptyState
@@ -39,12 +44,21 @@ const SearchClient = () => {
     );
   }
 
+  useEffect(() => {
+    setTotalItems(products?.length);
+  }, [products]);
+
   return (
     <div className='search'>
       <div className='container'>
         <Heading query={decodedSearchQuery} />
         <ProductLists data={products} loading={isLoading} />
-        <Pagination />
+        <Pagination
+          currentPage={currentPage}
+          itemsPerPage={itemsPerPage}
+          totalItems={totalItems}
+          onPageChange={setCurrentPage}
+        />
       </div>
     </div>
   );
