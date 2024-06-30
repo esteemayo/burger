@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { PaginationProps } from '@/types';
 
 import './Pagination.scss';
@@ -6,15 +7,15 @@ const Pagination = () => {
   return (
     <div className='pagination'>
       <div className='wrapper'>
-        <button type='button' className='btnPagination active'>
+        <Link href='#' className='btnPagination active'>
           1
-        </button>
-        <button type='button' className='btnPagination'>
+        </Link>
+        <Link href='#' className='btnPagination'>
           2
-        </button>
-        <button type='button' className='btnPagination'>
+        </Link>
+        <Link href='#' className='btnPagination'>
           3
-        </button>
+        </Link>
       </div>
     </div>
   );
