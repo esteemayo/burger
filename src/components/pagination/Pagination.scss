@@ -14,22 +14,25 @@
     gap: 1rem;
 
     .btnPagination {
-      display: inline-block;
-      outline: none;
-      text-align: center;
-      font-weight: 700;
-      font-size: 100%;
-      padding: 3px 1.3rem;
-      background-color: transparent;
-      color: $clr-black;
-      border: 1px solid currentColor;
-      border-radius: 3px;
-      cursor: pointer;
+      &:link,
+      &:active {
+        display: inline-block;
+        outline: none;
+        text-align: center;
+        font-weight: 700;
+        font-size: 100%;
+        padding: 3px 1.3rem;
+        background-color: transparent;
+        color: $clr-black;
+        border: 1px solid currentColor;
+        border-radius: 3px;
+        cursor: pointer;
 
-      &.active {
-        background-color: $clr-black;
-        color: $clr-secondary;
-        border-color: transparent;
+        &.active {
+          background-color: $clr-black;
+          color: $clr-secondary;
+          border-color: transparent;
+        }
       }
     }
   }
