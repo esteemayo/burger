@@ -26,7 +26,7 @@
         color: $clr-black;
         border: 1px solid currentColor;
         border-radius: 3px;
-        transform: all 0.3s;
+        transition: all 0.3s;
 
         &.active {
           background-color: $clr-black;
