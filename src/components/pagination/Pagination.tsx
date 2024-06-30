@@ -5,6 +5,7 @@ import { PaginationProps } from '@/types';
 import './Pagination.scss';
 
 const Pagination = ({
+  query,
   currentPage,
   itemsPerPage,
   totalItems,
@@ -20,7 +21,8 @@ const Pagination = ({
           return (
             <Link
               key={page}
-              href='#'
+              href={`/search?q=${query}&page=${page}`}
+              onClick={() => onPageChange(page)}
               className={`${
                 currentPage === page ? 'btnPagination active' : 'btnPagination'
               }`}
