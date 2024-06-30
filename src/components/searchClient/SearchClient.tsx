@@ -4,6 +4,7 @@ import { useQuery } from '@tanstack/react-query';
 import { useSearchParams } from 'next/navigation';
 
 import EmptyState from '../emptyState/EmptyState';
+import Pagination from '../pagination/Pagination';
 import ProductLists from '../productLists/ProductLists';
 
 import { searchProducts } from '@/services/productService';
@@ -44,6 +45,7 @@ const SearchClient = () => {
           <small>{`"${decodedSearchQuery}"`}</small>
         </h3>
         <ProductLists data={products} loading={isLoading} />
+        <Pagination />
       </div>
     </div>
   );
