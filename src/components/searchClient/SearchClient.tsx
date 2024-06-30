@@ -3,14 +3,15 @@
 import { useQuery } from '@tanstack/react-query';
 import { useSearchParams } from 'next/navigation';
 
-import EmptyState from '../emptyState/EmptyState';
+import Heading from './Heading';
 import Pagination from '../pagination/Pagination';
+
+import EmptyState from '../emptyState/EmptyState';
 import ProductLists from '../productLists/ProductLists';
 
 import { searchProducts } from '@/services/productService';
 
 import '../../app/search/Search.scss';
-import Heading from './Heading';
 
 const SearchClient = () => {
   const params = useSearchParams();
