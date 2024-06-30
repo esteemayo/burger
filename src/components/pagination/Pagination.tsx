@@ -9,19 +9,19 @@ const Pagination = ({
   totalItems,
   onPageChange,
 }: PaginationProps) => {
-  console.log(totalItems);
+  const pages = Math.ceil(totalItems / itemsPerPage);
+  const pageNumbers = Array.from(new Array(pages), (_, i) => i + 1);
+
   return (
     <div className='pagination'>
       <div className='wrapper'>
-        <Link href='#' className='btnPagination active'>
-          1
-        </Link>
-        <Link href='#' className='btnPagination'>
-          2
-        </Link>
-        <Link href='#' className='btnPagination'>
-          3
-        </Link>
+        {pageNumbers.map((page) => {
+          return (
+            <Link key={page} href='#' className='btnPagination'>
+              {page}
+            </Link>
+          );
+        })}
       </div>
     </div>
   );
