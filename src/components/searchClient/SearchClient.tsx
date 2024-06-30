@@ -10,6 +10,7 @@ import ProductLists from '../productLists/ProductLists';
 import { searchProducts } from '@/services/productService';
 
 import '../../app/search/Search.scss';
+import Heading from './Heading';
 
 const SearchClient = () => {
   const params = useSearchParams();
@@ -40,10 +41,7 @@ const SearchClient = () => {
   return (
     <div className='search'>
       <div className='container'>
-        <h3>
-          Search results for
-          <small>{`"${decodedSearchQuery}"`}</small>
-        </h3>
+        <Heading query={decodedSearchQuery} />
         <ProductLists data={products} loading={isLoading} />
         <Pagination />
       </div>
