@@ -52,8 +52,12 @@ const SearchClient = () => {
     <div className='search'>
       <div className='container'>
         <Heading query={decodedSearchQuery} />
-        <ProductLists data={products} loading={isLoading} />
+        <ProductLists
+          data={products}
+          loading={isLoading}
+        />
         <Pagination
+          query={decodedSearchQuery}
           currentPage={currentPage}
           itemsPerPage={itemsPerPage}
           totalItems={totalItems}

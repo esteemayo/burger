@@ -32,6 +32,14 @@
           background-color: $clr-black;
           color: $clr-secondary;
           border-color: transparent;
+
+          &:visited {
+            color: $clr-secondary;
+          }
+        }
+
+        &:visited {
+          color: $clr-black;
         }
 
         &:hover {
