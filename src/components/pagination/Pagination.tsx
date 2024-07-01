@@ -1,5 +1,6 @@
 'use client';
 
+import _ from 'lodash';
 import Link from 'next/link';
 
 import { PaginationProps } from '@/types';
@@ -14,13 +15,15 @@ const Pagination = ({
   disabled,
   onPageChange,
 }: PaginationProps) => {
-  const pages = Math.ceil(totalItems / itemsPerPage);
-  const pageNumbers = Array.from(new Array(pages), (_, i) => i + 1);
+  const pagesCount = Math.ceil(totalItems / itemsPerPage);
+  const pages = _.range(1, pagesCount + 1);
+
+  // const pageNumbers = Array.from(new Array(pagesCount), (_, i) => i + 1);
 
   return (
     <div className='pagination'>
       <div className='wrapper'>
-        {pageNumbers.map((page) => {
+        {pages.map((page) => {
           return (
             <Link key={page} href={`/search?q=${query}&page=${page}`}>
               <button
