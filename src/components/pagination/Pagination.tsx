@@ -9,6 +9,7 @@ const Pagination = ({
   currentPage,
   itemsPerPage,
   totalItems,
+  disabled,
   onPageChange,
 }: PaginationProps) => {
   const pages = Math.ceil(totalItems / itemsPerPage);
@@ -19,16 +20,16 @@ const Pagination = ({
       <div className='wrapper'>
         {pageNumbers.map((page) => {
           return (
-            <Link
-              key={page}
-              href={`/search?q=${query}&page=${page}`}
-            >
+            <Link key={page} href={`/search?q=${query}&page=${page}`}>
               <button
-                type='button' 
+                type='button'
+                disabled={disabled}
                 onClick={() => onPageChange(page)}
                 className={`${
-                currentPage === page ? 'btnPagination active' : 'btnPagination'
-                  }`}
+                  currentPage === page
+                    ? 'btnPagination active'
+                    : 'btnPagination'
+                }`}
               >
                 {page}
               </button>
