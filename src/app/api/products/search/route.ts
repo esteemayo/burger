@@ -28,6 +28,9 @@ export const GET = async (req: NextRequest) => {
           },
         ],
       },
+      orderBy: {
+        createdAt: 'desc',
+      },
     });
 
     return new NextResponse(JSON.stringify(products), { status: 200 });
