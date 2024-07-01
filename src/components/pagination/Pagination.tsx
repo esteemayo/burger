@@ -22,12 +22,16 @@ const Pagination = ({
             <Link
               key={page}
               href={`/search?q=${query}&page=${page}`}
-              onClick={() => onPageChange(page)}
-              className={`${
-                currentPage === page ? 'btnPagination active' : 'btnPagination'
-              }`}
             >
-              {page}
+              <button 
+                type='button' 
+                onClick={() => onPageChange(page)}
+                className={`${
+                currentPage === page ? 'btnPagination active' : 'btnPagination'
+                  }`}
+              >
+                {page}
+              </button>
             </Link>
           );
         })}
