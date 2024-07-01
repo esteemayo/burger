@@ -23,7 +23,7 @@ const Pagination = ({
               key={page}
               href={`/search?q=${query}&page=${page}`}
             >
-              <button 
+              <button
                 type='button' 
                 onClick={() => onPageChange(page)}
                 className={`${

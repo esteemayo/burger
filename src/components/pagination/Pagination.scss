@@ -13,9 +13,10 @@
     justify-content: flex-end;
     gap: 1rem;
 
-    .btnPagination {
-      &:link,
-      &:active {
+    a,
+    a:link,
+    a:visited {
+      .btnPagination {
         display: inline-block;
         outline: none;
         text-align: center;
