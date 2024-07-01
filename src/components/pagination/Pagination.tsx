@@ -20,6 +20,10 @@ const Pagination = ({
 
   // const pageNumbers = Array.from(new Array(pagesCount), (_, i) => i + 1);
 
+  if (pagesCount === 1) {
+    return;
+  }
+
   return (
     <div className='pagination'>
       <div className='wrapper'>
