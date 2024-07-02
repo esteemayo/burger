@@ -17,6 +17,7 @@ import '../../app/search/Search.scss';
 const SearchClient = () => {
   const params = useSearchParams();
   const searchQuery = params.get('q') ?? null;
+  const page = params.get('page') ?? 1;
 
   const encodedSearchQuery = encodeURI(searchQuery ?? '');
   const decodedSearchQuery = decodeURI(encodedSearchQuery);
@@ -24,8 +25,8 @@ const SearchClient = () => {
   const { isLoading, data: products } = useQuery({
     queryKey: ['products'],
     queryFn: async () => {
-      const { data } = await searchProducts(encodedSearchQuery);
-      return data;
+      const { data } = await searchProducts(encodedSearchQuery, +page);
+      return data.products;
     },
   });
 
