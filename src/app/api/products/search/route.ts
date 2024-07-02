@@ -4,7 +4,12 @@ import { prisma } from '@/utils/connect';
 
 export const GET = async (req: NextRequest) => {
   const { searchParams } = new URL(req.url);
+
+  const limit = 6;
+  const page = searchParams.get('page');
   const searchQuery = searchParams.get('q');
+
+  const skip = (Number(page) - 1) * limit;
 
   if (typeof searchQuery !== 'string') {
     throw new Error('Invalid request');
@@ -12,6 +17,8 @@ export const GET = async (req: NextRequest) => {
 
   try {
     const products = await prisma.product.findMany({
+      skip,
+      take: limit,
       where: {
         OR: [
           {
