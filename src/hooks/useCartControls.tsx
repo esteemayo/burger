@@ -1,10 +1,10 @@
 'use client';
 
+import { useSession } from 'next-auth/react';
 import { useCallback, useMemo } from 'react';
 
 import { CartItem } from '@/types';
 import { useCartStore } from './useCartStore';
-import { useSession } from 'next-auth/react';
 
 export const useCartControls = (product?: CartItem) => {
   const { data: session } = useSession();
