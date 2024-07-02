@@ -6,7 +6,7 @@ export const GET = async (req: NextRequest) => {
   const { searchParams } = new URL(req.url);
 
   const limit = 6;
-  const page = searchParams.get('page');
+  const page = searchParams.get('page') || 1;
   const searchQuery = searchParams.get('q');
 
   const skip = (Number(page) - 1) * limit;
