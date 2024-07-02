@@ -4,8 +4,11 @@ import { useCallback, useMemo } from 'react';
 
 import { CartItem } from '@/types';
 import { useCartStore } from './useCartStore';
+import { useSession } from 'next-auth/react';
 
 export const useCartControls = (product?: CartItem) => {
+  const { data: session } = useSession();
+
   const products = useCartStore((store) => store.products);
   const toggleQuantity = useCartStore((store) => store.toggleQuantity);
 
@@ -31,8 +34,12 @@ export const useCartControls = (product?: CartItem) => {
   }, [product?.id, products]);
 
   const btnLabel = useMemo(() => {
+    if (!session) {
+      return 'Add to cart';
+    }
+
     return inCart ? 'In cart' : 'Add to cart';
-  }, [inCart]);
+  }, [inCart, session]);
 
   return {
     inCart,
