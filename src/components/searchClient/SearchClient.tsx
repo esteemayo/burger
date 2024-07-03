@@ -1,6 +1,5 @@
 'use client';
 
-import { useQuery } from '@tanstack/react-query';
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 
