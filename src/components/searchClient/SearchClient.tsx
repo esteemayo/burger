@@ -16,8 +16,9 @@ import '../../app/search/Search.scss';
 
 const SearchClient = () => {
   const params = useSearchParams();
-  const searchQuery = params.get('q') ?? null;
+
   const page = params.get('page') ?? 1;
+  const searchQuery = params.get('q') ?? null;
 
   const encodedSearchQuery = encodeURI(searchQuery ?? '');
   const decodedSearchQuery = decodeURI(encodedSearchQuery);
