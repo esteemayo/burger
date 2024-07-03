@@ -20,15 +20,18 @@ const SearchClient = () => {
   const page = params.get('page') ?? 1;
   const searchQuery = params.get('q') ?? null;
 
+  const pageNumber = +page;
+
   const encodedSearchQuery = encodeURI(searchQuery ?? '');
   const decodedSearchQuery = decodeURI(encodedSearchQuery);
 
   const { isLoading, data } = useQuery({
     queryKey: ['products'],
     queryFn: async () => {
-      const { data } = await searchProducts(encodedSearchQuery, +page);
+      const { data } = await searchProducts(encodedSearchQuery, pageNumber);
       return data;
     },
+    enabled: !!pageNumber,
   });
 
   const [currentPage, setCurrentPage] = useState(1);
