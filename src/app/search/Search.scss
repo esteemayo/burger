@@ -38,12 +38,16 @@
         margin-left: 17.5rem;
       }
 
+      @media only screen and (max-width: 56.25em) {
+        margin-left: 13rem;
+      }
+
       @media only screen and (max-width: 53.3125em) {
-        margin-left: 1.5rem;
+        // margin-left: 13rem;
       }
 
       @media only screen and (max-width: 51.25em) {
-        margin-left: 17rem;
+        // margin-left: 17rem;
       }
 
       @include md {
