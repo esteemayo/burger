@@ -1,10 +1,13 @@
 @import '../../styles/variables.scss';
 
 .pagination {
-  background-color: tomato;
   display: flex;
   justify-content: center;
   margin-right: 9rem;
+
+  @media only screen and (min-width: 112.5em) {
+    margin-right: -2rem;
+  }
 
   .wrapper {
     width: 115rem;
