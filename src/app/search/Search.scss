@@ -9,12 +9,16 @@
     width: 120rem;
     padding: 12rem 0;
 
-    @include sm {
-      padding: 6rem 0;
+    @include lg {
+      width: 108rem;
     }
 
-    @include lg {
-      width: 144rem;
+    @media only screen and (max-width: 59.375em) {
+      width: 104rem;
+    }
+
+    @include sm {
+      padding: 6rem 0;
     }
 
     h3 {
