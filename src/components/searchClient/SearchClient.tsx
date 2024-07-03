@@ -46,7 +46,7 @@ const SearchClient = () => {
     })();
   }, [encodedSearchQuery, pageNumber]);
 
-  if (!products) {
+  if (!products || products.length < 1) {
     return (
       <EmptyState
         title='No product found!'
