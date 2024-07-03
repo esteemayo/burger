@@ -5,10 +5,10 @@ import { prisma } from '@/utils/connect';
 export const GET = async (req: NextRequest) => {
   const { searchParams } = new URL(req.url);
 
-  const limit = 6;
   const page = searchParams.get('page') || 1;
   const searchQuery = searchParams.get('q');
 
+  const limit = 6;
   const skip = (Number(page) - 1) * limit;
 
   if (typeof searchQuery !== 'string') {
