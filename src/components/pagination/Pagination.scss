@@ -1,8 +1,10 @@
 @import '../../styles/variables.scss';
 
 .pagination {
+  background-color: tomato;
   display: flex;
   justify-content: center;
+  margin-right: 9rem;
 
   .wrapper {
     width: 115rem;
