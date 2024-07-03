@@ -27,7 +27,6 @@ const Pagination = ({
     <div className='pagination'>
       <div className='wrapper'>
         {pages.map((page) => {
-          console.log('currentPage', currentPage);
           return (
             <Link key={page} href={`/search?q=${query}&page=${page}`}>
               <button

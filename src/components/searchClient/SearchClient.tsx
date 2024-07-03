@@ -25,20 +25,29 @@ const SearchClient = () => {
   const encodedSearchQuery = encodeURI(searchQuery ?? '');
   const decodedSearchQuery = decodeURI(encodedSearchQuery);
 
-  const { isLoading, data } = useQuery({
-    queryKey: ['products'],
-    queryFn: async () => {
-      const { data } = await searchProducts(encodedSearchQuery, pageNumber);
-      return data;
-    },
-    enabled: !!pageNumber,
-  });
-
+  const [products, setProducts] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
   const [totalItems, setTotalItems] = useState<number>(0);
   const [itemsPerPage, setItemsPerPage] = useState(6);
   const [currentPage, setCurrentPage] = useState(pageNumber);
 
-  if (data?.products?.length < 1) {
+  useEffect(() => {
+    (async () => {
+      setIsLoading(true);
+
+      try {
+        const { data } = await searchProducts(encodedSearchQuery, pageNumber);
+        setProducts(data?.products);
+        setTotalItems(data?.totalProducts);
+      } catch (err: unknown) {
+        console.log(err);
+      } finally {
+        setIsLoading(false);
+      }
+    })();
+  }, [encodedSearchQuery, pageNumber]);
+
+  if (products?.length < 1) {
     return (
       <EmptyState
         title='No product found!'
@@ -49,15 +58,11 @@ const SearchClient = () => {
     );
   }
 
-  useEffect(() => {
-    setTotalItems(data?.totalProducts);
-  }, [data?.totalProducts]);
-
   return (
     <div className='search'>
       <div className='container'>
         <Heading query={decodedSearchQuery} />
-        <ProductLists data={data?.products} loading={isLoading} />
+        <ProductLists data={products} loading={isLoading} />
         <Pagination
           query={decodedSearchQuery}
           currentPage={currentPage}
