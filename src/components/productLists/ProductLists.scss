@@ -1,6 +1,12 @@
+@import '../../styles/responsive.scss';
+
 .productLists {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 6rem;
+
+  @include md {
+    gap: 3rem;
+  }
 }
