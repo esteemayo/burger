@@ -1,16 +1,21 @@
 @import '../../styles/responsive.scss';
 
 .productLists {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(min-content, 1fr));
   gap: 6rem;
+  padding: 0 3rem;
 
-  @media only screen and (max-width: 53.125em) {
-    gap: 4rem;
-  }
+  // display: flex;
+  // flex-wrap: wrap;
+  // justify-content: center;
+  // gap: 6rem;
 
-  @include md {
-    gap: 3rem;
-  }
+  // @media only screen and (max-width: 53.125em) {
+  //   gap: 4rem;
+  // }
+
+  // @include md {
+  //   gap: 3rem;
+  // }
 }
