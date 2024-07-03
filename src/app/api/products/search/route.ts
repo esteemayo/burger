@@ -45,7 +45,31 @@ export const GET = async (req: NextRequest) => {
       ],
     });
 
-    return new NextResponse(JSON.stringify(products), { status: 200 });
+    const totalProducts = await prisma.product.findMany({
+      where: {
+        OR: [
+          {
+            name: {
+              contains: searchQuery,
+              mode: 'insensitive',
+            },
+          },
+          {
+            desc: {
+              contains: searchQuery,
+              mode: 'insensitive',
+            },
+          },
+        ],
+      },
+    });
+
+    return new NextResponse(
+      JSON.stringify({ products, totalProducts: totalProducts.length }),
+      {
+        status: 200,
+      }
+    );
   } catch (err: unknown) {
     return new NextResponse(
       JSON.stringify({ message: 'Something went wrong' }),
