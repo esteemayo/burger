@@ -25,9 +25,9 @@ const SearchClient = () => {
   const decodedSearchQuery = decodeURI(encodedSearchQuery);
 
   const [products, setProducts] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
+  const [itemsPerPage] = useState(6);
   const [totalItems, setTotalItems] = useState<number>(0);
-  const [itemsPerPage, setItemsPerPage] = useState(6);
+  const [isLoading, setIsLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(pageNumber);
 
   useEffect(() => {
