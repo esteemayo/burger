@@ -2,9 +2,13 @@
 
 .productLists {
   display: grid;
-  grid-template-columns: repeat(3, minmax(min-content, 1fr));
+  grid-template-columns: repeat(3, min-content);
   gap: 6rem;
   padding: 0 3rem;
+
+  @media only screen and (max-width: 59.375em) {
+    gap: 4rem;
+  }
 
   // display: flex;
   // flex-wrap: wrap;
