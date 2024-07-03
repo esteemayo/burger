@@ -10,6 +10,10 @@
     margin-right: 13rem;
   }
 
+  @media only screen and (max-width: 53.125em) {
+    margin-right: 16rem;
+  }
+
   @media only screen and (min-width: 112.5em) {
     margin-right: -2rem;
   }
