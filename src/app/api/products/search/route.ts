@@ -45,7 +45,7 @@ export const GET = async (req: NextRequest) => {
       ],
     });
 
-    const totalProducts = await prisma.product.findMany({
+    const productLists = await prisma.product.findMany({
       where: {
         OR: [
           {
@@ -65,7 +65,7 @@ export const GET = async (req: NextRequest) => {
     });
 
     return new NextResponse(
-      JSON.stringify({ products, totalProducts: totalProducts.length }),
+      JSON.stringify({ products, totalProducts: productLists.length }),
       {
         status: 200,
       }
