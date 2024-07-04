@@ -10,6 +10,11 @@
     gap: 4rem;
   }
 
+  @media only screen and (max-width: 50em) {
+    gap: 2rem;
+    padding: 0 5rem;
+  }
+
   // display: flex;
   // flex-wrap: wrap;
   // justify-content: center;
