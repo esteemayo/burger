@@ -15,6 +15,12 @@
     padding: 0 5rem;
   }
 
+  @include md {
+    grid-template-columns: repeat(2, min-content);
+    gap: 6rem;
+    padding: 0 20rem;
+  }
+
   // display: flex;
   // flex-wrap: wrap;
   // justify-content: center;
