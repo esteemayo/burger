@@ -21,6 +21,11 @@
     padding: 0 18.94rem;
   }
 
+  @media only screen and (max-width: 36.875em) {
+    gap: 5rem;
+    padding: 0 19.45rem;
+  }
+
   // display: flex;
   // flex-wrap: wrap;
   // justify-content: center;
