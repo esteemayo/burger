@@ -71,10 +71,9 @@
     //   height: 23rem;
     // }
 
-    // @media only screen and (max-width: 18.75em) {
-    //   width: 28rem;
-    //   height: 20rem;
-    // }
+    @media only screen and (max-width: 18.75em) {
+      height: 15rem;
+    }
 
     @media only screen and (min-width: 112.5em) {
       width: 35rem;
