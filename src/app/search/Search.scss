@@ -58,6 +58,10 @@
         margin-left: 20.4rem;
       }
 
+      @media only screen and (max-width: 31.25em) {
+        margin-left: 33.4rem;
+      }
+
       @include sm {
         flex-direction: column;
         margin-left: 15rem;
