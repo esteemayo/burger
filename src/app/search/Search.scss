@@ -34,6 +34,10 @@
       align-items: baseline;
       gap: 1rem;
 
+      @media only screen and (max-width: 81.25em) {
+        margin-left: 6rem;
+      }
+
       @include lg {
         margin-left: 3rem;
       }
