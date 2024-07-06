@@ -38,10 +38,6 @@
         margin-left: 6rem;
       }
 
-      @include xl {
-        margin-left: 9rem;
-      }
-
       @include lg {
         margin-left: 3rem;
       }
@@ -102,6 +98,8 @@
         @media only screen and (max-width: 81.25em) {
           right: 6rem;
         }
+
+        
 
         @include lg {
           display: none;
