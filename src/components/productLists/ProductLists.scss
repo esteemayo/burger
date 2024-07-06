@@ -3,7 +3,7 @@
 .productLists {
   display: grid;
   grid-template-columns: repeat(3, min-content);
-  gap: 6rem;
+  gap: 9rem;
   padding: 0 3rem;
 
   @include xl {
