@@ -6,6 +6,10 @@
   gap: 9rem;
   padding: 0 3rem;
 
+  @media only screen and (max-width: 81.25em) {
+    padding-left: 6rem;
+  }
+
   @include xl {
     padding: 0 9rem;
   }
