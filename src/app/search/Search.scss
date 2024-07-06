@@ -95,6 +95,10 @@
         right: 9rem;
         transform: translateY(-50%);
 
+        @media only screen and (max-width: 81.25em) {
+          right: 6rem;
+        }
+
         @include lg {
           display: none;
         }
