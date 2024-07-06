@@ -35,10 +35,6 @@
       gap: 1rem;
 
       @include lg {
-        margin-left: 6rem;
-      }
-
-      @media only screen and (max-width: 59.375em) {
         margin-left: 3rem;
       }
 
