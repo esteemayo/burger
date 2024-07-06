@@ -18,6 +18,10 @@
     margin-right: 5rem;
   }
 
+  @include md {
+    margin-right: 19rem;
+  }
+
   @media only screen and (min-width: 112.5em) {
     margin-right: -2rem;
   }
