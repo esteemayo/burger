@@ -6,6 +6,10 @@
   justify-content: center;
   margin-right: 9rem;
 
+  @media only screen and (max-width: 81.25em) {
+    margin-right: 6rem;
+  }
+
   @media only screen and (max-width: 64em) {
     margin-right: 13rem;
   }
