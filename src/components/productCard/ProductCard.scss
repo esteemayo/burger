@@ -8,31 +8,6 @@
   box-shadow: $box-shadow;
   overflow: hidden;
 
-  // @include md {
-  //   width: 17rem;
-  //   background-color: $clr-tertiary;
-  // }
-
-  // @media only screen and (max-width: 40.4375em) {
-  //   width: 15rem;
-  // }
-
-  // @media only screen and (max-width: 36.4375em) {
-  //   width: 23rem;
-  // }
-
-  // @media only screen and (max-width: 35em) {
-  //   width: 18rem;
-  // }
-
-  // @include sm {
-  //   width: 30rem;
-  // }
-
-  // @media only screen and (max-width: 26.875em) {
-  //   width: 35rem;
-  // }
-
   @media only screen and (max-width: 21.5em) {
     width: 33rem;
   }
@@ -51,29 +26,6 @@
     background-color: #f7f7f7;
     position: relative;
     transition: all 0.3s;
-
-    // @include md {
-    //   width: 17rem;
-    //   height: 15rem;
-    // }
-
-    // @media only screen and (max-width: 36.4375em) {
-    //   width: 23rem;
-    // }
-
-    // @media only screen and (max-width: 35em) {
-    //   width: 18rem;
-    // }
-
-    // @include sm {
-    //   width: 30rem;
-    //   height: 27rem;
-    // }
-
-    // @media only screen and (max-width: 26.875em) {
-    //   width: 35rem;
-    //   height: 23rem;
-    // }
 
     @media only screen and (max-width: 21.5em) {
       width: 33rem;
