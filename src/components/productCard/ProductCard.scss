@@ -185,8 +185,8 @@
         line-height: 1.5;
         transition: all 0.3s;
 
-        @include lg {
-          font-size: 1.75rem;
+        @include xl {
+          font-size: 1.55556rem;
         }
 
         @include md {
