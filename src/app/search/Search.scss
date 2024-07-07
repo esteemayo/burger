@@ -17,6 +17,10 @@
       width: 108rem;
     }
 
+    @include md {
+      width: 104rem;
+    }
+
     @include sm {
       padding: 6rem 0;
     }
