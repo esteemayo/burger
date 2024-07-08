@@ -1,5 +1,9 @@
+@import '../../styles/variables.scss';
+
 .sidebar {
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
+  width: 30rem;
+  background-color: $clr-white;
 }
