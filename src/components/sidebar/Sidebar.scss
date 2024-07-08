@@ -3,6 +3,7 @@
 .sidebar {
   width: 100%;
   height: 100%;
+
   position: fixed;
   top: 0;
   right: 0;
@@ -10,7 +11,11 @@
   z-index: 5000;
 
   .container {
+    position: absolute;
+    right: 0;
+
     width: 30rem;
+    max-height: 35rem;
     padding: 2.4rem;
     background-color: $clr-white;
     box-shadow: $box-shadow;
