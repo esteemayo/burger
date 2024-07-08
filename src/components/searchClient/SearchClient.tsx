@@ -31,19 +31,20 @@ const SearchClient = () => {
   const [currentPage, setCurrentPage] = useState(pageNumber);
 
   useEffect(() => {
-    (async () => {
-      setIsLoading(true);
+    encodedSearchQuery &&
+      (async () => {
+        setIsLoading(true);
 
-      try {
-        const { data } = await searchProducts(encodedSearchQuery, pageNumber);
-        setProducts(data?.products);
-        setTotalItems(data?.totalProducts);
-      } catch (err: unknown) {
-        console.log(err);
-      } finally {
-        setIsLoading(false);
-      }
-    })();
+        try {
+          const { data } = await searchProducts(encodedSearchQuery, pageNumber);
+          setProducts(data?.products);
+          setTotalItems(data?.totalProducts);
+        } catch (err: unknown) {
+          console.log(err);
+        } finally {
+          setIsLoading(false);
+        }
+      })();
   }, [encodedSearchQuery, pageNumber]);
 
   if (products?.length < 1) {
