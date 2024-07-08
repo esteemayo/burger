@@ -460,6 +460,11 @@ export interface SidebarModalStore {
   isOpen: boolean;
 }
 
+export interface SidebarModalActionType {
+  onOpen(): void;
+  onClose(): void;
+}
+
 export interface AccountModalStore {
   isOpen: boolean;
 }
