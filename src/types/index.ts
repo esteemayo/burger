@@ -456,11 +456,11 @@ export interface ModalProps {
   secondaryAction?(): void;
 }
 
-export interface SidebarModalStore {
+export interface SidebarStore {
   isOpen: boolean;
 }
 
-export interface SidebarModalActionType {
+export interface SidebarActionType {
   onOpen(): void;
   onClose(): void;
 }
