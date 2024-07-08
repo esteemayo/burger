@@ -2,8 +2,10 @@
 
 .sidebar {
   position: fixed;
-  top: 0;
+  top: 12rem;
   right: 0;
   width: 30rem;
+  padding: 3rem 1.2rem;
   background-color: $clr-white;
+  box-shadow: $box-shadow;
 }
