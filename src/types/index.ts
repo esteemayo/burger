@@ -456,6 +456,10 @@ export interface ModalProps {
   secondaryAction?(): void;
 }
 
+export interface SidebarModalStore {
+  isOpen: boolean;
+}
+
 export interface AccountModalStore {
   isOpen: boolean;
 }
