@@ -1,8 +1,9 @@
 import Footer from '../footer/Footer';
 import Designer from '../designer/Designer';
 import Navbar from '../navbar/Navbar';
-import ClientOnly from '../clientOnly/ClientOnly';
 import ScrollTop from '../scrollTop/ScrollTop';
+import Sidebar from '../sidebar/Sidebar';
+import ClientOnly from '../clientOnly/ClientOnly';
 
 import ModalProvider from '@/providers/ModalProvider';
 import CartProvider from '@/providers/CartProvider';
@@ -18,6 +19,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           <SkeletonProvider>
             <CartProvider>
               <Navbar />
+              <Sidebar />
               <ToasterProvider />
               <ModalProvider />
               {children}
