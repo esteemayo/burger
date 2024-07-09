@@ -118,6 +118,23 @@
           white-space: nowrap;
           margin-right: 0.5rem;
         }
+  
+        button {
+          all: unset;
+          display: inline-block;
+          color: $clr-primary;
+          cursor: pointer;
+          transition: all 0.3s;
+  
+          &:hover {
+            color: $clr-secondary;
+          }
+  
+          &:disabled {
+            opacity: 0.7;
+            cursor: default;
+          }
+        }
       }
 
       .userAuth {
