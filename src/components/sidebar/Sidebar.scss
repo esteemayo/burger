@@ -124,13 +124,13 @@
           appearance: none;
           font-family: inherit;
           font-size: var(--default-font-size);
-          width: 26.8rem;
-          height: 4rem;
-          padding: 0.5rem 2rem;
+          width: 100%;
+          padding: 1.25rem 2rem;
           padding-left: 3.5rem;
           padding-right: 0.5rem;
           background-color: $clr-white;
           color: $clr-gray-dark;
+          box-shadow: inset $box-shadow;
           border-radius: 0.8rem;
           caret-color: $clr-gray-light;
 
@@ -144,7 +144,7 @@
 
       img.searchIcon {
         position: absolute;
-        top: 1.4rem;
+        top: 1.65rem;
         left: 1rem;
         width: 1.7rem;
         height: 1.7rem;
