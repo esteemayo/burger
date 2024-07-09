@@ -40,6 +40,16 @@
           font-weight: 400;
           font-size: 1.75rem;
           color: inherit;
+
+          svg {
+            font-size: 2.8rem;
+            fill: $clr-primary;
+          }
+
+          img {
+            width: 2.7rem;
+            height: 2.7rem;
+          }
         }
       }
     }
