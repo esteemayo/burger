@@ -106,6 +106,12 @@
       border-top: 1px solid $line;
 
       .currentUser {
+        text-align: center;
+        text-transform: capitalize;
+        font-weight: 400;
+        font-size: 1.3rem;
+        line-height: 1.7;
+        cursor: default;
       }
 
       .userAuth {
