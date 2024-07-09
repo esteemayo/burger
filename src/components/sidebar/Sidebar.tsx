@@ -69,7 +69,7 @@ const Sidebar = () => {
               </button>
             </div>
           ) : (
-            <div>
+            <div className='userAuth'>
               {authLinks.map((item) => {
                 const { id, url, icon, label, urlName, imgName } = item;
                 return (
