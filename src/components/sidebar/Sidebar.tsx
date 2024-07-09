@@ -2,11 +2,11 @@
 
 import { useCallback } from 'react';
 import Link from 'next/link';
-import { useSession } from 'next-auth/react';
+import { signOut, useSession } from 'next-auth/react';
 import Image from 'next/image';
 import RoomServiceIcon from '@mui/icons-material/RoomService';
 
-import { userLinks } from '@/data';
+import { authLinks, userLinks } from '@/data';
 
 import './Sidebar.scss';
 
@@ -60,6 +60,34 @@ const Sidebar = () => {
             </span>
           </li>
         </ul>
+        <div className='userBox'>
+          {!!session ? (
+            <div className='currentUser'>
+              <span>{session?.user.name}</span>
+              <button type='button' onClick={handleLogout}>
+                Sign out
+              </button>
+            </div>
+          ) : (
+            <div>
+              {authLinks.map((item) => {
+                const { id, url, icon, label, urlName, imgName } = item;
+                return (
+                  <Link key={id} href={url} className={urlName}>
+                    <Image
+                      src={`/svg/${icon}.svg`}
+                      width={13}
+                      height={13}
+                      alt={`${label.toLowerCase()} logo`}
+                      className={imgName}
+                    />
+                    {label}
+                  </Link>
+                );
+              })}
+            </div>
+          )}
+        </div>
         <div className='search'>
           <form onSubmit={() => console.log('submitted')}>
             <input
@@ -76,12 +104,6 @@ const Sidebar = () => {
             alt='search icon'
             className='searchInputIcon'
           />
-        </div>
-        <div className='currentUser'>
-          <span>{session?.user.name}</span>
-          <button type='button' onClick={handleLogout}>
-            Sign out
-          </button>
         </div>
       </div>
     </aside>
