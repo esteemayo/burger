@@ -363,5 +363,13 @@
         }
       }
     }
+
+    .hamburger {
+      svg {
+        width: 5rem;
+        fill: $clr-primary;
+        stroke-width: 1;
+      }
+    }
   }
 }
