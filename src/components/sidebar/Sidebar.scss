@@ -81,7 +81,7 @@
 
             width: 100%;
             font-size: 1.5rem;
-            padding: 0.8rem 1.6rem;
+            padding: 0.5rem 1.6rem;
             border-radius: 0.5rem;
 
             .loginLogo,
@@ -97,6 +97,7 @@
         .loginLink {
           background-color: $clr-secondary;
           color: $clr-white;
+          border: 1px solid transparent;
         }
 
         .registerLink {
