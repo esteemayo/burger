@@ -24,6 +24,7 @@
 
     .lists {
       list-style: none;
+      padding-top: 1rem;
 
       li {
         display: flex;
@@ -184,14 +185,14 @@
 
     .btnCloseWrap {
       position: absolute;
-      top: 1rem;
-      right: 1rem;
+      top: 0.5rem;
+      right: 0.5rem;
 
       .btnClose {
-          all: unset;
-          display: inline-block;
-          background-color: transparent;
-          cursor: pointer;
+        all: unset;
+        display: inline-block;
+        background-color: transparent;
+        cursor: pointer;
 
         img {
           display: block;
