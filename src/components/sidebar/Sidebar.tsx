@@ -7,11 +7,13 @@ import Image from 'next/image';
 import RoomServiceIcon from '@mui/icons-material/RoomService';
 
 import { authLinks, userLinks } from '@/data';
+import { useSidebar } from '@/hooks/useSidebar';
 
 import './Sidebar.scss';
 
 const Sidebar = () => {
   const { data: session } = useSession();
+  const onClose = useSidebar((store) => store.onClose);
 
   const handleLogout = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
     e.stopPropagation();
@@ -106,11 +108,7 @@ const Sidebar = () => {
           )}
         </div>
         <div className='btnCloseWrap'>
-          <button
-            onClick={() => console.log('sidebar closed')}
-            type='button'
-            className='btnClose'
-          >
+          <button onClick={onClose} type='button' className='btnClose'>
             <Image
               src='/svg/x-mark.svg'
               width={15}
