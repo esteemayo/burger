@@ -65,6 +65,10 @@
       }
 
       .userAuth {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+
         .loginLink,
         .registerLink {
           &:link,
