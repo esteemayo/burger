@@ -60,6 +60,23 @@ const Sidebar = () => {
             </span>
           </li>
         </ul>
+        <div className='search'>
+          <form onSubmit={() => console.log('submitted')}>
+            <input
+              type='search'
+              value={''}
+              placeholder='Search products...'
+              onChange={(e) => console.log(e.target.value)}
+            />
+          </form>
+          <Image
+            src='/img/search.png'
+            width={15}
+            height={15}
+            alt='search icon'
+            className='searchIcon'
+          />
+        </div>
         <div className='userBox'>
           {!!session ? (
             <div className='currentUser'>
@@ -87,23 +104,6 @@ const Sidebar = () => {
               })}
             </div>
           )}
-        </div>
-        <div className='search'>
-          <form onSubmit={() => console.log('submitted')}>
-            <input
-              type='search'
-              value={''}
-              placeholder='Search products...'
-              onChange={(e) => console.log(e.target.value)}
-            />
-          </form>
-          <Image
-            src='/img/search.png'
-            width={15}
-            height={15}
-            alt='search icon'
-            className='searchIcon'
-          />
         </div>
       </div>
     </aside>
