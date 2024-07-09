@@ -187,7 +187,12 @@
       top: 1rem;
       right: 1rem;
 
-      button {
+      .btnClose {
+          all: unset;
+          display: inline-block;
+          background-color: transparent;
+          cursor: pointer;
+
         img {
         }
       }
