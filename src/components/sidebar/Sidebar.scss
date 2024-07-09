@@ -131,6 +131,12 @@
           color: $clr-gray-dark;
           border-radius: 0.8rem;
           caret-color: $clr-gray-light;
+
+          &::placeholder {
+            font-weight: 300;
+            font-size: 1.5rem;
+            color: $clr-gray-light;
+          }
         }
 
         img.searchIcon {
