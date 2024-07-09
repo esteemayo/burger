@@ -77,6 +77,7 @@
             align-items: center;
             justify-content: space-between;
 
+            width: 100%;
             font-size: 1.3rem;
             padding: 0.8rem 1.6rem;
             border-radius: 0.5rem;
@@ -93,7 +94,7 @@
 
         .loginLink {
           background-color: $clr-secondary;
-          color: $clr-white !important;
+          color: $clr-white;
         }
 
         .registerLink {
