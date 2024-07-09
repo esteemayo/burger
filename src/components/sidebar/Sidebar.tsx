@@ -1,5 +1,9 @@
-import Image from 'next/image';
+'use client';
+
+import { useCallback } from 'react';
 import Link from 'next/link';
+import { useSession } from 'next-auth/react';
+import Image from 'next/image';
 import RoomServiceIcon from '@mui/icons-material/RoomService';
 
 import { userLinks } from '@/data';
@@ -7,6 +11,16 @@ import { userLinks } from '@/data';
 import './Sidebar.scss';
 
 const Sidebar = () => {
+  const { data: session } = useSession();
+
+  const handleLogout = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
+    e.stopPropagation();
+
+    signOut({
+      callbackUrl: '/',
+    });
+  }, []);
+
   return (
     <aside className='sidebar'>
       <div className='container'>
@@ -46,6 +60,29 @@ const Sidebar = () => {
             </span>
           </li>
         </ul>
+        <div className='search'>
+          <form onSubmit={() => console.log('submitted')}>
+            <input
+              type='search'
+              value={''}
+              placeholder='Search products...'
+              onChange={(e) => console.log(e.target.value)}
+            />
+          </form>
+          <Image
+            src='/img/search.png'
+            width={15}
+            height={15}
+            alt='search icon'
+            className='searchInputIcon'
+          />
+        </div>
+        <div className='currentUser'>
+          <span>{session?.user.name}</span>
+          <button type='button' onClick={handleLogout}>
+            Sign out
+          </button>
+        </div>
       </div>
     </aside>
   );
