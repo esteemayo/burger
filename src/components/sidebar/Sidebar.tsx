@@ -105,6 +105,20 @@ const Sidebar = () => {
             </div>
           )}
         </div>
+        <div className='btnCloseWrap'>
+          <button
+            onClick={() => console.log('sidebar closed')}
+            type='button'
+            className='btnClose'
+          >
+            <Image
+              src='/svg/x-mark.svg'
+              width={15}
+              height={15}
+              alt='close icon'
+            />
+          </button>
+        </div>
       </div>
     </aside>
   );
