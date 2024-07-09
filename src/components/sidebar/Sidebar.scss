@@ -65,6 +65,40 @@
       }
 
       .userAuth {
+        .loginLink,
+        .registerLink {
+          &:link,
+          &:active {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            font-size: 1.3rem;
+            padding: 0.8rem 1.6rem;
+            border-radius: 0.5rem;
+
+            .loginLogo,
+            .registerLogo {
+              display: inline-block;
+              width: 1.3rem;
+              height: 1.3rem;
+              object-fit: cover;
+            }
+          }
+        }
+
+        .loginLink {
+          background-color: $clr-secondary;
+          color: $clr-white !important;
+        }
+
+        .registerLink {
+          background-color: transparent;
+          color: $clr-primary;
+          border: 1px solid currentColor;
+          border-radius: 0.5rem;
+          transition: all 0.3s;
+        }
       }
     }
 
