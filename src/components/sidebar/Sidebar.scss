@@ -112,6 +112,12 @@
         font-size: 1.3rem;
         line-height: 1.7;
         cursor: default;
+
+        span {
+          color: #000000de;
+          white-space: nowrap;
+          margin-right: 0.5rem;
+        }
       }
 
       .userAuth {
