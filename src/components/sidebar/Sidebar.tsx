@@ -102,7 +102,7 @@ const Sidebar = () => {
             width={15}
             height={15}
             alt='search icon'
-            className='searchInputIcon'
+            className='searchIcon'
           />
         </div>
       </div>
