@@ -6,14 +6,18 @@ import { signOut, useSession } from 'next-auth/react';
 import Image from 'next/image';
 import RoomServiceIcon from '@mui/icons-material/RoomService';
 
-import { authLinks, userLinks } from '@/data';
+import { useSearch } from '@/hooks/useSearch';
 import { useSidebar } from '@/hooks/useSidebar';
+
+import { authLinks, userLinks } from '@/data';
 
 import './Sidebar.scss';
 
 const Sidebar = () => {
   const { data: session } = useSession();
+
   const onClose = useSidebar((store) => store.onClose);
+  const { searchQuery, handleChange, handleSubmit } = useSearch();
 
   const handleLogout = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
     e.stopPropagation();
@@ -63,12 +67,12 @@ const Sidebar = () => {
           </li>
         </ul>
         <div className='search'>
-          <form onSubmit={() => console.log('submitted')}>
+          <form onSubmit={handleSubmit}>
             <input
               type='search'
-              value={''}
+              value={searchQuery}
               placeholder='Search products...'
-              onChange={(e) => console.log(e.target.value)}
+              onChange={handleChange}
             />
           </form>
           <Image
