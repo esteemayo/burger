@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback } from 'react';
+import { useCallback, useMemo } from 'react';
 import Link from 'next/link';
 import { signOut, useSession } from 'next-auth/react';
 import Image from 'next/image';
@@ -16,7 +16,9 @@ import './Sidebar.scss';
 const Sidebar = () => {
   const { data: session } = useSession();
 
+  const isOpen = useSidebar((store) => store.isOpen);
   const onClose = useSidebar((store) => store.onClose);
+
   const { searchQuery, handleChange, handleSubmit } = useSearch();
 
   const handleLogout = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
@@ -27,8 +29,12 @@ const Sidebar = () => {
     });
   }, []);
 
+  const sidebarClasses = useMemo(() => {
+    return isOpen ? 'sidebar show' : 'sidebar';
+  }, []);
+
   return (
-    <aside className='sidebar'>
+    <aside className={sidebarClasses}>
       <div className='container'>
         <ul className='lists'>
           <li>
