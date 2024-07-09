@@ -29,7 +29,10 @@
         display: flex;
         align-items: center;
         gap: 1rem;
-        margin-bottom: 1.25rem;
+
+        &:not(:last-child) {
+          margin-bottom: 1.25rem;
+        }
 
         img {
           width: 2.7rem;
@@ -61,7 +64,7 @@
     }
 
     .userBox {
-      margin-bottom: 2rem;
+      margin: 2rem;
 
       .currentUser {
       }
