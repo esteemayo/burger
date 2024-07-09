@@ -35,6 +35,10 @@
       gap: 2rem;
       line-height: 1;
 
+      @media only screen and (max-width: 30em) {
+        display: none;
+      }
+
       @media only screen and (max-width: 24.375em) {
         gap: 1.5rem;
       }
@@ -45,10 +49,6 @@
 
       @media only screen and (max-width: 18.75em) {
         gap: 1rem;
-      }
-
-      @media only screen and (min-width: 30em) {
-        display: none;
       }
 
       a,
