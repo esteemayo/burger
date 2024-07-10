@@ -6,8 +6,9 @@ import { signOut, useSession } from 'next-auth/react';
 import Image from 'next/image';
 import RoomServiceIcon from '@mui/icons-material/RoomService';
 
-import { useSearch } from '@/hooks/useSearch';
 import { useSidebar } from '@/hooks/useSidebar';
+import { useSearch } from '@/hooks/useSearch';
+import { useCartStore } from '@/hooks/useCartStore';
 
 import { authLinks, userLinks } from '@/data';
 
@@ -16,8 +17,9 @@ import './Sidebar.scss';
 const Sidebar = () => {
   const { data: session } = useSession();
 
-  const isOpen = useSidebar((store) => store.isOpen);
   const onClose = useSidebar((store) => store.onClose);
+  const isOpen = useSidebar((store) => store.isOpen);
+  const totalItems = useCartStore((store) => store.totalItems);
 
   const { searchQuery, handleChange, handleSubmit } = useSearch();
 
@@ -83,7 +85,7 @@ const Sidebar = () => {
               className='shoppingCartLogo'
             />
             <span className='count'>
-              <Link href='/checkout'>Cart ({0})</Link>
+              <Link href='/checkout'>Cart ({totalItems})</Link>
             </span>
           </li>
         </ul>
