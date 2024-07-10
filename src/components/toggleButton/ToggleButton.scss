@@ -1,0 +1,16 @@
+@import '../../styles/variables.scss';
+
+.toggleButton {
+  display: none;
+
+  @media only screen and (max-width: 30em) {
+    display: inline-block;
+    all: unset;
+  }
+
+  svg {
+    width: 5rem;
+    fill: $clr-primary;
+    stroke-width: 1;
+  }
+}
