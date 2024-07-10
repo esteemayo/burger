@@ -219,8 +219,8 @@
 
     .btnCloseWrap {
       position: absolute;
-      top: 3px;
-      right: 3px;
+      top: 0.5rem;
+      right: 0.5rem;
 
       .btnClose {
         all: unset;
@@ -230,8 +230,8 @@
 
         img {
           display: block;
-          width: 2.45rem;
-          height: 2.45rem;
+          width: 2.75rem;
+          height: 2.75rem;
           object-fit: cover;
         }
       }
