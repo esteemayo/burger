@@ -3,9 +3,14 @@
 import { useRouter } from 'next/navigation';
 import { useCallback, useRef, useState } from 'react';
 
+import { useSidebar } from './useSidebar';
+
 export const useSearch = () => {
   const router = useRouter();
   const inputRef = useRef<HTMLInputElement>(null);
+
+  const isOpen = useSidebar((store) => store.isOpen);
+  const onClose = useSidebar((store) => store.onClose);
 
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -29,9 +34,13 @@ export const useSearch = () => {
 
         router.push(`/search?q=${encodedSearchQuery}`);
         setSearchQuery('');
+
+        if (isOpen) {
+          onClose();
+        }
       }
     },
-    [router, searchQuery]
+    [isOpen, onClose, router, searchQuery]
   );
 
   return {
