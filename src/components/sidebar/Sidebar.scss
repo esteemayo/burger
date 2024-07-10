@@ -7,17 +7,18 @@
 
   position: fixed;
   top: 0;
-  right: 0;
+  right: -100%;
   background-color: rgba(0, 0, 0, 0.15);
   display: none;
   visibility: hidden;
   opacity: 0;
   z-index: -1;
-
+  
   &.show {
     display: none;
     
     @media only screen and (max-width: 30em) {
+      right: 0;
       display: block;
       visibility: visible;
       opacity: 1;
