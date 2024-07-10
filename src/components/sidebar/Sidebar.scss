@@ -58,9 +58,9 @@
         align-items: center;
         gap: 1rem;
         padding: 0.75rem 0;
-        border-bottom: 1px solid $line;
 
         &:not(:last-child) {
+          border-bottom: 1px solid $line;
           margin-bottom: 0.5rem;
         }
 
