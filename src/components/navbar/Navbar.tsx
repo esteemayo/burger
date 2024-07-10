@@ -15,6 +15,7 @@ import Search from '../search/Search';
 import { useCartStore } from '@/hooks/useCartStore';
 import { useSearch } from '@/hooks/useSearch';
 import { useCartControls } from '@/hooks/useCartControls';
+import { useSidebar } from '@/hooks/useSidebar';
 
 import './Navbar.scss';
 
@@ -23,6 +24,7 @@ const Navbar = () => {
   const { data: session } = useSession();
 
   const { handleDecrement, handleIncrement } = useCartControls();
+  const onOpen = useSidebar((store) => store.onOpen);
   const { searchQuery, handleChange, handleSubmit } = useSearch();
 
   const totalPrice = useCartStore((store) => store.totalPrice);
@@ -115,7 +117,7 @@ const Navbar = () => {
               </div>
             )}
         </div>
-        <div className='hamburger'>
+        <div className='hamburger' onClick={onOpen}>
           <svg
             xmlns='http://www.w3.org/2000/svg'
             fill='none'
