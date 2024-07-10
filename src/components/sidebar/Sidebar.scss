@@ -142,10 +142,11 @@
       border-top: 1px solid $line;
 
       .currentUser {
-        text-align: center;
+        text-align: left;
         text-transform: capitalize;
         font-weight: 400;
         font-size: 1.3rem;
+        padding-top: 1rem;
         line-height: 1.7;
         cursor: default;
 
