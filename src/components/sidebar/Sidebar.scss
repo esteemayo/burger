@@ -13,6 +13,9 @@
   visibility: hidden;
   opacity: 0;
   z-index: -1;
+  transition: all 0.5s;
+  transition-timing-function: cubic-bezier(0.77, 0.2, 0.05, 1),
+    cubic-bezier(0.77, 0.2, 0.05, 1), cubic-bezier(0.77, 0.2, 0.05, 1);
   
   &.show {
     display: none;
