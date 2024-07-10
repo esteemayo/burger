@@ -51,7 +51,6 @@
     .lists {
       list-style: none;
       padding-top: 2rem;
-      padding-bottom: 1rem;
 
       li {
         display: flex;
@@ -60,8 +59,12 @@
         padding: 0.75rem 0;
 
         &:not(:last-child) {
-          border-bottom: 1px solid $line;
           margin-bottom: 0.5rem;
+          border-bottom: 1px solid $line;
+        }
+
+        &:last-child {
+          padding-bottom: 0;
         }
 
         img {
