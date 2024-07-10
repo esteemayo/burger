@@ -43,7 +43,7 @@ const Navbar = () => {
     return isActive ? 'navbar active' : 'navbar';
   }, [isActive]);
 
-  const totalItemsLabel = useMemo(() => {
+  const cartQuantity = useMemo(() => {
     return !session ? 0 : totalItems;
   }, [session, totalItems]);
 
@@ -88,7 +88,7 @@ const Navbar = () => {
               alt='search icon'
               className='shoppingCartLogo'
             />
-            <span className='count'>{totalItemsLabel}</span>
+            <span className='count'>{cartQuantity}</span>
             <div className='cartBox'>
               <CartMenu
                 products={products}
