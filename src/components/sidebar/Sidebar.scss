@@ -15,14 +15,14 @@
   z-index: -1;
 
   &.show {
-    display: block;
-    visibility: visible;
-    opacity: 1;
-    z-index: 5000;
-  }
-
-  @media only screen and (min-width: 30em) {
     display: none;
+    
+    @media only screen and (max-width: 30em) {
+      display: block;
+      visibility: visible;
+      opacity: 1;
+      z-index: 5000;
+    }
   }
 
   .container {
