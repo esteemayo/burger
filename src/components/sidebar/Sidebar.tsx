@@ -50,7 +50,7 @@ const Sidebar = () => {
     return !!isOpen ? 'container active' : 'container';
   }, [isOpen]);
 
-  const cartTotal = useMemo(() => {
+  const cartQuantity = useMemo(() => {
     return !!session ? totalItems : 0;
   }, [session, totalItems]);
 
@@ -89,7 +89,7 @@ const Sidebar = () => {
               className='shoppingCartLogo'
             />
             <span className='count'>
-              <Link href='/checkout'>Cart ({cartTotal})</Link>
+              <Link href='/checkout'>Cart ({cartQuantity})</Link>
             </span>
           </li>
         </ul>
