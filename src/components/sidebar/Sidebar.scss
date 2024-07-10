@@ -94,10 +94,13 @@
     }
 
     .search {
+      border-top: 1px solid $line;
       margin: 2rem 0;
       position: relative;
 
       form {
+        padding-top: 2rem;
+
         input {
           display: inline-block;
           border: none;
