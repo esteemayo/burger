@@ -21,13 +21,24 @@ const Sidebar = () => {
 
   const { searchQuery, handleChange, handleSubmit } = useSearch();
 
-  const handleLogout = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
-    e.stopPropagation();
+  const handleClose = useCallback(() => {
+    if (isOpen) {
+      onClose();
+    }
+  }, [isOpen, onClose]);
 
-    signOut({
-      callbackUrl: '/',
-    });
-  }, []);
+  const handleLogout = useCallback(
+    (e: React.MouseEvent<HTMLButtonElement>) => {
+      e.stopPropagation();
+
+      signOut({
+        callbackUrl: '/',
+      });
+
+      handleClose();
+    },
+    [handleClose]
+  );
 
   const sidebarClasses = useMemo(() => {
     return !!isOpen ? 'sidebar show' : 'sidebar';
@@ -41,7 +52,7 @@ const Sidebar = () => {
     <aside className={sidebarClasses}>
       <div className={containerClasses}>
         <ul className='lists'>
-          <li>
+          <li onClick={handleClose}>
             <Link href='/products'>
               <RoomServiceIcon />
               <span>Products</span>
@@ -63,7 +74,7 @@ const Sidebar = () => {
               </li>
             );
           })}
-          <li>
+          <li onClick={handleClose}>
             <Image
               src='/svg/shopping-cart.svg'
               width={15}
@@ -106,7 +117,12 @@ const Sidebar = () => {
               {authLinks.map((item) => {
                 const { id, url, icon, label, urlName, imgName } = item;
                 return (
-                  <Link key={id} href={url} className={urlName}>
+                  <Link
+                    key={id}
+                    href={url}
+                    className={urlName}
+                    onClick={handleClose}
+                  >
                     <Image
                       src={`/svg/${icon}.svg`}
                       width={13}
