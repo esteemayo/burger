@@ -63,10 +63,6 @@
           border-bottom: 1px solid $line;
         }
 
-        &:last-child {
-          padding-bottom: 0;
-        }
-
         img {
           width: 2.25rem;
           height: 2.25rem;
@@ -98,7 +94,6 @@
     }
 
     .search {
-      margin-top: 2rem;
       border-top: 1px solid $line;
       position: relative;
 
