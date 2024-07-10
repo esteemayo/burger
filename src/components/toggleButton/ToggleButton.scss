@@ -6,10 +6,11 @@
   @media only screen and (max-width: 30em) {
     display: inline-block;
     all: unset;
+    width: 5rem;
   }
 
   svg {
-    width: 5rem;
+    width: 100%;
     fill: $clr-primary;
     stroke-width: 1;
   }
