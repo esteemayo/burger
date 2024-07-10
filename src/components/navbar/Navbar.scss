@@ -365,6 +365,12 @@
     }
 
     .hamburger {
+      display: none;
+
+      @media only screen and (max-width: 30em) {
+        display: inline-block;
+      }
+
       svg {
         width: 5rem;
         fill: $clr-primary;
