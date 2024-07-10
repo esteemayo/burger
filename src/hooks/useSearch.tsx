@@ -7,11 +7,11 @@ import { useSidebar } from './useSidebar';
 
 export const useSearch = () => {
   const router = useRouter();
-  const inputRef = useRef<HTMLInputElement>(null);
-
+  
   const isOpen = useSidebar((store) => store.isOpen);
   const onClose = useSidebar((store) => store.onClose);
-
+  
+  const inputRef = useRef<HTMLInputElement>(null);
   const [searchQuery, setSearchQuery] = useState('');
 
   const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
