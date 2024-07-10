@@ -31,7 +31,7 @@ const Sidebar = () => {
 
   const sidebarClasses = useMemo(() => {
     return !!isOpen ? 'sidebar show' : 'sidebar';
-  }, []);
+  }, [isOpen]);
 
   return (
     <aside className={sidebarClasses}>
