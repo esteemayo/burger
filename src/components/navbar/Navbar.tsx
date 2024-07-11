@@ -24,14 +24,14 @@ const Navbar = () => {
   const pathname = usePathname();
   const { data: session } = useSession();
 
-  const { cartQuantity, handleDecrement, handleIncrement } = useCartControls();
   const onOpen = useSidebar((store) => store.onOpen);
+
   const { searchQuery, handleChange, handleSubmit } = useSearch();
+  const { cartQuantity, handleDecrement, handleIncrement } = useCartControls();
 
   const totalPrice = useCartStore((store) => store.totalPrice);
   const products = useCartStore((store) => store.products);
   const removeFromCart = useCartStore((store) => store.removeFromCart);
-  const totalItems = useCartStore((store) => store.totalItems);
 
   const [isActive, setIsActive] = useState(false);
 
