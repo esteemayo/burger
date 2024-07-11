@@ -29,6 +29,17 @@ const Sidebar = () => {
     }
   }, [isOpen, onClose]);
 
+  const closeHandler = useCallback(
+    (e: React.MouseEvent<HTMLElement>) => {
+      const target = e.target as HTMLElement;
+
+      if (target.classList.contains('sidebar')) {
+        handleClose();
+      }
+    },
+    [handleClose]
+  );
+
   const handleLogout = useCallback(
     (e: React.MouseEvent<HTMLButtonElement>) => {
       e.stopPropagation();
@@ -55,7 +66,7 @@ const Sidebar = () => {
   }, [session, totalItems]);
 
   return (
-    <aside className={sidebarClasses}>
+    <aside className={sidebarClasses} onClick={closeHandler}>
       <div className={containerClasses}>
         <ul className='lists'>
           <li onClick={handleClose}>
