@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { signOut, useSession } from 'next-auth/react';
 import Image from 'next/image';
 import RoomServiceIcon from '@mui/icons-material/RoomService';
+import { usePathname } from 'next/navigation';
 
 import { useSearch } from '@/hooks/useSearch';
 import { useSidebar } from '@/hooks/useSidebar';
@@ -17,6 +18,7 @@ import { authLinks, userLinks } from '@/data';
 import './Sidebar.scss';
 
 const Sidebar = () => {
+  const pathname = usePathname();
   const { data: session } = useSession();
 
   const onClose = useSidebar((store) => store.onClose);
@@ -103,23 +105,27 @@ const Sidebar = () => {
             </span>
           </li>
         </ul>
-        <div className='search'>
-          <form onSubmit={handleSubmit}>
-            <input
-              type='search'
-              value={searchQuery}
-              placeholder='Search products...'
-              onChange={handleChange}
-            />
-          </form>
-          <Image
-            src='/img/search.png'
-            width={15}
-            height={15}
-            alt='search icon'
-            className='searchIcon'
-          />
-        </div>
+        {pathname !== '/' &&
+            pathname !== '/login' &&
+            pathname !== '/register' && (
+            <div className='search'>
+              <form onSubmit={handleSubmit}>
+                <input
+                  type='search'
+                  value={searchQuery}
+                  placeholder='Search products...'
+                  onChange={handleChange}
+                />
+              </form>
+              <Image
+                src='/img/search.png'
+                width={15}
+                height={15}
+                alt='search icon'
+                className='searchIcon'
+              />
+            </div>
+          )}
         <div className='userBox'>
           {!!session ? (
             <div className='currentUser'>
