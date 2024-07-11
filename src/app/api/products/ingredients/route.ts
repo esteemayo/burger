@@ -10,9 +10,9 @@ export const GET = async (req: NextRequest) => {
   try {
     const products = await prisma.product.findMany({
       where: {
-        OR: ingredients?.map((ingredient) => ({
-          ingredients: ingredient,
-        })),
+        ingredients: {
+          hasSome: [...ingredients!],
+        },
       },
     });
 
