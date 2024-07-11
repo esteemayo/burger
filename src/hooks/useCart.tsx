@@ -2,7 +2,7 @@
 
 import { useSession } from 'next-auth/react';
 import { toast } from 'react-toastify';
-import { useCallback, useState } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 import { useRouter } from 'next/navigation';
 
 import { CartItem } from '@/types';
@@ -13,6 +13,7 @@ export const useCart = (product: CartItem) => {
   const { data: session } = useSession();
 
   const addToCart = useCartStore((store) => store.addToCart);
+  const totalItems = useCartStore((store) => store.totalItems);
 
   const [quantity, setQuantity] = useState(1);
 
@@ -42,7 +43,12 @@ export const useCart = (product: CartItem) => {
     [addToCart, product, quantity, router, session]
   );
 
+  const cartQuantity = useMemo(() => {
+    return !session ? 0 : totalItems;
+  }, [session, totalItems]);
+
   return {
+    cartQuantity,
     quantity,
     setQuantity,
     handleChange,
