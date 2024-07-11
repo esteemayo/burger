@@ -33,6 +33,10 @@ export const useCartControls = (product?: CartItem) => {
     return !!inCart;
   }, [product?.id, products]);
 
+  const cartQuantity = useMemo(() => {
+    return !session ? 0 : totalItems;
+  }, [session, totalItems]);
+
   const btnLabel = useMemo(() => {
     if (!session) {
       return 'Add to cart';
@@ -44,6 +48,7 @@ export const useCartControls = (product?: CartItem) => {
   return {
     inCart,
     btnLabel,
+    cartQuantity,
     handleDecrement,
     handleIncrement,
   };
