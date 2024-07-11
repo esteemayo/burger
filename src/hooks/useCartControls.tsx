@@ -9,6 +9,7 @@ import { useCartStore } from './useCartStore';
 export const useCartControls = (product?: CartItem) => {
   const { data: session } = useSession();
 
+  const totalItems = useCartStore((store) => store.totalItems);
   const products = useCartStore((store) => store.products);
   const toggleQuantity = useCartStore((store) => store.toggleQuantity);
 
