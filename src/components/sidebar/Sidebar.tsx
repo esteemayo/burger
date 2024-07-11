@@ -6,9 +6,11 @@ import { signOut, useSession } from 'next-auth/react';
 import Image from 'next/image';
 import RoomServiceIcon from '@mui/icons-material/RoomService';
 
-import { useSidebar } from '@/hooks/useSidebar';
 import { useSearch } from '@/hooks/useSearch';
+import { useSidebar } from '@/hooks/useSidebar';
+
 import { useCartStore } from '@/hooks/useCartStore';
+import { useCartControls } from '@/hooks/useCartControls';
 
 import { authLinks, userLinks } from '@/data';
 
@@ -21,6 +23,7 @@ const Sidebar = () => {
   const isOpen = useSidebar((store) => store.isOpen);
   const totalItems = useCartStore((store) => store.totalItems);
 
+  const { cartQuantity } = useCartControls();
   const { searchQuery, handleChange, handleSubmit } = useSearch();
 
   const handleClose = useCallback(() => {
@@ -60,10 +63,6 @@ const Sidebar = () => {
   const containerClasses = useMemo(() => {
     return !!isOpen ? 'container active' : 'container';
   }, [isOpen]);
-
-  const cartQuantity = useMemo(() => {
-    return !!session ? totalItems : 0;
-  }, [session, totalItems]);
 
   return (
     <aside className={sidebarClasses} onClick={closeHandler}>
