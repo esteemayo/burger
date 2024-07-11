@@ -5,10 +5,10 @@
   width: 100vw;
   height: calc(85vh - 12rem);
   background-color: $clr-primary;
-  background-image: url(/svg/hero-1.svg), url(/svg/hero-2.svg),
-    url(/img/hero.png);
+  background-image: url(/svg/hero-1.svg), url(/img/hero.png),
+    url(/svg/hero-2.svg);
   background-size: contain;
-  background-position: center left, center right, center center;
+  background-position: center left, center center, center right;
   background-repeat: no-repeat;
   overflow: visible;
 
