@@ -24,7 +24,7 @@ const Navbar = () => {
   const pathname = usePathname();
   const { data: session } = useSession();
 
-  const { handleDecrement, handleIncrement } = useCartControls();
+  const { cartQuantity, handleDecrement, handleIncrement } = useCartControls();
   const onOpen = useSidebar((store) => store.onOpen);
   const { searchQuery, handleChange, handleSubmit } = useSearch();
 
@@ -42,10 +42,6 @@ const Navbar = () => {
   const navClasses = useMemo(() => {
     return isActive ? 'navbar active' : 'navbar';
   }, [isActive]);
-
-  const cartQuantity = useMemo(() => {
-    return !session ? 0 : totalItems;
-  }, [session, totalItems]);
 
   useEffect(() => {
     window.addEventListener('scroll', isActiveHandler);
