@@ -25,13 +25,12 @@ const Navbar = () => {
   const { data: session } = useSession();
 
   const onOpen = useSidebar((store) => store.onOpen);
-
-  const { searchQuery, handleChange, handleSubmit } = useSearch();
-  const { cartQuantity, handleDecrement, handleIncrement } = useCartControls();
-
   const totalPrice = useCartStore((store) => store.totalPrice);
   const products = useCartStore((store) => store.products);
   const removeFromCart = useCartStore((store) => store.removeFromCart);
+
+  const { searchQuery, handleChange, handleSubmit } = useSearch();
+  const { cartQuantity, handleDecrement, handleIncrement } = useCartControls();
 
   const [isActive, setIsActive] = useState(false);
 
