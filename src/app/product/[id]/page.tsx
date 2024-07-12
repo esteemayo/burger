@@ -35,17 +35,17 @@ export async function generateMetadata({ params }: IParams): Promise<Metadata> {
 const Product = async ({ params: { id } }: IParams) => {
   const product: SingleProductType = await getData(id);
 
-  if (!product) {
-    return (
-      <EmptyState
-        title='Product not found'
-        subtitle="Looks like there's no product with that ID."
-        imgSrc='empty'
-      />
-    );
-  }
+  // if (!product) {
+  //   return (
+  //     <EmptyState
+  //       title='Product not found'
+  //       subtitle="Looks like there's no product with that ID."
+  //       imgSrc='empty'
+  //     />
+  //   );
+  // }
 
-  return <ProductClient product={product} />;
+  return <ProductClient product={product} productId={id} />;
 };
 
 export default Product;
