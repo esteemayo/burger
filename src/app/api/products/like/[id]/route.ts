@@ -46,7 +46,11 @@ export const PATCH = async (req: NextRequest, { params }: IParams) => {
         where: {
           id: productId,
         },
-        data: { ...product },
+        data: {
+          likes: {
+            set: product.likes,
+          },
+        },
       });
 
       return new NextResponse(JSON.stringify(updatedProduct), { status: 200 });
