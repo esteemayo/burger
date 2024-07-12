@@ -28,7 +28,7 @@ const ProductClient = ({ productId }: ProductClientProps) => {
     enabled: !!productId,
   });
 
-  const [product, setProduct] = useState<SingleProductType>({});
+  const [product, setProduct] = useState<SingleProductType | null>(null);
 
   useEffect(() => {
     setProduct(data);
@@ -47,7 +47,11 @@ const ProductClient = ({ productId }: ProductClientProps) => {
   return (
     <div className='product'>
       <Hero name={product.name} image={product.image} />
-      <ProductInfo product={product} currentUser={session?.user} onUpdate={setProduct} />
+      <ProductInfo
+        product={product}
+        currentUser={session?.user}
+        onUpdate={setProduct}
+      />
       <ProductReview actionId={product.id} />
       <RelatedProducts
         productId={product.id}
