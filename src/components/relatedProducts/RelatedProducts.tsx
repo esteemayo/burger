@@ -5,6 +5,7 @@ import { useQuery } from '@tanstack/react-query';
 import RelatedProduct from '../relatedProduct/RelatedProduct';
 import RelatedCardSkeleton from '../relatedCardSkeleton/RelatedCardSkeleton';
 
+import { ProductType } from '@/types';
 import { getRelatedProducts } from '@/services/productService';
 
 import './RelatedProducts.scss';
@@ -15,7 +16,7 @@ interface RelatedProductsProps {
 }
 
 const RelatedProducts = ({ productId, ingredients }: RelatedProductsProps) => {
-  const { isLoading, data: products }  = useQuery({
+  const { isLoading, data: products } = useQuery({
     queryKey: ['featuredProducts'],
     queryFn: async () => {
       const { data } = await getRelatedProducts(ingredients);
@@ -30,15 +31,15 @@ const RelatedProducts = ({ productId, ingredients }: RelatedProductsProps) => {
         <h2 className='relatedHeader'>Related products</h2>
         <div className='relatedWrap'>
           {isLoading
-            ? products?.map((item) => {
+            ? products?.map((item: ProductType) => {
                 return <RelatedCardSkeleton key={item.id} />;
               })
             : products
-              ?.filter((product) => product.id !== productId)
-              .slice(0, 4)
-              .map((product) => {
-                return <RelatedProduct key={product.id} product={product} />;
-              })}
+                ?.filter((product: ProductType) => product.id !== productId)
+                .slice(0, 4)
+                .map((product: ProductType) => {
+                  return <RelatedProduct key={product.id} product={product} />;
+                })}
         </div>
       </div>
     </section>
