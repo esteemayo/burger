@@ -12,7 +12,7 @@ export const getFeaturedProducts = () =>
 export const searchProducts = (searchQuery: string, page: number) =>
   http.get(`/api/products/search?q=${searchQuery}&page=${page}`);
 
-export const getRelatedProducts = (ingredients: string) =>
+export const getRelatedProducts = (ingredients: string[] | undefined) =>
   http.get(`/api/products/ingredients?ingredients=${ingredients}`);
 
 export const getProduct = (productId: string) =>
