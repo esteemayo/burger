@@ -45,8 +45,8 @@ const Menus = () => {
         </div>
         <div className='wrapper'>
           {isLoading
-            ? products?.map((item: ProductType) => {
-                return <ProductCardSkeleton key={item.id} />;
+            ? Array.from(Array(6)).map((_, index) => {
+                return <ProductCardSkeleton key={index} />;
               })
             : products?.map((product: ProductType) => {
                 return <ProductCard key={product.id} product={product} />;
