@@ -9,7 +9,11 @@ import { relatedProducts } from '@/data';
 
 import './RelatedProducts.scss';
 
-const RelatedProducts = () => {
+interface RelatedProductsProps {
+  productId: string;
+}
+
+const RelatedProducts = ({ productId }: RelatedProductsProps) => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
