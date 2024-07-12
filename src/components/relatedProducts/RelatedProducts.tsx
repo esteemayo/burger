@@ -26,8 +26,8 @@ const RelatedProducts = ({ productId, ingredients }: RelatedProductsProps) => {
         <h2 className='relatedHeader'>Related products</h2>
         <div className='relatedWrap'>
           {isLoading
-            ? products?.map((item: ProductType) => {
-                return <RelatedCardSkeleton key={item.id} />;
+            ? Array.from(new Array(4)).map((_, index) => {
+                return <RelatedCardSkeleton key={index} />;
               })
             : products
                 ?.filter((product: ProductType) => product.id !== productId)
