@@ -6,7 +6,7 @@ const Designer = () => {
       <div className='wrapper'>
         <div className='copyright'>
           <span className='text'>
-            © Esteem Designs •&nbsp;Developed by Emmanuel Adebayo
+            © Esteem Designs •&nbsp;Developed by Emmanuel Adebayo&trade;
           </span>
         </div>
       </div>
