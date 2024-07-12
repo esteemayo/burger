@@ -2,6 +2,7 @@
 
 import { useSession } from 'next-auth/react';
 import { useQuery } from '@tanstack/react-query';
+import { useCallback, useEffect, useState } from 'react';
 
 import Hero from '@/components/hero/Hero';
 import ProductReview from '@/components/productReview/ProductReview';
@@ -18,7 +19,7 @@ import http from '@/services/httpService';
 const ProductClient = ({ productId }: ProductClientProps) => {
   const { data: session } = useSession();
 
-  const { data: product } = useQuery({
+  const { data } = useQuery({
     queryKey: ['product'],
     queryFn: async () => {
       const { data } = await http.get(`/api/products/${productId}`);
@@ -26,6 +27,12 @@ const ProductClient = ({ productId }: ProductClientProps) => {
     },
     enabled: !!productId,
   });
+
+  const [product, setProduct] = useState({});
+
+  useEffect(() => {
+    setProduct(data);
+  }, [data]);
 
   if (!product) {
     return (
