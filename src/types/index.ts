@@ -405,6 +405,7 @@ export interface HeroProps {
 export interface ProductInfoProps {
   product: SingleProductType | CartItem;
   currentUser: CurrentUserType | undefined;
+  onUpdate: React.Dispatch<React.SetStateAction<{}>>
 }
 
 export interface ReviewProps {
