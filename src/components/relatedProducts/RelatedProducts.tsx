@@ -5,15 +5,10 @@ import { useQuery } from '@tanstack/react-query';
 import RelatedProduct from '../relatedProduct/RelatedProduct';
 import RelatedCardSkeleton from '../relatedCardSkeleton/RelatedCardSkeleton';
 
-import { ProductType } from '@/types';
+import { ProductType, RelatedProductsProps } from '@/types';
 import { getRelatedProducts } from '@/services/productService';
 
 import './RelatedProducts.scss';
-
-interface RelatedProductsProps {
-  productId: string;
-  ingredients?: string[];
-}
 
 const RelatedProducts = ({ productId, ingredients }: RelatedProductsProps) => {
   const { isLoading, data: products } = useQuery({

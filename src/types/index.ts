@@ -704,3 +704,8 @@ export interface PaginationProps {
   totalItems: number;
   onPageChange: React.Dispatch<React.SetStateAction<number>>;
 }
+
+export interface RelatedProductsProps {
+  productId: string;
+  ingredients?: string[];
+}
