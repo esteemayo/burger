@@ -405,7 +405,7 @@ export interface HeroProps {
 export interface ProductInfoProps {
   product: SingleProductType | CartItem;
   currentUser: CurrentUserType | undefined;
-  onUpdate: React.Dispatch<React.SetStateAction<{}>>
+  onUpdate: React.Dispatch<React.SetStateAction<{}>>;
 }
 
 export interface ReviewProps {
@@ -679,6 +679,7 @@ export interface HeartButtonProps {
   actionId: string;
   likes: string[];
   currentUser: CurrentUserType | undefined;
+  onUpdate: React.Dispatch<React.SetStateAction<{}>>;
 }
 
 export interface CheckoutProductsProps {
