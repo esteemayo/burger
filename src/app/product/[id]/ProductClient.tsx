@@ -1,19 +1,19 @@
 'use client';
 
 import { useSession } from 'next-auth/react';
+import { useEffect, useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
-import { useCallback, useEffect, useState } from 'react';
 
-import Hero from '@/components/hero/Hero';
 import ProductReview from '@/components/productReview/ProductReview';
+import Hero from '@/components/hero/Hero';
 import ProductInfo from '@/components/productInfo/ProductInfo';
+import EmptyState from '@/components/emptyState/EmptyState';
 import RelatedProducts from '@/components/relatedProducts/RelatedProducts';
 
 import { ProductClientProps } from '@/types';
 import { getProduct } from '@/services/productService';
 
 import './Product.scss';
-import EmptyState from '@/components/emptyState/EmptyState';
 import http from '@/services/httpService';
 
 const ProductClient = ({ productId }: ProductClientProps) => {
