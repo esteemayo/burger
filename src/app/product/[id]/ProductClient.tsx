@@ -12,14 +12,17 @@ import { ProductClientProps } from '@/types';
 import './Product.scss';
 
 const ProductClient = ({ product }: ProductClientProps) => {
-  const { data: session } = useSession()
-  
+  const { data: session } = useSession();
+
   return (
     <div className='product'>
       <Hero name={product.name} image={product.image} />
       <ProductInfo product={product} currentUser={session?.user} />
       <ProductReview actionId={product.id} />
-      <RelatedProducts productId={product.id} />
+      <RelatedProducts
+        productId={product.id}
+        ingredients={product.ingredients}
+      />
     </div>
   );
 };
