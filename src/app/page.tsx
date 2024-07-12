@@ -7,7 +7,7 @@ import Offer from '@/components/offer/Offer';
 import NewsLetter from '@/components/newsletter/NewsLetter';
 
 export const metadata: Metadata = {
-  title: 'Burger - Home page',
+  title: 'Burger | Home',
 };
 
 const Home = () => {
