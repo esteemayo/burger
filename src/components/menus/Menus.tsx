@@ -15,7 +15,7 @@ import './Menus.scss';
 
 const Menus = () => {
   const { isLoading, data: products } = useQuery({
-    queryKey: ['products'],
+    queryKey: ['featuredProducts'],
     queryFn: async () => {
       const { data } = await getFeaturedProducts();
       return data;
