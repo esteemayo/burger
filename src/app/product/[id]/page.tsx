@@ -45,7 +45,7 @@ const Product = async ({ params: { id } }: IParams) => {
   //   );
   // }
 
-  return <ProductClient product={product} productId={id} />;
+  return <ProductClient productId={id} />;
 };
 
 export default Product;

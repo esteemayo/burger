@@ -394,7 +394,7 @@ export type SingleProductType = {
 };
 
 export interface ProductClientProps {
-  product: SingleProductType;
+  productId: string;
 }
 
 export interface HeroProps {
@@ -666,7 +666,8 @@ export interface IFavorite {
   (
     actionId: string,
     currentUser: CurrentUserType | undefined,
-    likes: string[]
+    likes: string[],
+    onUpdate: React.Dispatch<React.SetStateAction<{}>>
   ): {
     hasFavorited: boolean;
     toggleFavorite: (e: React.MouseEvent<HTMLButtonElement>) => Promise<void>;

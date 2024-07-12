@@ -14,7 +14,7 @@ import HeartButton from '../heartButton/HeartButton';
 
 import './ProductInfo.scss';
 
-const ProductInfo = ({ product, currentUser }: ProductInfoProps) => {
+const ProductInfo = ({ product, currentUser, onUpdate }: ProductInfoProps) => {
   const { btnLabel, inCart } = useCartControls(product);
   const { quantity, handleChange, handleClick } = useCart(product);
 
@@ -44,6 +44,7 @@ const ProductInfo = ({ product, currentUser }: ProductInfoProps) => {
             actionId={product.id}
             likes={product.likes}
             currentUser={currentUser}
+            onUpdate={onUpdate}
           />
           <span className='price'>{formatCurrency(product.price)}</span>
         </div>

@@ -10,7 +10,8 @@ import { likeProduct } from '@/services/productService';
 const useFavorite: IFavorite = (
   actionId: string,
   currentUser: CurrentUserType | undefined,
-  likes: string[]
+  likes: string[],
+  onUpdate
 ) => {
   const router = useRouter();
 
@@ -33,7 +34,7 @@ const useFavorite: IFavorite = (
 
       try {
         const { data } = await likeProduct(actionId);
-        console.log(data);
+        onUpdate(data);
       } catch (err: unknown) {
         console.log(err);
         toast.error('Something went wrong');

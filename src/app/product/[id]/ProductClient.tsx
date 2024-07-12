@@ -47,7 +47,7 @@ const ProductClient = ({ productId }: ProductClientProps) => {
   return (
     <div className='product'>
       <Hero name={product.name} image={product.image} />
-      <ProductInfo product={product} currentUser={session?.user} />
+      <ProductInfo product={product} currentUser={session?.user} onUpdate={setProduct} />
       <ProductReview actionId={product.id} />
       <RelatedProducts
         productId={product.id}
