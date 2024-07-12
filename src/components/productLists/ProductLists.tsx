@@ -14,7 +14,7 @@ const ProductLists = ({
   return (
     <section className='productLists'>
       {loading
-        ? Array(3)
+        ? Array(6)
             .fill(0)
             .map((_, index) => {
               return <ProductCardSkeleton key={index} />;
