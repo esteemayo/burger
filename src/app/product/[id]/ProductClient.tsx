@@ -10,7 +10,7 @@ import ProductInfo from '@/components/productInfo/ProductInfo';
 import EmptyState from '@/components/emptyState/EmptyState';
 import RelatedProducts from '@/components/relatedProducts/RelatedProducts';
 
-import { ProductClientProps } from '@/types';
+import { ProductClientProps, SingleProductType } from '@/types';
 import { getProduct } from '@/services/productService';
 
 import './Product.scss';
@@ -28,7 +28,7 @@ const ProductClient = ({ productId }: ProductClientProps) => {
     enabled: !!productId,
   });
 
-  const [product, setProduct] = useState({});
+  const [product, setProduct] = useState<SingleProductType>({});
 
   useEffect(() => {
     setProduct(data);
