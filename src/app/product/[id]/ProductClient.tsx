@@ -10,11 +10,10 @@ import ProductInfo from '@/components/productInfo/ProductInfo';
 import EmptyState from '@/components/emptyState/EmptyState';
 import RelatedProducts from '@/components/relatedProducts/RelatedProducts';
 
+import { getProductClient } from '@/services/productService';
 import { ProductClientProps, SingleProductType } from '@/types';
-import { getProduct } from '@/services/productService';
 
 import './Product.scss';
-import http from '@/services/httpService';
 
 const ProductClient = ({ productId }: ProductClientProps) => {
   const { data: session } = useSession();
@@ -22,7 +21,7 @@ const ProductClient = ({ productId }: ProductClientProps) => {
   const { data } = useQuery({
     queryKey: ['product'],
     queryFn: async () => {
-      const { data } = await http.get(`/api/products/${productId}`);
+      const { data } = await getProductClient(productId);
       return data;
     },
     enabled: !!productId,
