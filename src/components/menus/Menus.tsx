@@ -32,6 +32,8 @@ const Menus = () => {
     );
   }
 
+  const loading = true
+
   return (
     <section className='menusContainer'>
       <div className='container'>
@@ -44,7 +46,7 @@ const Menus = () => {
           </div>
         </div>
         <div className='wrapper'>
-          {isLoading
+          {loading
             ? Array.from(Array(6)).map((_, index) => {
                 return <ProductCardSkeleton key={index} />;
               })
