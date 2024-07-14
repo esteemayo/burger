@@ -8,11 +8,11 @@
   .container {
     width: 120rem;
     padding: 12rem 0;
-    
+
     @include lg {
       width: 144rem;
     }
-    
+
     @include sm {
       padding: 6rem 0;
     }
@@ -23,7 +23,7 @@
       color: $clr-black;
       line-height: 1.2;
       margin-bottom: 3rem;
-      margin-left: 9rem;
+      margin-left: 6rem;
       position: relative;
 
       display: flex;
@@ -85,7 +85,7 @@
 
         position: absolute;
         top: 50%;
-        right: 9rem;
+        right: 6rem;
         transform: translateY(-50%);
 
         @media only screen and (max-width: 81.25em) {
