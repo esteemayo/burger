@@ -10,6 +10,10 @@
     margin-right: 4rem;
   }
 
+  @include xl {
+    margin-left: 6rem;
+  }
+
   @media only screen and (max-width: 50em) {
     margin-right: 7rem;
   }
