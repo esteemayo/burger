@@ -3,6 +3,7 @@
 .productLists {
   display: grid;
   grid-template-columns: repeat(3, min-content);
+  justify-content: center;
   gap: 9rem;
   padding: 0 3rem;
 
