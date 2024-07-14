@@ -4,7 +4,7 @@
 .hero {
   width: 100vw;
   height: 70vh;
-  background-image: url(/img/slider_bg3.jpg);
+  background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.75)),url(/img/slider_bg3.jpg);
   background-color: #f7f7f7;
   background-size: cover;
   background-position: center center;
