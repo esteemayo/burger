@@ -71,6 +71,10 @@
         margin-left: 36rem;
       }
 
+      @media only screen and (max-width: 18.75em) {
+        margin-left: 36.25rem;
+      }
+
       @media only screen and (max-width: 17.5em) {
         font-size: 2rem;
         margin-left: 37rem;
