@@ -39,7 +39,7 @@
       gap: 1rem;
 
       @media only screen and (max-width: 81.25em) {
-        margin-left: 6rem;
+        margin-left: 7.5rem;
       }
 
       @media only screen and (max-width: 50em) {
@@ -97,7 +97,7 @@
         transform: translateY(-50%);
 
         @media only screen and (max-width: 81.25em) {
-          right: 6rem;
+          right: 4.5rem;
         }
 
         @include lg {
