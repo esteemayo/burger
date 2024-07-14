@@ -7,12 +7,12 @@ import { HeroProps } from '@/types';
 import './Hero.scss';
 
 const Hero = ({ name, image }: HeroProps) => {
-  const headerBcg = useMemo(() => {
+  const headerBgImg = useMemo(() => {
     return `linear-gradient(to bottom right, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.5)),url(${image})`;
   }, [image]);
 
   return (
-    <header className='hero' style={{ backgroundImage: headerBcg }}>
+    <header className='hero' style={{ backgroundImage: headerBgImg }}>
       <div className='headingWrap'>
         <h1 className='heroHeading'>{name}</h1>
         <div className='heroSubHeading'>
