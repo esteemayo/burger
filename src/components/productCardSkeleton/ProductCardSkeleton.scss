@@ -33,15 +33,6 @@
         height: 33.75rem !important;
       }
 
-      @media only screen and (max-width: 36.4375em) {
-        width: 31rem !important;
-        height: 28rem !important;
-      }
-
-      @media only screen and (max-width: 35em) {
-        width: 18rem !important;
-      }
-
       @include sm {
         width: 30rem !important;
         height: 27rem !important;
