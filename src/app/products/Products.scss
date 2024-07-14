@@ -34,6 +34,10 @@
         margin-left: 7.5rem;
       }
 
+      @include xl {
+        margin-left: 6rem;
+      }
+
       @include lg {
         margin-left: 6rem;
       }
