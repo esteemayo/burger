@@ -8,7 +8,7 @@ import './Hero.scss';
 
 const Hero = ({ name, image }: HeroProps) => {
   const headerBcg = useMemo(() => {
-    return `linear-gradient(to bottom right, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.75)),url(${image})`;
+    return `linear-gradient(to bottom right, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.5)),url(${image})`;
   }, [image]);
 
   return (
