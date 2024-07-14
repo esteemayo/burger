@@ -96,6 +96,10 @@
           right: 4.5rem;
         }
 
+        @include xl {
+          right: 6rem;
+        }
+
         @include lg {
           display: none;
         }
