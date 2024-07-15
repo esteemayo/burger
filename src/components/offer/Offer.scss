@@ -69,7 +69,7 @@
     .left {
       flex: 1;
 
-      @include sm {
+      @media only screen and (max-width: 51.25em) {
         display: none;
       }
 
