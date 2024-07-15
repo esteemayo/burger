@@ -1,10 +1,10 @@
 'use client';
 
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+import Link from 'next/link';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { useSession } from 'next-auth/react';
 import { useCallback, useEffect, useMemo, useState } from 'react';
-
-import ExpandLessIcon from '@mui/icons-material/ExpandLess';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import ReviewForm from '../reviewForm/ReviewForm';
 import Review from '../review/Review';
@@ -14,7 +14,6 @@ import { reviews } from '@/data';
 import { useCartStore } from '@/hooks/useCartStore';
 
 import './Reviews.scss';
-import Link from 'next/link';
 
 interface ReviewsProps {
   actionId: string;
