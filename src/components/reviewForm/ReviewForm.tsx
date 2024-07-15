@@ -9,6 +9,7 @@ import ErrorMessage from '../errorMessage/ErrorMessage';
 import { createReview } from '@/services/reviewService';
 import { ReviewData, ReviewErrors } from '@/types';
 import { validateReviewInputs } from '@/validations/review';
+import { createReviewOnProduct } from '@/services/productService';
 
 import './ReviewForm.scss';
 
@@ -41,7 +42,8 @@ const ReviewForm = ({ productId }: ReviewFormProps) => {
       data: object;
       productId: string;
     }) => {
-      const res = await createReview(data, productId);
+      const res = await createReviewOnProduct(data, productId);
+      console.log(res.data)
       return res.data;
     },
     onSuccess() {
@@ -97,7 +99,6 @@ const ReviewForm = ({ productId }: ReviewFormProps) => {
       };
 
       mutate({ data, productId });
-      console.log({ rating, ...inputs });
       handleClear();
     },
     [handleClear, inputs, mutate, productId, rating]
