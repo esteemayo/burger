@@ -1,7 +1,9 @@
 'use client';
 
-import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+import { useSession } from 'next-auth/react';
 import { useCallback, useEffect, useMemo, useState } from 'react';
+
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import ReviewForm from '../reviewForm/ReviewForm';
@@ -12,12 +14,15 @@ import { reviews } from '@/data';
 import { useCartStore } from '@/hooks/useCartStore';
 
 import './Reviews.scss';
+import Link from 'next/link';
 
 interface ReviewsProps {
-  actionId: string
+  actionId: string;
 }
 
 const Reviews = ({ actionId }: ReviewsProps) => {
+  const { data: session } = useSession();
+
   const products = useCartStore((store) => store.products);
 
   const [isOpen, setIsOpen] = useState(true);
@@ -85,7 +90,16 @@ const Reviews = ({ actionId }: ReviewsProps) => {
               <div className='reviewForm'>
                 <div className='respond'>
                   <span className='replyTitle'>{reviewLabel}</span>
-                  <ReviewForm productId={actionId} />
+                  {!!session ? (
+                    <ReviewForm productId={actionId} />
+                  ) : (
+                    <div className='reviewAuth'>
+                      <span>
+                        Please <Link href='/login'>log in</Link> to leave a
+                        review
+                      </span>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
