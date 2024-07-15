@@ -18,6 +18,8 @@ export const POST = async (req: NextRequest, { params }: IParams) => {
       const body = await req.json();
 
       if (!session.user.isAdmin) {
+        if (!body.name) body.name = session.user.name;
+        if (!body.email) body.email = session.user.email;
         if (!body.userId) body.userId = session.user.id;
         if (!body.productId) body.productId = productId;
 
