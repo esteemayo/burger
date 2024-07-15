@@ -95,7 +95,7 @@ const Reviews = ({ actionId }: ReviewsProps) => {
                     <div className='reviewAuth'>
                       <span>
                         Please <Link href='/login'>log in</Link> to leave a
-                        review
+                        review.
                       </span>
                     </div>
                   )}
