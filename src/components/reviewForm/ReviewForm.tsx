@@ -1,6 +1,7 @@
 'use client';
 
 import { useCallback, useState } from 'react';
+import { useMutation, useQueryClient } from '@tanstack/react-query';
 
 import StarRating from '../starRating/StarRating';
 import ErrorMessage from '../errorMessage/ErrorMessage';
@@ -9,7 +10,6 @@ import { ReviewData, ReviewErrors } from '@/types';
 import { validateReviewInputs } from '@/validations/review';
 
 import './ReviewForm.scss';
-import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { createReviewOnProduct } from '@/services/productService';
 
 const initialState: ReviewData = {
