@@ -43,6 +43,8 @@ const ProductClient = ({ productId }: ProductClientProps) => {
     );
   }
 
+  console.log(product);
+
   return (
     <div className='product'>
       <Hero name={product.name} image={product.image} />
