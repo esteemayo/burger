@@ -16,6 +16,9 @@ export const POST = async (req: NextRequest, { params }: IParams) => {
   if (session) {
     try {
       const body = await req.json();
+      
+      if (!body.name) body.name = session.user.name;
+      if (!body.email) body.email = session.user.email;
 
       if (!session.user.isAdmin) {
         const review = await prisma.review.create({
