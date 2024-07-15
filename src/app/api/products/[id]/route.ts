@@ -17,6 +17,9 @@ export const GET = async (req: NextRequest, { params }: IParams) => {
       where: {
         id: productId,
       },
+      include: {
+        reviews: true,
+      },
     });
 
     if (!product) {
