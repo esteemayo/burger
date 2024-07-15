@@ -262,6 +262,12 @@
                   a:visited {
                     font-size: 100%;
                     color: $clr-gray-dark;
+                    transition: all 0.3s;
+
+                    &:hover {
+                      text-decoration: underline;
+                      text-underline-offset: 0.5rem;
+                    }
                   }
                 }
               }
