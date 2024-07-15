@@ -22,7 +22,14 @@ export const POST = async (req: NextRequest, { params }: IParams) => {
         if (!body.productId) body.productId = productId;
 
         const review = await prisma.review.create({
-          data: { ...body },
+          data: {
+            ...body,
+            productId: {
+              connect: {
+                productId,
+              },
+            },
+          },
         });
 
         await prisma.product.update({
