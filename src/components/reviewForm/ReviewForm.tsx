@@ -6,11 +6,11 @@ import { useMutation, useQueryClient } from '@tanstack/react-query';
 import StarRating from '../starRating/StarRating';
 import ErrorMessage from '../errorMessage/ErrorMessage';
 
+import { createReview } from '@/services/reviewService';
 import { ReviewData, ReviewErrors } from '@/types';
 import { validateReviewInputs } from '@/validations/review';
 
 import './ReviewForm.scss';
-import { createReviewOnProduct } from '@/services/productService';
 
 const initialState: ReviewData = {
   desc: '',
@@ -41,7 +41,7 @@ const ReviewForm = ({ productId }: ReviewFormProps) => {
       data: object;
       productId: string;
     }) => {
-      const res = await createReviewOnProduct(data, productId);
+      const res = await createReview(data, productId);
       return res.data;
     },
     onSuccess() {
