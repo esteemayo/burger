@@ -43,6 +43,10 @@ const Reviews = ({ actionId }: ReviewsProps) => {
     return isOpen ? 'collapse show' : 'collapse';
   }, [isOpen]);
 
+  const respondClasses = useMemo(() => {
+    return !!session ? 'respond' : 'respond hide';
+  }, [session]);
+
   const reviewLabel = useMemo(() => {
     return reviews.length > 0
       ? 'Add a review'
@@ -87,7 +91,7 @@ const Reviews = ({ actionId }: ReviewsProps) => {
             )}
             <div className='reviewFormWrap'>
               <div className='reviewForm'>
-                <div className='respond'>
+                <div className={respondClasses}>
                   <span className='replyTitle'>{reviewLabel}</span>
                   {!!session ? (
                     <ReviewForm productId={actionId} />
