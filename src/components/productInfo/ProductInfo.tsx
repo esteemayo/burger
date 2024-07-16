@@ -18,6 +18,13 @@ const ProductInfo = ({ product, currentUser, onUpdate }: ProductInfoProps) => {
   const { btnLabel, inCart } = useCartControls(product);
   const { quantity, handleChange, handleClick } = useCart(product);
 
+  const ratings = useMemo(() => {
+    return (
+      !isNaN(product.ratingsAverage / product.ratingsQuantity) &&
+      product.ratingsAverage / product.ratingsQuantity
+    );
+  }, [product]);
+
   const reviewLabel = useMemo(() => {
     return product.ratingsQuantity === 0 || product.ratingsQuantity > 1
       ? `${product.ratingsQuantity} reviews`
@@ -34,7 +41,7 @@ const ProductInfo = ({ product, currentUser, onUpdate }: ProductInfoProps) => {
             <div className='starRating'>
               <StarRating
                 name='read-only'
-                value={product.ratingsAverage}
+                value={ratings}
                 readOnly
               />
             </div>

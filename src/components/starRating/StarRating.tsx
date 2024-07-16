@@ -9,6 +9,7 @@ const StarRating = ({ name, value, ...rest }: StarRatingProps) => {
       {...rest}
       name={name}
       value={value}
+      precision={0.5}
       emptyIcon={
         <StarIcon
           style={{ fill: '#00000059', opacity: 0.55 }}
