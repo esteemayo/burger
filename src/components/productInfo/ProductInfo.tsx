@@ -39,11 +39,7 @@ const ProductInfo = ({ product, currentUser, onUpdate }: ProductInfoProps) => {
         <div className='wrapper'>
           <div className='reviewWrap'>
             <div className='starRating'>
-              <StarRating
-                name='read-only'
-                value={ratings}
-                readOnly
-              />
+              <StarRating name='read-only' value={+ratings} readOnly />
             </div>
             <span className='totalReview'>{reviewLabel}</span>
           </div>
