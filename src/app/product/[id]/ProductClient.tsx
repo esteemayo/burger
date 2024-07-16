@@ -28,9 +28,11 @@ const ProductClient = ({ productId }: ProductClientProps) => {
   });
 
   const [product, setProduct] = useState<SingleProductType | null>(null);
+  const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
     setProduct(data);
+    setReviews(data.reviews);
   }, [data]);
 
   if (!product) {
@@ -51,7 +53,7 @@ const ProductClient = ({ productId }: ProductClientProps) => {
         currentUser={session?.user}
         onUpdate={setProduct}
       />
-      <ProductReview actionId={product.id} />
+      <ProductReview actionId={product.id} reviews={reviews} />
       <RelatedProducts
         productId={product.id}
         ingredients={product.ingredients}

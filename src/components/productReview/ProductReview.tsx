@@ -11,9 +11,10 @@ import './ProductReview.scss';
 
 interface ProductReviewProps {
   actionId: string;
+  reviews: object[];
 }
 
-const ProductReview = ({ actionId }: ProductReviewProps) => {
+const ProductReview = ({ actionId, reviews }: ProductReviewProps) => {
   const products = useCartStore((store) => store.products);
 
   const productClasses = useMemo(() => {
@@ -23,7 +24,7 @@ const ProductReview = ({ actionId }: ProductReviewProps) => {
   return (
     <section className='productReview'>
       <div className={productClasses}>
-        <Reviews actionId={actionId} />
+        <Reviews actionId={actionId} reviews={reviews} />
         <Cart />
       </div>
     </section>

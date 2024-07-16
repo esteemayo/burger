@@ -5,14 +5,14 @@ import StarRating from '../starRating/StarRating';
 
 import './Review.scss';
 
-const Review = ({ desc, rating, user }: ReviewProps) => {
+const Review = ({ desc, rating, userId }: ReviewProps) => {
   return (
     <article className='review'>
       <div className='reviewCard'>
         <div className='reviewWrapper'>
           <div className='reviewImg'>
             <Image
-              src={user.image ?? '/svg/male-avatar.svg'}
+              src={'/svg/male-avatar.svg'}
               width={87}
               height={87}
               alt='avatar'
@@ -25,7 +25,7 @@ const Review = ({ desc, rating, user }: ReviewProps) => {
           </div>
           <div className='reviewer'>
             <div className='reviewerWrap'>
-              <div className='reviewerName'>{user.name}</div>
+              <div className='reviewerName'>{userId}</div>
               <p className='reviewerText'>{desc}</p>
             </div>
           </div>
