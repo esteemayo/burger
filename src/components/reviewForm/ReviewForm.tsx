@@ -43,7 +43,7 @@ const ReviewForm = ({ productId }: ReviewFormProps) => {
       productId: string;
     }) => {
       const res = await createReviewOnProduct(data, productId);
-      console.log(res.data)
+      console.log(res.data);
       return res.data;
     },
     onSuccess() {
@@ -88,14 +88,15 @@ const ReviewForm = ({ productId }: ReviewFormProps) => {
     (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
 
-      const errors = validateReviewInputs(inputs, rating);
-      if (Object.keys(errors).length > 0) return setErrors(errors);
+      // const errors = validateReviewInputs(inputs, rating);
+      // if (Object.keys(errors).length > 0) return setErrors(errors);
 
-      setErrors(initialErrorState);
+      // setErrors(initialErrorState);
 
       const data = {
         rating,
-        ...inputs,
+        desc: inputs.desc,
+        consent: inputs.consent,
       };
 
       mutate({ data, productId });
