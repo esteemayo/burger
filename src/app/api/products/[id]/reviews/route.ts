@@ -36,7 +36,9 @@ export const POST = async (req: NextRequest, { params }: IParams) => {
             id: productId,
           },
           data: {
-            ratingsAverage: review.rating / 2,
+            ratingsAverage: {
+             increment: body.rating,
+            },
             ratingsQuantity: {
               increment: 1,
             },
