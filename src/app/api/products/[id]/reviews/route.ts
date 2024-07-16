@@ -23,26 +23,29 @@ export const POST = async (req: NextRequest, { params }: IParams) => {
         if (!body.userId) body.userId = session.user.id;
         if (!body.productId) body.productId = productId;
 
+        console.log(body)
+
         const review = await prisma.review.create({
           data: {
             ...body,
             productId: {
               connect: {
                 productId,
+                userId: session.user.id,
               },
             },
           },
         });
 
-        await prisma.product.update({
-          where: {
-            id: productId,
-          },
-          data: {
-            ratingsAverage: review.rating / 2,
-            ratingsQuantity: 1,
-          },
-        });
+        // await prisma.product.update({
+        //   where: {
+        //     id: productId,
+        //   },
+        //   data: {
+        //     ratingsAverage: review.rating / 2,
+        //     ratingsQuantity: 1,
+        //   },
+        // });
 
         return new NextResponse(JSON.stringify(review), { status: 201 });
       }
@@ -51,6 +54,7 @@ export const POST = async (req: NextRequest, { params }: IParams) => {
         { status: 403 }
       );
     } catch (err: unknown) {
+      console.log(err)
       return new NextResponse(
         JSON.stringify({ message: 'Something went wrong' }),
         { status: 500 }
