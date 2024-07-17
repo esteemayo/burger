@@ -14,46 +14,34 @@ export const GET = async (req: NextRequest, { params }: IParams) => {
   const { id: userId } = params;
   const session = await getAuthSession();
 
-  if (session) {
-    try {
-      if (session.user.isAdmin || session.user.id === userId) {
-        const user = await prisma.user.findUnique({
-          where: {
-            id: userId,
-          },
-        });
+  try {
+    const user = await prisma.user.findUnique({
+      where: {
+        id: userId,
+      },
+    });
 
-        if (!user) {
-          return new NextResponse(
-            JSON.stringify({
-              message: `No user found with the given ID → ${userId}`,
-            }),
-            { status: 404 }
-          );
-        }
-
-        const userObj = {
-          ...user,
-          password: undefined,
-        };
-
-        return new NextResponse(JSON.stringify(userObj), { status: 200 });
-      }
+    if (!user) {
       return new NextResponse(
-        JSON.stringify({ message: 'You are not authorized' }),
-        { status: 403 }
-      );
-    } catch (err: unknown) {
-      return new NextResponse(
-        JSON.stringify({ message: 'Something went wrong' }),
-        { status: 500 }
+        JSON.stringify({
+          message: `No user found with the given ID → ${userId}`,
+        }),
+        { status: 404 }
       );
     }
+
+    const userObj = {
+      ...user,
+      password: undefined,
+    };
+
+    return new NextResponse(JSON.stringify(userObj), { status: 200 });
+  } catch (err: unknown) {
+    return new NextResponse(
+      JSON.stringify({ message: 'Something went wrong' }),
+      { status: 500 }
+    );
   }
-  return new NextResponse(
-    JSON.stringify({ message: 'You are not authenticated' }),
-    { status: 401 }
-  );
 };
 
 export const PATCH = async (req: NextRequest, { params }: IParams) => {
