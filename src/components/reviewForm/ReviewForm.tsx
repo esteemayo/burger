@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 
@@ -100,6 +100,14 @@ const ReviewForm = ({ productId }: ReviewFormProps) => {
     },
     [handleClear, inputs, mutate, productId, rating]
   );
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setErrors(initialErrorState);
+    }, 5000);
+
+    return () => clearTimeout(timeout);
+  }, []);
 
   const { desc, consent } = inputs;
 
