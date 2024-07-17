@@ -10,7 +10,6 @@ import ReviewForm from '../reviewForm/ReviewForm';
 import Review from '../review/Review';
 import ReviewCardSkeleton from '../reviewCardSkeleton/ReviewCardSkeleton';
 
-// import { reviews } from '@/data';
 import { useCartStore } from '@/hooks/useCartStore';
 
 import './Reviews.scss';
