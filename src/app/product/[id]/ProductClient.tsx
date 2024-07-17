@@ -32,7 +32,7 @@ const ProductClient = ({ productId }: ProductClientProps) => {
 
   useEffect(() => {
     setProduct(data);
-    setReviews(data.reviews);
+    setReviews(data?.reviews);
   }, [data]);
 
   if (!product) {
