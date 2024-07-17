@@ -6,7 +6,6 @@ import { useMutation, useQueryClient } from '@tanstack/react-query';
 import StarRating from '../starRating/StarRating';
 import ErrorMessage from '../errorMessage/ErrorMessage';
 
-import { createReview } from '@/services/reviewService';
 import { ReviewData, ReviewErrors } from '@/types';
 import { validateReviewInputs } from '@/validations/review';
 import { createReviewOnProduct } from '@/services/productService';
@@ -15,15 +14,11 @@ import './ReviewForm.scss';
 
 const initialState: ReviewData = {
   desc: '',
-  name: '',
-  email: '',
   consent: false,
 };
 
 const initialErrorState: ReviewErrors = {
   desc: '',
-  name: '',
-  email: '',
   rating: '',
 };
 
@@ -88,15 +83,14 @@ const ReviewForm = ({ productId }: ReviewFormProps) => {
     (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
 
-      // const errors = validateReviewInputs(inputs, rating);
-      // if (Object.keys(errors).length > 0) return setErrors(errors);
+      const errors = validateReviewInputs(inputs, rating);
+      if (Object.keys(errors).length > 0) return setErrors(errors);
 
-      // setErrors(initialErrorState);
+      setErrors(initialErrorState);
 
       const data = {
         rating,
-        desc: inputs.desc,
-        consent: inputs.consent,
+        ...inputs,
       };
 
       mutate({ data, productId });
