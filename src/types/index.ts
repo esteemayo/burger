@@ -151,10 +151,8 @@ export type ReviewType = {
   id: number;
   desc: string;
   rating: number;
-  user: {
-    name: string;
-    image: string;
-  };
+  productId: string;
+  userId: string;
 }[];
 
 type ProfileLink = {
