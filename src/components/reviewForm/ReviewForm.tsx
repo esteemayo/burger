@@ -6,8 +6,8 @@ import { useMutation, useQueryClient } from '@tanstack/react-query';
 import StarRating from '../starRating/StarRating';
 import ErrorMessage from '../errorMessage/ErrorMessage';
 
-import { ReviewData, ReviewErrors } from '@/types';
 import { validateReviewInputs } from '@/validations/review';
+import { ReviewData, ReviewErrors } from '@/types';
 import { createReviewOnProduct } from '@/services/productService';
 
 import './ReviewForm.scss';
