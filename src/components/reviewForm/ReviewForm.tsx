@@ -140,30 +140,6 @@ const ReviewForm = ({ productId }: ReviewFormProps) => {
         />
         {errors['desc'] && <ErrorMessage message={errors['desc']!} />}
       </div>
-      {/* <div className='inputWrap'>
-        <div className='inputBox'>
-          <input
-            type='text'
-            name='name'
-            value={name}
-            placeholder='Name'
-            className='formControl'
-            onChange={handleChange}
-          />
-          {errors['name'] && <ErrorMessage message={errors['name']!} />}
-        </div>
-        <div className='inputBox'>
-          <input
-            type='email'
-            name='email'
-            value={email}
-            placeholder='Email address'
-            className='formControl'
-            onChange={handleChange}
-          />
-          {errors['email'] && <ErrorMessage message={errors['email']!} />}
-        </div>
-      </div> */}
       <div className='consent'>
         <p>
           Save my name, email, and website in this browser for the next time I
