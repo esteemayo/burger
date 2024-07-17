@@ -10,14 +10,10 @@ import ReviewForm from '../reviewForm/ReviewForm';
 import Review from '../review/Review';
 import ReviewCardSkeleton from '../reviewCardSkeleton/ReviewCardSkeleton';
 
+import { ReviewsProps } from '@/types';
 import { useCartStore } from '@/hooks/useCartStore';
 
 import './Reviews.scss';
-
-interface ReviewsProps {
-  actionId: string;
-  reviews: object[];
-}
 
 const Reviews = ({ actionId, reviews }: ReviewsProps) => {
   const { data: session } = useSession();
