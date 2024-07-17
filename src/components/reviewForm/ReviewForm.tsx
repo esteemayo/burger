@@ -1,6 +1,7 @@
 'use client';
 
 import { useCallback, useState } from 'react';
+import { toast } from 'react-toastify';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 
 import StarRating from '../starRating/StarRating';
@@ -95,6 +96,7 @@ const ReviewForm = ({ productId }: ReviewFormProps) => {
 
       mutate({ data, productId });
       handleClear();
+      toast.success('Review added successfully!');
     },
     [handleClear, inputs, mutate, productId, rating]
   );
