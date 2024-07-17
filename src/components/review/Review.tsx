@@ -25,12 +25,13 @@ const Review = ({ desc, rating, userId }: ReviewProps) => {
     if (user?.image) {
       return user.image;
     } else {
-      if (user?.gender === 'FEMALE') {
+      if (user?.gender === 'MALE') {
+        return '/svg/male-avatar.svg';
+      } else if (user?.gender === 'FEMALE') {
         return '/svg/female-avatar.svg';
       } else {
-        return '/svg/male-avatar.svg';
+        return '/img/default.png';
       }
-      return '/img/default.png';
     }
   }, [user]);
 
