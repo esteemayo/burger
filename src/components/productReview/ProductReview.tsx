@@ -19,7 +19,7 @@ const ProductReview = ({ actionId }: ProductReviewProps) => {
   const fetchReviews = useCallback(async () => {
     try {
       const { data } = await getReviewsOnProduct(actionId);
-      console.log(data);
+      setReviews(data);
     } catch (err: unknown) {
       console.log(err);
     }
