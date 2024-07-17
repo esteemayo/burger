@@ -406,6 +406,11 @@ export interface ProductInfoProps {
   onUpdate: React.Dispatch<React.SetStateAction< SingleProductType | null>>;
 }
 
+export interface ProductReviewProps {
+  actionId: string;
+  reviews: ReviewType;
+}
+
 export interface ReviewsProps {
   actionId: string;
   reviews: ReviewType;

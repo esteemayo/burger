@@ -5,14 +5,10 @@ import { useMemo } from 'react';
 import Cart from '../cart/Cart';
 import Reviews from '../reviews/Reviews';
 
+import { ProductReviewProps } from '@/types';
 import { useCartStore } from '@/hooks/useCartStore';
 
 import './ProductReview.scss';
-
-interface ProductReviewProps {
-  actionId: string;
-  reviews: object[];
-}
 
 const ProductReview = ({ actionId, reviews }: ProductReviewProps) => {
   const products = useCartStore((store) => store.products);
