@@ -9,6 +9,28 @@ interface IParams {
   };
 }
 
+export const GET = async (req: NextRequest, { params }: IParams) => {
+  const { id: productId } = params;
+
+  try {
+    const reviews = await prisma.review.findMany({
+      where: {
+        productId,
+      },
+      orderBy: {
+        createdAt: 'desc',
+      },
+    });
+
+    return new NextResponse(JSON.stringify(reviews), { status: 200 });
+  } catch (err: unknown) {
+    return new NextResponse(
+      JSON.stringify({ message: 'Something went wrong' }),
+      { status: 500 }
+    );
+  }
+};
+
 export const POST = async (req: NextRequest, { params }: IParams) => {
   const { id: productId } = params;
   const session = await getAuthSession();
