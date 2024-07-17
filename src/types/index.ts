@@ -574,15 +574,11 @@ export interface AddressErrors {
 
 export interface ReviewData {
   desc: string;
-  name: string;
-  email: string;
   consent?: boolean;
 }
 
 export interface ReviewErrors {
   desc?: string;
-  name?: string;
-  email?: string;
   rating?: string;
 }
 
