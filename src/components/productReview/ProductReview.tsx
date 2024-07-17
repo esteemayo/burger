@@ -14,14 +14,19 @@ import './ProductReview.scss';
 const ProductReview = ({ actionId }: ProductReviewProps) => {
   const products = useCartStore((store) => store.products);
 
+  const [isLoading, setIsLoading] = useState(false);
   const [reviews, setReviews] = useState<ReviewType>([]);
 
   const fetchReviews = useCallback(async () => {
+    setIsLoading(true);
+
     try {
       const { data } = await getReviewsOnProduct(actionId);
       setReviews(data);
     } catch (err: unknown) {
       console.log(err);
+    } finally {
+      setIsLoading(false);
     }
   }, []);
 
