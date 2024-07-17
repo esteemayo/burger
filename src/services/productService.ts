@@ -15,6 +15,9 @@ export const searchProducts = (searchQuery: string, page: number) =>
 export const getRelatedProducts = (ingredients: string[] | undefined) =>
   http.get(`/api/products/ingredients?ingredients=${ingredients}`);
 
+export const getReviewsOnProduct = (productId: string) =>
+  http.get(`/api/products/${productId}/reviews`);
+
 export const getProductClient = (productId: string) =>
   http.get(`/api/products/${productId}`);
 
