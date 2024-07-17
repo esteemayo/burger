@@ -99,7 +99,7 @@ const ReviewForm = ({ productId }: ReviewFormProps) => {
     [handleClear, inputs, mutate, productId, rating]
   );
 
-  const { desc, name, email, consent } = inputs;
+  const { desc, consent } = inputs;
 
   return (
     <form className='formReview' onSubmit={handleSubmit}>
@@ -130,7 +130,7 @@ const ReviewForm = ({ productId }: ReviewFormProps) => {
         />
         {errors['desc'] && <ErrorMessage message={errors['desc']!} />}
       </div>
-      <div className='inputWrap'>
+      {/* <div className='inputWrap'>
         <div className='inputBox'>
           <input
             type='text'
@@ -153,7 +153,7 @@ const ReviewForm = ({ productId }: ReviewFormProps) => {
           />
           {errors['email'] && <ErrorMessage message={errors['email']!} />}
         </div>
-      </div>
+      </div> */}
       <div className='consent'>
         <p>
           Save my name, email, and website in this browser for the next time I
