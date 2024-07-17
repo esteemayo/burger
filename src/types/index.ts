@@ -410,10 +410,7 @@ export interface ReviewProps {
   id: number;
   desc: string;
   rating: number;
-  user: {
-    name: string;
-    image: string;
-  };
+  userId: string;
 }
 
 export interface RelatedProductProps {
