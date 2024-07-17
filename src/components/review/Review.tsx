@@ -1,5 +1,6 @@
 'use client';
 
+import { useMemo } from 'react';
 import Image from 'next/image';
 import { useQuery } from '@tanstack/react-query';
 
@@ -20,13 +21,26 @@ const Review = ({ desc, rating, userId }: ReviewProps) => {
     enabled: !!userId,
   });
 
+  const reviewerImage = useMemo(() => {
+    if (user?.image) {
+      return user.image;
+    } else {
+      if (user.gender === 'FEMALE') {
+        return '/svg/female-avatar.svg';
+      } else {
+        return '/svg/male-avatar.svg';
+      }
+      return '/img/default.png';
+    }
+  }, [user]);
+
   return (
     <article className='review'>
       <div className='reviewCard'>
         <div className='reviewWrapper'>
           <div className='reviewImg'>
             <Image
-              src={user?.image ?? '/svg/male-avatar.svg'}
+              src={reviewerImage}
               width={87}
               height={87}
               alt='avatar'
