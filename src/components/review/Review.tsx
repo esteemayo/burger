@@ -25,7 +25,7 @@ const Review = ({ desc, rating, userId }: ReviewProps) => {
     if (user?.image) {
       return user.image;
     } else {
-      if (user.gender === 'FEMALE') {
+      if (user?.gender === 'FEMALE') {
         return '/svg/female-avatar.svg';
       } else {
         return '/svg/male-avatar.svg';
