@@ -82,8 +82,8 @@ const Reviews = ({ actionId, reviews }: ReviewsProps) => {
             ) : (
               <div className={toggleClasses}>
                 {isLoading
-                  ? reviews.map((item) => {
-                      return <ReviewCardSkeleton key={item.id} />;
+                  ? Array.from(Array(2)).map((_, index) => {
+                      return <ReviewCardSkeleton key={index} />;
                     })
                   : reviews.map((review) => {
                       return <Review key={review.id} {...review} />;
