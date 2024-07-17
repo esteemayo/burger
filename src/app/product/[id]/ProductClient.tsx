@@ -53,7 +53,7 @@ const ProductClient = ({ productId }: ProductClientProps) => {
         currentUser={session?.user}
         onUpdate={setProduct}
       />
-      <ProductReview actionId={product.id} reviews={reviews} />
+      <ProductReview actionId={product.id} />
       <RelatedProducts
         productId={product.id}
         ingredients={product.ingredients}
