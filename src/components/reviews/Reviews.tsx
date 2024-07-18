@@ -21,7 +21,6 @@ const Reviews = ({ actionId, loading, reviews }: ReviewsProps) => {
   const products = useCartStore((store) => store.products);
 
   const [isOpen, setIsOpen] = useState(true);
-  const [isLoading, setIsLoading] = useState(true);
 
   const toggleOpen = useCallback((_e: React.MouseEvent<HTMLSpanElement>) => {
     setIsOpen((value) => !value);
@@ -49,12 +48,6 @@ const Reviews = ({ actionId, loading, reviews }: ReviewsProps) => {
       : 'Be the first to review “Double Grilled Chicken Burger”';
   }, []);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 5000);
-  }, []);
-
   return (
     <div className={reviewsContainer}>
       <div className='reviewBox'>
@@ -76,7 +69,7 @@ const Reviews = ({ actionId, loading, reviews }: ReviewsProps) => {
               </div>
             ) : (
               <div className={toggleClasses}>
-                {isLoading
+                {loading
                   ? Array.from(Array(2)).map((_, index) => {
                       return <ReviewCardSkeleton key={index} />;
                     })
