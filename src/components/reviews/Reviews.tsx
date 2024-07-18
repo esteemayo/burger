@@ -15,7 +15,7 @@ import { useCartStore } from '@/hooks/useCartStore';
 
 import './Reviews.scss';
 
-const Reviews = ({ actionId, reviews }: ReviewsProps) => {
+const Reviews = ({ actionId, loading, reviews }: ReviewsProps) => {
   const { data: session } = useSession();
 
   const products = useCartStore((store) => store.products);
