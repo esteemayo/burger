@@ -4,9 +4,10 @@ import { useSession } from 'next-auth/react';
 import { useEffect, useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 
-import ProductReview from '@/components/productReview/ProductReview';
 import Hero from '@/components/hero/Hero';
 import ProductInfo from '@/components/productInfo/ProductInfo';
+
+import ProductReview from '@/components/productReview/ProductReview';
 import EmptyState from '@/components/emptyState/EmptyState';
 import RelatedProducts from '@/components/relatedProducts/RelatedProducts';
 
