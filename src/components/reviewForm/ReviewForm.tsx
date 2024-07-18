@@ -40,7 +40,6 @@ const ReviewForm = ({ productId, onAction }: ReviewFormProps) => {
       productId: string;
     }) => {
       const res = await createReviewOnProduct(data, productId);
-      console.log(res.data);
       return res.data;
     },
     onSuccess() {
@@ -96,6 +95,7 @@ const ReviewForm = ({ productId, onAction }: ReviewFormProps) => {
       };
 
       mutate({ data, productId });
+      onAction();
       handleClear();
       toast.success('Review added successfully!');
     },
