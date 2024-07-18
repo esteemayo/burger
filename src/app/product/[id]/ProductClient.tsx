@@ -23,6 +23,7 @@ const ProductClient = ({ productId }: ProductClientProps) => {
     queryKey: ['product'],
     queryFn: async () => {
       const { data } = await getProductClient(productId);
+      setProduct(data);
       return data;
     },
     enabled: !!productId,
