@@ -5,11 +5,15 @@ import { useCallback, useEffect, useMemo, useState } from 'react';
 import Cart from '../cart/Cart';
 import Reviews from '../reviews/Reviews';
 
-import { ProductReviewProps, ReviewType } from '@/types';
 import { useCartStore } from '@/hooks/useCartStore';
+import { ReviewType } from '@/types';
 import { getReviewsOnProduct } from '@/services/productService';
 
 import './ProductReview.scss';
+
+export interface ProductReviewProps {
+  actionId: string;
+}
 
 const ProductReview = ({ actionId }: ProductReviewProps) => {
   const products = useCartStore((store) => store.products);
