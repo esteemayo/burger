@@ -11,7 +11,7 @@ import EmptyState from '@/components/emptyState/EmptyState';
 import RelatedProducts from '@/components/relatedProducts/RelatedProducts';
 
 import { getProductClient } from '@/services/productService';
-import { ProductClientProps, ReviewType, SingleProductType } from '@/types';
+import { ProductClientProps, SingleProductType } from '@/types';
 
 import './Product.scss';
 
@@ -27,12 +27,10 @@ const ProductClient = ({ productId }: ProductClientProps) => {
     enabled: !!productId,
   });
 
-  const [reviews, setReviews] = useState<ReviewType>([]);
   const [product, setProduct] = useState<SingleProductType | null>(null);
 
   useEffect(() => {
     setProduct(data);
-    setReviews(data?.reviews);
   }, [data]);
 
   if (!product) {
