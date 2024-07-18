@@ -28,7 +28,7 @@ const ProductClient = ({ productId }: ProductClientProps) => {
     enabled: !!productId,
   });
 
-  const [product, setProduct] = useState<SingleProductType | object>({});
+  const [product, setProduct] = useState<SingleProductType>({});
 
   useEffect(() => {
     setProduct(data);
