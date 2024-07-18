@@ -19,21 +19,28 @@ import './Product.scss';
 const ProductClient = ({ productId }: ProductClientProps) => {
   const { data: session } = useSession();
 
-  const { data } = useQuery({
+  const { isLoading, data } = useQuery({
     queryKey: ['product'],
     queryFn: async () => {
       const { data } = await getProductClient(productId);
-      setProduct(data);
       return data;
     },
     enabled: !!productId,
   });
 
-  const [product, setProduct] = useState<SingleProductType>({});
+  const [product, setProduct] = useState<SingleProductType | null>(null);
 
   useEffect(() => {
     setProduct(data);
   }, [data]);
+
+  if (isLoading) {
+    return (
+      <div>
+        <span>Loading ...</span>
+      </div>
+    );
+  }
 
   if (!product) {
     return (
