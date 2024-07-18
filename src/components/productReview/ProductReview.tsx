@@ -1,6 +1,7 @@
 'use client';
 
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useMemo } from 'react';
+import { useQuery } from '@tanstack/react-query';
 
 import Cart from '../cart/Cart';
 import Reviews from '../reviews/Reviews';
@@ -16,31 +17,20 @@ export interface ProductReviewProps {
 }
 
 const ProductReview = ({ actionId }: ProductReviewProps) => {
-  const products = useCartStore((store) => store.products);
-
-  const [isLoading, setIsLoading] = useState(false);
-  const [reviews, setReviews] = useState<ReviewType>([]);
-
-  const fetchReviews = useCallback(async () => {
-    setIsLoading(true);
-
-    try {
+  const { isLoading, data: reviews } = useQuery({
+    queryKey: ['reviews'],
+    queryFn: async () => {
       const { data } = await getReviewsOnProduct(actionId);
-      setReviews(data);
-    } catch (err: unknown) {
-      console.log(err);
-    } finally {
-      setIsLoading(false);
-    }
-  }, []);
+      return data;
+    },
+    enabled: !!actionId,
+  });
+
+  const products = useCartStore((store) => store.products);
 
   const productClasses = useMemo(() => {
     return products.length < 1 ? 'container emptyContainer' : 'container';
   }, [products.length]);
-
-  useEffect(() => {
-    fetchReviews();
-  }, [fetchReviews]);
 
   return (
     <section className='productReview'>
@@ -49,7 +39,6 @@ const ProductReview = ({ actionId }: ProductReviewProps) => {
           actionId={actionId}
           loading={isLoading}
           reviews={reviews}
-          onAction={fetchReviews}
         />
         <Cart />
       </div>

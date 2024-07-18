@@ -15,7 +15,7 @@ import { useCartStore } from '@/hooks/useCartStore';
 
 import './Reviews.scss';
 
-const Reviews = ({ actionId, loading, reviews, onAction }: ReviewsProps) => {
+const Reviews = ({ actionId, loading, reviews }: ReviewsProps) => {
   const { data: session } = useSession();
 
   const products = useCartStore((store) => store.products);
@@ -43,7 +43,7 @@ const Reviews = ({ actionId, loading, reviews, onAction }: ReviewsProps) => {
   }, [session]);
 
   const reviewLabel = useMemo(() => {
-    return reviews.length > 0
+    return reviews?.length > 0
       ? 'Add a review'
       : 'Be the first to review “Double Grilled Chicken Burger”';
   }, []);
@@ -53,8 +53,8 @@ const Reviews = ({ actionId, loading, reviews, onAction }: ReviewsProps) => {
       <div className='reviewBox'>
         <ul className='listWrap'>
           <li className='listItem active'>
-            Reviews ({reviews.length})
-            {reviews.length > 0 && (
+            Reviews ({reviews?.length})
+            {reviews?.length > 0 && (
               <span className='toggleIcon' onClick={toggleOpen}>
                 {isOpen ? <ExpandLessIcon /> : <ExpandMoreIcon />}
               </span>
@@ -63,7 +63,7 @@ const Reviews = ({ actionId, loading, reviews, onAction }: ReviewsProps) => {
         </ul>
         <div className={reviewClasses}>
           <div className='reviewContainer'>
-            {reviews.length < 1 ? (
+            {reviews?.length < 1 ? (
               <div className='allReviews'>
                 <p>There are no reviews yet.</p>
               </div>
@@ -73,7 +73,7 @@ const Reviews = ({ actionId, loading, reviews, onAction }: ReviewsProps) => {
                   ? Array.from(Array(2)).map((_, index) => {
                       return <ReviewCardSkeleton key={index} />;
                     })
-                  : reviews.map((review) => {
+                  : reviews?.map((review) => {
                       return <Review key={review.id} {...review} />;
                     })}
               </div>
@@ -83,7 +83,7 @@ const Reviews = ({ actionId, loading, reviews, onAction }: ReviewsProps) => {
                 <div className={respondClasses}>
                   <span className='replyTitle'>{reviewLabel}</span>
                   {!!session ? (
-                    <ReviewForm productId={actionId} onAction={onAction} />
+                    <ReviewForm productId={actionId} />
                   ) : (
                     <div className='reviewAuth'>
                       <span>

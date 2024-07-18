@@ -25,10 +25,9 @@ const initialErrorState: ReviewErrors = {
 
 interface ReviewFormProps {
   productId: string;
-  onAction(): void;
 }
 
-const ReviewForm = ({ productId, onAction }: ReviewFormProps) => {
+const ReviewForm = ({ productId }: ReviewFormProps) => {
   const queryClient = useQueryClient();
 
   const { mutate } = useMutation({
@@ -95,7 +94,6 @@ const ReviewForm = ({ productId, onAction }: ReviewFormProps) => {
       };
 
       mutate({ data, productId });
-      onAction();
       handleClear();
       toast.success('Review added successfully!');
     },
