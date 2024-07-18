@@ -49,6 +49,7 @@ const ProductReview = ({ actionId }: ProductReviewProps) => {
           actionId={actionId}
           loading={isLoading}
           reviews={reviews}
+          onAction={fetchReviews}
         />
         <Cart />
       </div>
