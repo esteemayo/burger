@@ -7,7 +7,6 @@ import Cart from '../cart/Cart';
 import Reviews from '../reviews/Reviews';
 
 import { useCartStore } from '@/hooks/useCartStore';
-import { ReviewType } from '@/types';
 import { getReviewsOnProduct } from '@/services/productService';
 
 import './ProductReview.scss';
