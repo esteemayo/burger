@@ -410,7 +410,6 @@ export interface ReviewsProps {
   actionId: string;
   loading?: boolean;
   reviews: ReviewType;
-  onAction(): void;
 }
 
 export interface ReviewProps {
