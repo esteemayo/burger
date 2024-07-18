@@ -38,7 +38,7 @@ const Review = ({ desc, rating, userId }: ReviewProps) => {
   return (
     <article className='review'>
       <div className='reviewCard'>
-        <div className='reviewWrapper'>
+        <div className='reviewBox'>
           <div className='reviewImg'>
             <Image
               src={reviewerImage}
