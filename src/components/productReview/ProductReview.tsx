@@ -45,7 +45,11 @@ const ProductReview = ({ actionId }: ProductReviewProps) => {
   return (
     <section className='productReview'>
       <div className={productClasses}>
-        <Reviews actionId={actionId} loading={isLoading} reviews={reviews} />
+        <Reviews
+          actionId={actionId}
+          loading={isLoading}
+          reviews={reviews}
+        />
         <Cart />
       </div>
     </section>
