@@ -39,11 +39,29 @@ export const POST = async (req: NextRequest, { params }: IParams) => {
     try {
       const body = await req.json();
 
+      let review = await prisma.review.findUnique({
+        where: {
+          productId,
+          userId: session.user.id,
+        },
+      });
+
+      console.log(review);
+
+      if (review) {
+        return new NextResponse(
+          JSON.stringify({
+            message: 'You have already created a review for this product',
+          }),
+          { status: 403 }
+        );
+      }
+
       if (!session.user.isAdmin) {
         if (!body.userId) body.userId = session.user.id;
         if (!body.productId) body.productId = productId;
 
-        const review = await prisma.review.create({
+        review = await prisma.review.create({
           data: {
             ...body,
           },
