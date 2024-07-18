@@ -39,14 +39,18 @@ export const POST = async (req: NextRequest, { params }: IParams) => {
     try {
       const body = await req.json();
 
-      let review = await prisma.review.findUnique({
+      const review = await prisma.review.findFirst({
         where: {
-          productId,
-          userId: session.user.id,
+          AND: [
+            {
+              productId,
+            },
+            {
+              userId: session.user.id,
+            },
+          ],
         },
       });
-
-      console.log(review);
 
       if (review) {
         return new NextResponse(
@@ -61,7 +65,7 @@ export const POST = async (req: NextRequest, { params }: IParams) => {
         if (!body.userId) body.userId = session.user.id;
         if (!body.productId) body.productId = productId;
 
-        review = await prisma.review.create({
+        const newReview = await prisma.review.create({
           data: {
             ...body,
           },
@@ -81,7 +85,7 @@ export const POST = async (req: NextRequest, { params }: IParams) => {
           },
         });
 
-        return new NextResponse(JSON.stringify(review), { status: 201 });
+        return new NextResponse(JSON.stringify(newReview), { status: 201 });
       }
       return new NextResponse(
         JSON.stringify({ message: 'You are not authorized' }),
