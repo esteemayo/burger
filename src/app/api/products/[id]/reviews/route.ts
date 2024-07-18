@@ -38,16 +38,13 @@ export const POST = async (req: NextRequest, { params }: IParams) => {
   if (session) {
     try {
       const body = await req.json();
+      const userId = session.user.id;
 
       const review = await prisma.review.findFirst({
         where: {
           AND: [
-            {
-              productId,
-            },
-            {
-              userId: session.user.id,
-            },
+            { productId },
+            { userId },
           ],
         },
       });
@@ -62,7 +59,7 @@ export const POST = async (req: NextRequest, { params }: IParams) => {
       }
 
       if (!session.user.isAdmin) {
-        if (!body.userId) body.userId = session.user.id;
+        if (!body.userId) body.userId = userId;
         if (!body.productId) body.productId = productId;
 
         const newReview = await prisma.review.create({
