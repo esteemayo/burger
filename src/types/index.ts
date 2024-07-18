@@ -403,7 +403,7 @@ export interface HeroProps {
 export interface ProductInfoProps {
   product: SingleProductType | CartItem;
   currentUser: CurrentUserType | undefined;
-  onUpdate: React.Dispatch<React.SetStateAction< SingleProductType | null>>;
+  onUpdate: React.Dispatch<React.SetStateAction< SingleProductType | object>>;
 }
 
 export interface ReviewsProps {
@@ -665,7 +665,7 @@ export interface IFavorite {
     actionId: string,
     currentUser: CurrentUserType | undefined,
     likes: string[],
-    onUpdate: React.Dispatch<React.SetStateAction<SingleProductType | null>>
+    onUpdate: React.Dispatch<React.SetStateAction<SingleProductType | object>>
   ): {
     hasFavorited: boolean;
     toggleFavorite: (e: React.MouseEvent<HTMLButtonElement>) => Promise<void>;
@@ -676,7 +676,7 @@ export interface HeartButtonProps {
   actionId: string;
   likes: string[];
   currentUser: CurrentUserType | undefined;
-  onUpdate: React.Dispatch<React.SetStateAction<SingleProductType | null>>;
+  onUpdate: React.Dispatch<React.SetStateAction<SingleProductType | object>>;
 }
 
 export interface CheckoutProductsProps {
