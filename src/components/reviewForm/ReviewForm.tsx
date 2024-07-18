@@ -30,7 +30,7 @@ interface ReviewFormProps {
 const ReviewForm = ({ productId }: ReviewFormProps) => {
   const queryClient = useQueryClient();
 
-  const { mutate } = useMutation({
+  const { isError, mutate } = useMutation({
     mutationFn: async ({
       data,
       productId,
@@ -95,7 +95,12 @@ const ReviewForm = ({ productId }: ReviewFormProps) => {
 
       mutate({ data, productId });
       handleClear();
-      toast.success('Review added successfully!');
+
+      if (!isError) {
+        toast.success('Review added successfully!');
+      } else {
+        toast.error('You have already created a review for this product!');
+      }
     },
     [handleClear, inputs, mutate, productId, rating]
   );
