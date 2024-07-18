@@ -25,9 +25,10 @@ const initialErrorState: ReviewErrors = {
 
 interface ReviewFormProps {
   productId: string;
+  onAction(): void;
 }
 
-const ReviewForm = ({ productId }: ReviewFormProps) => {
+const ReviewForm = ({ productId, onAction }: ReviewFormProps) => {
   const queryClient = useQueryClient();
 
   const { mutate } = useMutation({

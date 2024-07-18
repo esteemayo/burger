@@ -15,7 +15,7 @@ import { useCartStore } from '@/hooks/useCartStore';
 
 import './Reviews.scss';
 
-const Reviews = ({ actionId, loading, reviews }: ReviewsProps) => {
+const Reviews = ({ actionId, loading, reviews, onAction }: ReviewsProps) => {
   const { data: session } = useSession();
 
   const products = useCartStore((store) => store.products);
@@ -83,7 +83,7 @@ const Reviews = ({ actionId, loading, reviews }: ReviewsProps) => {
                 <div className={respondClasses}>
                   <span className='replyTitle'>{reviewLabel}</span>
                   {!!session ? (
-                    <ReviewForm productId={actionId} />
+                    <ReviewForm productId={actionId} onAction={onAction} />
                   ) : (
                     <div className='reviewAuth'>
                       <span>
