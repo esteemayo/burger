@@ -66,6 +66,9 @@
             height: 8.7rem;
             display: inline-block;
             object-fit: cover;
+            padding: 0.5rem;
+            background-color: #f5f5f5;
+            border-radius: 50%;
 
             @include xl {
               width: 9.667rem;
