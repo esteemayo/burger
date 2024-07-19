@@ -118,7 +118,7 @@ const ReviewForm = ({ productId }: ReviewFormProps) => {
     }, 5000);
 
     return () => clearTimeout(timeout);
-  }, []);
+  }, [errors]);
 
   const { desc, consent } = inputs;
 
