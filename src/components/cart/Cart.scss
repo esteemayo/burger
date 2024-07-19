@@ -172,7 +172,7 @@
         overflow-y: scroll;
 
         &.hide {
-          height: 29rem;
+          height: max-content;
           overflow-y: hidden;
         }
 
