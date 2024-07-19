@@ -47,12 +47,8 @@
 
       .reviewBox {
         display: flex;
-        align-items: center;
-        gap: 2.8rem;
-
-        @media only screen and (max-width: 56.25em) {
-          gap: 2rem;
-        }
+        align-items: flex-start;
+        gap: 2rem;
 
         @include sm {
           gap: 1.5rem;
