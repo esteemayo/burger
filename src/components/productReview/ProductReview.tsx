@@ -7,14 +7,10 @@ import Cart from '../cart/Cart';
 import Reviews from '../reviews/Reviews';
 
 import { useCartStore } from '@/hooks/useCartStore';
+import { ProductReviewProps } from '@/types';
 import { getReviewsOnProduct } from '@/services/productService';
 
 import './ProductReview.scss';
-
-export interface ProductReviewProps {
-  actionId: string;
-  productReviews: object[];
-}
 
 const ProductReview = ({ actionId, productReviews }: ProductReviewProps) => {
   const { isLoading, data: reviews } = useQuery({
