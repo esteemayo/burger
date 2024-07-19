@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
+import { useSession } from 'next-auth/react';
 
 import StarRating from '../starRating/StarRating';
 import ErrorMessage from '../errorMessage/ErrorMessage';
@@ -29,6 +30,7 @@ interface ReviewFormProps {
 
 const ReviewForm = ({ productId }: ReviewFormProps) => {
   const queryClient = useQueryClient();
+  const { data: session } = useSession();
 
   const { isError, mutate } = useMutation({
     mutationFn: async ({
@@ -82,6 +84,11 @@ const ReviewForm = ({ productId }: ReviewFormProps) => {
   const handleSubmit = useCallback(
     (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
+
+      if (session?.user.isAdmin) {
+        toast.warn('You are not authorized!');
+        return;
+      }
 
       const errors = validateReviewInputs(inputs, rating);
       if (Object.keys(errors).length > 0) return setErrors(errors);
