@@ -171,6 +171,10 @@
         height: 35rem;
         overflow-y: scroll;
 
+        &.hide {
+          overflow-y: hidden;
+        }
+
         &::-webkit-scrollbar {
           width: 0.6rem;
         }
