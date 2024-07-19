@@ -406,10 +406,16 @@ export interface ProductInfoProps {
   onUpdate: React.Dispatch<React.SetStateAction<SingleProductType | null>>;
 }
 
+export interface ProductReviewProps {
+  actionId: string;
+  productReviews: ReviewType;
+}
+
 export interface ReviewsProps {
   actionId: string;
   loading?: boolean;
   reviews: ReviewType;
+  productReviews: ReviewType;
 }
 
 export interface ReviewProps {
