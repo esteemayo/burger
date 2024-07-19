@@ -45,6 +45,11 @@
     color: $clr-primary;
     overflow: hidden;
     cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      color: $clr-secondary;
+    }
 
     @include xl {
       font-size: 1.44445rem;
