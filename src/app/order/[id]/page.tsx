@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import OrderClient from './OrderClient';
 
 export const metadata: Metadata = {
-  title: 'Burger - Order page',
+  title: 'Burger | Order',
 };
 
 interface IParams {
