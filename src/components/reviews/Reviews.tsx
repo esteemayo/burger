@@ -1,10 +1,10 @@
 'use client';
 
-import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+import { useCallback, useMemo, useState } from 'react';
 import Link from 'next/link';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import { useSession } from 'next-auth/react';
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import ReviewForm from '../reviewForm/ReviewForm';
 import Review from '../review/Review';
