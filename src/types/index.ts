@@ -388,6 +388,7 @@ export type SingleProductType = {
   isFeatured: boolean;
   ratingsAverage: number;
   ratingsQuantity: number;
+  reviews: ReviewType;
   quantity: number;
 };
 
