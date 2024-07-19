@@ -100,7 +100,7 @@ model Product {
 
 model Review {
   id        String  @id @default(cuid())
-  rating    Int
+  rating    Decimal
   desc      String
   product   Product @relation(fields: [productId], references: [id])
   productId String  @map("product_id")
