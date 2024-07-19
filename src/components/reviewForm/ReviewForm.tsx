@@ -114,7 +114,7 @@ const ReviewForm = ({ productId }: ReviewFormProps) => {
 
   useEffect(() => {
     const timeout = setTimeout(() => {
-      setErrors(initialErrorState);
+      errors && setErrors(initialErrorState);
     }, 5000);
 
     return () => clearTimeout(timeout);
