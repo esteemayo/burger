@@ -28,8 +28,8 @@ const Cart = () => {
   }, [products.length]);
 
   const cardClasses = useMemo(() => {
-    return products.length <= 4 ? 'cardBody hide' : 'cardBody';
-  }, [products.length]);
+    return products.length <= 4 ? 'cardBody hide' : 'cardBody'
+  }, [products.length])
 
   return (
     <aside className={cartClasses}>
@@ -44,12 +44,12 @@ const Cart = () => {
               </div>
             </div>
           ) : (
-            <div className='cardBody'>
+            <div className={cardClasses}>
               {products.map((product) => {
                 const { id, name, price, quantity } = product;
                 return (
                   <div key={id} className='catProduct'>
-                    <div className={cardClasses}>
+                    <div className={'cardBox'}>
                       <div className='cardProductWrap'>
                         <div className='cardProduct'>
                           <div className='cardName'>
