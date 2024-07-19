@@ -15,7 +15,7 @@ import { useCartStore } from '@/hooks/useCartStore';
 
 import './Reviews.scss';
 
-const Reviews = ({ actionId, loading, reviews }: ReviewsProps) => {
+const Reviews = ({ actionId, loading, reviews, productReviews }: ReviewsProps) => {
   const { data: session } = useSession();
 
   const products = useCartStore((store) => store.products);
@@ -53,7 +53,7 @@ const Reviews = ({ actionId, loading, reviews }: ReviewsProps) => {
       <div className='reviewBox'>
         <ul className='listWrap'>
           <li className='listItem active'>
-            Reviews ({reviews?.length})
+            Reviews ({reviews?.length ?? productReviews?.length})
             {reviews?.length > 0 && (
               <span className='toggleIcon' onClick={toggleOpen}>
                 {isOpen ? <ExpandLessIcon /> : <ExpandMoreIcon />}

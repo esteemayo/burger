@@ -13,9 +13,10 @@ import './ProductReview.scss';
 
 export interface ProductReviewProps {
   actionId: string;
+  productReviews: object[];
 }
 
-const ProductReview = ({ actionId }: ProductReviewProps) => {
+const ProductReview = ({ actionId, productReviews }: ProductReviewProps) => {
   const { isLoading, data: reviews } = useQuery({
     queryKey: ['reviews'],
     queryFn: async () => {
@@ -38,6 +39,7 @@ const ProductReview = ({ actionId }: ProductReviewProps) => {
           actionId={actionId}
           loading={isLoading}
           reviews={reviews}
+          productReviews={productReviews}
         />
         <Cart />
       </div>
