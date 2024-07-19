@@ -4,6 +4,7 @@ import GoogleProvider from 'next-auth/providers/google';
 import { NextAuthOptions, User, getServerSession } from 'next-auth';
 import { PrismaAdapter } from '@next-auth/prisma-adapter';
 
+import { Gender } from '@/types';
 import { prisma } from './connect';
 
 declare module 'next-auth' {
@@ -15,6 +16,7 @@ declare module 'next-auth' {
       state: string;
       street: string;
       address: string;
+      gender: Gender;
       isAdmin: Boolean;
     };
   }
@@ -28,6 +30,7 @@ declare module 'next-auth/jwt' {
     state: string;
     street: string;
     address: string;
+    gender: Gender;
     isAdmin: Boolean;
   }
 }
@@ -88,6 +91,7 @@ export const authOptions: NextAuthOptions = {
         session.user.city = token.city;
         session.user.street = token.street;
         session.user.address = token.address;
+        session.user.gender = token.gender;
       }
 
       if (trigger === 'update') {
@@ -98,6 +102,7 @@ export const authOptions: NextAuthOptions = {
         session.user.city = newSession.city;
         session.user.street = newSession.street;
         session.user.address = newSession.address;
+        session.user.gender = newSession.gender;
       }
 
       return session;
@@ -116,6 +121,7 @@ export const authOptions: NextAuthOptions = {
       token.city = userInDb?.city!;
       token.street = userInDb?.street!;
       token.address = userInDb?.address!;
+      token.gender = userInDb?.gender!;
 
       if (trigger === 'update') {
         token.name = session.name;
@@ -125,6 +131,7 @@ export const authOptions: NextAuthOptions = {
         token.city = session.city;
         token.street = session.street;
         token.address = session.address;
+        token.gender = session.gender;
       }
 
       return token;
