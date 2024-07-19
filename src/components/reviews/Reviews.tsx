@@ -15,7 +15,12 @@ import { useCartStore } from '@/hooks/useCartStore';
 
 import './Reviews.scss';
 
-const Reviews = ({ actionId, loading, reviews, productReviews }: ReviewsProps) => {
+const Reviews = ({
+  actionId,
+  loading,
+  reviews,
+  productReviews,
+}: ReviewsProps) => {
   const { data: session } = useSession();
 
   const products = useCartStore((store) => store.products);
@@ -29,6 +34,10 @@ const Reviews = ({ actionId, loading, reviews, productReviews }: ReviewsProps) =
   const reviewsContainer = useMemo(() => {
     return products?.length < 1 ? 'reviews emptyReviews' : 'reviews';
   }, [products?.length]);
+
+  const totalReviews = useMemo(() => {
+    return reviews?.length ?? productReviews.length;
+  }, [productReviews, reviews]);
 
   const reviewClasses = useMemo(() => {
     return !isOpen ? 'reviewWrap hide' : 'reviewWrap';
@@ -53,7 +62,7 @@ const Reviews = ({ actionId, loading, reviews, productReviews }: ReviewsProps) =
       <div className='reviewBox'>
         <ul className='listWrap'>
           <li className='listItem active'>
-            Reviews ({reviews?.length ?? productReviews?.length})
+            Reviews ({totalReviews})
             {reviews?.length > 0 && (
               <span className='toggleIcon' onClick={toggleOpen}>
                 {isOpen ? <ExpandLessIcon /> : <ExpandMoreIcon />}
