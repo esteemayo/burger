@@ -26,9 +26,9 @@ const Review = ({ desc, rating, userId }: ReviewProps) => {
       return user.image;
     } else {
       if (user?.gender === 'MALE') {
-        return '/svg/male-avatar.svg';
+        return '/img/male.png';
       } else if (user?.gender === 'FEMALE') {
-        return '/svg/female-avatar.svg';
+        return '/img/female.png';
       } else {
         return '/img/default.png';
       }
@@ -41,12 +41,7 @@ const Review = ({ desc, rating, userId }: ReviewProps) => {
         <div className='reviewWrapper'>
           <div className='reviewBox'>
             <div className='reviewImg'>
-              <Image
-                src={reviewerImage}
-                width={87}
-                height={87}
-                alt='avatar'
-              />
+              <Image src={reviewerImage} width={87} height={87} alt='avatar' />
             </div>
             <div className='reviewer'>
               <div className='reviewerWrap'>
