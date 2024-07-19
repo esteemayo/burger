@@ -27,6 +27,10 @@ const Cart = () => {
     return products.length < 1 ? 'cardHeading emptyCardHeading' : 'cardHeading';
   }, [products.length]);
 
+  const cardClasses = useMemo(() => {
+    return products.length <= 4 ? 'cardBody hide' : 'cardBody';
+  }, [products.length]);
+
   return (
     <aside className={cartClasses}>
       <div className='detailBox'>
@@ -45,7 +49,7 @@ const Cart = () => {
                 const { id, name, price, quantity } = product;
                 return (
                   <div key={id} className='catProduct'>
-                    <div className='cardBox'>
+                    <div className={cardClasses}>
                       <div className='cardProductWrap'>
                         <div className='cardProduct'>
                           <div className='cardName'>
