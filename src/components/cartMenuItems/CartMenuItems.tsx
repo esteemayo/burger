@@ -1,4 +1,7 @@
+'use client';
+
 import Link from 'next/link';
+import { useMemo } from 'react';
 
 import CartMenuItem from '../cartMenuItem/CartMenuItem';
 
@@ -14,10 +17,14 @@ const CartMenuItems = ({
   onDecrement,
   onRemove,
 }: CartMenuItemsProps) => {
+  const cardClasses = useMemo(() => {
+    return products.length <= 3 ? 'cardProductBox noScroll' : 'cardProductBox';
+  }, [products.length]);
+
   return (
     <div className='cartMenuItems'>
       <div className='cardHeader'>Your cart</div>
-      <div className='cardProductBox'>
+      <div className={cardClasses}>
         {products.map((productItem) => {
           return (
             <CartMenuItem
