@@ -664,6 +664,7 @@ export type CurrentUserType = User & {
   state: string;
   street: string;
   address: string;
+  gender: Gender;
   isAdmin: Boolean;
 };
 
