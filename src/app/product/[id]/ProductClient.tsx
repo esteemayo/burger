@@ -4,6 +4,7 @@ import { useSession } from 'next-auth/react';
 import { useEffect, useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 
+import Loader from '@/components/loader/Loader';
 import Hero from '@/components/hero/Hero';
 import ProductInfo from '@/components/productInfo/ProductInfo';
 
@@ -35,11 +36,7 @@ const ProductClient = ({ productId }: ProductClientProps) => {
   }, [data]);
 
   if (isLoading) {
-    return (
-      <div>
-        <span>Loading ...</span>
-      </div>
-    );
+    return <Loader />;
   }
 
   if (!product) {
