@@ -2,7 +2,7 @@
 
 import { useSession } from 'next-auth/react';
 import Image from 'next/image';
-import { useCallback, useState } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 import { toast } from 'react-toastify';
 
 import Spinner from '../spinner/Spinner';
@@ -89,6 +89,20 @@ const AccountData = ({ currentUser }: AccountDataProps) => {
     validateAccountData
   );
 
+  const userAvatar = useMemo(() => {
+    if (currentUser?.image) {
+      return currentUser.image;
+    } else {
+      if (currentUser?.gender === 'MALE') {
+        return '/img/male.png';
+      } else if (currentUser?.gender === 'FEMALE') {
+        return '/img/female.png';
+      } else {
+        return '/img/default.png';
+      }
+    }
+  }, [currentUser]);
+
   const { name, email, phone, address } = data;
 
   return (
@@ -99,7 +113,7 @@ const AccountData = ({ currentUser }: AccountDataProps) => {
             src={
               file
                 ? URL.createObjectURL(file as Blob | MediaSource)
-                : `${currentUser?.image ?? '/img/avatar.png'}`
+                : userAvatar
             }
             width={50}
             height={50}
