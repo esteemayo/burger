@@ -21,7 +21,7 @@
       padding: 1.2rem 3rem;
     }
 
-    @include md {
+    @media only screen and (max-width: 50em) {
       flex-direction: column;
       gap: 7rem;
     }
