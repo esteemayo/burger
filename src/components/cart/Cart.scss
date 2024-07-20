@@ -10,7 +10,7 @@
   max-height: 47.292rem;
   height: max-content;
 
-  @include md {
+  @media only screen and (max-width: 50em) {
     padding: 0;
   }
 
