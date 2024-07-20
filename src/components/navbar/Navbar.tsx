@@ -42,6 +42,22 @@ const Navbar = () => {
     return isActive ? 'navbar active' : 'navbar';
   }, [isActive]);
 
+  const userAvatar = useMemo(() => {
+    const currentUser = session?.user;
+
+    if (currentUser?.image) {
+      return currentUser.image;
+    } else {
+      if (currentUser?.gender === 'MALE') {
+        return '/img/male.png';
+      } else if (currentUser?.gender === 'FEMALE') {
+        return '/img/female.png';
+      } else {
+        return '/img/default.png';
+      }
+    }
+  }, [session]);
+
   useEffect(() => {
     window.addEventListener('scroll', isActiveHandler);
     return () => window.removeEventListener('scroll', isActiveHandler);
@@ -59,7 +75,7 @@ const Navbar = () => {
           <div className='user'>
             {!!session ? (
               <Image
-                src={session.user.image ?? '/img/default.png'}
+                src={userAvatar}
                 width={30}
                 height={30}
                 alt='avatar'
