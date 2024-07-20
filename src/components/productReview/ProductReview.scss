@@ -43,7 +43,7 @@
     }
 
     &.emptyContainer {
-      @include md {
+      @media only screen and (max-width: 51.25em) {
         flex-direction: column;
         gap: 7rem;
         padding: 1.2rem;
