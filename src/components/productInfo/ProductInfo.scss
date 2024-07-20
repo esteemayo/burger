@@ -13,6 +13,10 @@
     flex-direction: column;
     justify-content: center;
 
+    @media only screen and (max-width: 81.25em) {
+      width: 105rem;
+    }
+
     @media only screen and (max-width: 56.25em) {
       width: 100rem;
     }
