@@ -12,7 +12,11 @@ import { getReviewsOnProduct } from '@/services/productService';
 
 import './ProductReview.scss';
 
-const ProductReview = ({ actionId, currentUser, productReviews }: ProductReviewProps) => {
+const ProductReview = ({
+  actionId,
+  currentUser,
+  productReviews,
+}: ProductReviewProps) => {
   const { isLoading, data: reviews } = useQuery({
     queryKey: ['reviews'],
     queryFn: async () => {
@@ -25,7 +29,9 @@ const ProductReview = ({ actionId, currentUser, productReviews }: ProductReviewP
   const products = useCartStore((store) => store.products);
 
   const productClasses = useMemo(() => {
-    return !currentUser || products.length < 1 ? 'container emptyContainer' : 'container';
+    return !currentUser || products.length < 1
+      ? 'container emptyContainer'
+      : 'container';
   }, [currentUser, products.length]);
 
   return (
