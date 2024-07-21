@@ -167,6 +167,10 @@
         position: absolute;
         top: -2.6rem;
         right: -1.6rem;
+        
+        @media only screen and (max-width: 21.5em) {
+          right: -1rem;
+        }
 
         .star {
           display: flex;
