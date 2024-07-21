@@ -55,6 +55,10 @@
           gap: 1.5rem;
         }
 
+        @media only screen and (max-width: 21.5em) {
+          gap: 1.2rem;
+        }
+
         @media only screen and (max-width: 18.75em) {
           gap: 1rem;
         }
