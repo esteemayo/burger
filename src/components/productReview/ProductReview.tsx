@@ -25,8 +25,8 @@ const ProductReview = ({ actionId, currentUser, productReviews }: ProductReviewP
   const products = useCartStore((store) => store.products);
 
   const productClasses = useMemo(() => {
-    return products.length < 1 ? 'container emptyContainer' : 'container';
-  }, [products.length]);
+    return !currentUser || products.length < 1 ? 'container emptyContainer' : 'container';
+  }, [currentUser, products.length]);
 
   return (
     <section className='productReview'>
