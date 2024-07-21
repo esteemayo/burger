@@ -34,6 +34,11 @@
       padding: 4rem 2rem;
     }
 
+    @media only screen and (max-width: 21.5em) {
+      padding-left: 1rem;
+      padding-bottom: 3rem;
+    }
+
     @media only screen and (max-width: 18.75em) {
       padding: 4rem 1.7rem;
     }
