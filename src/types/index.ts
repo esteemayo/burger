@@ -409,6 +409,7 @@ export interface ProductInfoProps {
 
 export interface ProductReviewProps {
   actionId: string;
+  currentUser: CurrentUserType;
   productReviews: ReviewType;
 }
 
