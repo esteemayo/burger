@@ -134,6 +134,10 @@
 
         &:hover {
           color: $clr-secondary;
+
+          & > svg {
+            stroke: $clr-secondary;
+          }
         }
 
         svg {
