@@ -2,7 +2,6 @@
 
 import { useCallback, useEffect, useState } from 'react';
 import {
-  LinkAuthenticationElement,
   PaymentElement,
   useStripe,
   useElements,
@@ -92,15 +91,14 @@ const CheckoutForm = () => {
 
   return (
     <form id='payment-form' onSubmit={handleSubmit}>
-      <LinkAuthenticationElement
-        id='link-authentication-element'
-        onChange={handleChange}
-      />
-      <PaymentElement id='payment-element' options={paymentElementOptions} />
-      <button id='submit' disabled={isLoading || !stripe || !elements}>
-        <span id='button-text'>Pay now</span>
+            <PaymentElement id="payment-element" options={paymentElementOptions} />
+      <button disabled={isLoading || !stripe || !elements} id="submit">
+        <span id="button-text">
+          {isLoading ? <div className="spinner" id="spinner"></div> : "Pay now"}
+        </span>
       </button>
-      {message && <div id='payment-message'>{message}</div>}
+      {/* Show any error or success messages */}
+      {message && <div id="payment-message">{message}</div>}
     </form>
   );
 };
