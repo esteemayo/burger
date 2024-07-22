@@ -58,9 +58,11 @@ const Payment = ({ params }: IParams) => {
   return (
     <div className='payment'>
       <div className='container'>
-        <Elements options={options} stripe={stripePromise}>
-          <CheckoutForm />
-        </Elements>
+        {clientSecret && (
+          <Elements options={options} stripe={stripePromise}>
+            <CheckoutForm />
+          </Elements>
+        )}
       </div>
     </div>
   );
