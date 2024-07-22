@@ -26,6 +26,11 @@ const CheckoutInfo = () => {
     async (e: React.MouseEvent<HTMLButtonElement>) => {
       e.stopPropagation();
 
+      if (!session) {
+        router.push('/login');
+        return;
+      }
+
       const newOrder = {
         price: totalPrice,
         products,
@@ -33,14 +38,9 @@ const CheckoutInfo = () => {
         userId: session?.user.id,
       };
 
-      if (!session) {
-        router.push('/login');
-        return;
-      }
-
       try {
         const { data } = await createOrder({ ...newOrder });
-        router.push(`/payment/${data.id}`);
+        router.push(`/payment/${data?.id}`);
       } catch (err: unknown) {
         console.log(err);
       }
