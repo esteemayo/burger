@@ -130,6 +130,11 @@
         padding-left: 0;
         padding-right: 0;
         background-color: transparent;
+        transition: all 0.3s;
+
+        &:hover {
+          color: $clr-secondary;
+        }
 
         svg {
           width: 3rem;
