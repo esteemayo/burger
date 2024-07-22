@@ -5,8 +5,8 @@ import Link from 'next/link';
 import { signOut } from 'next-auth/react';
 import Image from 'next/image';
 
+import { authLinks } from '@/data';
 import { UserMenuProps } from '@/types';
-import { authLinks, userLinks } from '@/data';
 
 import './UserMenu.scss';
 
