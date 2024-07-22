@@ -31,8 +31,6 @@ const Payment = ({ params }: IParams) => {
 
   const [clientSecret, setClientSecret] = useState('');
 
-  console.log(clientSecret);
-
   useEffect(() => {
     (async () => {
       try {
@@ -45,6 +43,8 @@ const Payment = ({ params }: IParams) => {
       }
     })();
   }, [orderId, reset]);
+
+  console.log(clientSecret);
 
   const appearance: Appearance = {
     theme: 'stripe',

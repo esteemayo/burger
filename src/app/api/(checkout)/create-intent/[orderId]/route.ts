@@ -1,10 +1,9 @@
-import Stripe from 'stripe';
 import { NextRequest, NextResponse } from 'next/server';
 
 import { prisma } from '@/utils/connect';
 import { getAuthSession } from '@/utils/auth';
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 interface IParams {
   params: {
