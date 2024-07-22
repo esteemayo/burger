@@ -13,7 +13,7 @@ export type AuthLinkType = {
   imgName: string;
 }[];
 
-export type UserLinkType = {
+export type SidebarMenuType = {
   id: number;
   url: string;
   icon: string;

@@ -19,9 +19,9 @@ import {
   ProfileMenu,
   RelatedProductType,
   ReviewType,
+  SidebarMenuType,
   SingleOrderType,
   Socials,
-  UserLinkType,
 } from '@/types';
 
 export const authLinks: AuthLinkType = [
@@ -43,7 +43,7 @@ export const authLinks: AuthLinkType = [
   },
 ];
 
-export const sidebarMenus: UserLinkType = [
+export const sidebarMenus: SidebarMenuType = [
   {
     id: 1,
     url: '/orders',
