@@ -53,7 +53,7 @@ export const userLinks: UserLinkType = [
   {
     id: 2,
     url: '/profile',
-    icon: 'user',
+    icon: 'user-menu',
     label: 'Account',
   },
 ];
