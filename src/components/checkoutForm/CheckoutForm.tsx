@@ -3,9 +3,9 @@
 import { useCallback, useEffect, useState } from 'react';
 import {
   LinkAuthenticationElement,
+  PaymentElement,
   useStripe,
   useElements,
-  PaymentElement,
 } from '@stripe/react-stripe-js';
 import {
   StripeLinkAuthenticationElementChangeEvent,
