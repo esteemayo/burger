@@ -154,6 +154,16 @@ export type RelatedProductType = {
   ingredients?: string[];
 }[];
 
+export type ReviewsType = {
+  id: number;
+  desc: string;
+  rating: number;
+  user: {
+    name: string;
+    image: string;
+  }
+}[];
+
 export type ReviewType = {
   id: number;
   desc: string;
