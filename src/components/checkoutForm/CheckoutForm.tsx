@@ -91,7 +91,7 @@ const CheckoutForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form id='payment-form' onSubmit={handleSubmit}>
       <LinkAuthenticationElement
         id='link-authentication-element'
         onChange={handleChange}
