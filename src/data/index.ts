@@ -47,7 +47,7 @@ export const userLinks: UserLinkType = [
   {
     id: 1,
     url: '/orders',
-    icon: 'shopping-cart',
+    icon: 'order-credit-card',
     label: 'Upcoming orders',
   },
   {
