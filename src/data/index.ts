@@ -43,7 +43,7 @@ export const authLinks: AuthLinkType = [
   },
 ];
 
-export const userLinks: UserLinkType = [
+export const sidebarMenus: UserLinkType = [
   {
     id: 1,
     url: '/orders',

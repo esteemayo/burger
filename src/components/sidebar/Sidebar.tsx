@@ -13,7 +13,7 @@ import { useSidebar } from '@/hooks/useSidebar';
 import { useCartStore } from '@/hooks/useCartStore';
 import { useCartControls } from '@/hooks/useCartControls';
 
-import { authLinks, userLinks } from '@/data';
+import { authLinks, sidebarMenus } from '@/data';
 
 import './Sidebar.scss';
 
@@ -76,8 +76,8 @@ const Sidebar = () => {
               <span>Products</span>
             </Link>
           </li>
-          {userLinks.map((link) => {
-            const { id, url, icon, label } = link;
+          {sidebarMenus.map((menu) => {
+            const { id, url, icon, label } = menu;
             return (
               <li key={id}>
                 <Link href={url}>
