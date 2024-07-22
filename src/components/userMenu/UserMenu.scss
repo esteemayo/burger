@@ -134,6 +134,12 @@
         svg {
           width: 3rem;
           height: 3rem;
+          stroke: $clr-primary;
+          transition: all 0.3s;
+
+          &:hover {
+            stroke: $clr-secondary;
+          }
 
           @include xl {
             width: 3.335rem;
