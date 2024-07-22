@@ -35,7 +35,7 @@ const Payment = ({ params }: IParams) => {
     (async () => {
       try {
         const { data } = await makePayment(orderId);
-        console.log(data.clientSecret);
+
         setClientSecret(data?.clientSecret);
         // reset();
       } catch (err: unknown) {
@@ -43,8 +43,6 @@ const Payment = ({ params }: IParams) => {
       }
     })();
   }, [orderId, reset]);
-
-  console.log(clientSecret);
 
   const appearance: Appearance = {
     theme: 'stripe',

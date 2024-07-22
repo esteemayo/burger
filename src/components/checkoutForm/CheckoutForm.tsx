@@ -1,15 +1,12 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import {
   PaymentElement,
   useStripe,
   useElements,
 } from '@stripe/react-stripe-js';
-import {
-  StripeLinkAuthenticationElementChangeEvent,
-  StripePaymentElementOptions,
-} from '@stripe/stripe-js';
+import { StripePaymentElementOptions } from '@stripe/stripe-js';
 
 const CheckoutForm = () => {
   const stripe = useStripe();
