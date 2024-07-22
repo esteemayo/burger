@@ -42,7 +42,7 @@ const UserMenu = ({ currentUser }: UserMenuProps) => {
       ) : (
         <div className='userController'>
           <div className='userLinks'>
-            <Link href='/orders'>
+            <Link href='/orders' className='userLink'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 fill='none'
@@ -59,7 +59,7 @@ const UserMenu = ({ currentUser }: UserMenuProps) => {
               </svg>
               <span className='userLabel'>Upcoming orders</span>
             </Link>
-            <Link href='/profile'>
+            <Link href='/profile' className='userLink'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 fill='none'

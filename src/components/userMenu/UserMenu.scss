@@ -122,9 +122,9 @@
         gap: 1rem;
       }
 
-      a,
-      a:link,
-      a:active {
+      .userLink,
+      .userLink:link,
+      .userLink:active {
         display: flex;
         flex-direction: column;
         padding-left: 0;
