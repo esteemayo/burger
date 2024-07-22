@@ -20,7 +20,7 @@ const Success = () => {
   return (
     <div className='success'>
       <div className='container'>
-        <SuccessClient />
+        <SuccessClient paymentIntent={payment_intent} />
       </div>
     </div>
   );

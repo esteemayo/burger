@@ -8,7 +8,11 @@ import SuccessDetails from '@/components/successDetails/SuccessDetails';
 
 import './Success.scss';
 
-const SuccessClient = () => {
+interface SuccessClientProps {
+  paymentIntent: string | null;
+}
+
+const SuccessClient = ({ paymentIntent }: SuccessClientProps) => {
   const [isExploding, setIsExploding] = useState(true);
   const [dimension, setDimension] = useState({
     width: window.innerWidth,
