@@ -12,7 +12,8 @@
     form {
       button {
         display: inline-block;
-        all: unset;
+        border: none;
+        outline: none;
         text-align: center;
         font-size: 1.35rem;
         width: 100%;
@@ -20,6 +21,7 @@
         background-color: $clr-primary;
         color: $clr-white;
         border-radius: 0.5rem;
+        margin-top: 1rem;
         cursor: pointer;
       }
     }
