@@ -18,7 +18,7 @@ import {
   OrderType,
   ProfileMenu,
   RelatedProductType,
-  ReviewType,
+  ReviewsType,
   SidebarMenuType,
   SingleOrderType,
   Socials,
@@ -528,7 +528,7 @@ export const relatedProducts: RelatedProductType = [
   },
 ];
 
-export const reviews: ReviewType = [
+export const reviews: ReviewsType = [
   {
     id: 1,
     desc: 'Looks so delicious...',
