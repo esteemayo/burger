@@ -125,6 +125,7 @@
         fill: currentColor;
         transform: scale(1);
         transition: all 0.3s;
+        backface-visibility: hidden;
       }
     }
 
