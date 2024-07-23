@@ -8,8 +8,6 @@ import RoomServiceIcon from '@mui/icons-material/RoomService';
 import { useSession } from 'next-auth/react';
 
 import { useSearch } from '@/hooks/useSearch';
-import { useSidebar } from '@/hooks/useSidebar';
-
 import { useLogout } from '@/hooks/useLogout';
 import { useCartControls } from '@/hooks/useCartControls';
 
