@@ -6,7 +6,7 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import SuccessInfo from '@/components/successInfo/SuccessInfo';
 import SuccessDetails from '@/components/successDetails/SuccessDetails';
 
-import { updatePaymentIntent } from '@/services/orderService';
+import { updatePaymentIntent } from '@/services/paymentService';
 
 import './Success.scss';
 
