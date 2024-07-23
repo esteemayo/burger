@@ -15,7 +15,6 @@ const SuccessClient = () => {
   const params = useSearchParams();
 
   const payment_intent = params.get('payment_intent');
-  console.log(payment_intent);
 
   useEffect(() => {
     (async () => {
