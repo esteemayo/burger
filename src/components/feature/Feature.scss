@@ -113,11 +113,16 @@
       &:hover {
         background-color: $clr-secondary;
         transform: scale(1.1);
+
+        svg {
+          transform: scale(0.9);
+        }
       }
 
       svg {
         font-size: inherit;
         fill: currentColor;
+        transform: scale(1);
       }
     }
 
