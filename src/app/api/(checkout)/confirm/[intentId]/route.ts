@@ -13,8 +13,6 @@ export const PATCH = async (req: NextRequest, { params }: IParams) => {
   const { intentId } = params;
   const session = await getAuthSession();
 
-  console.log(intentId);
-
   if (session) {
     try {
       const order = await prisma.order.update({
@@ -33,11 +31,8 @@ export const PATCH = async (req: NextRequest, { params }: IParams) => {
         );
       }
 
-      console.log(order);
-
       return new NextResponse(JSON.stringify(order), { status: 200 });
     } catch (err: unknown) {
-      console.log(err);
       return new NextResponse(
         JSON.stringify({ message: 'Something went wrong' }),
         { status: 500 }
