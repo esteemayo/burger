@@ -34,7 +34,7 @@ const CheckoutInfo = () => {
       const newOrder = {
         price: totalPrice,
         products,
-        status: 'Not Paid',
+        status: 'not paid',
         userId: session?.user.id,
       };
 
