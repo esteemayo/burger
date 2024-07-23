@@ -23,9 +23,10 @@ const Sidebar = () => {
   const { data: session } = useSession();
 
   const isOpen = useSidebar((store) => store.isOpen);
+  const onClose = useSidebar((store) => store.onClose);
 
-  const { handleClose, handleLogout } = useLogout();
   const { cartQuantity } = useCartControls();
+  const { handleClose, handleLogout } = useLogout();
   const { searchQuery, handleChange, handleSubmit } = useSearch();
 
   const closeHandler = useCallback(
@@ -87,8 +88,8 @@ const Sidebar = () => {
           </li>
         </ul>
         {pathname !== '/' &&
-            pathname !== '/login' &&
-            pathname !== '/register' && (
+          pathname !== '/login' &&
+          pathname !== '/register' && (
             <div className='search'>
               <form onSubmit={handleSubmit}>
                 <input
