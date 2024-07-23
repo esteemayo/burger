@@ -28,7 +28,7 @@ const SuccessClient = () => {
         console.log(err);
       }
     })();
-  }, []);
+  }, [payment_intent, router]);
 
   return (
     <div className='wrapper'>
