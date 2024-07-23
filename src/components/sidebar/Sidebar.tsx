@@ -2,10 +2,10 @@
 
 import { useCallback, useMemo } from 'react';
 import Link from 'next/link';
-import { signOut, useSession } from 'next-auth/react';
+import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import RoomServiceIcon from '@mui/icons-material/RoomService';
-import { usePathname } from 'next/navigation';
+import { useSession } from 'next-auth/react';
 
 import { useSearch } from '@/hooks/useSearch';
 import { useSidebar } from '@/hooks/useSidebar';
