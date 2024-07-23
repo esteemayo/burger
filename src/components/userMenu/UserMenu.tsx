@@ -1,23 +1,16 @@
 'use client';
 
-import { useCallback } from 'react';
 import Link from 'next/link';
-import { signOut } from 'next-auth/react';
 import Image from 'next/image';
 
-import { UserMenuProps } from '@/types';
 import { authLinks, userLinks } from '@/data';
+import { UserMenuProps } from '@/types';
+import { useLogout } from '@/hooks/useLogout';
 
 import './UserMenu.scss';
 
 const UserMenu = ({ currentUser }: UserMenuProps) => {
-  const handleLogout = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
-    e.stopPropagation();
-
-    signOut({
-      callbackUrl: '/',
-    });
-  }, []);
+  const { handleLogout } = useLogout();
 
   return (
     <div className='userMenu'>
