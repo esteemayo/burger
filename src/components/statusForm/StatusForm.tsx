@@ -4,12 +4,30 @@ import { toast } from 'react-toastify';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useCallback } from 'react';
+import { useMutation, useQueryClient } from '@tanstack/react-query';
 
 import { StatusFormProps } from '@/types';
 import { updateOrder } from '@/services/orderService';
 
 const StatusForm = ({ actionId, status }: StatusFormProps) => {
   const router = useRouter();
+  const queryClient = useQueryClient();
+
+  const { mutate } = useMutation({
+    mutationFn: async ({
+      actionId,
+      status,
+    }: {
+      actionId: string;
+      status: string;
+    }) => {
+      const { data } = await updateOrder(actionId, { status });
+      return data;
+    },
+    onSuccess() {
+      queryClient.invalidateQueries({ queryKey: ['orders'] });
+    },
+  });
 
   const handleSubmit = useCallback(
     async (e: React.FormEvent<HTMLFormElement>) => {
@@ -24,17 +42,13 @@ const StatusForm = ({ actionId, status }: StatusFormProps) => {
         return;
       }
 
-      try {
-        await updateOrder(actionId, { status });
+      mutate({ actionId, status });
 
-        form.reset();
-        toast.success('Status updated!');
-        router.refresh();
-      } catch (err: unknown) {
-        console.log(err);
-      }
+      form.reset();
+      toast.success('Status updated!');
+      router.refresh();
     },
-    [actionId, router]
+    [actionId, mutate, router]
   );
 
   return (
