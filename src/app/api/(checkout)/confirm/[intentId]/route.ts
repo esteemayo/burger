@@ -26,6 +26,13 @@ export const PATCH = async (req: NextRequest, { params }: IParams) => {
         },
       });
 
+      if (!order) {
+        return new NextResponse(
+          JSON.stringify({ message: `No order found with the given intentID → ${intentId}` }),
+          { status: 404 }
+        );
+      }
+
       console.log(order);
 
       return new NextResponse(JSON.stringify(order), { status: 200 });
