@@ -29,6 +29,7 @@ export const useLogout = () => {
   );
 
   return {
+    handleClose,
     handleLogout,
   };
 };
