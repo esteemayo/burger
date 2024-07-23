@@ -37,7 +37,7 @@ const Payment = ({ params }: IParams) => {
         const { data } = await makePayment(orderId);
 
         setClientSecret(data?.clientSecret);
-        // reset();
+        reset();
       } catch (err: unknown) {
         console.log(err);
       }
