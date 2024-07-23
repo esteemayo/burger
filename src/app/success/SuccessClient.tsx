@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 
 import SuccessInfo from '@/components/successInfo/SuccessInfo';
 import SuccessDetails from '@/components/successDetails/SuccessDetails';
@@ -10,17 +10,17 @@ import { updatePaymentIntent } from '@/services/orderService';
 
 import './Success.scss';
 
-interface SuccessClientProps {
-  paymentIntent: string | null;
-}
-
-const SuccessClient = ({ paymentIntent }: SuccessClientProps) => {
+const SuccessClient = () => {
   const router = useRouter();
+  const params = useSearchParams();
+
+  const payment_intent = params.get('payment_intent');
+  console.log(payment_intent);
 
   useEffect(() => {
     (async () => {
       try {
-        await updatePaymentIntent(paymentIntent);
+        await updatePaymentIntent(payment_intent);
 
         setTimeout(() => {
           router.push('/orders');
