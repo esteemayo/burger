@@ -13,6 +13,7 @@ import { useSidebar } from '@/hooks/useSidebar';
 import { useCartStore } from '@/hooks/useCartStore';
 import { useCartControls } from '@/hooks/useCartControls';
 
+import { useLogout } from '@/hooks/useLogout';
 import { authLinks, sidebarMenus } from '@/data';
 
 import './Sidebar.scss';
@@ -21,18 +22,11 @@ const Sidebar = () => {
   const pathname = usePathname();
   const { data: session } = useSession();
 
-  const onClose = useSidebar((store) => store.onClose);
   const isOpen = useSidebar((store) => store.isOpen);
-  const totalItems = useCartStore((store) => store.totalItems);
 
+  const { handleClose, handleLogout } = useLogout();
   const { cartQuantity } = useCartControls();
   const { searchQuery, handleChange, handleSubmit } = useSearch();
-
-  const handleClose = useCallback(() => {
-    if (isOpen) {
-      onClose();
-    }
-  }, [isOpen, onClose]);
 
   const closeHandler = useCallback(
     (e: React.MouseEvent<HTMLElement>) => {
@@ -41,19 +35,6 @@ const Sidebar = () => {
       if (target.classList.contains('sidebar')) {
         handleClose();
       }
-    },
-    [handleClose]
-  );
-
-  const handleLogout = useCallback(
-    (e: React.MouseEvent<HTMLButtonElement>) => {
-      e.stopPropagation();
-
-      signOut({
-        callbackUrl: '/',
-      });
-
-      handleClose();
     },
     [handleClose]
   );
