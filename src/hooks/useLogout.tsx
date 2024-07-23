@@ -29,6 +29,8 @@ export const useLogout = () => {
   );
 
   return {
+    isOpen,
+    onClose,
     handleClose,
     handleLogout,
   };
