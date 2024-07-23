@@ -22,11 +22,8 @@ const Sidebar = () => {
   const pathname = usePathname();
   const { data: session } = useSession();
 
-  const isOpen = useSidebar((store) => store.isOpen);
-  const onClose = useSidebar((store) => store.onClose);
-
   const { cartQuantity } = useCartControls();
-  const { handleClose, handleLogout } = useLogout();
+  const { isOpen, onClose handleClose, handleLogout } = useLogout();
   const { searchQuery, handleChange, handleSubmit } = useSearch();
 
   const closeHandler = useCallback(
