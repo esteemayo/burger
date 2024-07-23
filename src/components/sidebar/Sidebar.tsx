@@ -10,10 +10,9 @@ import { useSession } from 'next-auth/react';
 import { useSearch } from '@/hooks/useSearch';
 import { useSidebar } from '@/hooks/useSidebar';
 
-import { useCartStore } from '@/hooks/useCartStore';
+import { useLogout } from '@/hooks/useLogout';
 import { useCartControls } from '@/hooks/useCartControls';
 
-import { useLogout } from '@/hooks/useLogout';
 import { authLinks, sidebarMenus } from '@/data';
 
 import './Sidebar.scss';
@@ -23,8 +22,9 @@ const Sidebar = () => {
   const { data: session } = useSession();
 
   const { cartQuantity } = useCartControls();
-  const { isOpen, onClose handleClose, handleLogout } = useLogout();
+
   const { searchQuery, handleChange, handleSubmit } = useSearch();
+  const { isOpen, onClose, handleClose, handleLogout } = useLogout();
 
   const closeHandler = useCallback(
     (e: React.MouseEvent<HTMLElement>) => {
