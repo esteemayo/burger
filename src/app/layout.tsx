@@ -12,7 +12,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: 'Burger',
+  title: 'Burger.',
   description: 'Juicy Burger',
   authors: [
     { name: 'Esteem Designs', url: 'https://www.esteemdesigns.com' },
