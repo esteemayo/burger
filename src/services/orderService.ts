@@ -1,16 +1,15 @@
 import http from './httpService';
 
-const apiEndpoint = '/orders';
+const apiEndpoint = '/api/orders';
 
 export const getOrders = () => http.get('/api/orders');
 
-export const getOrder = (orderId: string) => http.get(`/api/orders/${orderId}`);
+export const getOrder = (orderId: string) => http.get(`${apiEndpoint}${orderId}`);
 
 export const getOrderByIntent = (intentId: string | null) =>
-  http.get(`/api/orders/details/${intentId}`);
+  http.get(`${apiEndpoint}/details/${intentId}`);
 
-export const createOrder = <T extends object>(data: T) =>
-  http.post('/api/orders', data);
+export const createOrder = <T extends object>(data: T) => http.post(apiEndpoint, data);
 
 export const updateOrder = <T extends object>(orderId: string, data: T) =>
-  http.patch(`/api/orders/${orderId}`, data);
+  http.patch(`${apiEndpoint}/${orderId}`, data);
