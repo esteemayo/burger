@@ -5,12 +5,27 @@ import Link from 'next/link';
 import { OrderItem } from '@/types';
 
 import './SuccessInfo.scss';
+import { useQuery } from '@tanstack/react-query';
+import { getUser } from '@/services/userService';
 
 interface SuccessInfoProps {
   order: OrderItem;
 }
 
 const SuccessInfo = ({ order }: SuccessInfoProps) => {
+  const userId = order?.userId;
+
+  const { data: user } = useQuery({
+    queryKey: [`${userId}`],
+    queryFn: async () => {
+      const { data } = await getUser(userId);
+      return data;
+    },
+    enabled: !!userId,
+  });
+
+  console.log(user);
+
   return (
     <div className='successInfo'>
       <div className='successWrap'>
@@ -21,14 +36,14 @@ const SuccessInfo = ({ order }: SuccessInfoProps) => {
             <h1 className='successHeadingMain'>Your order is confirmed</h1>
             <p className='successText'>
               We will be sending you an email confirmation to
-              eadebayo15@gmail.com shortly
+              {user?.email} shortly
             </p>
           </div>
         </div>
         <div className='orderStatus'>
           <p>
-            Order #2059665 was placed on <time>April 8, 2024</time> and is
-            currently in progress
+            Order <div id={order?.id}></div> was placed on{' '}
+            <time>April 8, 2024</time> and is currently in progress
           </p>
           <ul className='stepper'>
             <li className='done'>
