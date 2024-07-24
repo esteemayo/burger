@@ -2,7 +2,9 @@ import http from './httpService';
 
 const apiEndpoint = '/api/orders';
 
-export const getOrders = () => http.get('/api/orders');
+const orderUrl = (orderId: string) => `${apiEndpoint}/${orderId}`;
+
+export const getOrders = () => http.get(apiEndpoint);
 
 export const getOrder = (orderId: string) => http.get(`${apiEndpoint}${orderId}`);
 
