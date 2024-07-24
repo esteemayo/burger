@@ -1,4 +1,4 @@
-import PaymentForm from '@/components/paymentForm/PaymentForm';
+import PaymentClient from '@/app/payment/[id]/PaymentClient';
 
 import './Payment.scss';
 
@@ -11,7 +11,7 @@ interface IParams {
 const Payment = ({ params }: IParams) => {
   const { id: orderId } = params;
 
-  return <PaymentForm orderId={orderId} />;
+  return <PaymentClient orderId={orderId} />;
 };
 
 export default Payment;

@@ -15,7 +15,7 @@ import CheckoutForm from '@/components/checkoutForm/CheckoutForm';
 
 import './Payment.scss';
 
-interface PaymentFormProps {
+interface PaymentClientProps {
   orderId: string;
 }
 
@@ -23,7 +23,7 @@ const stripePromise = loadStripe(
   'pk_test_51PMC1YLjKbhA4Yjg89VxYW1rFYaqbOZ3TQqbc4AtBY0PMnQzwJAad7eOBO1HWFbSgrHY1E0MpqQvx94jrZhvx2Bq00jwNTSLcT'
 );
 
-const PaymentForm = ({ orderId }: PaymentFormProps) => {
+const PaymentClient = ({ orderId }: PaymentClientProps) => {
   const reset = useCartStore((store) => store.reset);
 
   const [clientSecret, setClientSecret] = useState('');
@@ -63,4 +63,4 @@ const PaymentForm = ({ orderId }: PaymentFormProps) => {
   );
 };
 
-export default PaymentForm;
+export default PaymentClient;
