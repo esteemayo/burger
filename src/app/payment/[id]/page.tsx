@@ -1,6 +1,12 @@
+import type { Metadata } from 'next';
+
 import PaymentClient from '@/app/payment/[id]/PaymentClient';
 
 import './Payment.scss';
+
+export const metadata: Metadata = {
+  title: 'Burger. | Payment',
+};
 
 interface IParams {
   params: {
