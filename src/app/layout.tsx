@@ -15,8 +15,8 @@ export const metadata: Metadata = {
   title: 'Burger.',
   description: 'Juicy Burger',
   authors: [
-    { name: 'Esteem Designs', url: 'https://www.esteemdesigns.com' },
-    { name: 'Emmanuel Adebayo', url: 'https://www.devayo.com' },
+    { name: 'Xsteem Designx', url: 'https://www.esteemdesigns.com' },
+    { name: 'Emmanuel Ayodeji Adebayo', url: 'https://www.devayo.com' },
   ],
 };
 
