@@ -1,8 +1,16 @@
+'use client';
+
 import Link from 'next/link';
+
+import { OrderItem } from '@/types';
 
 import './SuccessInfo.scss';
 
-const SuccessInfo = () => {
+interface SuccessInfoProps {
+  order: OrderItem;
+}
+
+const SuccessInfo = ({ order }: SuccessInfoProps) => {
   return (
     <div className='successInfo'>
       <div className='successWrap'>
