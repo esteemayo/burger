@@ -161,7 +161,7 @@ export type ReviewsType = {
   user: {
     name: string;
     image: string;
-  }
+  };
 }[];
 
 export type ReviewType = {
@@ -189,6 +189,7 @@ export type OrderItem = {
   name: string;
   price: number;
   products: ProductType[];
+  userId: string;
   status: 'not paid' | 'preparing' | 'on the way' | 'delivered';
   createdAt: string;
 };
