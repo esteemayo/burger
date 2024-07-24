@@ -6,6 +6,9 @@ export const getOrders = () => http.get('/api/orders');
 
 export const getOrder = (orderId: string) => http.get(`/api/orders/${orderId}`);
 
+export const getOrderByIntent = (intentId: string | null) =>
+  http.get(`/api/orders/details/${intentId}`);
+
 export const createOrder = <T extends object>(data: T) =>
   http.post('/api/orders', data);
 
