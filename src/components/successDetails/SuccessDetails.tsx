@@ -5,9 +5,10 @@ import { useQuery } from '@tanstack/react-query';
 import { OrderItem } from '@/types';
 import { getUser } from '@/services/userService';
 
-import './SuccessDetails.scss';
 import { useCartStore } from '@/hooks/useCartStore';
 import { formatCurrency } from '@/utils/formatCurrency';
+
+import './SuccessDetails.scss';
 
 interface SuccessDetailsProps {
   order: OrderItem;
