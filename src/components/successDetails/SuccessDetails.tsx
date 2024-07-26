@@ -6,12 +6,16 @@ import { OrderItem } from '@/types';
 import { getUser } from '@/services/userService';
 
 import './SuccessDetails.scss';
+import { useCartStore } from '@/hooks/useCartStore';
+import { formatCurrency } from '@/utils/formatCurrency';
 
 interface SuccessDetailsProps {
   order: OrderItem;
 }
 
 const SuccessDetails = ({ order }: SuccessDetailsProps) => {
+  const totalItems = useCartStore((store) => store.totalItems);
+
   const userId = order?.userId;
 
   const { data: user } = useQuery({
@@ -115,16 +119,16 @@ const SuccessDetails = ({ order }: SuccessDetailsProps) => {
         <div className='summaryBox'>
           <div className='summary'>
             <span>Sub total</span>
-            <span>$21,999.00</span>
+            <span>{formatCurrency(totalItems)}</span>
           </div>
           <div className='summary'>
             <span>Delivery</span>
-            <span>$21,999.00</span>
+            <span>{formatCurrency(totalItems)}</span>
           </div>
         </div>
         <div className='summaryTotal'>
           <span>Total</span>
-          <span>$21,999.00</span>
+          <span>{formatCurrency(totalItems)}</span>
         </div>
       </div>
     </div>
