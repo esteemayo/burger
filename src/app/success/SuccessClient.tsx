@@ -46,7 +46,7 @@ const SuccessClient = () => {
   return (
     <div className='wrapper'>
       <SuccessInfo order={order} />
-      <SuccessDetails />
+      <SuccessDetails order={order} />
     </div>
   );
 };
