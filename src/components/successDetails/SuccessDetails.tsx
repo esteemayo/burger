@@ -2,14 +2,14 @@
 
 import { useQuery } from '@tanstack/react-query';
 
-import { OrderItem } from '@/types';
 import { getUser } from '@/services/userService';
-
+import { OrderItem } from '@/types';
 import { useCartStore } from '@/hooks/useCartStore';
+
+import { excerpts } from '@/utils';
 import { formatCurrency } from '@/utils/formatCurrency';
 
 import './SuccessDetails.scss';
-import { excerpts } from '@/utils';
 
 interface SuccessDetailsProps {
   order: OrderItem;
