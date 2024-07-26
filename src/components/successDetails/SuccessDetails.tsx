@@ -1,8 +1,11 @@
+'use client';
+
+import { useQuery } from '@tanstack/react-query';
+
 import { OrderItem } from '@/types';
+import { getUser } from '@/services/userService';
 
 import './SuccessDetails.scss';
-import { useQuery } from '@tanstack/react-query';
-import { getUser } from '@/services/userService';
 
 interface SuccessDetailsProps {
   order: OrderItem;
