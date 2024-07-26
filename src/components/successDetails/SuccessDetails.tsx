@@ -1,12 +1,27 @@
 import { OrderItem } from '@/types';
 
 import './SuccessDetails.scss';
+import { useQuery } from '@tanstack/react-query';
+import { getUser } from '@/services/userService';
 
 interface SuccessDetailsProps {
   order: OrderItem;
 }
 
 const SuccessDetails = ({ order }: SuccessDetailsProps) => {
+  const userId = order?.userId;
+
+  const { data: user } = useQuery({
+    queryKey: [`${userId}`],
+    queryFn: async () => {
+      const { data } = await getUser(userId);
+      return data;
+    },
+    enabled: !!userId,
+  });
+
+  console.log(user);
+
   return (
     <div className='successDetails'>
       <div className='detailWrap'>
