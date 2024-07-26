@@ -11,7 +11,7 @@ const SuccessDetails = ({ order }: SuccessDetailsProps) => {
     <div className='successDetails'>
       <div className='detailWrap'>
         <h2>Order detail</h2>
-        <span>#2059665</span>
+        <span>#{order?.id}</span>
       </div>
       <div className='contactDetails'>
         <div className='contactDetailBox'>
