@@ -1,6 +1,12 @@
+import { OrderItem } from '@/types';
+
 import './SuccessDetails.scss';
 
-const SuccessDetails = () => {
+interface SuccessDetailsProps {
+  order: OrderItem;
+}
+
+const SuccessDetails = ({ order }: SuccessDetailsProps) => {
   return (
     <div className='successDetails'>
       <div className='detailWrap'>
