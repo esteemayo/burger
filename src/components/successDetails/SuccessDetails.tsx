@@ -49,9 +49,7 @@ const SuccessDetails = ({ order }: SuccessDetailsProps) => {
           </svg>
           <h3>Delivery address</h3>
         </div>
-        <p className='contactInfo'>
-          No 10, Twins street, off ijesha road, surulere lagos, Lagos state
-        </p>
+        <p className='contactInfo'>{user?.address}</p>
       </div>
       <div className='contactDetails'>
         <div className='contactDetailBox'>
@@ -71,9 +69,7 @@ const SuccessDetails = ({ order }: SuccessDetailsProps) => {
           </svg>
           <h3>Billing address</h3>
         </div>
-        <p className='contactInfo'>
-          No 10, Twins street, off ijesha road, surulere lagos, Lagos state
-        </p>
+        <p className='contactInfo'>{user?.address}</p>
       </div>
       <div className='contactDetails'>
         <div className='contactDetailBox'>
@@ -93,9 +89,9 @@ const SuccessDetails = ({ order }: SuccessDetailsProps) => {
           </svg>
           <h3>Contact details</h3>
         </div>
-        <p className='contactInfo'>eadebayo15@gmail.com</p>
-        <p className='contactPhone'>+2348136119251</p>
-        <p className='contactPhone'>+2349132311037</p>
+        <p className='contactInfo'>{user?.email}</p>
+        <p className='contactPhone'>{user?.phone}</p>
+        <p className='contactPhone'>{user?.phone}</p>
       </div>
 
       <div className='orderSummaryWrap'>
