@@ -9,6 +9,7 @@ import { useCartStore } from '@/hooks/useCartStore';
 import { formatCurrency } from '@/utils/formatCurrency';
 
 import './SuccessDetails.scss';
+import { excerpts } from '@/utils';
 
 interface SuccessDetailsProps {
   order: OrderItem;
@@ -34,7 +35,7 @@ const SuccessDetails = ({ order }: SuccessDetailsProps) => {
     <div className='successDetails'>
       <div className='detailWrap'>
         <h2>Order detail</h2>
-        <span>#{order?.id}</span>
+        <span>#{excerpts(order?.id, 8)}</span>
       </div>
       <div className='contactDetails'>
         <div className='contactDetailBox'>
