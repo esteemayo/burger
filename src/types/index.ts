@@ -644,7 +644,7 @@ export interface TableBodyProps {
   isAdmin: Boolean | undefined;
   dimension: number;
   orderStatus(
-    status: 'not paid' | 'preparing' | 'on the way' | 'delivered'
+    status: StatusType
   ): string;
   onClick(e: React.MouseEvent<HTMLButtonElement>, order: OrderItem): void;
 }
