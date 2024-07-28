@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useState } from 'react';
 
-import { OrderItem, OrderTableProps } from '@/types';
+import { OrderItem, OrderTableProps, StatusType } from '@/types';
 import { orderColumns } from '@/data';
 import { useStatusModal } from '@/hooks/useStatusModal';
 
@@ -19,7 +19,7 @@ const OrderTable = ({ isAdmin, data }: OrderTableProps) => {
   }, []);
 
   const orderStatus = useCallback(
-    (status: 'not paid' | 'preparing' | 'on the way' | 'delivered') => {
+    (status: StatusType) => {
       return `${status[0].toUpperCase()}${status.substring(1)}`;
     },
     []
