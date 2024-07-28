@@ -676,7 +676,7 @@ export interface OrderDetailProps {
     price: number;
     createdAt: string;
     userId: string;
-    status: 'not paid' | 'preparing' | 'on the way' | 'delivered';
+    status: StatusType;
   };
 }
 
