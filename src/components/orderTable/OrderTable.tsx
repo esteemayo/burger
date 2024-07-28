@@ -2,8 +2,9 @@
 
 import { useCallback, useEffect, useState } from 'react';
 
-import { OrderItem, OrderTableProps, StatusType } from '@/types';
 import { orderColumns } from '@/data';
+import { OrderItem, OrderTableProps, StatusType } from '@/types';
+
 import { useStatusModal } from '@/hooks/useStatusModal';
 
 import Table from '../table/Table';
