@@ -184,6 +184,10 @@ export type ProfileMenu = {
   links: ProfileLink;
 }[];
 
+export type StatusType = {
+  status: 'not paid' | 'preparing' | 'on the way' | 'delivered';
+};
+
 export type OrderItem = {
   id: string;
   name: string;
