@@ -184,9 +184,7 @@ export type ProfileMenu = {
   links: ProfileLink;
 }[];
 
-export type StatusType = {
-  status: 'not paid' | 'preparing' | 'on the way' | 'delivered';
-};
+export type StatusType = 'not paid' | 'preparing' | 'on the way' | 'delivered';
 
 export type OrderItem = {
   id: string;
@@ -629,9 +627,7 @@ export interface TableProps {
   columns: ColumnType;
   isAdmin: Boolean | undefined;
   dimension: number;
-  orderStatus(
-    status: StatusType
-  ): string;
+  orderStatus(status: StatusType): string;
   onClick(e: React.MouseEvent<HTMLButtonElement>, order: OrderItem): void;
 }
 
@@ -643,9 +639,7 @@ export interface TableBodyProps {
   data: OrderItem[];
   isAdmin: Boolean | undefined;
   dimension: number;
-  orderStatus(
-    status: StatusType
-  ): string;
+  orderStatus(status: StatusType): string;
   onClick(e: React.MouseEvent<HTMLButtonElement>, order: OrderItem): void;
 }
 
