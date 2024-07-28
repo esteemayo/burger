@@ -46,7 +46,7 @@ const OrderClient = ({ orderId }: OrderClientProps) => {
         <div className='orderBox'>
           <OrderDetail order={order} />
           <hr />
-          <OrderStatus />
+          <OrderStatus status={order?.status} />
         </div>
       </div>
     </div>
