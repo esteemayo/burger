@@ -1,6 +1,12 @@
+import { StatusType } from '@/data';
+
 import './Order.scss';
 
-const OrderStatus = () => {
+interface OrderStatusProps {
+  status: StatusType;
+}
+
+const OrderStatus = ({ status }: OrderStatusProps) => {
   return (
     <div className='orderStatus'>
       <div className='orderWrap'>
