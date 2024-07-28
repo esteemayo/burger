@@ -194,7 +194,7 @@ export type OrderItem = {
   price: number;
   products: ProductType[];
   userId: string;
-  status: 'not paid' | 'preparing' | 'on the way' | 'delivered';
+  status: StatusType;
   createdAt: string;
 };
 
