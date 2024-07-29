@@ -17,8 +17,10 @@ const OrderStatus = ({ status }: OrderStatusProps) => {
   );
 
   const statusClasses = useMemo(() => {
-    return statusLists.includes(status) ? 'done' : 'ready';
+    return statusLists.findIndex((item) => item === status);
   }, [status]);
+
+  console.log(statusClasses)
 
   return (
     <div className='orderStatus'>
@@ -29,19 +31,19 @@ const OrderStatus = ({ status }: OrderStatusProps) => {
         </p>
       </div>
       <ul className='stepper'>
-        <li className={status === 'not paid' ? 'done' : 'ready'}>
+        <li className={status !== 'not paid' ? 'done' : 'ready'}>
           <div className='item'>Order confirmed</div>
         </li>
-        <li className={status === 'preparing' ? 'done' : 'ready'}>
+        <li className={status !== 'preparing' ? 'done' : 'ready'}>
           <div className='item'>Start production</div>
         </li>
         {/* <li className='ready'>
           <div className='item'>Quality check</div>
         </li> */}
-        <li className={status === 'on the way' ? 'done' : 'ready'}>
+        <li className={status !== 'on the way' ? 'done' : 'ready'}>
           <div className='item'>Dispatched item</div>
         </li>
-        <li className={status === 'delivered' ? 'done' : 'ready'}>
+        <li className={status !== 'delivered' ? 'done' : 'ready'}>
           <div className='item'>Product delivered</div>
         </li>
       </ul>
