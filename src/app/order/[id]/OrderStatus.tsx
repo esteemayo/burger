@@ -1,4 +1,8 @@
-import { StatusType } from '@/data';
+'use client';
+
+import { useCallback, useMemo } from 'react';
+
+import { StatusType } from '@/types';
 
 import './Order.scss';
 
@@ -7,6 +11,15 @@ interface OrderStatusProps {
 }
 
 const OrderStatus = ({ status }: OrderStatusProps) => {
+  const statusLists = useMemo(
+    () => ['not paid', 'preparing', 'on the way', 'delivered'],
+    []
+  );
+
+  const statusClasses = useMemo(() => {
+    return statusLists.includes(status) ? 'done' : 'ready';
+  }, [status]);
+
   return (
     <div className='orderStatus'>
       <div className='orderWrap'>
@@ -22,9 +35,9 @@ const OrderStatus = ({ status }: OrderStatusProps) => {
         <li className='done'>
           <div className='item'>Start production</div>
         </li>
-        <li className='ready'>
+        {/* <li className='ready'>
           <div className='item'>Quality check</div>
-        </li>
+        </li> */}
         <li className='ready'>
           <div className='item'>Dispatched item</div>
         </li>
