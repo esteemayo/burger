@@ -22,11 +22,6 @@ const OrderStatus = ({ status }: OrderStatusProps) => {
 
   console.log(statusClasses)
 
-  const statusClass = useCallback((index: number) => {
-    if (index - statusClasses < 1) return 'done';
-    if (index - statusClasses > 1) return 'ready';
-  }, [statusClasses]);
-
   return (
     <div className='orderStatus'>
       <div className='orderWrap'>
@@ -36,19 +31,19 @@ const OrderStatus = ({ status }: OrderStatusProps) => {
         </p>
       </div>
       <ul className='stepper'>
-        <li className={() => statusClass(0)}>
+        <li className={status !== 'not paid' ? 'done' : 'ready'}>
           <div className='item'>Order confirmed</div>
         </li>
-        <li className={() => statusClass(1)}>
+        <li className={status !== 'preparing' ? 'done' : 'ready'}>
           <div className='item'>Start production</div>
         </li>
         {/* <li className='ready'>
           <div className='item'>Quality check</div>
         </li> */}
-        <li className={() => statusClass(2)}>
+        <li className={status !== 'on the way' ? 'done' : 'ready'}>
           <div className='item'>Dispatched item</div>
         </li>
-        <li className={() => statusClass(3)}>
+        <li className={status !== 'delivered' ? 'done' : 'ready'}>
           <div className='item'>Product delivered</div>
         </li>
       </ul>
