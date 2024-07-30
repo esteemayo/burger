@@ -20,9 +20,6 @@ const OrderStatus = ({ status }: OrderStatusProps) => {
     return statusLists.findIndex((item) => item === status);
   }, [status]);
 
-  console.log(statusIndex);
-  console.log(statusLists[statusIndex]);
-
   const statusClass = useCallback(
     (index: number) => {
       if (index - statusIndex < 1) return 'done';
