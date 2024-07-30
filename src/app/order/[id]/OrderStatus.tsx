@@ -23,10 +23,10 @@ const OrderStatus = ({ status }: OrderStatusProps) => {
   console.log(statusIndex);
   console.log(statusLists[statusIndex]);
 
-  const statusClass = (index: number) => {
+  const statusClass = useCallback(index: number) => {
     if (index - statusIndex < 1) return 'done';
     if (index - statusIndex > 1) return 'ready';
-  };
+  }, [statusIndex];
 
   return (
     <div className='orderStatus'>
