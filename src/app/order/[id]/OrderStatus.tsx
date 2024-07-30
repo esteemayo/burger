@@ -22,7 +22,7 @@ const OrderStatus = ({ status }: OrderStatusProps) => {
 
   console.log(statusClasses)
 
-  const statusClass = useCallback((index) => {
+  const statusClass = useCallback((index: number) => {
     if (index - statusClasses < 1) return 'done';
     if (index - statusClasses > 1) return 'ready';
   }, [statusClasses]);
