@@ -22,6 +22,11 @@ const OrderStatus = ({ status }: OrderStatusProps) => {
 
   console.log(statusClasses)
 
+  const statusClass = useCallback((index) => {
+    if (index - statusClasses < 1) return 'done';
+    if (index - statusClasses > 1) return 'ready';
+  }, [statusClasses]);
+
   return (
     <div className='orderStatus'>
       <div className='orderWrap'>
