@@ -36,19 +36,19 @@ const OrderStatus = ({ status }: OrderStatusProps) => {
         </p>
       </div>
       <ul className='stepper'>
-        <li className={status !== 'not paid' ? 'done' : 'ready'}>
+        <li className={() => statusClass(0)}>
           <div className='item'>Order confirmed</div>
         </li>
-        <li className={status !== 'preparing' ? 'done' : 'ready'}>
+        <li className={() => statusClass(1)}>
           <div className='item'>Start production</div>
         </li>
         {/* <li className='ready'>
           <div className='item'>Quality check</div>
         </li> */}
-        <li className={status !== 'on the way' ? 'done' : 'ready'}>
+        <li className={() => statusClass(2)}>
           <div className='item'>Dispatched item</div>
         </li>
-        <li className={status !== 'delivered' ? 'done' : 'ready'}>
+        <li className={() => statusClass(3)}>
           <div className='item'>Product delivered</div>
         </li>
       </ul>
