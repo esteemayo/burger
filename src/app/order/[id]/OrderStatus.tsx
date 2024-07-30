@@ -16,11 +16,11 @@ const OrderStatus = ({ status }: OrderStatusProps) => {
     []
   );
 
-  const statusClasses = useMemo(() => {
+  const statusIndex = useMemo(() => {
     return statusLists.findIndex((item) => item === status);
   }, [status]);
 
-  console.log(statusClasses)
+  console.log(statusIndex)
 
   return (
     <div className='orderStatus'>
