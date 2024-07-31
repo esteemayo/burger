@@ -1,5 +1,6 @@
 'use client';
 
+import { useCallback, useMemo } from 'react';
 import Link from 'next/link';
 import { useQuery } from '@tanstack/react-query';
 
@@ -7,7 +8,6 @@ import { OrderItem } from '@/types';
 import { getUser } from '@/services/userService';
 
 import './SuccessInfo.scss';
-import { useCallback, useMemo } from 'react';
 
 interface SuccessInfoProps {
   order: OrderItem;
