@@ -3,9 +3,9 @@
 import { useCallback, useMemo } from 'react';
 
 import { OrderStatusProps } from '@/types';
+import { formatTime } from '@/utils/formatTime';
 
 import './Order.scss';
-import { formatTime } from '@/utils/formatTime';
 
 const OrderStatus = ({ createdAt, status }: OrderStatusProps) => {
   const statusLists = useMemo(
