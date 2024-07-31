@@ -87,7 +87,8 @@ const SuccessInfo = ({ order }: SuccessInfoProps) => {
           </ul>
           <div className='orderDelivery'>
             <span>
-              Expected delivery date: <time>16 April 2024</time>
+              Expected delivery date:{' '}
+              <time>{formatDate(order?.createdAt)}</time>
             </span>
             <Link href={url}>Track your order</Link>
           </div>
