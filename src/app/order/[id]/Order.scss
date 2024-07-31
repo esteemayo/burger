@@ -394,6 +394,14 @@
             background-color: #dddddd;
           }
 
+          .undone::before {
+            background-color: #dddddd;
+          }
+
+          .undone > .item::before {
+            background-color: #dddddd;
+          }
+
           .done::before {
             background-color: #31c07e;
           }
