@@ -34,7 +34,7 @@ const OrderStatus = ({ createdAt, status }: OrderStatusProps) => {
     const date = new Date(createdAt);
     date.setMinutes(date.getMinutes() + 30);
 
-    return formatTime(date!);
+    return formatTime(date);
   }, [createdAt]);
 
   return (
