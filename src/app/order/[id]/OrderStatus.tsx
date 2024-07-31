@@ -31,8 +31,8 @@ const OrderStatus = ({ createdAt, status }: OrderStatusProps) => {
   );
 
   const startTime = useMemo(() => {
-    const date = new Date();
-    return date.toLocaleTimeString(createdAt, { hour: '2-digit', minute: '2-digit', hour12: true});
+    const date = new Date(createdAt);
+    return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true});
   }, [createdAt]);
 
   return (
