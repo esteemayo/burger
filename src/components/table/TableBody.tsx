@@ -8,8 +8,8 @@ import { formatDate } from '@/utils/formatDate';
 import { excerpts } from '@/utils';
 import { formatCurrency } from '@/utils/formatCurrency';
 
-import { TableBodyProps } from '@/types';
 import StatusForm from '../statusForm/StatusForm';
+import { StatusType, TableBodyProps } from '@/types';
 
 import './Table.scss';
 
@@ -20,25 +20,22 @@ const TableBody = ({
   orderStatus,
   onClick,
 }: TableBodyProps) => {
-  const statusClasses = useCallback(
-    (status: 'not paid' | 'preparing' | 'on the way' | 'delivered') => {
-      return status === 'not paid'
-        ? 'orderNotPaid'
-        : status === 'preparing'
-        ? 'orderPreparing'
-        : status === 'on the way'
-        ? 'orderOntheway'
-        : 'orderDelivered';
-    },
-    []
-  );
+  const statusClasses = useCallback((status: StatusType) => {
+    return status === 'not paid'
+      ? 'orderNotPaid'
+      : status === 'preparing'
+      ? 'orderPreparing'
+      : status === 'on the way'
+      ? 'orderOntheway'
+      : 'orderDelivered';
+  }, []);
 
   return (
     <tbody>
       {data?.map((item) => {
         const { id, price, status, products, createdAt } = item;
         return (
-          <tr key={id} className={statusClasses(status)} >
+          <tr key={id} className={statusClasses(status)}>
             <td>
               <Link href={`/order/${encodeURIComponent(id)}`}>
                 #{excerpts(id, 10)}
