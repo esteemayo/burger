@@ -8,6 +8,7 @@ import { OrderItem } from '@/types';
 import { getUser } from '@/services/userService';
 
 import './SuccessInfo.scss';
+import { formatDate } from '@/utils/formatDate';
 
 interface SuccessInfoProps {
   order: OrderItem;
@@ -66,7 +67,8 @@ const SuccessInfo = ({ order }: SuccessInfoProps) => {
         <div className='orderStatus'>
           <p>
             Order <div id={order?.id}></div> was placed on{' '}
-            <time>April 8, 2024</time> and is currently in progress
+            <time>{formatDate(order?.createdAt)}</time> and is currently in
+            progress
           </p>
           <ul className='stepper'>
             <li className={statusClass(0)}>
