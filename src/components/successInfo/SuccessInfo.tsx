@@ -71,9 +71,6 @@ const SuccessInfo = ({ order }: SuccessInfoProps) => {
             <li className={statusClass(1)}>
               <div className='item'>Start production</div>
             </li>
-            <li className='ready'>
-              <div className='item'>Quality check</div>
-            </li>
             <li className={statusClass(2)}>
               <div className='item'>Dispatched item</div>
             </li>
