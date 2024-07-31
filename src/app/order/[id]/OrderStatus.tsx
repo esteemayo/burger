@@ -25,7 +25,7 @@ const OrderStatus = ({ status }: OrderStatusProps) => {
       if (index - statusIndex < 1) return 'done';
       if (index - statusIndex === 1) return 'ready';
       if (index - statusIndex > 1) return 'ready';
-  },
+    },
     [statusIndex]
   );
 
@@ -44,9 +44,6 @@ const OrderStatus = ({ status }: OrderStatusProps) => {
         <li className={statusClass(1)}>
           <div className='item'>Start production</div>
         </li>
-        {/* <li className='ready'>
-          <div className='item'>Quality check</div>
-        </li> */}
         <li className={statusClass(2)}>
           <div className='item'>Dispatched item</div>
         </li>
