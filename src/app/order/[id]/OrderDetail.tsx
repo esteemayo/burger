@@ -34,7 +34,7 @@ const OrderDetail = ({ order }: OrderDetailProps) => {
       <div className='orderContainer'>
         <div className='orderItem'>
           <h3>Order ID</h3>
-          <span>#{excerpts(order?.id, 7)}</span>
+          <span className='orderId'>#{excerpts(order?.id, 7)}</span>
         </div>
         <div className='orderItem'>
           <h3>Ship Date</h3>
