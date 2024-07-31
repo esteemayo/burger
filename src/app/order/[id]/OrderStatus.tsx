@@ -2,14 +2,9 @@
 
 import { useCallback, useMemo } from 'react';
 
-import { StatusType } from '@/types';
+import { OrderStatusProps } from '@/types';
 
 import './Order.scss';
-
-interface OrderStatusProps {
-  createdAt: string;
-  status: StatusType;
-}
 
 const OrderStatus = ({ createdAt, status }: OrderStatusProps) => {
   const statusLists = useMemo(

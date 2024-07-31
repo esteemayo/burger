@@ -207,6 +207,11 @@ export interface SingleOrderType {
   deliveryDate: string;
 }
 
+export interface OrderStatusProps {
+  createdAt: string;
+  status: StatusType;
+}
+
 type AccountCard = {
   id: number;
   count?: number;
