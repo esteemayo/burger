@@ -1,30 +1,15 @@
 'use client';
 
-import { useCallback, useMemo } from 'react';
+import { useMemo } from 'react';
 
+import { useStatus } from '@/hooks/useStatus';
 import { OrderStatusProps } from '@/types';
 import { formatTime } from '@/utils/formatTime';
 
 import './Order.scss';
 
 const OrderStatus = ({ createdAt, status }: OrderStatusProps) => {
-  const statusLists = useMemo(
-    () => ['not paid', 'preparing', 'on the way', 'delivered'],
-    []
-  );
-
-  const statusIndex = useMemo(() => {
-    return statusLists.findIndex((item) => item === status);
-  }, [status]);
-
-  const statusClass = useCallback(
-    (index: number) => {
-      if (index - statusIndex < 1) return 'done';
-      if (index - statusIndex === 1) return 'ready';
-      if (index - statusIndex > 1) return 'ready';
-    },
-    [statusIndex]
-  );
+  const { statusClass } = useStatus(status);
 
   const startTime = useMemo(() => {
     return formatTime(createdAt);
