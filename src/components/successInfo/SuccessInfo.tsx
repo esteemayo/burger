@@ -1,9 +1,10 @@
 'use client';
 
-import { useCallback, useMemo } from 'react';
+import { useMemo } from 'react';
 import Link from 'next/link';
 import { useQuery } from '@tanstack/react-query';
 
+import { useStatus } from '@/hooks/useStatus';
 import { OrderItem } from '@/types';
 import { formatDate } from '@/utils/formatDate';
 
@@ -29,23 +30,7 @@ const SuccessInfo = ({ order }: SuccessInfoProps) => {
 
   console.log(user);
 
-  const statusLists = useMemo(
-    () => ['not paid', 'preparing', 'on the way', 'delivered'],
-    []
-  );
-
-  const statusIndex = useMemo(() => {
-    return statusLists.findIndex((item) => item === order?.status);
-  }, [order?.status]);
-
-  const statusClass = useCallback(
-    (index: number) => {
-      if (index - statusIndex < 1) return 'done';
-      if (index - statusIndex === 1) return 'ready';
-      if (index - statusIndex > 1) return 'ready';
-    },
-    [statusIndex]
-  );
+  const { statusClass } = useStatus(order?.status);
 
   const url = useMemo(() => {
     return `/order/${encodeURIComponent(order?.id)}`;
