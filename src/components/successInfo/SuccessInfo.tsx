@@ -45,6 +45,10 @@ const SuccessInfo = ({ order }: SuccessInfoProps) => {
     [statusIndex]
   );
 
+  const url = useMemo(() => {
+    return `/order/${encodeURIComponent(order?.id)}`;
+  }, [order?.id]);
+
   return (
     <div className='successInfo'>
       <div className='successWrap'>
@@ -82,7 +86,7 @@ const SuccessInfo = ({ order }: SuccessInfoProps) => {
             <span>
               Expected delivery date: <time>16 April 2024</time>
             </span>
-            <Link href='/'>Track your order</Link>
+            <Link href={url}>Track your order</Link>
           </div>
         </div>
       </div>
