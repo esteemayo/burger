@@ -4,6 +4,6 @@ const TIME_FORMATTER = new Intl.DateTimeFormat('en-us', {
   hour12: true,
 });
 
-export const formatTime = (date: string) => {
+export const formatTime = (date: string | Date) => {
   return TIME_FORMATTER.format(new Date(date));
 };
