@@ -30,12 +30,22 @@ const OrderStatus = ({ createdAt, status }: OrderStatusProps) => {
     return formatTime(createdAt);
   }, [createdAt]);
 
+  const deliveryTime = useMemo(() => {
+    const date = new Date(createdAt);
+    date.setMinutes(date.getMinutes() + 30);
+
+    return formatTime(date!);
+  }, [createdAt]);
+
   return (
     <div className='orderStatus'>
       <div className='orderWrap'>
         <h2>Preparing your order</h2>
         <p>
-          Arrives between <b>{startTime} - 12:02AM</b>
+          Arrives between{' '}
+          <b>
+            {startTime} - {deliveryTime}
+          </b>
         </p>
       </div>
       <ul className='stepper'>
