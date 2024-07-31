@@ -5,6 +5,7 @@ import { useCallback, useMemo } from 'react';
 import { OrderStatusProps } from '@/types';
 
 import './Order.scss';
+import { formatTime } from '@/utils/formatTime';
 
 const OrderStatus = ({ createdAt, status }: OrderStatusProps) => {
   const statusLists = useMemo(
@@ -26,13 +27,7 @@ const OrderStatus = ({ createdAt, status }: OrderStatusProps) => {
   );
 
   const startTime = useMemo(() => {
-    const date = new Date(createdAt);
-
-    return date.toLocaleTimeString([], {
-      hour: '2-digit',
-      minute: '2-digit',
-      hour12: true
-    });
+    return formatTime(createdAt);
   }, [createdAt]);
 
   return (
