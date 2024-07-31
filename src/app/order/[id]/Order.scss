@@ -386,19 +386,19 @@
             }
           }
 
-          .ready::before {
-            background-color: #f5f4f4;
-          }
-
-          .ready > .item::before {
-            background-color: #f5f4f4;
-          }
-
           .undone::before {
-            background-color: #dddddd;
+            background-color: #f5f4f4;
           }
 
           .undone > .item::before {
+            background-color: #f5f4f4;
+          }
+
+          .ready::before {
+            background-color: #dddddd;
+          }
+
+          .ready > .item::before {
             background-color: #dddddd;
           }
 
