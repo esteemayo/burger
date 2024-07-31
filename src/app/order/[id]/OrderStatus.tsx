@@ -7,10 +7,11 @@ import { StatusType } from '@/types';
 import './Order.scss';
 
 interface OrderStatusProps {
+  createdAt: string;
   status: StatusType;
 }
 
-const OrderStatus = ({ status }: OrderStatusProps) => {
+const OrderStatus = ({ createdAt, status }: OrderStatusProps) => {
   const statusLists = useMemo(
     () => ['not paid', 'preparing', 'on the way', 'delivered'],
     []
