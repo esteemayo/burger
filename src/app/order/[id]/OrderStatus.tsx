@@ -30,12 +30,17 @@ const OrderStatus = ({ createdAt, status }: OrderStatusProps) => {
     [statusIndex]
   );
 
+  const startTime = useMemo(() => {
+    const date = new Date();
+    return date.toLocaleTimeString(createdAt, { hour: '2 digit', minute: '2 digit', hour: true});
+  }, [createdAt]);
+
   return (
     <div className='orderStatus'>
       <div className='orderWrap'>
         <h2>Preparing your order</h2>
         <p>
-          Arrives between <b>11:52PM - 12:02AM</b>
+          Arrives between <b>{startTime} - 12:02AM</b>
         </p>
       </div>
       <ul className='stepper'>
