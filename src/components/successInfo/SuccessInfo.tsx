@@ -5,10 +5,11 @@ import Link from 'next/link';
 import { useQuery } from '@tanstack/react-query';
 
 import { OrderItem } from '@/types';
+import { formatDate } from '@/utils/formatDate';
+
 import { getUser } from '@/services/userService';
 
 import './SuccessInfo.scss';
-import { formatDate } from '@/utils/formatDate';
 
 interface SuccessInfoProps {
   order: OrderItem;
