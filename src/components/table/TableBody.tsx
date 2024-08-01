@@ -49,7 +49,8 @@ const TableBody = ({
               {products?.map((product) => {
                 return (
                   <span key={product.id}>
-                    {product.name} <br />
+                    <Link href={`/products/${product.id}`}>{product.name}</Link>{' '}
+                    <br />
                   </span>
                 );
               })}
