@@ -735,3 +735,14 @@ export const contactDetails: ContactDetailType = [
     phone: 'phone',
   },
 ];
+
+export const summaryItems = [
+  {
+    id: 1,
+    label: 'Sub total',
+  },
+  {
+    id: 2,
+    label: 'Delivery',
+  },
+];
