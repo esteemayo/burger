@@ -45,7 +45,7 @@ const SuccessInfo = ({ order }: SuccessInfoProps) => {
             <h2 className='successHeadingSub'>Thank you</h2>
             <h1 className='successHeadingMain'>Your order is confirmed</h1>
             <p className='successText'>
-              We will be sending you an email confirmation to
+              We will be sending you an email confirmation to{' '}
               {user?.email} shortly
             </p>
           </div>
