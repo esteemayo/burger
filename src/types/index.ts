@@ -744,4 +744,7 @@ export type ContactDetailType = {
   id: number;
   icon: string;
   label: string;
+  address?: string;
+  email?: string;
+  phone?: string;
 }[];
