@@ -739,3 +739,9 @@ export interface RelatedProductsProps {
   productId: string;
   ingredients?: string[];
 }
+
+export type ContactDetailType = {
+  id: number;
+  icon: string;
+  label: string;
+}[];
