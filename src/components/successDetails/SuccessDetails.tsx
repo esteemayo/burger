@@ -2,7 +2,7 @@
 
 import { useQuery } from '@tanstack/react-query';
 
-import { contactDetails } from '@/data';
+import { contactDetails, summaryItems } from '@/data';
 import { OrderItem } from '@/types';
 import { getUser } from '@/services/userService';
 
@@ -76,14 +76,15 @@ const SuccessDetails = ({ order }: SuccessDetailsProps) => {
           </svg>
         </div>
         <div className='summaryBox'>
-          <div className='summary'>
-            <span>Sub total</span>
-            <span>{formatCurrency(order?.price)}</span>
-          </div>
-          <div className='summary'>
-            <span>Delivery</span>
-            <span>{formatCurrency(order?.price)}</span>
-          </div>
+          {summaryItems.map((item) => {
+            const { id, label } = item;
+            return (
+            <div key={id} className='summary'>
+              <span>{label}</span>
+              <span>{formatCurrency(order?.price)}</span>
+            </div>
+            );
+          })}
         </div>
         <div className='summaryTotal'>
           <span>Total</span>
