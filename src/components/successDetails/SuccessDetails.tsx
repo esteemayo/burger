@@ -6,11 +6,11 @@ import { getUser } from '@/services/userService';
 import { OrderItem } from '@/types';
 import { useCartStore } from '@/hooks/useCartStore';
 
+import { contactDetails } from '@/data';
 import { excerpts } from '@/utils';
 import { formatCurrency } from '@/utils/formatCurrency';
 
 import './SuccessDetails.scss';
-import { contactDetails } from '@/data';
 
 interface SuccessDetailsProps {
   order: OrderItem;
