@@ -51,7 +51,7 @@ const SuccessDetails = ({ order }: SuccessDetailsProps) => {
               <h3>{label}</h3>
             </div>
             {address && <p className='contactInfo'>{user?.[address]}</p>}
-            {email&& <p className='contactInfo'>{user?.[email]}</p>}
+            {email && <p className='contactInfo'>{user?.[email]}</p>}
             {phone && <p className='contactPhone'>{user?.[phone]}</p>}
             {phone && <p className='contactPhone'>{user?.[phone]}</p>}
           </div>
