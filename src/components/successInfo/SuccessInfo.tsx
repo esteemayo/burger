@@ -28,8 +28,6 @@ const SuccessInfo = ({ order }: SuccessInfoProps) => {
     enabled: !!userId,
   });
 
-  console.log(user);
-
   const { statusClass } = useStatus(order?.status);
 
   const url = useMemo(() => {
@@ -45,8 +43,8 @@ const SuccessInfo = ({ order }: SuccessInfoProps) => {
             <h2 className='successHeadingSub'>Thank you</h2>
             <h1 className='successHeadingMain'>Your order is confirmed</h1>
             <p className='successText'>
-              We will be sending you an email confirmation to{' '}
-              {user?.email} shortly
+              We will be sending you an email confirmation to {user?.email}{' '}
+              shortly
             </p>
           </div>
         </div>
