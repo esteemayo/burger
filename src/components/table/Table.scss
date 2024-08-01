@@ -129,6 +129,14 @@
 
         &.orderName {
           text-transform: capitalize;
+
+          span {
+            a,
+            a:link,
+            a:visited {
+              text-transform: capitalize;
+            }
+          }
         }
 
         form {
