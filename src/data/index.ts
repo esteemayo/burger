@@ -12,6 +12,7 @@ import {
   CardMenu,
   CartType,
   ColumnType,
+  ContactDetailType,
   FeaturesType,
   FooterLinks,
   Menus,
@@ -713,7 +714,7 @@ export const orderColumns: ColumnType = [
   },
 ];
 
-export const contactDetails = [
+export const contactDetails: ContactDetailType = [
   {
     id: 1,
     label: 'Delivery address',
