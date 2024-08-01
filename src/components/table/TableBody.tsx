@@ -47,9 +47,10 @@ const TableBody = ({
             <td>{formatCurrency(price)}</td>
             <td className='orderName'>
               {products?.map((product) => {
+                const { id, name } = product;
                 return (
-                  <span key={product.id}>
-                    <Link href={`/product/${product.id}`}>{product.name}</Link>{' '}
+                  <span key={id}>
+                    <Link href={`/product/${id}`}>{name}</Link>{' '}
                     <br />
                   </span>
                 );
