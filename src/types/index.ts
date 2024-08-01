@@ -748,3 +748,8 @@ export type ContactDetailType = {
   email?: string;
   phone?: string;
 }[];
+
+export type SummaryType = {
+  id: number;
+  label: string;
+}[];
