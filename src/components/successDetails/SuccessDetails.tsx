@@ -30,8 +30,6 @@ const SuccessDetails = ({ order }: SuccessDetailsProps) => {
     enabled: !!userId,
   });
 
-  console.log(user);
-
   return (
     <div className='successDetails'>
       <div className='detailWrap'>
