@@ -39,7 +39,7 @@ const SuccessDetails = ({ order }: SuccessDetailsProps) => {
         <span>#{excerpts(order?.id, 8)}</span>
       </div>
       {contactDetails.map((item) => {
-        const { id, icon, label } = item;
+        const { id, icon, label, email, phone, address } = item;
         return (
           <div key={id} className='contactDetails'>
             <div className='contactDetailBox'>
@@ -55,10 +55,10 @@ const SuccessDetails = ({ order }: SuccessDetailsProps) => {
               </svg>
               <h3>{label}</h3>
             </div>
-            <p className='contactInfo'>{user?.address}</p>
-            <p className='contactInfo'>{user?.email}</p>
-            {user?.phone && <p className='contactPhone'>{user?.phone}</p>}
-            {user?.phone && <p className='contactPhone'>{user?.phone}</p>}
+            {address && <p className='contactInfo'>{user?.[address]}</p>}
+            {email&& <p className='contactInfo'>{user?.[email]}</p>}
+            {phone && <p className='contactPhone'>{user?.[phone]}</p>}
+            {phone && <p className='contactPhone'>{user?.[phone]}</p>}
           </div>
         );
       })}
