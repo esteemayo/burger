@@ -2,11 +2,10 @@
 
 import { useQuery } from '@tanstack/react-query';
 
-import { getUser } from '@/services/userService';
-import { OrderItem } from '@/types';
-import { useCartStore } from '@/hooks/useCartStore';
-
 import { contactDetails } from '@/data';
+import { OrderItem } from '@/types';
+import { getUser } from '@/services/userService';
+
 import { excerpts } from '@/utils';
 import { formatCurrency } from '@/utils/formatCurrency';
 
@@ -17,8 +16,6 @@ interface SuccessDetailsProps {
 }
 
 const SuccessDetails = ({ order }: SuccessDetailsProps) => {
-  const totalItems = useCartStore((store) => store.totalItems);
-
   const userId = order?.userId;
 
   const { data: user } = useQuery({
@@ -81,16 +78,16 @@ const SuccessDetails = ({ order }: SuccessDetailsProps) => {
         <div className='summaryBox'>
           <div className='summary'>
             <span>Sub total</span>
-            <span>{formatCurrency(totalItems)}</span>
+            <span>{formatCurrency(order?.price)}</span>
           </div>
           <div className='summary'>
             <span>Delivery</span>
-            <span>{formatCurrency(totalItems)}</span>
+            <span>{formatCurrency(order?.price)}</span>
           </div>
         </div>
         <div className='summaryTotal'>
           <span>Total</span>
-          <span>{formatCurrency(totalItems)}</span>
+          <span>{formatCurrency(order?.price)}</span>
         </div>
       </div>
     </div>
