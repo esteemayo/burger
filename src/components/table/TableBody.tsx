@@ -49,7 +49,7 @@ const TableBody = ({
               {products?.map((product) => {
                 return (
                   <span key={product.id}>
-                    <Link href={`/products/${product.id}`}>{product.name}</Link>{' '}
+                    <Link href={`/product/${product.id}`}>{product.name}</Link>{' '}
                     <br />
                   </span>
                 );
