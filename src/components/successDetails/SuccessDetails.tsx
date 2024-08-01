@@ -2,9 +2,9 @@
 
 import { useQuery } from '@tanstack/react-query';
 
-import { contactDetails, summaryItems } from '@/data';
-import { OrderItem } from '@/types';
 import { getUser } from '@/services/userService';
+import { OrderItem } from '@/types';
+import { contactDetails, summaryItems } from '@/data';
 
 import { excerpts } from '@/utils';
 import { formatCurrency } from '@/utils/formatCurrency';
