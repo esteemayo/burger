@@ -619,7 +619,7 @@ export const orders: OrderType = [
     products: [
       {
         id: '1',
-        name: 'Double grilled chicken burger',
+        name: 'Double Grilled Chicken Burger',
         desc: 'A Double Patty Grilled Chicken Burger with cheese, tomato, cucumber, lettuce and caramelized onions, Topped with lettuce, tomatoes, cheese and spicy mayo, they are the most delicious, easy dinner and a guaranteed crowd pleaser. Unlike ground chicken burgers that require chicken patties made with ground chicken (or ground turkey), bread crumbs, etc. these juicy chicken burgers need only a handful of ingredients and can be made in a fraction of the time. The chicken is marinated in an aromatic mixture of olive oil, garlic, lemon and spices.',
         image: '/img/burger-1.jpg',
         ingredients: ['cheese', 'tomato', 'cucumber', 'lettuce', 'onions'],
@@ -638,12 +638,12 @@ export const orders: OrderType = [
   },
   {
     id: '2059667',
-    name: 'Double crunchy X fries',
+    name: 'Double Crunchy X Fries',
     price: 299.99,
     products: [
       {
         id: '3',
-        name: 'A crunchy chicken',
+        name: 'A Crunchy Chicken',
         desc: 'Our "A Crunchy Chicken" Is Prepared With The Best Quality Of Burger buns and chicken That Gives A Great Taste And Texture plus our chicken patty is marinated in an aromatic mixture of olive oil, garlic, lemon and spices that wakes you up once you take a bite!',
         image: '/img/burger-3.jpg',
         ingredients: ['olive oil', 'garlic', 'lemon', ' spices', 'flour'],
@@ -662,7 +662,7 @@ export const orders: OrderType = [
   },
   {
     id: '2059669',
-    name: 'Double grilled chicken burger',
+    name: 'Double Grilled Chicken Burger',
     price: 399.99,
     products: [
       {
