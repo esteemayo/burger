@@ -51,7 +51,7 @@ const SuccessInfo = ({ order }: SuccessInfoProps) => {
         <div className='orderStatus'>
           <p>
             Order <div id={order?.id}></div> was placed on{' '}
-            <time>{formatDate(order?.createdAt)}</time> and is currently in
+            <time>{order?.createdAt && formatDate(order.createdAt)}</time> and is currently in
             progress
           </p>
           <ul className='stepper'>
@@ -71,7 +71,7 @@ const SuccessInfo = ({ order }: SuccessInfoProps) => {
           <div className='orderDelivery'>
             <span>
               Expected delivery date:{' '}
-              <time>{formatDate(order?.createdAt)}</time>
+              <time>{order?.createdAt && formatDate(order.createdAt)}</time>
             </span>
             <Link href={url}>Track your order</Link>
           </div>
