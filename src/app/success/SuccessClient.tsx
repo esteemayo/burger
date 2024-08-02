@@ -27,8 +27,6 @@ const SuccessClient = () => {
     enabled: !!payment_intent,
   });
 
-  console.log(order);
-
   // useEffect(() => {
   //   (async () => {
   //     try {
