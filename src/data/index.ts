@@ -522,7 +522,7 @@ export const relatedProducts: RelatedProductType = [
   },
   {
     id: 4,
-    name: 'Double Crunchy X fries',
+    name: 'Double Crunchy X Fries',
     desc: 'Our Double Crunchy chicken x fries are ultra crispy and absolutely bursting with flavour topped with fresh lettuce , cucumbers, Onions, our special sauce and cheese! Its an absolute crowd pleaser',
     image: '/img/burger-4.jpg',
     ingredients: ['cheese', 'tomato', 'cucumber', 'lettuce', 'onions'],
