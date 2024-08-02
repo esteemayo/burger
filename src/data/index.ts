@@ -23,6 +23,7 @@ import {
   SidebarMenuType,
   SingleOrderType,
   Socials,
+  SummaryType,
   UserLinkType,
 } from '@/types';
 
@@ -736,7 +737,7 @@ export const contactDetails: ContactDetailType = [
   },
 ];
 
-export const summaryItems = [
+export const summaryItems: SummaryType = [
   {
     id: 1,
     label: 'Sub total',
