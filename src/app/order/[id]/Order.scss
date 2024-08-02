@@ -394,11 +394,11 @@
             background-color: #f5f4f4;
           }
 
-          .ready::before {
+          .inProgress::before {
             background-color: #dddddd;
           }
 
-          .ready > .item::before {
+          .inProgress > .item::before {
             background-color: #dddddd;
           }
 
