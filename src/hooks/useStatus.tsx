@@ -17,7 +17,7 @@ export const useStatus = (status: StatusType) => {
   const statusClass = useCallback(
     (index: number) => {
       if (index - statusIndex < 1) return 'done';
-      if (index - statusIndex === 1) return 'ready';
+      if (index - statusIndex === 1) return 'inProgress';
       if (index - statusIndex > 1) return 'undone';
     },
     [statusIndex]
