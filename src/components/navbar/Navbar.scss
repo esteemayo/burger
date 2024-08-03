@@ -143,52 +143,6 @@
             right: -5rem;
           }
         }
-
-        .userAvatar {
-          display: inline-block;
-          width: 3rem;
-          height: 3rem;
-          padding: 3px;
-          border-radius: 50%;
-          object-fit: cover;
-          box-shadow: $box-shadow;
-          transform: scale(1.1);
-          transition: all 0.3s;
-
-          @include xl {
-            width: 3.335rem;
-            height: 3.335rem;
-          }
-
-          @media only screen and (max-width: 56.25em) {
-            width: 3.125rem;
-            height: 3.125rem;
-          }
-
-          @media only screen and (max-width: 22.5em) {
-            width: 3rem;
-            height: 3rem;
-          }
-
-          @media only screen and (max-width: 21.5em) {
-            width: 2.75rem;
-            height: 2.75rem;
-          }
-
-          @media only screen and (max-width: 18.75em) {
-            width: 2.5rem;
-            height: 2.5rem;
-          }
-
-          @media only screen and (min-width: 112.5em) {
-            width: 5rem;
-            height: 5rem;
-          }
-
-          &:hover {
-            transform: scale(1);
-          }
-        }
       }
 
       .cart {
