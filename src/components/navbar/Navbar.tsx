@@ -13,10 +13,11 @@ import UserMenu from '../userMenu/UserMenu';
 import Search from '../search/Search';
 import ToggleButton from '../toggleButton/ToggleButton';
 
+import { useSidebar } from '@/hooks/useSidebar';
+import { useAvatar } from '@/hooks/useAvatar';
 import { useCartStore } from '@/hooks/useCartStore';
 import { useSearch } from '@/hooks/useSearch';
 import { useCartControls } from '@/hooks/useCartControls';
-import { useSidebar } from '@/hooks/useSidebar';
 
 import Avatar from '../avatar/Avatar';
 
@@ -32,6 +33,7 @@ const Navbar = () => {
   const removeFromCart = useCartStore((store) => store.removeFromCart);
 
   const { searchQuery, handleChange, handleSubmit } = useSearch();
+  const { avatar } = useAvatar();
   const { cartQuantity, handleDecrement, handleIncrement } = useCartControls();
 
   const [isActive, setIsActive] = useState(false);
@@ -43,22 +45,6 @@ const Navbar = () => {
   const navClasses = useMemo(() => {
     return isActive ? 'navbar active' : 'navbar';
   }, [isActive]);
-
-  const userAvatar = useMemo(() => {
-    const currentUser = session?.user;
-
-    if (currentUser?.image) {
-      return currentUser.image;
-    } else {
-      if (currentUser?.gender === 'MALE') {
-        return '/img/male.png';
-      } else if (currentUser?.gender === 'FEMALE') {
-        return '/img/female.png';
-      } else {
-        return '/img/default.png';
-      }
-    }
-  }, [session]);
 
   useEffect(() => {
     window.addEventListener('scroll', isActiveHandler);
@@ -76,7 +62,7 @@ const Navbar = () => {
           </Link>
           <div className='user'>
             {!!session ? (
-              <Avatar imgSrc={userAvatar} />
+              <Avatar imgSrc={avatar} />
             ) : (
               <Avatar imgSrc='/img/user.png' desc='default avatar' />
             )}
