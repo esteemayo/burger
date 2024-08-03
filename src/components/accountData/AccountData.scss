@@ -63,11 +63,11 @@
         height: 100%;
         border-radius: 50%;
         object-fit: cover;
-        transform: scale(1);
+        transform: scale(1.1);
         transition: all 0.3s;
 
         &:hover {
-          transform: scale(1.1);
+          transform: scale(1);
           filter: blur(2px);
         }
       }
