@@ -118,7 +118,7 @@ const AccountData = ({ currentUser }: AccountDataProps) => {
             width={50}
             height={50}
             alt='avatar'
-            className='avatar'
+            className='userAvatar'
           />
           <label htmlFor='file'>
             <Image
