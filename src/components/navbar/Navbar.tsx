@@ -18,8 +18,9 @@ import { useSearch } from '@/hooks/useSearch';
 import { useCartControls } from '@/hooks/useCartControls';
 import { useSidebar } from '@/hooks/useSidebar';
 
-import './Navbar.scss';
 import Avatar from '../avatar/Avatar';
+
+import './Navbar.scss';
 
 const Navbar = () => {
   const pathname = usePathname();
