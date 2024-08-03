@@ -148,8 +148,10 @@
           display: inline-block;
           width: 3rem;
           height: 3rem;
+          padding: 3px;
           border-radius: 50%;
           object-fit: cover;
+          box-shadow: $box-shadow;
 
           @include xl {
             width: 3.335rem;
