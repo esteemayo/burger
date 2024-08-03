@@ -78,10 +78,8 @@ const Navbar = () => {
             {!!session ? (
               <Avatar imgSrc={userAvatar} />
             ) : (
-              <Image
-                src='/img/user.png'
-                width={30}
-                height={30}
+              <Avatar
+                imgSrc='/img/user.png'
                 alt='default avatar'
               />
             )}
