@@ -19,6 +19,7 @@ import { useCartControls } from '@/hooks/useCartControls';
 import { useSidebar } from '@/hooks/useSidebar';
 
 import './Navbar.scss';
+import Avatar from '../avatar/Avatar';
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -74,13 +75,7 @@ const Navbar = () => {
           </Link>
           <div className='user'>
             {!!session ? (
-              <Image
-                src={userAvatar}
-                width={30}
-                height={30}
-                alt='avatar'
-                className='userAvatar'
-              />
+              <Avatar imgSrc={userAvatar} />
             ) : (
               <Image
                 src='/img/user.png'
