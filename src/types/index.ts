@@ -70,6 +70,11 @@ export interface CartActionType {
   calcTotals(): void;
 }
 
+export interface AvatarProps {
+  imgSrc: string;
+  desc?: string;
+}
+
 export interface UserMenuProps {
   currentUser: CurrentUserType | undefined;
 }

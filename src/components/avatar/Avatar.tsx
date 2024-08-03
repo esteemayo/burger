@@ -1,11 +1,8 @@
 import Image from 'next/image';
 
-import './Avatar.scss';
+import { AvatarProps } from '@/types';
 
-interface AvatarProps {
-  imgSrc: string;
-  desc?: string;
-}
+import './Avatar.scss';
 
 const Avatar = ({ imgSrc, desc = 'avatar' }: AvatarProps) => {
   return (
