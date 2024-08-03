@@ -4,15 +4,16 @@ import './Avatar.scss';
 
 interface AvatarProps {
   imgSrc: string;
+  desc?: string;
 }
 
-const Avatar = ({ imgSrc }: AvatarProps) => {
+const Avatar = ({ imgSrc, desc = 'avatar' }: AvatarProps) => {
   return (
     <Image
       src={imgSrc}
       width={30}
       height={30}
-      alt='avatar'
+      alt={desc}
       className='avatar'
     />
   );
