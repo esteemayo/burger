@@ -10,6 +10,8 @@ import Input from '../input/Input';
 import PhoneInput from '../phoneInput/PhoneInput';
 
 import { useForm } from '@/hooks/useForm';
+import { useAvatar } from '@/hooks/useAvatar';
+
 import { upload } from '@/utils/upload';
 import { validateAccountData } from '@/validations/accountData';
 
@@ -37,6 +39,7 @@ const initialErrors: UserDataErrors = {
 };
 
 const AccountData = ({ currentUser }: AccountDataProps) => {
+  const { avatar } = useAvatar();
   const { update } = useSession();
 
   const [file, setFile] = useState<File>();
@@ -89,20 +92,6 @@ const AccountData = ({ currentUser }: AccountDataProps) => {
     validateAccountData
   );
 
-  const userAvatar = useMemo(() => {
-    if (currentUser?.image) {
-      return currentUser.image;
-    } else {
-      if (currentUser?.gender === 'MALE') {
-        return '/img/male.png';
-      } else if (currentUser?.gender === 'FEMALE') {
-        return '/img/female.png';
-      } else {
-        return '/img/default.png';
-      }
-    }
-  }, [currentUser]);
-
   const { name, email, phone, address } = data;
 
   return (
@@ -111,9 +100,7 @@ const AccountData = ({ currentUser }: AccountDataProps) => {
         <div className='dataImg'>
           <Image
             src={
-              file
-                ? URL.createObjectURL(file as Blob | MediaSource)
-                : userAvatar
+              file ? URL.createObjectURL(file as Blob | MediaSource) : avatar
             }
             width={50}
             height={50}
