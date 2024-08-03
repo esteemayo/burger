@@ -78,10 +78,7 @@ const Navbar = () => {
             {!!session ? (
               <Avatar imgSrc={userAvatar} />
             ) : (
-              <Avatar
-                imgSrc='/img/user.png'
-                desc='default avatar'
-              />
+              <Avatar imgSrc='/img/user.png' desc='default avatar' />
             )}
             <UserMenu currentUser={session?.user} />
           </div>
