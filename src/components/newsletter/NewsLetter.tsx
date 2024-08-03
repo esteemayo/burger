@@ -1,5 +1,6 @@
 'use client';
 
+import { toast } from 'react-toastify';
 import { useCallback } from 'react';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 
@@ -15,6 +16,7 @@ const NewsLetter = () => {
 
     console.log(email);
 
+    toast.success('Successfully subscribed to our newsletter');
     form.reset();
   }, []);
 
