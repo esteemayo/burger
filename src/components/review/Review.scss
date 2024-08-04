@@ -177,6 +177,11 @@
               font-size: 1.8rem;
             }
           }
+
+          button {
+            display: inline-block;
+            all: unset;
+          }
         }
       }
 
