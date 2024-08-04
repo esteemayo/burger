@@ -22,6 +22,8 @@ const Review = ({ desc, rating, userId }: ReviewProps) => {
     enabled: !!userId,
   });
 
+  console.log(user)
+
   const { avatar } = useAvatar(user);
 
   return (

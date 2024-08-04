@@ -695,6 +695,25 @@ export type CurrentUserType = User & {
   isAdmin: Boolean;
 };
 
+export type UserType = {
+  id: string;
+  image: string;
+  name: string;
+  email: string;
+  username: string;
+  address: string;
+  city: string;
+  gender: Gender;
+  isAdmin: Boolean;
+  phone: string;
+  state: string;
+  street: string;
+  confirmPassword: null;
+  emailVerified: null;
+  createdAt: string;
+  updatedAt: string;
+};
+
 export interface IFavorite {
   (
     actionId: string,
