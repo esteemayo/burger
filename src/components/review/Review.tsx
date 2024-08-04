@@ -1,8 +1,8 @@
 'use client';
 
-import { useCallback, useMemo, useState } from 'react';
-import Image from 'next/image';
 import { useQuery } from '@tanstack/react-query';
+import Image from 'next/image';
+import { useCallback, useMemo, useState } from 'react';
 
 import { useAvatar } from '@/hooks/useAvatar';
 import { getUser } from '@/services/userService';
