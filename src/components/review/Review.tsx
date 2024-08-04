@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import Image from 'next/image';
 import { useQuery } from '@tanstack/react-query';
 
@@ -26,6 +26,10 @@ const Review = ({ desc, rating, userId }: ReviewProps) => {
 
   const [readMore, setReadMore] = useState(false);
 
+  const btnClasses = useMemo(() => {
+    return desc.length > 150 ? 'btnReadmore show' : 'btnReadmore';
+  }, [desc.length]);
+
   return (
     <article className='review'>
       <div className='reviewCard'>
@@ -38,7 +42,9 @@ const Review = ({ desc, rating, userId }: ReviewProps) => {
               <div className='reviewerWrap'>
                 <div className='reviewerName'>{user?.name}</div>
                 <p className='reviewerText'>{desc}</p>
-                <button type='button'>More</button>
+                <button type='button' className={btnClasses}>
+                  More
+                </button>
               </div>
             </div>
           </div>
