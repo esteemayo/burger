@@ -4,8 +4,8 @@ import { useMemo } from 'react';
 import Image from 'next/image';
 import { useQuery } from '@tanstack/react-query';
 
+import { ReviewProps, UserType } from '@/types';
 import { useAvatar } from '@/hooks/useAvatar';
-import { ReviewProps } from '@/types';
 import { getUser } from '@/services/userService';
 
 import StarRating from '../starRating/StarRating';
@@ -22,7 +22,7 @@ const Review = ({ desc, rating, userId }: ReviewProps) => {
     enabled: !!userId,
   });
 
-  const { avatar } = useAvatar(user);
+  const { avatar } = useAvatar(user as UserType);
 
   return (
     <article className='review'>
