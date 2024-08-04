@@ -24,20 +24,6 @@ const Review = ({ desc, rating, userId }: ReviewProps) => {
 
   const { avatar } = useAvatar(user);
 
-  const reviewerImage = useMemo(() => {
-    if (user?.image) {
-      return user.image;
-    } else {
-      if (user?.gender === 'MALE') {
-        return '/img/male.png';
-      } else if (user?.gender === 'FEMALE') {
-        return '/img/female.png';
-      } else {
-        return '/img/default.png';
-      }
-    }
-  }, [user]);
-
   return (
     <article className='review'>
       <div className='reviewCard'>
