@@ -7,6 +7,7 @@ import { useQuery } from '@tanstack/react-query';
 import { ReviewProps } from '@/types';
 import StarRating from '../starRating/StarRating';
 
+import { useAvatar } from '@/hooks/useAvatar';
 import { getUser } from '@/services/userService';
 
 import './Review.scss';
@@ -20,6 +21,8 @@ const Review = ({ desc, rating, userId }: ReviewProps) => {
     },
     enabled: !!userId,
   });
+
+  const { avatar } = useAvatar(user);
 
   const reviewerImage = useMemo(() => {
     if (user?.image) {
@@ -41,7 +44,7 @@ const Review = ({ desc, rating, userId }: ReviewProps) => {
         <div className='reviewWrapper'>
           <div className='reviewBox'>
             <div className='reviewImg'>
-              <Image src={reviewerImage} width={87} height={87} alt='avatar' />
+              <Image src={avatar} width={87} height={87} alt='avatar' />
             </div>
             <div className='reviewer'>
               <div className='reviewerWrap'>
