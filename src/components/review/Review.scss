@@ -179,14 +179,16 @@
           }
 
           .btnReadmore {
-            all: unset;
-            font-weight: 500;
-            font-size: 1.3rem;
-            color: inherit;
             display: none;
             visibility: hidden;
             opacity: 0;
             z-index: -1;
+
+            all: unset;
+            font-weight: 500;
+            font-size: 1.3rem;
+            color: inherit;
+            cursor: pointer;
             
             &.show {
               display: inline-block;
