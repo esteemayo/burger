@@ -188,7 +188,8 @@
             text-transform: capitalize;
             font-weight: 500;
             font-size: 1.3rem;
-            color: inherit;
+            margin-left: 1rem;
+            color: $clr-black;
             cursor: pointer;
             
             &.show {
