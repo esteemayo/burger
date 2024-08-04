@@ -41,6 +41,10 @@ const Review = ({ desc, rating, userId }: ReviewProps) => {
     return desc.length > 150 ? 'btnReadmore show' : 'btnReadmore';
   }, [desc.length]);
 
+  const btnLabel = useMemo(() => {
+    return readMore ? 'Less' : 'More';
+  }, [readMore]);
+
   return (
     <article className='review'>
       <div className='reviewCard'>
@@ -54,7 +58,7 @@ const Review = ({ desc, rating, userId }: ReviewProps) => {
                 <div className='reviewerName'>{user?.name}</div>
                 <p className='reviewerText'>{review}</p>
                 <button type='button' className={btnClasses} onClick={handleToggle}>
-                  More
+                  {btnLabel}
                 </button>
               </div>
             </div>
