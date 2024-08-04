@@ -4,11 +4,11 @@ import { useMemo } from 'react';
 import Image from 'next/image';
 import { useQuery } from '@tanstack/react-query';
 
-import { ReviewProps } from '@/types';
-import StarRating from '../starRating/StarRating';
-
 import { useAvatar } from '@/hooks/useAvatar';
+import { ReviewProps } from '@/types';
 import { getUser } from '@/services/userService';
+
+import StarRating from '../starRating/StarRating';
 
 import './Review.scss';
 
