@@ -2,9 +2,9 @@
 
 import { useMemo } from 'react';
 
-import { CurrentUserType } from '@/types';
+import { CurrentUserType, UserType } from '@/types';
 
-export const useAvatar = (user: CurrentUserType) => {
+export const useAvatar = (user: CurrentUserType | UserType) => {
   const avatar = useMemo(() => {
     if (user?.image) {
       return user.image;
