@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import Image from 'next/image';
 import { useQuery } from '@tanstack/react-query';
 
@@ -23,6 +24,8 @@ const Review = ({ desc, rating, userId }: ReviewProps) => {
 
   const { avatar } = useAvatar(user as UserType);
 
+  const [readMore, setReadMore] = useState(false);
+
   return (
     <article className='review'>
       <div className='reviewCard'>
@@ -35,6 +38,7 @@ const Review = ({ desc, rating, userId }: ReviewProps) => {
               <div className='reviewerWrap'>
                 <div className='reviewerName'>{user?.name}</div>
                 <p className='reviewerText'>{desc}</p>
+                <button type='button'>More</button>
               </div>
             </div>
           </div>
