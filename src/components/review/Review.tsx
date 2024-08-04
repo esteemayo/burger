@@ -9,6 +9,7 @@ import { useAvatar } from '@/hooks/useAvatar';
 import { getUser } from '@/services/userService';
 
 import StarRating from '../starRating/StarRating';
+import { excerpts } from '@/utils';
 
 import './Review.scss';
 
@@ -26,6 +27,10 @@ const Review = ({ desc, rating, userId }: ReviewProps) => {
 
   const [readMore, setReadMore] = useState(false);
 
+  const review = useMemo(() => {
+    return desc.length > 150 ? excerpts(desc, 150) : desc;
+  }, [desc]);
+
   const btnClasses = useMemo(() => {
     return desc.length > 150 ? 'btnReadmore show' : 'btnReadmore';
   }, [desc.length]);
@@ -41,7 +46,7 @@ const Review = ({ desc, rating, userId }: ReviewProps) => {
             <div className='reviewer'>
               <div className='reviewerWrap'>
                 <div className='reviewerName'>{user?.name}</div>
-                <p className='reviewerText'>{desc}</p>
+                <p className='reviewerText'>{review}</p>
                 <button type='button' className={btnClasses}>
                   More
                 </button>
