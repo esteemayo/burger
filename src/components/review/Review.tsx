@@ -34,8 +34,8 @@ const Review = ({ desc, rating, userId }: ReviewProps) => {
   }, []);
 
   const review = useMemo(() => {
-    return desc.length > 150 ? excerpts(desc, 150) : desc;
-  }, [desc]);
+    return readMore && desc.length > 150 ?  desc : excerpts(desc, 150);
+  }, [desc, readMore]);
 
   const btnClasses = useMemo(() => {
     return desc.length > 150 ? 'btnReadmore show' : 'btnReadmore';
