@@ -57,10 +57,12 @@ const Review = ({ desc, rating, userId }: ReviewProps) => {
             <div className='reviewer'>
               <div className='reviewerWrap'>
                 <div className='reviewerName'>{user?.name}</div>
-                <p className='reviewerText'>{review}</p>
-                <button type='button' className={btnClasses} onClick={handleToggle}>
-                  {btnLabel}
-                </button>
+                <p className='reviewerText'>
+                  {review}
+                  <button type='button' className={btnClasses} onClick={handleToggle}>
+                    {btnLabel}
+                  </button>
+                </p>
               </div>
             </div>
           </div>
