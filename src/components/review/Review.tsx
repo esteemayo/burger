@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 import Image from 'next/image';
 import { useQuery } from '@tanstack/react-query';
 
@@ -27,6 +27,12 @@ const Review = ({ desc, rating, userId }: ReviewProps) => {
 
   const [readMore, setReadMore] = useState(false);
 
+  const handleToggle = useCallback((e: React.MouseEvent<HTMLButtomElement>) => {
+    setReadMore((value) => {
+      return !value;
+    });
+  }, []);
+
   const review = useMemo(() => {
     return desc.length > 150 ? excerpts(desc, 150) : desc;
   }, [desc]);
@@ -47,7 +53,7 @@ const Review = ({ desc, rating, userId }: ReviewProps) => {
               <div className='reviewerWrap'>
                 <div className='reviewerName'>{user?.name}</div>
                 <p className='reviewerText'>{review}</p>
-                <button type='button' className={btnClasses}>
+                <button type='button' className={btnClasses} onClick={handleToggle}>
                   More
                 </button>
               </div>
