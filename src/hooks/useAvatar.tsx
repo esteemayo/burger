@@ -1,26 +1,23 @@
 'use client';
 
 import { useMemo } from 'react';
-import { useSession } from 'next-auth/react';
 
-export const useAvatar = () => {
-  const { data: session } = useSession();
+import { CurrentUserType } from '@/types';
 
-  const currentUser = session?.user;
-
+export const useAvatar = (user: CurrentUserType) => {
   const avatar = useMemo(() => {
-    if (currentUser?.image) {
-      return currentUser.image;
+    if (user?.image) {
+      return user.image;
     } else {
-      if (currentUser?.gender === 'MALE') {
+      if (user?.gender === 'MALE') {
         return '/img/male.png';
-      } else if (currentUser?.gender === 'FEMALE') {
+      } else if (user?.gender === 'FEMALE') {
         return '/img/female.png';
       } else {
         return '/img/default.png';
       }
     }
-  }, [currentUser]);
+  }, [user]);
 
   return {
     avatar,
