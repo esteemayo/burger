@@ -39,8 +39,8 @@ const initialErrors: UserDataErrors = {
 };
 
 const AccountData = ({ currentUser }: AccountDataProps) => {
-  const { avatar } = useAvatar();
   const { update } = useSession();
+  const { avatar } = useAvatar(currentUser);
 
   const [file, setFile] = useState<File>();
   const [isLoading, setIsLoading] = useState(false);
