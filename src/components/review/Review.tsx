@@ -44,7 +44,7 @@ const Review = ({ desc, rating, userId }: ReviewProps) => {
   }, [desc, readMore]);
 
   const btnClasses = useMemo(() => {
-    return desc.length > 150 ? 'btnReadmore show' : 'btnReadmore';
+    return desc.length > 150 ? 'btnReadmore show' : 'btnReadmore hide';
   }, [desc.length]);
 
   const btnLabel = useMemo(() => {
