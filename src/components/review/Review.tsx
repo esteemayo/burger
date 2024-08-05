@@ -29,26 +29,21 @@ const Review = ({ desc, rating, userId }: ReviewProps) => {
   const [readMore, setReadMore] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleToggle = useCallback(
-    (e: React.MouseEvent<HTMLButtonElement>) => {
-      e.stopPropagation();
+  const handleToggle = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
+    e.stopPropagation();
 
-      if (!readMore) {
-        setIsLoading(true);
-      }
+    setIsLoading(true);
 
-       setTimeout(() => {
-        setReadMore((value) => {
-          return !value;
-        });
-        setIsLoading(false);
-      }, 1000);
-    },
-    []
-  );
+    setTimeout(() => {
+      setReadMore((value) => {
+        return !value;
+      });
+      setIsLoading(false);
+    }, 1000);
+  }, []);
 
   const review = useMemo(() => {
-    return readMore && desc.length > 150 ?  desc : excerpts(desc, 150);
+    return readMore && desc.length > 150 ? desc : excerpts(desc, 150);
   }, [desc, readMore]);
 
   const btnClasses = useMemo(() => {
@@ -72,9 +67,18 @@ const Review = ({ desc, rating, userId }: ReviewProps) => {
                 <div className='reviewerName'>{user?.name}</div>
                 <p className='reviewerText'>
                   {review}
-                  <button type='button' disabled={isLoading} className={btnClasses} onClick={handleToggle}>
-                    {isLoading ? 'loading...' : btnLabel}
-                  </button>
+                  {isLoading ? (
+                    <span>loading ...</span>
+                  ) : (
+                    <button
+                      type='button'
+                      disabled={isLoading}
+                      className={btnClasses}
+                      onClick={handleToggle}
+                    >
+                      {btnLabel}
+                    </button>
+                  )}
                 </p>
               </div>
             </div>
