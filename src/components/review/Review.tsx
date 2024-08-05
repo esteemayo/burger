@@ -3,6 +3,7 @@
 import { useQuery } from '@tanstack/react-query';
 import Image from 'next/image';
 import { useCallback, useMemo, useState } from 'react';
+import { ClipLoader } from 'react-spinners';
 
 import { useAvatar } from '@/hooks/useAvatar';
 import { getUser } from '@/services/userService';
@@ -67,8 +68,10 @@ const Review = ({ desc, rating, userId }: ReviewProps) => {
                 <div className='reviewerName'>{user?.name}</div>
                 <p className='reviewerText'>
                   {review}
-                  {isLoading ? (
-                    <span>loading ...</span>
+                  {true ? (
+                    <span>
+                      <ClipLoader size={10} color='#00000059' />
+                    </span>
                   ) : (
                     <button
                       type='button'
