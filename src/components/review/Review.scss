@@ -181,7 +181,7 @@
               visibility: hidden;
               opacity: 0;
               z-index: -1;
-
+  
               all: unset;
               text-transform: capitalize;
               text-decoration: underline;
@@ -192,7 +192,7 @@
               color: inherit;
               cursor: pointer;
               transition: all 0.3s;
-
+  
               &.show {
                 display: inline-block;
                 visibility: visible;
@@ -202,6 +202,10 @@
 
               @include lg {
                 font-size: 1.44445rem;
+              }
+          
+              @media only screen and (max-width: 56.25em) {
+                font-size: 1.625rem;
               }
 
               &:hover {
