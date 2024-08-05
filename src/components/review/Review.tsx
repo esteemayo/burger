@@ -48,7 +48,7 @@ const Review = ({ desc, rating, userId }: ReviewProps) => {
   }, [desc.length]);
 
   const btnLabel = useMemo(() => {
-    return readMore ? 'Less' : 'More';
+    return `Read ${readMore ? 'Less' : 'More'}`;
   }, [readMore]);
 
   return (
