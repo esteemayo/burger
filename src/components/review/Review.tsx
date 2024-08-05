@@ -33,7 +33,9 @@ const Review = ({ desc, rating, userId }: ReviewProps) => {
     (e: React.MouseEvent<HTMLButtonElement>) => {
       e.stopPropagation();
 
-      setIsLoading(true);
+      if (!readMore) {
+        setIsLoading(true);
+      }
 
        setTimeout(() => {
         setReadMore((value) => {
