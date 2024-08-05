@@ -68,7 +68,7 @@ const Review = ({ desc, rating, userId }: ReviewProps) => {
                 <div className='reviewerName'>{user?.name}</div>
                 <p className='reviewerText'>
                   {review}
-                  {true ? (
+                  {isLoading ? (
                     <ClipLoader size={10} color='#00000059' />
                   ) : (
                     <button
