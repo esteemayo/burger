@@ -97,8 +97,7 @@
               width: 6.25rem;
               height: 6.25rem;
             }
-            
-            
+
             @media only screen and (max-width: 21.5em) {
               width: 6rem;
               height: 6rem;
@@ -190,11 +189,10 @@
             text-underline-offset: 3px;
             font-weight: 600;
             font-size: 1.3rem;
-            margin-left: 1rem;
             padding: 0 0.5rem;
             color: inherit;
             cursor: pointer;
-            
+
             &.show {
               display: inline-block;
               visibility: visible;
@@ -209,7 +207,7 @@
         position: absolute;
         top: -2.6rem;
         right: -1.6rem;
-        
+
         @media only screen and (max-width: 21.5em) {
           right: -1rem;
         }
