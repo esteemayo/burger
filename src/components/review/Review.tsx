@@ -69,9 +69,7 @@ const Review = ({ desc, rating, userId }: ReviewProps) => {
                 <p className='reviewerText'>
                   {review}
                   {true ? (
-                    <span>
-                      <ClipLoader size={10} color='#00000059' />
-                    </span>
+                    <ClipLoader size={10} color='#00000059' />
                   ) : (
                     <button
                       type='button'
