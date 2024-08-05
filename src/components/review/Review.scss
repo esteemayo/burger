@@ -186,10 +186,13 @@
 
             all: unset;
             text-transform: capitalize;
-            font-weight: 500;
+            font-weight: 600;
             font-size: 1.3rem;
             margin-left: 1rem;
-            color: $clr-black;
+            padding: 0 0.5rem;
+            color: inherit;
+            border: 1px solid $line;
+            border-radius: 0.5rem;
             cursor: pointer;
             
             &.show {
