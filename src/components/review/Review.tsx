@@ -27,15 +27,21 @@ const Review = ({ desc, rating, userId }: ReviewProps) => {
   const { avatar } = useAvatar(user as UserType);
 
   const [readMore, setReadMore] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleToggle = useCallback(
     (e: React.MouseEvent<HTMLButtonElement>) => {
       e.stopPropagation();
 
-      setReadMore((value) => {
-        return !value;
-      });
-    }, 
+      setIsLoading(true);
+
+       setTimeout(() => {
+        setReadMore((value) => {
+          return !value;
+        });
+        setIsLoading(false);
+      }, 1000);
+    },
     []
   );
 
@@ -64,8 +70,8 @@ const Review = ({ desc, rating, userId }: ReviewProps) => {
                 <div className='reviewerName'>{user?.name}</div>
                 <p className='reviewerText'>
                   {review}
-                  <button type='button' className={btnClasses} onClick={handleToggle}>
-                    {btnLabel}
+                  <button type='button' disabled={isLoading} className={btnClasses} onClick={handleToggle}>
+                    {isLoading ? 'loading...' : btnLabel}
                   </button>
                 </p>
               </div>
