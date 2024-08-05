@@ -28,11 +28,16 @@ const Review = ({ desc, rating, userId }: ReviewProps) => {
 
   const [readMore, setReadMore] = useState(false);
 
-  const handleToggle = useCallback((e: React.MouseEvent<HTMLButtomElement>) => {
-    setReadMore((value) => {
-      return !value;
-    });
-  }, []);
+  const handleToggle = useCallback(
+    (e: React.MouseEvent<HTMLButtonElement>) => {
+      e.stopPropagation();
+
+      setReadMore((value) => {
+        return !value;
+      });
+    }, 
+    []
+  );
 
   const review = useMemo(() => {
     return readMore && desc.length > 150 ?  desc : excerpts(desc, 150);
