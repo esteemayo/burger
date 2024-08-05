@@ -182,7 +182,8 @@
               opacity: 0;
               z-index: -1;
   
-              all: unset;
+              border: none;
+              outline: none;
               text-transform: capitalize;
               text-decoration: underline;
               text-underline-offset: 3px;
