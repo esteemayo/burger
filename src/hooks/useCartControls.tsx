@@ -30,9 +30,11 @@ export const useCartControls = (product?: CartItem) => {
   );
 
   const inCart = useMemo(() => {
-    const inCart = products.find((item) => item.id === product?.id);
-    return !!inCart;
-  }, [product?.id, products]);
+    if (!!session) {
+      const inCart = products.find((item) => item.id === product?.id);
+      return !!inCart;
+    }
+  }, [product?.id, products, session]);
 
   const cartQuantity = useMemo(() => {
     return !!session ? totalItems : 0;
