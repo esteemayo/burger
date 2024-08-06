@@ -24,16 +24,18 @@ const NewsLetter = () => {
     const input = form.elements[0] as HTMLInputElement;
     const email = input.value;
 
-    setIsLoading(true);
+    if (email) {
+      setIsLoading(true);
 
-    setTimeout(() => {
-      console.log(email);
-
-      toast.success('Subscribed to our newsletter!');
-      form.reset();
-
-      setIsLoading(false);
-    }, 1000);
+      setTimeout(() => {
+        console.log(email);
+  
+        toast.success('Subscribed to our newsletter!');
+        form.reset();
+  
+        setIsLoading(false);
+      }, 1000);
+    }
   }, []);
 
   return (
