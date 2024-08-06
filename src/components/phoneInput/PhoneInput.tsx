@@ -14,7 +14,7 @@ const PhoneInput = ({
     <div className='phoneInput'>
       <label htmlFor={name}>{label}</label>
       <div className='inputGroupWrap'>
-        <div className='inputGroupText'>+234</div>
+        <div className='inputGroupText'>+1</div>
         <input {...rest} type={type} name={name} id={name} />
       </div>
       {error && <ErrorMessage message={error} />}
