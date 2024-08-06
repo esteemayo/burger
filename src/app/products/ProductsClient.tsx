@@ -82,7 +82,7 @@ const ProductsClient = () => {
         {!isLoading && (
           <div className={btnWrapClasses}>
             <button type='button' onClick={handleSeeMore}>
-              {loading ? <ClipLoader size={10} color='#a00c1a' /> : 'See more...'}
+              {true ? <ClipLoader size={20} color='#a00c1a' /> : 'See more...'}
             </button>
           </div>
         )}
