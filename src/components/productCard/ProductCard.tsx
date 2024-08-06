@@ -1,9 +1,9 @@
 'use client';
 
-import Image from 'next/image';
-import Link from 'next/link';
 import { useMemo } from 'react';
+import Link from 'next/link';
 import { ClipLoader } from 'react-spinners';
+import Image from 'next/image';
 
 import { useCart } from '@/hooks/useCart';
 import { useCartControls } from '@/hooks/useCartControls';
