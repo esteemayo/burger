@@ -194,7 +194,8 @@
         transition: all 0.3s linear;
 
         .relatedBtn {
-          all: unset;
+          border: none;
+          outline: none;
           text-align: center;
           text-transform: uppercase;
           font-weight: 600;
