@@ -153,6 +153,10 @@
     }
 
     .btnContainer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
       position: relative;
       margin-top: 3rem;
       text-align: center;
@@ -163,9 +167,6 @@
 
       &.show {
         display: flex;
-        align-items: center;
-        justify-content: center;
-
         visibility: visible;
         opacity: 1;
         z-index: 1000;
