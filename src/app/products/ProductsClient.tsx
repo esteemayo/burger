@@ -3,6 +3,7 @@
 import { useQuery } from '@tanstack/react-query';
 import Link from 'next/link';
 import { useCallback, useEffect, useMemo, useState } from 'react';
+import { ClipLoader } from 'react-spinners';
 
 import EmptyState from '@/components/emptyState/EmptyState';
 import ProductLists from '@/components/productLists/ProductLists';
@@ -20,6 +21,7 @@ const ProductsClient = () => {
     },
   });
 
+  const [loading, setLoading] = useState(false);
   const [data, setData] = useState([]);
   const [productToShow, setProductToShow] = useState(6);
 
@@ -27,9 +29,14 @@ const ProductsClient = () => {
     (e: React.MouseEvent<HTMLButtonElement>) => {
       e.stopPropagation();
 
-      setProductToShow((prev) => {
-        return prev + 6;
-      });
+      setLoading(true);
+
+      setTimeout(() => {
+        setProductToShow((prev) => {
+          return prev + 6;
+        });
+        setLoading(false);
+      }, 1000);
     },
     []
   );
@@ -75,7 +82,7 @@ const ProductsClient = () => {
         {!isLoading && (
           <div className={btnWrapClasses}>
             <button type='button' onClick={handleSeeMore}>
-              See more...
+              {loading ? <ClipLoader size={10} color='#a00c1a' /> : 'See more...'}
             </button>
           </div>
         )}
