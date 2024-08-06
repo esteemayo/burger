@@ -1,8 +1,9 @@
 'use client';
 
-import Image from 'next/image';
-import Link from 'next/link';
 import { useMemo } from 'react';
+import Link from 'next/link';
+import { ClipLoader } from 'react-spinners';
+import Image from 'next/image';
 
 import { useCart } from '@/hooks/useCart';
 import { useCartControls } from '@/hooks/useCartControls';
@@ -13,7 +14,7 @@ import { formatCurrency } from '@/utils/formatCurrency';
 import './RelatedProduct.scss';
 
 const RelatedProduct = ({ product }: RelatedProductProps) => {
-  const { handleClick } = useCart(product);
+  const { isLoading, handleClick } = useCart(product);
   const { inCart, btnLabel } = useCartControls(product);
 
   const url = useMemo(() => {
@@ -28,10 +29,10 @@ const RelatedProduct = ({ product }: RelatedProductProps) => {
             <button
               type='button'
               className='relatedBtn'
-              disabled={inCart}
+              disabled={inCart ?? isLoading}
               onClick={handleClick}
             >
-              {btnLabel}
+              {true ? <ClipLoader size={20} color='#a00c1a' /> : btnLabel}
             </button>
           </span>
           <Image
