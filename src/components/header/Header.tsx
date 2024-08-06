@@ -9,8 +9,14 @@ import { useSearch } from '@/hooks/useSearch';
 import './Header.scss';
 
 const Header = () => {
-  const { searchQuery, inputRef, isLoading, handleChange, handleClear, handleSubmit } =
-    useSearch();
+  const {
+    searchQuery,
+    inputRef,
+    isLoading,
+    handleChange,
+    handleClear,
+    handleSubmit
+  } = useSearch();
 
   const btnClearClasses = useMemo(() => {
     return searchQuery.length > 0 ? 'btnClear show' : 'btnClear';
