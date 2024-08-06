@@ -46,7 +46,7 @@ const ProductsClient = () => {
   }, [data?.length, isLoading]);
 
   const btnWrapClasses = useMemo(() => {
-    return productToShow < data?.length ? 'btnContainer show' : 'btnContainer';
+    return productToShow < data?.length ? 'btnContainer show' : 'btnContainer hide';
   }, [data?.length, productToShow]);
 
   useEffect(() => {
