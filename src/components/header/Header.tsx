@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { useMemo } from 'react';
+import { ClipLoader } from 'react-spinners';
 
 import { useSearch } from '@/hooks/useSearch';
 
@@ -38,14 +39,15 @@ const Header = () => {
             />
             <button
               type='button'
-              disabled={isLoading}
               className={btnClearClasses}
               onClick={handleClear}
             >
               Clear
             </button>
           </div>
-          <button className='searchBtn'>Find products</button>
+          <button disabled={isLoading} className='searchBtn'>
+            {isLoading ? <ClipLoader size={20} color='#fff' /> : 'Find products'}
+          </button>
         </form>
       </div>
     </header>
