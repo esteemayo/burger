@@ -8,6 +8,7 @@ import { ClipLoader } from 'react-spinners';
 import EmptyState from '@/components/emptyState/EmptyState';
 import ProductLists from '@/components/productLists/ProductLists';
 
+import { ProductType } from '@/types';
 import { getProducts } from '@/services/productService';
 
 import './Products.scss';
@@ -21,8 +22,8 @@ const ProductsClient = () => {
     },
   });
 
+  const [data, setData] = useState<ProductType[]>([]);
   const [loading, setLoading] = useState(false);
-  const [data, setData] = useState([]);
   const [productToShow, setProductToShow] = useState(6);
 
   const handleSeeMore = useCallback(
@@ -46,7 +47,9 @@ const ProductsClient = () => {
   }, [data?.length, isLoading]);
 
   const btnWrapClasses = useMemo(() => {
-    return productToShow < data?.length ? 'btnContainer show' : 'btnContainer hide';
+    return productToShow < data?.length
+      ? 'btnContainer show'
+      : 'btnContainer hide';
   }, [data?.length, productToShow]);
 
   useEffect(() => {
@@ -82,7 +85,11 @@ const ProductsClient = () => {
         {!isLoading && (
           <div className={btnWrapClasses}>
             <button type='button' disabled={loading} onClick={handleSeeMore}>
-              {loading ? <ClipLoader size={20} color='#a00c1a' /> : 'See more...'}
+              {loading ? (
+                <ClipLoader size={20} color='#a00c1a' />
+              ) : (
+                'See more...'
+              )}
             </button>
           </div>
         )}
