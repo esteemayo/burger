@@ -48,7 +48,7 @@ export const validateRegisterInputs = (data: RegisterData) => {
   if (!phone) {
     errors.phone = 'Phone number is required';
   } else {
-    const regEx = /^(?!1)(\d{3})(\d{4})$/;
+    const regEx = /^(?!1)(\d{3})(\d{3})(\d{4})$/;
     if (!phone.match(regEx)) {
       errors.phone = 'Phone number must be valid';
     }
