@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useMemo } from 'react';
+import { ClipLoader } from 'react-spinners';
 
 import { useCart } from '@/hooks/useCart';
 import { useCartControls } from '@/hooks/useCartControls';
@@ -13,7 +14,7 @@ import { formatCurrency } from '@/utils/formatCurrency';
 import './ProductCard.scss';
 
 const ProductCard = ({ product }: ProductCardProps) => {
-  const { handleClick } = useCart(product);
+  const { isLoading, handleClick } = useCart(product);
   const { inCart, btnLabel } = useCartControls(product);
 
   const url = useMemo(() => {
@@ -30,7 +31,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
             disabled={inCart}
             onClick={handleClick}
           >
-            {btnLabel}
+            {true ? <ClipLoader size={10} color='#a00c1a' /> : btnLabel}
           </button>
         </span>
         <Image
