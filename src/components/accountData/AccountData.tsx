@@ -56,9 +56,8 @@ const AccountData = ({ currentUser }: AccountDataProps) => {
 
     const userData = {
       ...data,
+      phone: `+1${data.phone}`,
     };
-
-    console.log(data)
 
     try {
       if (file) {
@@ -66,19 +65,19 @@ const AccountData = ({ currentUser }: AccountDataProps) => {
         userData.image = url;
       }
 
-      // const userId = currentUser?.id;
+      const userId = currentUser?.id;
 
-      // const res = await updateUserData(userId!, { ...userData });
+      const res = await updateUserData(userId!, { ...userData });
 
-      // const updatedData = {
-      //   name: res.data.name,
-      //   email: res.data.email,
-      //   phone: res.data.phone,
-      //   address: res.data.address,
-      // };
+      const updatedData = {
+        name: res.data.name,
+        email: res.data.email,
+        phone: res.data.phone,
+        address: res.data.address,
+      };
 
-      // update({ ...updatedData });
-      // toast.success('Account updated!');
+      update({ ...updatedData });
+      toast.success('Account updated!');
     } catch (err: unknown) {
       console.log(err);
     } finally {
