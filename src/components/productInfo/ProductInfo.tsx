@@ -1,5 +1,6 @@
 'use client';
 
+import { ClipLoader } from 'react-spinners';
 import { useMemo } from 'react';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
@@ -16,7 +17,7 @@ import './ProductInfo.scss';
 
 const ProductInfo = ({ product, currentUser, onUpdate }: ProductInfoProps) => {
   const { btnLabel, inCart } = useCartControls(product);
-  const { quantity, handleChange, handleClick } = useCart(product);
+  const { quantity, isLoading, handleChange, handleClick } = useCart(product);
 
   const ratings = useMemo(() => {
     return (
@@ -60,9 +61,13 @@ const ProductInfo = ({ product, currentUser, onUpdate }: ProductInfoProps) => {
             max={10}
             onChange={handleChange}
           />
-          <button type='button' disabled={inCart} onClick={handleClick}>
+          <button
+            type='button'
+            disabled={inCart ?? isLoading}
+            onClick={handleClick}
+          >
             <ShoppingCartIcon />
-            {btnLabel}
+            {isLoading ? <ClipLoader size={13} color='#fff' /> : btnLabel}
           </button>
         </div>
       </div>
