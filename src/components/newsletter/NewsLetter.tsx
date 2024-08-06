@@ -41,7 +41,7 @@ const NewsLetter = () => {
         <div className='formWrap'>
           <form onSubmit={handleSubmit}>
             <input type='email' placeholder='Your email address' />
-            <button type='submit'>
+            <button type='submit' disabled={isLoading}>
               {isLoading ? (
                 <ClipLoader size={20} color='#a00c1a' />
               ) : (
