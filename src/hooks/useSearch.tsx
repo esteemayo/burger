@@ -45,7 +45,7 @@ export const useSearch = () => {
           }
 
           setIsLoading(false);
-        }, 10000);
+        }, 20000);
       }
     },
     [isOpen, onClose, router, searchQuery]
