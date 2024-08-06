@@ -1,7 +1,7 @@
 'use client';
 
-import Image from 'next/image';
 import { useMemo } from 'react';
+import Image from 'next/image';
 import { ClipLoader } from 'react-spinners';
 
 import { useSearch } from '@/hooks/useSearch';
