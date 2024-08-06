@@ -1,12 +1,15 @@
 'use client';
 
+import { useCallback, useState } from 'react';
 import { toast } from 'react-toastify';
-import { useCallback } from 'react';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
+import { ClipLoader } from 'react-spinners';
 
 import './NewsLetter.scss';
 
 const NewsLetter = () => {
+  const [isLoading, setIsLoading] = useState(false);
+
   const handleSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -14,10 +17,16 @@ const NewsLetter = () => {
     const input = form.elements[0] as HTMLInputElement;
     const email = input.value;
 
-    console.log(email);
+    setIsLoading(true);
 
-    toast.success('Successfully subscribed to our newsletter');
-    form.reset();
+    setTimeout(() => {
+      console.log(email);
+
+      toast.success('Subscribed to our newsletter!');
+      form.reset();
+
+      setIsLoading(false);
+    }, 1000);
   }, []);
 
   return (
@@ -32,7 +41,13 @@ const NewsLetter = () => {
         <div className='formWrap'>
           <form onSubmit={handleSubmit}>
             <input type='email' placeholder='Your email address' />
-            <button type='submit'>Subscribe</button>
+            <button type='submit'>
+              {isLoading ? (
+                <ClipLoader size={20} color='#a00c1a' />
+              ) : (
+                'Subscribe'
+              )}
+            </button>
           </form>
         </div>
       </div>
