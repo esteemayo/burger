@@ -41,12 +41,8 @@ export const useCartControls = (product?: CartItem) => {
   }, [session, totalItems]);
 
   const btnLabel = useMemo(() => {
-    if (!session) {
-      return 'Add to cart';
-    }
-
     return inCart ? 'In cart' : 'Add to cart';
-  }, [inCart, session]);
+  }, [inCart]);
 
   return {
     inCart,
