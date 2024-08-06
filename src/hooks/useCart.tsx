@@ -15,6 +15,7 @@ export const useCart = (product: CartItem) => {
   const addToCart = useCartStore((store) => store.addToCart);
 
   const [quantity, setQuantity] = useState(1);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     setQuantity(+e.target.value);
@@ -34,16 +35,22 @@ export const useCart = (product: CartItem) => {
         return;
       }
 
-      addToCart({ ...product, quantity });
-      setQuantity(1);
+      setIsLoading(true);
 
-      toast.success('Product added to cart!');
+      setTimeout(() => {
+        addToCart({ ...product, quantity });
+        setQuantity(1);
+
+        toast.success('Product added to cart!');
+        setIsLoading(false);
+      }, 1000);
     },
     [addToCart, product, quantity, router, session]
   );
 
   return {
     quantity,
+    isLoading,
     setQuantity,
     handleChange,
     handleClick,
