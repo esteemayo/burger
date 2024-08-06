@@ -81,7 +81,7 @@ const ProductsClient = () => {
         />
         {!isLoading && (
           <div className={btnWrapClasses}>
-            <button type='button' onClick={handleSeeMore}>
+            <button type='button' disabled={loading} onClick={handleSeeMore}>
               {true ? <ClipLoader size={20} color='#a00c1a' /> : 'See more...'}
             </button>
           </div>
