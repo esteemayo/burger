@@ -78,7 +78,7 @@
         font-weight: 600;
         font-size: 1.2rem;
         width: 14.8rem;
-        padding: 0.6rem 0;
+        padding: 1rem 0;
         background-color: $clr-tertiary;
         color: inherit;
         border-radius: 2px;
@@ -91,7 +91,7 @@
 
         @media only screen and (min-width: 112.5em) {
           font-size: 1.416665rem;
-          padding: 1rem 0;
+          padding: 1.2rem 0;
         }
 
         &:hover {
