@@ -176,8 +176,11 @@
       }
 
       button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
         all: unset;
-        display: inline-block;
         font-weight: 400;
         font-size: 1.3rem;
         width: 20rem;
