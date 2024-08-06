@@ -7,11 +7,13 @@ import { useSidebar } from './useSidebar';
 
 export const useSearch = () => {
   const router = useRouter();
-  
+
   const isOpen = useSidebar((store) => store.isOpen);
   const onClose = useSidebar((store) => store.onClose);
-  
+
   const inputRef = useRef<HTMLInputElement>(null);
+
+  const [isLoading, setIsLoading] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
 
   const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
@@ -30,14 +32,20 @@ export const useSearch = () => {
       e.preventDefault();
 
       if (searchQuery) {
-        const encodedSearchQuery = encodeURI(searchQuery);
+        setIsLoading(true);
 
-        router.push(`/search?q=${encodedSearchQuery}`);
-        setSearchQuery('');
+        setTimeout(() => {
+          const encodedSearchQuery = encodeURI(searchQuery);
 
-        if (isOpen) {
-          onClose();
-        }
+          router.push(`/search?q=${encodedSearchQuery}`);
+          setSearchQuery('');
+
+          if (isOpen) {
+            onClose();
+          }
+
+          setIsLoading(false);
+        }, 5000);
       }
     },
     [isOpen, onClose, router, searchQuery]
@@ -46,6 +54,7 @@ export const useSearch = () => {
   return {
     searchQuery,
     inputRef,
+    isLoading,
     handleChange,
     handleClear,
     handleSubmit,
