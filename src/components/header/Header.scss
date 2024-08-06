@@ -300,11 +300,7 @@
         }
 
         .btnClear {
-          display: none;
-          visibility: hidden;
-          opacity: 0;
-          z-index: -1;
-
+          position: relative;
           border: none;
           outline: none;
           font-weight: 700;
@@ -320,6 +316,13 @@
             visibility: visible;
             opacity: 1;
             z-index: 1000;
+          }
+
+          &.hide {
+            display: none;
+            visibility: hidden;
+            opacity: 0;
+            z-index: -1;
           }
 
           @include xl {

@@ -19,7 +19,7 @@ const Header = () => {
   } = useSearch();
 
   const btnClearClasses = useMemo(() => {
-    return searchQuery.length > 0 ? 'btnClear show' : 'btnClear';
+    return searchQuery.length > 0 ? 'btnClear show' : 'btnClear hide';
   }, [searchQuery.length]);
 
   return (
