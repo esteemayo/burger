@@ -49,7 +49,7 @@ export const validateRegisterInputs = (data: RegisterData) => {
     errors.phone = 'Phone number is required';
   } else {
     const regEx = /^(?!1)(\d{3})(\d{4})$/;
-    if (!email.match(regEx)) {
+    if (!phone.match(regEx)) {
       errors.phone = 'Phone number must be a valid phone number';
     }
   }
