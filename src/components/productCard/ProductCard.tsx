@@ -28,10 +28,10 @@ const ProductCard = ({ product }: ProductCardProps) => {
           <button
             type='button'
             className='cartButton'
-            disabled={inCart}
+            disabled={inCart ?? isLoading}
             onClick={handleClick}
           >
-            {true ? <ClipLoader size={20} color='#a00c1a' /> : btnLabel}
+            {isLoading ? <ClipLoader size={20} color='#a00c1a' /> : btnLabel}
           </button>
         </span>
         <Image
