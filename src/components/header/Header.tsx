@@ -8,7 +8,7 @@ import { useSearch } from '@/hooks/useSearch';
 import './Header.scss';
 
 const Header = () => {
-  const { searchQuery, inputRef, handleChange, handleClear, handleSubmit } =
+  const { searchQuery, inputRef, isLoading, handleChange, handleClear, handleSubmit } =
     useSearch();
 
   const btnClearClasses = useMemo(() => {
@@ -37,8 +37,9 @@ const Header = () => {
               onChange={handleChange}
             />
             <button
-              className={btnClearClasses}
               type='button'
+              disabled={isLoading}
+              className={btnClearClasses}
               onClick={handleClear}
             >
               Clear
