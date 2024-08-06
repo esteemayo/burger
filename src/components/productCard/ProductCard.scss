@@ -70,7 +70,10 @@
       justify-content: center;
 
       .cartButton {
-        display: inline-block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
         border: none;
         outline: none;
         text-transform: uppercase;
