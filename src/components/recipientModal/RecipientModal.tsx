@@ -67,7 +67,7 @@ const RecipientModal = () => {
     try {
       const newData = {
         ...data,
-        phone: `+234${data.phone}`,
+        phone: `+1${data.phone}`,
       };
 
       const res = await updateUserData(userId!, { ...newData });
