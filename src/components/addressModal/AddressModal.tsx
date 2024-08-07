@@ -5,8 +5,8 @@ import { toast } from 'react-toastify';
 import { useCallback, useState } from 'react';
 import { useRouter } from 'next/navigation';
 
-import Input from '../input/Input';
 import Modal from '../modal/Modal';
+import AddressInputs from '../addressInputs/AddressInputs';
 
 import { useAddressModal } from '@/hooks/useAddressModal';
 import { validateAddressInputs } from '@/validations/address';
@@ -90,32 +90,13 @@ const AddressModal = () => {
   let bodyContent: JSX.Element | undefined;
 
   bodyContent = (
-    <>
-      <Input
-        name='state'
-        label='State'
-        value={state}
-        placeholder='State'
-        onChange={handleChange}
-        error={errors.state}
-      />
-      <Input
-        name='city'
-        label='City'
-        value={city}
-        placeholder='City'
-        onChange={handleChange}
-        error={errors.city}
-      />
-      <Input
-        name='street'
-        label='Street'
-        value={street}
-        placeholder='Street'
-        onChange={handleChange}
-        error={errors.street}
-      />
-    </>
+    <AddressInputs
+      city={city}
+      state={state}
+      street={street}
+      errors={errors}
+      onChange={handleChange}
+    />
   );
 
   return (
