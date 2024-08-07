@@ -10,10 +10,10 @@ import AuthInfo from '@/components/authInfo/AuthInfo';
 import Input from '@/components/input/Input';
 import DropZone from '@/components/dropZone/DropZone';
 import Button from '@/components/button/Button';
-import GoogleButton from '@/components/google/GoogleButton';
 import GenderSelect from '@/components/genderSelect/GenderSelect';
-import PhoneInput from '@/components/phoneInput/PhoneInput';
+import GoogleButton from '@/components/google/GoogleButton';
 import SlideButtons from '@/components/slideButtons/SlideButtons';
+import PhoneInput from '@/components/phoneInput/PhoneInput';
 
 import { useForm } from '@/hooks/useForm';
 import { upload } from '@/utils/upload';
