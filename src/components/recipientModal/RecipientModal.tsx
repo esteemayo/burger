@@ -54,6 +54,7 @@ const RecipientModal = () => {
   const onSubmit = useCallback(async () => {
     if (!session) {
       router.push('/login');
+      onClose();
       return;
     }
 
