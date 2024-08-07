@@ -1,5 +1,3 @@
-'use client';
-
 import { PhoneInputProps } from '@/types';
 import ErrorMessage from '../errorMessage/ErrorMessage';
 
