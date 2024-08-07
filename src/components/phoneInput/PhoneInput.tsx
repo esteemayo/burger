@@ -1,5 +1,8 @@
-import { PhoneInputProps } from '@/types';
+'use client';
+
 import ErrorMessage from '../errorMessage/ErrorMessage';
+
+import { PhoneInputProps } from '@/types';
 
 import './PhoneInput.scss';
 
