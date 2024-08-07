@@ -5,9 +5,8 @@ import { toast } from 'react-toastify';
 import { useCallback, useState } from 'react';
 import { useRouter } from 'next/navigation';
 
-import Input from '../input/Input';
 import Modal from '../modal/Modal';
-import PhoneInput from '../phoneInput/PhoneInput';
+import RecipientInputs from '../recipientInputs/RecipientInputs';
 
 import { useRecipient } from '@/hooks/useRecipientModal';
 import { validateRecipientInputs } from '@/validations/recipient';
@@ -95,35 +94,13 @@ const RecipientModal = () => {
   let bodyContent: JSX.Element | undefined;
 
   bodyContent = (
-    <>
-      <Input
-        name='name'
-        label='Name'
-        value={name}
-        placeholder='Name'
-        onChange={handleChange}
-        error={errors.name}
-      />
-      <Input
-        name='email'
-        type='email'
-        label='Email address'
-        value={email}
-        placeholder='Email address'
-        onChange={handleChange}
-        error={errors.email}
-        dimension='large'
-      />
-      <PhoneInput
-        name='phone'
-        type='number'
-        label='Phone Number'
-        value={phone}
-        placeholder='(202) 555-1234'
-        onChange={handleChange}
-        error={errors.phone}
-      />
-    </>
+    <RecipientInputs
+      name={name}
+      email={email}
+      phone={phone}
+      errors={errors}
+      onChange={handleChange}
+    />
   );
 
   return (
