@@ -28,7 +28,6 @@ const CheckoutInfo = () => {
 
       if (!session) {
         router.push('/login');
-        onClose();
         return;
       }
 
