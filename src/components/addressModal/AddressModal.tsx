@@ -54,6 +54,7 @@ const AddressModal = () => {
   const onSubmit = useCallback(async () => {
     if (!session) {
       router.push('/login');
+      onClose();
       return;
     }
 
