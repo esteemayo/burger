@@ -23,7 +23,7 @@ export const validateAccountData = (data: UserData) => {
   } else {
     const regEx = /^(?!1)(\d{3})(\d{3})(\d{4})$/;
     if (!phone.match(regEx)) {
-      errors.phone = 'Phone number must be valid';
+      errors.phone = 'Phone number is not valid';
     }
   }
 
