@@ -1,3 +1,5 @@
+'use client';
+
 import Input from '../input/Input';
 import PhoneInput from '../phoneInput/PhoneInput';
 
