@@ -101,7 +101,7 @@ const RegisterForm = () => {
 
     const credentials = {
       ...data,
-      phone: `+234${data.phone}`,
+      phone: `+1${data.phone}`,
       address: `${data.street}, ${data.city}, ${data.state}`,
     };
 
