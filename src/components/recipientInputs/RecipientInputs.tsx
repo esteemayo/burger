@@ -1,7 +1,15 @@
 import Input from '../input/Input';
 import PhoneInput from '../phoneInput/PhoneInput';
 
-const RecipientInputs = ({ name, email, phone, errors, onChange }) => {
+import { RecipientInputsProps } from '@/types';
+
+const RecipientInputs = ({
+  name,
+  email,
+  phone,
+  errors,
+  onChange,
+}: RecipientInputsProps) => {
   return (
     <>
       <Input
