@@ -1,6 +1,16 @@
+'use client';
+
 import Input from '../input/Input';
 
-const AddressInputs = ({ city, state, street, errors, onChange }) => {
+import { AddressInputsPropa } from '@/types';
+
+const AddressInputs = ({
+  city,
+  state,
+  street,
+  errors,
+  onChange,
+}: AddressInputsPropa) => {
   return (
     <>
       <Input
