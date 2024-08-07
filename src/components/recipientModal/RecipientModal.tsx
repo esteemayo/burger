@@ -119,7 +119,7 @@ const RecipientModal = () => {
         type='number'
         label='Phone Number'
         value={phone}
-        placeholder='+1 (202) 555-1234'
+        placeholder='(202) 555-1234'
         onChange={handleChange}
         error={errors.phone}
       />
