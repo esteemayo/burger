@@ -145,7 +145,7 @@ const AccountData = ({ currentUser }: AccountDataProps) => {
               type='number'
               label='Phone number'
               value={phone}
-              placeholder={currentUser?.phone ?? '+1 (202) 555-1234'}
+              placeholder={currentUser?.phone ?? '(202) 555-1234'}
               onChange={handleChange}
               error={errors.phone}
             />
