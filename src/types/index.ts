@@ -599,6 +599,14 @@ export interface RecipientErrors {
   phone?: string;
 }
 
+export interface RecipientInputsProps {
+  name: string;
+  email: string;
+  phone: string;
+  errors: RecipientErrors;
+  onChange(e: React.ChangeEvent<HTMLInputElement>): void;
+}
+
 export interface AddressData {
   state: string;
   city: string;
