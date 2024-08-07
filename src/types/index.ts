@@ -619,6 +619,14 @@ export interface AddressErrors {
   street?: string;
 }
 
+export interface AddressInputsPropa {
+  city: string;
+  state: string;
+  street: string;
+  errors: AddressErrors;
+  onChange(e: React.ChangeEvent<HTMLInputElement>): void;
+}
+
 export interface ReviewData {
   desc: string;
   consent?: boolean;
