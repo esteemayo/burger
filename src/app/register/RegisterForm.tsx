@@ -237,7 +237,7 @@ const RegisterForm = () => {
           type='number'
           label='Phone number'
           value={phone}
-          placeholder='+1 (202) 555-1234'
+          placeholder='(202) 555-1234'
           onChange={handleChange}
           error={errors['phone']}
         />
