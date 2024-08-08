@@ -1,11 +1,11 @@
 'use client';
 
 import { useSession } from 'next-auth/react';
-import Image from 'next/image';
 import { useCallback, useState } from 'react';
 import { toast } from 'react-toastify';
 
 import DataForm from '../dataForm/DataForm';
+import AccountAvatar from '../accountAvatar/AccountAvatar';
 
 import { useForm } from '@/hooks/useForm';
 import { useAvatar } from '@/hooks/useAvatar';
@@ -94,29 +94,7 @@ const AccountData = ({ currentUser }: AccountDataProps) => {
 
   return (
     <div className='acccountData'>
-      <div className='avatarWrap'>
-        <div className='dataImg'>
-          <Image
-            src={
-              file ? URL.createObjectURL(file as Blob | MediaSource) : avatar
-            }
-            width={50}
-            height={50}
-            alt='avatar'
-            className='userAvatar'
-          />
-          <label htmlFor='file'>
-            <Image
-              src='/svg/pencil.svg'
-              width={17}
-              height={17}
-              alt='pencil icon'
-              className='icon'
-            />
-          </label>
-          <input id='file' name='file' type='file' onChange={handleFile} />
-        </div>
-      </div>
+      <AccountAvatar file={file} avatar={avatar} onChange={handleFile} />
       <DataForm
         name={name}
         email={email}
