@@ -376,6 +376,12 @@ export interface UserDataErrors {
   address?: string;
 }
 
+export interface AccountAvatarProps {
+  file: File;
+  avatar: string;
+  onChange(e: React.ChangeEvent<HTMLInputElement>): void;
+}
+
 export interface DataFormProps {
   name: string;
   email: string;
