@@ -376,6 +376,22 @@ export interface UserDataErrors {
   address?: string;
 }
 
+export interface DataFormProps {
+  name: string;
+  email: string;
+  phone: string;
+  address: string;
+  errors: UserDataErrors;
+  loading: boolean;
+  currentUser: CurrentUserType | undefined;
+  onChange(
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ): void;
+  onSubmit(): void;
+}
+
 export interface UserPassword {
   password: string;
   confirmPassword: string;
