@@ -16,8 +16,6 @@ import { validateAccountData } from '@/validations/accountData';
 import { updateUserData } from '@/services/userService';
 import { CurrentUserType, UserData, UserDataErrors } from '@/types';
 
-import './AccountData.scss';
-
 interface AccountDataProps {
   currentUser: CurrentUserType | undefined;
 }
