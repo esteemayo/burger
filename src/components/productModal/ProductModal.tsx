@@ -68,12 +68,14 @@ const ProductModal = () => {
   );
 
   const handleAddIngredient = useCallback(
-    (e: React.ChangeEvent<HTMLInputElement>) => {
-      if (ingredients.includes(e.target.value)) {
+    ({target: input }: React.ChangeEvent<HTMLInputElement>) => {
+      const { value } = input;
+
+      if (ingredients.includes(value)) {
         return;
       }
 
-      setIngredient(e.target.value);
+      setIngredient(value);
     },
     [ingredients]
   );
