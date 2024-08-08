@@ -4,6 +4,8 @@ import Spinner from '../spinner/Spinner';
 import Input from '../input/Input';
 import PhoneInput from '../phoneInput/PhoneInput';
 
+import { DataFormProps } from '@/types';
+
 import './DataForm.scss';
 
 const DataForm = ({
@@ -16,7 +18,7 @@ const DataForm = ({
   currentUser,
   onChange,
   onSubmit,
-}) => {
+}: DataFormProps) => {
   return (
     <div className='dataForm'>
       <form onSubmit={onSubmit}>
