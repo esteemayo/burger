@@ -198,6 +198,7 @@ const ProductModal = () => {
       <ProductImage
         ingredient={ingredient}
         ingredients={ingredients}
+        loading={spinner}
         error={errors.ingredients}
         onAdd={handleIngredients}
         onChange={handleAddIngredient}

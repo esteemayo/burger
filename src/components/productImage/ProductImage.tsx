@@ -14,8 +14,8 @@ import './ProductImage.scss';
 const ProductImage = ({
   ingredient,
   ingredients,
-  error,
   loading,
+  error,
   onAdd,
   onChange,
   onDelete,
