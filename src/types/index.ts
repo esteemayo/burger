@@ -596,6 +596,7 @@ export interface ProductImageProps {
   ingredient: string;
   ingredients?: string[];
   error?: string;
+  loading?: boolean;
   onAdd(e: React.MouseEvent<HTMLButtonElement>): void;
   onChange(e: React.ChangeEvent<HTMLInputElement>): void;
   onDelete(e: React.MouseEvent<HTMLSpanElement>, value: string): void;

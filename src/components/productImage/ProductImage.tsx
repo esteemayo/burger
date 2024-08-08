@@ -15,6 +15,7 @@ const ProductImage = ({
   ingredient,
   ingredients,
   error,
+  loading,
   onAdd,
   onChange,
   onDelete,
