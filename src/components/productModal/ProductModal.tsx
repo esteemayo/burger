@@ -88,7 +88,10 @@ const ProductModal = () => {
       setSpinner(true);
       
       setTimeout(() => {
-        setIngredients((prev) => [...prev, ingredient]);
+        setIngredients((prev) => {
+          return [...prev, ingredient];
+        });
+
         setIngredient('');
         setSpinner(false);
       }, 1000);
