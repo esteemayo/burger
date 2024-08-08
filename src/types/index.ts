@@ -382,7 +382,7 @@ export interface AccountAvatarProps {
   onChange(e: React.ChangeEvent<HTMLInputElement>): void;
 }
 
-export interface DataFormProps {
+export interface AccountDataFormProps {
   name: string;
   email: string;
   phone: string;
