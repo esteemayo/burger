@@ -126,7 +126,7 @@ const AccountData = ({ currentUser }: AccountDataProps) => {
         loading={isLoading}
         currentUser={currentUser}
         onChange={handleChange}
-        onSubmit={onSubmitHandler}
+        onSubmit={handleSubmit}
       />
     </div>
   );
