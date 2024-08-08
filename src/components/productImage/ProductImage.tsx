@@ -54,8 +54,12 @@ const ProductImage = ({
               );
             })}
           </div>
-          <button type='button' disabled={!!disableBtn || loading} onClick={onAdd}>
-            {true ? <ClipLoader size={10} color='#a00c1a' /> : 'Add'}
+          <button
+            type='button'
+            disabled={!!disableBtn || loading}
+            onClick={onAdd}
+          >
+            {loading ? <ClipLoader size={13} color='#a00c1a' /> : 'Add'}
           </button>
         </div>
       </div>
