@@ -4,6 +4,8 @@ import Spinner from '../spinner/Spinner';
 import Input from '../input/Input';
 import PhoneInput from '../phoneInput/PhoneInput';
 
+import './DataForm.scss';
+
 const DataForm = ({
   name,
   email,
