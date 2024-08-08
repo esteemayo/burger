@@ -6,9 +6,9 @@ import PhoneInput from '../phoneInput/PhoneInput';
 
 import { DataFormProps } from '@/types';
 
-import './DataForm.scss';
+import './AccountDataForm.scss';
 
-const DataForm = ({
+const AccountDataForm = ({
   name,
   email,
   phone,
@@ -20,7 +20,7 @@ const DataForm = ({
   onSubmit,
 }: DataFormProps) => {
   return (
-    <div className='dataForm'>
+    <div className='accountDataForm'>
       <form onSubmit={onSubmit}>
         <div className='inputWrap'>
           <Input
@@ -67,4 +67,4 @@ const DataForm = ({
   );
 };
 
-export default DataForm;
+export default AccountDataForm;
