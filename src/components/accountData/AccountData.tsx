@@ -4,7 +4,7 @@ import { useSession } from 'next-auth/react';
 import { toast } from 'react-toastify';
 import { useCallback, useState } from 'react';
 
-import DataForm from '../dataForm/DataForm';
+import DataForm from '../accountDataForm/DataForm';
 import AccountAvatar from '../accountAvatar/AccountAvatar';
 
 import { useForm } from '@/hooks/useForm';
