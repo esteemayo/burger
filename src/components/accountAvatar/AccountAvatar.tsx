@@ -4,6 +4,8 @@ import Image from 'next/image';
 
 import { AccountAvatarProps } from '@/types';
 
+import './AccountAvatar.scss';
+
 const AccountAvatar = ({ file, avatar, onChange }: AccountAvatarProps) => {
   return (
     <div className='accountAvatar'>
