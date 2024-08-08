@@ -1,7 +1,8 @@
 'use client';
 
-import Image from 'next/image';
 import { useMemo } from 'react';
+import Image from 'next/image';
+import { ClipLoader } from 'react-spinners';
 
 import DropZone from '../dropZone/DropZone';
 import Input from '../input/Input';
@@ -53,8 +54,8 @@ const ProductImage = ({
               );
             })}
           </div>
-          <button type='button' disabled={!!disableBtn} onClick={onAdd}>
-            Add
+          <button type='button' disabled={!!disableBtn || loading} onClick={onAdd}>
+            {loading ? <ClipLoader size={10} color='#a00c1a' /> : 'Add'}
           </button>
         </div>
       </div>
