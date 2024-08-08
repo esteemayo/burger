@@ -2,7 +2,9 @@
 
 import Image from 'next/image';
 
-const AccountAvatar = ({ file, avatar, onChange }) => {
+import { AccountAvatarProps } from '@/types';
+
+const AccountAvatar = ({ file, avatar, onChange }: AccountAvatarProps) => {
   return (
     <div className='accountAvatar'>
       <div className='dataImg'>
