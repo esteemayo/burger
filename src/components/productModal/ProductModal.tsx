@@ -41,7 +41,7 @@ const ProductModal = () => {
   const [data, setData] = useState(initialState);
   const [ingredients, setIngredients] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [spinner, setSpinner] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const onPrev = useCallback(() => {
     setStep((value) => {
@@ -85,7 +85,7 @@ const ProductModal = () => {
     (e: React.MouseEvent<HTMLButtonElement>) => {
       e.stopPropagation();
 
-      setSpinner(true);
+      setLoading(true);
       
       setTimeout(() => {
         setIngredients((prev) => {
@@ -93,7 +93,7 @@ const ProductModal = () => {
         });
 
         setIngredient('');
-        setSpinner(false);
+        setLoading(false);
       }, 1000);
     },
     [ingredient]
@@ -198,7 +198,7 @@ const ProductModal = () => {
       <ProductImage
         ingredient={ingredient}
         ingredients={ingredients}
-        loading={spinner}
+        loading={loading}
         error={errors.ingredients}
         onAdd={handleIngredients}
         onChange={handleAddIngredient}
