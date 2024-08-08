@@ -4,8 +4,8 @@ import { useSession } from 'next-auth/react';
 import { toast } from 'react-toastify';
 import { useCallback, useState } from 'react';
 
-import DataForm from '../accountDataForm/DataForm';
 import AccountAvatar from '../accountAvatar/AccountAvatar';
+import AccountDataForm from '../accountDataForm/AccountDataForm';
 
 import { useForm } from '@/hooks/useForm';
 import { useAvatar } from '@/hooks/useAvatar';
@@ -95,7 +95,7 @@ const AccountData = ({ currentUser }: AccountDataProps) => {
   return (
     <div className='acccountData'>
       <AccountAvatar file={file} avatar={avatar} onChange={handleFile} />
-      <DataForm
+      <AccountDataForm
         name={name}
         email={email}
         phone={phone}
