@@ -377,7 +377,7 @@ export interface UserDataErrors {
 }
 
 export interface AccountAvatarProps {
-  file: File;
+  file: File | undefined;
   avatar: string;
   onChange(e: React.ChangeEvent<HTMLInputElement>): void;
 }
