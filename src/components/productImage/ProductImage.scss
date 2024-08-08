@@ -96,15 +96,15 @@
       button {
         display: flex;
         align-items: center;
-        justify-content: flex-end;
+        justify-content: center;
 
-        all: unset;
+        border: none;
+        outline: none;
         text-align: center;
         font-weight: 400;
         font-size: 1.3rem;
         width: 5rem;
-        height: 2.5rem;
-        padding: 0.5rem;
+        padding: 1rem;
         background-color: $clr-yellow;
         color: $clr-secondary;
         border-radius: 0.5rem;
