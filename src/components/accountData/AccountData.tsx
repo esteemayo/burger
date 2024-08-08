@@ -5,9 +5,7 @@ import Image from 'next/image';
 import { useCallback, useState } from 'react';
 import { toast } from 'react-toastify';
 
-import Spinner from '../spinner/Spinner';
-import Input from '../input/Input';
-import PhoneInput from '../phoneInput/PhoneInput';
+import DataForm from '../dataForm/DataForm';
 
 import { useForm } from '@/hooks/useForm';
 import { useAvatar } from '@/hooks/useAvatar';
@@ -119,50 +117,17 @@ const AccountData = ({ currentUser }: AccountDataProps) => {
           <input id='file' name='file' type='file' onChange={handleFile} />
         </div>
       </div>
-      <div className='dataForm'>
-        <form onSubmit={handleSubmit}>
-          <div className='inputWrap'>
-            <Input
-              name='name'
-              label='Name'
-              value={name}
-              placeholder={currentUser?.name ?? 'Name'}
-              onChange={handleChange}
-              error={errors.name}
-            />
-            <Input
-              name='email'
-              type='email'
-              label='Email address'
-              value={email}
-              placeholder={currentUser?.email ?? 'Email address'}
-              onChange={handleChange}
-              error={errors.email}
-              dimension='large'
-            />
-            <PhoneInput
-              name='phone'
-              type='number'
-              label='Phone number'
-              value={phone}
-              placeholder={currentUser?.phone ?? '(202) 555-1234'}
-              onChange={handleChange}
-              error={errors.phone}
-            />
-            <Input
-              name='address'
-              label='Address'
-              value={address}
-              placeholder={currentUser?.address ?? 'Contact address'}
-              onChange={handleChange}
-              error={errors.address}
-            />
-          </div>
-          <div className='dataBtnWrap'>
-            <button type='submit'>{isLoading ? <Spinner /> : 'Update'}</button>
-          </div>
-        </form>
-      </div>
+      <DataForm
+        name={name}
+        email={email}
+        phone={phone}
+        address={address}
+        errors={errors}
+        loading={isLoading}
+        currentUser={currentUser}
+        onChange={handleChange}
+        onSubmit={onSubmitHandler}
+      />
     </div>
   );
 };
