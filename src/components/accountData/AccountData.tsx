@@ -1,8 +1,8 @@
 'use client';
 
 import { useSession } from 'next-auth/react';
-import { useCallback, useState } from 'react';
 import { toast } from 'react-toastify';
+import { useCallback, useState } from 'react';
 
 import DataForm from '../dataForm/DataForm';
 import AccountAvatar from '../accountAvatar/AccountAvatar';
