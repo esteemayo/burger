@@ -395,7 +395,7 @@ export interface DataFormProps {
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
     >
   ): void;
-  onSubmit(): void;
+  onSubmit(e: React.FormEvent<HTMLFormElement>): void;
 }
 
 export interface UserPassword {
