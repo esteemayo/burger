@@ -361,6 +361,18 @@ export interface RegisterErrors {
   confirmPassword?: string;
 }
 
+export interface RegisterInfoProps {
+  name: string;
+  username: string;
+  email: string;
+  errors: RegisterErrors;
+  onChange(
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ): void;
+}
+
 export interface UserData {
   name: string;
   email: string;
