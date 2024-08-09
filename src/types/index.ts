@@ -373,6 +373,18 @@ export interface RegisterInfoProps {
   ): void;
 }
 
+export interface RegisterLocationProps {
+  street: string;
+  city: string;
+  state: string;
+  errors: RegisterErrors;
+  onChange(
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ): void;
+}
+
 export interface UserData {
   name: string;
   email: string;
