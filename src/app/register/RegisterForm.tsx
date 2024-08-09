@@ -15,6 +15,7 @@ import GoogleButton from '@/components/google/GoogleButton';
 import SlideButtons from '@/components/slideButtons/SlideButtons';
 import PhoneInput from '@/components/phoneInput/PhoneInput';
 import RegisterInfo from '@/components/registerInfo/RegisterInfo';
+import RegisterLocation from '@/components/registerLocation/RegisterLocation';
 
 import { useForm } from '@/hooks/useForm';
 import { upload } from '@/utils/upload';
@@ -179,33 +180,13 @@ const RegisterForm = () => {
 
   if (step === STEPS.LOCATION) {
     bodyContent = (
-      <>
-        <Input
-          name='street'
-          label='Street'
-          value={street}
-          placeholder='Enter your street'
-          onChange={handleChange}
-          error={errors['street']}
-        />
-        <Input
-          name='city'
-          label='City'
-          value={city}
-          placeholder='Enter your city'
-          onChange={handleChange}
-          error={errors['city']}
-          autoFocus
-        />
-        <Input
-          name='state'
-          label='State'
-          value={state}
-          placeholder='Enter your state'
-          onChange={handleChange}
-          error={errors['state']}
-        />
-      </>
+      <RegisterLocation
+        street={street}
+        city={city}
+        state={state}
+        errors={errors}
+        onChange={handleChange}
+      />
     );
   }
 
