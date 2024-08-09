@@ -1,9 +1,9 @@
 'use client';
 
-import Image from 'next/image';
 import { ClipLoader } from 'react-spinners';
 
 import { IngredientsProps } from '@/types';
+import Ingredient from '../ingredient/Ingredient';
 
 import './Ingredients.scss';
 
@@ -17,18 +17,13 @@ const Ingredients = ({
   return (
     <div className='ingredients'>
       <div className='wrapper'>
-        {ingredients?.map((item) => {
+        {ingredients?.map((ingredient) => {
           return (
-            <span key={item}>
-              {item}
-              <Image
-                src='/svg/x-mark.svg'
-                width={15}
-                height={15}
-                alt='delete icon'
-                onClick={(e) => onDelete(e, item)}
-              />
-            </span>
+            <Ingredient
+              key={ingredient}
+              ingredient={ingredient}
+              onDelete={onDelete}
+            />
           );
         })}
       </div>
