@@ -385,6 +385,24 @@ export interface RegisterLocationProps {
   ): void;
 }
 
+export interface RegisterCredentialProps {
+  phone: string;
+  password: string;
+  confirmPassword: string;
+  errors: RegisterErrors;
+  passwordIcon: 'icon show' | 'icon';
+  confirmIcon: 'icon show' | 'icon';
+  isPassword: boolean;
+  isConfirmPassword: boolean;
+  onChange(
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ): void;
+  onTogglePassword(e: React.MouseEvent<HTMLSpanElement>): void;
+  onToggleConfirm(e: React.MouseEvent<HTMLSpanElement>): void;
+}
+
 export interface UserData {
   name: string;
   email: string;
