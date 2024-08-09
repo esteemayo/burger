@@ -1,8 +1,10 @@
 import Image from 'next/image';
 
+import { IngredientProps } from '@/types';
+
 import './Ingredient.scss';
 
-const Ingredient = ({ ingredient, onDelete }) => {
+const Ingredient = ({ ingredient, onDelete }: IngredientProps) => {
   return (
     <span key={ingredient} className='ingredient'>
       {ingredient}
