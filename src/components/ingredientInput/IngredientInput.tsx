@@ -8,8 +8,6 @@ import ErrorMessage from '../errorMessage/ErrorMessage';
 
 import { IngredientInputProps } from '@/types';
 
-import './IngredientInput.scss';
-
 const IngredientInput = ({
   ingredient,
   ingredients,
