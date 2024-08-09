@@ -1,4 +1,3 @@
-import ErrorMessage from '../errorMessage/ErrorMessage';
 import DropZone from '../dropZone/DropZone';
 import IngredientInput from '../ingredientInput/IngredientInput';
 
