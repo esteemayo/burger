@@ -14,6 +14,7 @@ import GenderSelect from '@/components/genderSelect/GenderSelect';
 import GoogleButton from '@/components/google/GoogleButton';
 import SlideButtons from '@/components/slideButtons/SlideButtons';
 import PhoneInput from '@/components/phoneInput/PhoneInput';
+import RegisterInfo from '@/components/registerInfo/RegisterInfo';
 
 import { useForm } from '@/hooks/useForm';
 import { upload } from '@/utils/upload';
@@ -167,34 +168,13 @@ const RegisterForm = () => {
   let bodyContent: JSX.Element | undefined;
 
   bodyContent = (
-    <>
-      <Input
-        name='name'
-        label='Name'
-        value={name}
-        placeholder='Enter your name'
-        onChange={handleChange}
-        error={errors['name']}
-        autoFocus
-      />
-      <Input
-        name='username'
-        label='Username'
-        value={username}
-        placeholder='Enter your username'
-        onChange={handleChange}
-        error={errors['username']}
-      />
-      <Input
-        name='email'
-        type='email'
-        label='Email'
-        value={email}
-        placeholder='Enter your email address'
-        onChange={handleChange}
-        error={errors['email']}
-      />
-    </>
+    <RegisterInfo
+      name={name}
+      username={username}
+      email={email}
+      errors={errors}
+      onChange={handleChange}
+    />
   );
 
   if (step === STEPS.LOCATION) {
