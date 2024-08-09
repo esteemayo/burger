@@ -621,6 +621,11 @@ export interface IngredientsProps {
   onDelete(e: React.MouseEvent<HTMLSpanElement>, value: string): void;
 }
 
+export interface IngredientProps {
+  ingredient: string;
+  onDelete(e: React.MouseEvent<HTMLSpanElement>, value: string): void;
+}
+
 export interface DropZoneProps {
   id?: string;
   label?: string;
