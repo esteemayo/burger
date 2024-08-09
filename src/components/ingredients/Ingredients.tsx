@@ -16,7 +16,7 @@ const Ingredients = ({
 }: IngredientsProps) => {
   return (
     <div className='ingredients'>
-      <div className='wrapper'>
+      <div className='ingredientWrap'>
         {ingredients?.map((ingredient) => {
           return (
             <Ingredient
