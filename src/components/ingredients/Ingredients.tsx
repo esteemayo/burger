@@ -27,7 +27,7 @@ const Ingredients = ({
           );
         })}
       </div>
-      <button type='button' disabled={!!disabled || loading} onClick={onAdd}>
+      <button type='button' disabled={disabled || loading} onClick={onAdd}>
         {loading ? <ClipLoader size={13} color='#a00c1a' /> : 'Add'}
       </button>
     </div>
