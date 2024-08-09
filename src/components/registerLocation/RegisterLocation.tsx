@@ -1,6 +1,15 @@
-import Input from '../input/Input';
+'use client';
 
-const RegisterLocation = ({ street, city, state, errors, onChange }) => {
+import Input from '../input/Input';
+import { RegisterLocationProps } from '@/types';
+
+const RegisterLocation = ({
+  street,
+  city,
+  state,
+  errors,
+  onChange,
+}: RegisterLocationProps) => {
   return (
     <>
       <Input
