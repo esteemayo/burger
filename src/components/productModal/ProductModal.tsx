@@ -10,8 +10,8 @@ import Modal from '../modal/Modal';
 import ProductInputs from '../productInputs/ProductInputs';
 
 import { useProductModal } from '@/hooks/useProductModal';
-import { validateProductInput } from '@/validations/product';
 import { createProduct } from '@/services/productService';
+import { validateProductInput } from '@/validations/product';
 
 import { upload } from '@/utils/upload';
 import { ProductData, ProductErrors } from '@/types';
