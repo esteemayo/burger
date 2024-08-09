@@ -12,8 +12,6 @@ import IngredientInput from '../ingredientInput/IngredientInput';
 
 import { ProductImageProps } from '@/types';
 
-import './ProductImage.scss';
-
 const ProductImage = ({
   ingredient,
   ingredients,
@@ -29,7 +27,7 @@ const ProductImage = ({
   }, [ingredient]);
 
   return (
-    <div className='productImage'>
+    <>
       <IngredientInput
         ingredient={ingredient}
         ingredients={ingredients}
@@ -40,7 +38,7 @@ const ProductImage = ({
         onDelete={onDelete}
       />
       <DropZone id='image' label='Image' onSelect={onSelect} />
-    </div>
+    </>
   );
 };
 
