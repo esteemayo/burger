@@ -1,8 +1,15 @@
 'use client';
 
 import Input from '../input/Input';
+import { RegisterInfoProps } from '@/types';
 
-const RegisterInfo = ({ name, username, email, errors, onChange }) => {
+const RegisterInfo = ({
+  name,
+  username,
+  email,
+  errors,
+  onChange,
+}: RegisterInfoProps) => {
   return (
     <>
       <Input
