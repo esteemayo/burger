@@ -603,6 +603,16 @@ export interface ProductImageProps {
   onSelect(file: File[]): void;
 }
 
+export interface IngredientInputProps {
+  ingredient: string;
+  ingredients?: string[];
+  loading?: boolean;
+  error?: string;
+  onAdd(e: React.MouseEvent<HTMLButtonElement>): void;
+  onChange(e: React.ChangeEvent<HTMLInputElement>): void;
+  onDelete(e: React.MouseEvent<HTMLSpanElement>, value: string): void;
+}
+
 export interface DropZoneProps {
   id?: string;
   label?: string;
