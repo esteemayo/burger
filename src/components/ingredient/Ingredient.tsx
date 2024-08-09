@@ -6,7 +6,7 @@ import './Ingredient.scss';
 
 const Ingredient = ({ ingredient, onDelete }: IngredientProps) => {
   return (
-    <span key={ingredient} className='ingredient'>
+    <span className='ingredient'>
       {ingredient}
       <Image
         src='/svg/x-mark.svg'
