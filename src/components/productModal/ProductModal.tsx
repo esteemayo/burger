@@ -1,9 +1,8 @@
 'use client';
 
-import { useSession } from 'next-auth/react';
+import { useRouter } from 'next/navigation';
 import { toast } from 'react-toastify';
 import { useCallback, useMemo, useState } from 'react';
-import { useRouter } from 'next/navigation';
 
 import ProductImage from '../productImage/ProductImage';
 import Modal from '../modal/Modal';
@@ -29,7 +28,6 @@ const initialState: ProductData = {
 
 const ProductModal = () => {
   const router = useRouter();
-  const { data: session } = useSession();
 
   const isOpen = useProductModal((store) => store.isOpen);
   const onClose = useProductModal((store) => store.onClose);
