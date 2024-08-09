@@ -69,7 +69,7 @@ const ProductModal = () => {
   );
 
   const handleAddIngredient = useCallback(
-    ({target: input }: React.ChangeEvent<HTMLInputElement>) => {
+    ({ target: input }: React.ChangeEvent<HTMLInputElement>) => {
       const { value } = input;
 
       if (ingredients.includes(value)) {
@@ -86,7 +86,7 @@ const ProductModal = () => {
       e.stopPropagation();
 
       setLoading(true);
-      
+
       setTimeout(() => {
         setIngredients((prev) => {
           return [...prev, ingredient];
@@ -139,12 +139,6 @@ const ProductModal = () => {
   );
 
   const onSubmit = useCallback(async () => {
-    if (!session) {
-      router.push('/login');
-      onClose();
-      return;
-    }
-
     if (step !== STEPS.IMAGE) {
       return onNext();
     }
