@@ -7,6 +7,8 @@ import { ClipLoader } from 'react-spinners';
 import Input from '../input/Input';
 import ErrorMessage from '../errorMessage/ErrorMessage';
 
+import { IngredientInputProps } from '@/types';
+
 import './IngredientInput.scss';
 
 const IngredientInput = ({
@@ -17,7 +19,7 @@ const IngredientInput = ({
   onAdd,
   onChange,
   onDelete,
-}) => {
+}: IngredientInputProps) => {
   const disableBtn = useMemo(() => {
     return ingredient.trim() === '' ? true : false;
   }, [ingredient]);
