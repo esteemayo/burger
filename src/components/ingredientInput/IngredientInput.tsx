@@ -34,7 +34,7 @@ const IngredientInput = ({
       <Ingredients
         ingredients={ingredients}
         loading={loading}
-        disabled={disableBtn}
+        disabled={!!disableBtn}
         onAdd={onAdd}
         onDelete={onDelete}
       />
