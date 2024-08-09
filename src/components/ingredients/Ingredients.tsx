@@ -3,9 +3,17 @@
 import Image from 'next/image';
 import { ClipLoader } from 'react-spinners';
 
+import { IngredientsProps } from '@/types';
+
 import './Ingredients.scss';
 
-const Ingredients = ({ ingredients, loading, disabled, onAdd, onDelete }) => {
+const Ingredients = ({
+  ingredients,
+  loading,
+  disabled,
+  onAdd,
+  onDelete,
+}: IngredientsProps) => {
   return (
     <div className='ingredients'>
       <div className='wrapper'>
