@@ -4,9 +4,11 @@ import { useMemo } from 'react';
 import Image from 'next/image';
 import { ClipLoader } from 'react-spinners';
 
-import DropZone from '../dropZone/DropZone';
 import Input from '../input/Input';
+import DropZone from '../dropZone/DropZone';
+
 import ErrorMessage from '../errorMessage/ErrorMessage';
+import IngredientInput from '../ingredientInput/IngredientInput';
 
 import { ProductImageProps } from '@/types';
 
@@ -28,41 +30,15 @@ const ProductImage = ({
 
   return (
     <div className='productImage'>
-      <div className='ingredientWrap'>
-        <Input
-          name='ingredient'
-          label='Ingredients'
-          value={ingredient}
-          placeholder='Ingredients'
-          onChange={onChange}
-        />
-        {error && <ErrorMessage message={error} />}
-        <div className='ingredientLists'>
-          <div className='ingredients'>
-            {ingredients?.map((item) => {
-              return (
-                <span key={item}>
-                  {item}
-                  <Image
-                    src='/svg/x-mark.svg'
-                    width={15}
-                    height={15}
-                    alt='delete icon'
-                    onClick={(e) => onDelete(e, item)}
-                  />
-                </span>
-              );
-            })}
-          </div>
-          <button
-            type='button'
-            disabled={!!disableBtn || loading}
-            onClick={onAdd}
-          >
-            {loading ? <ClipLoader size={13} color='#a00c1a' /> : 'Add'}
-          </button>
-        </div>
-      </div>
+      <IngredientInput
+        ingredient={ingredient}
+        ingredients={ingredients}
+        loading={loading}
+        error={error}
+        onAdd={onAdd}
+        onChange={onChange}
+        onDelete={onDelete}
+      />
       <DropZone id='image' label='Image' onSelect={onSelect} />
     </div>
   );
