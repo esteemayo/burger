@@ -1,13 +1,5 @@
-'use client';
-
-import { useMemo } from 'react';
-import Image from 'next/image';
-import { ClipLoader } from 'react-spinners';
-
-import Input from '../input/Input';
-import DropZone from '../dropZone/DropZone';
-
 import ErrorMessage from '../errorMessage/ErrorMessage';
+import DropZone from '../dropZone/DropZone';
 import IngredientInput from '../ingredientInput/IngredientInput';
 
 import { ProductImageProps } from '@/types';
@@ -22,10 +14,6 @@ const ProductImage = ({
   onDelete,
   onSelect,
 }: ProductImageProps) => {
-  const disableBtn = useMemo(() => {
-    return ingredient.trim() === '' ? true : false;
-  }, [ingredient]);
-
   return (
     <>
       <IngredientInput
