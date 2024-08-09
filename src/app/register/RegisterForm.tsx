@@ -2,20 +2,17 @@
 
 import { useCallback, useMemo, useState } from 'react';
 import { toast } from 'react-toastify';
-import VisibilityIcon from '@mui/icons-material/Visibility';
 import { useRouter } from 'next/navigation';
-import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 
 import AuthInfo from '@/components/authInfo/AuthInfo';
-import Input from '@/components/input/Input';
 import DropZone from '@/components/dropZone/DropZone';
 import Button from '@/components/button/Button';
 import GenderSelect from '@/components/genderSelect/GenderSelect';
 import GoogleButton from '@/components/google/GoogleButton';
 import SlideButtons from '@/components/slideButtons/SlideButtons';
-import PhoneInput from '@/components/phoneInput/PhoneInput';
 import RegisterInfo from '@/components/registerInfo/RegisterInfo';
 import RegisterLocation from '@/components/registerLocation/RegisterLocation';
+import RegisterCredential from '@/components/registerCredential/RegisterCredential';
 
 import { useForm } from '@/hooks/useForm';
 import { upload } from '@/utils/upload';
@@ -192,44 +189,19 @@ const RegisterForm = () => {
 
   if (step === STEPS.CREDENTIALS) {
     bodyContent = (
-      <>
-        <PhoneInput
-          name='phone'
-          type='number'
-          label='Phone number'
-          value={phone}
-          placeholder='(202) 555-1234'
-          onChange={handleChange}
-          error={errors['phone']}
-        />
-        <Input
-          name='password'
-          type={showPassword ? 'text' : 'password'}
-          label='Password'
-          value={password}
-          placeholder='Password'
-          onChange={handleChange}
-          error={errors['password']}
-        >
-          <span onClick={togglePassword} className={iconClasses}>
-            {showPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
-          </span>
-        </Input>
-        <Input
-          name='confirmPassword'
-          type={showConfirmPassword ? 'text' : 'password'}
-          label='Confirm Password'
-          value={confirmPassword}
-          placeholder='Confirm Password'
-          onChange={handleChange}
-          error={errors['confirmPassword']}
-          dimension='large'
-        >
-          <span onClick={toggleConfirmPassword} className={confirmIconClasses}>
-            {showConfirmPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
-          </span>
-        </Input>
-      </>
+      <RegisterCredential
+        phone={phone}
+        password={password}
+        confirmPassword={confirmPassword}
+        errors={errors}
+        passwordIcon={iconClasses}
+        confirmIcon={confirmIconClasses}
+        isPassword={showPassword}
+        isConfirmPassword={showConfirmPassword}
+        onChange={handleChange}
+        onTogglePassword={togglePassword}
+        onToggleConfirm={toggleConfirmPassword}
+      />
     );
   }
 
