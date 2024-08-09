@@ -118,9 +118,9 @@ const ProductModal = () => {
       setIsLoading(true);
 
       try {
-        const res = await createProduct({ ...product });
+        const { status } = await createProduct({ ...product });
 
-        if (res.status === 201) {
+        if (status === 201) {
           handleClear();
           setStep(STEPS.INFO);
 
