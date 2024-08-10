@@ -28,8 +28,14 @@ const Cart = () => {
   }, [products.length]);
 
   const cardClasses = useMemo(() => {
-    return products.length <= 4 ? 'cardBody hide' : 'cardBody'
+    return products.length <= 4 ? 'cardBody hide' : 'cardBody';
   }, [products.length]);
+
+  const footerClasses = useMemo(() => {
+    return !!session && products.length > 0
+      ? 'cardFooter show'
+      : 'cardFooter hide';
+  }, [products.length, session]);
 
   return (
     <aside className={cartClasses}>
@@ -100,11 +106,9 @@ const Cart = () => {
               })}
             </div>
           )}
-          {products.length > 0 && (
-            <div className='cardFooter'>
-              <Link href='/checkout'>Proceed to Checkout</Link>
-            </div>
-          )}
+          <div className={footerClasses}>
+            <Link href='/checkout'>Proceed to Checkout</Link>
+          </div>
         </div>
       </div>
     </aside>
