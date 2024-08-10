@@ -287,6 +287,10 @@
         background-color: transparent;
         color: $clr-primary;
         border-color: currentColor;
+
+        span {
+          border-color: $clr-secondary $clr-secondary transparent;
+        }
       }
 
       &:disabled {
