@@ -85,7 +85,11 @@ const CheckoutInfo = () => {
           </div>
         </div>
         <div className='paymentSection'>
-          <button type='button' onClick={handleCheckout}>
+          <button
+            type='button'
+            disabled={products.length < 1}
+            onClick={handleCheckout}
+          >
             Place your order
           </button>
         </div>
