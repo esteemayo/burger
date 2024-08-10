@@ -560,7 +560,6 @@ export interface ModalProps {
   isOpen: boolean;
   title?: string;
   size?: 'small' | 'full';
-  loading?: boolean;
   disabled?: boolean;
   actionLabel?: string;
   secondaryActionLabel?: string;
