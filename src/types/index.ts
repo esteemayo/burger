@@ -385,7 +385,7 @@ export interface RegisterLocationProps {
   ): void;
 }
 
-export interface RegisterCredentialProps {
+export interface RegisterCredentialsProps {
   phone: string;
   password: string;
   confirmPassword: string;

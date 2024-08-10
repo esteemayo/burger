@@ -6,7 +6,7 @@ import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import Input from '../input/Input';
 import PhoneInput from '../phoneInput/PhoneInput';
 
-import { RegisterCredentialProps } from '@/types';
+import { RegisterCredentialsProps } from '@/types';
 
 const RegisterCredentials = ({
   phone,
@@ -20,7 +20,7 @@ const RegisterCredentials = ({
   onChange,
   onTogglePassword,
   onToggleConfirm,
-}: RegisterCredentialProps) => {
+}: RegisterCredentialsProps) => {
   return (
     <>
       <PhoneInput
