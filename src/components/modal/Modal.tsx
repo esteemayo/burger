@@ -12,7 +12,6 @@ const Modal = ({
   isOpen,
   title,
   size = 'small',
-  loading,
   disabled,
   actionLabel,
   secondaryActionLabel,
@@ -130,7 +129,7 @@ const Modal = ({
                   className={actionLabelClasses}
                   onClick={handleSubmit}
                 >
-                  {loading ? <Spinner />: actionLabel}
+                  {disabled ? <Spinner />: actionLabel}
                 </button>
               )}
             </div>
