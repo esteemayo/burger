@@ -29,7 +29,7 @@ const Cart = () => {
 
   const cardClasses = useMemo(() => {
     return products.length <= 4 ? 'cardBody hide' : 'cardBody'
-  }, [products.length])
+  }, [products.length]);
 
   return (
     <aside className={cartClasses}>
