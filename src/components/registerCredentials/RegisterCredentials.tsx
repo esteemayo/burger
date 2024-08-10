@@ -8,7 +8,7 @@ import PhoneInput from '../phoneInput/PhoneInput';
 
 import { RegisterCredentialProps } from '@/types';
 
-const RegisterCredential = ({
+const RegisterCredentials = ({
   phone,
   password,
   confirmPassword,
@@ -63,4 +63,4 @@ const RegisterCredential = ({
   );
 };
 
-export default RegisterCredential;
+export default RegisterCredentials;
