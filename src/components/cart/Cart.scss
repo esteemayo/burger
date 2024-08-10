@@ -381,12 +381,22 @@
       }
 
       .cardFooter {
+        position: relative;
         padding: 1.5rem;
         border-top: 1px solid $line;
 
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        &.show {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        &.hide {
+          display: none;
+          visibility: hidden;
+          opacity: 0;
+          z-index: -1;
+        }
 
         a,
         a:link,
