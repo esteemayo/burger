@@ -95,6 +95,11 @@ const Modal = ({
     setShowModal(isOpen);
   }, [isOpen]);
 
+  useEffect(() => {
+    window.addEventListener('keydown', handleEscape);
+    return () => window.removeEventListener('keydown', handleEscape);
+  }, [handleEscape]);
+
   if (!isOpen) {
     return;
   }
