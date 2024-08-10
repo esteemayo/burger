@@ -1,8 +1,9 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import { useCallback } from 'react';
+import { useCallback, useState } from 'react';
 import { useSession } from 'next-auth/react';
+import { ClipLoader } from 'react-spinners';
 
 import { useRecipient } from '@/hooks/useRecipientModal';
 import { useCartStore } from '@/hooks/useCartStore';
@@ -22,6 +23,8 @@ const CheckoutInfo = () => {
   const products = useCartStore((store) => store.products);
   const totalPrice = useCartStore((store) => store.totalPrice);
 
+  const [isLoading, setIsLoading] = (false);
+
   const handleCheckout = useCallback(
     async (e: React.MouseEvent<HTMLButtonElement>) => {
       e.stopPropagation();
@@ -31,6 +34,8 @@ const CheckoutInfo = () => {
         return;
       }
 
+      setIsLoading(true);
+
       const newOrder = {
         price: totalPrice,
         products,
@@ -39,8 +44,12 @@ const CheckoutInfo = () => {
       };
 
       try {
+        setTimeout(() => {
         const { data } = await createOrder({ ...newOrder });
         router.push(`/payment/${data?.id}`);
+
+        setIsLoading(false);
+        }, 3000)
       } catch (err: unknown) {
         console.log(err);
       }
@@ -90,7 +99,7 @@ const CheckoutInfo = () => {
             disabled={products.length < 1}
             onClick={handleCheckout}
           >
-            Place your order
+            {isLoading ? <ClipLoader size={13} color='#fff' /> : 'Place your order'}
           </button>
         </div>
       </div>
