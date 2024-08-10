@@ -1,13 +1,13 @@
 'use client';
 
+import { useRouter } from 'next/navigation';
 import Image from 'next/image';
+import { useSession } from 'next-auth/react';
 import { useCallback } from 'react';
 
 import { useProductModal } from '@/hooks/useProductModal';
 
 import './NewProduct.scss';
-import { useSession } from 'next-auth/react';
-import { useRouter } from 'next/navigation';
 
 interface NewProductProps {
   isAdmin: Boolean | undefined;
@@ -19,15 +19,18 @@ const NewProduct = ({ isAdmin }: NewProductProps) => {
 
   const onOpen = useProductModal((state) => state.onOpen);
 
-  const handleOpen = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
-    e.stopPropagation();
+  const handleOpen = useCallback(
+    (e: React.MouseEvent<HTMLButtonElement>) => {
+      e.stopPropagation();
 
-    if (session) {
-      onOpen();
-      return;
-    }
-    return router.push('/login');
-  }, []);
+      if (session) {
+        onOpen();
+        return;
+      }
+      return router.push('/login');
+    },
+    [onOpen, router, session]
+  );
 
   if (!isAdmin) {
     return;
