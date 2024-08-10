@@ -80,7 +80,7 @@ const Modal = ({
   );
 
   const modalClasses = useMemo(() => {
-    return showModal?.toString() === 'true' ? 'box active' : 'box ';
+    return showModal?.toString() === 'true' ? 'box active' : 'box';
   }, [showModal]);
 
   const actionLabelClasses = useMemo(() => {
