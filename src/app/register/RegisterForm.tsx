@@ -91,7 +91,9 @@ const RegisterForm = () => {
 
   const toggleConfirmPassword = useCallback(
     (_e: React.MouseEvent<HTMLSpanElement>) => {
-      setShowConfirmPassword((value) => !value);
+      setShowConfirmPassword((value) => {
+        return !value;
+      });
     },
     []
   );
