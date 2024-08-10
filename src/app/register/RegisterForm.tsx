@@ -82,7 +82,9 @@ const RegisterForm = () => {
 
   const togglePassword = useCallback(
     (_e: React.MouseEvent<HTMLSpanElement>) => {
-      setShowPassword((value) => !value);
+      setShowPassword((value) => {
+        return !value;
+      });
     },
     []
   );
