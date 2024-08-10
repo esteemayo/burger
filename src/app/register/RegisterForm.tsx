@@ -10,7 +10,7 @@ import RegisterAvatar from '@/components/registerAvatar/RegisterAvatar';
 import AuthInfo from '@/components/authInfo/AuthInfo';
 import RegisterLocation from '@/components/registerLocation/RegisterLocation';
 import GoogleButton from '@/components/google/GoogleButton';
-import RegisterCredential from '@/components/registerCredential/RegisterCredential';
+import RegisterCredentials from '@/components/registerCredentials/RegisterCredentials';
 import RegisterInfo from '@/components/registerInfo/RegisterInfo';
 
 import { useForm } from '@/hooks/useForm';
@@ -188,7 +188,7 @@ const RegisterForm = () => {
 
   if (step === STEPS.CREDENTIALS) {
     bodyContent = (
-      <RegisterCredential
+      <RegisterCredentials
         phone={phone}
         password={password}
         confirmPassword={confirmPassword}
