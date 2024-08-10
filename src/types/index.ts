@@ -403,6 +403,17 @@ export interface RegisterCredentialProps {
   onToggleConfirm(e: React.MouseEvent<HTMLSpanElement>): void;
 }
 
+export interface RegisterAvatarProps {
+  gender: string;
+  error?: string;
+  onChange(
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ): void;
+  onSelect(file: File[]): void;
+}
+
 export interface UserData {
   name: string;
   email: string;
