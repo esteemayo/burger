@@ -3,7 +3,14 @@
 import DropZone from '../dropZone/DropZone';
 import GenderSelect from '../genderSelect/GenderSelect';
 
-const RegisterAvatar = ({ gender, error, onChange, onSelect }) => {
+import { RegisterAvatarProps } from '@/types';
+
+const RegisterAvatar = ({
+  gender,
+  error,
+  onChange,
+  onSelect,
+}: RegisterAvatarProps) => {
   return (
     <>
       <DropZone id='avatar' label='Avatar' small onSelect={onSelect} />
