@@ -23,7 +23,7 @@ const CheckoutInfo = () => {
   const products = useCartStore((store) => store.products);
   const totalPrice = useCartStore((store) => store.totalPrice);
 
-  const [isLoading, setIsLoading] = (false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleCheckout = useCallback(
     async (e: React.MouseEvent<HTMLButtonElement>) => {
