@@ -99,7 +99,7 @@ const CheckoutInfo = () => {
             disabled={products.length < 1}
             onClick={handleCheckout}
           >
-            {isLoading ? <ClipLoader size={13} color='#fff' /> : 'Place your order'}
+            {1 ? <ClipLoader size={13} color='#fff' /> : 'Place your order'}
           </button>
         </div>
       </div>
