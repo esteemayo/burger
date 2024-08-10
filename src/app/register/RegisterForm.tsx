@@ -4,14 +4,14 @@ import { useCallback, useMemo, useState } from 'react';
 import { toast } from 'react-toastify';
 import { useRouter } from 'next/navigation';
 
-import AuthInfo from '@/components/authInfo/AuthInfo';
-import Button from '@/components/button/Button';
-import GoogleButton from '@/components/google/GoogleButton';
 import SlideButtons from '@/components/slideButtons/SlideButtons';
-import RegisterInfo from '@/components/registerInfo/RegisterInfo';
-import RegisterLocation from '@/components/registerLocation/RegisterLocation';
-import RegisterCredential from '@/components/registerCredential/RegisterCredential';
+import Button from '@/components/button/Button';
 import RegisterAvatar from '@/components/registerAvatar/RegisterAvatar';
+import AuthInfo from '@/components/authInfo/AuthInfo';
+import RegisterLocation from '@/components/registerLocation/RegisterLocation';
+import GoogleButton from '@/components/google/GoogleButton';
+import RegisterCredential from '@/components/registerCredential/RegisterCredential';
+import RegisterInfo from '@/components/registerInfo/RegisterInfo';
 
 import { useForm } from '@/hooks/useForm';
 import { upload } from '@/utils/upload';
