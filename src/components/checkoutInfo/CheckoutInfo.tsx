@@ -96,7 +96,7 @@ const CheckoutInfo = () => {
         <div className='paymentSection'>
           <button
             type='button'
-            disabled={products.length < 1}
+            disabled={products.length < 1 || isLoading}
             onClick={handleCheckout}
           >
             {1 ? <ClipLoader size={13} color='#fff' /> : 'Place your order'}
