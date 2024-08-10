@@ -5,14 +5,13 @@ import { toast } from 'react-toastify';
 import { useRouter } from 'next/navigation';
 
 import AuthInfo from '@/components/authInfo/AuthInfo';
-import DropZone from '@/components/dropZone/DropZone';
 import Button from '@/components/button/Button';
-import GenderSelect from '@/components/genderSelect/GenderSelect';
 import GoogleButton from '@/components/google/GoogleButton';
 import SlideButtons from '@/components/slideButtons/SlideButtons';
 import RegisterInfo from '@/components/registerInfo/RegisterInfo';
 import RegisterLocation from '@/components/registerLocation/RegisterLocation';
 import RegisterCredential from '@/components/registerCredential/RegisterCredential';
+import RegisterAvatar from '@/components/registerAvatar/RegisterAvatar';
 
 import { useForm } from '@/hooks/useForm';
 import { upload } from '@/utils/upload';
@@ -207,14 +206,12 @@ const RegisterForm = () => {
 
   if (step === STEPS.AVATAR) {
     bodyContent = (
-      <>
-        <DropZone id='avatar' label='Avatar' small onSelect={setFile} />
-        <GenderSelect
-          value={gender}
-          error={errors['gender']}
-          onChange={handleChange}
-        />
-      </>
+      <RegisterAvatar
+        gender={gender}
+        error={errors['gender']}
+        onChange={handleChange}
+        onSelect={setFile}
+      />
     );
   }
 
