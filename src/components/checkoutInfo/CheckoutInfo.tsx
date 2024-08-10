@@ -1,8 +1,8 @@
 'use client';
 
+import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import { useCallback, useState } from 'react';
-import { useSession } from 'next-auth/react';
 import { ClipLoader } from 'react-spinners';
 
 import { useRecipient } from '@/hooks/useRecipientModal';
@@ -44,7 +44,7 @@ const CheckoutInfo = () => {
       };
 
       try {
-        setTimeout(() => {
+        setTimeout(async () => {
         const { data } = await createOrder({ ...newOrder });
         router.push(`/payment/${data?.id}`);
 
