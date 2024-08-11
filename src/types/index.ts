@@ -107,7 +107,6 @@ export interface CartMenuItemProps {
 
 export interface CartItemsProps {
   products: CartItem[];
-  cardClasses: 'cardItems hide' | 'cardItems';
   onIncrement(e: React.MouseEvent<HTMLButtonElement>, productId: string): void;
   onDecrement(e: React.MouseEvent<HTMLButtonElement>, productId: string): void;
   onRemove(productId: string): void;
