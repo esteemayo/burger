@@ -105,6 +105,14 @@ export interface CartMenuItemProps {
   onRemove(productId: string): void;
 }
 
+export interface CartItemsProps {
+  products: CartItem[];
+  cardClasses: 'cardBody hide' | 'cardBody';
+  onIncrement(e: React.MouseEvent<HTMLButtonElement>, productId: string): void;
+  onDecrement(e: React.MouseEvent<HTMLButtonElement>, productId: string): void;
+  onRemove(productId: string): void;
+}
+
 export interface CartItemProps {
   id: string;
   name: string;
