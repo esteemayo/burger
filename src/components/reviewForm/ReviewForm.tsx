@@ -6,6 +6,7 @@ import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { useSession } from 'next-auth/react';
 
 import StarRating from '../starRating/StarRating';
+import Spinner from '../spinner/Spinner';
 import ErrorMessage from '../errorMessage/ErrorMessage';
 
 import { validateReviewInputs } from '@/validations/review';
@@ -13,7 +14,6 @@ import { ReviewData, ReviewErrors } from '@/types';
 import { createReviewOnProduct } from '@/services/productService';
 
 import './ReviewForm.scss';
-import Spinner from '../spinner/Spinner';
 
 const initialState: ReviewData = {
   desc: '',
