@@ -1,0 +1,187 @@
+@import '../../styles/variables.scss';
+@import '../../styles/responsive.scss';
+
+.cartItem {
+  padding: 1.5rem;
+  border-bottom: 1px solid $line;
+
+  .cardBox {
+    .cardProductWrap {
+      width: 100%;
+
+      .cardProduct {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: -1rem;
+
+        .cardName {
+          flex: 3;
+
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          font-weight: 700;
+          font-size: 1rem;
+          padding: 1.5rem;
+          padding-left: 0;
+          overflow: hidden;
+
+          p {
+            font-size: 1.3rem;
+            text-transform: capitalize;
+            text-overflow: ellipsis;
+            color: $clr-primary;
+            white-space: nowrap;
+            overflow: hidden;
+            margin-top: 0;
+            margin-bottom: 0;
+            transition: all 0.3s;
+
+            @include xl {
+              font-size: 1.44445rem;
+            }
+
+            @media only screen and (max-width: 56.25em) {
+              font-size: 1.625rem;
+            }
+
+            @media only screen and (min-width: 112.5em) {
+              font-size: 1.6rem;
+            }
+
+            &:hover {
+              color: #bc2634;
+            }
+
+            span {
+              font-weight: 500;
+              font-size: 1.3rem;
+              color: #00000059;
+              margin-right: 1rem;
+
+              @include xl {
+                font-size: 1.44445rem;
+              }
+
+              @media only screen and (min-width: 112.5em) {
+                font-size: 1.6rem;
+              }
+            }
+
+            a,
+            a:link,
+            a:visited {
+              color: currentColor;
+              transition: all 0.3s;
+
+              &:hover {
+                color: #bc2634;
+              }
+            }
+          }
+        }
+
+        .cardButtons {
+          flex: 1;
+
+          display: flex;
+          align-items: center;
+          color: $clr-gray-dark;
+
+          button {
+            all: unset;
+            display: inline-block;
+            background-color: transparent;
+            color: inherit;
+            cursor: pointer;
+
+            &:disabled {
+              color: $clr-gray-light;
+            }
+
+            img {
+              display: block;
+              width: 1.3rem;
+              height: 1.6rem;
+              object-fit: cover;
+              opacity: 0.8;
+
+              @include xl {
+                width: 1.445rem;
+                height: 1.778rem;
+              }
+
+              @media only screen and (max-width: 56.25em) {
+                width: 1.625rem;
+                height: 2rem;
+              }
+
+              @media only screen and (min-width: 112.5em) {
+                width: 1.6rem;
+                height: 1.9rem;
+              }
+            }
+          }
+        }
+
+        .deleteCardBtn {
+          all: unset;
+          display: inline-block;
+          color: #00000059;
+          margin-right: 2rem;
+          opacity: 0.6;
+          cursor: pointer;
+          transition: all 0.3s;
+
+          &:hover {
+            color: #bc2634;
+            opacity: 1;
+          }
+
+          svg {
+            font-size: 1.3rem;
+            fill: currentColor;
+
+            @include xl {
+              font-size: 1.44445rem;
+            }
+
+            @media only screen and (max-width: 56.25em) {
+              font-size: 1.625rem;
+            }
+
+            @media only screen and (min-width: 112.5em) {
+              font-size: 1.6rem;
+            }
+          }
+        }
+
+        .cardPrice {
+          flex: 0.25;
+
+          font-weight: 500;
+          font-size: 1.3rem;
+          font-variant: tabular-nums;
+          color: #00000059;
+          transition: all 0.3s;
+
+          @include xl {
+            font-size: 1.44445rem;
+          }
+
+          @media only screen and (max-width: 56.25em) {
+            font-size: 1.625rem;
+          }
+
+          @media only screen and (min-width: 112.5em) {
+            font-size: 1.6rem;
+          }
+
+          &:hover {
+            color: #bc2634;
+          }
+        }
+      }
+    }
+  }
+}
