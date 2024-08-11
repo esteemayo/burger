@@ -64,18 +64,20 @@ const RecipientModal = () => {
 
     setIsLoading(true);
 
-    try {
-      let formattedPhone = data.phone.replace(/\D/g, '').slice(1, 10);
-      if (data.phone.startsWith('1') || data.phone.length > 10) {
-        formattedPhone = data.phone.slice(0, 10);
-      } else {
-        formattedPhone = data.phone.replace(/\D/g, '').slice(0, 10);
-      }
+    if (data.phone.startsWith('1')) {
+      data.phone = ''
 
-      const formattedValue = formattedPhone.replace(
+      toast.error('Phone number cannot start with 1');
+      setIsLoading(false);
+      return;
+    }
+
+    try {
+      const formattedPhone = data.phone.replace(/\D/g, '').slice(0, 10);
+      const formattedValue = `1 ${formattedPhone.replace(
         /(\d{3})(\d{3})(\d{4})/,
         '($1) $2-$3'
-      );
+      )}`;
       console.log(formattedValue);
       const newData = {
         ...data,
