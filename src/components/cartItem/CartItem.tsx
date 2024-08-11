@@ -7,6 +7,8 @@ import RemoveShoppingCartIcon from '@mui/icons-material/RemoveShoppingCart';
 import { CartItemProps } from '@/types';
 import { formatCurrency } from '@/utils/formatCurrency';
 
+import './CartItem.scss';
+
 const CartItem = ({
   id,
   name,
