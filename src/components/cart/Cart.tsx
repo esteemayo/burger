@@ -8,6 +8,7 @@ import { useCartStore } from '@/hooks/useCartStore';
 import { useCartControls } from '@/hooks/useCartControls';
 
 import CartItems from '../cartItems/CartItems';
+import EmptyCart from '../emptyCart/EmptyCart';
 
 import './Cart.scss';
 
@@ -42,12 +43,7 @@ const Cart = () => {
         <div className='cardWrap'>
           <div className={emptyHeaderClasses}>Your cart</div>
           {products.length < 1 || !session ? (
-            <div className='emptyCart'>
-              <div className='emptyHeading'>Empty cart</div>
-              <div className='emptyLink'>
-                <Link href='/products'>Continue shopping</Link>
-              </div>
-            </div>
+            <EmptyCart />
           ) : (
             <CartItems
               products={products}
