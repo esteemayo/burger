@@ -1,15 +1,16 @@
 'use client';
 
-import { useMemo } from 'react';
-import Link from 'next/link';
-import { ClipLoader } from 'react-spinners';
 import Image from 'next/image';
+import Link from 'next/link';
+import { useMemo } from 'react';
 
 import { useCart } from '@/hooks/useCart';
 import { useCartControls } from '@/hooks/useCartControls';
 
 import { RelatedProductProps } from '@/types';
 import { formatCurrency } from '@/utils/formatCurrency';
+
+import Spinner from '../spinner/Spinner';
 
 import './RelatedProduct.scss';
 
@@ -32,7 +33,7 @@ const RelatedProduct = ({ product }: RelatedProductProps) => {
               disabled={inCart ?? isLoading}
               onClick={handleClick}
             >
-              {isLoading ? <ClipLoader size={15} color='#a00c1a' /> : btnLabel}
+              {isLoading ? <Spinner size={15} color='#a00c1a' /> : btnLabel}
             </button>
           </span>
           <Image
