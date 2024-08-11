@@ -2,7 +2,7 @@
 
 import { useRouter } from 'next/navigation';
 import { toast } from 'react-toastify';
-import { useCallback, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 
 import ProductImage from '../productImage/ProductImage';
 import Modal from '../modal/Modal';
@@ -170,6 +170,14 @@ const ProductModal = () => {
   const secondaryAction = useMemo(() => {
     return step !== STEPS.INFO ? onPrev : undefined;
   }, [onPrev, step]);
+
+  useEffect(() => {
+    setTimeout(() => {
+      if (Object.keys(errors).length > 0) {
+        setErrors({});
+      }
+    }, 5000);
+  }, [errors]);
 
   const { name, desc, price } = data;
 
