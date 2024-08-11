@@ -37,7 +37,7 @@ const Sidebar = () => {
 
   const handleEscape = useCallback(
     (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
+      if (e.key === 'Escape' && isOpen) {
         handleClose();
       }
     },
