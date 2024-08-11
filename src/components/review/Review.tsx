@@ -3,15 +3,15 @@
 import { useQuery } from '@tanstack/react-query';
 import Image from 'next/image';
 import { useCallback, useMemo, useState } from 'react';
-import { ClipLoader } from 'react-spinners';
+
+import Spinner from '../spinner/Spinner';
+import StarRating from '../starRating/StarRating';
 
 import { useAvatar } from '@/hooks/useAvatar';
 import { getUser } from '@/services/userService';
 
 import { excerpts } from '@/utils';
 import { ReviewProps, UserType } from '@/types';
-
-import StarRating from '../starRating/StarRating';
 
 import './Review.scss';
 
@@ -69,7 +69,7 @@ const Review = ({ desc, rating, userId }: ReviewProps) => {
                 <p className='reviewerText'>
                   {review}
                   {isLoading ? (
-                    <ClipLoader size={10} color='#00000059' />
+                    <Spinner size={10} color='#00000059' />
                   ) : (
                     <button
                       type='button'
