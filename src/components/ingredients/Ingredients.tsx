@@ -1,9 +1,9 @@
 'use client';
 
-import { ClipLoader } from 'react-spinners';
+import Spinner from '../spinner/Spinner';
+import Ingredient from '../ingredient/Ingredient';
 
 import { IngredientsProps } from '@/types';
-import Ingredient from '../ingredient/Ingredient';
 
 import './Ingredients.scss';
 
@@ -28,7 +28,7 @@ const Ingredients = ({
         })}
       </div>
       <button type='button' disabled={disabled || loading} onClick={onAdd}>
-        {loading ? <ClipLoader size={13} color='#a00c1a' /> : 'Add'}
+        {loading ? <Spinner size={13} color='#a00c1a' /> : 'Add'}
       </button>
     </div>
   );
