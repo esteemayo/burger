@@ -104,7 +104,7 @@ const AddressModal = () => {
       isOpen={isOpen}
       title='Add Address'
       size='full'
-      loading={isLoading}
+      disabled={isLoading}
       actionLabel='Use this address'
       body={bodyContent}
       onClose={onClose}
