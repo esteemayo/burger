@@ -3,12 +3,12 @@
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import { useCallback, useState } from 'react';
-import { ClipLoader } from 'react-spinners';
 
 import { useRecipient } from '@/hooks/useRecipientModal';
 import { useCartStore } from '@/hooks/useCartStore';
 import { useAddressModal } from '@/hooks/useAddressModal';
 
+import Spinner from '../spinner/Spinner';
 import { createOrder } from '@/services/orderService';
 
 import './CheckoutInfo.scss';
@@ -45,11 +45,11 @@ const CheckoutInfo = () => {
 
       try {
         setTimeout(async () => {
-        const { data } = await createOrder({ ...newOrder });
-        router.push(`/payment/${data?.id}`);
+          const { data } = await createOrder({ ...newOrder });
+          router.push(`/payment/${data?.id}`);
 
-        setIsLoading(false);
-        }, 3000)
+          setIsLoading(false);
+        }, 3000);
       } catch (err: unknown) {
         console.log(err);
       }
@@ -99,7 +99,7 @@ const CheckoutInfo = () => {
             disabled={products.length < 1 || isLoading}
             onClick={handleCheckout}
           >
-            {isLoading ? <ClipLoader size={13} color='#fff' /> : 'Place your order'}
+            {isLoading ? <Spinner size={13} /> : 'Place your order'}
           </button>
         </div>
       </div>
