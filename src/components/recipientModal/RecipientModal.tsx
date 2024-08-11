@@ -82,7 +82,7 @@ const RecipientModal = () => {
     try {
       const newData = {
         ...data,
-        phone: `+1${formattedValue}`,
+        phone: `${formattedValue}`,
       };
 
       console.log(newData);
