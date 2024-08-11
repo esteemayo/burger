@@ -1,9 +1,9 @@
 'use client';
 
-import { useMemo } from 'react';
 import Image from 'next/image';
-import { ClipLoader } from 'react-spinners';
+import { useMemo } from 'react';
 
+import Spinner from '../spinner/Spinner';
 import { useSearch } from '@/hooks/useSearch';
 
 import './Header.scss';
@@ -15,7 +15,7 @@ const Header = () => {
     isLoading,
     handleChange,
     handleClear,
-    handleSubmit
+    handleSubmit,
   } = useSearch();
 
   const btnClearClasses = useMemo(() => {
@@ -52,7 +52,7 @@ const Header = () => {
             </button>
           </div>
           <button disabled={isLoading} className='searchBtn'>
-            {isLoading ? <ClipLoader size={20} color='#fff' /> : 'Find products'}
+            {isLoading ? <Spinner /> : 'Find products'}
           </button>
         </form>
       </div>
