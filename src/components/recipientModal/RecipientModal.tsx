@@ -109,7 +109,7 @@ const RecipientModal = () => {
       isOpen={isOpen}
       title='Update Recipient'
       size='full'
-      loading={isLoading}
+      disabled={isLoading}
       actionLabel='Submit'
       body={bodyContent}
       onClose={onClose}
