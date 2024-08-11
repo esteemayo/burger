@@ -51,7 +51,6 @@ const AccountModal = () => {
     <Modal
       isOpen={isOpen}
       title='Delete Account'
-      loading={isLoading}
       disabled={isLoading}
       actionLabel='Confirm Deletion'
       body={bodyContent}
