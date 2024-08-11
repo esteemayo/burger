@@ -261,8 +261,11 @@
   }
 
   button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     all: unset;
-    display: inline-block;
     text-align: center;
     text-transform: capitalize;
     font-weight: 400;
