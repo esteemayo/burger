@@ -1,15 +1,16 @@
 'use client';
 
-import { useMemo } from 'react';
-import Link from 'next/link';
-import { ClipLoader } from 'react-spinners';
 import Image from 'next/image';
+import Link from 'next/link';
+import { useMemo } from 'react';
 
 import { useCart } from '@/hooks/useCart';
 import { useCartControls } from '@/hooks/useCartControls';
 
 import { ProductCardProps } from '@/types';
 import { formatCurrency } from '@/utils/formatCurrency';
+
+import Spinner from '../spinner/Spinner';
 
 import './ProductCard.scss';
 
@@ -31,7 +32,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
             disabled={inCart ?? isLoading}
             onClick={handleClick}
           >
-            {isLoading ? <ClipLoader size={20} color='#a00c1a' /> : btnLabel}
+            {isLoading ? <Spinner color='#a00c1a' /> : btnLabel}
           </button>
         </span>
         <Image
