@@ -4,11 +4,11 @@ import { useMemo } from 'react';
 import Link from 'next/link';
 import { useSession } from 'next-auth/react';
 
-import { useCartStore } from '@/hooks/useCartStore';
-import { useCartControls } from '@/hooks/useCartControls';
-
 import CartItems from '../cartItems/CartItems';
 import EmptyCart from '../emptyCart/EmptyCart';
+
+import { useCartStore } from '@/hooks/useCartStore';
+import { useCartControls } from '@/hooks/useCartControls';
 
 import './Cart.scss';
 
