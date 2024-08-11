@@ -204,7 +204,7 @@ const ProductModal = () => {
     <Modal
       isOpen={isOpen}
       title='Create a new product'
-      disabled={true}
+      disabled={isLoading}
       actionLabel={actionLabel}
       secondaryActionLabel={secondaryActionLabel}
       body={bodyContent}
