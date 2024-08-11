@@ -113,11 +113,11 @@ const ReviewForm = ({ productId }: ReviewFormProps) => {
   );
 
   useEffect(() => {
-    const timeout = setTimeout(() => {
-      errors && setErrors(initialErrorState);
+    setTimeout(() => {
+      if (Object.keys(errors).length > 0) {
+        setErrors(initialErrorState);
+      }
     }, 5000);
-
-    return () => clearTimeout(timeout);
   }, [errors]);
 
   const { desc, consent } = inputs;
