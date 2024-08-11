@@ -1,3 +1,5 @@
+'use client';
+
 import { useCallback, useEffect, useState } from 'react';
 
 export const useForm = <T extends object, U extends object>(
