@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useMemo } from 'react';
+import { useCallback, useEffect, useMemo } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
@@ -51,6 +51,11 @@ const Sidebar = () => {
   const containerClasses = useMemo(() => {
     return !!isOpen ? 'container active' : 'container';
   }, [isOpen]);
+
+  useEffect(() => {
+    window.addEventListener('keydown', handleEscape);
+    return window.removeEventListener('keydown', handleEscape);
+  }, [handleEscape]);
 
   return (
     <aside className={sidebarClasses} onClick={closeHandler}>
