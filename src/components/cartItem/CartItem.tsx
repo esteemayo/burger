@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import RemoveShoppingCartIcon from '@mui/icons-material/RemoveShoppingCart';
 
+import { CartItemProps } from '@/types';
 import { formatCurrency } from '@/utils/formatCurrency';
 
 const CartItem = ({
@@ -14,7 +15,7 @@ const CartItem = ({
   onIncrement,
   onDecrement,
   onRemove,
-}) => {
+}: CartItemProps) => {
   return (
     <div className='catProduct'>
       <div className={'cardBox'}>
