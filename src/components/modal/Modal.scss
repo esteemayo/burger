@@ -156,6 +156,12 @@
 
           .btnPrimary,
           .btnSecondary {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border: none;
+            outline: none;
             text-align: center;
             font-weight: 500;
             font-size: 1.35rem;
@@ -196,12 +202,6 @@
           }
 
           .btnPrimary {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            border: none;
-            outline: none;
             background-color: $clr-primary;
             color: $clr-white;
             border: 1px solid transparent;
@@ -212,8 +212,6 @@
           }
 
           .btnSecondary {
-            all: unset;
-            display: inline-block;
             background-color: transparent;
             color: $clr-secondary;
             border: 1px solid currentColor;
