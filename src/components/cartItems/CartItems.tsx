@@ -1,3 +1,7 @@
+'use client';
+
+import { useMemo } from 'react';
+
 import { CartItemsProps } from '@/types';
 import CartItem from '../cartItem/CartItem';
 
@@ -5,11 +9,14 @@ import './CartItems.scss';
 
 const CartItems = ({
   products,
-  cardClasses,
   onIncrement,
   onDecrement,
   onRemove,
 }: CartItemsProps) => {
+  const cardClasses = useMemo(() => {
+    return products.length <= 4 ? 'cardItems hide' : 'cardItems';
+  }, [products.length]);
+
   return (
     <div className={cardClasses}>
       {products.map((product) => {
