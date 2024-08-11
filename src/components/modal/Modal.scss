@@ -196,6 +196,10 @@
           }
 
           .btnPrimary {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
             background-color: $clr-primary;
             color: $clr-white;
             border: 1px solid transparent;
