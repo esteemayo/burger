@@ -72,13 +72,14 @@ const RecipientModal = () => {
       return;
     }
 
+    const formattedPhone = data.phone.replace(/\D/g, '').slice(0, 10);
+    const formattedValue = `1 ${formattedPhone.replace(
+      /(\d{3})(\d{3})(\d{4})/,
+      '($1) $2-$3'
+    )}`;
+    console.log(formattedValue);
+
     try {
-      const formattedPhone = data.phone.replace(/\D/g, '').slice(0, 10);
-      const formattedValue = `1 ${formattedPhone.replace(
-        /(\d{3})(\d{3})(\d{4})/,
-        '($1) $2-$3'
-      )}`;
-      console.log(formattedValue);
       const newData = {
         ...data,
         phone: `+1${formattedValue}`,
