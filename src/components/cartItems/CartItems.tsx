@@ -1,3 +1,4 @@
+import { CartItemsProps } from '@/types';
 import CartItem from '../cartItem/CartItem';
 
 const CartItems = ({
@@ -6,7 +7,7 @@ const CartItems = ({
   onIncrement,
   onDecrement,
   onRemove,
-}) => {
+}: CartItemsProps) => {
   return (
     <div className={cardClasses}>
       {products.map((product) => {
