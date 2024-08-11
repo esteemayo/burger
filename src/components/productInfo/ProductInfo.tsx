@@ -1,17 +1,17 @@
 'use client';
 
-import { ClipLoader } from 'react-spinners';
 import { useMemo } from 'react';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+
+import StarRating from '../starRating/StarRating';
+import Spinner from '../spinner/Spinner';
+import HeartButton from '../heartButton/HeartButton';
 
 import { useCart } from '@/hooks/useCart';
 import { useCartControls } from '@/hooks/useCartControls';
 
 import { ProductInfoProps } from '@/types';
 import { formatCurrency } from '@/utils/formatCurrency';
-
-import StarRating from '../starRating/StarRating';
-import HeartButton from '../heartButton/HeartButton';
 
 import './ProductInfo.scss';
 
@@ -67,7 +67,7 @@ const ProductInfo = ({ product, currentUser, onUpdate }: ProductInfoProps) => {
             onClick={handleClick}
           >
             <ShoppingCartIcon />
-            {isLoading ? <ClipLoader size={13} color='#fff' /> : btnLabel}
+            {isLoading ? <Spinner size={13} /> : btnLabel}
           </button>
         </div>
       </div>
