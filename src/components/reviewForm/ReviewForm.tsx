@@ -13,6 +13,7 @@ import { ReviewData, ReviewErrors } from '@/types';
 import { createReviewOnProduct } from '@/services/productService';
 
 import './ReviewForm.scss';
+import Spinner from '../spinner/Spinner';
 
 const initialState: ReviewData = {
   desc: '',
@@ -51,6 +52,7 @@ const ReviewForm = ({ productId }: ReviewFormProps) => {
   const [errors, setErrors] = useState(initialErrorState);
   const [inputs, setInputs] = useState(initialState);
   const [rating, setRating] = useState<number | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = useCallback(
     ({
@@ -100,14 +102,20 @@ const ReviewForm = ({ productId }: ReviewFormProps) => {
         ...inputs,
       };
 
-      mutate({ data, productId });
-      handleClear();
+      setIsLoading(true);
 
-      if (!isError) {
-        toast.success('Review added successfully!');
-      } else {
-        toast.error('You have already created a review for this product!');
-      }
+      setTimeout(() => {
+        mutate({ data, productId });
+        handleClear();
+
+        if (!isError) {
+          toast.success('Review added successfully!');
+        } else {
+          toast.error('You have already created a review for this product!');
+        }
+
+        setIsLoading(false);
+      }, 3000);
     },
     [handleClear, inputs, mutate, productId, rating]
   );
@@ -170,7 +178,7 @@ const ReviewForm = ({ productId }: ReviewFormProps) => {
           <label htmlFor='consent'>Sign me up for the newsletter!</label>
         </div>
       </div>
-      <button type='submit'>Submit review</button>
+      <button type='submit'>{isLoading ? <Spinner /> : 'Submit review'}</button>
     </form>
   );
 };
