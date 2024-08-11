@@ -178,7 +178,9 @@ const ReviewForm = ({ productId }: ReviewFormProps) => {
           <label htmlFor='consent'>Sign me up for the newsletter!</label>
         </div>
       </div>
-      <button type='submit'>{true ? <Spinner /> : 'Submit review'}</button>
+      <button disabled={isLoading} type='submit'>
+        {isLoading ? <Spinner /> : 'Submit review'}
+      </button>
     </form>
   );
 };
