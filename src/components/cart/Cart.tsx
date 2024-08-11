@@ -27,10 +27,6 @@ const Cart = () => {
     return products.length < 1 ? 'cardHeading emptyCardHeading' : 'cardHeading';
   }, [products.length]);
 
-  const cardClasses = useMemo(() => {
-    return products.length <= 4 ? 'cardItems hide' : 'cardItems';
-  }, [products.length]);
-
   const footerClasses = useMemo(() => {
     return !!session && products.length > 0
       ? 'cardFooter show'
@@ -47,7 +43,6 @@ const Cart = () => {
           ) : (
             <CartItems
               products={products}
-              cardClasses={cardClasses}
               onIncrement={handleIncrement}
               onDecrement={handleDecrement}
               onRemove={removeFromCart}
