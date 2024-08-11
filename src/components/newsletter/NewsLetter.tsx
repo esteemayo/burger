@@ -3,7 +3,8 @@
 import { useCallback, useRef, useState } from 'react';
 import { toast } from 'react-toastify';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
-import { ClipLoader } from 'react-spinners';
+
+import Spinner from '../spinner/Spinner';
 
 import './NewsLetter.scss';
 
@@ -29,10 +30,10 @@ const NewsLetter = () => {
 
       setTimeout(() => {
         console.log(email);
-  
+
         toast.success('Subscribed to our newsletter!');
         form.reset();
-  
+
         setIsLoading(false);
       }, 1000);
     }
@@ -55,11 +56,7 @@ const NewsLetter = () => {
               placeholder='Your email address'
             />
             <button type='submit' disabled={isLoading}>
-              {isLoading ? (
-                <ClipLoader size={20} color='#a00c1a' />
-              ) : (
-                'Subscribe'
-              )}
+              {isLoading ? <Spinner color='#a00c1a' /> : 'Subscribe'}
             </button>
           </form>
         </div>
