@@ -1,6 +1,8 @@
 import { CartItemsProps } from '@/types';
 import CartItem from '../cartItem/CartItem';
 
+import './CartItems.scss';
+
 const CartItems = ({
   products,
   cardClasses,
