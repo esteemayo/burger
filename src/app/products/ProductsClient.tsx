@@ -3,9 +3,9 @@
 import { useQuery } from '@tanstack/react-query';
 import Link from 'next/link';
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import { ClipLoader } from 'react-spinners';
 
 import EmptyState from '@/components/emptyState/EmptyState';
+import Spinner from '@/components/spinner/Spinner';
 import ProductLists from '@/components/productLists/ProductLists';
 
 import { ProductType } from '@/types';
@@ -85,11 +85,7 @@ const ProductsClient = () => {
         {!isLoading && (
           <div className={btnWrapClasses}>
             <button type='button' disabled={loading} onClick={handleSeeMore}>
-              {loading ? (
-                <ClipLoader size={20} color='#a00c1a' />
-              ) : (
-                'See more...'
-              )}
+              {loading ? <Spinner color='#a00c1a' /> : 'See more...'}
             </button>
           </div>
         )}
