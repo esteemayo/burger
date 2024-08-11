@@ -17,7 +17,7 @@ const CartItem = ({
   onRemove,
 }: CartItemProps) => {
   return (
-    <div className='catProduct'>
+    <div className='cartItem'>
       <div className={'cardBox'}>
         <div className='cardProductWrap'>
           <div className='cardProduct'>
