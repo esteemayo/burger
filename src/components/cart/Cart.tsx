@@ -27,7 +27,7 @@ const Cart = () => {
   }, [products.length]);
 
   const cardClasses = useMemo(() => {
-    return products.length <= 4 ? 'cardBody hide' : 'cardBody';
+    return products.length <= 4 ? 'cardItems hide' : 'cardItems';
   }, [products.length]);
 
   const footerClasses = useMemo(() => {
