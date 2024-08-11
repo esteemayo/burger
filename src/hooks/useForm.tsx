@@ -47,7 +47,7 @@ export const useForm = <T extends object, U extends object>(
 
   useEffect(() => {
     if (Object.keys(errors).length > 0) {
-      setTimeout(() => setErrors(initialStateErrors), 5000);
+      setTimeout(() => setErrors(initialErrors), 5000);
     }
   }, [errors]);
 
