@@ -46,14 +46,11 @@ const Modal = ({
     [handleClose]
   );
 
-  const handleEscape = useCallback(
-    (e: KeyboardEvent) => {
-      if (e.key === 'Escape' && isOpen) {
-        handleClose();
-      }
-    },
-    [handleClose]
-  );
+  const handleEscape = useCallback((e: KeyboardEvent) => {
+    if (e.key === 'Escape') {
+      handleClose();
+    }
+  }, [handleClose]);
 
   const handleSubmit = useCallback(
     (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -132,7 +129,7 @@ const Modal = ({
                   className={actionLabelClasses}
                   onClick={handleSubmit}
                 >
-                  {disabled ? <Spinner /> : actionLabel}
+                  {disabled ? <Spinner />: actionLabel}
                 </button>
               )}
             </div>
