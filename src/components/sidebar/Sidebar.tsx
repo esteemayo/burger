@@ -35,6 +35,15 @@ const Sidebar = () => {
     [handleClose]
   );
 
+  const handleEscape = useCallback(
+    (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        handleClose();
+      }
+    },
+    [handleClose]
+  );
+
   const sidebarClasses = useMemo(() => {
     return !!isOpen ? 'sidebar show' : 'sidebar';
   }, [isOpen]);
