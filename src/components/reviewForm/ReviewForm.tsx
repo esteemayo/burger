@@ -50,9 +50,9 @@ const ReviewForm = ({ productId }: ReviewFormProps) => {
   });
 
   const [errors, setErrors] = useState(initialErrorState);
-  const [inputs, setInputs] = useState(initialState);
-  const [rating, setRating] = useState<number | null>(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [rating, setRating] = useState<number | null>(null);
+  const [inputs, setInputs] = useState(initialState);
 
   const handleChange = useCallback(
     ({
