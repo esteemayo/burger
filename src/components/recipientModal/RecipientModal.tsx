@@ -65,22 +65,36 @@ const RecipientModal = () => {
     setIsLoading(true);
 
     try {
+      let formattedPhone = data.phone.replace(/\D/g, '').slice(1, 10);
+      if (data.phone.startsWith('1') || data.phone.length > 10) {
+        formattedPhone = data.phone.slice(0, 10);
+      } else {
+        formattedPhone = data.phone.replace(/\D/g, '').slice(0, 10);
+      }
+
+      const formattedValue = formattedPhone.replace(
+        /(\d{3})(\d{3})(\d{4})/,
+        '($1) $2-$3'
+      );
+      console.log(formattedValue);
       const newData = {
         ...data,
-        phone: `+1${data.phone}`,
+        phone: `+1${formattedValue}`,
       };
 
-      const res = await updateUserData(userId!, { ...newData });
+      console.log(newData);
 
-      const updatedData = {
-        name: res.data.name,
-        email: res.data.email,
-        phone: res.data.phone,
-      };
+      // const res = await updateUserData(userId!, { ...newData });
 
-      update({ ...updatedData });
-      setData(initialState);
-      onClose();
+      // const updatedData = {
+      //   name: res.data.name,
+      //   email: res.data.email,
+      //   phone: res.data.phone,
+      // };
+
+      // update({ ...updatedData });
+      // setData(initialState);
+      // onClose();
 
       toast.success('Information updated');
     } catch (err: unknown) {
