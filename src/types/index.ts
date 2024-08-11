@@ -891,3 +891,8 @@ export type SummaryType = {
   id: number;
   label: string;
 }[];
+
+export interface SpinnerProps {
+  size?: number;
+  color?: string;
+}
