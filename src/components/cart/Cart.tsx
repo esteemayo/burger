@@ -3,15 +3,13 @@
 import { useMemo } from 'react';
 import Link from 'next/link';
 import { useSession } from 'next-auth/react';
-import Image from 'next/image';
-import RemoveShoppingCartIcon from '@mui/icons-material/RemoveShoppingCart';
 
-import { formatCurrency } from '@/utils/formatCurrency';
 import { useCartStore } from '@/hooks/useCartStore';
 import { useCartControls } from '@/hooks/useCartControls';
 
-import './Cart.scss';
 import CartItem from '../cartItem/CartItem';
+
+import './Cart.scss';
 
 const Cart = () => {
   const { data: session } = useSession();
