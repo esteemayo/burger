@@ -7,7 +7,7 @@ import { useSession } from 'next-auth/react';
 import { useCartStore } from '@/hooks/useCartStore';
 import { useCartControls } from '@/hooks/useCartControls';
 
-import CartItem from '../cartItem/CartItem';
+import CartItems from '../cartItems/CartItems';
 
 import './Cart.scss';
 
@@ -49,23 +49,13 @@ const Cart = () => {
               </div>
             </div>
           ) : (
-            <div className={cardClasses}>
-              {products.map((product) => {
-                const { id, name, price, quantity } = product;
-                return (
-                  <CartItem
-                    key={id}
-                    id={id}
-                    name={name}
-                    price={price}
-                    quantity={quantity}
-                    onIncrement={handleIncrement}
-                    onDecrement={handleDecrement}
-                    onRemove={removeFromCart}
-                  />
-                );
-              })}
-            </div>
+            <CartItems
+              products={products}
+              cardClasses={cardClasses}
+              onIncrement={handleIncrement}
+              onDecrement={handleDecrement}
+              onRemove={removeFromCart}
+            />
           )}
           <div className={footerClasses}>
             <Link href='/checkout'>Proceed to Checkout</Link>
