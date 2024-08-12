@@ -171,7 +171,6 @@ const RegisterForm = () => {
     street,
     city,
     state,
-    phone,
     gender,
     password,
     confirmPassword,
