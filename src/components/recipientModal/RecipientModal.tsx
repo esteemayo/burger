@@ -2,7 +2,7 @@
 
 import { useSession } from 'next-auth/react';
 import { toast } from 'react-toastify';
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 
 import Modal from '../modal/Modal';
@@ -103,6 +103,14 @@ const RecipientModal = () => {
       setIsLoading(false);
     }
   }, [data, onClose, router, session, update, userId]);
+
+  useEffect(() => {
+    setTimeout(() => {
+      if (Object.keys(errors).length > 0) {
+        setErrors(initialErrors);
+      }
+    }, 5000);
+  }, [errors]);
 
   const { name, email, phone } = data;
 
