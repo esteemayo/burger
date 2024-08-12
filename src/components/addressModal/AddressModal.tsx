@@ -2,7 +2,7 @@
 
 import { useSession } from 'next-auth/react';
 import { toast } from 'react-toastify';
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 
 import Modal from '../modal/Modal';
@@ -84,6 +84,12 @@ const AddressModal = () => {
       setIsLoading(false);
     }
   }, [data, onClose, router, session, update, userId]);
+
+  useEffect(() => {
+    if (Object.keys(errors).length > 0) {
+      setTimeout(() => setErrors(initialErrors), 5000);
+    }
+  }, [errors]);
 
   const { state, city, street } = data;
 
