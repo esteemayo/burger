@@ -14,6 +14,7 @@ import { upload } from '@/utils/upload';
 import { validateAccountData } from '@/validations/accountData';
 
 import { updateUserData } from '@/services/userService';
+import { formatPhone } from '@/utils/formatPhone';
 import { CurrentUserType, UserData, UserDataErrors } from '@/types';
 
 interface AccountDataProps {
@@ -52,7 +53,7 @@ const AccountData = ({ currentUser }: AccountDataProps) => {
 
     const userData = {
       ...data,
-      phone: `+1${data.phone}`,
+      phone: formattedPhone,
     };
 
     try {
@@ -90,13 +91,15 @@ const AccountData = ({ currentUser }: AccountDataProps) => {
 
   const { name, email, phone, address } = data;
 
+  const { formattedPhone, formattedValue } = formatPhone(phone);
+
   return (
     <div className='acccountData'>
       <AccountAvatar file={file} avatar={avatar} onChange={handleFile} />
       <AccountDataForm
         name={name}
         email={email}
-        phone={phone}
+        phone={formattedValue}
         address={address}
         errors={errors}
         loading={isLoading}
