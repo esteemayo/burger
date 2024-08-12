@@ -656,7 +656,7 @@ export interface StatusAction {
 export interface ProductInputsProps {
   name: string;
   desc: string;
-  price: number;
+  price: string;
   errors?: ProductErrors;
   onChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void;
 }
