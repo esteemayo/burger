@@ -12,9 +12,9 @@ import { useProductModal } from '@/hooks/useProductModal';
 import { createProduct } from '@/services/productService';
 import { validateProductInput } from '@/validations/product';
 
+import { formatPrice } from '@/utils/formatPrice';
 import { upload } from '@/utils/upload';
 import { ProductData, ProductErrors } from '@/types';
-import { formatPrice } from '@/utils/formatPrice';
 
 const enum STEPS {
   INFO = 0,
@@ -183,7 +183,7 @@ const ProductModal = () => {
     }, 5000);
   }, [errors]);
 
-  const { name, desc, price } = data;
+  const { name, desc } = data;
 
   let bodyContent: JSX.Element | undefined;
 
