@@ -32,7 +32,6 @@ const initialErrors: RecipientErrors = {
 const RecipientModal = () => {
   const router = useRouter();
   const { data: session, update } = useSession();
-  const userId = session?.user.id;
 
   const isOpen = useRecipient((store) => store.isOpen);
   const onClose = useRecipient((store) => store.onClose);
@@ -41,6 +40,7 @@ const RecipientModal = () => {
   const [data, setData] = useState(initialState);
   const [errors, setErrors] = useState(initialErrors);
 
+  const userId = session?.user.id;
   const { formattedPhone, formattedValue } = formatPhone(data.phone);
 
   const handleChange = useCallback(
