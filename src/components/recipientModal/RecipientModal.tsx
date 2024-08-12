@@ -77,7 +77,6 @@ const RecipientModal = () => {
       /(\d{3})(\d{3})(\d{4})/,
       '($1) $2-$3'
     )}`;
-    console.log(formattedValue);
 
     try {
       const newData = {
@@ -85,21 +84,19 @@ const RecipientModal = () => {
         phone: `${formattedValue}`,
       };
 
-      console.log(newData);
+      const res = await updateUserData(userId!, { ...newData });
 
-      // const res = await updateUserData(userId!, { ...newData });
+      const updatedData = {
+        name: res.data.name,
+        email: res.data.email,
+        phone: res.data.phone,
+      };
 
-      // const updatedData = {
-      //   name: res.data.name,
-      //   email: res.data.email,
-      //   phone: res.data.phone,
-      // };
+      update({ ...updatedData });
+      setData(initialState);
+      onClose();
 
-      // update({ ...updatedData });
-      // setData(initialState);
-      // onClose();
-
-      toast.success('Information updated');
+      toast.success('Data updated');
     } catch (err: unknown) {
       console.log(err);
     } finally {
