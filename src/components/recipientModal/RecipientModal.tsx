@@ -41,7 +41,7 @@ const RecipientModal = () => {
   const [data, setData] = useState(initialState);
   const [errors, setErrors] = useState(initialErrors);
 
-  const { newPhone, formattedValue } = formatPhone(data.phone);
+  const { formattedPhone, formattedValue } = formatPhone(data.phone);
 
   const handleChange = useCallback(
     ({ target: input }: React.ChangeEvent<HTMLInputElement>) => {
@@ -78,7 +78,7 @@ const RecipientModal = () => {
     try {
       const newData = {
         ...data,
-        phone: newPhone,
+        phone: formattedPhone,
       };
 
       const res = await updateUserData(userId!, { ...newData });
