@@ -43,7 +43,6 @@ const AccountDataForm = ({
           />
           <PhoneInput
             name='phone'
-            type='number'
             label='Phone number'
             value={phone}
             placeholder={currentUser?.phone ?? '(202) 555-1234'}
