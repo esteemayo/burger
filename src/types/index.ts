@@ -481,7 +481,7 @@ export interface UserPasswordErrors {
 export interface ProductData {
   name: string;
   desc: string;
-  price: number;
+  price: string;
 }
 
 export interface ProductErrors {

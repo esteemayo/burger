@@ -33,10 +33,8 @@ const ProductInputs = ({
       />
       <Input
         name='price'
-        type='number'
         label='Price'
         value={price}
-        min={1}
         placeholder='Price'
         onChange={onChange}
         error={errors?.price}

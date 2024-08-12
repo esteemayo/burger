@@ -23,7 +23,7 @@ const enum STEPS {
 const initialState: ProductData = {
   name: '',
   desc: '',
-  price: 1,
+  price: '',
 };
 
 const ProductModal = () => {
@@ -36,11 +36,20 @@ const ProductModal = () => {
   const [ingredient, setIngredient] = useState('');
   const [step, setStep] = useState(STEPS.INFO);
   const [isLoading, setIsLoading] = useState(false);
-  
+
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState<ProductErrors>({});
   const [data, setData] = useState(initialState);
   const [ingredients, setIngredients] = useState<string[]>([]);
+
+  const cleanedValue = data.price
+    .replace(/[^0-9.]/g, '')
+    .replace(/(\..*)\./g, '$1');
+
+  const formattedValue = `${cleanedValue.replace(
+    /(\d)(?=(\d{3})+(?!\d))/g,
+    '$1,'
+  )}`;
 
   const onPrev = useCallback(() => {
     setStep((value) => {
@@ -188,7 +197,7 @@ const ProductModal = () => {
     <ProductInputs
       name={name}
       desc={desc}
-      price={price}
+      price={formattedValue}
       errors={errors}
       onChange={handleChange}
     />
