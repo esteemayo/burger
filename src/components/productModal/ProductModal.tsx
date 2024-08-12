@@ -36,6 +36,7 @@ const ProductModal = () => {
   const [ingredient, setIngredient] = useState('');
   const [step, setStep] = useState(STEPS.INFO);
   const [isLoading, setIsLoading] = useState(false);
+  
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState<ProductErrors>({});
   const [data, setData] = useState(initialState);
