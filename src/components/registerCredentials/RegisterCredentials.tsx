@@ -25,7 +25,6 @@ const RegisterCredentials = ({
     <>
       <PhoneInput
         name='phone'
-        type='number'
         label='Phone number'
         value={phone}
         placeholder='(202) 555-1234'
