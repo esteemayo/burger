@@ -14,6 +14,7 @@ import { validateProductInput } from '@/validations/product';
 
 import { upload } from '@/utils/upload';
 import { ProductData, ProductErrors } from '@/types';
+import { formatPrice } from '@/utils/formatPrice';
 
 const enum STEPS {
   INFO = 0,
@@ -42,14 +43,7 @@ const ProductModal = () => {
   const [data, setData] = useState(initialState);
   const [ingredients, setIngredients] = useState<string[]>([]);
 
-  const cleanedValue = data.price
-    .replace(/[^0-9.]/g, '')
-    .replace(/(\..*)\./g, '$1');
-
-  const formattedValue = `${cleanedValue.replace(
-    /(\d)(?=(\d{3})+(?!\d))/g,
-    '$1,'
-  )}`;
+  const { formattedPrice } = formatPrice(data.price);
 
   const onPrev = useCallback(() => {
     setStep((value) => {
@@ -197,7 +191,7 @@ const ProductModal = () => {
     <ProductInputs
       name={name}
       desc={desc}
-      price={formattedValue}
+      price={formattedPrice}
       errors={errors}
       onChange={handleChange}
     />
