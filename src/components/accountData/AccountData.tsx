@@ -51,6 +51,14 @@ const AccountData = ({ currentUser }: AccountDataProps) => {
   const onSubmitHandler = async () => {
     setIsLoading(true);
 
+    if (data.phone.startsWith('1')) {
+      data.phone = '';
+
+      toast.error('Phone number cannot start with 1');
+      setIsLoading(false);
+      return;
+    }
+
     const userData = {
       ...data,
       phone: formattedPhone,
