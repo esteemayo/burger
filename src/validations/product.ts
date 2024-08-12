@@ -15,7 +15,7 @@ export const validateProductInput = (
     errors.desc = 'Description is required';
   }
 
-  if (!price) {
+  if (price.trim() === '') {
     errors.price = 'Price is required';
   } else if (price === '0') {
     errors.price = 'Price must be equal or greater than 1';
