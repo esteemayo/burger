@@ -12,6 +12,7 @@ import { useRecipient } from '@/hooks/useRecipientModal';
 import { validateRecipientInputs } from '@/validations/recipient';
 
 import { updateUserData } from '@/services/userService';
+import { formatPhone } from '@/utils/formatPhone';
 import { RecipientData, RecipientErrors } from '@/types';
 
 import './RecipientModal.scss';
@@ -40,13 +41,7 @@ const RecipientModal = () => {
   const [data, setData] = useState(initialState);
   const [errors, setErrors] = useState(initialErrors);
 
-  const formattedPhone = data.phone.replace(/\D/g, '').slice(0, 10);
-  const formattedValue = formattedPhone.replace(
-    /(\d{3})(\d{3})(\d{4})/,
-    '($1) $2-$3'
-  );
-
-  const newPhone = `+1 ${formattedValue}`;
+  const { newPhone, formattedValue } = formatPhone(data.phone);
 
   const handleChange = useCallback(
     ({ target: input }: React.ChangeEvent<HTMLInputElement>) => {
