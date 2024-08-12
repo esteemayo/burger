@@ -83,7 +83,7 @@ const RecipientModal = () => {
     try {
       const newData = {
         ...data,
-        phone: `${newPhone}`,
+        phone: newPhone,
       };
 
       const res = await updateUserData(userId!, { ...newData });
@@ -114,7 +114,7 @@ const RecipientModal = () => {
     }, 5000);
   }, [errors]);
 
-  const { name, email, phone } = data;
+  const { name, email } = data;
 
   let bodyContent: JSX.Element | undefined;
 
