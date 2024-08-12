@@ -8,5 +8,7 @@ export const formatPrice = (price: string) => {
     '$1,'
   )}`;
 
-  return formattedPrice;
+  return {
+    formattedPrice,
+  };
 };
