@@ -2,7 +2,7 @@
 
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
-import { useCallback, useEffect, useMemo } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import Image from 'next/image';
 import RoomServiceIcon from '@mui/icons-material/RoomService';
 import { useSession } from 'next-auth/react';
@@ -24,11 +24,14 @@ const Sidebar = () => {
   const { searchQuery, handleChange, handleSubmit } = useSearch();
   const { isOpen, onClose, handleClose, handleLogout } = useLogout();
 
+  const [show, setShow] = useState(false);
+
   const closeHandler = useCallback(
     (e: React.MouseEvent<HTMLElement>) => {
       const target = e.target as HTMLElement;
 
       if (target.classList.contains('sidebar')) {
+        setShow(false);
         handleClose();
       }
     },
@@ -45,11 +48,15 @@ const Sidebar = () => {
   );
 
   const sidebarClasses = useMemo(() => {
-    return !!isOpen ? 'sidebar show' : 'sidebar';
+    return !!show ? 'sidebar show' : 'sidebar';
   }, [isOpen]);
 
   const containerClasses = useMemo(() => {
-    return !!isOpen ? 'container active' : 'container';
+    return !!show ? 'container active' : 'container';
+  }, [isOpen]);
+
+  useEffect(() => {
+    setShow(isOpen);
   }, [isOpen]);
 
   useEffect(() => {
