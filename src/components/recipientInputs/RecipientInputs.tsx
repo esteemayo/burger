@@ -34,7 +34,7 @@ const RecipientInputs = ({
       />
       <PhoneInput
         name='phone'
-        type='number'
+        type='text'
         label='Phone Number'
         value={phone}
         placeholder='(202) 555-1234'

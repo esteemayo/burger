@@ -40,6 +40,14 @@ const RecipientModal = () => {
   const [data, setData] = useState(initialState);
   const [errors, setErrors] = useState(initialErrors);
 
+  const formattedPhone = data.phone.replace(/\D/g, '').slice(0, 10);
+  const formattedValue = formattedPhone.replace(
+    /(\d{3})(\d{3})(\d{4})/,
+    '($1) $2-$3'
+  );
+
+  const newPhone = `+1 ${formattedValue}`;
+
   const handleChange = useCallback(
     ({ target: input }: React.ChangeEvent<HTMLInputElement>) => {
       const { name, value } = input;
@@ -65,23 +73,17 @@ const RecipientModal = () => {
     setIsLoading(true);
 
     if (data.phone.startsWith('1')) {
-      data.phone = ''
+      data.phone = '';
 
       toast.error('Phone number cannot start with 1');
       setIsLoading(false);
       return;
     }
 
-    const formattedPhone = data.phone.replace(/\D/g, '').slice(0, 10);
-    const formattedValue = `+1 ${formattedPhone.replace(
-      /(\d{3})(\d{3})(\d{4})/,
-      '($1) $2-$3'
-    )}`;
-
     try {
       const newData = {
         ...data,
-        phone: `${formattedValue}`,
+        phone: `${newPhone}`,
       };
 
       const res = await updateUserData(userId!, { ...newData });
@@ -120,7 +122,7 @@ const RecipientModal = () => {
     <RecipientInputs
       name={name}
       email={email}
-      phone={phone}
+      phone={formattedValue}
       errors={errors}
       onChange={handleChange}
     />
