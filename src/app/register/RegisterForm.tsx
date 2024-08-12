@@ -18,6 +18,7 @@ import { upload } from '@/utils/upload';
 import { validateRegisterInputs } from '@/validations/register';
 
 import { registerUser } from '@/services/authService';
+import { formatPhone } from '@/utils/formatPhone';
 import { RegisterData, RegisterErrors } from '@/types';
 
 import './Register.scss';
@@ -101,9 +102,17 @@ const RegisterForm = () => {
   const onSubmitHandler = async () => {
     setIsLoading(true);
 
+    if (data.phone.startsWith('1')) {
+      data.phone = '';
+
+      toast.error('Phone number cannot start with 1');
+      setIsLoading(false);
+      return;
+    }
+
     const credentials = {
       ...data,
-      phone: `+1${data.phone}`,
+      phone: formattedPhone,
       address: `${data.street}, ${data.city}, ${data.state}`,
     };
 
@@ -136,6 +145,8 @@ const RegisterForm = () => {
     initialErrors,
     validateRegisterInputs
   );
+
+  const { formattedPhone, formattedValue } = formatPhone(data.phone);
 
   const iconClasses = useMemo(() => {
     return data.password.length > 0 ? 'icon show' : 'icon';
@@ -193,7 +204,7 @@ const RegisterForm = () => {
   if (step === STEPS.CREDENTIALS) {
     bodyContent = (
       <RegisterCredentials
-        phone={phone}
+        phone={formattedValue}
         password={password}
         confirmPassword={confirmPassword}
         errors={errors}
