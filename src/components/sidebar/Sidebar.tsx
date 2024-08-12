@@ -64,6 +64,10 @@ const Sidebar = () => {
     return window.removeEventListener('keydown', handleEscape);
   }, [handleEscape]);
 
+  if (!isOpen) {
+    return;
+  }
+
   return (
     <aside className={sidebarClasses} onClick={closeHandler}>
       <div className={containerClasses}>
