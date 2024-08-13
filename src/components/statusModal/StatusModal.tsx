@@ -20,6 +20,11 @@ const StatusModal = () => {
   const [status, setStatus] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
+  const statusLists = useMemo(
+    () => ['not paid', 'preparing', 'on the way', 'delivered'],
+    []
+  );
+
   const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     setStatus(e.target.value);
   }, []);
