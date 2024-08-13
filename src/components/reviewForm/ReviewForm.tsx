@@ -20,11 +20,6 @@ const initialState: ReviewData = {
   consent: false,
 };
 
-const initialErrorState: ReviewErrors = {
-  desc: '',
-  rating: '',
-};
-
 interface ReviewFormProps {
   productId: string;
 }
@@ -49,7 +44,7 @@ const ReviewForm = ({ productId }: ReviewFormProps) => {
     },
   });
 
-  const [errors, setErrors] = useState(initialErrorState);
+  const [errors, setErrors] = useState<ReviewErrors>({});
   const [isLoading, setIsLoading] = useState(false);
   const [rating, setRating] = useState<number | null>(null);
   const [inputs, setInputs] = useState(initialState);
@@ -95,7 +90,7 @@ const ReviewForm = ({ productId }: ReviewFormProps) => {
       const errors = validateReviewInputs(inputs, rating);
       if (Object.keys(errors).length > 0) return setErrors(errors);
 
-      setErrors(initialErrorState);
+      setErrors({});
 
       const data = {
         rating,
@@ -123,7 +118,7 @@ const ReviewForm = ({ productId }: ReviewFormProps) => {
   useEffect(() => {
     setTimeout(() => {
       if (Object.keys(errors).length > 0) {
-        setErrors(initialErrorState);
+        setErrors({});
       }
     }, 5000);
   }, [errors]);
