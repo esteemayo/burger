@@ -207,6 +207,8 @@
 
             border: none;
             outline: none;
+            width: 4rem;
+            height: 3.7rem;
             padding: 1rem;
             background-color: $clr-primary;
             color: $clr-white;
@@ -215,7 +217,7 @@
             transition: all 0.3s;
 
             @media only screen and (min-width: 112.5em) {
-              padding: 1.5rem;
+              padding: 0.8rem 1.5rem;
             }
 
             &:hover {
