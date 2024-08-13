@@ -23,12 +23,6 @@ const initialState: RecipientData = {
   phone: '',
 };
 
-const initialErrors: RecipientErrors = {
-  name: '',
-  email: '',
-  phone: '',
-};
-
 const RecipientModal = () => {
   const router = useRouter();
   const { data: session, update } = useSession();
@@ -38,7 +32,7 @@ const RecipientModal = () => {
 
   const [isLoading, setIsLoading] = useState(false);
   const [data, setData] = useState(initialState);
-  const [errors, setErrors] = useState(initialErrors);
+  const [errors, setErrors] = useState<RecipientErrors>({});
 
   const userId = session?.user.id;
   const { formattedPhone, formattedValue } = formatPhone(data.phone);
@@ -63,7 +57,7 @@ const RecipientModal = () => {
 
     const errors = validateRecipientInputs(data);
     if (Object.keys(errors).length > 0) return setErrors(errors);
-    setErrors(initialErrors);
+    setErrors({});
 
     setIsLoading(true);
 
@@ -104,7 +98,7 @@ const RecipientModal = () => {
   useEffect(() => {
     setTimeout(() => {
       if (Object.keys(errors).length > 0) {
-        setErrors(initialErrors);
+        setErrors({});
       }
     }, 5000);
   }, [errors]);
