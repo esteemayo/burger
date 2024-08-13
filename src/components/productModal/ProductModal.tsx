@@ -43,7 +43,7 @@ const ProductModal = () => {
   const [data, setData] = useState(initialState);
   const [ingredients, setIngredients] = useState<string[]>([]);
 
-  const { formattedPrice } = formatPrice(data.price);
+  const { rawPrice, formattedPrice } = formatPrice(data.price);
 
   const onPrev = useCallback(() => {
     setStep((value) => {
@@ -155,12 +155,12 @@ const ProductModal = () => {
 
     const newProduct = {
       ...data,
-      price: parseFloat(formattedPrice),
+      price: rawPrice,
       ingredients,
       image: url,
     };
-    console.log(newProduct);
-    // await handleCreate({ ...newProduct });
+
+    await handleCreate({ ...newProduct });
   }, [data, file, handleCreate, ingredients, onNext, step]);
 
   const actionLabel = useMemo(() => {
