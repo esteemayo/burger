@@ -1,10 +1,9 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
-import Image from 'next/image';
 import { useCallback, useState } from 'react';
-import { toast } from 'react-toastify';
+import Image from 'next/image';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
+import { toast } from 'react-toastify';
 
 import Spinner from '../spinner/Spinner';
 
@@ -12,7 +11,6 @@ import { StatusFormProps } from '@/types';
 import { updateOrder } from '@/services/orderService';
 
 const StatusForm = ({ actionId, status }: StatusFormProps) => {
-  const router = useRouter();
   const queryClient = useQueryClient();
 
   const { mutate } = useMutation({
@@ -53,12 +51,11 @@ const StatusForm = ({ actionId, status }: StatusFormProps) => {
   
         form.reset();
         toast.success('Status updated!');
-        router.refresh();
 
         setIsLoading(false);
       }, 3000);
     },
-    [actionId, mutate, router]
+    [actionId, mutate]
   );
 
   return (
