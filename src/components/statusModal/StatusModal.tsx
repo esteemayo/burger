@@ -25,12 +25,27 @@ const StatusModal = () => {
     []
   );
 
+  const validateInput = useCallback(() => {
+    if (status.length < 1) {
+      toast.error('Status must not be empty');
+      return;
+    }
+
+    if (!statusLists.includes(status)) {
+      toast.error('Invalid order status entered');
+      setStatus('');
+      return;
+    }
+  }, [status]);
+
   const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     setStatus(e.target.value);
   }, []);
 
   const onSubmit = useCallback(async () => {
     const orderId = order?.id;
+
+    validateInput();
 
     setIsLoading(true);
 
