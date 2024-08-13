@@ -45,7 +45,7 @@ const AccountDataForm = ({
             name='phone'
             label='Phone number'
             value={phone}
-            placeholder={currentUser?.phone ?? '(202) 555-1234'}
+            placeholder='(202) 555-1234'
             onChange={onChange}
             error={errors.phone}
           />
