@@ -155,12 +155,12 @@ const ProductModal = () => {
 
     const newProduct = {
       ...data,
-      price: +data.price,
+      price: parseFloat(formattedPrice),
       ingredients,
       image: url,
     };
-
-    await handleCreate({ ...newProduct });
+    console.log(newProduct);
+    // await handleCreate({ ...newProduct });
   }, [data, file, handleCreate, ingredients, onNext, step]);
 
   const actionLabel = useMemo(() => {
