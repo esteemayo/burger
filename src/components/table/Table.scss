@@ -205,7 +205,8 @@
             align-items: center;
             justify-content: center;
 
-            all: unset;
+            border: none;
+            outline: none;
             padding: 0.5rem 0.8rem;
             background-color: $clr-primary;
             color: $clr-white;
