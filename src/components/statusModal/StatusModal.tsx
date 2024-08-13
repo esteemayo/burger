@@ -66,8 +66,7 @@ const StatusModal = () => {
     <Modal
       isOpen={isOpen}
       title="Edit order's status"
-      loading={isLoading}
-      disabled={disabledBtn}
+      disabled={isLoading || disabledBtn}
       actionLabel='Update'
       body={bodyContent}
       size='full'
