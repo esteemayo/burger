@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useState } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 import Image from 'next/image';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { toast } from 'react-toastify';
@@ -31,6 +31,11 @@ const StatusForm = ({ actionId, status }: StatusFormProps) => {
 
   const [isLoading, setIsLoading] = useState(false);
 
+  const statusLists = useMemo(
+    () => ['not paid', 'preparing', 'on the way', 'delivered'],
+    []
+  );
+
   const handleSubmit = useCallback(
     async (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
@@ -38,8 +43,6 @@ const StatusForm = ({ actionId, status }: StatusFormProps) => {
       const form = e.target as HTMLFormElement;
       const input = form.elements[0] as HTMLInputElement;
       const status = input.value;
-
-      const statusLists = ['not paid', 'preparing', 'on the way', 'delivered'];
 
       if (input.value.length < 1) {
         toast.error('Status must not be empty');
