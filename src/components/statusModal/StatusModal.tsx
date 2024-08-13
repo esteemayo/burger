@@ -1,7 +1,8 @@
 'use client';
 
-import { toast } from 'react-toastify';
 import { useCallback, useEffect, useMemo, useState } from 'react';
+import { toast } from 'react-toastify';
+import { useMutation, useQueryClient } from '@tanstack/react-query';
 
 import Input from '../input/Input';
 import Modal from '../modal/Modal';
@@ -10,9 +11,27 @@ import { updateOrder } from '@/services/orderService';
 import { useStatusModal } from '@/hooks/useStatusModal';
 
 const StatusModal = () => {
+  const queryClient = useQueryClient();
+
   const isOpen = useStatusModal((store) => store.isOpen);
   const order = useStatusModal((store) => store.order);
   const onClose = useStatusModal((store) => store.onClose);
+
+  const { mutate } = useMutation({
+    mutationFn: async ({
+      status,
+      orderId,
+    }: {
+      status: string;
+      orderId: string;
+    }) => {
+      const { data } = await updateOrder(orderId, { status });
+      return data;
+    },
+    onSuccess() {
+      queryClient.invalidateQueries({ queryKey: ['orders'] });
+    },
+  });
 
   const [status, setStatus] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -27,7 +46,7 @@ const StatusModal = () => {
   }, []);
 
   const onSubmit = useCallback(async () => {
-    const orderId = order?.id;
+    const orderId = order?.id as string;
 
     if (status.length < 1) {
       toast.error('Status must not be empty');
@@ -42,18 +61,14 @@ const StatusModal = () => {
 
     setIsLoading(true);
 
-    try {
-      await updateOrder(orderId!, { status });
-
+    setTimeout(() => {
+      mutate({ status, orderId });
       setStatus('');
       toast.success('Status changed!');
 
       onClose();
-    } catch (err: unknown) {
-      console.log(err);
-    } finally {
       setIsLoading(false);
-    }
+    }, 3000);
   }, [onClose, order, status]);
 
   useEffect(() => {
