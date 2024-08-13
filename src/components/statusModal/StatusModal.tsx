@@ -45,7 +45,16 @@ const StatusModal = () => {
   const onSubmit = useCallback(async () => {
     const orderId = order?.id;
 
-    validateInput();
+    if (status.length < 1) {
+      toast.error('Status must not be empty');
+      return;
+    }
+
+    if (!statusLists.includes(status)) {
+      toast.error('Invalid order status entered');
+      setStatus('');
+      return;
+    }
 
     setIsLoading(true);
 
