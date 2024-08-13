@@ -8,6 +8,7 @@ import { useMutation, useQueryClient } from '@tanstack/react-query';
 
 import { StatusFormProps } from '@/types';
 import { updateOrder } from '@/services/orderService';
+import Spinner from '../spinner/Spinner';
 
 const StatusForm = ({ actionId, status }: StatusFormProps) => {
   const router = useRouter();
@@ -54,7 +55,7 @@ const StatusForm = ({ actionId, status }: StatusFormProps) => {
         router.refresh();
 
         setIsLoading(false);
-      }, 3000)
+      }, 3000);
     },
     [actionId, mutate, router]
   );
@@ -62,8 +63,12 @@ const StatusForm = ({ actionId, status }: StatusFormProps) => {
   return (
     <form onSubmit={handleSubmit}>
       <input type='text' placeholder={status} />
-      <button type='submit'>
-        <Image src='/img/edit.png' width={20} height={20} alt='edit icon' />
+      <button type='submit' disabled={isLoading}>
+        {true ? (
+          <Spinner size={15} />
+        ) : (
+          <Image src='/img/edit.png' width={20} height={20} alt='edit icon' />
+        )}
       </button>
     </form>
   );
