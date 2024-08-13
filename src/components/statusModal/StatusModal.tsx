@@ -44,10 +44,6 @@ const StatusModal = () => {
     }
   }, [onClose, order, router, status]);
 
-  const disabledBtn = useMemo(() => {
-    return status.length < 1;
-  }, [status]);
-
   useEffect(() => {
     setStatus(order?.status || '');
   }, [order?.status]);
@@ -64,9 +60,9 @@ const StatusModal = () => {
 
   return (
     <Modal
-      isOpen={isOpen}
+      isOpen={true}
       title="Edit order's status"
-      disabled={isLoading || disabledBtn}
+      disabled={isLoading}
       actionLabel='Update'
       body={bodyContent}
       size='full'
