@@ -1,6 +1,5 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
 import { toast } from 'react-toastify';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 
@@ -11,8 +10,6 @@ import { updateOrder } from '@/services/orderService';
 import { useStatusModal } from '@/hooks/useStatusModal';
 
 const StatusModal = () => {
-  const router = useRouter();
-
   const isOpen = useStatusModal((store) => store.isOpen);
   const order = useStatusModal((store) => store.order);
   const onClose = useStatusModal((store) => store.onClose);
@@ -24,19 +21,6 @@ const StatusModal = () => {
     () => ['not paid', 'preparing', 'on the way', 'delivered'],
     []
   );
-
-  const validateInput = useCallback(() => {
-    if (status.length < 1) {
-      toast.error('Status must not be empty');
-      return;
-    }
-
-    if (!statusLists.includes(status)) {
-      toast.error('Invalid order status entered');
-      setStatus('');
-      return;
-    }
-  }, [status]);
 
   const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     setStatus(e.target.value);
@@ -62,7 +46,6 @@ const StatusModal = () => {
       await updateOrder(orderId!, { status });
 
       setStatus('');
-      router.refresh();
       toast.success('Status changed!');
 
       onClose();
@@ -71,7 +54,7 @@ const StatusModal = () => {
     } finally {
       setIsLoading(false);
     }
-  }, [onClose, order, router, status]);
+  }, [onClose, order, status]);
 
   useEffect(() => {
     setStatus(order?.status || '');
