@@ -39,8 +39,16 @@ const StatusForm = ({ actionId, status }: StatusFormProps) => {
       const input = form.elements[0] as HTMLInputElement;
       const status = input.value;
 
+      const statusLists = ['not paid', 'preparing', 'on the way', 'delivered'];
+
       if (input.value.length < 1) {
         toast.error('Status must not be empty');
+        return;
+      }
+
+      if (!statusLists.includes(input.value)) {
+        toast.error('Invalid order status entered');
+        input.value = '';
         return;
       }
 
@@ -48,7 +56,7 @@ const StatusForm = ({ actionId, status }: StatusFormProps) => {
 
       setTimeout(() => {
         mutate({ actionId, status });
-  
+
         form.reset();
         toast.success('Status updated!');
 
