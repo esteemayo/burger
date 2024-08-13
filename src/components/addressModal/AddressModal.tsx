@@ -22,12 +22,6 @@ const initialState: AddressData = {
   street: '',
 };
 
-const initialErrors: AddressErrors = {
-  state: '',
-  city: '',
-  street: '',
-};
-
 const AddressModal = () => {
   const router = useRouter();
   const { data: session, update } = useSession();
@@ -38,7 +32,7 @@ const AddressModal = () => {
 
   const [isLoading, setIsLoading] = useState(false);
   const [data, setData] = useState(initialState);
-  const [errors, setErrors] = useState(initialErrors);
+  const [errors, setErrors] = useState<AddressErrors>({});
 
   const handleChange = useCallback(
     ({ target: input }: React.ChangeEvent<HTMLInputElement>) => {
@@ -60,7 +54,7 @@ const AddressModal = () => {
 
     const errors = validateAddressInputs(data);
     if (Object.keys(errors).length > 0) return setErrors(errors);
-    setErrors(initialErrors);
+    setErrors({});
 
     setIsLoading(true);
 
@@ -87,7 +81,7 @@ const AddressModal = () => {
 
   useEffect(() => {
     if (Object.keys(errors).length > 0) {
-      setTimeout(() => setErrors(initialErrors), 5000);
+      setTimeout(() => setErrors({}), 5000);
     }
   }, [errors]);
 
