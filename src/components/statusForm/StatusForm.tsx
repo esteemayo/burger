@@ -3,7 +3,7 @@
 import { toast } from 'react-toastify';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import { useCallback } from 'react';
+import { useCallback, useState } from 'react';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 
 import { StatusFormProps } from '@/types';
@@ -29,6 +29,8 @@ const StatusForm = ({ actionId, status }: StatusFormProps) => {
     },
   });
 
+  const [isLoading, setIsLoading] = useState(false);
+
   const handleSubmit = useCallback(
     async (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
@@ -42,11 +44,17 @@ const StatusForm = ({ actionId, status }: StatusFormProps) => {
         return;
       }
 
-      mutate({ actionId, status });
+      setIsLoading(true);
 
-      form.reset();
-      toast.success('Status updated!');
-      router.refresh();
+      setTimeout(() => {
+        mutate({ actionId, status });
+  
+        form.reset();
+        toast.success('Status updated!');
+        router.refresh();
+
+        setIsLoading(false);
+      }, 3000)
     },
     [actionId, mutate, router]
   );
