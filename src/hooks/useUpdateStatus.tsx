@@ -2,9 +2,10 @@
 
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 
+import { UpdateStatusProps } from '@/types';
 import { updateOrder } from '@/services/orderService';
 
-export const useUpdateStatus = ({ orderId, status }) => {
+export const useUpdateStatus = ({ orderId, status }: UpdateStatusProps) => {
   const queryClient = useQueryClient();
 
   const { mutate } = useMutation({
