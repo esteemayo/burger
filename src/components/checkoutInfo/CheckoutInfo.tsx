@@ -15,7 +15,7 @@ import './CheckoutInfo.scss';
 
 const CheckoutInfo = () => {
   const router = useRouter();
-  const { data: session } = useSession();
+  const { data: session, status } = useSession();
 
   const recipientModal = useRecipient();
   const addressModal = useAddressModal();
@@ -71,8 +71,12 @@ const CheckoutInfo = () => {
             <hr />
             <h6 className='recipientHeading'>Recipient information</h6>
             <div className='customerInfo'>
-              <span className='customerName'>{session?.user.name}</span>
-              <span className='customerPhone'>{session?.user.phone}</span>
+              <span className='customerName'>
+                {status === 'loading' ? '...' : session?.user.name}
+              </span>
+              <span className='customerPhone'>
+                {status === 'loading' ? '...' : session?.user.phone}
+              </span>
             </div>
             <button
               onClick={recipientModal.onOpen}
