@@ -47,6 +47,10 @@ const SearchClient = () => {
       })();
   }, [encodedSearchQuery, pageNumber]);
 
+  useEffect(() => {
+    pageNumber && setCurrentPage(pageNumber);
+  }, [pageNumber]);
+
   if (products?.length < 1) {
     return (
       <EmptyState
