@@ -25,7 +25,7 @@ import './Navbar.scss';
 
 const Navbar = () => {
   const pathname = usePathname();
-  const { data: session } = useSession();
+  const { data: session, status } = useSession();
 
   const onOpen = useSidebar((store) => store.onOpen);
   const totalPrice = useCartStore((store) => store.totalPrice);
@@ -61,10 +61,14 @@ const Navbar = () => {
             <span>Products</span>
           </Link>
           <div className='user'>
-            {!!session ? (
-              <Avatar imgSrc={avatar} />
-            ) : (
-              <Avatar imgSrc='/img/user.png' desc='default avatar' />
+            {status !== 'loading' && (
+              <>
+                {!!session ? (
+                  <Avatar imgSrc={avatar} />
+                ) : (
+                  <Avatar imgSrc='/img/user.png' desc='default avatar' />
+                )}
+              </>
             )}
             <UserMenu currentUser={session?.user} />
           </div>
