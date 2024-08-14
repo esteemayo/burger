@@ -1,9 +1,11 @@
-import { StatusType } from '@/types';
+import { useMemo } from 'react';
 
-export const validateStatusInput = (
-  status: string,
-  statusLists: StatusType | string[]
-) => {
+const statusLists = useMemo(
+  () => ['not paid', 'preparing', 'on the way', 'delivered'],
+  []
+);
+
+export const validateStatusInput = (status: string) => {
   let error: string | undefined;
 
   if (status.length < 1) {
