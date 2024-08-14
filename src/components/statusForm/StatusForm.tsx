@@ -14,7 +14,7 @@ import { validateStatusInput } from '@/validations/status';
 
 const StatusForm = ({ actionId, status }: StatusFormProps) => {
   const { statusLists } = useStatus();
-  const { mutate } = useUpdateStatus(actionId, status);
+  const { mutate } = useUpdateStatus();
 
   const [isLoading, setIsLoading] = useState(false);
 
@@ -36,7 +36,7 @@ const StatusForm = ({ actionId, status }: StatusFormProps) => {
       setIsLoading(true);
 
       setTimeout(() => {
-        mutate();
+        mutate({ actionId, status });
 
         form.reset();
         toast.success('Status updated!');
