@@ -1,22 +1,26 @@
 'use client';
 
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 
 import Input from '../input/Input';
 import Modal from '../modal/Modal';
 
+import { useStatus } from '@/hooks/useStatus';
 import { useStatusModal } from '@/hooks/useStatusModal';
+
 import { updateOrder } from '@/services/orderService';
 import { validateStatusInput } from '@/validations/status';
 
 const StatusModal = () => {
   const queryClient = useQueryClient();
-
+  
   const isOpen = useStatusModal((store) => store.isOpen);
   const order = useStatusModal((store) => store.order);
   const onClose = useStatusModal((store) => store.onClose);
+
+  const { statusLists } = useStatus();
 
   const { mutate } = useMutation({
     mutationFn: async ({
@@ -38,11 +42,6 @@ const StatusModal = () => {
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
-  const statusLists = useMemo(
-    () => ['not paid', 'preparing', 'on the way', 'delivered'],
-    []
-  );
-
   const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     setStatus(e.target.value);
   }, []);
@@ -50,7 +49,7 @@ const StatusModal = () => {
   const onSubmit = useCallback(async () => {
     const orderId = order?.id as string;
 
-    const error = validateStatusInput(status);
+    const error = validateStatusInput(status, statusLists);
     if (error) return setError(error);
 
     setError('');
