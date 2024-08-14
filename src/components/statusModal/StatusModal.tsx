@@ -50,7 +50,11 @@ const StatusModal = () => {
     const orderId = order?.id as string;
 
     const error = validateStatusInput(status, statusLists);
-    if (error) return setError(error);
+    if (error) {
+      setError(error);
+      setStatus('');
+      return;
+    };
 
     setError('');
 
