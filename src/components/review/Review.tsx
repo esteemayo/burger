@@ -55,6 +55,10 @@ const Review = ({ desc, rating, userId }: ReviewProps) => {
     return `Read ${readMore ? 'Less' : 'More'}`;
   }, [readMore]);
 
+  if (!user) {
+    return;
+  }
+
   return (
     <article className='review'>
       <div className='reviewCard'>
