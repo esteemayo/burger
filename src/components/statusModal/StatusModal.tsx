@@ -52,7 +52,7 @@ const StatusModal = () => {
     const error = validateStatusInput(status, statusLists);
     if (error) {
       setError(error);
-      setStatus('');
+      status && setStatus('');
       return;
     };
 
@@ -93,7 +93,7 @@ const StatusModal = () => {
 
   return (
     <Modal
-      isOpen={true}
+      isOpen={isOpen}
       title="Edit order's status"
       disabled={isLoading}
       actionLabel='Update'
