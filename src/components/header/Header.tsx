@@ -45,6 +45,7 @@ const Header = () => {
             />
             <button
               type='button'
+              disabled={isLoading}
               className={btnClearClasses}
               onClick={handleClear}
             >
