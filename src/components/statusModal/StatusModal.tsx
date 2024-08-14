@@ -50,7 +50,7 @@ const StatusModal = () => {
   const onSubmit = useCallback(async () => {
     const orderId = order?.id as string;
 
-    const error = validateStatusInput(status, statusLists);
+    const error = validateStatusInput(status);
     if (error) return setError(error);
 
     setError('');

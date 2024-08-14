@@ -4,7 +4,7 @@ import { useCallback, useMemo } from 'react';
 
 import { StatusType } from '@/types';
 
-export const useStatus = (status: StatusType) => {
+export const useStatus = (status: StatusType | undefined) => {
   const statusLists = useMemo(
     () => ['not paid', 'preparing', 'on the way', 'delivered'],
     []
