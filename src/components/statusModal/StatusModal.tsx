@@ -9,6 +9,7 @@ import Modal from '../modal/Modal';
 
 import { updateOrder } from '@/services/orderService';
 import { useStatusModal } from '@/hooks/useStatusModal';
+import { validateStatusInput } from '@/validations/status';
 
 const StatusModal = () => {
   const queryClient = useQueryClient();
@@ -34,6 +35,7 @@ const StatusModal = () => {
   });
 
   const [status, setStatus] = useState('');
+  const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
   const statusLists = useMemo(
@@ -48,16 +50,10 @@ const StatusModal = () => {
   const onSubmit = useCallback(async () => {
     const orderId = order?.id as string;
 
-    if (status.length < 1) {
-      toast.error('Status must not be empty');
-      return;
-    }
+    const error = validateStatusInput(status, statusLists);
+    if (error) return setError(error);
 
-    if (!statusLists.includes(status)) {
-      toast.error('Invalid order status entered');
-      setStatus('');
-      return;
-    }
+    setError('');
 
     setIsLoading(true);
 
@@ -82,6 +78,7 @@ const StatusModal = () => {
       value={status}
       placeholder={order?.status ?? 'status'}
       onChange={handleChange}
+      error={error}
     />
   );
 
