@@ -26,8 +26,8 @@ const SearchClient = () => {
 
   const [products, setProducts] = useState([]);
   const [itemsPerPage] = useState(6);
-  const [totalItems, setTotalItems] = useState<number>(0);
   const [isLoading, setIsLoading] = useState(false);
+  const [totalItems, setTotalItems] = useState(0);
   const [currentPage, setCurrentPage] = useState(pageNumber);
 
   useEffect(() => {
