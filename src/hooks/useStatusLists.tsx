@@ -2,8 +2,10 @@
 
 import { useMemo } from 'react';
 
+import { StatusType } from '@/types';
+
 export const useStatusLists = () => {
-  const statusLists = useMemo(
+  const statusLists: StatusType[] = useMemo(
     () => ['not paid', 'preparing', 'on the way', 'delivered'],
     []
   );
