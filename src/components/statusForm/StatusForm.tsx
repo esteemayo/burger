@@ -1,38 +1,20 @@
 'use client';
 
-import { useCallback, useState } from 'react';
-import Image from 'next/image';
-import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { toast } from 'react-toastify';
+import Image from 'next/image';
+import { useCallback, useState } from 'react';
 
 import Spinner from '../spinner/Spinner';
 
 import { useStatus } from '@/hooks/useStatus';
-import { validateStatusInput } from '@/validations/status';
+import { useUpdateStatus } from '@/hooks/useUpdateStatus';
 
 import { StatusFormProps } from '@/types';
-import { updateOrder } from '@/services/orderService';
+import { validateStatusInput } from '@/validations/status';
 
 const StatusForm = ({ actionId, status }: StatusFormProps) => {
-  const queryClient = useQueryClient();
-
-  const { mutate } = useMutation({
-    mutationFn: async ({
-      actionId,
-      status,
-    }: {
-      actionId: string;
-      status: string;
-    }) => {
-      const { data } = await updateOrder(actionId, { status });
-      return data;
-    },
-    onSuccess() {
-      queryClient.invalidateQueries({ queryKey: ['orders'] });
-    },
-  });
-
   const { statusLists } = useStatus();
+  const { mutate } = useUpdateStatus(actionId, status);
 
   const [isLoading, setIsLoading] = useState(false);
 
@@ -54,7 +36,7 @@ const StatusForm = ({ actionId, status }: StatusFormProps) => {
       setIsLoading(true);
 
       setTimeout(() => {
-        mutate({ actionId, status });
+        mutate();
 
         form.reset();
         toast.success('Status updated!');
