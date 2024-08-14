@@ -8,6 +8,8 @@ import { toast } from 'react-toastify';
 import Spinner from '../spinner/Spinner';
 
 import { useStatus } from '@/hooks/useStatus';
+import { validateStatusInput } from '@/validations/status';
+
 import { StatusFormProps } from '@/types';
 import { updateOrder } from '@/services/orderService';
 
@@ -42,13 +44,9 @@ const StatusForm = ({ actionId, status }: StatusFormProps) => {
       const input = form.elements[0] as HTMLInputElement;
       const status = input.value;
 
-      if (input.value.length < 1) {
-        toast.error('Status must not be empty');
-        return;
-      }
-
-      if (!statusLists.includes(input.value)) {
-        toast.error('Invalid order status entered');
+      const error = validateStatusInput(status, statusLists);
+      if (error) {
+        toast.error(error);
         input.value = '';
         return;
       }
