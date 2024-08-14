@@ -6,15 +6,15 @@ import { useCallback, useState } from 'react';
 
 import Spinner from '../spinner/Spinner';
 
-import { useStatus } from '@/hooks/useStatus';
+import { useStatusLists } from '@/hooks/useStatusLists';
 import { useUpdateStatus } from '@/hooks/useUpdateStatus';
 
 import { StatusFormProps } from '@/types';
 import { validateStatusInput } from '@/validations/status';
 
 const StatusForm = ({ actionId, status }: StatusFormProps) => {
-  const { statusLists } = useStatus();
   const { mutate } = useUpdateStatus();
+  const { statusLists } = useStatusLists();
 
   const [isLoading, setIsLoading] = useState(false);
 
