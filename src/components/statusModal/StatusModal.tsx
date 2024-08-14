@@ -38,11 +38,6 @@ const StatusModal = () => {
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
-  const statusLists = useMemo(
-    () => ['not paid', 'preparing', 'on the way', 'delivered'],
-    []
-  );
-
   const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     setStatus(e.target.value);
   }, []);
@@ -50,7 +45,7 @@ const StatusModal = () => {
   const onSubmit = useCallback(async () => {
     const orderId = order?.id as string;
 
-    const error = validateStatusInput(status, statusLists);
+    const error = validateStatusInput(status);
     if (error) return setError(error);
 
     setError('');

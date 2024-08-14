@@ -1,11 +1,13 @@
+'use client';
+
 import { useMemo } from 'react';
 
-const statusLists = useMemo(
-  () => ['not paid', 'preparing', 'on the way', 'delivered'],
-  []
-);
-
 export const validateStatusInput = (status: string) => {
+  const statusLists = useMemo(
+    () => ['not paid', 'preparing', 'on the way', 'delivered'],
+    []
+  );
+
   let error: string | undefined;
 
   if (status.length < 1) {
