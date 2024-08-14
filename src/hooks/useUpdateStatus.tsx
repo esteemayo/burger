@@ -4,12 +4,18 @@ import { useMutation, useQueryClient } from '@tanstack/react-query';
 
 import { updateOrder } from '@/services/orderService';
 
-export const useUpdateStatus = (orderId: string, status: string) => {
+export const useUpdateStatus = () => {
   const queryClient = useQueryClient();
 
   const { mutate } = useMutation({
-    mutationFn: async () => {
-      const { data } = await updateOrder(orderId, { status });
+    mutationFn: async ({
+      actionId,
+      status,
+    }: {
+      actionId: string;
+      status: string;
+    }) => {
+      const { data } = await updateOrder(actionId, { status });
       return data;
     },
     onSuccess() {
