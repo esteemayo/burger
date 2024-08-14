@@ -72,10 +72,18 @@ const CheckoutInfo = () => {
             <h6 className='recipientHeading'>Recipient information</h6>
             <div className='customerInfo'>
               <span className='customerName'>
-                {status === 'loading' ? <Spinner size={13} color='#000' /> : session?.user.name}
+                {status === 'loading' ? (
+                  <Spinner size={13} color='#000' />
+                ) : (
+                  session?.user.name
+                )}
               </span>
               <span className='customerPhone'>
-                {status === 'loading' ? <Spinner size={13} color='#000' /> : session?.user.phone}
+                {status === 'loading' ? (
+                  <Spinner size={13} color='#000' />
+                ) : (
+                  session?.user.phone
+                )}
               </span>
             </div>
             <button
