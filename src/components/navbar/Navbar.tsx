@@ -73,14 +73,18 @@ const Navbar = () => {
             <UserMenu currentUser={session?.user} />
           </div>
           <div className='cart'>
-            <Image
-              src='/svg/shopping-cart.svg'
-              width={24}
-              height={24}
-              alt='search icon'
-              className='shoppingCartLogo'
-            />
-            <span className='count'>{cartQuantity}</span>
+            {status !== 'loading' && (
+              <>
+                <Image
+                  src='/svg/shopping-cart.svg'
+                  width={24}
+                  height={24}
+                  alt='search icon'
+                  className='shoppingCartLogo'
+                />
+                <span className='count'>{cartQuantity}</span>
+              </>
+            )}
             <div className='cartBox'>
               <CartMenu
                 products={products}
