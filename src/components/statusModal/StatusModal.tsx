@@ -71,6 +71,12 @@ const StatusModal = () => {
     setStatus(order?.status || '');
   }, [order?.status]);
 
+  useEffect(() => {
+    setTimeout(() => {
+      if (error) return setError('');
+    }, 5000);
+  }, [error]);
+
   let bodyContent: JSX.Element | undefined;
 
   bodyContent = (
