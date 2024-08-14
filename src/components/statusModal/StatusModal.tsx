@@ -7,8 +7,8 @@ import { useMutation, useQueryClient } from '@tanstack/react-query';
 import Input from '../input/Input';
 import Modal from '../modal/Modal';
 
-import { updateOrder } from '@/services/orderService';
 import { useStatusModal } from '@/hooks/useStatusModal';
+import { updateOrder } from '@/services/orderService';
 import { validateStatusInput } from '@/validations/status';
 
 const StatusModal = () => {
