@@ -5,18 +5,18 @@ import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { UpdateStatusProps } from '@/types';
 import { updateOrder } from '@/services/orderService';
 
-export const useUpdateStatus = ({ orderId, status }: UpdateStatusProps) => {
+export const useUpdateStatus = ({ actionId, status }: UpdateStatusProps) => {
   const queryClient = useQueryClient();
 
   const { mutate } = useMutation({
     mutationFn: async ({
-      orderId,
+      actionId,
       status,
     }: {
-      orderId: string;
+      actionId: string;
       status: string;
     }) => {
-      const { data } = await updateOrder(orderId, { status });
+      const { data } = await updateOrder(actionId, { status });
       return data;
     },
     onSuccess() {

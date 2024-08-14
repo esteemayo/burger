@@ -209,7 +209,7 @@ export type ProfileMenu = {
 export type StatusType = 'not paid' | 'preparing' | 'on the way' | 'delivered';
 
 export interface UpdateStatusProps {
-  orderId: string;
+  actionId: string;
   status: string;
 }
 
