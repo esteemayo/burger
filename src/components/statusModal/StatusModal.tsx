@@ -7,14 +7,14 @@ import Input from '../input/Input';
 import Modal from '../modal/Modal';
 
 import { useStatusModal } from '@/hooks/useStatusModal';
-import { useStatus } from '@/hooks/useStatus';
+import { useStatusLists } from '@/hooks/useStatusLists';
 import { useUpdateStatus } from '@/hooks/useUpdateStatus';
 
 import { validateStatusInput } from '@/validations/status';
 
 const StatusModal = () => {
-  const { statusLists } = useStatus();
   const { mutate } = useUpdateStatus();
+  const { statusLists } = useStatusLists();
 
   const isOpen = useStatusModal((store) => store.isOpen);
   const order = useStatusModal((store) => store.order);
