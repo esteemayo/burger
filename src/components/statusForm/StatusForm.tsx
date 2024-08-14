@@ -7,6 +7,7 @@ import { toast } from 'react-toastify';
 
 import Spinner from '../spinner/Spinner';
 
+import { useStatus } from '@/hooks/useStatus';
 import { StatusFormProps } from '@/types';
 import { updateOrder } from '@/services/orderService';
 
@@ -29,12 +30,9 @@ const StatusForm = ({ actionId, status }: StatusFormProps) => {
     },
   });
 
-  const [isLoading, setIsLoading] = useState(false);
+  const { statusLists } = useStatus();
 
-  const statusLists = useMemo(
-    () => ['not paid', 'preparing', 'on the way', 'delivered'],
-    []
-  );
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = useCallback(
     async (e: React.FormEvent<HTMLFormElement>) => {
