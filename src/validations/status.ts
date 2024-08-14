@@ -2,7 +2,7 @@ import { StatusType } from '@/types';
 
 export const validateStatusInput = (
   status: string,
-  statusLists: StatusType
+  statusLists: StatusType | string[]
 ) => {
   let error: string | undefined;
 
