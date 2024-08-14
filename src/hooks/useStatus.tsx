@@ -25,5 +25,6 @@ export const useStatus = (status: StatusType) => {
 
   return {
     statusClass,
+    statusLists,
   };
 };
