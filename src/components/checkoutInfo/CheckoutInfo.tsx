@@ -3,6 +3,7 @@
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import { useCallback, useState } from 'react';
+import Skeleton from 'react-loading-skeleton';
 
 import { useRecipient } from '@/hooks/useRecipientModal';
 import { useCartStore } from '@/hooks/useCartStore';
@@ -73,14 +74,14 @@ const CheckoutInfo = () => {
             <div className='customerInfo'>
               <span className='customerName'>
                 {status === 'loading' ? (
-                  <Spinner size={13} color='#000' />
+                  <Skeleton width={120} height={10} />
                 ) : (
                   session?.user.name
                 )}
               </span>
               <span className='customerPhone'>
                 {status === 'loading' ? (
-                  <Spinner size={13} color='#000' />
+                  <Skeleton width={120} height={10} />
                 ) : (
                   session?.user.phone
                 )}
