@@ -8,9 +8,7 @@ export const validateStatusInput = (
 
   if (status.length < 1) {
     error = 'Status must not be empty';
-  }
-
-  if (!statusLists.includes(status)) {
+  } else if (!statusLists.includes(status)) {
     error = 'Invalid order status entered';
   }
 
