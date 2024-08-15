@@ -12,7 +12,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: 'Burger.',
+  title: 'Burger. App | Burger Ordering | Online Burger Delivery',
   description: 
     'Order burger online from local restaurants with Burger. Get delivery or pickup from your favorite eateries.',
   keywords: 'burger ordering, online burger ordering',
