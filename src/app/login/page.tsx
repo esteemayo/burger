@@ -5,7 +5,8 @@ import LoginClient from './LoginClient';
 export const metadata: Metadata = {
   title: 'Burger. | Login',
   description: 'Log into your account',
-  keywords: 'login, signin, burger, account, auth',
+  keywords:
+    'Burger app login, food delivery sign in, online food ordering login, food ordering and delivery login',
 };
 
 const Login = () => {
