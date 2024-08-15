@@ -11,6 +11,7 @@ import EmptyState from '@/components/emptyState/EmptyState';
 import { getOrder } from '@/services/orderService';
 
 import './Order.scss';
+import { getUser } from '@/services/userService';
 
 interface OrderClientProps {
   orderId: string;
@@ -25,6 +26,19 @@ const OrderClient = ({ orderId }: OrderClientProps) => {
     },
     enabled: !!orderId,
   });
+
+  const userId = order?.userId;
+
+  const { isLoading: isFetching, data: user } = useQuery({
+    queryKey: [`${userId}`],
+    queryFn: async () => {
+      const { data } = await getUser(userId);
+      return data;
+    },
+    enabled: !!userId,
+  });
+
+  console.log(user);
 
   if (isLoading) {
     return <Loader />;
