@@ -28,7 +28,7 @@ const OrderDetail = ({ order, user }: OrderDetailProps) => {
         </div>
         <div className='orderItem'>
           <h3>Shipping To</h3>
-          <span>{excerpts(user?.address ?? user?.street, 15)}</span>
+          <span>{excerpts(user?.address, 15)}</span>
         </div>
         <div className='orderItem'>
           <h3>Total</h3>
