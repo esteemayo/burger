@@ -5,9 +5,9 @@ import LoginClient from './LoginClient';
 export const metadata: Metadata = {
   title: 'Burger. App Login | Access Your Account',
   description:
-    'Access your food account and unlock a world of flavors! Log in to your Burger. account to discover new recipes, order food online, and manage your meal planning. Sign in now and start cooking a storm',
+    'Access your burger account and unlock a world of flavors! Log in to your Burger. account to discover new recipes, order burger online, and manage your meal planning. Sign in now and start cooking a storm',
   keywords:
-    'Burger app login, food delivery sign in, online food ordering login, food ordering and delivery login',
+    'Burger app login, burger delivery sign in, online burger ordering login, burger ordering and delivery login',
 };
 
 const Login = () => {
