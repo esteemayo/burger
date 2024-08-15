@@ -38,8 +38,6 @@ const OrderClient = ({ orderId }: OrderClientProps) => {
     enabled: !!userId,
   });
 
-  console.log(user);
-
   if (isLoading) {
     return <Loader />;
   }
