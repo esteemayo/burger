@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import LoginClient from './LoginClient';
 
 export const metadata: Metadata = {
-  title: 'Burger. | Login',
+  title: 'Burger. App Login | Access Your Account',
   description:
     'Access your food account and unlock a world of flavors! Log in to your Burger. account to discover new recipes, order food online, and manage your meal planning. Sign in now and start cooking a storm',
   keywords:
