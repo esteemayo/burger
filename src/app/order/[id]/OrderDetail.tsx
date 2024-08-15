@@ -9,7 +9,7 @@ import { getUser } from '@/services/userService';
 
 import './Order.scss';
 
-const OrderDetail = ({ order, user }: OrderDetailProps) => {
+const OrderDetail = ({ user, order }: OrderDetailProps) => {
   return (
     <div className='orderDetail'>
       <h1 className='orderHeading'>Order Detail</h1>
