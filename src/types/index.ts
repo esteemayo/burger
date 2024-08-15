@@ -807,11 +807,8 @@ export interface EmptyStateProps {
 export interface OrderDetailProps {
   order: {
     id: string;
-    name: string;
     price: number;
     createdAt: string;
-    userId: string;
-    status: StatusType;
   };
   user: UserType;
 }
