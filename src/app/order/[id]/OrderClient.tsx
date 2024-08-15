@@ -8,10 +8,10 @@ import OrderStatus from './OrderStatus';
 import Loader from '@/components/loader/Loader';
 import EmptyState from '@/components/emptyState/EmptyState';
 
+import { getUser } from '@/services/userService';
 import { getOrder } from '@/services/orderService';
 
 import './Order.scss';
-import { getUser } from '@/services/userService';
 
 interface OrderClientProps {
   orderId: string;
