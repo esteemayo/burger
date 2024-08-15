@@ -5,7 +5,6 @@ import { excerpts } from '@/utils';
 import { formatCurrency } from '@/utils/formatCurrency';
 
 import { OrderDetailProps } from '@/types';
-import { getUser } from '@/services/userService';
 
 import './Order.scss';
 
