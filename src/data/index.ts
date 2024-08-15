@@ -163,8 +163,8 @@ export const features: FeaturesType = [
   {
     id: 2,
     icon: LocalDiningIcon,
-    title: 'Delicious food',
-    desc: 'Our foods are carefully sourced and prepared for the nourishment of everyone',
+    title: 'Delicious burger',
+    desc: 'Our burgers are carefully sourced and prepared for the nourishment of everyone',
   },
   {
     id: 3,
