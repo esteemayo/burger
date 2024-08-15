@@ -14,6 +14,7 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: 'Burger.',
   description: 'Juicy Burger',
+  keywords: 'food ordering, online food ordering',
   authors: [
     { name: 'Xsteem Designx', url: 'https://www.esteemdesigns.com' },
     { name: 'Emmanuel Ayodeji Adebayo', url: 'https://www.devayo.com' },
