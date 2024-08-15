@@ -1,8 +1,5 @@
 'use client';
 
-import { useMemo } from 'react';
-import { useQuery } from '@tanstack/react-query';
-
 import { formatDate } from '@/utils/formatDate';
 import { excerpts } from '@/utils';
 import { formatCurrency } from '@/utils/formatCurrency';
@@ -12,26 +9,7 @@ import { getUser } from '@/services/userService';
 
 import './Order.scss';
 
-const OrderDetail = ({ order }: OrderDetailProps) => {
-  const userId = order?.userId;
-
-  const { isLoading, data: user } = useQuery({
-    queryKey: [`${userId}`],
-    queryFn: async () => {
-      const { data } = await getUser(userId);
-      return data;
-    },
-    enabled: !!userId,
-  });
-
-  const userLabel = useMemo(() => {
-    return isLoading ? 'loading...' : excerpts(user?.name, 10);
-  }, [isLoading, user]);
-
-  if (isLoading) {
-    return;
-  }
-
+const OrderDetail = ({ order, user }: OrderDetailProps) => {
   return (
     <div className='orderDetail'>
       <h1 className='orderHeading'>Order Detail</h1>
@@ -46,7 +24,7 @@ const OrderDetail = ({ order }: OrderDetailProps) => {
         </div>
         <div className='orderItem'>
           <h3>Customer</h3>
-          <span>{userLabel}</span>
+          <span>{excerpts(user?.name, 10)}</span>
         </div>
         <div className='orderItem'>
           <h3>Shipping To</h3>
