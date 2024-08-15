@@ -38,7 +38,7 @@ const OrderClient = ({ orderId }: OrderClientProps) => {
     enabled: !!userId,
   });
 
-  if (isLoading) {
+  if (isLoading || isFetching) {
     return <Loader />;
   }
 
