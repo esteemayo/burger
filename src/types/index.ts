@@ -811,12 +811,8 @@ type OrderDetailType = {
 };
 
 export interface OrderDetailProps {
-  order: {
-    id: string;
-    price: number;
-    createdAt: string;
-  };
   user: UserType;
+  order: OrderDetailType;
 }
 
 export type CurrentUserType = User & {
