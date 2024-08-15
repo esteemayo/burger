@@ -28,6 +28,10 @@ const OrderDetail = ({ order }: OrderDetailProps) => {
     return isLoading ? 'loading...' : excerpts(user?.name, 10);
   }, [isLoading, user]);
 
+  if (isLoading) {
+    return;
+  }
+
   return (
     <div className='orderDetail'>
       <h1 className='orderHeading'>Order Detail</h1>
