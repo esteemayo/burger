@@ -5,7 +5,8 @@ import RegisterClient from './RegisterClient';
 export const metadata: Metadata = {
   title: 'Burger. App Register | Create Your Account',
   description: 'Create your account',
-  keywords: 'register, signup, burger, account, auth',
+  keywords:
+    'Burger app signup, food delivery sign up, online food ordering signup, food ordering and delivery signup',
 };
 
 const Register = () => {
