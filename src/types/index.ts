@@ -814,10 +814,8 @@ export interface OrderDetailProps {
     status: StatusType;
   };
   user: {
-    id: string;
     name: string;
     address: string;
-    street: string;
   }
 }
 
