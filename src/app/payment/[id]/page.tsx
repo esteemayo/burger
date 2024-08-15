@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import PaymentClient from '@/app/payment/[id]/PaymentClient';
 
 export const metadata: Metadata = {
-  title: 'Burger. | Payment',
+  title: 'Burger. App | Payment',
 };
 
 interface IParams {
