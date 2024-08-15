@@ -804,6 +804,12 @@ export interface EmptyStateProps {
   showReset?: boolean;
 }
 
+type OrderDetailType = {
+  id: string;
+  price: number;
+  createdAt: string;
+};
+
 export interface OrderDetailProps {
   order: {
     id: string;
