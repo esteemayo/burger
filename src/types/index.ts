@@ -813,10 +813,7 @@ export interface OrderDetailProps {
     userId: string;
     status: StatusType;
   };
-  user: {
-    name: string;
-    address: string;
-  }
+  user: UserType;
 }
 
 export type CurrentUserType = User & {
