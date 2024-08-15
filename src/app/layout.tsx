@@ -14,8 +14,8 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: 'Burger.',
   description: 
-    'Order food online from local restaurants with Burger. Get delivery or pickup from your favorite eateries.',
-  keywords: 'food ordering, online food ordering',
+    'Order burger online from local restaurants with Burger. Get delivery or pickup from your favorite eateries.',
+  keywords: 'burger ordering, online burger ordering',
   authors: [
     { name: 'Xsteem Designx', url: 'https://www.esteemdesigns.com' },
     { name: 'Emmanuel Ayodeji Adebayo', url: 'https://www.devayo.com' },
