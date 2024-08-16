@@ -5,13 +5,14 @@ import Link from 'next/link';
 import { useSession } from 'next-auth/react';
 import Image from 'next/image';
 
+import Spinner from '../spinner/Spinner';
+import HeartButton from '../heartButton/HeartButton';
+
 import { useCart } from '@/hooks/useCart';
 import { useCartControls } from '@/hooks/useCartControls';
 
 import { ProductCardProps } from '@/types';
 import { formatCurrency } from '@/utils/formatCurrency';
-
-import Spinner from '../spinner/Spinner';
 
 import './ProductCard.scss';
 
