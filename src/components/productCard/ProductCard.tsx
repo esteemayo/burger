@@ -26,7 +26,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
     <article className='productCard'>
       <div className='imgWrapper'>
         <div className='productLikeBtn'>
-          <Image src='/svg/heart-1.svg' width={20} height={20} alt='heart icon' />
+          <Image src='/svg/heart-2.svg' width={20} height={20} alt='heart icon' />
         </div>
         <span className='overlay'>
           <button
