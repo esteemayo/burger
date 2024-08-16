@@ -34,7 +34,7 @@ const useFavorite: IFavorite = (
 
       try {
         const { data } = await likeProduct(actionId);
-        onUpdate(data);
+        onUpdate?.(data);
       } catch (err: unknown) {
         console.log(err);
         toast.error('Something went wrong');
