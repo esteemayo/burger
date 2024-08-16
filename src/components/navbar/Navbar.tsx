@@ -73,7 +73,7 @@ const Navbar = () => {
             <UserMenu currentUser={session?.user} />
           </div>
           <div className='cart'>
-            {status !== 'loading' && (
+            {status !== 'loading' && !session?.user.isAdmin && (
               <>
                 <Image
                   src='/svg/shopping-cart.svg'
