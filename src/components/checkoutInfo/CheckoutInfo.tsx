@@ -22,6 +22,7 @@ const CheckoutInfo = () => {
   const addressModal = useAddressModal();
 
   const products = useCartStore((store) => store.products);
+  const reset = useCartStore((store) => store.reset);
   const totalPrice = useCartStore((store) => store.totalPrice);
 
   const [isLoading, setIsLoading] = useState(false);
