@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useMemo } from 'react';
+import { useSession } from 'next-auth/react';
 
 import { useCart } from '@/hooks/useCart';
 import { useCartControls } from '@/hooks/useCartControls';
@@ -15,6 +16,8 @@ import Spinner from '../spinner/Spinner';
 import './ProductCard.scss';
 
 const ProductCard = ({ product }: ProductCardProps) => {
+  const { data: session } = useSession();
+
   const { isLoading, handleClick } = useCart(product);
   const { inCart, btnLabel } = useCartControls(product);
 
@@ -26,7 +29,12 @@ const ProductCard = ({ product }: ProductCardProps) => {
     <article className='productCard'>
       <div className='imgWrapper'>
         <div className='productLikeBtn'>
-          <Image src='/svg/heart-2.svg' width={20} height={20} alt='heart icon' />
+          <HeartButton
+            actionId={product.id}
+            likes={product.likes}
+            currentUser={session?.user}
+            onUpdate={() => console.log('like')}
+          />
         </div>
         <span className='overlay'>
           <button
