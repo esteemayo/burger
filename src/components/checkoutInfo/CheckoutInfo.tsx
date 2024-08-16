@@ -47,8 +47,12 @@ const CheckoutInfo = () => {
 
       try {
         setTimeout(async () => {
-          const { data } = await createOrder({ ...newOrder });
-          router.push(`/payment/${data?.id}`);
+          const { data, status } = await createOrder({ ...newOrder });
+
+          if (status === 201) {
+            router.push(`/payment/${data?.id}`);
+            reset();
+          }
 
           setIsLoading(false);
         }, 3000);
@@ -56,7 +60,7 @@ const CheckoutInfo = () => {
         console.log(err);
       }
     },
-    [products, router, session, totalPrice]
+    [products, reset, router, session, totalPrice]
   );
 
   return (
