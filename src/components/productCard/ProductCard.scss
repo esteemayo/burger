@@ -40,6 +40,12 @@
       width: 35rem;
     }
 
+    .productLikeBtn {
+      position: absolute;
+      width: 2rem;
+      height: 2rem;
+    }
+
     &:hover .overlay {
       visibility: visible;
       opacity: 1;
