@@ -72,6 +72,7 @@ const SearchClient = () => {
           data={products}
           loading={isLoading}
           onLike={setProducts}
+          onRefetch={handleFetchProducts}
         />
         <Pagination
           query={decodedSearchQuery}
