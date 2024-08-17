@@ -261,6 +261,7 @@ export type ProductType = {
 
 export interface ProductCardProps {
   product: ProductType | CartItem;
+  onLike?: React.Dispatch<React.SetStateAction<ProductType[]>>;
 }
 
 export interface InputProps
@@ -862,6 +863,7 @@ export interface HeartButtonProps {
   actionId: string;
   likes: string[];
   currentUser: CurrentUserType | undefined;
+  onLike?: React.Dispatch<React.SetStateAction<ProductType[]>>;
   onUpdate: React.Dispatch<React.SetStateAction<SingleProductType | null>>;
 }
 

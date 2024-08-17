@@ -1,6 +1,7 @@
 'use client';
 
 import { useQuery } from '@tanstack/react-query';
+import { useEffect, useState } from 'react';
 import RoomServiceIcon from '@mui/icons-material/RoomService';
 
 import ProductCard from '../productCard/ProductCard';
@@ -14,13 +15,15 @@ import EmptyState from '@/components/emptyState/EmptyState';
 import './Menus.scss';
 
 const Menus = () => {
-  const { isLoading, data: products } = useQuery({
+  const { isLoading, data } = useQuery({
     queryKey: ['featuredProducts'],
     queryFn: async () => {
       const { data } = await getFeaturedProducts();
       return data;
     },
   });
+
+  const [products, setProducts] = useState(data)
 
   if (products?.length < 1) {
     return (
@@ -31,6 +34,10 @@ const Menus = () => {
       />
     );
   }
+
+  useEffect(() => {
+    setProducts(data);
+  }, [])
 
   return (
     <section className='menusContainer'>
@@ -49,7 +56,7 @@ const Menus = () => {
                 return <ProductCardSkeleton key={index} />;
               })
             : products?.map((product: ProductType) => {
-                return <ProductCard key={product.id} product={product} />;
+                return <ProductCard key={product.id} product={product} onLike={setProducts} />;
               })}
         </div>
       </div>

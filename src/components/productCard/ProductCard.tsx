@@ -16,7 +16,7 @@ import { formatCurrency } from '@/utils/formatCurrency';
 
 import './ProductCard.scss';
 
-const ProductCard = ({ product }: ProductCardProps) => {
+const ProductCard = ({ product, onLike }: ProductCardProps) => {
   const { data: session } = useSession();
 
   const { isLoading, handleClick } = useCart(product);
@@ -34,7 +34,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
             actionId={product.id}
             likes={product.likes}
             currentUser={session?.user}
-            onUpdate={() => console.log('like')}
+            onLike={onLike}
           />
         </div>
         <span className='overlay'>
