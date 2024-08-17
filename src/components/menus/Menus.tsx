@@ -23,7 +23,7 @@ const Menus = () => {
     },
   });
 
-  const [products, setProducts] = useState<ProductType>(data);
+  const [products, setProducts] = useState<ProductType[]>(data);
 
   useEffect(() => {
     setProducts(data);
