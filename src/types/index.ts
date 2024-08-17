@@ -854,7 +854,7 @@ export interface IFavorite {
     likes: string[],
     onLike?: React.Dispatch<React.SetStateAction<ProductType[]>>,
     onUpdate?: React.Dispatch<React.SetStateAction<SingleProductType | null>>,
-    onRefetch: () => void;
+    onRefetch: () => void
   ): {
     hasFavorited: boolean;
     toggleFavorite: (e: React.MouseEvent<HTMLButtonElement>) => Promise<void>;
