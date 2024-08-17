@@ -852,6 +852,7 @@ export interface IFavorite {
     likes: string[],
     onUpdate: React.Dispatch<React.SetStateAction<SingleProductType | null>>
   ): {
+    isLiked: boolean;
     hasFavorited: boolean;
     toggleFavorite: (e: React.MouseEvent<HTMLButtonElement>) => Promise<void>;
   };
