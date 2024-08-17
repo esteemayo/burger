@@ -36,7 +36,7 @@ const useFavorite: IFavorite = (
 
       try {
         const { data } = await likeProduct(actionId);
-        setIsLiked(!!data);
+        setIsLiked(true ?? !!data);
         onUpdate?.(data);
       } catch (err: unknown) {
         console.log(err);
