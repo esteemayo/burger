@@ -56,7 +56,7 @@ const ProductsClient = () => {
     setProducts(data);
   }, [data]);
 
-  if (products?.length < 1) {
+  if (!isLoading && products?.length < 1) {
     return (
       <EmptyState
         title='No products found!'
