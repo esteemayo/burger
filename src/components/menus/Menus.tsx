@@ -25,6 +25,10 @@ const Menus = () => {
 
   const [products, setProducts] = useState(data)
 
+  useEffect(() => {
+    setProducts(data);
+  }, [])
+
   if (products?.length < 1) {
     return (
       <EmptyState
@@ -34,10 +38,6 @@ const Menus = () => {
       />
     );
   }
-
-  useEffect(() => {
-    setProducts(data);
-  }, [])
 
   return (
     <section className='menusContainer'>
