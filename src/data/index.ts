@@ -422,7 +422,7 @@ export const products: CardMenu = [
     desc: 'Our 3x Crunchy Burger are ultra crispy and absolutely bursting with flavour topped with fresh lettuce , cucumbers, Onions, our special sauce and cheese! Its an absolute crowd pleaser',
     image: '/img/burger-15.jpg',
     ingredients: ['cheese', 'tomato', 'cucumber', 'lettuce', 'onions'],
-    price: 7499,
+    price: 7,
   },
   {
     id: 16,
@@ -430,7 +430,7 @@ export const products: CardMenu = [
     desc: 'A Double Patty Crunchy Chicken x2 Burger with cheese, tomato, cucumber, lettuce and caramelized onions, Topped with lettuce, tomatoes, cheese and spicy mayo, they are the most delicious, easy dinner and a guaranteed crowd pleaser. Unlike ground chicken burgers that require chicken patties made with ground chicken (or ground turkey), bread crumbs, etc. these juicy chicken burgers need only a handful of ingredients and can be made in a fraction of the time. The chicken is marinated in an aromatic mixture of olive oil, garlic, lemon and spices.',
     image: '/img/burger-16.jpg',
     ingredients: ['cheese', 'tomato', 'cucumber', 'lettuce', 'onions'],
-    price: 9499,
+    price: 9,
   },
   {
     id: 17,
