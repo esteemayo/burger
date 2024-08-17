@@ -850,6 +850,7 @@ export interface IFavorite {
     actionId: string,
     currentUser: CurrentUserType | undefined,
     likes: string[],
+    onLike?: React.Dispatch<React.SetStateAction<ProductType[]>>,
     onUpdate?: React.Dispatch<React.SetStateAction<SingleProductType | null>>
   ): {
     hasFavorited: boolean;
