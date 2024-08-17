@@ -23,11 +23,11 @@ const Menus = () => {
     },
   });
 
-  const [products, setProducts] = useState(data)
+  const [products, setProducts] = useState(data);
 
   useEffect(() => {
     setProducts(data);
-  }, [])
+  }, [data]);
 
   if (products?.length < 1) {
     return (
