@@ -342,7 +342,7 @@ export const products: CardMenu = [
     desc: 'Our "Double beef x fries" Is Prepared With The Best Quality Of Burger buns and beef That Gives A Great Taste And Texture plus our beef patty is marinated in an aromatic mixture of olive oil, garlic, lemon and spices that wakes you up once you take a bite!',
     image: '/img/burger-5.jpg',
     ingredients: ['lemon', 'spicies', 'garlic', 'olive oil', 'chips'],
-    price: 37000,
+    price: 37,
   },
   {
     id: 6,
