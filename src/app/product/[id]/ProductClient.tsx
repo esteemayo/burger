@@ -20,7 +20,7 @@ import './Product.scss';
 const ProductClient = ({ productId }: ProductClientProps) => {
   const { data: session } = useSession();
 
-  const { isLoading, data } = useQuery({
+  const { isLoading, data, refetch } = useQuery({
     queryKey: ['product'],
     queryFn: async () => {
       const { data } = await getProductClient(productId);
@@ -56,6 +56,7 @@ const ProductClient = ({ productId }: ProductClientProps) => {
         product={product}
         currentUser={session?.user}
         onUpdate={setProduct}
+        onRefetch={refetch}
       />
       <ProductReview 
         actionId={product.id}
