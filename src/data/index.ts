@@ -406,7 +406,7 @@ export const products: CardMenu = [
     desc: 'Our 10x Chicken Nugget are ultra crispy and absolutely bursting with flavour topped with fresh lettuce , cucumbers, Onions, our special sauce and cheese! Its an absolute crowd pleaser',
     image: '/img/burger-13.jpg',
     ingredients: ['cheese', 'tomato', 'cucumber', 'chicken', 'garlic'],
-    price: 9999,
+    price: 10,
   },
   {
     id: 14,
@@ -414,7 +414,7 @@ export const products: CardMenu = [
     desc: 'Our 5x Chicken Nugget are ultra crispy and absolutely bursting with flavour topped with fresh lettuce , cucumbers, Onions, our special sauce and cheese! Its an absolute crowd pleaser',
     image: '/img/burger-14.jpg',
     ingredients: ['cheese', 'tomato', 'cucumber', 'chicken', 'garlic'],
-    price: 5999,
+    price: 6,
   },
   {
     id: 15,
