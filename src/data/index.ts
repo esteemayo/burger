@@ -350,7 +350,7 @@ export const products: CardMenu = [
     desc: 'Our "Single Beef Burger" Is Prepared With The Best Quality Of Burger buns and beef That Gives A Great Taste And Texture plus our beef patty is marinated in an aromatic mixture of olive oil, garlic, lemon and spices that wakes you up once you take a bite!',
     image: '/img/burger-6.jpg',
     ingredients: ['spicies', 'tomato', 'flour', 'lettuce', 'garlic'],
-    price: 10999,
+    price: 11,
   },
   {
     id: 7,
