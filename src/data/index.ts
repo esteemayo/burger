@@ -244,7 +244,7 @@ export const cardMenus: CardMenu = [
     desc: 'Our "Double Beef Burger" Is Prepared With The Best Quality Of Burger buns and beef That Gives A Great Taste And Texture plus our beef patty is marinated in an aromatic mixture of olive oil, garlic, lemon and spices that wakes you up once you take a bite!',
     image: '/img/burger-7.jpg',
     ingredients: ['cheese', 'tomato', 'cucumber', 'lettuce', 'onions'],
-    price: 15999,
+    price: 16,
   },
   {
     id: 8,
@@ -252,7 +252,7 @@ export const cardMenus: CardMenu = [
     desc: "Our Single Beef X Fries Burger are specially curated to let you shake things up a lil bit and let's the Bite from every burger hit hard.",
     image: '/img/burger-8.jpg',
     ingredients: ['cheese', 'beef', 'onions', 'parsley'],
-    price: 27499,
+    price: 28,
   },
   {
     id: 9,
