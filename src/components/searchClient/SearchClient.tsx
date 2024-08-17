@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 
 import Heading from './Heading';
@@ -31,22 +31,23 @@ const SearchClient = () => {
   const [totalItems, setTotalItems] = useState(0);
   const [products, setProducts] = useState<ProductType[]>([]);
 
-  useEffect(() => {
-    encodedSearchQuery &&
-      (async () => {
-        setIsLoading(true);
+  const handleFetchProducts = useCallback(async () => {
+    setIsLoading(true);
 
-        try {
-          const { data } = await searchProducts(encodedSearchQuery, pageNumber);
-          setProducts(data?.products);
-          setTotalItems(data?.totalProducts);
-        } catch (err: unknown) {
-          console.log(err);
-        } finally {
-          setIsLoading(false);
-        }
-      })();
+    try {
+      const { data } = await searchProducts(encodedSearchQuery, pageNumber);
+      setProducts(data?.products);
+      setTotalItems(data?.totalProducts);
+    } catch (err: unknown) {
+      console.log(err);
+    } finally {
+      setIsLoading(false);
+    }
   }, [encodedSearchQuery, pageNumber]);
+
+  useEffect(() => {
+    handleFetchProducts();
+  }, [handleFetchProducts]);
 
   useEffect(() => {
     pageNumber && setCurrentPage(pageNumber);
@@ -67,7 +68,11 @@ const SearchClient = () => {
     <div className='search'>
       <div className='container'>
         <Heading query={decodedSearchQuery} />
-        <ProductLists data={products} loading={isLoading} onLike={setProducts} />
+        <ProductLists
+          data={products}
+          loading={isLoading}
+          onLike={setProducts}
+        />
         <Pagination
           query={decodedSearchQuery}
           currentPage={currentPage}
