@@ -12,7 +12,8 @@ const useFavorite: IFavorite = (
   currentUser: CurrentUserType | undefined,
   likes: string[],
   onLike,
-  onUpdate
+  onUpdate,
+  onRefetch,
 ) => {
   const router = useRouter();
 
@@ -40,6 +41,7 @@ const useFavorite: IFavorite = (
           return [...prev].map((item) => (item.id === actionId ? data: item))
         });
         onUpdate?.(data);
+        onRefetch?.();
       } catch (err: unknown) {
         console.log(err);
         toast.error('Something went wrong');
