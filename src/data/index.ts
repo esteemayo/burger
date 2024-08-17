@@ -276,7 +276,7 @@ export const cardMenus: CardMenu = [
     desc: 'Our Double Crunchy Chicken x Fries are ultra crispy and absolutely bursting with flavour topped with fresh lettuce , cucumbers, Onions, our special sauce and cheese! Its an absolute crowd pleaser',
     image: '/img/burger-11.jpg',
     ingredients: ['cheese', 'tomato', 'cucumber', 'lettuce', 'onions'],
-    price: 21499,
+    price: 21,
   },
   {
     id: 12,
@@ -284,7 +284,7 @@ export const cardMenus: CardMenu = [
     desc: 'Our Double Crunchy Chicken x Fries are ultra crispy and absolutely bursting with flavour topped with fresh lettuce , cucumbers, Onions, our special sauce and cheese! Its an absolute crowd pleaser',
     image: '/img/burger-12.jpg',
     ingredients: ['cheese', 'tomato', 'cucumber', 'lettuce', 'onions'],
-    price: 21999,
+    price: 22,
   },
 ];
 
