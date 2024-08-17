@@ -10,7 +10,8 @@ const ProductLists = ({
   data,
   loading,
   productToShow,
-  onLike
+  onLike,
+  onRefetch,
 }: ProductListsProps) => {
   return (
     <section className='productLists'>
@@ -22,10 +23,24 @@ const ProductLists = ({
             })
         : type === 'products'
         ? data?.slice(0, productToShow).map((item) => {
-            return <ProductCard key={item.id} product={item} onLike={onLike} />;
+            return (
+              <ProductCard
+                key={item.id}
+                product={item}
+                onLike={onLike}
+                onRefetch={onRefetch}
+              />
+            );
           })
         : data?.map((product) => {
-            return <ProductCard key={product.id} product={product} onLike={onLike} />;
+            return (
+              <ProductCard
+                key={product.id}
+                product={product}
+                onLike={onLike}
+                onRefetch={onRefetch}
+              />
+            );
           })}
     </section>
   );
