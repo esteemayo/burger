@@ -11,6 +11,7 @@ const useFavorite: IFavorite = (
   actionId: string,
   currentUser: CurrentUserType | undefined,
   likes: string[],
+  onLike,
   onUpdate
 ) => {
   const router = useRouter();
@@ -34,6 +35,10 @@ const useFavorite: IFavorite = (
 
       try {
         const { data } = await likeProduct(actionId);
+
+        onLike?.((prev) => {
+          return [...prev].map((item) => (item.id === actionId ? data: item))
+        });
         onUpdate?.(data);
       } catch (err: unknown) {
         console.log(err);
