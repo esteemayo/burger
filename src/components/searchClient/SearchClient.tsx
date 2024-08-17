@@ -52,7 +52,7 @@ const SearchClient = () => {
     pageNumber && setCurrentPage(pageNumber);
   }, [pageNumber]);
 
-  if (products?.length < 1) {
+  if (!isLoading && products?.length < 1) {
     return (
       <EmptyState
         title='No product found!'
