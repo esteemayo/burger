@@ -319,7 +319,7 @@ export const products: CardMenu = [
     desc: 'Our "A Crunchy Chicken" Is Prepared With The Best Quality Of Burger buns and chicken That Gives A Great Taste And Texture plus our chicken patty is marinated in an aromatic mixture of olive oil, garlic, lemon and spices that wakes you up once you take a bite!',
     image: '/img/burger-3.jpg',
     ingredients: ['olive oil', 'garlic', 'lemon', ' spices', 'flour'],
-    price: 30000,
+    price: 15,
   },
   {
     id: 4,
@@ -334,7 +334,7 @@ export const products: CardMenu = [
       'onions',
       'spicy mayo',
     ],
-    price: 13000,
+    price: 13,
   },
   {
     id: 5,
