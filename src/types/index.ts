@@ -864,7 +864,7 @@ export interface HeartButtonProps {
   likes: string[];
   currentUser: CurrentUserType | undefined;
   onLike?: React.Dispatch<React.SetStateAction<ProductType[]>>;
-  onUpdate: React.Dispatch<React.SetStateAction<SingleProductType | null>>;
+  onUpdate?: React.Dispatch<React.SetStateAction<SingleProductType | null>>;
 }
 
 export interface CheckoutProductsProps {
