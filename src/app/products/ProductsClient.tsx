@@ -14,7 +14,7 @@ import { getProducts } from '@/services/productService';
 import './Products.scss';
 
 const ProductsClient = () => {
-  const { isLoading, data: products } = useQuery({
+  const { isLoading, data } = useQuery({
     queryKey: ['products'],
     queryFn: async () => {
       const { data } = await getProducts();
@@ -22,7 +22,7 @@ const ProductsClient = () => {
     },
   });
 
-  const [data, setData] = useState<ProductType[]>([]);
+  const [products, setProducts] = useState<ProductType[]>([]);
   const [loading, setLoading] = useState(false);
   const [productToShow, setProductToShow] = useState(6);
 
@@ -43,18 +43,18 @@ const ProductsClient = () => {
   );
 
   const productLabel = useMemo(() => {
-    return `${isLoading ? 0 : data?.length} main features`;
-  }, [data?.length, isLoading]);
+    return `${isLoading ? 0 : products?.length} main features`;
+  }, [products?.length, isLoading]);
 
   const btnWrapClasses = useMemo(() => {
-    return productToShow < data?.length
+    return productToShow < products?.length
       ? 'btnContainer show'
       : 'btnContainer hide';
-  }, [data?.length, productToShow]);
+  }, [products?.length, productToShow]);
 
   useEffect(() => {
-    setData(products);
-  }, [products]);
+    setProducts(data);
+  }, [data]);
 
   if (products?.length < 1) {
     return (
@@ -78,10 +78,10 @@ const ProductsClient = () => {
         </h3>
         <ProductLists
           type='products'
-          data={data}
+          data={products}
           loading={isLoading}
           productToShow={productToShow}
-          onLike={setData}
+          onLike={setProducts}
         />
         {!isLoading && (
           <div className={btnWrapClasses}>
