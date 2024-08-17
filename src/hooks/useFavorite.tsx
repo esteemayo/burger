@@ -55,7 +55,7 @@ const useFavorite: IFavorite = (
       setIsLiked(false);
     }
   }, [currentUser, isLiked, likes]);
-
+console.log(isLiked)
   return {
     isLiked,
     hasFavorited,
