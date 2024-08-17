@@ -445,7 +445,7 @@ export const products: CardMenu = [
       'onions',
       'spicy mayo',
     ],
-    price: 11999,
+    price: 12,
   },
   {
     id: 18,
@@ -460,7 +460,7 @@ export const products: CardMenu = [
       'onions',
       'spicies',
     ],
-    price: 15999,
+    price: 16,
   },
   {
     id: 19,
