@@ -39,7 +39,7 @@ const ProductClient = ({ productId }: ProductClientProps) => {
     return <Loader />;
   }
 
-  if (!product) {
+  if (!isLoading && !product) {
     return (
       <EmptyState
         title='Product not found'
