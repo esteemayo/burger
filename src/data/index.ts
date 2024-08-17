@@ -358,7 +358,7 @@ export const products: CardMenu = [
     desc: 'Our "Double Beef Burger" Is Prepared With The Best Quality Of Burger buns and beef That Gives A Great Taste And Texture plus our beef patty is marinated in an aromatic mixture of olive oil, garlic, lemon and spices that wakes you up once you take a bite!',
     image: '/img/burger-7.jpg',
     ingredients: ['cheese', 'tomato', 'cucumber', 'lettuce', 'onions'],
-    price: 15999,
+    price: 16,
   },
   {
     id: 8,
