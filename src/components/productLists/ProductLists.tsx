@@ -10,6 +10,7 @@ const ProductLists = ({
   data,
   loading,
   productToShow,
+  onLike
 }: ProductListsProps) => {
   return (
     <section className='productLists'>
@@ -21,10 +22,10 @@ const ProductLists = ({
             })
         : type === 'products'
         ? data?.slice(0, productToShow).map((item) => {
-            return <ProductCard key={item.id} product={item} />;
+            return <ProductCard key={item.id} product={item} onLike={onLike} />;
           })
         : data?.map((product) => {
-            return <ProductCard key={product.id} product={product} />;
+            return <ProductCard key={product.id} product={product} onLike={onLike} />;
           })}
     </section>
   );
