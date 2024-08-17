@@ -502,7 +502,7 @@ export const relatedProducts: RelatedProductType = [
     desc: 'Our "Double Crunchy Chicken Burger" Is Prepared With The Best Quality Of Burger buns and chicken That Gives A Great Taste And Texture plus our chicken patty is marinated in an aromatic mixture of olive oil, garlic, lemon and spices that wakes you up once you take a bite!',
     image: '/img/burger-1.jpg',
     ingredients: ['garlic', 'olive oil', 'parsley', 'spicies'],
-    price: 21999,
+    price: 22,
   },
   {
     id: 2,
@@ -510,7 +510,7 @@ export const relatedProducts: RelatedProductType = [
     desc: 'Our "Crunchy Chicken Burger" Is Prepared With The Best Quality Of Burger buns and chicken That Gives A Great Taste And Texture plus our chicken patty is marinated in an aromatic mixture of olive oil, garlic, lemon and spices that wakes you up once you take a bite!',
     image: '/img/burger-2.jpg',
     ingredients: ['flour', 'parsley', 'chicken', 'lettuce', 'onions'],
-    price: 13999,
+    price: 14,
   },
   {
     id: 3,
@@ -518,7 +518,7 @@ export const relatedProducts: RelatedProductType = [
     desc: 'Our Double Crunchy Chicken x Fries are ultra crispy and absolutely bursting with flavour topped with fresh lettuce , cucumbers, Onions, our special sauce and cheese! Its an absolute crowd pleaser',
     image: '/img/burger-3.jpg',
     ingredients: ['cheese', 'tomato', 'cucumber', 'lettuce', 'onions'],
-    price: 21499,
+    price: 21,
   },
   {
     id: 4,
@@ -526,7 +526,7 @@ export const relatedProducts: RelatedProductType = [
     desc: 'Our Double Crunchy chicken x fries are ultra crispy and absolutely bursting with flavour topped with fresh lettuce , cucumbers, Onions, our special sauce and cheese! Its an absolute crowd pleaser',
     image: '/img/burger-4.jpg',
     ingredients: ['cheese', 'tomato', 'cucumber', 'lettuce', 'onions'],
-    price: 21999,
+    price: 22,
   },
 ];
 
