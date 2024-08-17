@@ -14,7 +14,7 @@ import { getProducts } from '@/services/productService';
 import './Products.scss';
 
 const ProductsClient = () => {
-  const { isLoading, data } = useQuery({
+  const { isLoading, data, refetch } = useQuery({
     queryKey: ['products'],
     queryFn: async () => {
       const { data } = await getProducts();
@@ -82,6 +82,7 @@ const ProductsClient = () => {
           loading={isLoading}
           productToShow={productToShow}
           onLike={setProducts}
+          onRefetch={refetch}
         />
         {!isLoading && (
           <div className={btnWrapClasses}>
