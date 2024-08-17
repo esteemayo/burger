@@ -39,8 +39,9 @@ const useFavorite: IFavorite = (
         setIsLiked(true ?? !!data);
         onUpdate?.(data);
       } catch (err: unknown) {
-        console.log(err);
         setIsLiked(false);
+
+        console.log(err);
         toast.error('Something went wrong');
       }
     },
