@@ -15,7 +15,7 @@ import EmptyState from '@/components/emptyState/EmptyState';
 import './Menus.scss';
 
 const Menus = () => {
-  const { isLoading, data } = useQuery({
+  const { isLoading, data, refetch } = useQuery({
     queryKey: ['featuredProducts'],
     queryFn: async () => {
       const { data } = await getFeaturedProducts();
@@ -56,7 +56,14 @@ const Menus = () => {
                 return <ProductCardSkeleton key={index} />;
               })
             : products?.map((product) => {
-                return <ProductCard key={product.id} product={product} onLike={setProducts} />;
+                return (
+                  <ProductCard
+                    key={product.id}
+                    product={product}
+                    onLike={setProducts}
+                    onRefetch={refetch}
+                  />
+                );
               })}
         </div>
       </div>
