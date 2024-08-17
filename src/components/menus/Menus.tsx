@@ -23,7 +23,7 @@ const Menus = () => {
     },
   });
 
-  const [products, setProducts] = useState(data);
+  const [products, setProducts] = useState<ProductType>(data);
 
   useEffect(() => {
     setProducts(data);
@@ -55,7 +55,7 @@ const Menus = () => {
             ? Array.from(Array(6)).map((_, index) => {
                 return <ProductCardSkeleton key={index} />;
               })
-            : products?.map((product: ProductType) => {
+            : products?.map((product) => {
                 return <ProductCard key={product.id} product={product} onLike={setProducts} />;
               })}
         </div>
