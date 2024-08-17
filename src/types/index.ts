@@ -497,6 +497,7 @@ export interface ProductListsProps {
   loading: boolean;
   productToShow?: number;
   type?: 'products' | 'search';
+  onLike: React.Dispatch<React.SetStateAction<ProductType[]>>;
 }
 
 export type SingleProductType = {
