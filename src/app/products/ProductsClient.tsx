@@ -81,6 +81,7 @@ const ProductsClient = () => {
           data={data}
           loading={isLoading}
           productToShow={productToShow}
+          onLike={setData}
         />
         {!isLoading && (
           <div className={btnWrapClasses}>
