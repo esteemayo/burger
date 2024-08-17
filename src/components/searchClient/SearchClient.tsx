@@ -9,6 +9,7 @@ import Pagination from '../pagination/Pagination';
 import EmptyState from '../emptyState/EmptyState';
 import ProductLists from '../productLists/ProductLists';
 
+import { ProductType } from '@/types';
 import { searchProducts } from '@/services/productService';
 
 import '../../app/search/Search.scss';
@@ -24,7 +25,7 @@ const SearchClient = () => {
   const encodedSearchQuery = encodeURI(searchQuery ?? '');
   const decodedSearchQuery = decodeURI(encodedSearchQuery);
 
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState<ProductType[]>([]);
   const [itemsPerPage] = useState(6);
   const [isLoading, setIsLoading] = useState(false);
   const [totalItems, setTotalItems] = useState(0);
