@@ -25,11 +25,11 @@ const SearchClient = () => {
   const encodedSearchQuery = encodeURI(searchQuery ?? '');
   const decodedSearchQuery = decodeURI(encodedSearchQuery);
 
-  const [products, setProducts] = useState<ProductType[]>([]);
-  const [itemsPerPage] = useState(6);
   const [isLoading, setIsLoading] = useState(false);
-  const [totalItems, setTotalItems] = useState(0);
+  const [itemsPerPage] = useState(6);
   const [currentPage, setCurrentPage] = useState(pageNumber);
+  const [totalItems, setTotalItems] = useState(0);
+  const [products, setProducts] = useState<ProductType[]>([]);
 
   useEffect(() => {
     encodedSearchQuery &&
