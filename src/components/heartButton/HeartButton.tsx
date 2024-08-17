@@ -7,8 +7,13 @@ import HeartIcon from '../heartIcon/HeartIcon';
 
 import './HeartButton.scss';
 
-const HeartButton = ({ actionId, likes, currentUser, onUpdate }: HeartButtonProps) => {
-  const { hasFavorited, toggleFavorite } = useFavorite(
+const HeartButton = ({
+  actionId,
+  likes,
+  currentUser,
+  onUpdate,
+}: HeartButtonProps) => {
+  const { isLiked, hasFavorited, toggleFavorite } = useFavorite(
     actionId,
     currentUser,
     likes,
@@ -17,7 +22,7 @@ const HeartButton = ({ actionId, likes, currentUser, onUpdate }: HeartButtonProp
 
   return (
     <span className='heartWrap' onClick={toggleFavorite}>
-      <HeartIcon isFavorite={hasFavorited} />
+      <HeartIcon isFavorite={isLiked || hasFavorited} />
     </span>
   );
 };
