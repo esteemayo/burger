@@ -15,7 +15,7 @@ import { formatCurrency } from '@/utils/formatCurrency';
 
 import './ProductInfo.scss';
 
-const ProductInfo = ({ product, currentUser, onUpdate }: ProductInfoProps) => {
+const ProductInfo = ({ product, currentUser, onUpdate, onRefetch }: ProductInfoProps) => {
   const { btnLabel, inCart } = useCartControls(product);
   const { quantity, isLoading, handleChange, handleClick } = useCart(product);
 
@@ -49,6 +49,7 @@ const ProductInfo = ({ product, currentUser, onUpdate }: ProductInfoProps) => {
             likes={product.likes}
             currentUser={currentUser}
             onUpdate={onUpdate}
+            onRefetch={onRefetch}
           />
           <span className='price'>{formatCurrency(product.price)}</span>
         </div>
