@@ -374,7 +374,7 @@ export const products: CardMenu = [
     desc: 'Our "Double Crunchy Chicken Burger" Is Prepared With The Best Quality Of Burger buns and chicken That Gives A Great Taste And Texture plus our chicken patty is marinated in an aromatic mixture of olive oil, garlic, lemon and spices that wakes you up once you take a bite!',
     image: '/img/burger-9.jpg',
     ingredients: ['garlic', 'olive oil', 'parsley', 'spicies'],
-    price: 21999,
+    price: 22,
   },
   {
     id: 10,
