@@ -366,7 +366,7 @@ export const products: CardMenu = [
     desc: "Our Single Beef X Fries Burger are specially curated to let you shake things up a lil bit and let's the Bite from every burger hit hard.",
     image: '/img/burger-8.jpg',
     ingredients: ['cheese', 'beef', 'onions', 'parsley'],
-    price: 27499,
+    price: 28,
   },
   {
     id: 9,
