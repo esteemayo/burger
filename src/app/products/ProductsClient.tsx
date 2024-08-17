@@ -22,9 +22,9 @@ const ProductsClient = () => {
     },
   });
 
-  const [products, setProducts] = useState<ProductType[]>([]);
-  const [loading, setLoading] = useState(false);
   const [productToShow, setProductToShow] = useState(6);
+  const [loading, setLoading] = useState(false);
+  const [products, setProducts] = useState<ProductType[]>([]);
 
   const handleSeeMore = useCallback(
     (e: React.MouseEvent<HTMLButtonElement>) => {
