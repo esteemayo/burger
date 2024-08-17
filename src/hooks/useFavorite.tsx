@@ -2,7 +2,7 @@
 
 import { useRouter } from 'next/navigation';
 import { toast } from 'react-toastify';
-import { useCallback, useMemo } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 
 import { CurrentUserType, IFavorite } from '@/types';
 import { likeProduct } from '@/services/productService';
@@ -14,6 +14,8 @@ const useFavorite: IFavorite = (
   onUpdate
 ) => {
   const router = useRouter();
+
+  const [isLiked, setIsLiked] = useState(false);
 
   const hasFavorited = useMemo(() => {
     const product = likes ?? [];
@@ -34,9 +36,11 @@ const useFavorite: IFavorite = (
 
       try {
         const { data } = await likeProduct(actionId);
+        setIsLiked(!!data);
         onUpdate?.(data);
       } catch (err: unknown) {
         console.log(err);
+        setIsLiked(false);
         toast.error('Something went wrong');
       }
     },
@@ -44,6 +48,7 @@ const useFavorite: IFavorite = (
   );
 
   return {
+    isLiked,
     hasFavorited,
     toggleFavorite,
   };
