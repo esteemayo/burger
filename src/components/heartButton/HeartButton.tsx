@@ -7,13 +7,21 @@ import HeartIcon from '../heartIcon/HeartIcon';
 
 import './HeartButton.scss';
 
-const HeartButton = ({ actionId, likes, currentUser, onLike, onUpdate }: HeartButtonProps) => {
+const HeartButton = ({
+  actionId,
+  likes,
+  currentUser,
+  onLike,
+  onUpdate,
+  onRefetch,
+}: HeartButtonProps) => {
   const { hasFavorited, toggleFavorite } = useFavorite(
     actionId,
     currentUser,
     likes,
     onLike,
-    onUpdate
+    onUpdate,
+    onRefetch
   );
 
   return (
