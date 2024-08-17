@@ -262,6 +262,7 @@ export type ProductType = {
 export interface ProductCardProps {
   product: ProductType | CartItem;
   onLike?: React.Dispatch<React.SetStateAction<ProductType[]>>;
+  onRefetch?(): void;
 }
 
 export interface InputProps
