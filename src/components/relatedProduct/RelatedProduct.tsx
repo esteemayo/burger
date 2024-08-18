@@ -11,10 +11,16 @@ import { RelatedProductProps } from '@/types';
 import { formatCurrency } from '@/utils/formatCurrency';
 
 import Spinner from '../spinner/Spinner';
+import HeartButton from '../heartButton/HeartButton';
 
 import './RelatedProduct.scss';
 
-const RelatedProduct = ({ product }: RelatedProductProps) => {
+const RelatedProduct = ({
+  product,
+  currentUser,
+  onUpdate,
+  onRefetch,
+}: RelatedProductProps) => {
   const { isLoading, handleClick } = useCart(product);
   const { inCart, btnLabel } = useCartControls(product);
 
@@ -27,11 +33,12 @@ const RelatedProduct = ({ product }: RelatedProductProps) => {
       <div className='relatedBox'>
         <div className='relatedThumbnail'>
           <div className='relatedLikeBtn'>
-            <Image
-              src='/svg/heart-1.svg'
-              width={20}
-              height={20}
-              alt='heart icon'
+            <HeartButton
+              actionId={product.id}
+              likes={product.likes}
+              currentUser={currentUser}
+              onUpdate={onUpdate}
+              onRefetch={onRefetch}
             />
           </div>
           <span className='relatedOverlay'>
