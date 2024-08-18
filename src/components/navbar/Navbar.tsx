@@ -57,7 +57,7 @@ const Navbar = () => {
       <div className='wrapper'>
         <Logo />
         <div className='nav'>
-          <Link href='/products'>
+          <Link href='/products' className='navLink'>
             <RoomServiceIcon />
             <span>Products</span>
           </Link>
