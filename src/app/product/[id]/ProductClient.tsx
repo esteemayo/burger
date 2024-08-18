@@ -51,21 +51,21 @@ const ProductClient = ({ productId }: ProductClientProps) => {
 
   return (
     <div className='product'>
-      <Hero name={product.name} image={product.image} />
+      <Hero name={product?.name!} image={product?.image!} />
       <ProductInfo
-        product={product}
+        product={product!}
         currentUser={session?.user}
         onUpdate={setProduct}
         onRefetch={refetch}
       />
-      <ProductReview 
-        actionId={product.id}
+      <ProductReview
+        actionId={product?.id!}
         currentUser={session?.user}
-        productReviews={product.reviews}
+        productReviews={product?.reviews!}
       />
       <RelatedProducts
-        productId={product.id}
-        ingredients={product.ingredients}
+        productId={product?.id!}
+        ingredients={product?.ingredients}
       />
     </div>
   );
