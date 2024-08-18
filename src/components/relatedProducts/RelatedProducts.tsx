@@ -1,15 +1,19 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import dynamic from 'next/dynamic';
 import { useQuery } from '@tanstack/react-query';
 
-import RelatedProduct from '../relatedProduct/RelatedProduct';
 import RelatedCardSkeleton from '../relatedCardSkeleton/RelatedCardSkeleton';
 
 import { ProductType, RelatedProductsProps } from '@/types';
 import { getRelatedProducts } from '@/services/productService';
 
 import './RelatedProducts.scss';
+
+const RelatedProduct = dynamic(() => import ('../relatedProduct/RelatedProduct'), {
+  ssr: false,
+});
 
 const RelatedProducts = ({ productId, ingredients, currentUser}: RelatedProductsProps) => {
   const { isLoading, data, refetch } = useQuery({
