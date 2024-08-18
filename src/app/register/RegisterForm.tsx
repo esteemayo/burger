@@ -164,6 +164,10 @@ const RegisterForm = () => {
     return step !== STEPS.AVATAR ? 'btnPrev show' : 'btnPrev';
   }, [step]);
 
+  const registerBtnClasses = useMemo(() => {
+    return step === STEPS.AVATAR ? 'registerBtn show' : 'registerBtn hide';
+  }, [step]);
+
   const {
     name,
     username,
@@ -246,15 +250,13 @@ const RegisterForm = () => {
           nextBtnClasses={nextBtnClasses}
         />
         <div className='buttonWrap'>
-          {step === STEPS.AVATAR && (
-            <Button
-              type='submit'
-              label='Sign up'
-              disabled={isLoading}
-              loading={isLoading}
-              className='registerBtn'
-            />
-          )}
+          <Button
+            type='submit'
+            label='Sign up'
+            disabled={isLoading}
+            loading={isLoading}
+            className={registerBtnClasses}
+          />
           <GoogleButton />
         </div>
       </form>
