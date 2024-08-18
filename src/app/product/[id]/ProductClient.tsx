@@ -68,7 +68,6 @@ const ProductClient = ({ productId }: ProductClientProps) => {
         ingredients={product?.ingredients!}
         currentUser={session?.user}
         onUpdate={setProduct}
-        onRefetch={refetch}
       />
     </div>
   );

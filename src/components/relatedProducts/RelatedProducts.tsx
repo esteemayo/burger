@@ -15,9 +15,12 @@ const RelatedProducts = ({
   ingredients,
   currentUser,
   onUpdate,
-  onRefetch,
 }: RelatedProductsProps) => {
-  const { isLoading, data: products } = useQuery({
+  const {
+    isLoading,
+    data: products,
+    refetch,
+  } = useQuery({
     queryKey: ['featuredProducts'],
     queryFn: async () => {
       const { data } = await getRelatedProducts(ingredients);
@@ -45,7 +48,7 @@ const RelatedProducts = ({
                       product={product}
                       currentUser={currentUser}
                       onUpdate={onUpdate}
-                      onRefetch={onRefetch}
+                      onRefetch={refetch}
                     />
                   );
                 })}
