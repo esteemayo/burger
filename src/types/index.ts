@@ -870,7 +870,7 @@ export interface HeartButtonProps {
   currentUser: CurrentUserType | undefined;
   onLike?: React.Dispatch<React.SetStateAction<ProductType[]>>;
   onUpdate?: React.Dispatch<React.SetStateAction<SingleProductType | null>>;
-  onRefetch(): void;
+  onRefetch?(): void;
 }
 
 export interface CheckoutProductsProps {
