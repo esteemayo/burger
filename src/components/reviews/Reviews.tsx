@@ -15,7 +15,7 @@ import { useCartStore } from '@/hooks/useCartStore';
 
 import './Reviews.scss';
 
-const Review = dynamic(() => import '../review/Review', {
+const Review = dynamic(() => import('../review/Review'), {
   ssr: false,
 });
 
