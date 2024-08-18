@@ -9,7 +9,7 @@
   border-radius: 50%;
   object-fit: cover;
   box-shadow: $box-shadow;
-  transform: scale(1.1);
+  transform: scale(1);
   transition: all 0.3s;
 
   @include xl {
@@ -43,7 +43,7 @@
   }
 
   &:hover {
-    transform: scale(1);
-    filter: blur(2px);
+    filter: blur(1px);
+    transform: scale(1.1);
   }
 }
