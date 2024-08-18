@@ -67,7 +67,6 @@ const ProductClient = ({ productId }: ProductClientProps) => {
         productId={product?.id!}
         ingredients={product?.ingredients!}
         currentUser={session?.user}
-        onUpdate={setProduct}
       />
     </div>
   );
