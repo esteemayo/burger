@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 
 import RelatedProduct from '../relatedProduct/RelatedProduct';
@@ -10,17 +11,8 @@ import { getRelatedProducts } from '@/services/productService';
 
 import './RelatedProducts.scss';
 
-const RelatedProducts = ({
-  productId,
-  ingredients,
-  currentUser,
-  onUpdate,
-}: RelatedProductsProps) => {
-  const {
-    isLoading,
-    data: products,
-    refetch,
-  } = useQuery({
+const RelatedProducts = ({ productId, ingredients, currentUser}: RelatedProductsProps) => {
+  const { isLoading, data, refetch } = useQuery({
     queryKey: ['featuredProducts'],
     queryFn: async () => {
       const { data } = await getRelatedProducts(ingredients);
@@ -28,6 +20,12 @@ const RelatedProducts = ({
     },
     enabled: !!ingredients,
   });
+
+  const [products, setProducts] = useState<ProductType[]>([]);
+
+  useEffect(() => {
+    setProducts(data);
+  }, [data]);
 
   return (
     <section className='relatedProducts'>
@@ -39,15 +37,15 @@ const RelatedProducts = ({
                 return <RelatedCardSkeleton key={index} />;
               })
             : products
-                ?.filter((product: ProductType) => product.id !== productId)
+                ?.filter((product) => product.id !== productId)
                 .slice(0, 4)
-                .map((product: ProductType) => {
+                .map((product) => {
                   return (
                     <RelatedProduct
                       key={product.id}
                       product={product}
                       currentUser={currentUser}
-                      onUpdate={onUpdate}
+                      onLike={setProducts}
                       onRefetch={refetch}
                     />
                   );
