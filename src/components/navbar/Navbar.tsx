@@ -33,8 +33,9 @@ const Navbar = () => {
   const removeFromCart = useCartStore((store) => store.removeFromCart);
 
   const { searchQuery, handleChange, handleSubmit } = useSearch();
-  const { avatar } = useAvatar(session?.user);
   const { cartQuantity, handleDecrement, handleIncrement } = useCartControls();
+  
+  const { avatar } = useAvatar(session?.user);
 
   const [isActive, setIsActive] = useState(false);
 
