@@ -906,7 +906,6 @@ export interface RelatedProductsProps {
   productId: string;
   ingredients?: string[];
   currentUser: CurrentUserType | undefined;
-  onUpdate: React.Dispatch<React.SetStateAction<SingleProductType | null>>;
 }
 
 export type ContactDetailType = {
