@@ -150,7 +150,8 @@
         cursor: pointer;
 
         &:hover {
-          .shoppingCartLogo, .count {
+          .shoppingCartLogo,
+          .count {
             transform: scale(1.1);
           }
         }
@@ -316,6 +317,7 @@
           width: 2rem;
           height: 2rem;
           object-fit: cover;
+          transition: all 0.3s;
 
           @include xl {
             width: 2.223rem;
@@ -335,6 +337,10 @@
           @media only screen and (min-width: 112.5em) {
             width: 3.25rem;
             height: 3.25rem;
+          }
+
+          &:hover {
+            transform: scale(1.1);
           }
         }
       }
