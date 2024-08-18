@@ -227,14 +227,20 @@
             }
 
             .registerBtn {
-              display: flex;
-              align-items: center;
-              justify-content: center;
-
               text-transform: capitalize;
               background-color: $clr-primary;
               color: $clr-white;
               transition: all 0.3s;
+
+              &.show {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                visibility: visible;
+                opacity: 1;
+                z-index: 1000;
+              }
 
               &:hover {
                 background-color: $clr-secondary;
