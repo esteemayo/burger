@@ -26,6 +26,14 @@ const RelatedProduct = ({ product }: RelatedProductProps) => {
     <article className='relatedProduct'>
       <div className='relatedBox'>
         <div className='relatedThumbnail'>
+          <div className='relatedLikeBtn'>
+            <Image
+              src='/svg/heart-1.svg'
+              width={20}
+              height={20}
+              alt='heart icon'
+            />
+          </div>
           <span className='relatedOverlay'>
             <button
               type='button'
