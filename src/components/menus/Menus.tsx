@@ -1,18 +1,24 @@
 'use client';
 
 import { useQuery } from '@tanstack/react-query';
-import { useEffect, useState } from 'react';
+import dynamic from 'next/dynamic';
 import RoomServiceIcon from '@mui/icons-material/RoomService';
+import { useEffect, useState } from 'react';
 
-import ProductCard from '../productCard/ProductCard';
-import ProductCardSkeleton from '../productCardSkeleton/ProductCardSkeleton';
+import EmptyState from '@/components/emptyState/EmptyState';
 
 import { ProductType } from '@/types';
 import { getFeaturedProducts } from '@/services/productService';
 
-import EmptyState from '@/components/emptyState/EmptyState';
-
 import './Menus.scss';
+
+const ProductCard = dynamic(() => import('../productCard/ProductCard'), {
+  ssr: false,
+});
+const ProductCardSkeleton = dynamic(
+  () => import('../productCardSkeleton/ProductCardSkeleton'),
+  { ssr: false }
+);
 
 const Menus = () => {
   const { isLoading, data, refetch } = useQuery({
