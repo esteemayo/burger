@@ -9,7 +9,6 @@
   border-radius: 50%;
   object-fit: cover;
   box-shadow: $box-shadow;
-  transform: scale(1);
   transition: all 0.3s;
 
   @include xl {
