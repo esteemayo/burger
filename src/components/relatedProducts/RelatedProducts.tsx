@@ -10,7 +10,13 @@ import { getRelatedProducts } from '@/services/productService';
 
 import './RelatedProducts.scss';
 
-const RelatedProducts = ({ productId, ingredients }: RelatedProductsProps) => {
+const RelatedProducts = ({
+  productId,
+  ingredients,
+  currentUser,
+  onUpdate,
+  onRefetch,
+}: RelatedProductsProps) => {
   const { isLoading, data: products } = useQuery({
     queryKey: ['featuredProducts'],
     queryFn: async () => {
@@ -33,7 +39,15 @@ const RelatedProducts = ({ productId, ingredients }: RelatedProductsProps) => {
                 ?.filter((product: ProductType) => product.id !== productId)
                 .slice(0, 4)
                 .map((product: ProductType) => {
-                  return <RelatedProduct key={product.id} product={product} />;
+                  return (
+                    <RelatedProduct
+                      key={product.id}
+                      product={product}
+                      currentUser={currentUser}
+                      onUpdate={onUpdate}
+                      onRefetch={onRefetch}
+                    />
+                  );
                 })}
         </div>
       </div>
