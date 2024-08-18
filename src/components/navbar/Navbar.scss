@@ -55,9 +55,9 @@
         gap: 1rem;
       }
 
-      a,
-      a:link,
-      a:active {
+      .navLink,
+      .navLink:link,
+      .navLink:active {
         color: inherit;
         display: flex;
         align-items: center;
