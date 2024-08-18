@@ -65,7 +65,7 @@ const ProductClient = ({ productId }: ProductClientProps) => {
       />
       <RelatedProducts
         productId={product?.id!}
-        ingredients={product?.ingredients}
+        ingredients={product?.ingredients!}
         currentUser={session?.user}
         onUpdate={setProduct}
         onRefetch={refetch}
