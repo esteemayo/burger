@@ -341,6 +341,7 @@
           }
 
           &:hover {
+            filter: blur(1px);
             transform: scale(1.1);
           }
         }
