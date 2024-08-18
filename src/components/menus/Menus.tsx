@@ -6,6 +6,7 @@ import RoomServiceIcon from '@mui/icons-material/RoomService';
 import { useEffect, useState } from 'react';
 
 import EmptyState from '@/components/emptyState/EmptyState';
+import ProductCardSkeleton from '../productCardSkeleton/ProductCardSkeleton';
 
 import { ProductType } from '@/types';
 import { getFeaturedProducts } from '@/services/productService';
@@ -15,11 +16,6 @@ import './Menus.scss';
 const ProductCard = dynamic(() => import('../productCard/ProductCard'), {
   ssr: false,
 });
-
-const ProductCardSkeleton = dynamic(
-  () => import('../productCardSkeleton/ProductCardSkeleton'),
-  { ssr: false }
-);
 
 const Menus = () => {
   const { isLoading, data, refetch } = useQuery({
