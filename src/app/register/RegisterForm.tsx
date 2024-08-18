@@ -246,13 +246,15 @@ const RegisterForm = () => {
           nextBtnClasses={nextBtnClasses}
         />
         <div className='buttonWrap'>
-          <Button
-            type='submit'
-            label='Sign up'
-            disabled={isLoading}
-            loading={isLoading}
-            className='registerBtn'
-          />
+          {step === STEPS.AVATAR && (
+            <Button
+              type='submit'
+              label='Sign up'
+              disabled={isLoading}
+              loading={isLoading}
+              className='registerBtn'
+            />
+          )}
           <GoogleButton />
         </div>
       </form>
