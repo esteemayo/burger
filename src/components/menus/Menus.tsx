@@ -15,6 +15,7 @@ import './Menus.scss';
 const ProductCard = dynamic(() => import('../productCard/ProductCard'), {
   ssr: false,
 });
+
 const ProductCardSkeleton = dynamic(
   () => import('../productCardSkeleton/ProductCardSkeleton'),
   { ssr: false }
