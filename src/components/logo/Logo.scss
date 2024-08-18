@@ -9,6 +9,7 @@
     width: 12rem;
     height: 9rem;
     color: inherit;
+    transition: all 0.3s;
 
     @include xl {
       width: 13.334rem;
@@ -23,6 +24,11 @@
     @media only screen and (min-width: 112.5em) {
       width: 15rem;
       height: 17rem;
+    }
+
+    &:hover {
+      filter: blur(1px);
+      transform: scale(1.1);
     }
 
     img {
