@@ -556,6 +556,9 @@ export interface ReviewProps {
 
 export interface RelatedProductProps {
   product: ProductType | CartItem;
+  currentUser: CurrentUserType | undefined;
+  onUpdate: React.Dispatch<React.SetStateAction<SingleProductType | null>>;
+  onRefetch?(): void;
 }
 
 export interface StarRatingProps {
