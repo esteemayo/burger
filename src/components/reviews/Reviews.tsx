@@ -3,17 +3,21 @@
 import { useCallback, useMemo, useState } from 'react';
 import Link from 'next/link';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+import dynamic from 'next/dynamic';
 import { useSession } from 'next-auth/react';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import ReviewForm from '../reviewForm/ReviewForm';
-import Review from '../review/Review';
 import ReviewCardSkeleton from '../reviewCardSkeleton/ReviewCardSkeleton';
 
 import { ReviewsProps } from '@/types';
 import { useCartStore } from '@/hooks/useCartStore';
 
 import './Reviews.scss';
+
+const Review = dynamic(() => import '../review/Review', {
+  ssr: false,
+});
 
 const Reviews = ({
   actionId,
