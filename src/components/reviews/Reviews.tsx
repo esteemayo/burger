@@ -4,8 +4,8 @@ import { useCallback, useMemo, useState } from 'react';
 import Link from 'next/link';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import dynamic from 'next/dynamic';
-import { useSession } from 'next-auth/react';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { useSession } from 'next-auth/react';
 
 import ReviewForm from '../reviewForm/ReviewForm';
 import ReviewCardSkeleton from '../reviewCardSkeleton/ReviewCardSkeleton';
