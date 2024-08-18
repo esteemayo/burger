@@ -6,13 +6,13 @@ import NewsLetter from '@/components/newsletter/NewsLetter';
 
 const Home = () => {
   return (
-    <div>
+    <>
       <Header />
       <Features />
       <Menus />
       <Offer />
       <NewsLetter />
-    </div>
+    </>
   );
 };
 
