@@ -1,8 +1,8 @@
 'use client';
 
-import { usePathname } from 'next/navigation';
+import { useCallback, useMemo } from 'react';
 import Link from 'next/link';
-import { useCallback, useEffect, useMemo } from 'react';
+import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import RoomServiceIcon from '@mui/icons-material/RoomService';
 import { useSession } from 'next-auth/react';
@@ -35,15 +35,6 @@ const Sidebar = () => {
     [handleClose]
   );
 
-  const handleEscape = useCallback(
-    (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
-        handleClose();
-      }
-    },
-    [handleClose]
-  );
-
   const sidebarClasses = useMemo(() => {
     return !!isOpen ? 'sidebar show' : 'sidebar';
   }, [isOpen]);
@@ -51,11 +42,6 @@ const Sidebar = () => {
   const containerClasses = useMemo(() => {
     return !!isOpen ? 'container active' : 'container';
   }, [isOpen]);
-
-  useEffect(() => {
-    window.addEventListener('keydown', handleEscape);
-    return window.removeEventListener('keydown', handleEscape);
-  }, [handleEscape]);
 
   return (
     <aside className={sidebarClasses} onClick={closeHandler}>
