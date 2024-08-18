@@ -1,9 +1,13 @@
-import ProductCard from '../productCard/ProductCard';
-import ProductCardSkeleton from '../productCardSkeleton/ProductCardSkeleton';
+import dynamic from 'next/dynamic';
 
 import { ProductListsProps } from '@/types';
+import ProductCardSkeleton from '../productCardSkeleton/ProductCardSkeleton';
 
 import './ProductLists.scss';
+
+const ProductCard = dynamic(() => import ('../productCard/ProductCard'), {
+  ssr: false,
+});
 
 const ProductLists = ({
   type,
