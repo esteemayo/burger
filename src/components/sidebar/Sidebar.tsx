@@ -69,7 +69,7 @@ const Sidebar = () => {
               </li>
             );
           })}
-          {!session.user.isAdmin && (
+          {!session?.user.isAdmin && (
             <li onClick={handleClose}>
               <Image
                 src='/svg/shopping-cart.svg'
