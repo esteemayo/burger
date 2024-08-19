@@ -10,10 +10,6 @@
   right: -100%;
   background-color: rgba(0, 0, 0, 0.15);
   backdrop-filter: blur(2px);
-  display: none;
-  visibility: hidden;
-  opacity: 0;
-  z-index: -1;
   transition: all 0.5s;
   transition-timing-function: cubic-bezier(0.77, 0.2, 0.05, 1),
     cubic-bezier(0.77, 0.2, 0.05, 1), cubic-bezier(0.77, 0.2, 0.05, 1);
@@ -28,6 +24,13 @@
       opacity: 1;
       z-index: 5000;
     }
+  }
+
+  &.hide {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
   }
 
   .container {
