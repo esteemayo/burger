@@ -563,7 +563,7 @@ export interface RelatedProductProps {
 
 export interface StarRatingProps {
   name: 'read-only' | 'hover-feedback' | 'disabled' | 'no-value';
-  value: number;
+  value: number | null;
   readOnly?: boolean;
   onChange?:
     | ((
