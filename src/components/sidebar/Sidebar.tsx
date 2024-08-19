@@ -36,7 +36,7 @@ const Sidebar = () => {
   );
 
   const sidebarClasses = useMemo(() => {
-    return !!isOpen ? 'sidebar show' : 'sidebar';
+    return !!isOpen ? 'sidebar show' : 'sidebar hide';
   }, [isOpen]);
 
   const containerClasses = useMemo(() => {
