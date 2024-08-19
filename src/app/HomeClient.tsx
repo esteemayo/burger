@@ -11,13 +11,14 @@ import Header from '@/components/header/Header';
 const Offer = dynamic(() => import('@/components/offer/Offer'));
 
 const HomeClient = () => {
-  const containerRef = useRef<HTMLDivElement>(undefined);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          observer.unobserve(containerRef?.current);
+          const element = containerRef?.current as Element;
+          observer.unobserve(element);
           containerRef?.current?.onload;
         }
       });
