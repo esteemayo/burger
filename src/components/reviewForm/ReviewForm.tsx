@@ -133,7 +133,7 @@ const ReviewForm = ({ productId }: ReviewFormProps) => {
           <div className='formRating'>
             <StarRating
               name='hover-feedback'
-              value={rating!}
+              value={rating}
               onChange={(event, newValue) => {
                 setRating(newValue);
               }}
