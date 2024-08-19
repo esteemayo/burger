@@ -69,18 +69,20 @@ const Sidebar = () => {
               </li>
             );
           })}
-          <li onClick={handleClose}>
-            <Image
-              src='/svg/shopping-cart.svg'
-              width={15}
-              height={15}
-              alt='search icon'
-              className='shoppingCartLogo'
-            />
-            <span className='count'>
-              <Link href='/checkout'>Cart ({cartQuantity})</Link>
-            </span>
-          </li>
+          {!session.user.isAdmin && (
+            <li onClick={handleClose}>
+              <Image
+                src='/svg/shopping-cart.svg'
+                width={15}
+                height={15}
+                alt='search icon'
+                className='shoppingCartLogo'
+              />
+              <span className='count'>
+                <Link href='/checkout'>Cart ({cartQuantity})</Link>
+              </span>
+            </li>
+          )}
         </ul>
         {pathname !== '/' &&
           pathname !== '/login' &&
