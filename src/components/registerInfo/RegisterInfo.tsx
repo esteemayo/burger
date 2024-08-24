@@ -20,7 +20,7 @@ const RegisterInfo = ({ data, errors, onChange }: RegisterInfoProps) => {
             placeholder={placeholder}
             onChange={onChange}
             error={errors[name as keyof typeof errors]}
-            autoFocus
+            autoFocus={name === 'name' && true}
           />
         );
       })}
