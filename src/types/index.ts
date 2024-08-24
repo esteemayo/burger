@@ -399,9 +399,7 @@ export interface RegisterInfoProps {
 }
 
 export interface RegisterLocationProps {
-  street: string;
-  city: string;
-  state: string;
+  data: RegisterData;
   errors: RegisterErrors;
   onChange(
     e: React.ChangeEvent<
