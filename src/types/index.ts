@@ -409,9 +409,7 @@ export interface RegisterLocationProps {
 }
 
 export interface RegisterCredentialsProps {
-  phone: string;
-  password: string;
-  confirmPassword: string;
+  data: RegisterData;
   errors: RegisterErrors;
   passwordIcon: 'icon show' | 'icon';
   confirmIcon: 'icon show' | 'icon';
