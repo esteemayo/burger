@@ -1,5 +1,27 @@
 import { Gender, GenderType, RegisterInputType } from '@/types';
 
+export const registerInfoInputs: RegisterInputType = [
+  {
+    id: 1,
+    name: 'name',
+    label: 'Name',
+    placeholder: 'Enter your name',
+  },
+  {
+    id: 2,
+    name: 'username',
+    label: 'Username',
+    placeholder: 'Enter your username',
+  },
+  {
+    id: 3,
+    name: 'email',
+    type: 'email',
+    label: 'email',
+    placeholder: 'Enter your email address',
+  },
+];
+
 export const registerLocationInputs: RegisterInputType = [
   {
     id: 1,
