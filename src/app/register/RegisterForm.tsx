@@ -192,13 +192,7 @@ const RegisterForm = () => {
 
   if (step === STEPS.LOCATION) {
     bodyContent = (
-      <RegisterLocation
-        street={street}
-        city={city}
-        state={state}
-        errors={errors}
-        onChange={handleChange}
-      />
+      <RegisterLocation data={data} errors={errors} onChange={handleChange} />
     );
   }
 
