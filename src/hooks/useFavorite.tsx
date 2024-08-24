@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation';
 import { toast } from 'react-toastify';
 import { useCallback, useMemo } from 'react';
 
-import { CurrentUserType, IFavorite } from '@/types';
+import { IFavorite } from '@/types';
 import { likeProduct } from '@/services/productService';
 
 const useFavorite: IFavorite = (
