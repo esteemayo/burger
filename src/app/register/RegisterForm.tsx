@@ -184,9 +184,7 @@ const RegisterForm = () => {
 
   bodyContent = (
     <RegisterInfo
-      name={name}
-      username={username}
-      email={email}
+      data={data}
       errors={errors}
       onChange={handleChange}
     />
