@@ -13,7 +13,7 @@ const useFavorite: IFavorite = (
   likes: string[],
   onLike,
   onUpdate,
-  onRefetch,
+  onRefetch
 ) => {
   const router = useRouter();
 
@@ -38,7 +38,7 @@ const useFavorite: IFavorite = (
         const { data } = await likeProduct(actionId);
 
         onLike?.((prev) => {
-          return [...prev].map((item) => (item.id === actionId ? data: item))
+          return [...prev].map((item) => (item.id === actionId ? data : item));
         });
         onUpdate?.(data);
         onRefetch?.();
