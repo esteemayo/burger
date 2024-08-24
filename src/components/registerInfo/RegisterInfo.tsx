@@ -5,13 +5,7 @@ import Input from '../input/Input';
 import { RegisterInfoProps } from '@/types';
 import { registerInfoInputs } from '@/data/formData';
 
-const RegisterInfo = ({
-  name,
-  username,
-  email,
-  errors,
-  onChange,
-}: RegisterInfoProps) => {
+const RegisterInfo = ({ data, errors, onChange }: RegisterInfoProps) => {
   return (
     <>
       {registerInfoInputs.map((input) => {
@@ -22,7 +16,7 @@ const RegisterInfo = ({
             name={name}
             type={type}
             label={label}
-            value={name}
+            value={data[name as keyof typeof data]}
             placeholder={placeholder}
             onChange={onChange}
             error={errors[name as keyof typeof errors]}
