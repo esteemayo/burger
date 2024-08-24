@@ -389,9 +389,7 @@ export interface RegisterErrors {
 }
 
 export interface RegisterInfoProps {
-  name: string;
-  username: string;
-  email: string;
+  data: RegisterData;
   errors: RegisterErrors;
   onChange(
     e: React.ChangeEvent<
