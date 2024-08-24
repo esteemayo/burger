@@ -8,9 +8,9 @@ import { CurrentUserType, IFavorite } from '@/types';
 import { likeProduct } from '@/services/productService';
 
 const useFavorite: IFavorite = (
-  actionId: string,
-  currentUser: CurrentUserType | undefined,
-  likes: string[],
+  actionId,
+  currentUser,
+  likes,
   onLike,
   onUpdate,
   onRefetch
