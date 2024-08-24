@@ -43,7 +43,7 @@ export const registerLocationInputs: RegisterInputType = [
   },
 ];
 
-export const options: GenderType = [
+export const genderOptions: GenderType = [
   {
     value: Gender.MALE,
     label: 'Male',

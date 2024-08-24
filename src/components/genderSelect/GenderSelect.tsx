@@ -1,4 +1,4 @@
-import { options } from '@/data/formData';
+import { genderOptions as options } from '@/data/formData';
 
 import { GenderSelectProps } from '@/types';
 import ErrorMessage from '../errorMessage/ErrorMessage';
