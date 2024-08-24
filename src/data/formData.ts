@@ -1,6 +1,6 @@
-import { Gender, GenderType } from '@/types';
+import { Gender, GenderType, RegisterInputType } from '@/types';
 
-export const registerLocationInputs = [
+export const registerLocationInputs: RegisterInputType = [
   {
     id: 1,
     name: 'street',
