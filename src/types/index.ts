@@ -30,6 +30,7 @@ export type SidebarMenuType = {
 export type RegisterInputType = {
   id: number;
   name: string;
+  type?: string;
   label: string;
   placeholder: string;
 }[];
