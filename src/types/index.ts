@@ -27,6 +27,13 @@ export type SidebarMenuType = {
   label: string;
 }[];
 
+export type RegisterInputType = {
+  id: number;
+  name: string;
+  label: string;
+  placeholder: string;
+}[];
+
 export const enum Gender {
   MALE = 'MALE',
   FEMALE = 'FEMALE',
