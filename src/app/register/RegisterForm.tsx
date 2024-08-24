@@ -183,11 +183,7 @@ const RegisterForm = () => {
   let bodyContent: JSX.Element | undefined;
 
   bodyContent = (
-    <RegisterInfo
-      data={data}
-      errors={errors}
-      onChange={handleChange}
-    />
+    <RegisterInfo data={data} errors={errors} onChange={handleChange} />
   );
 
   if (step === STEPS.LOCATION) {
