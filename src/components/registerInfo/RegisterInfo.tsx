@@ -1,7 +1,9 @@
 'use client';
 
 import Input from '../input/Input';
+
 import { RegisterInfoProps } from '@/types';
+import { registerInfoInputs } from '@/data/formData';
 
 const RegisterInfo = ({
   name,
@@ -12,32 +14,22 @@ const RegisterInfo = ({
 }: RegisterInfoProps) => {
   return (
     <>
-      <Input
-        name='name'
-        label='Name'
-        value={name}
-        placeholder='Enter your name'
-        onChange={onChange}
-        error={errors['name']}
-        autoFocus
-      />
-      <Input
-        name='username'
-        label='Username'
-        value={username}
-        placeholder='Enter your username'
-        onChange={onChange}
-        error={errors['username']}
-      />
-      <Input
-        name='email'
-        type='email'
-        label='Email'
-        value={email}
-        placeholder='Enter your email address'
-        onChange={onChange}
-        error={errors['email']}
-      />
+      {registerInfoInputs.map((input) => {
+        const { id, name, type, label, placeholder } = input;
+        return (
+          <Input
+            key={id}
+            name={name}
+            type={type}
+            label={label}
+            value={name}
+            placeholder={placeholder}
+            onChange={onChange}
+            error={errors[name as keyof typeof errors]}
+            autoFocus
+          />
+        );
+      })}
     </>
   );
 };
