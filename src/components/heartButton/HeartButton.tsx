@@ -24,7 +24,7 @@ const HeartButton = ({
     onRefetch
   );
 
-  if (currentUser.isAdmin) {
+  if (currentUser?.isAdmin) {
     return;
   }
 
