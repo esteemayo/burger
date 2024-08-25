@@ -24,6 +24,10 @@ const HeartButton = ({
     onRefetch
   );
 
+  if (currentUser.isAdmin) {
+    return;
+  }
+
   return (
     <span className='heartWrap' onClick={toggleFavorite}>
       <HeartIcon isFavorite={hasFavorited} />
