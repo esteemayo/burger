@@ -86,6 +86,11 @@
       &:hover {
         background-color: $clr-secondary;
       }
+
+      &:disabled {
+        opacity: 0.7;
+        cursor: default;
+      }
     }
 
     .btnReload {
@@ -104,6 +109,11 @@
 
       &:hover {
         background-color: $clr-secondary;
+      }
+
+      &:disabled {
+        opacity: 0.7;
+        cursor: default;
       }
     }
   }
