@@ -96,6 +96,10 @@
       font-weight: 400;
       font-size: 1.3rem;
       padding: 2rem 2.5rem;
+      background-color: $clr-primary;
+      color: $clr-white;
+      border-radius: 10rem;
+      cursor: pointer;
     }
   }
 }
