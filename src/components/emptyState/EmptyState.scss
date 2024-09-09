@@ -87,5 +87,11 @@
         background-color: $clr-secondary;
       }
     }
+
+    .btnReload {
+      display: inline-block;
+      border: none;
+      outline: none;
+    }
   }
 }
