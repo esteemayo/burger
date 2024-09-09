@@ -52,18 +52,16 @@
       }
     }
 
-    .btnError {
+    .btnError,
+    .btnReload {
       display: inline-block;
       border: none;
       outline: none;
       text-align: center;
-      text-transform: capitalize;
       font-weight: 400;
       font-size: 1.3rem;
-      padding: 1rem 6rem;
       background-color: $clr-primary;
       color: $clr-white;
-      border-radius: 0.5rem;
       cursor: pointer;
       transition: all 0.3s;
 
@@ -93,28 +91,15 @@
       }
     }
 
+    .btnError {
+      text-transform: capitalize;
+      padding: 1rem 6rem;
+      border-radius: 0.5rem;
+    }
+
     .btnReload {
-      display: inline-block;
-      border: none;
-      outline: none;
-      text-align: center;
-      font-weight: 400;
-      font-size: 1.3rem;
       padding: 2rem 2.5rem;
-      background-color: $clr-primary;
-      color: $clr-white;
       border-radius: 10rem;
-      cursor: pointer;
-      transition: all 0.3s;
-
-      &:hover {
-        background-color: $clr-secondary;
-      }
-
-      &:disabled {
-        opacity: 0.7;
-        cursor: default;
-      }
     }
   }
 }
