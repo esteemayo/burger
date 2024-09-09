@@ -45,10 +45,13 @@ const EmptyState = ({
         )}
         <Heading title={title} subtitle={subtitle} center={center} />
         {showReset && (
-          <button type='button' onClick={handleClick}>
+          <button type='button' className='btnError' onClick={handleClick}>
             {label}
           </button>
         )}
+        <button type='button' className='btnReload'>
+          Reload page
+        </button>
       </div>
     </div>
   );

@@ -52,9 +52,10 @@
       }
     }
 
-    button {
-      all: unset;
+    .btnError {
       display: inline-block;
+      border: none;
+      outline: none;
       text-align: center;
       text-transform: capitalize;
       font-weight: 400;
