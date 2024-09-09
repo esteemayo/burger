@@ -32,6 +32,12 @@ const EmptyState = ({
     [router, url]
   );
 
+  const handleReload = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
+    e.stopPropagation();
+
+    window.location.assign(window.location.pathname);
+  }, []);
+
   return (
     <div className='emptyState'>
       <div className='container'>
@@ -49,7 +55,7 @@ const EmptyState = ({
             {label}
           </button>
         )}
-        <button type='button' className='btnReload'>
+        <button type='button' className='btnReload' onClick={handleReload}>
           Reload page
         </button>
       </div>
