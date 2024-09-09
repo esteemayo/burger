@@ -27,9 +27,9 @@ const EmptyState = ({
       const redirectUrl = url ? `/${url}` : '/';
 
       router.push(redirectUrl);
-      return
+      return;
     },
-    [router]
+    [router, url]
   );
 
   return (

@@ -11,6 +11,7 @@ import Header from '@/components/header/Header';
 const Offer = dynamic(() => import('@/components/offer/Offer'));
 
 const HomeClient = () => {
+  throw new Error('error');
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
