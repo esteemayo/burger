@@ -73,10 +73,6 @@
         font-size: 1.625rem;
       }
 
-      @include sm {
-        padding: 0.8rem 3rem;
-      }
-
       @media only screen and (min-width: 112.5em) {
         font-size: 1.66667rem;
       }
@@ -95,6 +91,10 @@
       text-transform: capitalize;
       padding: 1rem 6rem;
       border-radius: 0.5rem;
+
+      @include sm {
+        padding: 0.8rem 3rem;
+      }
     }
 
     .btnReload {
