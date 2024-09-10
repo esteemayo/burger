@@ -39,6 +39,10 @@ const EmptyState = ({
     window.location.assign(window.location.pathname);
   }, []);
 
+  const imgClasses = useMemo(() => {
+    return !!imgSrc ? 'emptyImg show' : 'emptyImg hide';
+  }, [imgSrc]);
+
   const btnResetClasses = useMemo(() => {
     return showReset ? 'btnReset show' : 'btnReset hide';
   }, [showReset]);
@@ -50,14 +54,13 @@ const EmptyState = ({
   return (
     <div className='emptyState'>
       <div className='container'>
-        {imgSrc && (
-          <Image
-            src={`/svg/${imgSrc}.svg`}
-            width={300}
-            height={300}
-            alt={imgSrc}
-          />
-        )}
+        <Image
+          src={`/svg/${imgSrc}.svg`}
+          width={300}
+          height={300}
+          alt={imgSrc as string}
+          className={imgClasses}
+        />
         <Heading title={title} subtitle={subtitle} center={center} />
         <button type='button' className={btnResetClasses} onClick={handleClick}>
           {label}
