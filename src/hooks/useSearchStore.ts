@@ -1,6 +1,7 @@
 import { create } from 'zustand';
 import { produce } from 'immer';
 import { devtools } from 'zustand/middleware';
+
 import { SearchActionType, SearchStore } from '@/types';
 
 const INITIAL_STATE = {
