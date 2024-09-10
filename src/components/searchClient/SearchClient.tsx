@@ -1,7 +1,8 @@
 'use client';
 
-import { useCallback, useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
+import { toast } from 'react-toastify';
+import { useCallback, useEffect, useState } from 'react';
 
 import Heading from './Heading';
 import Pagination from '../pagination/Pagination';
@@ -20,6 +21,8 @@ const SearchClient = () => {
 
   const products = useSearchStore((store) => store.products);
   const isLoading = useSearchStore((store) => store.isLoading);
+  const isError = useSearchStore((store) => store.isError);
+  const message = useSearchStore((store) => store.message);
   const searchProductPending = useSearchStore(
     (store) => store.searchProductPending
   );
@@ -74,6 +77,10 @@ const SearchClient = () => {
   useEffect(() => {
     pageNumber && setCurrentPage(pageNumber);
   }, [pageNumber]);
+
+  useEffect(() => {
+    isError && toast.error(message);
+  }, [isError, message]);
 
   if (!isLoading && products?.length < 1) {
     return (
