@@ -39,6 +39,10 @@ const EmptyState = ({
     window.location.assign(window.location.pathname);
   }, []);
 
+  const btnResetClasses = useMemo(() => {
+    return showReset ? 'btnReset show' : 'btnReset hide';
+  }, [showReset]);
+
   const btnReloadClasses = useMemo(() => {
     return isError ? 'btnReload show' : 'btnReload hide';
   }, [isError]);
@@ -55,11 +59,9 @@ const EmptyState = ({
           />
         )}
         <Heading title={title} subtitle={subtitle} center={center} />
-        {showReset && (
-          <button type='button' className='btnReset' onClick={handleClick}>
-            {label}
-          </button>
-        )}
+        <button type='button' className={btnResetClasses} onClick={handleClick}>
+          {label}
+        </button>
         <button
           type='button'
           className={btnReloadClasses}
