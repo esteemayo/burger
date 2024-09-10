@@ -41,10 +41,10 @@ const SearchClient = () => {
   const encodedSearchQuery = encodeURI(searchQuery ?? '');
   const decodedSearchQuery = decodeURI(encodedSearchQuery);
 
+  const [totalItems, setTotalItems] = useState(0);
   const [itemsPerPage] = useState(6);
   const [currentPage, setCurrentPage] = useState(pageNumber);
-  const [totalItems, setTotalItems] = useState(0);
-  const [data, setData] = useState<ProductType[]>([]);
+  const [data, setData] = useState(products);
 
   const handleFetchProducts = useCallback(async () => {
     searchProductPending();
