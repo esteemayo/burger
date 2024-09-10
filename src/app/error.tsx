@@ -14,6 +14,7 @@ const ErrorState = ({ error }: { error: Error }) => {
       title='Something went wrong'
       subtitle="We're having issues loading this page. Try again"
       imgSrc='bugs'
+      showReload
     />
   );
 };
