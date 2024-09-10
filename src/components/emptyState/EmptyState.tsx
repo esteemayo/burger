@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback } from 'react';
+import { useCallback, useMemo } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
@@ -16,6 +16,7 @@ const EmptyState = ({
   center = true,
   imgSrc,
   label = 'Return home',
+  isError,
   showReset,
 }: EmptyStateProps) => {
   const router = useRouter();
@@ -38,6 +39,10 @@ const EmptyState = ({
     window.location.assign(window.location.pathname);
   }, []);
 
+  const btnReloadClasses = useMemo(() => {
+    return isError ? 'btnReload show' : 'btnReload hide';
+  }, [isError]);
+
   return (
     <div className='emptyState'>
       <div className='container'>
@@ -55,7 +60,11 @@ const EmptyState = ({
             {label}
           </button>
         )}
-        <button type='button' className='btnReload' onClick={handleReload}>
+        <button
+          type='button'
+          className={btnReloadClasses}
+          onClick={handleReload}
+        >
           Reload page
         </button>
       </div>
