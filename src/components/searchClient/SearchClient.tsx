@@ -9,6 +9,7 @@ import Pagination from '../pagination/Pagination';
 import EmptyState from '../emptyState/EmptyState';
 import ProductLists from '../productLists/ProductLists';
 
+import { useSearchStore } from '@/hooks/useSearchStore';
 import { ProductType } from '@/types';
 import { searchProducts } from '@/services/productService';
 
@@ -16,6 +17,18 @@ import '../../app/search/Search.scss';
 
 const SearchClient = () => {
   const params = useSearchParams();
+
+  const products = useSearchStore((store) => store.products);
+  const isLoading = useSearchStore((store) => store.isLoading);
+  const searchProductPending = useSearchStore(
+    (store) => store.searchProductPending
+  );
+  const searchProductFulfilled = useSearchStore(
+    (store) => store.searchProductFulfilled
+  );
+  const searchProductFailure = useSearchStore(
+    (store) => store.searchProductFailure
+  );
 
   const page = params.get('page') ?? 1;
   const searchQuery = params.get('q') ?? null;
@@ -25,29 +38,38 @@ const SearchClient = () => {
   const encodedSearchQuery = encodeURI(searchQuery ?? '');
   const decodedSearchQuery = decodeURI(encodedSearchQuery);
 
-  const [isLoading, setIsLoading] = useState(false);
   const [itemsPerPage] = useState(6);
   const [currentPage, setCurrentPage] = useState(pageNumber);
   const [totalItems, setTotalItems] = useState(0);
-  const [products, setProducts] = useState<ProductType[]>([]);
+  const [data, setData] = useState<ProductType[]>([]);
 
   const handleFetchProducts = useCallback(async () => {
-    setIsLoading(true);
+    searchProductPending();
 
     try {
       const { data } = await searchProducts(encodedSearchQuery, pageNumber);
-      setProducts(data?.products);
+
+      searchProductFulfilled(data?.products);
       setTotalItems(data?.totalProducts);
-    } catch (err: unknown) {
+    } catch (err: unknown | any) {
       console.log(err);
-    } finally {
-      setIsLoading(false);
+      searchProductFailure(err?.response.data.message);
     }
-  }, [encodedSearchQuery, pageNumber]);
+  }, [
+    encodedSearchQuery,
+    pageNumber,
+    searchProductFailure,
+    searchProductFulfilled,
+    searchProductPending,
+  ]);
 
   useEffect(() => {
     handleFetchProducts();
   }, [handleFetchProducts]);
+
+  useEffect(() => {
+    setData(products);
+  }, [products]);
 
   useEffect(() => {
     pageNumber && setCurrentPage(pageNumber);
@@ -69,9 +91,9 @@ const SearchClient = () => {
       <div className='container'>
         <Heading query={decodedSearchQuery} />
         <ProductLists
-          data={products}
+          data={data}
           loading={isLoading}
-          onLike={setProducts}
+          onLike={setData}
           onRefetch={handleFetchProducts}
         />
         <Pagination
