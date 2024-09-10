@@ -813,8 +813,8 @@ export interface EmptyStateProps {
   center?: boolean;
   imgSrc?: string;
   label?: string;
-  isError?: boolean;
   showReset?: boolean;
+  showReload?: boolean;
 }
 
 type OrderDetailType = {

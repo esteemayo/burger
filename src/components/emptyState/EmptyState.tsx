@@ -16,8 +16,8 @@ const EmptyState = ({
   center = true,
   imgSrc,
   label = 'Return home',
-  isError,
   showReset,
+  showReload,
 }: EmptyStateProps) => {
   const router = useRouter();
 
@@ -43,9 +43,8 @@ const EmptyState = ({
     return showReset ? 'btnReset show' : 'btnReset hide';
   }, [showReset]);
 
-  const btnReloadClasses = useMemo(() => {
-    return isError ? 'btnReload show' : 'btnReload hide';
-  }, [isError]);
+  const btnReloadClasses = useMemo(() => {}, [showReload]);
+  return showReload ? 'btnReload show' : 'btnReload hide';
 
   return (
     <div className='emptyState'>
