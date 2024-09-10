@@ -4,19 +4,16 @@ import Image from 'next/image';
 import { useMemo } from 'react';
 
 import Spinner from '../spinner/Spinner';
+
 import { useSearch } from '@/hooks/useSearch';
+import { useSearchStore } from '@/hooks/useSearchStore';
 
 import './Header.scss';
 
 const Header = () => {
-  const {
-    searchQuery,
-    inputRef,
-    isLoading,
-    handleChange,
-    handleClear,
-    handleSubmit,
-  } = useSearch();
+  const isLoading = useSearchStore((store) => store.isLoading);
+  const { searchQuery, inputRef, handleChange, handleClear, handleSubmit } =
+    useSearch();
 
   const btnClearClasses = useMemo(() => {
     return searchQuery.length > 0 ? 'btnClear show' : 'btnClear hide';
