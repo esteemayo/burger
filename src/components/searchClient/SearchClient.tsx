@@ -11,7 +11,6 @@ import EmptyState from '../emptyState/EmptyState';
 import ProductLists from '../productLists/ProductLists';
 
 import { useSearchStore } from '@/hooks/useSearchStore';
-import { ProductType } from '@/types';
 import { searchProducts } from '@/services/productService';
 
 import '../../app/search/Search.scss';
@@ -19,10 +18,11 @@ import '../../app/search/Search.scss';
 const SearchClient = () => {
   const params = useSearchParams();
 
-  const products = useSearchStore((store) => store.products);
-  const isLoading = useSearchStore((store) => store.isLoading);
   const isError = useSearchStore((store) => store.isError);
+  const reset = useSearchStore((store) => store.reset);
+  const products = useSearchStore((store) => store.products);
   const message = useSearchStore((store) => store.message);
+  const isLoading = useSearchStore((store) => store.isLoading);
 
   const searchProductPending = useSearchStore(
     (store) => store.searchProductPending
@@ -69,7 +69,8 @@ const SearchClient = () => {
 
   useEffect(() => {
     handleFetchProducts();
-  }, [handleFetchProducts]);
+    return () => reset();
+  }, [handleFetchProducts, reset]);
 
   useEffect(() => {
     setData(products);
