@@ -23,6 +23,7 @@ const SearchClient = () => {
   const isLoading = useSearchStore((store) => store.isLoading);
   const isError = useSearchStore((store) => store.isError);
   const message = useSearchStore((store) => store.message);
+
   const searchProductPending = useSearchStore(
     (store) => store.searchProductPending
   );
