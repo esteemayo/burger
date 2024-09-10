@@ -56,7 +56,7 @@ const EmptyState = ({
         )}
         <Heading title={title} subtitle={subtitle} center={center} />
         {showReset && (
-          <button type='button' className='btnError' onClick={handleClick}>
+          <button type='button' className='btnReset' onClick={handleClick}>
             {label}
           </button>
         )}
