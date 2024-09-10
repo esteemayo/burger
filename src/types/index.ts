@@ -86,6 +86,12 @@ export interface SearchStore {
   message: string;
 }
 
+export interface SearchActionType {
+  searchProductPending(): void;
+  searchProductFulfilled(products: ProductType[]): void;
+  searchProductFailure(payload: string): void;
+}
+
 export interface AvatarProps {
   imgSrc: string;
   desc?: string;
