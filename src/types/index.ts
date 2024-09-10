@@ -78,6 +78,14 @@ export interface CartActionType {
   calcTotals(): void;
 }
 
+export interface SearchStore {
+  products: ProductType[];
+  isError: boolean;
+  isLoading: boolean;
+  isSuccess: boolean;
+  message: string;
+}
+
 export interface AvatarProps {
   imgSrc: string;
   desc?: string;
