@@ -43,8 +43,9 @@ const EmptyState = ({
     return showReset ? 'btnReset show' : 'btnReset hide';
   }, [showReset]);
 
-  const btnReloadClasses = useMemo(() => {}, [showReload]);
-  return showReload ? 'btnReload show' : 'btnReload hide';
+  const btnReloadClasses = useMemo(() => {
+    return showReload ? 'btnReload show' : 'btnReload hide';
+  }, [showReload]);
 
   return (
     <div className='emptyState'>
