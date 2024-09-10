@@ -24,15 +24,7 @@ const SearchClient = () => {
   const message = useSearchStore((store) => store.message);
   const isLoading = useSearchStore((store) => store.isLoading);
 
-  const searchProductPending = useSearchStore(
-    (store) => store.searchProductPending
-  );
-  const searchProductFulfilled = useSearchStore(
-    (store) => store.searchProductFulfilled
-  );
-  const searchProductFailure = useSearchStore(
-    (store) => store.searchProductFailure
-  );
+  const { searchProductFailure, searchProductFulfilled, searchProductPending } = useSearchStore();
 
   const page = params.get('page') ?? 1;
   const searchQuery = params.get('q') ?? null;
