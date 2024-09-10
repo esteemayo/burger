@@ -13,7 +13,6 @@ export const useSearch = () => {
 
   const inputRef = useRef<HTMLInputElement>(null);
 
-  const [isLoading, setIsLoading] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
 
   const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
@@ -32,20 +31,14 @@ export const useSearch = () => {
       e.preventDefault();
 
       if (searchQuery) {
-        setIsLoading(true);
+        const encodedSearchQuery = encodeURI(searchQuery);
 
-        setTimeout(() => {
-          const encodedSearchQuery = encodeURI(searchQuery);
+        router.push(`/search?q=${encodedSearchQuery}`);
+        setSearchQuery('');
 
-          router.push(`/search?q=${encodedSearchQuery}`);
-          setSearchQuery('');
-
-          if (isOpen) {
-            onClose();
-          }
-
-          setIsLoading(false);
-        }, 3000);
+        if (isOpen) {
+          onClose();
+        }
       }
     },
     [isOpen, onClose, router, searchQuery]
@@ -54,7 +47,6 @@ export const useSearch = () => {
   return {
     searchQuery,
     inputRef,
-    isLoading,
     handleChange,
     handleClear,
     handleSubmit,
