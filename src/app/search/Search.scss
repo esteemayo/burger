@@ -73,14 +73,6 @@
         margin-left: 0;
       }
 
-      @media only screen and (max-width: 36.875em) {
-        margin-left: 19.4rem;
-      }
-
-      @media only screen and (max-width: 34.375em) {
-        margin-left: 34.4rem;
-      }
-
       @include sm {
         flex-wrap: wrap;
       }
