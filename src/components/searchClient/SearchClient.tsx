@@ -24,7 +24,8 @@ const SearchClient = () => {
   const message = useSearchStore((store) => store.message);
   const isLoading = useSearchStore((store) => store.isLoading);
 
-  const { searchProductFailure, searchProductFulfilled, searchProductPending } = useSearchStore();
+  const { searchProductFailure, searchProductFulfilled, searchProductPending } =
+    useSearchStore();
 
   const page = params.get('page') ?? 1;
   const searchQuery = params.get('q') ?? null;
@@ -93,7 +94,7 @@ const SearchClient = () => {
         <Heading query={decodedSearchQuery} />
         <ProductLists
           data={data}
-          loading={isLoading}
+          loading={true}
           onLike={setData}
           onRefetch={handleFetchProducts}
         />
