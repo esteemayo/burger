@@ -8,6 +8,10 @@
   box-shadow: $box-shadow;
   overflow: hidden;
 
+  @media only screen and (max-width: 34.375em) {
+    width: 40rem;
+  }
+
   @media only screen and (max-width: 21.5em) {
     width: 33rem;
   }
@@ -26,6 +30,11 @@
     background-color: #f7f7f7;
     position: relative;
     transition: all 0.3s;
+
+    @media only screen and (max-width: 34.375em) {
+      width: 40rem;
+      height: 30rem;
+    }
 
     @media only screen and (max-width: 21.5em) {
       width: 33rem;
@@ -128,6 +137,10 @@
     text-align: center;
     padding: 2.3rem 0 1.4rem;
     background-color: $clr-tertiary;
+
+    @media only screen and (max-width: 34.375em) {
+      min-height: 14rem;
+    }
 
     @media only screen and (min-width: 112.5em) {
       padding: 2.5rem 0 1.66667rem;
