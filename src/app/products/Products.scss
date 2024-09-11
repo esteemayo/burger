@@ -21,6 +21,10 @@
       width: 108rem;
     }
 
+    @include md {
+      width: 70rem;
+    }
+
     @include sm {
       padding: 6rem 0;
     }
@@ -50,7 +54,7 @@
       }
 
       @include md {
-        margin-left: 18.7rem;
+        margin-left: 0;
       }
 
       @media only screen and (max-width: 36.875em) {
