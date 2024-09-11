@@ -4,43 +4,6 @@
 .pagination {
   display: flex;
   justify-content: center;
-  margin-right: 6rem;
-
-  @media only screen and (max-width: 81.25em) {
-    margin-right: 4rem;
-  }
-
-  @include xl {
-    margin-right: 6rem;
-  }
-
-  @media only screen and (max-width: 50em) {
-    margin-right: 7rem;
-  }
-
-  @include md {
-    margin-right: 19rem;
-  }
-
-  @media only screen and (max-width: 36.875em) {
-    margin-right: 19.5rem;
-  }
-
-  @media only screen and (max-width: 34.375em) {
-    margin-right: 37rem;
-  }
-
-  @media only screen and (max-width: 21.5em) {
-    margin-right: 35.5rem;
-  }
-
-  @media only screen and (max-width: 18.75em) {
-    margin-right: 37rem;
-  }
-
-  @media only screen and (min-width: 112.5em) {
-    margin-right: -5rem;
-  }
 
   .wrapper {
     width: 115rem;
@@ -50,6 +13,11 @@
     align-items: center;
     justify-content: flex-end;
     gap: 1rem;
+
+    @media only screen and (min-width: 112.5em) {
+      width: 144rem;
+      padding: 7rem 0;
+    }
 
     a,
     a:link,
