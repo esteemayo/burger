@@ -41,6 +41,10 @@
         margin-left: 3rem;
       }
 
+      @media only screen and (max-width: 48.75em) {
+        margin-left: 2rem;
+      }
+
       @include md {
         margin-left: 18.7rem;
       }
