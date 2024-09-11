@@ -28,6 +28,11 @@
     right: 2.5rem;
   }
 
+  @media only screen and (min-width: 112.5em) {
+    width: 5rem;
+    height: 5rem;
+  }
+
   &.show {
     bottom: 7.5rem;
     display: block;
