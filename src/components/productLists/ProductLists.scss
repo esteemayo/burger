@@ -5,7 +5,6 @@
   grid-template-columns: repeat(3, min-content);
   justify-content: space-between;
   gap: 9rem;
-  // padding: 0 3rem;
 
   @include xl {
     padding: 0 6rem;
