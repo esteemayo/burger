@@ -17,7 +17,7 @@
   }
 
   @media only screen and (min-width: 112.5em) {
-    width: 35rem;
+    width: 40rem;
   }
 
   .imgWrapper {
@@ -37,7 +37,8 @@
     }
 
     @media only screen and (min-width: 112.5em) {
-      width: 35rem;
+      width: 40rem;
+      height: 37rem;
     }
 
     .productLikeBtn {
@@ -134,6 +135,7 @@
     }
 
     @media only screen and (min-width: 112.5em) {
+      min-height: 17rem;
       padding: 2.5rem 0 1.66667rem;
     }
 
