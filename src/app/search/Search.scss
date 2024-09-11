@@ -51,27 +51,26 @@
       color: $clr-black;
       line-height: 1.2;
       margin-bottom: 3rem;
-      margin-left: 6rem;
       position: relative;
 
       display: flex;
       align-items: baseline;
       gap: 1rem;
 
-      @media only screen and (max-width: 81.25em) {
-        margin-left: 7.5rem;
-      }
-
-      @include xl {
-        margin-left: 6rem;
-      }
-
       @media only screen and (max-width: 50em) {
-        margin-left: 7rem;
+        margin-left: 3rem;
+      }
+
+      @media only screen and (max-width: 48.75em) {
+        margin-left: 2rem;
+      }
+
+      @media only screen and (max-width: 48.125em) {
+        margin-left: 1rem;
       }
 
       @include md {
-        margin-left: 18.7rem;
+        margin-left: 0;
       }
 
       @media only screen and (max-width: 36.875em) {
