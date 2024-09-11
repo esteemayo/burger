@@ -98,13 +98,15 @@ const SearchClient = () => {
           onLike={setData}
           onRefetch={handleFetchProducts}
         />
-        <Pagination
-          query={decodedSearchQuery}
-          currentPage={currentPage}
-          itemsPerPage={itemsPerPage}
-          totalItems={totalItems}
-          onPageChange={setCurrentPage}
-        />
+        {!isLoading && (
+          <Pagination
+            query={decodedSearchQuery}
+            currentPage={currentPage}
+            itemsPerPage={itemsPerPage}
+            totalItems={totalItems}
+            onPageChange={setCurrentPage}
+          />
+        )}
       </div>
     </div>
   );
