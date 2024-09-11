@@ -3,9 +3,9 @@
 .productLists {
   display: grid;
   grid-template-columns: repeat(3, min-content);
-  justify-content: center;
+  justify-content: space-between;
   gap: 9rem;
-  padding: 0 3rem;
+  // padding: 0 3rem;
 
   @media only screen and (max-width: 81.25em) {
     padding-left: 6rem;
