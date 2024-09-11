@@ -6,10 +6,6 @@
   justify-content: space-between;
   gap: 9rem;
 
-  @include xl {
-    padding: 0 6rem;
-  }
-
   @include lg {
     gap: 6rem;
   }

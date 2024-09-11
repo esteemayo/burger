@@ -29,10 +29,6 @@
       align-items: baseline;
       gap: 3rem;
 
-      @include xl {
-        margin-left: 6rem;
-      }
-
       @include lg {
         margin-left: 6rem;
       }
@@ -106,10 +102,6 @@
         top: 50%;
         right: 0;
         transform: translateY(-50%);
-
-        @include xl {
-          right: 6rem;
-        }
 
         @include lg {
           display: none;
