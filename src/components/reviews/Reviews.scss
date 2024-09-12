@@ -119,6 +119,10 @@
       border-top-left-radius: 0;
       transition: all 0.5s ease-in;
 
+      @include lg {
+        padding: 5.5rem 2.2rem 3rem;
+      }
+
       @include sm {
         padding: 5rem 2rem;
       }
