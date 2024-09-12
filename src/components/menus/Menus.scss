@@ -14,6 +14,10 @@
   .container {
     width: 144rem;
 
+    @include lg {
+      width: 100rem;
+    }
+
     @include md {
       width: 90rem;
     }
