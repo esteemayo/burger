@@ -94,7 +94,7 @@ const SearchClient = () => {
         <Heading query={decodedSearchQuery} />
         <ProductLists
           data={data}
-          loading={true}
+          loading={isLoading}
           onLike={setData}
           onRefetch={handleFetchProducts}
         />
