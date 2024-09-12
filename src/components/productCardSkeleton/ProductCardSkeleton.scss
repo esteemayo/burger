@@ -8,11 +8,6 @@
       width: 30rem !important;
       height: 27rem !important;
 
-      @include md {
-        width: 33rem !important;
-        height: 30rem !important;
-      }
-
       @media only screen and (max-width: 46.25em) {
         width: 31rem !important;
         height: 28rem !important;
