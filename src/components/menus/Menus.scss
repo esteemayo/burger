@@ -171,6 +171,11 @@
         margin-top: 5rem;
         gap: 5rem;
       }
+
+      @media only screen and (min-width: 112.5em) {
+        justify-content: space-between;
+        gap: 10rem;
+      }
     }
   }
 }
