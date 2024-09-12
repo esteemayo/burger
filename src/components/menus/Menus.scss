@@ -4,7 +4,7 @@
 .menusContainer {
   display: flex;
   justify-content: center;
-  padding: 12rem;
+  padding: 12rem 0;
 
   @include sm {
     padding-top: 6rem;
@@ -13,6 +13,10 @@
 
   .container {
     width: 144rem;
+
+    @include md {
+      width: 90rem;
+    }
 
     .headings {
       text-align: center;
