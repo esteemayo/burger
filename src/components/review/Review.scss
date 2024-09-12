@@ -157,6 +157,10 @@
               font-size: 1.55556rem;
             }
 
+            @include lg {
+              text-align: left;
+            }
+
             @media only screen and (max-width: 56.25em) {
               font-size: 1.75rem;
               line-height: 1.5;
