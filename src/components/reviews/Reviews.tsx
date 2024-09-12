@@ -59,7 +59,7 @@ const Reviews = ({
     return reviews?.length > 0
       ? 'Add a review'
       : 'Be the first to review “Double Grilled Chicken Burger”';
-  }, []);
+  }, [reviews.length]);
 
   return (
     <div className={reviewsContainer}>
