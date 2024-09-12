@@ -17,6 +17,11 @@
         width: 30rem !important;
       }
 
+      @media only screen and (max-width: 34.375em) {
+        width: 40rem !important;
+        height: 30rem !important;
+      }
+
       @include sm {
         width: 30rem !important;
         height: 27rem !important;
