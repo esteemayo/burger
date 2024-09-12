@@ -14,23 +14,24 @@ const HomeClient = () => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const element = containerRef?.current as Element;
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          const element = containerRef?.current as Element;
           observer.unobserve(element);
           containerRef?.current?.onload;
         }
       });
     });
 
-    if (containerRef?.current) {
-      observer.observe(containerRef.current);
+    if (element) {
+      observer.observe(element);
     }
 
     return () => {
-      if (containerRef?.current) {
-        observer.unobserve(containerRef.current);
+      if (element) {
+        observer.unobserve(element);
       }
     };
   }, [containerRef]);
