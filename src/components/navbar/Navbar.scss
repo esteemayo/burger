@@ -63,6 +63,10 @@
         gap: 1rem;
       }
 
+      @media only screen and (min-width: 112.5em) {
+        gap: 3rem;
+      }
+
       .navLink,
       .navLink:link,
       .navLink:active {
