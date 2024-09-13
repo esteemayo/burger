@@ -24,7 +24,7 @@ const Cart = () => {
   }, [products.length]);
 
   const emptyHeaderClasses = useMemo(() => {
-    return !session || products.length < 1 
+    return !session || products.length < 1
       ? 'cardHeading emptyCardHeading'
       : 'cardHeading';
   }, [products.length, session]);
