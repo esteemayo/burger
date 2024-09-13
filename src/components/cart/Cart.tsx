@@ -20,11 +20,13 @@ const Cart = () => {
   const removeFromCart = useCartStore((store) => store.removeFromCart);
 
   const cartClasses = useMemo(() => {
-    return products.length < 1 ? 'productCart emptyProductCart' : 'productCart';
-  }, [products.length]);
+    return !session && products.length < 1
+      ? 'productCart emptyProductCart'
+      : 'productCart';
+  }, [products.length, session]);
 
   const emptyHeaderClasses = useMemo(() => {
-    return !session || products.length < 1
+    return !session && products.length < 1
       ? 'cardHeading emptyCardHeading'
       : 'cardHeading';
   }, [products.length, session]);
