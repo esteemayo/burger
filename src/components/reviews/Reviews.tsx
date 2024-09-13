@@ -32,7 +32,9 @@ const Reviews = ({
   const [isOpen, setIsOpen] = useState(true);
 
   const toggleOpen = useCallback((_e: React.MouseEvent<HTMLSpanElement>) => {
-    setIsOpen((value) => !value);
+    setIsOpen((value) => {
+      return !value;
+    });
   }, []);
 
   const reviewsContainer = useMemo(() => {
