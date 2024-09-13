@@ -123,12 +123,12 @@
         padding: 5.5rem 2.2rem 3rem;
       }
 
-      @include sm {
-        padding: 5rem 2rem;
+      @media only screen and (max-width: 31.25em) {
+        padding: 3rem 2rem;
       }
 
       @media only screen and (max-width: 26.8125em) {
-        padding: 5rem 1rem;
+        padding: 3rem 1rem;
       }
 
       @media only screen and (min-width: 112.5em) {
