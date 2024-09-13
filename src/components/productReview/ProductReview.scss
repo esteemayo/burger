@@ -90,15 +90,15 @@
     }
 
     &.emptyContainer {
-      @media only screen and (max-width: 51.25em) {
-        flex-direction: column;
-        gap: 7rem;
-        padding: 1.2rem;
-      }
+      // @media only screen and (max-width: 53.125em) {
+      //   flex-direction: column;
+      //   gap: 7rem;
+      //   padding: 0;
+      // }
 
-      @media only screen and (max-width: 21.5em) {
-        padding: 1.2rem 3rem;
-      }
+      // @media only screen and (max-width: 21.5em) {
+      //   padding: 1.2rem 3rem;
+      // }
     }
   }
 }
