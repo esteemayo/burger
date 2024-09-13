@@ -24,8 +24,10 @@ const Cart = () => {
   }, [products.length]);
 
   const emptyHeaderClasses = useMemo(() => {
-    return products.length < 1 ? 'cardHeading emptyCardHeading' : 'cardHeading';
-  }, [products.length]);
+    return !session || products.length < 1 
+      ? 'cardHeading emptyCardHeading'
+      : 'cardHeading';
+  }, [products.length, session]);
 
   const footerClasses = useMemo(() => {
     return !!session && products.length > 0
