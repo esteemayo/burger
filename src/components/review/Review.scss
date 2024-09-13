@@ -166,6 +166,10 @@
               line-height: 1.5;
             }
 
+            @media only screen and (max-width: 53.125em) {
+              text-align: justify;
+            }
+
             @media only screen and (max-width: 26.8125em) {
               font-size: 1.625rem;
             }
