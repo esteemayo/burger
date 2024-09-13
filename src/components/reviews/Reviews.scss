@@ -186,8 +186,12 @@
         .reviewFormWrap {
           .reviewForm {
             .respond {
-              margin: 50px 0 0;
+              margin: 5rem 0 0;
               position: relative;
+
+              @include md {
+                margin: 3rem 0 0;
+              }
 
               &.hide {
                 min-height: 33.292rem;
