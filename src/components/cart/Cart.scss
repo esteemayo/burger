@@ -64,7 +64,7 @@
               width: 55%;
             }
 
-            @include md {
+            @media only screen and (max-width: 53.125em) {
               width: 70%;
             }
 
