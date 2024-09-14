@@ -20,19 +20,19 @@ const Cart = () => {
   const removeFromCart = useCartStore((store) => store.removeFromCart);
 
   const cartClasses = useMemo(() => {
-    return !session && products.length < 1
+    return !session || products.length < 1
       ? 'productCart emptyProductCart'
       : 'productCart';
   }, [products.length, session]);
 
   const emptyHeaderClasses = useMemo(() => {
-    return !session && products.length < 1
+    return !session || products.length < 1
       ? 'cardHeading emptyCardHeading'
       : 'cardHeading';
   }, [products.length, session]);
 
   const footerClasses = useMemo(() => {
-    return !!session && products.length > 0
+    return !!session || products.length > 0
       ? 'cardFooter show'
       : 'cardFooter hide';
   }, [products.length, session]);
