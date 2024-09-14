@@ -15,10 +15,10 @@
   }
 
   &.emptyProductCart {
-    min-width: 548.25px;
+    min-width: 500px;
 
     @include lg {
-      min-width: 350.25px;
+      min-width: 350px;
     }
 
     @media only screen and (max-width: 53.125em) {
