@@ -149,7 +149,7 @@
           }
 
           .reviewerText {
-            text-align: justify;
+            text-align: left;
             font-size: 1.4rem;
             color: $clr-gray-dark;
 
@@ -157,21 +157,9 @@
               font-size: 1.55556rem;
             }
 
-            @include lg {
-              text-align: left;
-            }
-
             @media only screen and (max-width: 56.25em) {
               font-size: 1.75rem;
               line-height: 1.5;
-            }
-
-            @media only screen and (max-width: 53.125em) {
-              text-align: justify;
-            }
-
-            @media only screen and (max-width: 37.5em) {
-              text-align: left;
             }
 
             @media only screen and (max-width: 26.8125em) {
