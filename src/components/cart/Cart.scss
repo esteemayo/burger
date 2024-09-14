@@ -13,14 +13,14 @@
 
   @media only screen and (max-width: 53.125em) {
     padding: 0;
-    min-width: none;
+    min-width: 100%;
   }
 
   &.emptyProductCart {
     min-width: 548.25px;
 
     @media only screen and (max-width: 53.125em) {
-      min-width: none;
+      min-width: 100%;
     }
   }
 
