@@ -32,7 +32,7 @@ const Cart = () => {
   }, [products.length, session]);
 
   const footerClasses = useMemo(() => {
-    return !!session || products.length > 0
+    return !!session && products.length > 0
       ? 'cardFooter show'
       : 'cardFooter hide';
   }, [products.length, session]);
