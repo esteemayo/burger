@@ -1,22 +1,16 @@
 'use client';
 
-import { useMemo } from 'react';
 import { useQuery } from '@tanstack/react-query';
 
 import Cart from '../cart/Cart';
 import Reviews from '../reviews/Reviews';
 
-import { useCartStore } from '@/hooks/useCartStore';
 import { ProductReviewProps } from '@/types';
 import { getReviewsOnProduct } from '@/services/productService';
 
 import './ProductReview.scss';
 
-const ProductReview = ({
-  actionId,
-  currentUser,
-  productReviews,
-}: ProductReviewProps) => {
+const ProductReview = ({ actionId, productReviews }: ProductReviewProps) => {
   const { isLoading, data: reviews } = useQuery({
     queryKey: ['reviews'],
     queryFn: async () => {
@@ -26,17 +20,9 @@ const ProductReview = ({
     enabled: !!actionId,
   });
 
-  const products = useCartStore((store) => store.products);
-
-  const productClasses = useMemo(() => {
-    return !currentUser || products.length < 1
-      ? 'container emptyContainer'
-      : 'container';
-  }, [currentUser, products.length]);
-
   return (
     <section className='productReview'>
-      <div className={productClasses}>
+      <div className='container'>
         <Reviews
           actionId={actionId}
           loading={isLoading}
