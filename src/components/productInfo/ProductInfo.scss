@@ -94,6 +94,10 @@
         font-size: 3.25rem;
       }
 
+      @media only screen and (max-width: 31.25em) {
+        font-size: 2.97rem;
+      }
+
       @include sm {
         line-height: 1.2;
         margin-bottom: 2rem;
