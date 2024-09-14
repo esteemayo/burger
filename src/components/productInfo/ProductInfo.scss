@@ -50,6 +50,10 @@
       width: 36rem;
     }
 
+    @media only screen and (min-width: 112.5em) {
+      width: 130rem;
+    }
+
     h3 {
       display: inline-block;
       text-transform: capitalize;
