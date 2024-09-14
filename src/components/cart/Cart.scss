@@ -60,6 +60,10 @@
 
         &.emptyCardHeading {
           &::after {
+            @media only screen and (max-width: 62.5em) {
+              width: 55%;
+            }
+
             @include md {
               width: 70%;
             }
