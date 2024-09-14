@@ -15,17 +15,7 @@
   }
 
   &.emptyProductCart {
-    @media only screen and (max-width: 26.8125em) {
-      padding: 0 1.5rem;
-    }
-
-    @media only screen and (max-width: 22.5em) {
-      padding: 0 1rem;
-    }
-
-    @media only screen and (max-width: 17.5em) {
-      width: 100%;
-    }
+    min-width: 50rem;
   }
 
   .detailBox {
@@ -91,7 +81,7 @@
           transform: translateY(-50%);
 
           @include md {
-            width: 80%;
+            width: 70%;
           }
 
           @include sm {
