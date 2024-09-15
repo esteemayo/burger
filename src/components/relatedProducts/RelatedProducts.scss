@@ -46,6 +46,22 @@
       width: 45rem;
     }
 
+    @media only screen and (max-width: 23.4375em) {
+      width: 42rem;
+    }
+
+    @media only screen and (max-width: 21.5em) {
+      width: 40rem;
+    }
+
+    @media only screen and (max-width: 20.625em) {
+      width: 35rem;
+    }
+
+    @media only screen and (max-width: 17.5em) {
+      width: 32rem;
+    }
+
     @media only screen and (min-width: 112.5em) {
       width: 130rem;
       gap: 4rem;
@@ -128,8 +144,12 @@
           width: 44.5%;
         }
 
-        @media only screen and (max-width: 22.4375em) {
-          width: 42%;
+        @media only screen and (max-width: 23.4375em) {
+          width: 40.5%;
+        }
+
+        @media only screen and (max-width: 21.5em) {
+          width: 37.5%;
         }
 
         @media only screen and (max-width: 20.9375em) {
@@ -149,6 +169,10 @@
 
       @include lg {
         justify-content: space-between;
+      }
+
+      @media only screen and (max-width: 20.9375em) {
+        gap: 5rem;
       }
     }
   }
