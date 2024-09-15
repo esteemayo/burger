@@ -13,6 +13,10 @@
     width: 24.5rem;
   }
 
+  @media only screen and (max-width: 59.375em) {
+    width: 22.5rem;
+  }
+
   @include md {
     width: 19rem;
   }
@@ -94,6 +98,10 @@
 
       @include lg {
         width: 24.5rem;
+      }
+
+      @media only screen and (max-width: 59.375em) {
+        width: 22.5rem;
       }
 
       @include md {
