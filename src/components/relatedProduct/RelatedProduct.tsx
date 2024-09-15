@@ -18,7 +18,7 @@ import './RelatedProduct.scss';
 const RelatedProduct = ({
   product,
   currentUser,
-  onUpdate,
+  onLike,
   onRefetch,
 }: RelatedProductProps) => {
   const { isLoading, handleClick } = useCart(product);
@@ -37,7 +37,7 @@ const RelatedProduct = ({
               actionId={product.id}
               likes={product.likes}
               currentUser={currentUser}
-              onUpdate={onUpdate}
+              onLike={onLike}
               onRefetch={onRefetch}
             />
           </div>
