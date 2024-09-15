@@ -38,6 +38,10 @@
       width: 55rem;
     }
 
+    @media only screen and (max-width: 34.375em) {
+      width: 50rem;
+    }
+
     @media only screen and (min-width: 112.5em) {
       width: 130rem;
       gap: 4rem;
@@ -149,30 +153,6 @@
 
       @include lg {
         justify-content: space-between;
-      }
-
-      @media only screen and (max-width: 34.6875em) {
-        gap: 3.5rem;
-      }
-
-      @media only screen and (max-width: 32.9375em) {
-        gap: 1.4rem;
-      }
-
-      @include sm {
-        gap: 3.5rem;
-      }
-
-      @media only screen and (max-width: 25.875em) {
-        gap: 3rem;
-      }
-
-      @media only screen and (max-width: 22.4375em) {
-        gap: 2rem;
-      }
-
-      @media only screen and (max-width: 20.9375em) {
-        gap: 4rem;
       }
     }
   }
