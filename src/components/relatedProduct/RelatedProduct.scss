@@ -33,6 +33,10 @@
     width: 16rem;
   }
 
+  @media only screen and (max-width: 34.375em) {
+    width: 23rem;
+  }
+
   @include sm {
     width: 25rem;
   }
@@ -111,6 +115,10 @@
       @media only screen and (max-width: 37.5em) {
         width: 16rem;
         height: 13rem;
+      }
+
+      @media only screen and (max-width: 34.375em) {
+        width: 23rem;
       }
 
       @include sm {
