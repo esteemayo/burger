@@ -141,6 +141,13 @@
         top: 1rem;
         right: 1rem;
         z-index: 2000;
+
+        & > span {
+          @include sm {
+            width: 4rem;
+            height: 4rem;
+          }
+        }
       }
 
       .relatedOverlay {
