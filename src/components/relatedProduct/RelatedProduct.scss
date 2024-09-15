@@ -41,10 +41,6 @@
     width: 21rem;
   }
 
-  @include sm {
-    width: 25rem;
-  }
-
   @media only screen and (max-width: 29.4375em) {
     width: 24.5rem;
   }
@@ -127,11 +123,6 @@
 
       @media only screen and (max-width: 31.25em) {
         width: 21rem;
-      }
-
-      @include sm {
-        width: 25rem;
-        height: 17rem;
       }
 
       @media only screen and (max-width: 29.4375em) {
@@ -415,6 +406,10 @@
 
           @media only screen and (max-width: 34.375em) {
             font-size: 1.5rem;
+          }
+
+          @include sm {
+            font-size: 1.4rem;
           }
 
           @media only screen and (max-width: 25em) {
