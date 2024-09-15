@@ -47,7 +47,7 @@ const useFavorite: IFavorite = (
         toast.error('Something went wrong');
       }
     },
-    [actionId, currentUser, router]
+    [actionId, currentUser, onLike, onRefetch, onUpdate, router]
   );
 
   return {
