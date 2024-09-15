@@ -223,6 +223,13 @@
             left: 19.5%;
           }
 
+          @media only screen and (max-width: 20.625em) {
+            width: 18rem;
+            padding: 1rem;
+            left: 24%;
+            top: 20rem;
+          }
+
           @media only screen and (max-width: 18.75em) {
             width: 22rem;
             left: 15%;
