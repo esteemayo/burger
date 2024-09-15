@@ -11,11 +11,18 @@ import { getRelatedProducts } from '@/services/productService';
 
 import './RelatedProducts.scss';
 
-const RelatedProduct = dynamic(() => import ('../relatedProduct/RelatedProduct'), {
-  ssr: false,
-});
+const RelatedProduct = dynamic(
+  () => import('../relatedProduct/RelatedProduct'),
+  {
+    ssr: false,
+  }
+);
 
-const RelatedProducts = ({ productId, ingredients, currentUser}: RelatedProductsProps) => {
+const RelatedProducts = ({
+  productId,
+  ingredients,
+  currentUser,
+}: RelatedProductsProps) => {
   const { isLoading, data, refetch } = useQuery({
     queryKey: ['featuredProducts'],
     queryFn: async () => {
@@ -36,7 +43,7 @@ const RelatedProducts = ({ productId, ingredients, currentUser}: RelatedProducts
       <div className='container'>
         <h2 className='relatedHeader'>Related products</h2>
         <div className='relatedWrap'>
-          {isLoading
+          {true
             ? Array.from(new Array(4)).map((_, index) => {
                 return <RelatedCardSkeleton key={index} />;
               })
