@@ -30,6 +30,7 @@
 
       @media only screen and (max-width: 37.5em) {
         width: 16rem !important;
+        height: 13rem !important;
       }
 
       @media only screen and (max-width: 34.375em) {
@@ -40,69 +41,17 @@
         width: 21rem !important;
       }
 
-      @include sm {
-        width: 25rem !important;
-        height: 17rem !important;
-      }
-
-      @media only screen and (max-width: 29.4375em) {
-        width: 24.5rem !important;
-      }
-
-      @media only screen and (max-width: 28.4375em) {
-        width: 23.5rem !important;
-      }
-
-      @media only screen and (max-width: 27.4375em) {
-        width: 22.5rem !important;
-        height: 14rem !important;
-      }
-
-      @media only screen and (max-width: 26.875em) {
-        width: 22rem !important;
-      }
-
-      @media only screen and (max-width: 26.25em) {
-        width: 21rem !important;
-      }
-
-      @media only screen and (max-width: 25em) {
+      @media only screen and (max-width: 23.4375em) {
         width: 19.5rem !important;
       }
 
-      @media only screen and (max-width: 23.4375em) {
-        width: 18.9rem !important;
-      }
-
-      @media only screen and (max-width: 22.5em) {
-        width: 18rem !important;
-      }
-
       @media only screen and (max-width: 21.5em) {
-        width: 17.5rem !important;
-      }
-
-      @media only screen and (max-width: 22.4375em) {
-        width: 18.3rem !important;
-        height: 10rem !important;
-      }
-
-      @media only screen and (max-width: 22.25em) {
-        width: 17.5rem !important;
-      }
-
-      @media only screen and (max-width: 21.4375em) {
-        width: 17rem !important;
+        width: 18.5rem !important;
       }
 
       @media only screen and (max-width: 20.9375em) {
-        width: 35.5rem !important;
-        height: 20rem !important;
-      }
-
-      @media only screen and (max-width: 18.75em) {
-        width: 31.5rem !important;
-        height: 17rem !important;
+        width: 35rem !important;
+        height: 30rem !important;
       }
 
       @media only screen and (min-width: 112.5em) {
