@@ -30,10 +30,6 @@
       width: 65rem;
     }
 
-    @media only screen and (max-width: 44.9375em) {
-      padding: 10rem 3rem;
-    }
-
     @media only screen and (min-width: 112.5em) {
       width: 130rem;
       gap: 4rem;
@@ -100,10 +96,6 @@
           width: 61.5%;
         }
 
-        @media only screen and (max-width: 44.9375em) {
-          width: 57.5%;
-        }
-
         @media only screen and (max-width: 41.25em) {
           width: 69.5%;
         }
@@ -149,10 +141,6 @@
 
       @include lg {
         justify-content: space-between;
-      }
-
-      @media only screen and (max-width: 46.9375em) {
-        gap: 4rem;
       }
 
       @media only screen and (max-width: 37.5em) {

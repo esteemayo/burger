@@ -25,10 +25,6 @@
     width: 19rem;
   }
 
-  @media only screen and (max-width: 44.9375em) {
-    width: 17rem;
-  }
-
   @media only screen and (max-width: 37.5em) {
     width: 16rem;
   }
@@ -116,13 +112,9 @@
         width: 19rem;
       }
 
-      @media only screen and (max-width: 44.9375em) {
-        width: 17rem;
-        height: 13rem;
-      }
-
       @media only screen and (max-width: 37.5em) {
         width: 16rem;
+        height: 13rem;
       }
 
       @media only screen and (max-width: 37.1875em) {
