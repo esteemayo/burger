@@ -17,6 +17,10 @@
     width: 22.5rem;
   }
 
+  @media only screen and (max-width: 53.125em) {
+    width: 21rem;
+  }
+
   @include md {
     width: 19rem;
   }
@@ -102,6 +106,10 @@
 
       @media only screen and (max-width: 59.375em) {
         width: 22.5rem;
+      }
+
+      @media only screen and (max-width: 53.125em) {
+        width: 21rem;
       }
 
       @include md {
@@ -367,7 +375,7 @@
       padding: 2.3rem 0 1.4rem;
       background-color: #fbfbfc;
 
-      @media only screen and (max-width: 34.6875em) {
+      @media only screen and (max-width: 53.125em) {
         min-height: 10rem;
       }
 
