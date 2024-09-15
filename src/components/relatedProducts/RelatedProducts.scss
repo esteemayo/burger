@@ -30,6 +30,10 @@
       width: 65rem;
     }
 
+    @media only screen and (max-width: 39.375em) {
+      width: 60rem;
+    }
+
     @media only screen and (min-width: 112.5em) {
       width: 130rem;
       gap: 4rem;
@@ -94,10 +98,6 @@
 
         @include md {
           width: 61.5%;
-        }
-
-        @media only screen and (max-width: 41.25em) {
-          width: 69.5%;
         }
 
         @media only screen and (max-width: 37.5em) {
