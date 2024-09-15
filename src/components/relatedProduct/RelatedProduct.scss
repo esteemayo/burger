@@ -118,11 +118,11 @@
 
       @media only screen and (max-width: 44.9375em) {
         width: 17rem;
+        height: 13rem;
       }
 
       @media only screen and (max-width: 37.5em) {
         width: 16rem;
-        height: 13rem;
       }
 
       @media only screen and (max-width: 37.1875em) {
@@ -376,7 +376,7 @@
       background-color: #fbfbfc;
 
       @media only screen and (max-width: 53.125em) {
-        min-height: 10rem;
+        min-height: 10.7rem;
       }
 
       @include sm {
