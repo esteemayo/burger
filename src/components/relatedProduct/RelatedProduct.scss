@@ -9,6 +9,10 @@
   border-radius: 3px;
   overflow: hidden;
 
+  @include lg {
+    width: 24.5rem;
+  }
+
   @include md {
     width: 19rem;
   }
@@ -87,6 +91,10 @@
       position: relative;
       overflow: hidden;
       transform-origin: top;
+
+      @include lg {
+        width: 24.5rem;
+      }
 
       @include md {
         width: 19rem;
