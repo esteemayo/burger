@@ -43,7 +43,7 @@ const RelatedProducts = ({
       <div className='container'>
         <h2 className='relatedHeader'>Related products</h2>
         <div className='relatedWrap'>
-          {true
+          {isLoading
             ? Array.from(new Array(4)).map((_, index) => {
                 return <RelatedCardSkeleton key={index} />;
               })
