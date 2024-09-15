@@ -211,6 +211,10 @@
             left: 24%;
           }
 
+          @media only screen and (max-width: 31.25em) {
+            left: 22%;
+          }
+
           @include sm {
             width: 17rem;
             left: 16%;
