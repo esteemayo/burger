@@ -8,6 +8,10 @@
       width: 22rem !important;
       height: 17rem !important;
 
+      @include lg {
+        width: 24.5rem !important;
+      }
+
       @include md {
         width: 19rem !important;
       }
