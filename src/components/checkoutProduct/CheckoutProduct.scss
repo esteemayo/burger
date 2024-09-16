@@ -43,9 +43,13 @@
 
       p {
         text-transform: capitalize;
+        text-overflow: ellipsis;
+        text-rendering: optimizeLegibility;
+        white-space: nowrap;
         font-weight: 700;
         font-size: 1.3rem;
         color: currentColor;
+        overflow: hidden;
 
         @include xl {
           font-size: 1.44444rem;
