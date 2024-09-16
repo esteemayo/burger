@@ -74,19 +74,15 @@
         font-size: 3.2rem;
       }
 
-      @media only screen and (max-width: 31.25em) {
-        font-size: 3.5rem;
-      }
-
       @include sm {
         font-size: 3rem;
       }
 
-      @media only screen and (max-width: 25.875em) {
+      @media only screen and (max-width: 28.125em) {
         font-size: 2.8rem;
       }
 
-      @media only screen and (max-width: 25em) {
+      @media only screen and (max-width: 26.25em) {
         font-size: 2.5rem;
       }
 
@@ -120,7 +116,7 @@
         font-size: 1.85rem;
       }
 
-      @media only screen and (max-width: 23.4375em) {
+      @media only screen and (max-width: 26.25em) {
         font-size: 1.63rem;
       }
 
@@ -161,6 +157,10 @@
       .heroText {
         display: inline-block;
         padding: 0 2.4rem;
+
+        @media only screen and (max-width: 26.25em) {
+          padding: 0 1.5rem;
+        }
       }
     }
   }
