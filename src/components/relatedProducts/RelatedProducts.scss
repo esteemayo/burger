@@ -103,12 +103,11 @@
 
         position: absolute;
         top: 50%;
-        left: 17rem;
+        left: 20rem;
         transform: translateY(-50%);
 
         @include lg {
           width: 75%;
-          left: 20rem;
         }
 
         @media only screen and (max-width: 59.375em) {
