@@ -49,6 +49,10 @@
       font-size: 5.8rem;
       line-height: normal;
 
+      @include lg {
+        font-size: 5.5rem;
+      }
+
       @media only screen and (max-width: 50em) {
         font-size: 5rem;
       }
