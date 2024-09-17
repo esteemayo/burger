@@ -9,6 +9,10 @@
     width: 144rem;
     padding: 8rem 0;
 
+    @include xxl {
+      width: 120rem;
+    }
+
     @include md {
       padding: 10rem 3rem;
     }
