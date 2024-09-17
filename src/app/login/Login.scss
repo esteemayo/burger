@@ -140,6 +140,10 @@
               font-size: 2.75rem;
             }
 
+            @media only screen and (max-width: 23.4375em) {
+              font-size: 2.65rem;
+            }
+
             @media only screen and (max-width: 17.5em) {
               font-size: 2.5rem;
             }
@@ -210,6 +214,10 @@
 
               @media only screen and (max-width: 25em) {
                 font-size: 1.45rem;
+              }
+
+              @media only screen and (max-width: 23.4375em) {
+                font-size: 1.3rem;
               }
 
               @media only screen and (min-width: 112.5em) {
