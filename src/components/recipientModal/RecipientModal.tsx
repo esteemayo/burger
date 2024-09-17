@@ -93,7 +93,7 @@ const RecipientModal = () => {
     } finally {
       setIsLoading(false);
     }
-  }, [data, onClose, router, session, update, userId]);
+  }, [data, formattedPhone, onClose, router, session, update, userId]);
 
   useEffect(() => {
     setTimeout(() => {
