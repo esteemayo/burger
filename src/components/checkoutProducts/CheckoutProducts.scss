@@ -22,7 +22,9 @@
       height: 29rem;
     }
 
-    @include md 
+    @include md {
+      height: 25.3rem;
+    }
 
     @media only screen and (min-width: 112.5em) {
       height: 27.1rem;
