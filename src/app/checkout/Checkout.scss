@@ -20,17 +20,20 @@
     @media only screen and (max-width: 59.375em) {
       width: 95rem;
     }
-
+    
     @include md {
       padding: 10rem 3rem;
     }
-
+    
     .checkoutWrap {
       padding: 0 1.2rem;
       display: flex;
 
-      @include md {
+      @media only screen and (max-width: 59.375em) {
         padding: 0;
+      }
+
+      @include md {
         flex-direction: column;
       }
     }
