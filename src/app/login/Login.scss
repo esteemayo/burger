@@ -34,7 +34,7 @@
         width: 50rem;
       }
 
-      @include sm {
+      @media only screen and (max-width: 28.125em) {
         width: 45rem;
       }
 
@@ -130,6 +130,10 @@
 
             @include md {
               font-size: 3.5rem;
+            }
+
+            @media only screen and (max-width: 28.125em) {
+              font-size: 3rem;
             }
 
             @media only screen and (max-width: 18.75em) {
