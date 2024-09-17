@@ -45,7 +45,7 @@
             }
 
             @media only screen and (max-width: 56.25em) {
-              font-size: 3.5rem;
+              font-size: 3rem;
             }
 
             @media only screen and (min-width: 112.5em) {
@@ -88,7 +88,7 @@
               }
 
               @media only screen and (max-width: 43.75em) {
-                width: 20rem;
+                width: 25rem;
               }
 
               @media only screen and (max-width: 37.5em) {
@@ -209,6 +209,10 @@
 
           @media only screen and (max-width: 56.25em) {
             font-size: 1.625rem;
+          }
+
+          @include sm {
+            padding: 0.8rem 0;
           }
 
           @media only screen and (min-width: 112.5em) {
