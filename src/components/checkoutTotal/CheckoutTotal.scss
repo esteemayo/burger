@@ -53,8 +53,8 @@
             right: 2rem;
             transform: translateY(-33%);
 
-            @include xl {
-              width: 32rem;
+            @include xxl {
+              width: 28rem;
             }
 
             @media only screen and (max-width: 56.25em) {
