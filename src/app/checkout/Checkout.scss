@@ -20,11 +20,12 @@
     @media only screen and (max-width: 59.375em) {
       width: 95rem;
     }
-    
+
     @include md {
-      padding: 10rem 3rem;
+      width: 80rem;
+      padding: 10rem 0;
     }
-    
+
     .checkoutWrap {
       padding: 0 1.2rem;
       display: flex;
