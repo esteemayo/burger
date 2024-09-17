@@ -50,6 +50,10 @@
         width: 37rem;
       }
 
+      @media only screen and (max-width: 18.75em) {
+        width: 33rem;
+      }
+
       @media only screen and (min-width: 112.5em) {
         width: 125rem;
       }
@@ -150,6 +154,10 @@
 
             @media only screen and (max-width: 21.5em) {
               font-size: 2.45rem;
+            }
+
+            @media only screen and (max-width: 18.75em) {
+              font-size: 2.25rem;
             }
 
             @media only screen and (min-width: 112.5em) {
