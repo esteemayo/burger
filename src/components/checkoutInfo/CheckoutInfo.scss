@@ -76,11 +76,7 @@
               }
 
               @media only screen and (max-width: 64rem) {
-                width: 22rem;
-              }
-
-              @media only screen and (max-width: 56.25em) {
-                width: 14rem;
+                width: 15rem;
               }
 
               @include md {
