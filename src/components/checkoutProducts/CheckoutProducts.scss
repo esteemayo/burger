@@ -6,6 +6,10 @@
     height: 25.3rem;
     overflow-y: auto;
 
+    @media only screen and (min-width: 112.5em) {
+      height: 27.1rem;
+    }
+
     &::-webkit-scrollbar {
       width: 0.6rem;
 
