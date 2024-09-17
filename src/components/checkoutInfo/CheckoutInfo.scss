@@ -29,7 +29,7 @@
           padding-bottom: 2rem;
 
           @media only screen and (max-width: 25em) {
-            padding: 1rem;
+            padding-bottom: 1rem;
           }
 
           .checkoutInfoHeading {
@@ -54,6 +54,10 @@
 
             @media only screen and (max-width: 25em) {
               font-size: 2.8rem;
+            }
+
+            @media only screen and (max-width: 21.5em) {
+              font-size: 2.5rem;
             }
 
             @media only screen and (min-width: 112.5em) {
@@ -130,6 +134,10 @@
 
           @media only screen and (max-width: 56.25em) {
             font-size: 1.75rem;
+          }
+
+          @media only screen and (max-width: 21.5em) {
+            font-size: 1.65rem;
           }
 
           @media only screen and (min-width: 112.5em) {
