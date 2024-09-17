@@ -53,7 +53,7 @@
 
     @media only screen and (min-width: 112.5em) {
       width: 17rem;
-      font-size: 2rem;
+      font-size: 2.2rem;
     }
   }
 
@@ -91,6 +91,7 @@
 
     @media only screen and (min-width: 112.5em) {
       font-size: 2.2rem;
+      padding: 2rem;
     }
 
     &::placeholder {
