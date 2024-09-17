@@ -13,6 +13,10 @@
       width: 120rem;
     }
 
+    @include lg {
+      width: 105rem;
+    }
+
     @include md {
       padding: 10rem 3rem;
     }
