@@ -82,10 +82,6 @@
             font-size: 3rem;
           }
 
-          @media only screen and (max-width: 56.25em) {
-            font-size: 5.25rem;
-          }
-
           @include sm {
             font-size: 3.5rem;
           }
@@ -115,11 +111,6 @@
 
           @media only screen and (max-width: 59.375em) {
             font-size: 1.4rem;
-          }
-
-          @media only screen and (max-width: 56.25em) {
-            font-size: 2rem;
-            letter-spacing: 0.3px;
           }
 
           @media only screen and (max-width: 21.5em) {
@@ -183,10 +174,6 @@
             font-weight: 300;
             font-size: 1.3rem;
             color: $clr-gray-light;
-
-            @media only screen and (max-width: 56.25em) {
-              font-size: 1.625rem;
-            }
 
             @media only screen and (min-width: 112.5em) {
               font-size: 1.8rem;
