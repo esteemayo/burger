@@ -12,6 +12,10 @@
     justify-content: space-between;
     gap: 3rem;
 
+    @include xxl {
+      width: 110rem;
+    }
+
     @include xl {
       padding: 8.88889rem 3.33333rem;
     }
@@ -41,7 +45,7 @@
     .textWrap {
       flex: 1;
 
-      @include lg {
+      @include xxl {
         flex: 1.3;
       }
 
