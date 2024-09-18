@@ -7,7 +7,7 @@
 
   .container {
     width: 120rem;
-    padding: 8rem 3rem;
+    padding: 8rem 0;
     display: flex;
     justify-content: space-between;
     gap: 3rem;
@@ -33,7 +33,9 @@
     }
 
     @media only screen and (min-width: 112.5em) {
-      padding: 10rem 3rem;
+      width: 130rem;
+      padding: 10rem 0;
+      gap: 4rem;
     }
 
     .textWrap {
