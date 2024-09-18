@@ -33,6 +33,10 @@
       flex-direction: column;
     }
 
+    @media only screen and (max-width: 37.5em) {
+      width: 50rem;
+    }
+
     @include sm {
       padding: 7.5rem 3.75rem;
     }
