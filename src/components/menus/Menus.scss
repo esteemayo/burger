@@ -42,10 +42,6 @@
         line-height: 1.5;
         color: inherit;
 
-        @include xl {
-          font-size: 3.88889rem;
-        }
-
         @media only screen and (max-width: 56.25em) {
           font-size: 4.375rem;
         }
@@ -84,10 +80,6 @@
 
             position: absolute;
             top: 2.5rem;
-
-            @include xl {
-              width: 11rem;
-            }
 
             @include lg {
               width: 10rem;
@@ -137,10 +129,6 @@
           svg {
             font-size: 5rem;
             color: $clr-gray-dark;
-
-            @include xl {
-              font-size: 5.557rem;
-            }
 
             @media only screen and (max-width: 56.25em) {
               font-size: 6.25rem;
