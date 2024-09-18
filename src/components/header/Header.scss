@@ -21,8 +21,12 @@
     background-position: center left, center right;
   }
 
-  @media only screen and (max-width: 57em) {
-    height: calc(80vh - 12rem);
+  @media only screen and (max-width: 56.25em) {
+    height: calc(90vh - 12rem);
+  }
+
+  @include md {
+    height: calc(85vh - 12rem);
   }
 
   @media only screen and (max-width: 37.5em) {
@@ -70,8 +74,8 @@
         font-size: 4rem;
       }
 
-      @media only screen and (max-width: 56.25em) {
-        font-size: 3.75rem;
+      @include lg {
+        font-size: 3.5rem;
       }
 
       @include md {
