@@ -85,7 +85,6 @@
       @include sm {
         width: 10rem;
         height: 10rem;
-        font-size: 3.75rem;
       }
 
       @media only screen and (max-width: 18.75em) {
@@ -141,7 +140,7 @@
       }
 
       @include sm {
-        font-size: 1.75rem;
+        font-size: var(--default-font-size);
       }
 
       @media only screen and (max-width: 18.75em) {
@@ -177,16 +176,13 @@
         font-size: 1.35rem;
       }
 
+      @media only screen and (max-width: 56.25em) {
+        font-size: 1.45rem;
+      }
+
       @include md {
-        margin-bottom: 3.5rem;
-      }
-
-      @include sm {
-        font-size: 1.625rem;
-      }
-
-      @media only screen and (max-width: 18.75em) {
         font-size: 1.5rem;
+        margin-bottom: 3.5rem;
       }
 
       @media only screen and (min-width: 112.5em) {
