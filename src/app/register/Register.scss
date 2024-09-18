@@ -129,8 +129,20 @@
               font-size: 3.75rem;
             }
 
-            @media only screen and (max-width: 23.4375em) {
+            @include md {
               font-size: 3.5rem;
+            }
+
+            @media only screen and (max-width: 28.125em) {
+              font-size: 3rem;
+            }
+
+            @media only screen and (max-width: 25em) {
+              font-size: 2.75rem;
+            }
+
+            @media only screen and (max-width: 23.4375em) {
+              font-size: 2.65rem;
             }
 
             @media only screen and (max-width: 18.75em) {
