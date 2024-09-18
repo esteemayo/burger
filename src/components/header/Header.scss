@@ -99,8 +99,13 @@
         font-size: 2.2rem;
       }
 
-      @media only screen and (max-width: 22.5em) {
+      @media only screen and (max-width: 25em) {
         font-size: 2rem;
+      }
+
+      @media only screen and (max-width: 23.4375em) {
+        font-weight: 600;
+        font-size: 1.9rem;
       }
 
       @media only screen and (max-width: 18.75em) {
