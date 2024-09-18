@@ -48,6 +48,10 @@
       width: 105rem;
     }
 
+    @media only screen and (max-width: 57.5em) {
+      width: 95rem;
+    }
+
     @media only screen and (max-width: 30em) {
       padding: 0 1rem;
     }
