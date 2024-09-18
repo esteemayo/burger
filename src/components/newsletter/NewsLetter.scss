@@ -74,10 +74,6 @@
           font-size: 4.2rem;
           fill: $clr-gray-dark;
 
-          @include xl {
-            font-size: 4.667rem;
-          }
-
           @media only screen and (max-width: 56.25em) {
             font-size: 5.25rem;
           }
@@ -108,10 +104,6 @@
           font-size: var(--default-font-size);
           color: $clr-black;
           letter-spacing: 0.5px;
-
-          @include xl {
-            font-size: 1.77778rem;
-          }
 
           @media only screen and (max-width: 56.25em) {
             font-size: 2rem;
@@ -164,10 +156,6 @@
           letter-spacing: 1px;
           caret-color: $clr-gray-light;
 
-          @include xl {
-            font-size: 1.44445rem;
-          }
-
           @media only screen and (max-width: 56.25em) {
             font-size: 1.625rem;
           }
@@ -214,10 +202,6 @@
           border-radius: 0.5rem;
           cursor: pointer;
           transition: all 0.3s;
-
-          @include xl {
-            font-size: 1.44445rem;
-          }
 
           @media only screen and (max-width: 56.25em) {
             font-size: 1.625rem;
