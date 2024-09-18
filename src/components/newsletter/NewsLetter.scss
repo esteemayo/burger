@@ -17,7 +17,7 @@
     }
 
     @include xl {
-      padding: 8.88889rem 3.33333rem;
+      width: 100rem;
     }
 
     @media only screen and (max-width: 56.25em) {
@@ -62,7 +62,7 @@
         align-items: center;
         gap: 3rem;
 
-        @media only screen and (max-width: 60.9375em) {
+        @include xl {
           gap: 2rem;
         }
 
