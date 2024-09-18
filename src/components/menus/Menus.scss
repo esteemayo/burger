@@ -86,7 +86,7 @@
             }
 
             @media only screen and (max-width: 56.25em) {
-              width: 12rem;
+              width: 8rem;
             }
 
             @include sm {
@@ -129,6 +129,10 @@
           svg {
             font-size: 5rem;
             color: $clr-gray-dark;
+
+            @media only screen and (max-width: 56.25em) {
+              font-size: 4.5rem;
+            }
 
             @include sm {
               font-size: 5rem;
