@@ -42,11 +42,11 @@
   }
 
   @media only screen and (max-width: 18.75em) {
-    height: calc(50vh - 12rem);
+    height: calc(60vh - 12rem);
   }
 
   @media only screen and (min-width: 112.5em) {
-    height: calc(100vh - 12rem);
+    height: calc(100vh - 15rem);
   }
 
   .container {
@@ -108,8 +108,24 @@
         font-size: 1.9rem;
       }
 
+      @media only screen and (max-width: 22.5em) {
+        font-size: 1.85rem;
+      }
+
+      @media only screen and (max-width: 20.625em) {
+        font-size: 1.75rem;
+      }
+
       @media only screen and (max-width: 18.75em) {
         font-size: 100%;
+      }
+
+      @media only screen and (max-width: 18.125em) {
+        font-size: 1.55rem;
+      }
+
+      @media only screen and (max-width: 17.5em) {
+        font-size: 1.45rem;
       }
 
       @media only screen and (min-width: 112.5em) {
@@ -161,6 +177,10 @@
 
       @media only screen and (max-width: 26.875em) {
         height: 5rem;
+      }
+
+      @media only screen and (max-width: 21.5em) {
+        width: 89%;
       }
 
       @media only screen and (max-width: 18.75em) {
