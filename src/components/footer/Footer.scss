@@ -305,11 +305,6 @@
             border-radius: 3px;
             transition: all 0.3s;
 
-            @include xl {
-              width: 4.445rem;
-              height: 4.445rem;
-            }
-
             @media only screen and (max-width: 56.25em) {
               width: 5rem;
               height: 5rem;
@@ -357,10 +352,6 @@
               svg {
                 font-size: 2rem;
                 color: currentColor;
-
-                @include xl {
-                  font-size: 2.223rem;
-                }
 
                 @media only screen and (max-width: 56.25em) {
                   font-size: 2.5rem;
@@ -441,10 +432,6 @@
               font-size: 1.35rem;
             }
 
-            @include xl {
-              font-size: 1.55556rem;
-            }
-
             @media only screen and (max-width: 62.5em) {
               font-size: 1.5rem;
             }
@@ -483,10 +470,6 @@
           @media only screen and (max-width: 81.25em) {
             font-size: 1.35rem;
             gap: 0.8rem;
-          }
-
-          @include xl {
-            font-size: 1.55556rem;
           }
 
           @media only screen and (max-width: 62.5em) {
