@@ -422,8 +422,8 @@
               font-size: 1.35rem;
             }
 
-            @media only screen and (max-width: 62.5em) {
-              font-size: 1.5rem;
+            @media only screen and (max-width: 68.75em) {
+              font-size: 1.4rem;
             }
 
             @media only screen and (max-width: 56.25em) {
@@ -460,6 +460,11 @@
           @media only screen and (max-width: 81.25em) {
             font-size: 1.35rem;
             gap: 0.8rem;
+          }
+
+          @media only screen and (max-width: 68.75em) {
+            font-size: 1.4rem;
+            gap: 1rem;
           }
 
           @media only screen and (max-width: 62.5em) {
