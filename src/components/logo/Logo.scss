@@ -6,7 +6,7 @@
   a:link,
   a:active {
     display: inline-block;
-    width: 20rem;
+    width: 15rem;
     height: 9rem;
     color: inherit;
     transition: all 0.3s;
@@ -22,7 +22,7 @@
     }
 
     @media only screen and (min-width: 112.5em) {
-      width: 22rem;
+      width: 20rem;
       height: 11rem;
     }
 
