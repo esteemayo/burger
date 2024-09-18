@@ -172,10 +172,6 @@
             font-size: 1.3rem;
             color: $clr-gray-light;
 
-            @include xl {
-              font-size: 1.44445rem;
-            }
-
             @media only screen and (max-width: 56.25em) {
               font-size: 1.625rem;
             }
