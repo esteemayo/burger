@@ -24,15 +24,12 @@
       width: 90rem;
     }
 
-    @media only screen and (max-width: 56.25em) {
-      padding: 10rem 3.75rem;
-    }
-
     @media only screen and (max-width: 51.25em) {
       gap: 2rem;
     }
 
     @include md {
+      width: 70rem;
       flex-direction: column;
     }
 
