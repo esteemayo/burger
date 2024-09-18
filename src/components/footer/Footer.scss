@@ -292,6 +292,10 @@
           align-items: center;
           gap: 2rem;
 
+          @media only screen and (max-width: 81.25em) {
+            gap: 1.5rem;
+          }
+
           li {
             list-style: none;
             width: 4rem;
@@ -433,6 +437,10 @@
             font-size: 1.4rem;
             transition: all 0.3s;
 
+            @media only screen and (max-width: 81.25em) {
+              font-size: 1.35rem;
+            }
+
             @include xl {
               font-size: 1.55556rem;
             }
@@ -471,6 +479,11 @@
           align-items: center;
           justify-content: flex-end;
           gap: 1rem;
+
+          @media only screen and (max-width: 81.25em) {
+            font-size: 1.35rem;
+            gap: 0.8rem;
+          }
 
           @include xl {
             font-size: 1.55556rem;
