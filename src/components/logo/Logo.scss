@@ -11,11 +11,6 @@
     color: inherit;
     transition: all 0.3s;
 
-    @include xl {
-      width: 17rem;
-      height: 10rem;
-    }
-
     @include sm {
       width: 15rem;
       height: 11.25rem;
