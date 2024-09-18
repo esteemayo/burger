@@ -51,6 +51,10 @@
       font-size: 1.875rem;
     }
 
+    @include sm {
+      font-size: 1.65rem;
+    }
+
     @media only screen and (min-width: 112.5em) {
       width: 17rem;
       font-size: 2.2rem;
