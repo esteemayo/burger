@@ -76,16 +76,10 @@
       align-items: center;
       justify-content: center;
 
-      @include xl {
-        width: 10.556rem;
-        height: 10.556rem;
-        font-size: 4.445rem;
-      }
-
-      @media only screen and (max-width: 56.25em) {
-        width: 11.875rem;
-        height: 11.875rem;
-        font-size: 5rem;
+      @media only screen and (max-width: 57.5em) {
+        width: 9rem;
+        height: 9rem;
+        font-size: 3.5rem;
       }
 
       @include sm {
@@ -136,12 +130,8 @@
       margin-top: 1.5rem;
       margin-bottom: 0.5rem;
 
-      @include xl {
-        font-size: 1.77778rem;
-      }
-
-      @media only screen and (max-width: 56.25em) {
-        font-size: 2rem;
+      @media only screen and (max-width: 57.5em) {
+        font-size: 1.45rem;
       }
 
       @include md {
@@ -183,16 +173,11 @@
       color: $clr-gray-light;
       line-height: 1.5;
 
-      @include xl {
-        font-size: 1.66667rem;
-      }
-
-      @media only screen and (max-width: 56.25em) {
-        font-size: 1.875rem;
+      @media only screen and (max-width: 57.5em) {
+        font-size: 1.35rem;
       }
 
       @include md {
-        font-size: 1.875rem;
         margin-bottom: 3.5rem;
       }
 
