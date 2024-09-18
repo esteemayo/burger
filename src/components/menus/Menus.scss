@@ -86,7 +86,7 @@
             }
 
             @media only screen and (max-width: 56.25em) {
-              width: 8rem;
+              width: 7rem;
             }
 
             @include sm {
@@ -109,6 +109,10 @@
               left: 7.5rem;
             }
 
+            @media only screen and (max-width: 56.25em) {
+              left: 5.5rem;
+            }
+
             @include sm {
               left: 7rem;
             }
@@ -119,6 +123,10 @@
 
             @include lg {
               right: 7.5rem;
+            }
+
+            @media only screen and (max-width: 56.25em) {
+              right: 5.5rem;
             }
 
             @include sm {
