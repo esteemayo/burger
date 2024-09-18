@@ -152,19 +152,18 @@
       .heading {
         text-align: center;
         text-transform: uppercase;
+        text-overflow: ellipsis;
         text-rendering: optimizeLegibility;
+        white-space: nowrap;
         font-weight: 600;
         font-size: 1.4rem;
         color: inherit;
         line-height: 1.5;
         transition: all 0.3s;
-
-        @include xl {
-          font-size: 1.55556rem;
-        }
+        overflow: hidden;
 
         @media only screen and (max-width: 56.25em) {
-          font-size: 1.75rem;
+          font-size: 1.35rem;
         }
 
         @include md {
@@ -204,10 +203,6 @@
         font-weight: 600;
         font-size: 1.8rem;
         color: $clr-secondary;
-
-        @include xl {
-          font-size: 2rem;
-        }
 
         @include md {
           font-size: 1.7rem;
