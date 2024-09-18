@@ -27,11 +27,14 @@
 
   .wrapper {
     width: 144rem;
-    padding: 0 3rem;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include xxl {
+      width: 130rem;
+    }
 
     @media only screen and (max-width: 30em) {
       padding: 0 1rem;
