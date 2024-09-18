@@ -42,10 +42,6 @@
         line-height: 1.5;
         color: inherit;
 
-        @media only screen and (max-width: 56.25em) {
-          font-size: 4.375rem;
-        }
-
         @include sm {
           font-size: 3.75rem;
         }
@@ -129,10 +125,6 @@
           svg {
             font-size: 5rem;
             color: $clr-gray-dark;
-
-            @media only screen and (max-width: 56.25em) {
-              font-size: 6.25rem;
-            }
 
             @include sm {
               font-size: 5rem;
