@@ -118,6 +118,10 @@
             @media only screen and (max-width: 56.25em) {
               left: 5.5rem;
             }
+
+            @media only screen and (max-width: 21.5em) {
+              left: 4.5rem;
+            }
           }
 
           &::after {
@@ -129,6 +133,10 @@
 
             @media only screen and (max-width: 56.25em) {
               right: 5.5rem;
+            }
+
+            @media only screen and (max-width: 21.5em) {
+              right: 4.5rem;
             }
           }
 
