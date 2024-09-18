@@ -41,6 +41,10 @@
     height: calc(65vh - 12rem);
   }
 
+  @media only screen and (max-width: 25em) {
+    height: calc(61vh - 12rem);
+  }
+
   @media only screen and (max-width: 18.75em) {
     height: calc(60vh - 12rem);
   }
@@ -177,6 +181,14 @@
 
       @media only screen and (max-width: 26.875em) {
         height: 5rem;
+      }
+
+      @media only screen and (max-width: 25.875em) {
+        width: 88%;
+      }
+
+      @media only screen and (max-width: 25em) {
+        width: 85%;
       }
 
       @media only screen and (max-width: 21.5em) {
