@@ -44,6 +44,10 @@
       width: 110rem;
     }
 
+    @include lg {
+      width: 100rem;
+    }
+
     @media only screen and (max-width: 30em) {
       padding: 0 1rem;
     }
