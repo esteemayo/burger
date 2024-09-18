@@ -170,10 +170,6 @@
           font-size: 1.3rem;
         }
 
-        @include md {
-          font-size: 1.5rem;
-        }
-
         @media only screen and (max-width: 34.375em) {
           font-size: 1.75rem;
         }
@@ -209,7 +205,7 @@
         color: $clr-secondary;
 
         @include md {
-          font-size: 1.7rem;
+          font-size: 1.6rem;
         }
 
         @media only screen and (max-width: 34.375em) {

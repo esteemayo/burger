@@ -47,6 +47,10 @@
           line-height: 1;
         }
 
+        @include md {
+          font-size: 2.8rem;
+        }
+
         @include sm {
           font-size: 3.75rem;
         }
