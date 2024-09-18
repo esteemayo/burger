@@ -24,7 +24,7 @@
     }
 
     @include lg {
-      width: 100rem;
+      width: 105rem;
     }
 
     @include sm {
@@ -176,10 +176,6 @@
             align-items: center;
             gap: 0.8rem;
 
-            @media only screen and (max-width: 62.5em) {
-              font-size: 1.61111rem;
-            }
-
             @media only screen and (max-width: 56.25em) {
               font-size: 1.8125rem;
               gap: 1rem;
@@ -259,10 +255,6 @@
           font-size: var(--default-font-size);
           margin-bottom: 2rem;
 
-          @include xl {
-            font-size: 1.77778rem;
-          }
-
           @media only screen and (max-width: 56.25em) {
             font-size: 2rem;
           }
@@ -288,6 +280,10 @@
 
           @media only screen and (max-width: 81.25em) {
             gap: 1.5rem;
+          }
+
+          @media only screen and (max-width: 68.75em) {
+            gap: 2rem;
           }
 
           li {
@@ -469,11 +465,6 @@
           @media only screen and (max-width: 68.75em) {
             font-size: 1.4rem;
             gap: 1rem;
-          }
-
-          @media only screen and (max-width: 62.5em) {
-            font-size: 1.5rem;
-            gap: 0.5rem;
           }
 
           @media only screen and (max-width: 56.25em) {
