@@ -37,10 +37,6 @@
     height: calc(70vh - 12rem);
   }
 
-  @include sm {
-    height: calc(60vh - 12rem);
-  }
-
   @media only screen and (max-width: 26.875em) {
     height: calc(55vh - 12rem);
   }
@@ -90,17 +86,13 @@
         font-size: 2.75rem;
       }
 
-      @media only screen and (max-width: 31.25em) {
-        font-size: 2.625rem;
+      @media only screen and (max-width: 34.375em) {
+        font-size: 2.5rem;
       }
 
       @include sm {
-        font-size: 2.5rem;
+        font-size: 2.3rem;
         line-height: 1;
-      }
-
-      @media only screen and (max-width: 26.875em) {
-        font-size: 2.25rem;
       }
 
       @media only screen and (max-width: 23.75em) {
@@ -160,10 +152,6 @@
 
       @media only screen and (max-width: 33.75em) {
         height: 5.5rem;
-      }
-
-      @include sm {
-        width: 95%;
       }
 
       @media only screen and (max-width: 26.875em) {
