@@ -46,6 +46,10 @@
       height: 15.5rem;
     }
 
+    @include md {
+      height: 16rem;
+    }
+
     @media only screen and (min-width: 112.5em) {
       height: 20.65rem;
     }
@@ -70,6 +74,10 @@
 
         @media only screen and (max-width: 56.25em) {
           font-size: 1.75rem;
+        }
+
+        @media only screen and (max-width: 28.125em) {
+          font-size: 1.65rem;
         }
 
         @media only screen and (min-width: 112.5em) {
