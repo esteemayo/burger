@@ -282,12 +282,6 @@
           align-items: center;
           justify-content: center;
 
-          @include xl {
-            width: 2.223rem;
-            height: 2.223rem;
-            font-size: 1.33333rem;
-          }
-
           @media only screen and (max-width: 56.25em) {
             width: 2.5rem;
             height: 2.5rem;
