@@ -82,6 +82,7 @@
         width: 40rem;
         height: 5rem;
         font-size: 2rem;
+        padding: 3rem 2rem;
         padding-left: 5rem;
       }
 
@@ -132,10 +133,10 @@
     }
 
     @media only screen and (min-width: 112.5em) {
-      top: 1.8rem;
+      top: 1.85rem;
       left: 1.5rem;
-      width: 2rem !important;
-      height: 2rem !important;
+      width: 2.5rem !important;
+      height: 2.5rem !important;
     }
   }
 }
