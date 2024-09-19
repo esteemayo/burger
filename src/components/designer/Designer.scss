@@ -2,6 +2,9 @@
 @import '../../styles/responsive.scss';
 
 .designer {
+  display: flex;
+  justify-content: center;
+
   text-align: center;
   padding: 1.6rem 0;
   background-color: transparent;
@@ -20,7 +23,7 @@
   }
 
   .wrapper {
-    padding: 0 3rem;
+    width: 144rem;
 
     .copyright {
       .text {
