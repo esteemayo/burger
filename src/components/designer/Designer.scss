@@ -25,6 +25,10 @@
   .wrapper {
     width: 144rem;
 
+    @media only screen and (max-width: 26.875em) {
+      width: 45rem;
+    }
+
     .copyright {
       .text {
         font-weight: 400;
