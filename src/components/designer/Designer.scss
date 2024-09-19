@@ -21,6 +21,10 @@
       width: 45rem;
     }
 
+    @media only screen and (max-width: 18.75em) {
+      width: 35rem;
+    }
+
     .copyright {
       .text {
         font-weight: 400;
@@ -43,7 +47,7 @@
         }
 
         @media only screen and (max-width: 18.75em) {
-          font-size: 1.35rem;
+          font-size: 1rem;
         }
 
         @media only screen and (min-width: 112.5em) {
