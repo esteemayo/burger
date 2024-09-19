@@ -307,28 +307,6 @@
           transition-duration: 700ms;
           cursor: default;
 
-          @include xl {
-            min-width: 23.335rem;
-            width: 33.335rem;
-            padding: 0.888889rem 0.555556rem;
-          }
-
-          @media only screen and (max-width: 56.25em) {
-            min-width: 27.5rem;
-            width: 37.5rem;
-            padding: 1rem 0.625rem;
-          }
-
-          @include sm {
-            min-width: 25rem;
-            width: 35rem;
-          }
-
-          @media only screen and (max-width: 18.75em) {
-            min-width: 22rem;
-            width: 32rem;
-          }
-
           @media only screen and (min-width: 112.5em) {
             top: 6rem;
             min-width: 30rem;
