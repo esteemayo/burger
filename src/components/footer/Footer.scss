@@ -210,10 +210,6 @@
             gap: 0.8rem;
 
             @media only screen and (max-width: 18.75em) {
-              width: 30rem;
-            }
-
-            @media only screen and (max-width: 18.75em) {
               font-size: 1.4rem;
             }
 
@@ -301,6 +297,10 @@
 
           @media only screen and (max-width: 68.75em) {
             gap: 2rem;
+          }
+
+          @media only screen and (max-width: 18.75em) {
+            gap: 1rem;
           }
 
           li {
