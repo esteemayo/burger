@@ -253,11 +253,6 @@
           object-fit: cover;
           transition: all 0.3s;
 
-          @include xl {
-            width: 2.667rem;
-            height: 2.667rem;
-          }
-
           @media only screen and (max-width: 56.25em) {
             width: 3rem;
             height: 3rem;

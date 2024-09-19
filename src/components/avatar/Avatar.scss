@@ -11,11 +11,6 @@
   box-shadow: $box-shadow;
   transition: all 0.3s;
 
-  @include xl {
-    width: 3.335rem;
-    height: 3.335rem;
-  }
-
   @media only screen and (max-width: 56.25em) {
     width: 3.125rem;
     height: 3.125rem;
