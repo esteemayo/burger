@@ -148,10 +148,6 @@
         svg {
           font-size: 3rem;
 
-          @include xl {
-            font-size: 3.335rem;
-          }
-
           @media only screen and (max-width: 56.25em) {
             font-size: 3.125rem;
           }
@@ -169,10 +165,6 @@
           font-weight: 700;
           font-size: 1.4rem;
           white-space: nowrap;
-
-          @include xl {
-            font-size: 1.55556rem;
-          }
 
           @media only screen and (max-width: 56.25em) {
             font-size: 1.75rem;
