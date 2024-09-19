@@ -148,10 +148,6 @@
         svg {
           font-size: 3rem;
 
-          @media only screen and (max-width: 56.25em) {
-            font-size: 3.125rem;
-          }
-
           @include sm {
             font-size: 2.5rem;
           }
@@ -165,10 +161,6 @@
           font-weight: 700;
           font-size: 1.4rem;
           white-space: nowrap;
-
-          @media only screen and (max-width: 56.25em) {
-            font-size: 1.75rem;
-          }
 
           @include sm {
             font-weight: 600;
@@ -245,11 +237,6 @@
           object-fit: cover;
           transition: all 0.3s;
 
-          @media only screen and (max-width: 56.25em) {
-            width: 3rem;
-            height: 3rem;
-          }
-
           @media only screen and (max-width: 24.375em) {
             width: 2.5rem;
             height: 2.5rem;
@@ -281,12 +268,6 @@
           display: flex;
           align-items: center;
           justify-content: center;
-
-          @media only screen and (max-width: 56.25em) {
-            width: 2.5rem;
-            height: 2.5rem;
-            font-size: 1.5rem;
-          }
 
           @media only screen and (max-width: 24.375em) {
             width: 2.25rem;
@@ -376,16 +357,6 @@
           height: 2rem;
           object-fit: cover;
           transition: all 0.3s;
-
-          @include xl {
-            width: 2.223rem;
-            height: 2.223rem;
-          }
-
-          @media only screen and (max-width: 56.25em) {
-            width: 2.5rem;
-            height: 2.5rem;
-          }
 
           @media only screen and (max-width: 21.5em) {
             width: 2.25rem;
