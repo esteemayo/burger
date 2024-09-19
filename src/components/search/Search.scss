@@ -81,10 +81,16 @@
 
   .searchInputIcon {
     position: absolute;
-    top: 1.4rem;
+    top: 1.2rem;
     left: 1rem;
-    width: 1.5rem !important;
-    height: 1.5rem !important;
+    width: 1.7rem !important;
+    height: 1.7rem !important;
+
+    @media only screen and (max-width: 56.25em) {
+      top: 1rem;
+      width: 1.85rem !important;
+      height: 1.85rem !important;
+    }
 
     @media only screen and (min-width: 112.5em) {
       top: 1.85rem;
