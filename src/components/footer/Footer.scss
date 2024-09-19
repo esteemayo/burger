@@ -132,6 +132,10 @@
                 height: 4rem;
               }
 
+              @media only screen and (max-width: 18.75em) {
+                height: 3.5rem;
+              }
+
               @media only screen and (min-width: 112.5em) {
                 width: 17rem;
                 height: 5rem;
@@ -205,6 +209,14 @@
             align-items: center;
             gap: 0.8rem;
 
+            @media only screen and (max-width: 18.75em) {
+              width: 30rem;
+            }
+
+            @media only screen and (max-width: 18.75em) {
+              font-size: 1.4rem;
+            }
+
             @media only screen and (min-width: 112.5em) {
               font-size: 2rem;
             }
@@ -218,6 +230,11 @@
             img {
               width: 1.6rem;
               height: 1.6rem;
+
+              @media only screen and (max-width: 18.75em) {
+                width: 1.4rem;
+                height: 1.4rem;
+              }
 
               @media only screen and (min-width: 112.5em) {
                 width: 1.66667rem;
@@ -264,6 +281,7 @@
 
           @media only screen and (max-width: 18.75em) {
             font-weight: 700;
+            font-size: 1.5rem;
           }
 
           @media only screen and (min-width: 112.5em) {
@@ -293,6 +311,11 @@
             border: 1px solid currentColor;
             border-radius: 3px;
             transition: all 0.3s;
+
+            @media only screen and (max-width: 18.75em) {
+              width: 3.5rem;
+              height: 3.5rem;
+            }
 
             @media only screen and (min-width: 112.5em) {
               width: 5.167rem;
@@ -326,6 +349,10 @@
               svg {
                 font-size: 2rem;
                 color: currentColor;
+
+                @media only screen and (max-width: 18.75em) {
+                  font-size: 1.8rem;
+                }
 
                 @media only screen and (min-width: 112.5em) {
                   font-size: 3rem;
@@ -402,6 +429,10 @@
               font-size: 1.4rem;
             }
 
+            @media only screen and (max-width: 18.75em) {
+              font-size: 1.3rem;
+            }
+
             @media only screen and (min-width: 112.5em) {
               font-size: 1.66667rem;
             }
@@ -449,6 +480,7 @@
           }
 
           @media only screen and (max-width: 18.75em) {
+            font-size: 1.3rem;
             gap: 0.5rem;
           }
 
