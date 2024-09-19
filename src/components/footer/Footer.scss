@@ -43,6 +43,10 @@
       width: 75rem;
     }
 
+    @media only screen and (max-width: 37.5em) {
+      width: 67rem;
+    }
+
     @include sm {
       padding: 5rem 0;
     }
