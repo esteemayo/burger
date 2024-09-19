@@ -31,6 +31,10 @@
       width: 95rem;
     }
 
+    @include md {
+      width: 85rem;
+    }
+
     @include sm {
       padding: 5rem 0;
     }
@@ -91,11 +95,6 @@
               display: inline-block;
               object-fit: cover;
               cursor: pointer;
-
-              @media only screen and (max-width: 56.25em) {
-                width: 16.875rem;
-                height: 5rem;
-              }
 
               @media only screen and (max-width: 35.375em) {
                 width: 15.25rem;
