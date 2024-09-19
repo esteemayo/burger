@@ -9,28 +9,16 @@
   color: $clr-gray-light;
   border-top: 1px solid $line;
 
-  @media only screen and (max-width: 18.75em) {
-    padding: 1.5rem;
-  }
-
   .quantity {
     font-weight: 500;
     font-size: 1.3rem;
 
-    @include xl {
-      font-size: 1.44445rem;
-    }
-
     @media only screen and (max-width: 56.25em) {
-      font-size: 1.625rem;
-    }
-
-    @media only screen and (max-width: 18.75em) {
-      font-size: 1.5rem;
+      font-size: 1.35rem;
     }
 
     @media only screen and (min-width: 112.5em) {
-      font-size: 1.6rem;
+      font-size: 1.8rem;
     }
   }
 
@@ -52,19 +40,15 @@
     }
 
     @include xl {
-      font-size: 1.44445rem;
+      font-size: 1.35rem;
     }
 
     @media only screen and (max-width: 56.25em) {
-      font-size: 1.625rem;
-    }
-
-    @media only screen and (max-width: 18.75em) {
-      font-size: 1.5rem;
+      font-size: 1.25rem;
     }
 
     @media only screen and (min-width: 112.5em) {
-      font-size: 1.6rem;
+      font-size: 1.8rem;
     }
   }
 
@@ -93,24 +77,14 @@
         object-fit: cover;
         opacity: 0.8;
 
-        @include xl {
-          width: 1.445rem;
-          height: 1.778rem;
-        }
-
         @media only screen and (max-width: 56.25em) {
-          width: 1.625rem;
-          height: 2rem;
-        }
-
-        @media only screen and (max-width: 18.75em) {
-          width: 1.5rem;
-          height: 1.875rem;
+          width: 1.35rem;
+          height: 1.75rem;
         }
 
         @media only screen and (min-width: 112.5em) {
-          width: 1.6rem;
-          height: 1.9rem;
+          width: 2rem;
+          height: 2rem;
         }
       }
     }
@@ -123,19 +97,15 @@
       cursor: pointer;
 
       @include xl {
-        font-size: 1.44445rem;
+        font-size: 1.35rem;
       }
 
       @media only screen and (max-width: 56.25em) {
-        font-size: 1.625rem;
-      }
-
-      @media only screen and (max-width: 18.75em) {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
       }
 
       @media only screen and (min-width: 112.5em) {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
       }
     }
   }
@@ -148,19 +118,15 @@
     white-space: nowrap;
 
     @include xl {
-      font-size: 1.44445rem;
+      font-size: 1.35rem;
     }
 
     @media only screen and (max-width: 56.25em) {
-      font-size: 1.625rem;
-    }
-
-    @media only screen and (max-width: 18.75em) {
-      font-size: 1.5rem;
+      font-size: 1.25rem;
     }
 
     @media only screen and (min-width: 112.5em) {
-      font-size: 1.6rem;
+      font-size: 1.8rem;
     }
   }
 }
