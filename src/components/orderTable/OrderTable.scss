@@ -67,6 +67,22 @@
         background-color: rgba(40, 167, 69, 0.1);
       }
 
+      &.orderNotPaid {
+        background-color: rgba(255, 99, 71, 0.25);
+      }
+
+      &.orderPreparing {
+        background-color: $clr-tertiary;
+      }
+
+      &.orderOntheway {
+        background-color: rgba(250, 175, 0, 0.25);
+      }
+
+      &.orderDelivered {
+        background-color: rgba(40, 167, 69, 0.25);
+      }
+
       td {
         padding: 2.4rem 4px;
 
