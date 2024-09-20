@@ -77,16 +77,6 @@
             border-radius: 50%;
             transition: all 0.3s;
 
-            @media only screen and (max-width: 56.25em) {
-              width: 9rem;
-              height: 9rem;
-            }
-
-            @media only screen and (max-width: 37.5em) {
-              width: 8.75rem;
-              height: 8.75rem;
-            }
-
             @media only screen and (max-width: 26.8125em) {
               width: 6.25rem;
               height: 6.25rem;
