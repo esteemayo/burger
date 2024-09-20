@@ -40,16 +40,8 @@
             line-height: 1;
             position: relative;
 
-            @include xl {
-              font-size: 3.11111rem;
-            }
-
-            @media only screen and (max-width: 64em) {
-              padding: 0 0 2.22222rem;
-            }
-
             @media only screen and (max-width: 56.25em) {
-              font-size: 3rem;
+              font-size: 2.85rem;
             }
 
             @media only screen and (max-width: 25em) {
@@ -129,14 +121,7 @@
           line-height: 1;
           margin: 0 0 2rem;
 
-          @include xl {
-            font-size: 1.777777rem;
-          }
-
           @media only screen and (max-width: 64rem) {
-            font-weight: 500;
-            font-size: 1.55555rem;
-            margin: 0 0 2.22222rem;
             opacity: 0.85;
           }
 
@@ -173,16 +158,8 @@
           margin: 0 0 2rem;
           margin-bottom: 0.8rem;
 
-          @include xl {
-            font-size: 1.777777rem;
-          }
-
           @media only screen and (max-width: 56.25em) {
-            font-size: 2rem;
-          }
-
-          @media only screen and (max-width: 25em) {
-            font-size: 1.8rem;
+            font-size: 1.65rem;
           }
 
           @media only screen and (min-width: 112.5em) {
@@ -203,12 +180,8 @@
             font-weight: 400;
             font-size: 1.3rem;
 
-            @include xl {
-              font-size: 1.44444rem;
-            }
-
             @media only screen and (max-width: 56.25em) {
-              font-size: 1.625rem;
+              font-size: 1.35rem;
             }
 
             @media only screen and (min-width: 112.5em) {
@@ -235,16 +208,11 @@
           cursor: pointer;
           transition: all 0.3s;
 
-          @include xl {
-            font-size: 1.44444rem;
-          }
-
           @media only screen and (max-width: 56.25em) {
-            font-size: 1.625rem;
+            font-size: 1.35rem;
           }
 
           @include sm {
-            font-size: 1.5rem;
             padding: 0.8rem 0;
           }
 
@@ -278,16 +246,8 @@
           font-size: 100%;
           margin-bottom: 0.5rem;
 
-          @include xl {
-            font-size: 1.777777rem;
-          }
-
           @media only screen and (max-width: 56.25em) {
-            font-size: 2rem;
-          }
-
-          @media only screen and (max-width: 25em) {
-            font-size: 1.8rem;
+            font-size: 1.65rem;
           }
 
           @media only screen and (min-width: 112.5em) {
@@ -322,20 +282,8 @@
       cursor: pointer;
       transition: all 0.3s ease-in-out;
 
-      @include xl {
-        font-size: 1.44444rem;
-      }
-
       @media only screen and (max-width: 56.25em) {
-        font-size: 1.625rem;
-      }
-
-      @include sm {
-        font-size: 1.5rem;
-      }
-
-      @media only screen and (max-width: 18.75em) {
-        font-size: 1.4rem;
+        font-size: 1.35rem;
       }
 
       @media only screen and (min-width: 112.5em) {
