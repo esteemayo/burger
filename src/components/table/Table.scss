@@ -109,6 +109,10 @@
 
         &.orderName {
           text-transform: capitalize;
+          text-overflow: ellipsis;
+          text-rendering: optimizeLegibility;
+          white-space: nowrap;
+          overflow: hidden;
 
           span {
             a,
