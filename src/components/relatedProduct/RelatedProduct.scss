@@ -193,10 +193,6 @@
           opacity: 0;
           z-index: -1;
 
-          @include xl {
-            font-size: 1.33333rem;
-          }
-
           @media only screen and (max-width: 56.25em) {
             font-size: 1.5rem;
           }
@@ -308,7 +304,7 @@
           margin-bottom: 1px;
           transition: all 0.3s;
 
-          @include lg {
+          @media only screen and (max-width: 56.25em) {
             font-size: 1.43rem;
           }
 
@@ -357,8 +353,8 @@
           font-size: 1.8rem;
           color: $clr-secondary;
 
-          @include md {
-            font-size: 1.7rem;
+          @media only screen and (max-width: 56.25em) {
+            font-size: 1.85rem;
           }
 
           @media only screen and (max-width: 37.5em) {
