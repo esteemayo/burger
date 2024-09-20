@@ -50,14 +50,17 @@ const TableBody = ({
                 const { id, name } = product;
                 return (
                   <span key={id}>
-                    <Link href={`/product/${id}`}>{name}</Link>{' '}
-                    <br />
+                    <Link href={`/product/${id}`}>{name}</Link> <br />
                   </span>
                 );
               })}
             </td>
             {!isAdmin ? (
-              <td>{orderStatus(status)}</td>
+              <td>
+                <Link href={`/order/${encodeURIComponent(id)}`}>
+                  {orderStatus(status)}
+                </Link>
+              </td>
             ) : (
               <td>
                 <StatusForm actionId={id} status={orderStatus(status)} />
