@@ -135,14 +135,9 @@
         height: 1.5rem;
         object-fit: cover;
 
-        @include xl {
-          width: 1.65rem;
-          height: 1.65rem;
-        }
-
         @media only screen and (max-width: 56.25em) {
-          width: 1.8rem;
-          height: 1.8rem;
+          width: 1.6rem;
+          height: 1.6rem;
         }
 
         @media only screen and (min-width: 112.5em) {
