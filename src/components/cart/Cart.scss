@@ -49,12 +49,8 @@
         border-bottom: 1px solid $line;
         position: relative;
 
-        @include xl {
-          font-size: 1.77778rem;
-        }
-
         @media only screen and (max-width: 56.25em) {
-          font-size: 2rem;
+          font-size: 1.65rem;
         }
 
         @media only screen and (min-width: 112.5em) {
@@ -105,7 +101,7 @@
           }
 
           @media only screen and (max-width: 23.4375em) {
-            width: 55%;
+            width: 60%;
           }
 
           @media only screen and (min-width: 112.5em) {
