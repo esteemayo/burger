@@ -3,28 +3,8 @@
 
 .checkoutProducts {
   .checkoutProductBox {
-    height: 25.3rem;
+    height: 24.45rem;
     overflow-y: auto;
-
-    @include xl {
-      height: 26.3rem;
-    }
-
-    @include lg {
-      height: 26.5rem;
-    }
-
-    @media only screen and (max-width: 59.375em) {
-      height: 28rem;
-    }
-
-    @media only screen and (max-width: 56.25em) {
-      height: 28.5rem;
-    }
-
-    @include md {
-      height: 25.3rem;
-    }
 
     @media only screen and (min-width: 112.5em) {
       height: 27.1rem;
