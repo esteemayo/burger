@@ -97,15 +97,15 @@
           transform: translateY(-50%);
 
           @include md {
-            width: 80%;
+            width: 75%;
           }
 
-          @include sm {
+          @media only screen and (max-width: 31.25em) {
             width: 65%;
           }
 
-          @media only screen and (max-width: 21.25em) {
-            width: 60%;
+          @media only screen and (max-width: 23.4375em) {
+            width: 55%;
           }
 
           @media only screen and (min-width: 112.5em) {
