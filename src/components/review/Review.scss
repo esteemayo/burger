@@ -77,14 +77,9 @@
             border-radius: 50%;
             transition: all 0.3s;
 
-            @include xl {
-              width: 9.667rem;
-              height: 9.667rem;
-            }
-
             @media only screen and (max-width: 56.25em) {
-              width: 10.875rem;
-              height: 10.875rem;
+              width: 9rem;
+              height: 9rem;
             }
 
             @media only screen and (max-width: 37.5em) {
