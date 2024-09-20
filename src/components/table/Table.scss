@@ -42,6 +42,12 @@
             display: none;
           }
         }
+
+        @media only screen and (max-width: 25em) {
+          &:first-child {
+            display: none;
+          }
+        }
       }
     }
   }
