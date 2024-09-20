@@ -56,11 +56,7 @@ const TableBody = ({
               })}
             </td>
             {!isAdmin ? (
-              <td>
-                <Link href={`/order/${encodeURIComponent(id)}`}>
-                  {orderStatus(status)}
-                </Link>
-              </td>
+              <td>{orderStatus(status)}</td>
             ) : (
               <td>
                 <StatusForm actionId={id} status={orderStatus(status)} />
