@@ -154,16 +154,12 @@
     p {
       font-size: 100%;
 
-      @include lg {
-        font-size: 1.5rem;
-      }
-
       @media only screen and (max-width: 56.25em) {
-        font-size: 1.625rem;
+        font-size: 1.4rem;
       }
 
       @media only screen and (min-width: 112.5em) {
-        font-size: 1.7rem;
+        font-size: 1.8rem;
       }
     }
 
@@ -182,12 +178,8 @@
         color: inherit;
         cursor: pointer;
 
-        @include lg {
-          font-size: 1.44445rem;
-        }
-
         @media only screen and (max-width: 56.25em) {
-          font-size: 1.625rem;
+          font-size: 1.4rem;
         }
 
         @media only screen and (min-width: 112.5em) {
