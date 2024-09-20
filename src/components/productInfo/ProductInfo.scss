@@ -178,12 +178,8 @@
           svg {
             fill: currentColor;
 
-            @include lg {
-              font-size: 1.7rem;
-            }
-
             @media only screen and (max-width: 56.25em) {
-              font-size: 1.85rem;
+              font-size: 1.65rem;
             }
 
             @media only screen and (min-width: 112.5em) {
@@ -197,12 +193,8 @@
           color: #000000de;
           color: #060505ba;
 
-          @include lg {
-            font-size: 1.34rem;
-          }
-
           @media only screen and (max-width: 56.25em) {
-            font-size: 1.5rem;
+            font-size: 1.25rem;
           }
 
           @media only screen and (min-width: 112.5em) {
@@ -216,12 +208,8 @@
         color: #000000de;
         color: #060505ba;
 
-        @include lg {
-          font-size: 1.34rem;
-        }
-
         @media only screen and (max-width: 56.25em) {
-          font-size: 1.5rem;
+          font-size: 1.25rem;
         }
 
         @media only screen and (min-width: 112.5em) {
@@ -268,10 +256,6 @@
         border-radius: 0.5rem;
         caret-color: $clr-gray-dark;
 
-        @include xl {
-          font-size: 1.7rem;
-        }
-
         @media only screen and (min-width: 112.5em) {
           font-size: 2.2rem;
           padding: 1.5rem;
@@ -298,19 +282,7 @@
         justify-content: center;
         gap: 1rem;
 
-        @include xl {
-          font-size: 1.45rem;
-        }
-
-        @include md {
-          font-size: 1.63rem;
-        }
-
-        @media only screen and (max-width: 28.4375em) {
-          font-size: 1.5rem;
-        }
-
-        @media only screen and (max-width: 26.4375em) {
+        @media only screen and (max-width: 56.25em) {
           font-size: 1.35rem;
         }
 
@@ -332,8 +304,8 @@
           font-size: 1.7rem;
           fill: currentColor;
 
-          @media only screen and (max-width: 28.4375em) {
-            font-size: 1.5rem;
+          @media only screen and (max-width: 56.25em) {
+            font-size: 1.75rem;
           }
 
           @media only screen and (min-width: 112.5em) {
