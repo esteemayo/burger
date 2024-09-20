@@ -89,33 +89,13 @@
       color: inherit;
       margin-bottom: 0.5rem;
 
-      @include xl {
-        font-size: 3.12rem;
-      }
-
       @media only screen and (max-width: 56.25em) {
-        font-size: 3.5rem;
-      }
-
-      @include md {
-        font-size: 3.25rem;
-      }
-
-      @media only screen and (max-width: 31.25em) {
-        font-size: 2.97rem;
+        font-size: 2.85rem;
       }
 
       @include sm {
         line-height: 1.2;
         margin-bottom: 2rem;
-      }
-
-      @media only screen and (max-width: 28.4375em) {
-        font-size: 3rem;
-      }
-
-      @media only screen and (max-width: 28.125em) {
-        font-size: 2.8rem;
       }
 
       @media only screen and (max-width: 26.25em) {
@@ -154,26 +134,16 @@
       line-height: 1.35;
       margin-bottom: 1rem;
 
-      @include xl {
-        font-size: 1.53rem;
-      }
-
       @media only screen and (max-width: 56.25em) {
-        font-size: 1.75rem;
+        font-size: 1.45rem;
       }
 
       @include md {
-        font-size: 1.65rem;
         line-height: 1.2;
       }
 
       @media only screen and (max-width: 28.4375em) {
-        font-size: 1.63rem;
         line-height: 1.1;
-      }
-
-      @media only screen and (max-width: 18.75em) {
-        font-size: 1.5rem;
       }
 
       @media only screen and (min-width: 112.5em) {
