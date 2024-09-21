@@ -800,7 +800,7 @@ export interface TableProps {
 
 export interface TableHeadProps {
   columns: ColumnType;
-  isAdmin: Boolean;
+  isAdmin: Boolean | undefined;
 }
 
 export interface TableBodyProps {
