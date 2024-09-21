@@ -106,19 +106,29 @@
           }
         }
 
-        @media only screen and (max-width: 25em) {
-          &:last-child {
-            display: none;
+        .userStatus {
+          @media only screen and (max-width: 25em) {
+            &:last-child {
+              display: none;
+            }
+          }
+
+          @media only screen and (max-width: 18.75em) {
+            &:nth-child(4) {
+              display: none;
+            }
+
+            &:last-child {
+              display: block;
+            }
           }
         }
 
-        @media only screen and (max-width: 18.75em) {
-          &:nth-child(4) {
-            display: none;
-          }
-
-          &:last-child {
-            display: block;
+        .adminStatus {
+          @media only screen and (max-width: 25em) {
+            &:nth-child(4) {
+              display: none;
+            }
           }
         }
 
