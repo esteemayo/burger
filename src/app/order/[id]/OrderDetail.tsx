@@ -1,7 +1,6 @@
 'use client';
 
 import { formatDate } from '@/utils/formatDate';
-import { excerpts } from '@/utils';
 import { formatCurrency } from '@/utils/formatCurrency';
 
 import { OrderDetailProps } from '@/types';
