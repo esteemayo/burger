@@ -126,22 +126,6 @@
           }
         }
 
-        @media only screen and (max-width: 25em) {
-          &:last-child {
-            display: none;
-          }
-        }
-
-        @media only screen and (max-width: 18.75em) {
-          &:nth-child(4) {
-            display: none;
-          }
-
-          &:last-child {
-            display: block;
-          }
-        }
-
         @media only screen and (min-width: 112.5em) {
           padding: 3rem 1rem;
         }
@@ -158,6 +142,24 @@
           text-rendering: optimizeLegibility;
           white-space: nowrap;
           overflow: hidden;
+
+          @media only screen and (max-width: 18.75em) {
+            display: none;
+          }
+
+          &.hide {
+            @media only screen and (max-width: 25em) {
+              display: none;
+            }
+          }
+
+          span {
+            a,
+            a:link,
+            a:visited {
+              text-transform: capitalize;
+            }
+          }
         }
 
         form {
