@@ -77,21 +77,12 @@
           color: #6b6b83;
           line-height: 1.3;
 
-          @include xl {
-            font-size: 3.11111rem;
-          }
-
           @media only screen and (max-width: 56.25em) {
-            font-size: 3.5rem;
-          }
-
-          @media only screen and (max-width: 37.5em) {
-            font-size: 3rem;
+            font-size: 2.85rem;
           }
 
           @include sm {
             font-weight: 500;
-            font-size: 2.875rem;
           }
 
           @media only screen and (max-width: 25em) {
@@ -181,12 +172,8 @@
               color: #6b6b83;
               line-height: 1;
 
-              @include xl {
-                font-size: 1.55555rem;
-              }
-
               @media only screen and (max-width: 56.25em) {
-                font-size: 1.75rem;
+                font-size: 1.45rem;
               }
 
               @include sm {
@@ -208,12 +195,8 @@
               color: $clr-gray-dark;
               overflow: hidden;
 
-              @include xl {
-                font-size: 1.44445rem;
-              }
-
               @media only screen and (max-width: 56.25em) {
-                font-size: 1.625rem;
+                font-size: 1.35rem;
               }
 
               @media only screen and (max-width: 25em) {
@@ -262,12 +245,8 @@
             color: #6b6b83;
             line-height: 1.3;
 
-            @include xl {
-              font-size: 2.5rem;
-            }
-
             @media only screen and (max-width: 56.25em) {
-              font-size: 2.8125rem;
+              font-size: 2.3rem;
             }
 
             @media only screen and (max-width: 37.5em) {
@@ -287,12 +266,8 @@
             color: $clr-gray-dark;
             font-size: 1.3rem;
 
-            @include xl {
-              font-size: 1.44445rem;
-            }
-
             @media only screen and (max-width: 56.25em) {
-              font-size: 1.625rem;
+              font-size: 1.35rem;
             }
 
             @media only screen and (min-width: 112.5em) {
@@ -335,19 +310,13 @@
               padding-top: 0.8rem;
               z-index: 1;
 
-              @include xl {
-                font-size: 1.55555rem;
-                padding-top: 0.888889rem;
-              }
-
               @media only screen and (max-width: 56.25em) {
-                font-size: 1.75rem;
+                font-size: 1.45rem;
                 padding-top: 1rem;
               }
 
               @include sm {
                 font-weight: 500;
-                font-size: 1.625rem;
               }
 
               @media only screen and (min-width: 112.5em) {
@@ -372,19 +341,9 @@
                 border-radius: 50%;
                 box-sizing: border-box;
 
-                @include xl {
-                  width: 3.556rem;
-                  height: 3.556rem;
-                }
-
                 @media only screen and (max-width: 56.25em) {
-                  width: 4rem;
-                  height: 4rem;
-                }
-
-                @include sm {
-                  width: 3.75rem;
-                  height: 3.75rem;
+                  width: 3.25rem;
+                  height: 3.25rem;
                 }
 
                 @media only screen and (min-width: 112.5em) {
@@ -447,7 +406,7 @@
           color: $clr-gray-dark;
 
           @media only screen and (max-width: 56.25em) {
-            font-size: 1.625rem;
+            font-size: 1.35rem;
           }
 
           @media only screen and (min-width: 112.5em) {
