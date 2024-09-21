@@ -174,10 +174,16 @@
         form {
           display: flex;
           align-items: center;
-          justify-content: space-between;
+          justify-content: center;
+          gap: 1.6rem;
 
           @include md {
             display: none;
+          }
+
+          @media only screen and (min-width: 112.5em) {
+            justify-content: space-between;
+            gap: 0;
           }
 
           input {
