@@ -87,14 +87,6 @@
         font-size: 2rem;
       }
 
-      &.orderStatus {
-        background-color: $clr-tertiary;
-      }
-
-      &.orderDelivered {
-        background-color: rgba(40, 167, 69, 0.1);
-      }
-
       &.orderNotPaid {
         background-color: rgba(255, 99, 71, 0.25);
       }
@@ -133,7 +125,14 @@
         a,
         a:link,
         a:visited {
+          text-transform: uppercase;
           color: inherit;
+          transition: all 0.3s;
+
+          &:hover {
+            text-decoration: underline;
+            text-underline-offset: 0.5rem;
+          }
         }
 
         &.orderName {
@@ -227,8 +226,11 @@
             align-items: center;
             justify-content: center;
 
-            all: unset;
-            padding: 0.5rem 0.8rem;
+            border: none;
+            outline: none;
+            width: 4rem;
+            height: 3.7rem;
+            padding: 1rem;
             background-color: $clr-primary;
             color: $clr-white;
             border-radius: 0.5rem;
