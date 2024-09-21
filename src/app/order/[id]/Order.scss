@@ -201,8 +201,12 @@
             span,
             time {
               display: inline-block;
+              text-overflow: ellipsis;
+              text-rendering: optimizeLegibility;
+              white-space: nowrap;
               font-size: 1.3rem;
               color: $clr-gray-dark;
+              overflow: hidden;
 
               @include xl {
                 font-size: 1.44445rem;
