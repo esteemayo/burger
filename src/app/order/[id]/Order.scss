@@ -100,10 +100,6 @@
             border-top: 1px solid $line;
             border-bottom: 1px solid $line;
 
-            @media only screen and (max-width: 56.25em) {
-              width: 32rem;
-            }
-
             @include sm {
               width: 25rem;
             }
@@ -140,7 +136,7 @@
             margin-bottom: 1rem;
 
             @media only screen and (max-width: 56.25em) {
-              width: 18.75rem;
+              width: 17rem;
             }
 
             @media only screen and (max-width: 25em) {
