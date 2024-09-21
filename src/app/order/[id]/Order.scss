@@ -16,6 +16,10 @@
     @media only screen and (max-width: 37.5em) {
       padding: 8rem 3rem;
     }
+    
+    @media only screen and (min-width: 112.5em) {
+      width: 130rem;
+    }
 
     .orderBox {
       width: 51rem;
@@ -57,7 +61,7 @@
       }
 
       @media only screen and (min-width: 112.5em) {
-        width: 65rem;
+        width: 70rem;
       }
 
       .orderDetail {
@@ -98,7 +102,7 @@
           }
 
           @media only screen and (min-width: 112.5em) {
-            font-size: 3.7rem;
+            font-size: 4rem;
           }
 
           &::after {
@@ -131,7 +135,7 @@
             }
 
             @media only screen and (min-width: 112.5em) {
-              width: 32rem;
+              width: 35rem;
             }
           }
         }
