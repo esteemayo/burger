@@ -1,12 +1,16 @@
+import { useCallback } from 'react';
+
 import { TableHeadProps } from '@/types';
 
 import './Table.scss';
-import { useMemo } from 'react';
 
 const TableHead = ({ columns, isAdmin }: TableHeadProps) => {
-  const headerClasses = useMemo(() => {
-    return !!isAdmin ? 'tableHead hide' : 'tableHead';
-  }, [isAdmin]);
+  const headerClasses = useCallback(
+    (path: string) => {
+      return !!isAdmin ? `${path} hide` : path;
+    },
+    [isAdmin]
+  );
 
   return (
     <thead>
@@ -14,7 +18,7 @@ const TableHead = ({ columns, isAdmin }: TableHeadProps) => {
         {columns.map((column) => {
           const { path, label } = column;
           return (
-            <th key={path} className={headerClasses}>
+            <th key={path} className={headerClasses(path)}>
               {label}
             </th>
           );
