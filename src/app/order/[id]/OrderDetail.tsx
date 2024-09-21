@@ -15,7 +15,7 @@ const OrderDetail = ({ user, order }: OrderDetailProps) => {
       <div className='orderContainer'>
         <div className='orderItem'>
           <h3>Order ID</h3>
-          <span className='orderId'>#{excerpts(order?.id, 7)}</span>
+          <span className='orderId'>#{order?.id}</span>
         </div>
         <div className='orderItem'>
           <h3>Ship Date</h3>
@@ -23,11 +23,11 @@ const OrderDetail = ({ user, order }: OrderDetailProps) => {
         </div>
         <div className='orderItem'>
           <h3>Customer</h3>
-          <span>{excerpts(user?.name, 10)}</span>
+          <span>{user?.name}</span>
         </div>
         <div className='orderItem'>
           <h3>Shipping To</h3>
-          <span>{excerpts(user?.address, 15)}</span>
+          <span>{user?.address}</span>
         </div>
         <div className='orderItem'>
           <h3>Total</h3>
