@@ -56,9 +56,9 @@ const TableBody = ({
               })}
             </td>
             {!isAdmin ? (
-              <td>{orderStatus(status)}</td>
+              <td className='userStatus'>{orderStatus(status)}</td>
             ) : (
-              <td>
+              <td className='adminStatus'>
                 <StatusForm actionId={id} status={orderStatus(status)} />
                 {dimension <= 768 && (
                   <div className='statusContainer'>
