@@ -28,18 +28,12 @@
       box-shadow: $box-shadow;
       border-radius: 1.5rem;
 
-      @include xl {
-        width: 55.556rem;
-        padding: 2.22222rem;
-      }
-
       @media only screen and (max-width: 56.25em) {
-        width: 63.75rem;
-        padding: 2.5rem;
+        width: 60rem;
+        padding: 2.25rem;
       }
 
       @media only screen and (max-width: 37.5em) {
-        width: 60rem;
         padding: 1.5rem;
       }
 
