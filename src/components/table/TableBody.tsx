@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useCallback } from 'react';
+import { useCallback, useMemo } from 'react';
 
 import { formatDate } from '@/utils/formatDate';
 import { excerpts } from '@/utils';
@@ -30,12 +30,19 @@ const TableBody = ({
       : 'orderDelivered';
   }, []);
 
+  const userStatusClasses = useMemo(() => {
+    return isAdmin ? 'adminRow hide' : 'adminRow';
+  }, [isAdmin]);
+
   return (
     <tbody>
       {data?.map((item) => {
         const { id, price, status, products, createdAt } = item;
         return (
-          <tr key={id} className={statusClasses(status)}>
+          <tr
+            key={id}
+            className={`${statusClasses(status)} ${userStatusClasses}`}
+          >
             <td>
               <Link href={`/order/${encodeURIComponent(id)}`}>
                 #{excerpts(id, 10)}
