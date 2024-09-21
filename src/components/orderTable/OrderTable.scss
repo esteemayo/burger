@@ -162,6 +162,16 @@
           }
         }
 
+        &.userStatus {
+          @media only screen and (max-width: 25em) {
+            display: none;
+          }
+
+          @media only screen and (max-width: 18.75em) {
+            display: block;
+          }
+        }
+
         form {
           display: flex;
           align-items: center;
