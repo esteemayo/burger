@@ -30,8 +30,8 @@ const TableBody = ({
       : 'orderDelivered';
   }, []);
 
-  const userStatusClasses = useMemo(() => {
-    return isAdmin ? 'adminRow hide' : 'adminRow';
+  const productClasses = useMemo(() => {
+    return !isAdmin ? 'orderName' : 'orderName hide';
   }, [isAdmin]);
 
   return (
@@ -39,10 +39,7 @@ const TableBody = ({
       {data?.map((item) => {
         const { id, price, status, products, createdAt } = item;
         return (
-          <tr
-            key={id}
-            className={`${statusClasses(status)} ${userStatusClasses}`}
-          >
+          <tr key={id} className={statusClasses(status)}>
             <td>
               <Link href={`/order/${encodeURIComponent(id)}`}>
                 #{excerpts(id, 10)}
@@ -52,7 +49,7 @@ const TableBody = ({
               <time dateTime={createdAt}>{formatDate(createdAt)}</time>
             </td>
             <td>{formatCurrency(price)}</td>
-            <td className='orderName'>
+            <td className={productClasses}>
               {products?.map((product) => {
                 const { id, name } = product;
                 return (
