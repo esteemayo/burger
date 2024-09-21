@@ -274,7 +274,7 @@
             }
 
             @media only screen and (min-width: 112.5em) {
-              font-size: 2.8rem;
+              font-size: 3rem;
             }
           }
 
@@ -291,7 +291,7 @@
             }
 
             @media only screen and (min-width: 112.5em) {
-              font-size: 1.7rem;
+              font-size: 1.9rem;
             }
 
             b {
@@ -346,8 +346,8 @@
               }
 
               @media only screen and (min-width: 112.5em) {
-                font-size: 1.8rem;
-                padding-top: 2.5rem;
+                font-size: 2rem;
+                padding-top: 3.5rem;
               }
 
               &::before {
@@ -383,8 +383,8 @@
                 }
 
                 @media only screen and (min-width: 112.5em) {
-                  width: 5rem;
-                  height: 5rem;
+                  width: 6rem;
+                  height: 6rem;
                 }
               }
             }
@@ -429,7 +429,8 @@
               height: 4px;
 
               @media only screen and (min-width: 112.5em) {
-                top: -0.8rem;
+                left: -50%;
+                top: -4px;
               }
             }
           }
@@ -448,7 +449,7 @@
           }
 
           @media only screen and (min-width: 112.5em) {
-            font-size: 1.7rem;
+            font-size: 1.9rem;
           }
         }
       }
