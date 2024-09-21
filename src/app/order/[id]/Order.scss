@@ -436,6 +436,7 @@
               @media only screen and (min-width: 112.5em) {
                 left: -50%;
                 top: -4px;
+                height: 0.5rem;
               }
             }
           }
@@ -444,10 +445,6 @@
         .brand {
           font-size: 1.3rem;
           color: $clr-gray-dark;
-
-          @include xl {
-            font-size: 1.44445rem;
-          }
 
           @media only screen and (max-width: 56.25em) {
             font-size: 1.625rem;
