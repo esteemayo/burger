@@ -13,13 +13,7 @@ import { StatusType, TableBodyProps } from '@/types';
 
 import './Table.scss';
 
-const TableBody = ({
-  data,
-  isAdmin,
-  dimension,
-  orderStatus,
-  onClick,
-}: TableBodyProps) => {
+const TableBody = ({ data, isAdmin, orderStatus, onClick }: TableBodyProps) => {
   const statusClasses = useCallback((status: StatusType) => {
     return status === 'not paid'
       ? 'orderNotPaid'
@@ -64,19 +58,17 @@ const TableBody = ({
             ) : (
               <td className='adminStatus'>
                 <StatusForm actionId={id} status={orderStatus(status)} />
-                {dimension <= 768 && (
-                  <div className='statusContainer'>
-                    {orderStatus(status)}
-                    <button type='button' onClick={(e) => onClick(e, item)}>
-                      <Image
-                        src='/svg/edit.svg'
-                        width={20}
-                        height={20}
-                        alt='edit icon'
-                      />
-                    </button>
-                  </div>
-                )}
+                <div className='statusContainer'>
+                  {orderStatus(status)}
+                  <button type='button' onClick={(e) => onClick(e, item)}>
+                    <Image
+                      src='/svg/edit.svg'
+                      width={20}
+                      height={20}
+                      alt='edit icon'
+                    />
+                  </button>
+                </div>
               </td>
             )}
           </tr>
