@@ -150,9 +150,15 @@
               width: 18rem;
             }
 
-            @media only screen and (max-width: 18.75em) {
+            @media only screen and (max-width: 21.5em) {
               width: 100%;
 
+              &:not(:last-child) {
+                margin-bottom: 1.5rem;
+              }
+            }
+
+            @media only screen and (max-width: 18.75em) {
               &:not(:last-child) {
                 margin-bottom: 2rem;
               }
@@ -174,6 +180,10 @@
               }
 
               @include sm {
+                font-weight: 500;
+              }
+
+              @media only screen and (max-width: 21.5em) {
                 font-weight: 500;
               }
 
