@@ -220,17 +220,9 @@
         border: 0.1px solid $line;
         opacity: 0.3;
         margin: 1.5rem 0;
-
-        @media only screen and (max-width: 26.875em) {
-          display: none;
-        }
       }
 
       .orderStatus {
-        @media only screen and (max-width: 26.875em) {
-          display: none;
-        }
-
         .orderWrap {
           margin-bottom: 1rem;
 
@@ -282,6 +274,10 @@
           width: 100%;
           display: flex;
           margin-bottom: 2rem;
+
+          @media only screen and (max-width: 26.875em) {
+            display: none;
+          }
 
           li {
             display: inline-block;
