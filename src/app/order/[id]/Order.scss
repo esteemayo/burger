@@ -281,12 +281,24 @@
             span {
               font-size: 1.35rem;
 
-              &:first-child {
+              .statusText {
                 font-weight: 600;
                 color: #6b6b83;
               }
 
-              &:last-child {
+              .notPaid {
+                color: $error;
+              }
+
+              .preparing {
+                color: rgb(241, 207, 128, 0.94);
+              }
+
+              .onTheWay {
+                color: $clr-yellow;
+              }
+
+              .delivered {
                 color: $clr-green;
               }
             }
