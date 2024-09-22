@@ -18,7 +18,9 @@ const OrderDetail = ({ user, order }: OrderDetailProps) => {
         </div>
         <div className='orderItem'>
           <h3>Ship Date</h3>
-          <time dateTime={order.createdAt}>{formatDate(order?.createdAt)}</time>
+          <time dateTime={order?.createdAt}>
+            {formatDate(order?.createdAt)}
+          </time>
         </div>
         <div className='orderItem'>
           <h3>Customer</h3>
