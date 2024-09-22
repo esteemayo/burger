@@ -29,6 +29,7 @@
       border-radius: 1.5rem;
 
       @media only screen and (max-width: 37.5em) {
+        width: 50rem;
         padding: 1.5rem;
       }
 
@@ -95,8 +96,8 @@
             border-top: 1px solid $line;
             border-bottom: 1px solid $line;
 
-            @include sm {
-              width: 25rem;
+            @media only screen and (max-width: 37.5em) {
+              width: 23rem;
             }
 
             @media only screen and (max-width: 26.875em) {
