@@ -278,29 +278,33 @@
               gap: 1rem;
             }
 
-            span {
+            .statusText {
+              font-weight: 600;
               font-size: 1.35rem;
+              color: #6b6b83;
+            }
 
-              .statusText {
-                font-weight: 600;
-                color: #6b6b83;
-              }
+            .notPaid,
+            .preparing,
+            .onTheWay,
+            .delivered {
+              font-size: 1.35rem;
+            }
 
-              .notPaid {
-                color: $error;
-              }
+            .notPaid {
+              color: $clr-primary;
+            }
 
-              .preparing {
-                color: rgb(241, 207, 128, 0.94);
-              }
+            .preparing {
+              color: rgb(241, 207, 128, 0.94);
+            }
 
-              .onTheWay {
-                color: $clr-yellow;
-              }
+            .onTheWay {
+              color: $clr-yellow;
+            }
 
-              .delivered {
-                color: $clr-green;
-              }
+            .delivered {
+              color: $clr-green;
             }
           }
         }
