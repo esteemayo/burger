@@ -793,7 +793,6 @@ export interface TableProps {
   data: OrderItem[];
   columns: ColumnType;
   isAdmin: Boolean | undefined;
-  dimension: number;
   orderStatus(status: StatusType): string;
   onClick(e: React.MouseEvent<HTMLButtonElement>, order: OrderItem): void;
 }
@@ -806,7 +805,6 @@ export interface TableHeadProps {
 export interface TableBodyProps {
   data: OrderItem[];
   isAdmin: Boolean | undefined;
-  dimension: number;
   orderStatus(status: StatusType): string;
   onClick(e: React.MouseEvent<HTMLButtonElement>, order: OrderItem): void;
 }

@@ -19,7 +19,6 @@ const Table = ({
       <TableBody
         data={data}
         isAdmin={isAdmin}
-        dimension={dimension}
         orderStatus={orderStatus}
         onClick={onClick}
       />
