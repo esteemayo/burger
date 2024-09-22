@@ -126,8 +126,12 @@
         a:link,
         a:visited {
           text-transform: uppercase;
+          text-overflow: ellipsis;
+          text-rendering: optimizeLegibility;
+          white-space: nowrap;
           color: inherit;
           transition: all 0.3s;
+          overflow: hidden;
 
           &:hover {
             text-decoration: underline;
