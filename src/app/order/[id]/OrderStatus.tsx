@@ -26,6 +26,13 @@ const OrderStatus = ({ createdAt, status }: OrderStatusProps) => {
     return `${status === 'delivered' ? 'Delivered' : 'Arrives'} between `;
   }, [status]);
 
+  const statusText = useMemo(() => {
+    if (status === 'not paid') return 'Order confirmed';
+    if (status === 'preparing') return 'Start Production';
+    if (status === 'on the way') return 'Dispatched item';
+    if (status === 'delivered') return 'Product delivered';
+  }, [status]);
+
   return (
     <div className='orderStatus'>
       <div className='orderWrap'>
@@ -38,7 +45,7 @@ const OrderStatus = ({ createdAt, status }: OrderStatusProps) => {
         </p>
         <div className='orderStatusText'>
           <span>Status:</span>
-          <span>Product delivered</span>
+          <span>{statusText}</span>
         </div>
       </div>
       <ul className='stepper'>
