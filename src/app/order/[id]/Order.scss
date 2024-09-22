@@ -90,16 +90,11 @@
             font-size: 2.85rem;
           }
 
-          @include sm {
-            font-weight: 500;
-          }
-
           @media only screen and (max-width: 26.875em) {
             font-size: 2.5rem;
           }
 
           @media only screen and (max-width: 21.5em) {
-            font-weight: 600;
             font-size: 2.25rem;
           }
 
@@ -189,14 +184,6 @@
                 font-size: 1.45rem;
               }
 
-              @include sm {
-                font-weight: 500;
-              }
-
-              @media only screen and (max-width: 21.5em) {
-                font-weight: 600;
-              }
-
               @media only screen and (min-width: 112.5em) {
                 font-size: 2rem;
               }
@@ -266,10 +253,6 @@
               font-size: 2.25rem;
             }
 
-            @include sm {
-              font-weight: 500;
-            }
-
             @media only screen and (min-width: 112.5em) {
               font-size: 3rem;
             }
@@ -326,10 +309,6 @@
               @media only screen and (max-width: 56.25em) {
                 font-size: 1.45rem;
                 padding-top: 1rem;
-              }
-
-              @include sm {
-                font-weight: 500;
               }
 
               @media only screen and (min-width: 112.5em) {
