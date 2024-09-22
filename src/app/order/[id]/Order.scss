@@ -267,6 +267,21 @@
               }
             }
           }
+
+          .orderStatusText {
+            display: none;
+            margin: 1rem 0;
+
+            @media only screen and (max-width: 26.875em) {
+              display: block;
+            }
+
+            span {
+              font-weight: 600;
+              font-size: 1.35rem;
+              color: $clr-green;
+            }
+          }
         }
 
         .stepper {
