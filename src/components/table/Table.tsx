@@ -9,7 +9,6 @@ const Table = ({
   data,
   columns,
   isAdmin,
-  dimension,
   orderStatus,
   onClick,
 }: TableProps) => {
