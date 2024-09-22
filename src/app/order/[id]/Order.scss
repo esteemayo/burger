@@ -21,6 +21,10 @@
       width: 45rem;
     }
 
+    @media only screen and (max-width: 26.875em) {
+      width: 40rem;
+    }
+
     @media only screen and (min-width: 112.5em) {
       width: 130rem;
     }
@@ -42,7 +46,10 @@
       }
 
       @media only screen and (max-width: 26.875em) {
-        width: 45rem;
+        width: 40rem;
+      }
+
+      @media only screen and (max-width: 26.875em) {
         padding: 1rem;
       }
 
@@ -79,7 +86,7 @@
             font-weight: 500;
           }
 
-          @media only screen and (max-width: 25em) {
+          @media only screen and (max-width: 26.875em) {
             font-size: 2.5rem;
           }
 
@@ -109,7 +116,7 @@
             }
 
             @media only screen and (max-width: 26.875em) {
-              width: 20rem;
+              width: 16rem;
             }
 
             @media only screen and (max-width: 25em) {
