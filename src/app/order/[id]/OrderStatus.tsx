@@ -36,6 +36,9 @@ const OrderStatus = ({ createdAt, status }: OrderStatusProps) => {
             {startTime} - {endTime}
           </b>
         </p>
+        <div className='orderStatusText'>
+          <span>Product delivered</span>
+        </div>
       </div>
       <ul className='stepper'>
         <li className={statusClass(0)}>
