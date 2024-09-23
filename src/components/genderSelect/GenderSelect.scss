@@ -17,16 +17,8 @@
     font-weight: 500;
     font-size: 1.5rem;
 
-    @include xl {
-      font-size: 1.666665rem;
-    }
-
     @media only screen and (max-width: 56.25em) {
-      font-size: 1.875rem;
-    }
-
-    @include sm {
-      font-size: 1.65rem;
+      font-size: 1.55rem;
     }
 
     @media only screen and (min-width: 112.5em) {
@@ -48,16 +40,8 @@
     border-radius: 0.5rem;
     box-shadow: inset $box-shadow;
 
-    @include xl {
-      font-size: 1.777778rem;
-    }
-
     @media only screen and (max-width: 56.25em) {
-      font-size: 1.85rem;
-    }
-
-    @include md {
-      font-size: 1.975rem;
+      font-size: 1.65rem;
     }
 
     @media only screen and (min-width: 112.5em) {
@@ -69,12 +53,8 @@
       color: inherit;
       font-size: 1.5rem;
 
-      @include xl {
-        font-size: 1.666665rem;
-      }
-
-      @include md {
-        font-size: 1.875rem;
+      @media only screen and (max-width: 56.25em) {
+        font-size: 1.55rem;
       }
 
       @media only screen and (max-width: 23.4375em) {
