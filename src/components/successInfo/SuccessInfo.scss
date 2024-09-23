@@ -119,11 +119,7 @@
           font-size: 2.5rem;
 
           @media only screen and (max-width: 56.25em) {
-            font-size: 3rem;
-          }
-
-          @include sm {
-            font-size: 2.75rem;
+            font-size: 2.55rem;
           }
 
           @media only screen and (max-width: 25em) {
