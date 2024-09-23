@@ -18,7 +18,6 @@
     padding: 2rem;
 
     h2 {
-      text-transform: uppercase;
       font-weight: 600;
       font-size: 1.4rem;
       line-height: 1.4;
@@ -49,10 +48,6 @@
         }
 
         @include lg {
-          width: 80%;
-        }
-
-        @media only screen and (max-width: 56.25em) {
           width: 80%;
         }
 

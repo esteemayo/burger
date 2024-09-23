@@ -31,7 +31,7 @@ const SuccessDetails = ({ order }: SuccessDetailsProps) => {
     <div className='successDetails'>
       <div className='detailWrap'>
         <h2>Order detail</h2>
-        <span>#{excerpts(order?.id, 8)}</span>
+        <span>#{order?.id}</span>
       </div>
       {contactDetails.map((item) => {
         const { id, icon, label, email, phone, address } = item;
@@ -79,10 +79,10 @@ const SuccessDetails = ({ order }: SuccessDetailsProps) => {
           {summaryItems.map((item) => {
             const { id, label } = item;
             return (
-            <div key={id} className='summary'>
-              <span>{label}</span>
-              <span>{formatCurrency(order?.price)}</span>
-            </div>
+              <div key={id} className='summary'>
+                <span>{label}</span>
+                <span>{formatCurrency(order?.price)}</span>
+              </div>
             );
           })}
         </div>
