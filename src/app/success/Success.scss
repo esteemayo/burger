@@ -7,14 +7,14 @@
 
   .container {
     width: 144rem;
-    padding: 8rem 1.2rem;
+    padding: 8rem 0;
 
     @include lg {
       padding: 8rem 3rem;
     }
 
     @media only screen and (min-width: 112.5em) {
-      padding: 10rem 1.2rem;
+      padding: 10rem 0;
     }
 
     .wrapper {
