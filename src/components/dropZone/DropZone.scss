@@ -38,6 +38,10 @@
       height: 13.25rem;
     }
 
+    @include sm {
+      width: 8rem;
+    }
+
     @media only screen and (min-width: 112.5em) {
       height: 20.65rem;
     }
