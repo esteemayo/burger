@@ -17,16 +17,8 @@
     font-weight: 500;
     font-size: 1.5rem;
 
-    @include xl {
-      font-size: 1.666665rem;
-    }
-
     @media only screen and (max-width: 56.25em) {
-      font-size: 1.875rem;
-    }
-
-    @include sm {
-      font-size: 1.65rem;
+      font-size: 1.55rem;
     }
 
     @media only screen and (min-width: 112.5em) {
@@ -42,12 +34,8 @@
     cursor: pointer;
     animation: pulse 2s linear infinite;
 
-    @include xl {
-      height: 15rem;
-    }
-
     @media only screen and (max-width: 56.25em) {
-      height: 15.5rem;
+      height: 13rem;
     }
 
     @include md {
@@ -72,16 +60,8 @@
         font-size: 1.5rem;
         color: $clr-gray-dark;
 
-        @include lg {
-          font-size: 1.67rem;
-        }
-
         @media only screen and (max-width: 56.25em) {
-          font-size: 1.75rem;
-        }
-
-        @media only screen and (max-width: 28.125em) {
-          font-size: 1.65rem;
+          font-size: 1.55rem;
         }
 
         @media only screen and (max-width: 25em) {
