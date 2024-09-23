@@ -289,10 +289,13 @@
             .onTheWay,
             .delivered {
               font-size: 1.35rem;
+              padding: 4px;
+              border-radius: 0.5rem;
             }
 
             .notPaid {
               color: $clr-primary;
+              background-color: #ff001836;
             }
 
             .preparing {
