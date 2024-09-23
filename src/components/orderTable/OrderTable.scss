@@ -89,18 +89,22 @@
 
       &.orderNotPaid {
         background-color: rgba(255, 99, 71, 0.25);
+        background-color: rgb(255, 0, 24, 0.15);
       }
 
       &.orderPreparing {
         background-color: $clr-tertiary;
+        background-color: rgb(241, 207, 128, 0.18);
       }
 
       &.orderOntheway {
         background-color: rgba(250, 175, 0, 0.25);
+        background-color: #ffc04345;
       }
 
       &.orderDelivered {
         background-color: rgba(40, 167, 69, 0.25);
+        background-color: #28a74545;
       }
 
       td {
