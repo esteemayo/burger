@@ -37,6 +37,8 @@
       @include lg {
         flex-direction: column;
         gap: 7rem;
+        background-color: transparent;
+        box-shadow: none;
       }
     }
   }

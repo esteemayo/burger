@@ -7,6 +7,8 @@
 
   @include lg {
     width: 100%;
+    background-color: #fbfbfc;
+    box-shadow: $box-shadow;
   }
 
   .detailWrap {
