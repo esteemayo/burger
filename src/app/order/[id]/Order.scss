@@ -305,10 +305,12 @@
 
             .onTheWay {
               color: $clr-yellow;
+              background-color: #ffc04345;
             }
 
             .delivered {
               color: $clr-green;
+              background-color: #28a74545;
             }
           }
         }
