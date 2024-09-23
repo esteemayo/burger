@@ -9,6 +9,10 @@
     width: 144rem;
     padding: 8rem 0;
 
+    @include xxl {
+      width: 125rem;
+    }
+
     @include lg {
       padding: 8rem 3rem;
     }
