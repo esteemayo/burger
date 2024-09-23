@@ -13,6 +13,10 @@
       width: 120rem;
     }
 
+    @media only screen and (max-width: 68.75em) {
+      width: 105rem;
+    }
+
     @include lg {
       padding: 8rem 3rem;
     }
@@ -30,7 +34,7 @@
       border-radius: 0.5rem;
       overflow: hidden;
 
-      @media only screen and (max-width: 56.25em) {
+      @include lg {
         flex-direction: column;
       }
     }
