@@ -7,8 +7,8 @@
 
   @include lg {
     width: 100%;
+    padding: 0.5rem;
     background-color: #fbfbfc;
-    box-shadow: $box-shadow;
   }
 
   .detailWrap {
@@ -46,6 +46,10 @@
 
         @include xxl {
           width: 50%;
+        }
+
+        @include {
+          width: 80%;
         }
 
         @media only screen and (max-width: 56.25em) {
