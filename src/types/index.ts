@@ -834,6 +834,7 @@ type OrderDetailType = {
   id: string;
   price: number;
   createdAt: string;
+  updatedAt: string;
 };
 
 export interface OrderDetailProps {
