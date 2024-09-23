@@ -4,12 +4,12 @@
 .successInfo {
   flex: 3;
 
-  @media only screen and (max-width: 62.5em) {
-    flex: 2.25;
+  @include lg {
+    width: 100%;
   }
 
-  @media only screen and (max-width: 56.25em) {
-    width: 100%;
+  @media only screen and (max-width: 62.5em) {
+    flex: 2.25;
   }
 
   .successWrap {
