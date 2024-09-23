@@ -102,10 +102,6 @@
           font-weight: 400;
           font-size: 2rem;
 
-          @include lg {
-            font-size: 2.22222rem;
-          }
-
           @media only screen and (max-width: 56.25em) {
             font-size: 2.5rem;
           }
@@ -123,7 +119,7 @@
           }
 
           @media only screen and (min-width: 112.5em) {
-            font-size: 3rem;
+            font-size: 3.2rem;
           }
         }
 
@@ -132,12 +128,8 @@
           font-weight: 500;
           font-size: 2.5rem;
 
-          @include xl {
-            font-size: 2.77778rem;
-          }
-
           @media only screen and (max-width: 56.25em) {
-            font-size: 3.125rem;
+            font-size: 3rem;
           }
 
           @include sm {
@@ -157,23 +149,19 @@
           }
 
           @media only screen and (min-width: 112.5em) {
-            font-size: 3.5rem;
+            font-size: 3.7rem;
           }
         }
 
         .successText {
           font-size: 1.3rem;
 
-          @include xl {
-            font-size: 1.44444rem;
-          }
-
           @media only screen and (max-width: 56.25em) {
-            font-size: 1.625rem;
+            font-size: 1.35rem;
           }
 
           @media only screen and (min-width: 112.5em) {
-            font-size: 2rem;
+            font-size: 2.2rem;
           }
         }
       }
@@ -200,16 +188,12 @@
         color: $clr-gray-dark;
         margin-bottom: 3rem;
 
-        @include xl {
-          font-size: 1.44444rem;
-        }
-
         @media only screen and (max-width: 56.25em) {
-          font-size: 1.625rem;
+          font-size: 1.35rem;
         }
 
         @media only screen and (min-width: 112.5em) {
-          font-size: 2rem;
+          font-size: 2.2rem;
         }
 
         time {
@@ -240,26 +224,17 @@
             padding-top: 0.8rem;
             z-index: 1;
 
-            @include xl {
-              font-size: 1.77778rem;
-            }
-
             @media only screen and (max-width: 56.25em) {
-              font-size: 2rem;
+              font-size: 1.65rem;
               padding-top: 1rem;
             }
 
-            @media only screen and (max-width: 37.5em) {
-              font-size: 1.75rem;
-            }
-
             @include sm {
-              font-size: 1.625rem;
               padding-top: 1.5rem;
             }
 
             @media only screen and (min-width: 112.5em) {
-              font-size: 2.125rem;
+              font-size: 2.2rem;
               padding-top: 3rem;
             }
 
@@ -279,11 +254,6 @@
               margin: auto;
               border-radius: 50%;
               box-sizing: border-box;
-
-              @include xl {
-                width: 3.5558rem;
-                height: 3.5558rem;
-              }
 
               @media only screen and (max-width: 56.25em) {
                 width: 4rem;
