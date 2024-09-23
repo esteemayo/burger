@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useCallback, useMemo } from 'react';
 
 import { formatDate } from '@/utils/formatDate';
+import { excerpts } from '@/utils';
 import { formatCurrency } from '@/utils/formatCurrency';
 
 import StatusForm from '../statusForm/StatusForm';
@@ -34,7 +35,9 @@ const TableBody = ({ data, isAdmin, orderStatus, onClick }: TableBodyProps) => {
         return (
           <tr key={id} className={statusClasses(status)}>
             <td>
-              <Link href={`/order/${encodeURIComponent(id)}`}>#{id}</Link>
+              <Link href={`/order/${encodeURIComponent(id)}`}>
+                #{excerpts(id, 10)}
+              </Link>
             </td>
             <td>
               <time dateTime={createdAt}>{formatDate(createdAt)}</time>
