@@ -12,16 +12,8 @@
   border-radius: 0.5rem;
   cursor: pointer;
 
-  @include lg {
-    font-size: 1.45rem;
-  }
-
   @media only screen and (max-width: 56.25em) {
-    font-size: 1.56rem;
-  }
-
-  @include md {
-    font-size: 1.625rem;
+    font-size: 1.4rem;
   }
 
   @media only screen and (min-width: 112.5em) {
@@ -81,14 +73,9 @@
     display: block;
     object-fit: cover;
 
-    @include lg {
-      width: 1.67rem;
-      height: 1.67rem;
-    }
-
-    @include md {
-      width: 1.875rem;
-      height: 1.875rem;
+    @media only screen and (max-width: 56.25em) {
+      width: 1.55rem;
+      height: 1.55rem;
     }
 
     @media only screen and (min-width: 112.5em) {
