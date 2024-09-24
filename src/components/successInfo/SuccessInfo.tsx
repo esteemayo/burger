@@ -50,7 +50,7 @@ const SuccessInfo = ({ order }: SuccessInfoProps) => {
         </div>
         <div className='orderStatus'>
           <p>
-            Order was placed on{' '}
+            Order <span id={order?.id}></span> was placed on{' '}
             <time dateTime={order?.createdAt}>
               {order?.createdAt && formatDate(order.createdAt)}
             </time>{' '}
