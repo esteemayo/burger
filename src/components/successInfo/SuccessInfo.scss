@@ -176,6 +176,10 @@
 
         span {
           display: block;
+
+          @media only screen and (max-width: 24.375em) {
+            display: inline-block;
+          }
         }
 
         time {
@@ -187,6 +191,10 @@
         list-style: none;
         width: 100%;
         display: flex;
+
+        @media only screen and (max-width: 24.375em) {
+          display: none;
+        }
 
         li {
           display: inline-block;
