@@ -325,6 +325,36 @@
           .statusText {
             font-weight: 700;
           }
+
+          .notPaid,
+          .preparing,
+          .onTheWay,
+          .delivered {
+            font-weight: 500;
+            font-size: 1.35rem;
+            padding: 4px;
+            border-radius: 0.5rem;
+          }
+
+          .notPaid {
+            color: $clr-primary;
+            background-color: rgb(255, 0, 24, 0.15);
+          }
+
+          .preparing {
+            color: rgb(241, 207, 128, 0.94);
+            background-color: rgb(241, 207, 128, 0.18);
+          }
+
+          .onTheWay {
+            color: $clr-yellow;
+            background-color: #ffc04345;
+          }
+
+          .delivered {
+            color: $clr-green;
+            background-color: #28a74545;
+          }
         }
       }
 
