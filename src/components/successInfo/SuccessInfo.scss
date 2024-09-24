@@ -309,6 +309,16 @@
         }
       }
 
+      .status {
+        display: none;
+
+        @media only screen and (max-width: 24.375em) {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+        }
+      }
+
       .orderDelivery {
         display: flex;
         align-items: center;
