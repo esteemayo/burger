@@ -34,6 +34,19 @@ const SuccessInfo = ({ order }: SuccessInfoProps) => {
     return `/order/${encodeURIComponent(order?.id)}`;
   }, [order?.id]);
 
+  const statusLabel = useMemo(() => {
+    if (order?.status === 'not paid') return 'Order confirmed';
+    if (order?.status === 'preparing') return 'Start Production';
+    if (order?.status === 'on the way') return 'Dispatched item';
+    if (order?.status === 'delivered') return 'Product delivered';
+  }, [order?.status]);
+
+  const statusClasses = useMemo(() => {
+    if (order?.status === 'not paid') return 'notPaid';
+    if (order?.status === 'on the way') return 'onTheWay';
+    return order?.status;
+  }, [order?.status]);
+
   return (
     <div className='successInfo'>
       <div className='successWrap'>
@@ -72,7 +85,7 @@ const SuccessInfo = ({ order }: SuccessInfoProps) => {
           </ul>
           <div className='status'>
             <span className='statusText'>Status:</span>
-            <span className=''>delivered</span>
+            <span className={statusClasses}>{statusLabel}</span>
           </div>
           <div className='orderDelivery'>
             <span>
