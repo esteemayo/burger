@@ -752,7 +752,7 @@ export const summaryItems: SummaryType = [
   },
 ];
 
-export const orderStatus: OrderStatusType = [
+export const orderSteps: OrderStatusType = [
   {
     index: 0,
     label: 'Order confirmed',
