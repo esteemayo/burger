@@ -8,14 +8,14 @@ import './Status.scss';
 const Status = ({ status, type }: StatusProps) => {
   const { statusClasses, statusLabel } = useStatus(status);
 
-  const orderClasses = useMemo(() => {
-    return type === 'order' ? `${statusClasses} order` : statusClasses;
-  }, [statusClasses, type]);
+  const containerClasses = useMemo(() => {
+    return type === 'order' ? 'status order' : 'status';
+  }, [type]);
 
   return (
-    <div className='status'>
+    <div className={containerClasses}>
       <span className='statusText'>Status:</span>
-      <span className={orderClasses}>{statusLabel}</span>
+      <span className={statusClasses}>{statusLabel}</span>
     </div>
   );
 };
