@@ -10,7 +10,7 @@ export const useStatus = (status: StatusType) => {
 
   const statusIndex = useMemo(() => {
     return statusLists.findIndex((item) => item === status);
-  }, [status]);
+  }, [status, statusLists]);
 
   const statusClass = useCallback(
     (index: number) => {
