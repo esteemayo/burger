@@ -16,7 +16,7 @@ import {
   FeaturesType,
   FooterLinks,
   Menus,
-  OrderStatusType,
+  OrderStepType,
   OrderType,
   ProfileMenu,
   RelatedProductType,
@@ -752,7 +752,7 @@ export const summaryItems: SummaryType = [
   },
 ];
 
-export const orderSteps: OrderStatusType = [
+export const orderSteps: OrderStepType = [
   {
     index: 0,
     label: 'Order confirmed',

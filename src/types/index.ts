@@ -229,7 +229,7 @@ export type ProfileMenu = {
   links: ProfileLink;
 }[];
 
-export type OrderStatusType = {
+export type OrderStepType = {
   index: number;
   label: string;
 }[];
