@@ -5,8 +5,10 @@ import { useMemo } from 'react';
 import Status from '@/components/status/Status';
 
 import { useStatus } from '@/hooks/useStatus';
-import { OrderStatusProps } from '@/types';
 import { formatTime } from '@/utils/formatTime';
+
+import { orderSteps } from '@/data';
+import { OrderStatusProps } from '@/types';
 
 import './Order.scss';
 
@@ -41,18 +43,14 @@ const OrderStatus = ({ createdAt, status }: OrderStatusProps) => {
       </div>
       <Status status={status} type='order' />
       <ul className='stepper'>
-        <li className={statusClass(0)}>
-          <div className='item'>Order confirmed</div>
-        </li>
-        <li className={statusClass(1)}>
-          <div className='item'>Start production</div>
-        </li>
-        <li className={statusClass(2)}>
-          <div className='item'>Dispatched item</div>
-        </li>
-        <li className={statusClass(3)}>
-          <div className='item'>Product delivered</div>
-        </li>
+        {orderSteps.map((item) => {
+          const { index, label } = item;
+          return (
+            <li key={index} className={statusClass(index)}>
+              <div className='item'>{label}</div>
+            </li>
+          );
+        })}
       </ul>
       <span className='brand'>Burger. Inc {orderStatus} your order!</span>
     </div>
