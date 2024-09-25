@@ -9,7 +9,8 @@ import { formatTime } from '@/utils/formatTime';
 import './Order.scss';
 
 const OrderStatus = ({ createdAt, status }: OrderStatusProps) => {
-  const { statusClass } = useStatus(status);
+  const { statusClass, statusClasses, statusLabel, orderStatus } =
+    useStatus(status);
 
   const startTime = useMemo(() => {
     return formatTime(createdAt);
@@ -24,26 +25,6 @@ const OrderStatus = ({ createdAt, status }: OrderStatusProps) => {
 
   const deliveryTime = useMemo(() => {
     return `${status === 'delivered' ? 'Delivered' : 'Arrives'} between `;
-  }, [status]);
-
-  const statusLabel = useMemo(() => {
-    if (status === 'not paid') return 'Order confirmed';
-    if (status === 'preparing') return 'Start Production';
-    if (status === 'on the way') return 'Dispatched item';
-    if (status === 'delivered') return 'Product delivered';
-  }, [status]);
-
-  const statusClasses = useMemo(() => {
-    if (status === 'not paid') return 'notPaid';
-    if (status === 'on the way') return 'onTheWay';
-    return status;
-  }, [status]);
-
-  const orderStatus = useMemo(() => {
-    if (status === 'not paid') return 'has received your order!';
-    if (status === 'preparing') return 'is preparing your order!';
-    if (status === 'on the way') return 'has sent your order!';
-    if (status === 'delivered') return 'has delivered your order!';
   }, [status]);
 
   return (
