@@ -1,6 +1,5 @@
-import { useMemo } from 'react';
-
 import { StatusType } from '@/types';
+import { useStatus } from '@/hooks/useStatus';
 
 import './Status.scss';
 
@@ -9,18 +8,7 @@ interface StatusProps {
 }
 
 const Status = ({ status }: StatusProps) => {
-  const statusLabel = useMemo(() => {
-    if (status === 'not paid') return 'Order confirmed';
-    if (status === 'preparing') return 'Start Production';
-    if (status === 'on the way') return 'Dispatched item';
-    if (status === 'delivered') return 'Product delivered';
-  }, [status]);
-
-  const statusClasses = useMemo(() => {
-    if (status === 'not paid') return 'notPaid';
-    if (status === 'on the way') return 'onTheWay';
-    return status;
-  }, [status]);
+  const { statusClasses, statusLabel } = useStatus(status);
 
   return (
     <div className='status'>

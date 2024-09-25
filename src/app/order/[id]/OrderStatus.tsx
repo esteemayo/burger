@@ -75,7 +75,7 @@ const OrderStatus = ({ createdAt, status }: OrderStatusProps) => {
           <div className='item'>Product delivered</div>
         </li>
       </ul>
-      <span className='brand'>Burger. Inc {orderStatus}</span>
+      <span className='brand'>Burger. Inc {orderStatus} your order!</span>
     </div>
   );
 };
