@@ -35,10 +35,10 @@ export const useStatus = (status: StatusType) => {
   }, [status]);
 
   const orderStatus = useMemo(() => {
-    if (status === 'not paid') return 'has received your order!';
-    if (status === 'preparing') return 'is preparing your order!';
-    if (status === 'on the way') return 'has sent your order!';
-    if (status === 'delivered') return 'has delivered your order!';
+    if (status === 'not paid') return 'has received';
+    if (status === 'preparing') return 'is preparing';
+    if (status === 'on the way') return 'has sent';
+    if (status === 'delivered') return 'has delivered';
   }, [status]);
 
   return {
