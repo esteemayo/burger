@@ -229,6 +229,11 @@ export type ProfileMenu = {
   links: ProfileLink;
 }[];
 
+export type OrderStatusType = {
+  index: number;
+  label: string;
+}[];
+
 export type StatusType = 'not paid' | 'preparing' | 'on the way' | 'delivered';
 
 export type OrderItem = {
