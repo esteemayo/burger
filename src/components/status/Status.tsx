@@ -1,14 +1,9 @@
 import { useMemo } from 'react';
 
-import { StatusType } from '@/types';
+import { StatusProps } from '@/types';
 import { useStatus } from '@/hooks/useStatus';
 
 import './Status.scss';
-
-interface StatusProps {
-  status: StatusType;
-  type?: 'order';
-}
 
 const Status = ({ status, type }: StatusProps) => {
   const { statusClasses, statusLabel } = useStatus(status);

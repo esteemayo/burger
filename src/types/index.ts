@@ -257,6 +257,11 @@ export interface OrderStatusProps {
   status: StatusType;
 }
 
+export interface StatusProps {
+  status: StatusType;
+  type?: 'order';
+}
+
 type AccountCard = {
   id: number;
   count?: number;
