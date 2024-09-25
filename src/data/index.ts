@@ -16,6 +16,7 @@ import {
   FeaturesType,
   FooterLinks,
   Menus,
+  OrderStatusType,
   OrderType,
   ProfileMenu,
   RelatedProductType,
@@ -751,7 +752,7 @@ export const summaryItems: SummaryType = [
   },
 ];
 
-export const orderStatus = [
+export const orderStatus: OrderStatusType = [
   {
     index: 0,
     label: 'Order confirmed',
