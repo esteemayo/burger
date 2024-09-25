@@ -38,8 +38,8 @@ const OrderStatus = ({ createdAt, status }: OrderStatusProps) => {
             {startTime} - {endTime}
           </b>
         </p>
-        <Status status={status} type='order' />
       </div>
+      <Status status={status} type='order' />
       <ul className='stepper'>
         <li className={statusClass(0)}>
           <div className='item'>Order confirmed</div>
