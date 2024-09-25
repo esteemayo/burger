@@ -11,8 +11,7 @@ import { formatTime } from '@/utils/formatTime';
 import './Order.scss';
 
 const OrderStatus = ({ createdAt, status }: OrderStatusProps) => {
-  const { statusClass, statusClasses, statusLabel, orderStatus } =
-    useStatus(status);
+  const { statusClass, orderStatus } = useStatus(status);
 
   const startTime = useMemo(() => {
     return formatTime(createdAt);
@@ -26,7 +25,7 @@ const OrderStatus = ({ createdAt, status }: OrderStatusProps) => {
   }, [createdAt]);
 
   const deliveryTime = useMemo(() => {
-    return `${status === 'delivered' ? 'Delivered' : 'Arrives'} between `;
+    return `${status === 'delivered' ? 'Delivered' : 'Arrives'} between`;
   }, [status]);
 
   return (
@@ -34,7 +33,7 @@ const OrderStatus = ({ createdAt, status }: OrderStatusProps) => {
       <div className='orderWrap'>
         <h2>Preparing your order</h2>
         <p>
-          {deliveryTime}
+          {deliveryTime}{' '}
           <b>
             {startTime} - {endTime}
           </b>
