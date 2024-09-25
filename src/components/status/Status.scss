@@ -58,6 +58,10 @@
     span {
       font-size: 1.35rem;
       color: $clr-gray-dark;
+
+      @media only screen and (max-width: 18.75em) {
+        font-size: 1.2rem;
+      }
     }
 
     .statusText {
@@ -73,6 +77,10 @@
       padding: 4px;
       border-radius: 0.5rem;
       line-height: 1.4;
+
+      @media only screen and (max-width: 18.75em) {
+        font-size: 1.2rem;
+      }
     }
 
     .notPaid {
