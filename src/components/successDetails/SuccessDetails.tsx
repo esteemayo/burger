@@ -3,11 +3,10 @@
 import { useQuery } from '@tanstack/react-query';
 
 import { getUser } from '@/services/userService';
+import { formatCurrency } from '@/utils/formatCurrency';
+
 import { OrderItem } from '@/types';
 import { contactDetails, summaryItems } from '@/data';
-
-import { excerpts } from '@/utils';
-import { formatCurrency } from '@/utils/formatCurrency';
 
 import './SuccessDetails.scss';
 
