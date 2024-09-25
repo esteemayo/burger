@@ -8,6 +8,7 @@ import { useStatus } from '@/hooks/useStatus';
 import { OrderItem } from '@/types';
 import { formatDate } from '@/utils/formatDate';
 
+import Status from '../status/Status';
 import { getUser } from '@/services/userService';
 
 import './SuccessInfo.scss';
@@ -70,6 +71,7 @@ const SuccessInfo = ({ order }: SuccessInfoProps) => {
               <div className='item'>Product delivered</div>
             </li>
           </ul>
+          <Status status={order?.status} />
           <div className='status'>
             <span className='statusText'>Status:</span>
             <span className={statusClasses}>{statusLabel}</span>
