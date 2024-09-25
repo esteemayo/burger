@@ -750,3 +750,22 @@ export const summaryItems: SummaryType = [
     label: 'Delivery',
   },
 ];
+
+export const orderStatus = [
+  {
+    index: 0,
+    label: 'Order confirmed',
+  },
+  {
+    index: 1,
+    label: 'Start production',
+  },
+  {
+    index: 2,
+    label: 'Dispatched item',
+  },
+  {
+    index: 3,
+    label: 'Product delivered',
+  },
+];
