@@ -72,10 +72,6 @@ const SuccessInfo = ({ order }: SuccessInfoProps) => {
             </li>
           </ul>
           <Status status={order?.status} />
-          <div className='status'>
-            <span className='statusText'>Status:</span>
-            <span className={statusClasses}>{statusLabel}</span>
-          </div>
           <div className='orderDelivery'>
             <span>
               Expected delivery date:{' '}
