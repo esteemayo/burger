@@ -2,6 +2,8 @@
 
 import { useMemo } from 'react';
 
+import Status from '@/components/status/Status';
+
 import { useStatus } from '@/hooks/useStatus';
 import { OrderStatusProps } from '@/types';
 import { formatTime } from '@/utils/formatTime';
@@ -37,10 +39,7 @@ const OrderStatus = ({ createdAt, status }: OrderStatusProps) => {
             {startTime} - {endTime}
           </b>
         </p>
-        <div className='orderStatusText'>
-          <span className='statusText'>Status:</span>
-          <span className={statusClasses}>{statusLabel}</span>
-        </div>
+        <Status status={status} type='order' />
       </div>
       <ul className='stepper'>
         <li className={statusClass(0)}>
