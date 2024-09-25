@@ -13,7 +13,7 @@ const Status = ({ status }: StatusProps) => {
   return (
     <div className='status'>
       <span className='statusText'>Status:</span>
-      <span className={statusClasses}>{statusLabel}</span>
+      <span className={`${statusClasses} order`}>{statusLabel}</span>
     </div>
   );
 };
