@@ -31,7 +31,7 @@ const SuccessInfo = ({ order }: SuccessInfoProps) => {
     enabled: !!userId,
   });
 
-  const { statusClass, statusClasses, statusLabel } = useStatus(order?.status);
+  const { statusClass } = useStatus(order?.status);
 
   const url = useMemo(() => {
     return `/order/${encodeURIComponent(order?.id)}`;
