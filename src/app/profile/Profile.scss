@@ -7,7 +7,11 @@
 
   .container {
     width: 144rem;
-    padding: 10rem 3rem;
+    padding: 10rem 0;
+
+    @media only screen and (min-width: 125em) {
+      width: 150rem;
+    }
 
     .profileHeader {
       text-transform: capitalize;
