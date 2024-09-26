@@ -16,10 +16,6 @@
     flex: 0.8;
   }
 
-  @media only screen and (max-width: 68.75em) {
-    flex: 0;
-  }
-
   @media only screen and (max-width: 45.9375em) {
     justify-content: flex-start;
     gap: 1rem;
@@ -190,10 +186,6 @@
         font-size: 1.5rem;
         color: currentColor;
         transition: all 0.5s ease-out;
-
-        @media only screen and (max-width: 68.75em) {
-          display: none;
-        }
 
         @include lg {
           display: block;
