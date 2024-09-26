@@ -4,6 +4,8 @@
 .successInfo {
   flex: 3;
   padding-right: 1.5rem;
+  box-shadow: $box-shadow;
+  border-radius: 0.5rem;
 
   @include lg {
     width: 100%;

@@ -5,6 +5,8 @@
   flex: 1;
   background-color: #fbfbfc;
   padding: 0 1.5rem;
+  box-shadow: $box-shadow;
+  border-radius: 0.5rem;
 
   @include lg {
     width: 100%;
