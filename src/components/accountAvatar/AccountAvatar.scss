@@ -33,31 +33,15 @@
     align-items: center;
     justify-content: center;
 
-    @include xl {
-      width: 13.334rem;
-      height: 13.334rem;
-      padding: 1.111112rem;
-    }
-
     @media only screen and (max-width: 56.25em) {
-      width: 15rem;
-      height: 15rem;
+      width: 12.5rem;
+      height: 12.5rem;
       padding: 1.25rem;
     }
 
-    @media only screen and (max-width: 34em) {
-      width: 13.75rem;
-      height: 13.75rem;
-    }
-
-    @include sm {
-      width: 12.5rem;
-      height: 12.5rem;
-    }
-
     @media only screen and (min-width: 112.5em) {
-      width: 14rem;
-      height: 14rem;
+      width: 15rem;
+      height: 15rem;
       padding: 1.25rem;
     }
 
@@ -90,24 +74,9 @@
       bottom: 0;
       right: 0;
 
-      @include xl {
-        width: 3.89rem;
-        height: 3.89rem;
-      }
-
       @media only screen and (max-width: 56.25em) {
-        width: 4.375rem;
-        height: 4.375rem;
-      }
-
-      @media only screen and (max-width: 34em) {
-        width: 4rem;
-        height: 4rem;
-      }
-
-      @include sm {
-        width: 3.75rem;
-        height: 3.75rem;
+        width: 3.55rem;
+        height: 3.55rem;
       }
 
       @media only screen and (min-width: 112.5em) {
@@ -121,24 +90,9 @@
         display: inline-block;
         object-fit: cover;
 
-        @include xl {
-          width: 1.89rem;
-          height: 1.89rem;
-        }
-
         @media only screen and (max-width: 56.25em) {
-          width: 2.125rem;
-          height: 2.125rem;
-        }
-
-        @media only screen and (max-width: 34em) {
-          width: 1.875rem;
-          height: 1.875rem;
-        }
-
-        @include sm {
-          width: 1.625rem;
-          height: 1.625rem;
+          width: 1.75rem;
+          height: 1.75rem;
         }
 
         @media only screen and (min-width: 112.5em) {
