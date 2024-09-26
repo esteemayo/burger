@@ -85,13 +85,9 @@
       text-rendering: optimizeLegibility;
       white-space: nowrap;
       font-weight: 700;
-      font-size: 2rem;
+      font-size: 1.8rem;
       color: #6b6b83;
       overflow: hidden;
-
-      @media only screen and (max-width: 37.5em) {
-        font-size: 1.8rem;
-      }
 
       @include sm {
         font-size: 1.6rem;
@@ -110,7 +106,7 @@
       }
 
       @media only screen and (min-width: 125em) {
-        font-size: 2.2rem;
+        font-size: 2rem;
       }
     }
   }
