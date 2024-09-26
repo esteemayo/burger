@@ -64,6 +64,7 @@
     .wrapper {
       display: flex;
       align-items: flex-start;
+      gap: 3rem;
 
       @include lg {
         flex-direction: column;
