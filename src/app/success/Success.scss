@@ -6,11 +6,11 @@
   justify-content: center;
 
   .container {
-    width: 144rem;
+    width: 120rem;
     padding: 8rem 0;
 
     @include xxl {
-      width: 120rem;
+      width: 110rem;
     }
 
     @media only screen and (max-width: 68.75em) {
