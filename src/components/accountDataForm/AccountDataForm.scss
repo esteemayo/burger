@@ -26,6 +26,14 @@
         @media only screen and (max-width: 34em) {
           width: 100%;
         }
+
+        input {
+          height: 6.2rem;
+
+          @media only screen and (min-width: 112.5em) {
+            height: 7.334rem;
+          }
+        }
       }
     }
 
