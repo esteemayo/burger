@@ -63,10 +63,10 @@ const SuccessInfo = ({ order }: SuccessInfoProps) => {
             {orderSteps.map((item) => {
               const { index, label } = item;
               return (
-              <li className={statusClass(index)}>
-                <div className='item'>{label}</div>
-              </li>
-              )
+                <li key={index} className={statusClass(index)}>
+                  <div className='item'>{label}</div>
+                </li>
+              );
             })}
           </ul>
           <Status status={order?.status} />
