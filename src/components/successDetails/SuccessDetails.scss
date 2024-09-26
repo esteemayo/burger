@@ -3,12 +3,12 @@
 
 .successDetails {
   flex: 1;
-  background-color: transparent;
+  background-color: #fbfbfc;
+  padding-left: 1.5rem;
 
   @include lg {
     width: 100%;
     padding: 0.5rem;
-    background-color: #fbfbfc;
   }
 
   .detailWrap {

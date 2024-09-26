@@ -3,9 +3,11 @@
 
 .successInfo {
   flex: 3;
+  padding-right: 1.5rem;
 
   @include lg {
     width: 100%;
+    padding: 0;
   }
 
   @media only screen and (max-width: 62.5em) {
