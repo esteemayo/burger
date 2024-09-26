@@ -9,6 +9,10 @@
   position: relative;
   transition: all 0.5s ease-out;
 
+  @media only screen and (max-width: 81.25em) {
+    width: 22rem;
+  }
+
   @include xl {
     width: 24rem;
   }
