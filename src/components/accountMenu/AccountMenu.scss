@@ -161,14 +161,9 @@
         height: 2.5rem;
         object-fit: cover;
 
-        @include xl {
-          width: 2.778rem;
-          height: 2.778rem;
-        }
-
         @media only screen and (max-width: 56.25em) {
-          width: 3.125rem;
-          height: 3.125rem;
+          width: 2.55rem;
+          height: 2.55rem;
         }
 
         @media only screen and (max-width: 34em) {
@@ -196,10 +191,6 @@
         color: currentColor;
         transition: all 0.5s ease-out;
 
-        @include xl {
-          font-size: 1.66667rem;
-        }
-
         @media only screen and (max-width: 68.75em) {
           display: none;
         }
@@ -209,15 +200,7 @@
         }
 
         @media only screen and (max-width: 56.25em) {
-          font-size: 1.875rem;
-        }
-
-        @media only screen and (max-width: 34em) {
-          font-size: 1.75rem;
-        }
-
-        @include sm {
-          font-size: 1.625rem;
+          font-size: 1.55rem;
         }
 
         @media only screen and (min-width: 112.5em) {
@@ -253,11 +236,6 @@
     cursor: pointer;
     display: none;
 
-    @include xl {
-      width: 2.223rem;
-      height: 5.556rem;
-    }
-
     @media only screen and (max-width: 68.75em) {
       display: none;
     }
@@ -272,11 +250,6 @@
       width: 2rem;
       height: 2rem;
       object-fit: cover;
-
-      @include xl {
-        width: 2.2225rem;
-        height: 2.2225rem;
-      }
 
       @media only screen and (min-width: 112.5em) {
         width: 2.25rem;
