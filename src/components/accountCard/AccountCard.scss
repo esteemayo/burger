@@ -82,6 +82,11 @@
     padding: 3rem;
   }
 
+  @media only screen and (min-width: 125em) {
+    width: 28rem;
+    padding: 4rem;
+  }
+
   &.toggle {
     width: 30rem;
     transition: all 0.5s ease-in;
