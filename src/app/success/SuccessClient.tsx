@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 
 import SuccessInfo from '@/components/successInfo/SuccessInfo';
+import Loader from '@/components/loader/Loader';
 import SuccessDetails from '@/components/successDetails/SuccessDetails';
 
 import { getOrderByIntent } from '@/services/orderService';
@@ -18,7 +19,7 @@ const SuccessClient = () => {
 
   const payment_intent = params.get('payment_intent');
 
-  const { data: order } = useQuery({
+  const { isLoading, data: order } = useQuery({
     queryKey: [`${payment_intent}`],
     queryFn: async () => {
       const { data } = await getOrderByIntent(payment_intent);
@@ -40,6 +41,10 @@ const SuccessClient = () => {
   //     }
   //   })();
   // }, [payment_intent, router]);
+
+  if (isLoading) {
+    return <Loader />;
+  }
 
   return (
     <div className='wrapper'>
