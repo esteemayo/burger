@@ -4,12 +4,14 @@ import { useMemo } from 'react';
 import Link from 'next/link';
 import { useQuery } from '@tanstack/react-query';
 
-import { useStatus } from '@/hooks/useStatus';
-import { OrderItem } from '@/types';
-import { formatDate } from '@/utils/formatDate';
-
 import Status from '../status/Status';
+
+import { formatDate } from '@/utils/formatDate';
+import { useStatus } from '@/hooks/useStatus';
 import { getUser } from '@/services/userService';
+
+import { orderSteps } from '@/data';
+import { OrderItem } from '@/types';
 
 import './SuccessInfo.scss';
 
@@ -58,18 +60,14 @@ const SuccessInfo = ({ order }: SuccessInfoProps) => {
             and is currently in progress
           </p>
           <ul className='stepper'>
-            <li className={statusClass(0)}>
-              <div className='item'>Order confirmed</div>
-            </li>
-            <li className={statusClass(1)}>
-              <div className='item'>Start production</div>
-            </li>
-            <li className={statusClass(2)}>
-              <div className='item'>Dispatched item</div>
-            </li>
-            <li className={statusClass(3)}>
-              <div className='item'>Product delivered</div>
-            </li>
+            {orderSteps.map((item) => {
+              const { index, label } = item;
+              return (
+              <li className={statusClass(index)}>
+                <div className='item'>{label}</div>
+              </li>
+              )
+            })}
           </ul>
           <Status status={order?.status} />
           <div className='orderDelivery'>
