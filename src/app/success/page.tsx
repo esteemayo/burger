@@ -5,7 +5,7 @@ import SuccessClient from './SuccessClient';
 import './Success.scss';
 
 export const metadata: Metadata = {
-  title: 'Burger. App | Success',
+  title: 'Burger. App | Successful Payment',
 };
 
 const Success = () => {
