@@ -168,6 +168,18 @@
         background-color: $clr-gray-light;
       }
 
+      &.active {
+        span {
+          &:first-child {
+            transform: rotate(45deg);
+          }
+
+          &:last-child {
+            transform: rotate(-45deg);
+          }
+        }
+      }
+
       @media only screen and (min-width: 64.0625em) {
         display: none;
       }

@@ -14,7 +14,7 @@ const Profile = () => {
     <div className='profile'>
       <div className='container'>
         <h1 className='profileHeader'>Your profile</h1>
-        <button className='toggleBtn' type='button'>
+        <button className='toggleBtn active' type='button'>
           <span>&nbsp;</span>
           <span>&nbsp;</span>
         </button>
