@@ -87,11 +87,6 @@
     padding: 4rem;
   }
 
-  &.toggle {
-    width: 30rem;
-    transition: all 0.5s ease-in;
-  }
-
   .statsWrap {
     display: flex;
     flex-direction: column;
@@ -104,12 +99,8 @@
       color: $clr-secondary;
       line-height: 1.3;
 
-      @include xl {
-        font-size: 3.33333rem;
-      }
-
       @media only screen and (max-width: 56.25em) {
-        font-size: 3.75rem;
+        font-size: 3.25rem;
       }
 
       @media only screen and (max-width: 34em) {
