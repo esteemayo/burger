@@ -4,10 +4,10 @@
 .accountMenu {
   flex: 1;
   position: relative;
-  transition: all 0.5s ease-out;
 
   @include lg {
     width: 30rem;
+    padding: 2rem;
     background-color: $clr-white;
     box-shadow: $box-shadow;
     position: fixed;
@@ -19,47 +19,6 @@
     &.active {
       left: auto;
       transition: all 0.5s ease-out;
-    }
-  }
-
-  // @include lg {
-  //   display: flex;
-  //   flex-wrap: wrap;
-  //   justify-content: space-between;
-  // }
-
-  // @include xl {
-  //   flex: 0.8;
-  // }
-
-  // @media only screen and (max-width: 45.9375em) {
-  //   justify-content: flex-start;
-  //   gap: 1rem;
-  // }
-
-  // @media only screen and (max-width: 33.75em) {
-  //   gap: 0;
-  // }
-
-  // @include sm {
-  //   justify-content: space-between;
-  //   row-gap: 1rem;
-  //   column-gap: 0;
-  // }
-
-  &.toggle {
-    flex: 0;
-    transition: all 0.5s ease-in;
-
-    .menuWrap {
-      .menuItem {
-        a,
-        a:link,
-        a:active {
-          display: none;
-          transition: all 0.5s ease-in;
-        }
-      }
     }
   }
 
@@ -225,44 +184,6 @@
 
     @include lg {
       display: none;
-    }
-  }
-
-  .toggleBtn {
-    position: absolute;
-    top: 30%;
-    right: 0;
-    transform: translateY(-30%);
-
-    display: inline-block;
-    border: none;
-    outline: none;
-    width: 2rem;
-    height: 5rem;
-    background-color: $clr-yellow;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    display: none;
-
-    @media only screen and (max-width: 68.75em) {
-      display: none;
-    }
-
-    @media only screen and (min-width: 112.5em) {
-      width: 2.25rem;
-      height: 7rem;
-    }
-
-    .sidebarToggleIcon {
-      display: block;
-      width: 2rem;
-      height: 2rem;
-      object-fit: cover;
-
-      @media only screen and (min-width: 112.5em) {
-        width: 2.25rem;
-        height: 2.25rem;
-      }
     }
   }
 }
