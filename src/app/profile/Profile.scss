@@ -155,9 +155,13 @@
       gap: 1rem;
 
       @include lg {
-        flex-direction: column;
-        gap: 5rem;
+        position: relative;
       }
+
+      // @include lg {
+      //   flex-direction: column;
+      //   gap: 5rem;
+      // }
     }
   }
 }
