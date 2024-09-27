@@ -168,31 +168,6 @@
       color: $clr-secondary;
       cursor: pointer;
 
-      span {
-        width: 100%;
-        height: 1px;
-        background-color: currentColor;
-        transform-origin: left;
-      }
-
-      &.active {
-        span {
-          &:first-child {
-            transform: rotate(45deg);
-          }
-
-          &:nth-child(2) {
-            display: none;
-            opacity: 0;
-            visibility: hidden;
-          }
-
-          &:last-child {
-            transform: rotate(-45deg);
-          }
-        }
-      }
-
       @media only screen and (min-width: 64.0625em) {
         display: none;
       }
