@@ -7,29 +7,38 @@
   transition: all 0.5s ease-out;
 
   @include lg {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    width: 30rem;
+    background-color: $clr-white;
+    box-shadow: $box-shadow;
+    position: fixed;
+    top: 27rem;
+    z-index: 3000;
   }
 
-  @include xl {
-    flex: 0.8;
-  }
+  // @include lg {
+  //   display: flex;
+  //   flex-wrap: wrap;
+  //   justify-content: space-between;
+  // }
 
-  @media only screen and (max-width: 45.9375em) {
-    justify-content: flex-start;
-    gap: 1rem;
-  }
+  // @include xl {
+  //   flex: 0.8;
+  // }
 
-  @media only screen and (max-width: 33.75em) {
-    gap: 0;
-  }
+  // @media only screen and (max-width: 45.9375em) {
+  //   justify-content: flex-start;
+  //   gap: 1rem;
+  // }
 
-  @include sm {
-    justify-content: space-between;
-    row-gap: 1rem;
-    column-gap: 0;
-  }
+  // @media only screen and (max-width: 33.75em) {
+  //   gap: 0;
+  // }
+
+  // @include sm {
+  //   justify-content: space-between;
+  //   row-gap: 1rem;
+  //   column-gap: 0;
+  // }
 
   &.toggle {
     flex: 0;
