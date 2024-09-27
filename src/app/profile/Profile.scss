@@ -150,7 +150,12 @@
     }
 
     .toggleBtn {
-      display: inline-block;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+
       border: none;
       outline: none;
       width: 4.5rem;
@@ -159,7 +164,7 @@
 
       span {
         width: 3rem;
-        height: 2px;
+        height: 1px;
         background-color: $clr-gray-light;
       }
 
