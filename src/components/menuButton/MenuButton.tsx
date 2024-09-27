@@ -6,7 +6,7 @@ import './MenuButton';
 
 const MenuButton = () => {
   const isOpen = useAccountMenu((state) => state.isOpen);
-  const onToggle = useAccountMenu((state) => state.toggle);
+  const onToggle = useAccountMenu((state) => state.onToggle);
 
   return (
     <button className='toggleBtn' type='button' onClick={onToggle}>

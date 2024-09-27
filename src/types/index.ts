@@ -657,7 +657,7 @@ export interface AccountMenuStore {
 export interface AccountMenuType {
   onOpen(): void;
   onClose(): void;
-  toggle(): void;
+  onToggle(): void;
 }
 
 export interface RecipientStore {
