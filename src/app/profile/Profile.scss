@@ -21,6 +21,10 @@
       width: 110rem;
     }
 
+    @include lg {
+      width: 100rem;
+    }
+
     @media only screen and (min-width: 125em) {
       width: 150rem;
     }
@@ -161,11 +165,11 @@
       width: 3rem;
       height: 2.3rem;
       background-color: transparent;
-      color: $clr-gray-light;
+      color: $clr-secondary;
       cursor: pointer;
 
       span {
-        width: 3rem;
+        width: 100%;
         height: 1px;
         background-color: currentColor;
         transform-origin: left;
