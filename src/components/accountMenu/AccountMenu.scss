@@ -28,7 +28,7 @@
     justify-content: center;
 
     @include lg {
-      width: 22rem;
+      width: 100%;
     }
 
     @media only screen and (max-width: 48.4375em) {
@@ -181,9 +181,5 @@
     height: 0;
     border: 0.5px solid #fbfbfc;
     margin: 1rem 0;
-
-    @include lg {
-      display: none;
-    }
   }
 }
