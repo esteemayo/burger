@@ -12,7 +12,12 @@
     box-shadow: $box-shadow;
     position: fixed;
     top: 27rem;
+    left: -30rem;
     z-index: 3000;
+
+    &.active {
+      left: auto;
+    }
   }
 
   // @include lg {
