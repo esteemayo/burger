@@ -181,6 +181,12 @@
             transform: rotate(45deg);
           }
 
+          &:nth-child(2) {
+            display: none;
+            opacity: 0;
+            visibility: hidden;
+          }
+
           &:last-child {
             transform: rotate(-45deg);
           }

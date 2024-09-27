@@ -17,6 +17,7 @@ const Profile = () => {
         <button className='toggleBtn active' type='button'>
           <span>&nbsp;</span>
           <span>&nbsp;</span>
+          <span>&nbsp;</span>
         </button>
         <div className='profileWrap'>
           <AccountMenu />
