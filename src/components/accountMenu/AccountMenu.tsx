@@ -17,12 +17,8 @@ const AccountMenu = () => {
   const isOpen = useAccountMenu((state) => state.isOpen);
   const toggle = useAccountMenu((state) => state.toggle);
 
-  const sidebarClasses = useMemo(() => {
-    return isOpen ? 'accountMenu toggle' : 'accountMenu';
-  }, [isOpen]);
-
   return (
-    <aside className={sidebarClasses}>
+    <aside className='accountMenu'>
       {profileMenu.map((item) => {
         const { label, links } = item;
         return (
