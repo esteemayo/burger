@@ -149,6 +149,19 @@
       }
     }
 
+    .toggleBtn {
+      display: inline-block;
+      border: none;
+      outline: none;
+      width: 4.5rem;
+      height: 4.5rem;
+      background-color: transparent;
+
+      @media only screen and (min-width: 64.0625em) {
+        display: none;
+      }
+    }
+
     .profileWrap {
       display: flex;
       justify-content: space-between;
