@@ -9,7 +9,7 @@ const MenuButton = () => {
   const onToggle = useAccountMenu((state) => state.onToggle);
 
   return (
-    <button className='toggleBtn' type='button' onClick={onToggle}>
+    <button className='menuButton' type='button' onClick={onToggle}>
       {!!isOpen ? (
         <svg
           xmlns='http://www.w3.org/2000/svg'
