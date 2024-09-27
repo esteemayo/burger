@@ -15,10 +15,13 @@ const AccountMenu = () => {
   const pathname = usePathname();
 
   const isOpen = useAccountMenu((state) => state.isOpen);
-  const toggle = useAccountMenu((state) => state.toggle);
+
+  const menuClasses = useMemo(() => {
+    return isOpen ? 'accountMenu active' : 'accountMenu';
+  }, [isOpen]);
 
   return (
-    <aside className='accountMenu'>
+    <aside className={menuClasses}>
       {profileMenu.map((item) => {
         const { label, links } = item;
         return (
