@@ -7,6 +7,11 @@
   border-radius: 0.5rem;
   position: relative;
 
+  @media only screen and (max-width: 21.5em) {
+    padding: 1.5rem;
+    padding-bottom: 1rem;
+  }
+
   @media only screen and (max-width: 19.4375em) {
     padding: 1rem;
   }
