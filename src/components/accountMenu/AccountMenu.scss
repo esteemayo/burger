@@ -6,13 +6,15 @@
   position: relative;
 
   @include lg {
+    position: absolute;
+    top: 0;
+    left: -50rem;
+
     width: 30rem;
     padding: 2rem;
     background-color: $clr-white;
     box-shadow: $box-shadow;
-    position: absolute;
-    top: 0;
-    left: -50rem;
+    border-radius: 0.5rem;
     z-index: 2000;
     transition: all 0.5s ease-in;
 
