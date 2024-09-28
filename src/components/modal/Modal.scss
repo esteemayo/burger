@@ -34,20 +34,8 @@
       border-radius: 0.5rem;
       position: relative;
 
-      @include xl {
-        width: 55.556rem;
-      }
-
       @media only screen and (max-width: 56.25em) {
-        width: 62.5rem;
-      }
-
-      @media only screen and (max-width: 34.375em) {
-        width: 56.25rem;
-      }
-
-      @include sm {
-        width: 53rem;
+        width: 55rem;
       }
 
       @media only screen and (max-width: 28.75em) {
