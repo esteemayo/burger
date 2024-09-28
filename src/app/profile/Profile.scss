@@ -68,65 +68,7 @@
         transform: translateY(-50%);
 
         @media only screen and (max-width: 56.25em) {
-          width: 78.5%;
-          left: 23rem;
-        }
-
-        @media only screen and (max-width: 50em) {
-          width: 75.5%;
-        }
-
-        @include md {
-          width: 74.5%;
-        }
-
-        @media only screen and (max-width: 45.9375em) {
-          width: 73%;
-        }
-
-        @media only screen and (max-width: 43.75em) {
-          width: 72%;
-        }
-
-        @media only screen and (max-width: 42.5em) {
-          width: 73.5%;
-          left: 21rem;
-        }
-
-        @media only screen and (max-width: 37.5em) {
-          width: 70%;
-        }
-
-        @media only screen and (max-width: 36.25em) {
-          width: 68.5%;
-        }
-
-        @media only screen and (max-width: 32.5em) {
-          width: 64.5%;
-        }
-
-        @media only screen and (max-width: 31.25em) {
-          width: 63%;
-        }
-
-        @include sm {
-          width: 61%;
-        }
-
-        @media only screen and (max-width: 27.75em) {
-          width: 58%;
-        }
-
-        @media only screen and (max-width: 25.875em) {
-          width: 54%;
-        }
-
-        @media only screen and (max-width: 23.4375em) {
-          width: 48.5%;
-        }
-
-        @media only screen and (max-width: 21.5em) {
-          width: 43.5%;
+          width: 75%;
         }
 
         @media only screen and (max-width: 18.75em) {
