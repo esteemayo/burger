@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Fragment, useMemo } from 'react';
+import { Fragment, useCallback, useMemo } from 'react';
 import Image from 'next/image';
 import { usePathname, useRouter } from 'next/navigation';
 
@@ -15,6 +15,13 @@ const AccountMenu = () => {
   const pathname = usePathname();
 
   const isOpen = useAccountMenu((state) => state.isOpen);
+
+  const activeClasses = useCallback(
+    (url: string) => {
+      return pathname === url ? 'menuItem active' : 'menuItem';
+    },
+    [pathname]
+  );
 
   const menuClasses = useMemo(() => {
     return isOpen ? 'accountMenu active' : 'accountMenu';
@@ -31,11 +38,7 @@ const AccountMenu = () => {
               return (
                 <Fragment key={id}>
                   <div className='menuWrap'>
-                    <span
-                      className={
-                        pathname === url ? 'menuItem active' : 'menuItem'
-                      }
-                    >
+                    <span className={activeClasses(url)}>
                       <Image
                         src={`/svg/${icon}.svg`}
                         width={25}
