@@ -607,7 +607,7 @@ export interface HeadingProps {
   center?: boolean;
 }
 
-export type WidgetProps = AccountCard;
+export type WidgetProps = Widget;
 
 export interface ModalProps {
   isOpen: boolean;
