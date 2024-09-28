@@ -56,7 +56,7 @@
       }
 
       @media only screen and (max-width: 23.4375em) {
-        width: 44.5rem;
+        width: 43rem;
         padding: 2rem 1.5rem;
       }
 
@@ -94,20 +94,16 @@
         color: inherit;
         margin-top: 1rem;
 
-        @include xl {
-          font-size: 3.33333rem;
-        }
-
         @media only screen and (max-width: 56.25em) {
-          font-size: 3.75rem;
+          font-size: 3.25rem;
         }
 
-        @media only screen and (max-width: 26.25em) {
-          font-size: 3.5rem;
-        }
-
-        @media only screen and (max-width: 22.5em) {
+        @include sm {
           font-size: 3rem;
+        }
+
+        @media only screen and (max-width: 25em) {
+          font-size: 2.8rem;
         }
 
         @media only screen and (max-width: 18.75em) {
@@ -162,16 +158,8 @@
             cursor: pointer;
             transition: all 0.3s;
 
-            @include xl {
-              font-size: 1.5rem;
-            }
-
             @media only screen and (max-width: 56.25em) {
-              font-size: 1.6875rem;
-            }
-
-            @media only screen and (max-width: 18.75em) {
-              font-size: 1.5625rem;
+              font-size: 1.4rem;
             }
 
             @media only screen and (min-width: 106.25em) {
@@ -232,14 +220,9 @@
             height: 2.5rem;
             object-fit: cover;
 
-            @include xl {
-              width: 2.778rem;
-              height: 2.778rem;
-            }
-
             @media only screen and (max-width: 56.25em) {
-              width: 3.125rem;
-              height: 3.125rem;
+              width: 3rem;
+              height: 3rem;
             }
 
             @media only screen and (max-width: 18.75em) {
