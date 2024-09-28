@@ -154,28 +154,6 @@
       }
     }
 
-    .toggleBtn {
-      display: inline-block;
-      border: none;
-      outline: none;
-      width: 3rem;
-      height: 2.3rem;
-      background-color: transparent;
-      color: $clr-secondary;
-      cursor: pointer;
-      position: absolute;
-      top: 11rem;
-      left: 0;
-
-      svg {
-        color: currentColor;
-      }
-
-      @media only screen and (min-width: 64.0625em) {
-        display: none;
-      }
-    }
-
     .profileWrap {
       display: flex;
       justify-content: space-between;
@@ -184,11 +162,6 @@
       @include lg {
         position: relative;
       }
-
-      // @include lg {
-      //   flex-direction: column;
-      //   gap: 5rem;
-      // }
     }
   }
 }
