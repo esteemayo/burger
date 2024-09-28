@@ -2,7 +2,7 @@
 
 import { useAccountMenu } from '@/hooks/useAccountMenu';
 
-import './MenuButton';
+import './MenuButton.scss';
 
 const MenuButton = () => {
   const isOpen = useAccountMenu((state) => state.isOpen);
