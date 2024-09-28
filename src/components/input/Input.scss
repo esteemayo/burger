@@ -109,12 +109,12 @@
 
   .priceIcon {
     position: absolute;
-    top: 4.12rem;
+    top: 4rem;
     left: 1.2rem;
     cursor: text;
 
     @media only screen and (max-width: 56.25em) {
-      top: 4.5rem;
+      top: 3.8rem;
     }
 
     @media only screen and (min-width: 112.5em) {
@@ -126,7 +126,7 @@
       fill: $clr-gray-dark;
 
       @media only screen and (max-width: 56.25em) {
-        font-size: 3rem;
+        font-size: 2.57rem;
       }
 
       @media only screen and (min-width: 112.5em) {
