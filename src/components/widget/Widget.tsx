@@ -2,22 +2,22 @@
 
 import Image from 'next/image';
 
-import { AccountCardProps } from '@/types';
+import { WidgetProps } from '@/types';
 
-import './AccountCard.scss';
+import './Widget.scss';
 
-const AccountCard = ({ icon, count, price, label }: AccountCardProps) => {
+const Widget = ({ icon, count, price, label }: WidgetProps) => {
   return (
-    <article className='accountCard'>
+    <article className='widget'>
       <div className='statsWrap'>
         <h2>{count ?? price}</h2>
         <span>{label}</span>
       </div>
-      <div className='accountIconWrap'>
+      <div className='widgetIconWrap'>
         <Image src={icon} width={22.5} height={22.5} alt='icon' />
       </div>
     </article>
   );
 };
 
-export default AccountCard;
+export default Widget;
