@@ -51,7 +51,7 @@
       &::after {
         content: '';
         display: block;
-        width: 81.5%;
+        width: 80%;
         height: 1px;
         padding-top: 1px;
         padding-bottom: 1px;
@@ -60,26 +60,8 @@
 
         position: absolute;
         top: 50%;
-        left: 25rem;
+        right: 0;
         transform: translateY(-50%);
-
-        @include xl {
-          width: 84.5%;
-          left: 19rem;
-        }
-
-        @media only screen and (max-width: 68.75em) {
-          width: 83%;
-          left: 20rem;
-        }
-
-        @include lg {
-          width: 81.5%;
-        }
-
-        @media only screen and (max-width: 59.375em) {
-          width: 80%;
-        }
 
         @media only screen and (max-width: 56.25em) {
           width: 78.5%;
