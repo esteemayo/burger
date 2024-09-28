@@ -28,6 +28,10 @@
     width: 45rem;
   }
 
+  @include sm {
+    width: 100%;
+  }
+
   .menuWrap {
     display: flex;
     flex-direction: column;
