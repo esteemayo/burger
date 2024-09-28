@@ -7,7 +7,6 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import LocalDiningIcon from '@mui/icons-material/LocalDining';
 
 import {
-  AccountCardType,
   AuthLinkType,
   CardMenu,
   CartType,
@@ -26,6 +25,7 @@ import {
   Socials,
   SummaryType,
   UserLinkType,
+  WidgetType,
 } from '@/types';
 
 export const authLinks: AuthLinkType = [
@@ -585,7 +585,7 @@ export const profileMenu: ProfileMenu = [
   },
 ];
 
-export const accountCards: AccountCardType = [
+export const widgets: WidgetType = [
   {
     id: 1,
     count: 461,

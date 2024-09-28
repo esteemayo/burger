@@ -267,7 +267,7 @@ export interface StatusProps {
   type?: 'order';
 }
 
-type AccountCard = {
+type Widget = {
   id: number;
   count?: number;
   price?: number;
@@ -275,7 +275,7 @@ type AccountCard = {
   icon: string;
 };
 
-export type AccountCardType = AccountCard[];
+export type WidgetType = Widget[];
 
 export type ProductType = {
   id: string;
@@ -607,7 +607,7 @@ export interface HeadingProps {
   center?: boolean;
 }
 
-export type AccountCardProps = AccountCard;
+export type WidgetProps = AccountCard;
 
 export interface ModalProps {
   isOpen: boolean;

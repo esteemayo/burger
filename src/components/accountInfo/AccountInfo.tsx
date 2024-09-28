@@ -1,13 +1,13 @@
-import { accountCards } from '@/data';
-import AccountCard from '../accountCard/AccountCard';
+import { widgets } from '@/data';
+import Widget from '../widget/Widget';
 
 import './AccountInfo.scss';
 
 const AccountInfo = () => {
   return (
     <div className='accountInfo'>
-      {accountCards.map((item) => {
-        return <AccountCard key={item.id} {...item} />;
+      {widgets.map((item) => {
+        return <Widget key={item.id} {...item} />;
       })}
     </div>
   );

@@ -1,7 +1,7 @@
 @import '../../styles/variables.scss';
 @import '../../styles/responsive.scss';
 
-.accountCard {
+.widget {
   width: 25rem;
   padding: 2rem;
   box-shadow: $box-shadow;
@@ -110,7 +110,7 @@
     }
   }
 
-  .accountIconWrap {
+  .widgetIconWrap {
     position: absolute;
     top: 1rem;
     right: 2rem;
