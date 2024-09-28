@@ -33,54 +33,6 @@
       width: 100%;
     }
 
-    @media only screen and (max-width: 48.4375em) {
-      width: 20rem;
-    }
-
-    @media only screen and (max-width: 45.9375em) {
-      width: 25rem;
-    }
-
-    @media only screen and (max-width: 42.9375em) {
-      width: 23rem;
-    }
-
-    @media only screen and (max-width: 40em) {
-      width: 20rem;
-    }
-
-    @media only screen and (max-width: 35.4375em) {
-      width: 19rem;
-    }
-
-    @include sm {
-      width: 24rem;
-    }
-
-    @media only screen and (max-width: 28.9375em) {
-      width: 22rem;
-    }
-
-    @media only screen and (max-width: 26.9375em) {
-      width: 20rem;
-    }
-
-    @media only screen and (max-width: 24.4375em) {
-      width: 18rem;
-    }
-
-    @media only screen and (max-width: 21.875em) {
-      width: 17rem;
-    }
-
-    @media only screen and (max-width: 21.4375em) {
-      width: 15rem;
-    }
-
-    @media only screen and (max-width: 19.4375em) {
-      width: 100%;
-    }
-
     .menuItem {
       display: flex;
       align-items: center;
