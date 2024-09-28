@@ -6,6 +6,12 @@
   justify-content: space-between;
   margin-bottom: 2rem;
 
+  @include md {
+    flex-wrap: wrap;
+    row-gap: 4rem;
+    margin-bottom: 4rem;
+  }
+
   @include sm {
     margin-bottom: 3rem;
   }
