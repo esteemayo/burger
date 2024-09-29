@@ -38,7 +38,7 @@
         width: 55rem;
       }
 
-      @include sm {
+      @media only screen and (max-width: 34.375em) {
         width: 50rem;
       }
 
