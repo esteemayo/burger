@@ -14,6 +14,10 @@
   background-color: $clr-black;
   color: $clr-white;
 
+  @include lg {
+    height: 40vw;
+  }
+
   @media only screen and (max-width: 56.25em) {
     height: 80vh;
   }
@@ -60,6 +64,10 @@
 
     @media only screen and (max-width: 68.75em) {
       width: 110rem;
+    }
+
+    @include lg {
+      width: 105rem;
     }
 
     @include md {
