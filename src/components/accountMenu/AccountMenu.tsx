@@ -15,6 +15,16 @@ const AccountMenu = () => {
   const pathname = usePathname();
 
   const isOpen = useAccountMenu((state) => state.isOpen);
+  const onClose = useAccountMenu((state) => state.onClose);
+
+  const handleClose = useCallback(
+    (_e: React.MouseEvent<HTMLDivElement>) => {
+      if (!!isOpen) {
+        onClose();
+      }
+    },
+    [isOpen, onClose]
+  );
 
   const activeClasses = useCallback(
     (url: string) => {
@@ -37,7 +47,7 @@ const AccountMenu = () => {
               const { id, url, icon, label } = link;
               return (
                 <Fragment key={id}>
-                  <div className='menuWrap'>
+                  <div className='menuWrap' onClick={handleClose}>
                     <span className={activeClasses(url)}>
                       <Image
                         src={`/svg/${icon}.svg`}
