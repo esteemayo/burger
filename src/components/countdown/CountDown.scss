@@ -7,20 +7,8 @@
   font-variant-numeric: tabular-nums;
   color: $clr-yellow;
 
-  @include xl {
-    font-size: 1.77778rem;
-  }
-
   @media only screen and (max-width: 56.25em) {
-    font-size: 2rem;
-  }
-
-  @media only screen and (max-width: 25em) {
-    font-size: 1.875rem;
-  }
-
-  @media only screen and (max-width: 23.4375em) {
-    font-size: 1.75rem;
+    font-size: 1.65rem;
   }
 
   @media only screen and (max-width: 18.75em) {
