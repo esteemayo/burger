@@ -36,18 +36,11 @@
     cursor: pointer;
     transition: all 0.3s;
 
-    @include xl {
-      font-size: 1.44445rem;
-      padding: 0.555555rem;
-    }
-
     @media only screen and (max-width: 56.25em) {
-      font-size: 1.625rem;
-      padding: 0.938rem;
+      font-size: 1.35rem;
     }
 
     @media only screen and (max-width: 18.75em) {
-      font-size: 1.5rem;
       padding: 0.5rem;
     }
 
