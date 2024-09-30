@@ -26,6 +26,10 @@
     height: 50vw;
   }
 
+  @include sm {
+    height: 55vw;
+  }
+
   @media only screen and (min-width: 112.5em) {
     height: 40vw;
   }
@@ -140,6 +144,10 @@
       }
 
       @include sm {
+        gap: 1.5rem;
+      }
+
+      @include sm {
         padding: 0;
       }
 
@@ -186,6 +194,10 @@
           font-size: 3.5rem;
         }
 
+        @include sm {
+          font-size: 3rem;
+        }
+
         @media only screen and (max-width: 18.75em) {
           font-size: 2.25rem;
         }
@@ -209,8 +221,8 @@
           font-size: 2rem;
         }
 
-        @media only screen and (max-width: 25em) {
-          font-size: 1.875rem;
+        @include sm {
+          font-size: 1.8rem;
         }
 
         @media only screen and (max-width: 23.4375em) {
