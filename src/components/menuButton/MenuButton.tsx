@@ -5,8 +5,8 @@ import { useAccountMenu } from '@/hooks/useAccountMenu';
 import './MenuButton.scss';
 
 const MenuButton = () => {
-  const isOpen = useAccountMenu((state) => state.isOpen);
-  const onToggle = useAccountMenu((state) => state.onToggle);
+  const isOpen = useAccountMenu((store) => store.isOpen);
+  const onToggle = useAccountMenu((store) => store.onToggle);
 
   return (
     <button className='menuButton' type='button' onClick={onToggle}>

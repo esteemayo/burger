@@ -14,8 +14,8 @@ const AccountMenu = () => {
   const router = useRouter();
   const pathname = usePathname();
 
-  const isOpen = useAccountMenu((state) => state.isOpen);
-  const onClose = useAccountMenu((state) => state.onClose);
+  const isOpen = useAccountMenu((store) => store.isOpen);
+  const onClose = useAccountMenu((store) => store.onClose);
 
   const handleClose = useCallback(
     (_e: React.MouseEvent<HTMLDivElement>) => {
