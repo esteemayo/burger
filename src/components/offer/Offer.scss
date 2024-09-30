@@ -18,6 +18,10 @@
     height: 40vw;
   }
 
+  @media only screen and (max-width: 57.5em) {
+    height: 45vw;
+  }
+
   @media only screen and (max-width: 56.25em) {
     height: 80vh;
   }
@@ -135,7 +139,7 @@
         padding: 0;
       }
 
-      @media only screen and (max-width: 50em) {
+      @include lg {
         gap: 2.8rem;
       }
 
@@ -172,6 +176,10 @@
 
         @include lg {
           font-size: 3.75rem;
+        }
+
+        @media only screen and (max-width: 57.5em) {
+          font-size: 3.5rem;
         }
 
         @media only screen and (max-width: 56.25em) {
