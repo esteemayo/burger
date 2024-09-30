@@ -7,7 +7,7 @@
   justify-content: center;
 
   width: 100vw;
-  height: 70vh;
+  height: 35vw;
   background-image: url(/img/offerBg-10.jpg);
   background-size: cover;
   background-position: center;
@@ -15,7 +15,7 @@
   color: $clr-white;
 
   @include xxl {
-    height: 85vh;
+    height: 45vw;
   }
 
   @include xl {
@@ -47,7 +47,7 @@
   }
 
   @media only screen and (min-width: 112.5em) {
-    height: 85vh;
+    height: 40vw;
   }
 
   .container {
