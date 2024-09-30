@@ -50,6 +50,10 @@
     align-items: center;
     justify-content: space-between;
 
+    @include xxl {
+      width: 130rem;
+    }
+
     @include md {
       flex-direction: column;
     }
