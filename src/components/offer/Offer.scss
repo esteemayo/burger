@@ -58,6 +58,10 @@
       width: 120rem;
     }
 
+    @media only screen and (max-width: 68.75em) {
+      width: 110rem;
+    }
+
     @include md {
       flex-direction: column;
     }
@@ -157,7 +161,7 @@
         }
 
         @media only screen and (max-width: 81.25em) {
-          font-size: 4.25rem;
+          font-size: 4.2rem;
         }
 
         @media only screen and (max-width: 56.25em) {
