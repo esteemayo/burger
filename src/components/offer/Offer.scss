@@ -156,6 +156,10 @@
           font-size: 4.5rem;
         }
 
+        @media only screen and (max-width: 81.25em) {
+          font-size: 4.25rem;
+        }
+
         @media only screen and (max-width: 56.25em) {
           font-size: 4.85rem;
         }
