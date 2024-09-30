@@ -14,14 +14,6 @@
   background-color: $clr-black;
   color: $clr-white;
 
-  @include xxl {
-    height: 45vw;
-  }
-
-  @include xl {
-    height: 93.53vh;
-  }
-
   @media only screen and (max-width: 56.25em) {
     height: 80vh;
   }
@@ -52,7 +44,7 @@
 
   .container {
     width: 144rem;
-    padding: 8rem 3rem;
+    padding: 8rem 0;
 
     display: flex;
     align-items: center;
@@ -63,7 +55,7 @@
     }
 
     @include sm {
-      padding: 4rem 3rem;
+      padding: 4rem 0;
     }
 
     .left {
