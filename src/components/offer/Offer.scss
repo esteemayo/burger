@@ -69,7 +69,7 @@
     .left {
       flex: 1;
 
-      @media only screen and (max-width: 51.25em) {
+      @include md {
         display: none;
       }
 
@@ -82,11 +82,6 @@
         @include lg {
           width: 45rem;
           height: 45rem;
-        }
-
-        @include md {
-          width: 50rem;
-          height: 30rem;
         }
 
         @media only screen and (min-width: 112.5em) {
