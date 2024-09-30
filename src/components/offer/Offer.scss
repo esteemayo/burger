@@ -55,7 +55,7 @@
     }
 
     @include md {
-      flex-direction: column;
+      width: 85rem;
     }
 
     @include sm {
