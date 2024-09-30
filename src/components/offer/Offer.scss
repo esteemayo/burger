@@ -172,15 +172,11 @@
       .desc {
         text-align: justify;
         font-size: 2rem;
-        line-height: 2.8rem;
+        line-height: 1.25;
         color: currentColor;
 
-        @include xl {
-          font-size: 2.22222rem;
-        }
-
-        @media only screen and (max-width: 60.625em) {
-          font-size: 2rem;
+        @media only screen and (max-width: 56.25em) {
+          font-size: 2.15rem;
         }
 
         @include sm {
@@ -197,7 +193,6 @@
 
         @media only screen and (max-width: 18.75em) {
           font-size: 1.625rem;
-          line-height: 2.5rem;
         }
 
         @media only screen and (min-width: 112.5em) {
