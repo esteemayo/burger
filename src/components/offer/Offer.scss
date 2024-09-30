@@ -246,6 +246,10 @@
           font-size: 1.65rem;
         }
 
+        @media only screen and (max-width: 37.5em) {
+          padding: 1.3rem 3rem;
+        }
+
         @include sm {
           font-weight: 500;
           letter-spacing: 0;
