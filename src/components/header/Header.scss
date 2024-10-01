@@ -116,7 +116,7 @@
       }
 
       @include sm {
-        line-height: 1;
+        line-height: 1.4rem;
       }
 
       @media only screen and (max-width: 23.4375em) {
@@ -171,7 +171,8 @@
         height: 5.5rem;
       }
 
-      @media only screen and (max-width: 26.875em) {
+      @include sm {
+        width: 70%;
         height: 5rem;
       }
 
@@ -217,6 +218,7 @@
           @media only screen and (max-width: 31.25em) {
             width: 2rem;
             height: 2rem;
+            margin: 1rem;
           }
 
           @media only screen and (max-width: 18.75em) {
@@ -384,6 +386,10 @@
         @media only screen and (max-width: 31.25em) {
           font-size: var(--default-font-size);
           width: 12rem;
+        }
+
+        @include sm {
+          font-size: 1.5rem;
         }
 
         @media only screen and (max-width: 18.75em) {
