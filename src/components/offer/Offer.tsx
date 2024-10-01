@@ -1,10 +1,14 @@
+'use client';
+
 import dynamic from 'next/dynamic';
 
 import OfferInfo from '../offerInfo/OfferInfo';
 
 import './Offer.scss';
 
-const OfferImage = dynamic(() => import('../offerImage/OfferImage'));
+const OfferImage = dynamic(() => import('../offerImage/OfferImage'), {
+  ssr: false,
+});
 
 const Offer = () => {
   return (
