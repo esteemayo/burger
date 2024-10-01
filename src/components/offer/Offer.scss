@@ -22,7 +22,7 @@
     height: 50vw;
   }
 
-  @include sm {
+  @media only screen and (max-width: 34.375em) {
     height: 55vw;
   }
 
