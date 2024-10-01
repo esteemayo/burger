@@ -1,6 +1,5 @@
-import Image from 'next/image';
-
 import CountDown from '../countdown/CountDown';
+import OfferImage from '../offerImage/OfferImage';
 
 import './Offer.scss';
 
@@ -8,11 +7,7 @@ const Offer = () => {
   return (
     <section className='offer'>
       <div className='container'>
-        <div className='left'>
-          <div className='imgContainer'>
-            <Image src='/img/offerProduct.png' fill alt='offer product' />
-          </div>
-        </div>
+        <OfferImage />
         <div className='right'>
           <h1 className='heading'>Double crunchy chicken burger</h1>
           <p className='desc'>
