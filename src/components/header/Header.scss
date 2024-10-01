@@ -150,27 +150,6 @@
       border-radius: 2px;
       overflow: hidden;
 
-      @media only screen and (max-width: 93.75em) {
-        width: 58.667%;
-      }
-
-      @include xxl {
-        width: 62.858%;
-      }
-
-      @media only screen and (max-width: 81.25em) {
-        width: 67.693%;
-      }
-
-      @include xl {
-        width: 73.334%;
-        height: 5.556rem;
-      }
-
-      @media only screen and (max-width: 68.75em) {
-        width: 80%;
-      }
-
       @media only screen and (max-width: 56.25em) {
         width: 85%;
         height: 6.25rem;
