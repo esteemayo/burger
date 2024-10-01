@@ -87,8 +87,12 @@
         font-size: 3rem;
       }
 
+      @media only screen and (max-width: 59.375em) {
+        font-size: 2.65rem;
+      }
+
       @media only screen and (max-width: 56.25em) {
-        font-size: 3.05rem;
+        font-size: 2.7rem;
       }
 
       @include md {
