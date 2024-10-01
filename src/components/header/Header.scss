@@ -18,8 +18,8 @@
     background-position: center left, center right;
   }
 
-  @media only screen and (max-width: 57.5em) {
-    height: calc(80vh - 12rem);
+  @media only screen and (max-width: 59.375em) {
+    height: calc(55vw - 12rem);
   }
 
   @include md {
