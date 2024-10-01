@@ -216,15 +216,9 @@
           height: 2rem;
           margin: 1rem;
 
-          @include xl {
-            width: 2.223rem;
-            height: 2.223rem;
-            margin: 1.111111rem;
-          }
-
           @media only screen and (max-width: 56.25em) {
-            width: 2.5rem;
-            height: 2.5rem;
+            width: 2.25rem;
+            height: 2.25rem;
             margin: 1.25rem;
           }
 
@@ -261,24 +255,12 @@
           box-shadow: none;
           caret-color: $clr-gray-light;
 
-          @include xl {
-            font-size: 1.777778rem;
-          }
-
           @media only screen and (max-width: 56.25em) {
-            font-size: 1.85rem;
-          }
-
-          @include md {
-            font-size: 1.975rem;
-          }
-
-          @media only screen and (max-width: 43.75em) {
-            font-size: 1.8rem;
+            font-size: 1.65rem;
           }
 
           @media only screen and (max-width: 18.75em) {
-            font-size: 1.6rem;
+            font-size: var(--default-font-size);
           }
 
           @media only screen and (min-width: 106.25em) {
@@ -286,6 +268,10 @@
           }
 
           @media only screen and (min-width: 112.5em) {
+            font-size: 2rem;
+          }
+
+          @media only screen and (min-width: 125em) {
             font-size: 2.2rem;
           }
 
