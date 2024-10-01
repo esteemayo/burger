@@ -79,8 +79,16 @@
         font-size: 3.26rem;
       }
 
+      @media only screen and (max-width: 68.75em) {
+        font-size: 3.15rem;
+      }
+
+      @include lg {
+        font-size: 3rem;
+      }
+
       @media only screen and (max-width: 56.25em) {
-        font-size: 3.65rem;
+        font-size: 3.05rem;
       }
 
       @include md {
