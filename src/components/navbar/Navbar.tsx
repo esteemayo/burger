@@ -27,14 +27,14 @@ const Navbar = () => {
   const pathname = usePathname();
   const { data: session, status } = useSession();
 
-  const onOpen = useSidebar((store) => store.onOpen);
   const totalPrice = useCartStore((store) => store.totalPrice);
-  const products = useCartStore((store) => store.products);
+  const onOpen = useSidebar((store) => store.onOpen);
   const removeFromCart = useCartStore((store) => store.removeFromCart);
+  const products = useCartStore((store) => store.products);
 
   const { searchQuery, handleChange, handleSubmit } = useSearch();
   const { cartQuantity, handleDecrement, handleIncrement } = useCartControls();
-  
+
   const { avatar } = useAvatar(session?.user);
 
   const [isActive, setIsActive] = useState(false);
