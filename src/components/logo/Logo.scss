@@ -11,9 +11,9 @@
     color: inherit;
     transition: all 0.3s;
 
-    @media only screen and (max-width: 26.875em) {
+    @include sm {
       width: 10rem;
-      height: 11.25rem;
+      height: auto;
     }
 
     @media only screen and (min-width: 112.5em) {
