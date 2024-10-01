@@ -166,9 +166,9 @@
       border-radius: 2px;
       overflow: hidden;
 
-      @media only screen and (max-width: 56.25em) {
-        width: 85%;
-        height: 6.25rem;
+      @include lg {
+        width: 60%;
+        height: 6rem;
       }
 
       @media only screen and (max-width: 33.75em) {
