@@ -42,15 +42,15 @@ const Header = () => {
             />
             <button
               type='button'
-              disabled={isLoading}
+              disabled={!!isLoading}
               className={btnClearClasses}
               onClick={handleClear}
             >
               Clear
             </button>
           </div>
-          <button disabled={isLoading} className='searchBtn'>
-            {isLoading ? <Spinner /> : 'Find products'}
+          <button disabled={!!isLoading} className='searchBtn'>
+            {!!isLoading ? <Spinner /> : 'Find products'}
           </button>
         </form>
       </div>
