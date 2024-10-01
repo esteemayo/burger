@@ -75,6 +75,10 @@
       color: $clr-white;
       line-height: 4.4rem;
 
+      @include xl {
+        font-size: 3.26rem;
+      }
+
       @media only screen and (max-width: 56.25em) {
         font-size: 3.65rem;
       }
