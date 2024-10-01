@@ -179,6 +179,10 @@
         padding: 0;
       }
 
+      @media only screen and (min-width: 125em) {
+        gap: 5rem;
+      }
+
       .heading {
         text-transform: capitalize;
         font-weight: 700;
