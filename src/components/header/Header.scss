@@ -196,6 +196,10 @@
         align-items: center;
         gap: 1rem;
 
+        @include sm {
+          gap: 0.5rem;
+        }
+
         .searchIcon {
           display: inline-block;
           width: 2rem;
@@ -209,13 +213,12 @@
           }
 
           @include sm {
-            gap: 0.5rem;
+            margin: 1rem;
           }
 
           @media only screen and (max-width: 31.25em) {
             width: 2rem;
             height: 2rem;
-            margin: 1rem;
           }
 
           @media only screen and (max-width: 18.75em) {
