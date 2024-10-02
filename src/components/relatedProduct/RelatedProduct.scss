@@ -54,6 +54,10 @@
   }
 
   @media only screen and (min-width: 112.5em) {
+    width: 27.25rem;
+  }
+
+  @media only screen and (min-width: 125em) {
     width: 30.25rem;
   }
 
@@ -115,6 +119,11 @@
       }
 
       @media only screen and (min-width: 112.5em) {
+        width: 27.25rem;
+        height: 20rem;
+      }
+
+      @media only screen and (min-width: 125em) {
         width: 30.25rem;
         height: 23rem;
       }

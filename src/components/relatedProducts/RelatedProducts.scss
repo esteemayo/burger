@@ -63,6 +63,10 @@
     }
 
     @media only screen and (min-width: 112.5em) {
+      width: 120rem;
+    }
+
+    @media only screen and (min-width: 125em) {
       width: 130rem;
       gap: 4rem;
     }
@@ -90,6 +94,10 @@
       }
 
       @media only screen and (min-width: 112.5em) {
+        font-size: 2.25rem;
+      }
+
+      @media only screen and (min-width: 125em) {
         font-size: 2.5rem;
       }
 
@@ -156,6 +164,10 @@
         }
 
         @media only screen and (min-width: 112.5em) {
+          left: 24rem;
+        }
+
+        @media only screen and (min-width: 125em) {
           left: 26rem;
         }
       }
