@@ -23,6 +23,10 @@
 
     @media only screen and (min-width: 112.5em) {
       width: 17rem;
+      font-size: 2rem;
+    }
+
+    @media only screen and (min-width: 125em) {
       font-size: 2.2rem;
     }
   }
@@ -63,6 +67,11 @@
       }
 
       @media only screen and (min-width: 112.5em) {
+        font-size: 2rem;
+        padding: 1.8rem 2.5rem;
+      }
+
+      @media only screen and (min-width: 125em) {
         font-size: 2.2rem;
         padding: 2rem 3rem;
       }
@@ -91,6 +100,11 @@
       }
 
       @media only screen and (min-width: 112.5em) {
+        font-size: 2rem;
+        padding: 1.8rem 2rem;
+      }
+
+      @media only screen and (min-width: 125em) {
         font-size: 2.2rem;
         padding: 2rem;
       }
@@ -109,6 +123,10 @@
         }
 
         @media only screen and (min-width: 112.5em) {
+          font-size: 1.8rem;
+        }
+
+        @media only screen and (min-width: 125em) {
           font-size: 2rem;
         }
       }
