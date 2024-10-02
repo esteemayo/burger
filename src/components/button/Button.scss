@@ -53,6 +53,8 @@
   align-items: center;
   justify-content: center;
   gap: 1rem;
+
+  background-color: transparent;
   -webkit-box-shadow: inset $box-shadow;
   box-shadow: inset $box-shadow;
   transition: all 0.3s;
@@ -79,6 +81,11 @@
     }
 
     @media only screen and (min-width: 112.5em) {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    @media only screen and (min-width: 125em) {
       width: 2.5rem;
       height: 2.5rem;
     }
