@@ -91,9 +91,12 @@
       }
 
       @media only screen and (min-width: 112.5em) {
-        font-size: 3.7rem;
+        font-size: 3.25rem;
         margin-bottom: 5rem;
-        margin-left: 0;
+      }
+
+      @media only screen and (min-width: 125em) {
+        font-size: 3.7rem;
       }
 
       &::after {
