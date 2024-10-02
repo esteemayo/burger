@@ -39,18 +39,13 @@
         z-index: 1000;
       }
 
-      @include xl {
-        width: 33.335rem;
-        height: 27.7778rem;
-      }
-
       @media only screen and (max-width: 56.25em) {
-        width: 37.5rem;
-        height: 31.25rem;
+        width: 32rem;
+        height: 22rem;
       }
 
       @include sm {
-        width: 31.25rem;
+        width: 28rem;
       }
 
       @media only screen and (max-width: 18.75em) {
@@ -59,6 +54,11 @@
       }
 
       @media only screen and (min-width: 112.5em) {
+        width: 32.5rem;
+        height: 27rem;
+      }
+
+      @media only screen and (min-width: 125em) {
         width: 35rem;
         height: 35rem;
       }
