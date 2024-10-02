@@ -150,7 +150,7 @@
                 height: 3.5rem;
               }
 
-              @media only screen and (min-width: 112.5em) {
+              @media only screen and (min-width: 125em) {
                 height: 5.5rem;
               }
             }
@@ -227,6 +227,10 @@
             }
 
             @media only screen and (min-width: 112.5em) {
+              font-size: 1.8rem;
+            }
+
+            @media only screen and (min-width: 125em) {
               font-size: 2rem;
             }
 
@@ -245,7 +249,7 @@
                 height: 1.4rem;
               }
 
-              @media only screen and (min-width: 112.5em) {
+              @media only screen and (min-width: 125em) {
                 width: 1.66667rem;
                 height: 1.66667rem;
               }
@@ -298,6 +302,10 @@
           }
 
           @media only screen and (min-width: 112.5em) {
+            font-size: 1.95rem;
+          }
+
+          @media only screen and (min-width: 125em) {
             font-size: 2.16667rem;
           }
         }
@@ -335,6 +343,11 @@
             }
 
             @media only screen and (min-width: 112.5em) {
+              width: 4.75rem;
+              height: 4.75rem;
+            }
+
+            @media only screen and (min-width: 125em) {
               width: 5.167rem;
               height: 5.167rem;
             }
@@ -372,6 +385,10 @@
                 }
 
                 @media only screen and (min-width: 112.5em) {
+                  font-size: 2.65rem;
+                }
+
+                @media only screen and (min-width: 125em) {
                   font-size: 3rem;
                 }
               }
