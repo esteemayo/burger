@@ -471,6 +471,10 @@
               font-size: 1.66667rem;
             }
 
+            @media only screen and (min-width: 125em) {
+              font-size: 1.7rem;
+            }
+
             &:hover,
             &:visited {
               text-decoration: underline;
@@ -520,6 +524,10 @@
 
           @media only screen and (min-width: 112.5em) {
             font-size: 1.66667rem;
+          }
+
+          @media only screen and (min-width: 125em) {
+            font-size: 1.7rem;
           }
 
           a,
