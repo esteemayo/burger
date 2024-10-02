@@ -43,12 +43,8 @@
       color: $clr-secondary;
     }
 
-    @include xl {
-      font-size: 1.35rem;
-    }
-
     @media only screen and (max-width: 56.25em) {
-      font-size: 1.25rem;
+      font-size: 1.35rem;
     }
 
     @media only screen and (min-width: 112.5em) {
@@ -109,12 +105,8 @@
       fill: $clr-gray-light;
       cursor: pointer;
 
-      @include xl {
-        font-size: 1.35rem;
-      }
-
       @media only screen and (max-width: 56.25em) {
-        font-size: 1.25rem;
+        font-size: 1.35rem;
       }
 
       @media only screen and (min-width: 112.5em) {
@@ -134,12 +126,8 @@
     color: $clr-gray-light;
     white-space: nowrap;
 
-    @include xl {
-      font-size: 1.35rem;
-    }
-
     @media only screen and (max-width: 56.25em) {
-      font-size: 1.25rem;
+      font-size: 1.23rem;
     }
 
     @media only screen and (min-width: 112.5em) {
