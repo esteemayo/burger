@@ -305,6 +305,8 @@
               align-items: center;
               justify-content: center;
               gap: 1rem;
+
+              background-color: transparent;
               -webkit-box-shadow: inset $box-shadow;
               box-shadow: inset $box-shadow;
               transition: all 0.3s;
