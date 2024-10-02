@@ -55,6 +55,10 @@
 
         @media only screen and (min-width: 112.5em) {
           font-weight: 600;
+          font-size: 2rem;
+        }
+
+        @media only screen and (min-width: 125em) {
           font-size: 2.2rem;
         }
 
@@ -156,6 +160,11 @@
           }
 
           @media only screen and (min-width: 112.5em) {
+            font-size: var(--default-font-size);
+            padding: 0.8rem 1.6rem 0.7rem;
+          }
+
+          @media only screen and (min-width: 125em) {
             font-size: 1.8rem;
             padding: 1rem 1.6rem 0.9rem;
           }
