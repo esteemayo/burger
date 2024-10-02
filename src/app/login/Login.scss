@@ -58,6 +58,10 @@
         width: 125rem;
       }
 
+      @media only screen and (min-width: 125em) {
+        width: 130rem;
+      }
+
       .imgWrap {
         flex: 1;
         width: 100%;
@@ -153,6 +157,10 @@
             }
 
             @media only screen and (min-width: 112.5em) {
+              font-size: 3.5rem;
+            }
+
+            @media only screen and (min-width: 125em) {
               font-size: 4rem;
             }
 
@@ -175,6 +183,11 @@
                 }
 
                 @media only screen and (min-width: 112.5em) {
+                  width: 0.6335rem;
+                  height: 0.6335rem;
+                }
+
+                @media only screen and (min-width: 125em) {
                   width: 0.8335rem;
                   height: 0.8335rem;
                 }
@@ -212,6 +225,10 @@
               }
 
               @media only screen and (min-width: 112.5em) {
+                font-size: 1.65rem;
+              }
+
+              @media only screen and (min-width: 125em) {
                 font-size: 1.8rem;
               }
 
