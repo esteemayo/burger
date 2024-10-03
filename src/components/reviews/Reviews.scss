@@ -223,6 +223,10 @@
                 @include lg {
                   width: 75%;
                 }
+
+                @media only screen and (max-width: 34.375em) {
+                  width: 65%;
+                }
               }
 
               .replyTitle {
