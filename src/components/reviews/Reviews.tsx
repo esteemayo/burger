@@ -84,7 +84,7 @@ const Reviews = ({
               </div>
             ) : (
               <div className={toggleClasses}>
-                {loading
+                {true
                   ? Array.from(Array(2)).map((_, index) => {
                       return <ReviewCardSkeleton key={index} />;
                     })
