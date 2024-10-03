@@ -149,6 +149,10 @@
             width: 7rem !important;
           }
 
+          @media only screen and (max-width: 25em) {
+            width: 6rem !important;
+          }
+
           @media only screen and (min-width: 112.5em) {
             width: 9rem !important;
             height: 1.8rem !important;
@@ -268,8 +272,8 @@
             width: 27rem !important;
           }
 
-          @media only screen and (max-width: 28.125em) {
-            width: 26rem !important;
+          @media only screen and (max-width: 25em) {
+            width: 24rem !important;
           }
 
           @media only screen and (max-width: 18.75em) {
