@@ -21,6 +21,7 @@ const Review = dynamic(() => import('../review/Review'), {
 
 const Reviews = ({
   actionId,
+  productName,
   loading,
   reviews,
   productReviews,
@@ -68,8 +69,8 @@ const Reviews = ({
   const reviewLabel = useMemo(() => {
     return reviews?.length > 0
       ? 'Add a review'
-      : 'Be the first to review “Double Grilled Chicken Burger”';
-  }, [reviews?.length]);
+      : `Be the first to review “${productName}”`;
+  }, [productName, reviews?.length]);
 
   return (
     <div className={reviewsContainer}>
