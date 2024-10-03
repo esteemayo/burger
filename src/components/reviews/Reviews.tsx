@@ -60,9 +60,9 @@ const Reviews = ({
     return !!session
       ? 'respond'
       : !isOpen
-      ? 'respond hide'
-      : !session
       ? 'respond show'
+      : !session
+      ? 'respond hide'
       : 'respond';
   }, [isOpen, session]);
 
