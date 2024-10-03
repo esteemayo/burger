@@ -571,6 +571,7 @@ export interface ProductReviewProps {
 
 export interface ReviewsProps {
   actionId: string;
+  productName: string;
   loading?: boolean;
   reviews: ReviewType;
   productReviews: ReviewType;
