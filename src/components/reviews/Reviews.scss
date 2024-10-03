@@ -6,6 +6,10 @@
 
   &.emptyReviews {
     max-width: 100rem;
+
+    @media only screen and (max-width: 93.75em) {
+      max-width: 95rem;
+    }
   }
 
   .reviewBox {
