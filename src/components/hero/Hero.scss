@@ -3,7 +3,7 @@
 
 .hero {
   width: 100vw;
-  height: 70vh;
+  height: calc(45vw - 12rem);
   background-image: linear-gradient(
       to bottom right,
       rgba(0, 0, 0, 0.15),
@@ -28,7 +28,7 @@
   }
 
   @media only screen and (min-width: 112.5em) {
-    height: 80vh;
+    height: calc(50vw - 12rem);
   }
 
   .headingWrap {
