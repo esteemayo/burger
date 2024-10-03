@@ -564,8 +564,8 @@ export interface ProductInfoProps {
 }
 
 export interface ProductReviewProps {
-  name: string;
   actionId: string;
+  productName: string;
   productReviews: ReviewType;
 }
 
