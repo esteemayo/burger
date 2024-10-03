@@ -63,8 +63,10 @@ const Reviews = ({
       ? 'respond show'
       : !session
       ? 'respond hide'
+      : reviews?.length === 0
+      ? 'emptyReview'
       : 'respond';
-  }, [isOpen, session]);
+  }, [isOpen, reviews?.length, session]);
 
   const reviewLabel = useMemo(() => {
     return reviews?.length > 0
