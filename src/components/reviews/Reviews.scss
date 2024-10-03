@@ -18,6 +18,10 @@
     @media only screen and (max-width: 68.75em) {
       max-width: 80rem;
     }
+
+    @media only screen and (max-width: 53.125) {
+      max-width: 100%;
+    }
   }
 
   .reviewBox {
