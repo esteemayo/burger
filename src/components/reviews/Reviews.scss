@@ -200,9 +200,12 @@
                 margin: 3rem 0 0;
               }
 
+              &.show {
+                min-height: 10rem;
+              }
+
               &.hide {
                 min-height: 33.292rem;
-                min-height: 10rem;
               }
 
               &::after {

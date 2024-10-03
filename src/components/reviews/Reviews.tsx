@@ -56,8 +56,14 @@ const Reviews = ({
   }, [isOpen]);
 
   const respondClasses = useMemo(() => {
-    return !!session ? 'respond' : 'respond hide';
-  }, [session]);
+    return !!session
+      ? 'respond'
+      : !isOpen
+      ? 'respond hide'
+      : !session
+      ? 'respond show'
+      : 'respond';
+  }, [isOpen, session]);
 
   const reviewLabel = useMemo(() => {
     return reviews?.length > 0
