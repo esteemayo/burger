@@ -70,6 +70,11 @@
       }
 
       @media only screen and (min-width: 112.5em) {
+        width: 65rem;
+        padding: 3rem;
+      }
+
+      @media only screen and (min-width: 125em) {
         width: 75rem;
         padding: 4rem;
       }
@@ -136,11 +141,11 @@
             }
 
             @media only screen and (min-width: 112.5em) {
-              width: 40rem;
+              width: 35rem;
             }
 
             @media only screen and (min-width: 125em) {
-              width: 35rem;
+              width: 32rem;
             }
           }
         }
