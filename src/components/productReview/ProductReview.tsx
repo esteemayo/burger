@@ -10,7 +10,11 @@ import { getReviewsOnProduct } from '@/services/productService';
 
 import './ProductReview.scss';
 
-const ProductReview = ({ actionId, productReviews }: ProductReviewProps) => {
+const ProductReview = ({
+  actionId,
+  productName,
+  productReviews,
+}: ProductReviewProps) => {
   const { isLoading, data: reviews } = useQuery({
     queryKey: ['reviews'],
     queryFn: async () => {
@@ -25,6 +29,7 @@ const ProductReview = ({ actionId, productReviews }: ProductReviewProps) => {
       <div className='container'>
         <Reviews
           actionId={actionId}
+          productName={productName}
           loading={isLoading}
           reviews={reviews}
           productReviews={productReviews}

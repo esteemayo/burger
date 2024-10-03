@@ -60,6 +60,7 @@ const ProductClient = ({ productId }: ProductClientProps) => {
       />
       <ProductReview
         actionId={product?.id!}
+        productName={product?.name!}
         productReviews={product?.reviews!}
       />
       <RelatedProducts
