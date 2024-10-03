@@ -208,6 +208,12 @@
                 min-height: 10rem;
               }
 
+              &.emptyReview {
+                &::after {
+                  display: none;
+                }
+              }
+
               &::after {
                 content: '';
                 width: 80%;
