@@ -100,6 +100,11 @@
         }
 
         @media only screen and (min-width: 112.5em) {
+          width: 9.5rem !important;
+          height: 9.5rem !important;
+        }
+
+        @media only screen and (min-width: 125em) {
           width: 10rem !important;
           height: 10rem !important;
         }
