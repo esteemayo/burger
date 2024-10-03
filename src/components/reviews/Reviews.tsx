@@ -59,12 +59,12 @@ const Reviews = ({
   const respondClasses = useMemo(() => {
     return !!session
       ? 'respond'
+      : reviews?.length === 0
+      ? 'respond emptyReview'
       : !isOpen
       ? 'respond show'
       : !session
       ? 'respond hide'
-      : reviews?.length === 0
-      ? 'respond emptyReview'
       : 'respond';
   }, [isOpen, reviews?.length, session]);
 
