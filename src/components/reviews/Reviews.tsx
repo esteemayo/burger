@@ -38,8 +38,10 @@ const Reviews = ({
   }, []);
 
   const reviewsContainer = useMemo(() => {
-    return products?.length < 1 ? 'reviews emptyReviews' : 'reviews';
-  }, [products?.length]);
+    return !session || products?.length < 1 || loading
+      ? 'reviews emptyReviews'
+      : 'reviews';
+  }, [loading, products?.length, session]);
 
   const totalReviews = useMemo(() => {
     return reviews?.length ?? productReviews.length;
