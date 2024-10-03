@@ -4,6 +4,10 @@
 .reviews {
   flex: 3;
 
+  &.emptyReviews {
+    max-width: 100rem;
+  }
+
   .reviewBox {
     .listWrap {
       list-style: none;
