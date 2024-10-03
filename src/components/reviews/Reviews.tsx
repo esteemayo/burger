@@ -64,7 +64,7 @@ const Reviews = ({
       : !session
       ? 'respond hide'
       : reviews?.length === 0
-      ? 'emptyReview'
+      ? 'respond emptyReview'
       : 'respond';
   }, [isOpen, reviews?.length, session]);
 
