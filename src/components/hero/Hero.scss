@@ -15,6 +15,14 @@
   background-position: center center;
   background-repeat: no-repeat;
 
+  @include lg {
+    height: calc(50vw - 12rem);
+  }
+
+  @media only screen and (max-width: 59.375em) {
+    height: calc(55vw - 12rem);
+  }
+
   @media only screen and (max-width: 31.25em) {
     height: 60vh;
   }
@@ -28,7 +36,7 @@
   }
 
   @media only screen and (min-width: 112.5em) {
-    height: calc(50vw - 12rem);
+    height: calc(52vw - 15rem);
   }
 
   .headingWrap {
