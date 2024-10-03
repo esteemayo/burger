@@ -27,16 +27,32 @@
     height: calc(60vw - 12rem);
   }
 
-  @media only screen and (max-width: 31.25em) {
-    height: 60vh;
+  @include md {
+    height: calc(65vw - 12rem);
   }
 
-  @include sm {
-    height: 50vh;
+  @media only screen and (max-width: 37.5em) {
+    height: calc(75vw - 12rem);
+  }
+
+  @media only screen and (max-width: 33.75em) {
+    height: calc(80vw - 12rem);
+  }
+
+  @media only screen and (max-width: 26.875em) {
+    height: calc(85vw - 12rem);
   }
 
   @media only screen and (max-width: 25em) {
-    height: 45vh;
+    height: calc(90vw - 12rem);
+  }
+
+  @media only screen and (max-width: 21.5em) {
+    height: calc(95vw - 12rem);
+  }
+
+  @media only screen and (max-width: 18.75em) {
+    height: calc(100vw - 12rem);
   }
 
   @media only screen and (min-width: 112.5em) {
