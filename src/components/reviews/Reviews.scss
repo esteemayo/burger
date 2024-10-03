@@ -14,6 +14,10 @@
     @include xxl {
       max-width: 90rem;
     }
+
+    @media only screen and (max-width: 68.75em) {
+      max-width: 80rem;
+    }
   }
 
   .reviewBox {
