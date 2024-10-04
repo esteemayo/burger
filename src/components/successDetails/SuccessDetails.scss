@@ -37,7 +37,11 @@
       }
 
       @media only screen and (min-width: 112.5em) {
-        font-size: 2.33333rem;
+        font-size: 1.8rem;
+      }
+
+      @media only screen and (min-width: 125em) {
+        font-size: 2rem;
       }
 
       &::after {
@@ -74,7 +78,11 @@
         }
 
         @media only screen and (min-width: 112.5em) {
-          width: 40%;
+          width: 55%;
+        }
+
+        @media only screen and (min-width: 125em) {
+          width: 50%;
         }
       }
     }
@@ -143,6 +151,10 @@
         @media only screen and (min-width: 112.5em) {
           width: 2.5rem;
         }
+
+        @media only screen and (min-width: 125em) {
+          width: 3rem;
+        }
       }
 
       h3 {
@@ -166,7 +178,11 @@
         }
 
         @media only screen and (min-width: 112.5em) {
-          font-size: 1.85rem;
+          font-size: 1.8rem;
+        }
+
+        @media only screen and (min-width: 125em) {
+          font-size: 2rem;
         }
       }
     }
