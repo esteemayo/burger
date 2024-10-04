@@ -9,24 +9,17 @@
   border-radius: 0.5rem;
   position: relative;
 
-  @include xl {
-    font-size: 1.44445rem;
-    padding: 0.5px 1.111111rem;
-  }
-
   @media only screen and (max-width: 56.25em) {
-    font-size: 1.625rem;
-    padding: 0.5px 1.25rem;
-  }
-
-  @media only screen and (max-width: 18.75em) {
-    font-size: 1.5rem;
-    padding: 0.5px 1rem;
+    font-size: 1.35rem;
   }
 
   @media only screen and (min-width: 112.5em) {
-    font-size: 1.6rem;
+    font-size: var(--default-font-size);
     padding: 3px 1.2rem;
+  }
+
+  @media only screen and (min-width: 125em) {
+    font-size: 1.8rem;
   }
 
   img {
@@ -70,6 +63,11 @@
       height: 2rem;
       top: -1rem;
       right: -0.9rem;
+    }
+
+    @media only screen and (min-width: 125em) {
+      width: 2.25rem;
+      height: 2.25rem;
     }
   }
 }
