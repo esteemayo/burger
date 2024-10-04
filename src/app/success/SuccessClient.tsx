@@ -28,19 +28,19 @@ const SuccessClient = () => {
     enabled: !!payment_intent,
   });
 
-  useEffect(() => {
-    (async () => {
-      try {
-        await updatePaymentIntent(payment_intent);
+  // useEffect(() => {
+  //   (async () => {
+  //     try {
+  //       await updatePaymentIntent(payment_intent);
 
-        setTimeout(() => {
-          router.push('/orders');
-        }, 5000);
-      } catch (err: unknown) {
-        console.log(err);
-      }
-    })();
-  }, [payment_intent, router]);
+  //       setTimeout(() => {
+  //         router.push('/orders');
+  //       }, 5000);
+  //     } catch (err: unknown) {
+  //       console.log(err);
+  //     }
+  //   })();
+  // }, [payment_intent, router]);
 
   if (isLoading) {
     return <Loader />;
