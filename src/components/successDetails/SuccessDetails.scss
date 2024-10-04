@@ -54,7 +54,7 @@
         border-bottom: 1px solid $line;
 
         @include xxl {
-          width: 50%;
+          width: 60%;
         }
 
         @include lg {
@@ -278,7 +278,7 @@
           width: 1.4rem;
         }
 
-        @media only screen and (max-width: 125em) {
+        @media only screen and (min-width: 125em) {
           width: 2rem;
         }
       }
