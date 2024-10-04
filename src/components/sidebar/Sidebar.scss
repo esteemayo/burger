@@ -12,6 +12,7 @@
   background-color: $clr-white;
   box-shadow: $box-shadow;
   border-bottom-left-radius: 0.8rem;
+  z-index: 4000;
   transition: all 0.5s;
   transition-timing-function: cubic-bezier(0.77, 0.2, 0.05, 1),
     cubic-bezier(0.77, 0.2, 0.05, 1), cubic-bezier(0.77, 0.2, 0.05, 1);
