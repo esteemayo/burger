@@ -16,6 +16,10 @@
     @media only screen and (min-width: 112.5em) {
       gap: 1.2rem;
     }
+
+    @media only screen and (min-width: 125em) {
+      gap: 1.5rem;
+    }
   }
 
   button {
@@ -42,6 +46,11 @@
 
     @media only screen and (min-width: 112.5em) {
       font-size: 1.8rem;
+      padding: 1rem 3rem;
+    }
+
+    @media only screen and (min-width: 125em) {
+      font-size: 2rem;
       padding: 1.15rem 3.25rem;
     }
 
