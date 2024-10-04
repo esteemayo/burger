@@ -39,13 +39,9 @@ const Sidebar = () => {
     return !!isOpen ? 'sidebar active' : 'sidebar';
   }, [isOpen]);
 
-  const containerClasses = useMemo(() => {
-    return !!isOpen ? 'container active' : 'container';
-  }, [isOpen]);
-
   return (
     <aside className={sidebarClasses} onClick={closeHandler}>
-      <div className={containerClasses}>
+      <div className='container'>
         <ul className='lists'>
           <li onClick={handleClose}>
             <Link href='/products'>
