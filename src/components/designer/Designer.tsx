@@ -2,7 +2,7 @@ import './Designer.scss';
 
 const Designer = () => {
   return (
-    <div className='designer'>
+    <section className='designer'>
       <div className='wrapper'>
         <div className='copyright'>
           <span className='text'>
@@ -10,7 +10,7 @@ const Designer = () => {
           </span>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
