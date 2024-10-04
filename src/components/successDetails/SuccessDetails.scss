@@ -149,7 +149,7 @@
         }
 
         @media only screen and (min-width: 112.5em) {
-          width: 2.5rem;
+          width: 2.35rem;
         }
 
         @media only screen and (min-width: 125em) {
@@ -209,6 +209,10 @@
         font-size: 1.7rem;
         line-height: 1.5;
       }
+
+      @media only screen and (min-width: 125em) {
+        font-size: 1.8rem;
+      }
     }
   }
 
@@ -245,7 +249,11 @@
         }
 
         @media only screen and (min-width: 112.5em) {
-          font-size: 1.85rem;
+          font-size: 1.8rem;
+        }
+
+        @media only screen and (min-width: 125em) {
+          font-size: 2rem;
         }
       }
 
@@ -268,6 +276,10 @@
 
         @media only screen and (max-width: 18.75em) {
           width: 1.4rem;
+        }
+
+        @media only screen and (max-width: 125em) {
+          width: 2rem;
         }
       }
     }
@@ -298,6 +310,10 @@
             font-size: 1.7rem;
           }
 
+          @media only screen and (min-width: 125em) {
+            font-size: 1.8rem;
+          }
+
           &:nth-child(2) {
             font-variant: tabular-nums;
           }
@@ -326,6 +342,10 @@
 
         @media only screen and (min-width: 112.5em) {
           font-size: 1.7rem;
+        }
+
+        @media only screen and (min-width: 125em) {
+          font-size: 1.8rem;
         }
 
         &:nth-child(2) {
