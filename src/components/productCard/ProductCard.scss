@@ -119,6 +119,12 @@
           padding: 1.2rem 0;
         }
 
+        @media only screen and (min-width: 125em) {
+          width: 17rem;
+          font-size: 1.7rem;
+          padding: 1.5rem 0;
+        }
+
         &:hover {
           color: $clr-secondary;
         }
