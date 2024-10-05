@@ -7,7 +7,7 @@
   right: -100%;
 
   width: 35rem;
-  min-height: 45rem;
+  min-height: 35rem;
   padding: 2.4rem;
   background-color: $clr-white;
   border-bottom-left-radius: 0.8rem;
@@ -15,6 +15,10 @@
   transition: all 0.5s;
   transition-timing-function: cubic-bezier(0.77, 0.2, 0.05, 1),
     cubic-bezier(0.77, 0.2, 0.05, 1), cubic-bezier(0.77, 0.2, 0.05, 1);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &.active {
     right: 0;
@@ -29,10 +33,6 @@
   }
 
   .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
     .lists {
       list-style: none;
       padding-top: 2rem;
