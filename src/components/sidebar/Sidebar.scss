@@ -166,6 +166,10 @@
         line-height: 1.7;
         cursor: default;
 
+        @media only screen and (max-width: 18.75em) {
+          font-size: 1.3rem;
+        }
+
         span {
           color: #000000de;
           white-space: wrap;
@@ -209,12 +213,21 @@
             padding: 0.5rem 1.6rem;
             border-radius: 0.5rem;
 
+            @media only screen and (max-width: 18.75em) {
+              font-size: 1.4rem;
+            }
+
             .loginLogo,
             .registerLogo {
               display: inline-block;
               width: 2rem;
               height: 2rem;
               object-fit: cover;
+
+              @media only screen and (max-width: 18.75em) {
+                width: 1.85rem;
+                height: 1.85rem;
+              }
             }
           }
         }
