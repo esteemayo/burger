@@ -21,8 +21,8 @@ const Sidebar = () => {
 
   const { cartQuantity } = useCartControls();
 
+  const { isOpen, handleClose, handleLogout } = useLogout();
   const { searchQuery, handleChange, handleSubmit } = useSearch();
-  const { isOpen, onClose, handleClose, handleLogout } = useLogout();
 
   const sidebarClasses = useMemo(() => {
     return !!isOpen ? 'sidebar active' : 'sidebar';
@@ -122,16 +122,6 @@ const Sidebar = () => {
               })}
             </div>
           )}
-        </div>
-        <div className='btnCloseWrap'>
-          <button onClick={onClose} type='button' className='btnClose'>
-            <Image
-              src='/svg/times.svg'
-              width={15}
-              height={15}
-              alt='close icon'
-            />
-          </button>
         </div>
       </div>
     </aside>
