@@ -7,9 +7,10 @@
   right: -100%;
 
   width: 35rem;
-  min-height: 35rem;
+  min-height: 40rem;
   padding: 2.4rem;
   background-color: $clr-white;
+  border-bottom: 3px solid $clr-primary;
   border-bottom-left-radius: 0.8rem;
   z-index: 4000;
   transition: all 0.5s;
@@ -18,7 +19,6 @@
 
   display: flex;
   align-items: center;
-  justify-content: center;
 
   &.active {
     right: 0;
@@ -26,10 +26,6 @@
 
   @media only screen and (min-width: 30.0625em) {
     display: none;
-  }
-
-  @media only screen and (min-width: 112.5em) {
-    top: 15rem;
   }
 
   .container {
@@ -41,6 +37,8 @@
         display: flex;
         align-items: center;
         gap: 1rem;
+
+        width: 30rem;
         padding: 0.75rem 0;
 
         &:not(:last-child) {
