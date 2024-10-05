@@ -29,6 +29,9 @@
   }
 
   .container {
+    width: 30rem;
+    padding: 0 2.15rem;
+
     .lists {
       list-style: none;
       padding-top: 2rem;
@@ -37,8 +40,6 @@
         display: flex;
         align-items: center;
         gap: 1rem;
-
-        width: 30rem;
         padding: 0.75rem 0;
 
         &:not(:last-child) {
@@ -201,8 +202,8 @@
 
     .btnCloseWrap {
       position: absolute;
-      top: 0.5rem;
-      right: 0.5rem;
+      top: 2rem;
+      right: 4.65rem;
 
       .btnClose {
         all: unset;
