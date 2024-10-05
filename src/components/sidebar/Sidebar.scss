@@ -7,7 +7,7 @@
   right: -100%;
 
   width: 35rem;
-  min-height: 40rem;
+  min-height: 35rem;
   padding: 2.4rem;
   background-color: $clr-white;
   border-bottom: 3px solid $clr-primary;
@@ -29,12 +29,14 @@
   }
 
   .container {
-    width: 30rem;
-    padding: 0 2.15rem;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     .lists {
       list-style: none;
-      padding-top: 2rem;
 
       li {
         display: flex;
@@ -196,26 +198,6 @@
           border: 1px solid currentColor;
           border-radius: 0.5rem;
           transition: all 0.3s;
-        }
-      }
-    }
-
-    .btnCloseWrap {
-      position: absolute;
-      top: 2rem;
-      right: 4.65rem;
-
-      .btnClose {
-        all: unset;
-        display: inline-block;
-        background-color: transparent;
-        cursor: pointer;
-
-        img {
-          display: block;
-          width: 3.25rem;
-          height: 3.25rem;
-          object-fit: cover;
         }
       }
     }
