@@ -1,11 +1,11 @@
 'use client';
 
-import { useCallback, useMemo } from 'react';
+import { useSession } from 'next-auth/react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import RoomServiceIcon from '@mui/icons-material/RoomService';
-import { useSession } from 'next-auth/react';
+import { useMemo } from 'react';
 
 import { useSearch } from '@/hooks/useSearch';
 import { useLogout } from '@/hooks/useLogout';
@@ -24,23 +24,12 @@ const Sidebar = () => {
   const { searchQuery, handleChange, handleSubmit } = useSearch();
   const { isOpen, onClose, handleClose, handleLogout } = useLogout();
 
-  const closeHandler = useCallback(
-    (e: React.MouseEvent<HTMLElement>) => {
-      const target = e.target as HTMLElement;
-
-      if (target.classList.contains('sidebar')) {
-        handleClose();
-      }
-    },
-    [handleClose]
-  );
-
   const sidebarClasses = useMemo(() => {
     return !!isOpen ? 'sidebar active' : 'sidebar';
   }, [isOpen]);
 
   return (
-    <aside className={sidebarClasses} onClick={closeHandler}>
+    <aside className={sidebarClasses}>
       <div className='container'>
         <ul className='lists'>
           <li onClick={handleClose}>
