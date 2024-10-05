@@ -27,5 +27,13 @@ export const useSidebar = create<SidebarStore & SidebarActionType>()(
         false,
         'closeSidebar'
       ),
+    onToggle: () =>
+      set(
+        produce((state) => {
+          state.isOpen = !state.isOpen;
+        }),
+        false,
+        'toggleSidebar'
+      ),
   }))
 );

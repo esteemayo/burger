@@ -632,6 +632,7 @@ export interface SidebarStore {
 export interface SidebarActionType {
   onOpen(): void;
   onClose(): void;
+  onToggle(): void;
 }
 
 export interface AccountModalStore {
