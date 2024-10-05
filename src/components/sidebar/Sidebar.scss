@@ -3,14 +3,13 @@
 
 .sidebar {
   position: fixed;
-  top: 0;
+  top: 12rem;
   right: -100%;
 
-  width: 30rem;
-  min-height: 35rem;
+  width: 35rem;
+  min-height: 45rem;
   padding: 2.4rem;
   background-color: $clr-white;
-  box-shadow: $box-shadow;
   border-bottom-left-radius: 0.8rem;
   z-index: 4000;
   transition: all 0.5s;
@@ -25,7 +24,15 @@
     display: none;
   }
 
+  @media only screen and (min-width: 112.5em) {
+    top: 15rem;
+  }
+
   .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     .lists {
       list-style: none;
       padding-top: 2rem;
