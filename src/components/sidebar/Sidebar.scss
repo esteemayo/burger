@@ -25,6 +25,11 @@
     border-bottom-right-radius: 2rem;
   }
 
+  @media only screen and (max-width: 18.75em) {
+    min-height: 32rem;
+    padding: 2rem 4rem;
+  }
+
   &.active {
     right: 0;
     transition: all 0.5s ease-in;
