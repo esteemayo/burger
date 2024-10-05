@@ -13,12 +13,11 @@
   border-bottom: 3px solid $clr-primary;
   border-bottom-left-radius: 0.8rem;
   z-index: 4000;
-  transition: all 0.5s;
-  transition-timing-function: cubic-bezier(0.77, 0.2, 0.05, 1),
-    cubic-bezier(0.77, 0.2, 0.05, 1), cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: all 0.5s ease-out;
 
   &.active {
     right: 0;
+    transition: all 0.5s ease-in;
   }
 
   @media only screen and (min-width: 30.0625em) {
