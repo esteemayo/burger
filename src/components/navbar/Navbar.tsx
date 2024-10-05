@@ -28,7 +28,7 @@ const Navbar = () => {
   const { data: session, status } = useSession();
 
   const onToggle = useSidebar((store) => store.onToggle);
-  const onOpen = useSidebar((store) => store.onOpen);
+  const isOpen = useSidebar((store) => store.isOpen);
   const totalPrice = useCartStore((store) => store.totalPrice);
   const products = useCartStore((store) => store.products);
   const removeFromCart = useCartStore((store) => store.removeFromCart);
@@ -116,7 +116,7 @@ const Navbar = () => {
               </div>
             )}
         </div>
-        <ToggleButton onOpen={onOpen} onToggle={onToggle} />
+        <ToggleButton isOpen={isOpen} onToggle={onToggle} />
       </div>
     </nav>
   );
