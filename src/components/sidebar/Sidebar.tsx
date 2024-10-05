@@ -137,7 +137,7 @@ const Sidebar = () => {
         <div className='btnCloseWrap'>
           <button onClick={onClose} type='button' className='btnClose'>
             <Image
-              src='/svg/x-mark.svg'
+              src='/svg/times.svg'
               width={15}
               height={15}
               alt='close icon'
