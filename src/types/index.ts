@@ -958,3 +958,8 @@ export interface SpinnerProps {
   size?: number;
   color?: string;
 }
+
+export interface ToggleButtonProps {
+  isOpen: boolean;
+  onToggle(): void;
+}
