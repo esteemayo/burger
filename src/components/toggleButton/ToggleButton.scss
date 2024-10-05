@@ -1,17 +1,24 @@
 @import '../../styles/variables.scss';
 
 .toggleButton {
-  display: none;
+  display: inline-block;
+  all: unset;
+  width: 3.5rem;
 
-  @media only screen and (max-width: 30em) {
+  img {
     display: inline-block;
-    all: unset;
     width: 3.5rem;
+    height: 3.5rem;
+    object-fit: cover;
   }
 
   svg {
     width: 100%;
     fill: $clr-primary;
     stroke-width: 1;
+  }
+
+  @media only screen and (min-width: 30.0625em) {
+    display: none;
   }
 }
