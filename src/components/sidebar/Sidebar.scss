@@ -30,6 +30,15 @@
     padding: 2rem 4rem;
   }
 
+  @media only screen and (max-width: 17.5em) {
+    min-height: 28rem;
+    padding: 2rem 3rem;
+  }
+
+  @media only screen and (max-width: 16.875em) {
+    padding: 1rem 2.5rem;
+  }
+
   &.active {
     right: 0;
     transition: all 0.5s ease-in;
