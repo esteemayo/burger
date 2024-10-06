@@ -64,11 +64,6 @@
       top: 1rem;
       right: 1rem;
       z-index: 2000;
-
-      @media only screen and (max-width: 34.375em) {
-        top: 1.5rem;
-        right: 1.5rem;
-      }
     }
 
     &:hover .overlay {
