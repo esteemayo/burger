@@ -12,6 +12,10 @@
     width: 35rem;
   }
 
+  @include sm {
+    width: 30rem;
+  }
+
   @media only screen and (max-width: 21.5em) {
     width: 33rem;
   }
@@ -32,7 +36,12 @@
     transition: all 0.3s;
 
     @media only screen and (max-width: 34.375em) {
-      width: 350rem;
+      width: 35rem;
+    }
+
+    @include sm {
+      width: 30rem;
+      height: 23rem;
     }
 
     @media only screen and (max-width: 21.5em) {
