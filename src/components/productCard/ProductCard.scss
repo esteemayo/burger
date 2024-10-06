@@ -8,7 +8,7 @@
   box-shadow: $box-shadow;
   overflow: hidden;
 
-  @media only screen and (max-width: 53.75em) {
+  @media only screen and (max-width: 57.5em) {
     width: 25rem;
   }
 
@@ -39,7 +39,7 @@
     position: relative;
     transition: all 0.3s;
 
-    @media only screen and (max-width: 53.75em) {
+    @media only screen and (max-width: 57.5em) {
       width: 25rem;
       height: 20rem;
     }
