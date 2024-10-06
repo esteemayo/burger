@@ -8,7 +8,6 @@
   height: 12rem;
   background-color: $clr-white;
   color: $clr-primary;
-  box-shadow: $box-shadow;
   z-index: 3000;
   transition: all 0.3s;
 
@@ -23,6 +22,7 @@
     background-color: transparent;
     backdrop-filter: blur(1rem);
     border-bottom: none;
+    box-shadow: $box-shadow;
   }
 
   .wrapper {
