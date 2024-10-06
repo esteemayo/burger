@@ -163,6 +163,10 @@
       min-height: 14rem;
     }
 
+    @media only screen and (max-width: 25em) {
+      min-height: 12rem;
+    }
+
     @media only screen and (min-width: 112.5em) {
       min-height: 17rem;
       padding: 2.5rem 0 1.66667rem;
@@ -203,7 +207,7 @@
           margin-bottom: 0.5rem;
         }
 
-        @media only screen and (max-width: 21.5em) {
+        @media only screen and (max-width: 25em) {
           font-size: 1.45rem;
         }
 
