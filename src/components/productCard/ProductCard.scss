@@ -8,6 +8,10 @@
   box-shadow: $box-shadow;
   overflow: hidden;
 
+  @include lg {
+    width: 27rem;
+  }
+
   @media only screen and (max-width: 57.5em) {
     width: 25rem;
   }
@@ -38,6 +42,11 @@
     background-color: #f7f7f7;
     position: relative;
     transition: all 0.3s;
+
+    @include lg {
+      width: 27rem;
+      height: 23rem;
+    }
 
     @media only screen and (max-width: 57.5em) {
       width: 25rem;
