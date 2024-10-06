@@ -15,16 +15,12 @@
   z-index: 4000;
   transition: all 0.5s ease-out;
 
-  @media only screen and (max-width: 24.375em) {
-    width: 100%;
-    padding: 3rem 5rem;
-    border-bottom-left-radius: 2rem;
-    border-bottom-right-radius: 2rem;
-  }
-
   @media only screen and (max-width: 21.5em) {
+    width: 100%;
     min-height: 30rem;
     padding: 2rem 5rem;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
   }
 
   @media only screen and (max-width: 18.75em) {
