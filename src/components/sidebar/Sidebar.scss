@@ -22,7 +22,7 @@
     border-bottom-right-radius: 2rem;
   }
 
-  @media only screen and (max-width: 18.75em) {
+  @media only screen and (max-width: 21.5em) {
     min-height: 32rem;
     padding: 2rem 4rem;
   }
@@ -70,7 +70,7 @@
           width: 3rem;
           height: 2.5rem;
 
-          @media only screen and (max-width: 18.75em) {
+          @media only screen and (max-width: 21.5em) {
             width: 2.5rem;
             height: 2.25rem;
           }
@@ -88,7 +88,7 @@
           font-size: 1.625rem;
           color: $clr-gray-dark;
 
-          @media only screen and (max-width: 18.75em) {
+          @media only screen and (max-width: 21.5em) {
             font-size: 1.4rem;
           }
 
@@ -96,7 +96,7 @@
             font-size: 3rem;
             fill: $clr-primary;
 
-            @media only screen and (max-width: 18.75em) {
+            @media only screen and (max-width: 21.5em) {
               font-size: 2.5rem;
             }
           }
@@ -105,7 +105,7 @@
             width: 3rem;
             height: 2.5rem;
 
-            @media only screen and (max-width: 18.75em) {
+            @media only screen and (max-width: 21.5em) {
               width: 2.5rem;
               height: 2.25rem;
             }
@@ -168,7 +168,7 @@
         line-height: 1.7;
         cursor: default;
 
-        @media only screen and (max-width: 18.75em) {
+        @media only screen and (max-width: 21.5em) {
           font-size: 1.3rem;
         }
 
@@ -215,7 +215,7 @@
             padding: 0.5rem 1.6rem;
             border-radius: 0.5rem;
 
-            @media only screen and (max-width: 18.75em) {
+            @media only screen and (max-width: 21.5em) {
               font-size: 1.4rem;
             }
 
@@ -226,7 +226,7 @@
               height: 2rem;
               object-fit: cover;
 
-              @media only screen and (max-width: 18.75em) {
+              @media only screen and (max-width: 21.5em) {
                 width: 1.85rem;
                 height: 1.85rem;
               }
