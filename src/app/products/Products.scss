@@ -14,10 +14,6 @@
     }
 
     @include lg {
-      width: 100rem;
-    }
-
-    @media only screen and (max-width: 57.5em) {
       width: 90rem;
     }
 
