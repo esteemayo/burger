@@ -143,10 +143,18 @@
           border-radius: 0.5rem;
           caret-color: $clr-gray-light;
 
+          @media only screen and (max-width: 21.5em) {
+            font-size: 1.45rem;
+          }
+
           &::placeholder {
             font-weight: 300;
             font-size: 1.5rem;
             color: $clr-gray-light;
+
+            @media only screen and (max-width: 21.5em) {
+              font-size: 1.35rem;
+            }
           }
         }
       }
@@ -157,6 +165,12 @@
         left: 1rem;
         width: 1.7rem;
         height: 1.7rem;
+
+        @media only screen and (max-width: 21.5em) {
+          top: 2.8rem;
+          width: 1.5rem;
+          height: 1.5rem;
+        }
       }
     }
 
