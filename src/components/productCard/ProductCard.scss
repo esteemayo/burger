@@ -8,6 +8,10 @@
   box-shadow: $box-shadow;
   overflow: hidden;
 
+  @media only screen and (max-width: 53.75em) {
+    width: 25rem;
+  }
+
   @media only screen and (max-width: 34.375em) {
     width: 35rem;
   }
@@ -34,6 +38,11 @@
     background-color: #f7f7f7;
     position: relative;
     transition: all 0.3s;
+
+    @media only screen and (max-width: 53.75em) {
+      width: 25rem;
+      height: 20rem;
+    }
 
     @media only screen and (max-width: 34.375em) {
       width: 35rem;
