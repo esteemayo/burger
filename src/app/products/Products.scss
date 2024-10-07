@@ -87,8 +87,11 @@
       }
 
       @include sm {
-        margin-bottom: 5rem;
         line-height: 1;
+        margin-bottom: 5rem;
+
+        flex-direction: column;
+        gap: 1rem;
       }
 
       @media only screen and (max-width: 25em) {
