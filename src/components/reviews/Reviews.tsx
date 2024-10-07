@@ -59,14 +59,16 @@ const Reviews = ({
   const respondClasses = useMemo(() => {
     return !!session
       ? 'respond'
-      : reviews?.length === 0
-      ? 'respond emptyReview'
       : !isOpen
       ? 'respond show'
       : !session
       ? 'respond hide'
       : 'respond';
-  }, [isOpen, reviews?.length, session]);
+  }, [isOpen, session]);
+
+  const emptyClasses = useMemo(() => {
+    return reviews?.length === 0 && 'emptyReview';
+  }, [reviews?.length]);
 
   const reviewLabel = useMemo(() => {
     return reviews?.length > 0
@@ -106,7 +108,7 @@ const Reviews = ({
             )}
             <div className='reviewFormWrap'>
               <div className='reviewForm'>
-                <div className={respondClasses}>
+                <div className={`${respondClasses} ${emptyClasses}`}>
                   <span className='replyTitle'>{reviewLabel}</span>
                   {!!session ? (
                     <ReviewForm productId={actionId} />
