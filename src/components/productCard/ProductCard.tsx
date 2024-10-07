@@ -57,8 +57,8 @@ const ProductCard = ({ product, onLike, onRefetch }: ProductCardProps) => {
       </div>
       <div className='cardFooter'>
         <Link href={url}>
-          <h2 className='heading'>{product.name}</h2>
-          <span className='price'>{formatCurrency(product.price)}</span>
+          <h2 className='cardHeading'>{product.name}</h2>
+          <span className='cardPrice'>{formatCurrency(product.price)}</span>
         </Link>
       </div>
     </article>

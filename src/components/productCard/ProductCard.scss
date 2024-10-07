@@ -199,7 +199,7 @@
     a:active {
       color: $clr-black;
 
-      .heading {
+      .cardHeading {
         text-align: center;
         text-transform: uppercase;
         text-overflow: ellipsis;
@@ -218,6 +218,10 @@
 
         @media only screen and (max-width: 53.75em) {
           font-size: 1.4rem;
+        }
+
+        @include md {
+          font-size: 1.65rem;
         }
 
         @media only screen and (max-width: 34.375em) {
@@ -246,7 +250,7 @@
         }
       }
 
-      .price {
+      .cardPrice {
         font-weight: 600;
         font-size: 1.8rem;
         color: $clr-secondary;
@@ -260,10 +264,6 @@
         }
 
         @include md {
-          font-size: 1.6rem;
-        }
-
-        @media only screen and (max-width: 34.375em) {
           font-size: 2rem;
         }
 
