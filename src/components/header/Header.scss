@@ -2,20 +2,22 @@
 @import '../../styles/responsive.scss';
 
 .header {
-  width: 100vw;
+  width: 100%;
   height: calc(45vw - 12rem);
   background-color: $clr-primary;
-  background-image: url(/svg/hero-1.svg), url(/img/hero.png),
-    url(/svg/hero-2.svg);
+  // background-image: url(/svg/hero-1.svg), url(/img/hero.png),
+  //   url(/svg/hero-2.svg);
+  background-image: url(/svg/hero-1.svg), url(/svg/hero-2.svg);
   background-size: contain;
   background-position: center left, center center, center right;
+  background-position: center left, center right;
   background-repeat: no-repeat;
   overflow: visible;
 
   @include lg {
     height: calc(50vw - 12rem);
-    background-image: url(/svg/hero-1.svg), url(/svg/hero-2.svg);
-    background-position: center left, center right;
+    // background-image: url(/svg/hero-1.svg), url(/svg/hero-2.svg);
+    // background-position: center left, center right;
   }
 
   @media only screen and (max-width: 59.375em) {
