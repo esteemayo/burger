@@ -87,13 +87,6 @@
         margin-left: 0;
       }
 
-      @include sm {
-        flex-wrap: wrap;
-        font-size: 2.6rem;
-        margin-bottom: 5rem;
-        line-height: 1;
-      }
-
       @media only screen and (max-width: 34.375em) {
         font-size: 2.6rem;
       }
@@ -103,10 +96,10 @@
         gap: 1rem;
       }
 
-      @media only screen and (max-width: 26.875em) {
+      @media only screen and (max-width: 25em) {
         line-height: 1;
         margin-bottom: 5rem;
-        flex-direction: column;
+        flex-wrap: wrap;
       }
 
       @media only screen and (max-width: 24.375em) {
