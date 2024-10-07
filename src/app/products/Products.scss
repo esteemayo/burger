@@ -47,7 +47,12 @@
     }
 
     @media only screen and (max-width: 21.5em) {
-      width: 33rem;
+      width: 35rem;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
 
     @media only screen and (min-width: 112.5em) {
