@@ -232,12 +232,8 @@
   .cardFooter {
     min-height: 11.7rem;
     text-align: center;
-    padding: 2.3rem 0 1.4rem;
+    padding: 2.3rem 1rem 1.4rem;
     background-color: $clr-tertiary;
-
-    @media only screen and (max-width: 37.5em) {
-      padding: 2.3rem 1rem 1.4rem;
-    }
 
     @media only screen and (max-width: 25em) {
       min-height: 12rem;
