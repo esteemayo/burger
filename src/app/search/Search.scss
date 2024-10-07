@@ -29,15 +29,16 @@
       width: 70rem;
     }
 
-    @media only screen and (max-width: 36.25em) {
-      width: 68rem;
+    @media only screen and (max-width: 37.5em) {
+      width: 60rem;
     }
 
     @media only screen and (max-width: 34.375em) {
-      width: 40rem;
+      width: 57rem;
     }
 
     @include sm {
+      width: 50rem;
       padding: 6rem 0;
     }
 
