@@ -38,6 +38,10 @@
       padding: 6rem 0;
     }
 
+    @media only screen and (max-width: 26.875em) {
+      width: 45rem;
+    }
+
     @media only screen and (max-width: 21.5em) {
       width: 33rem;
     }
@@ -84,13 +88,13 @@
 
       @include sm {
         font-size: 2.4rem;
-        margin-bottom: 5rem;
         gap: 1rem;
       }
 
-      @media only screen and (max-width: 25em) {
-        font-size: 2.4rem;
+      @media only screen and (max-width: 26.875em) {
+        font-size: 2.2rem;
         line-height: 1;
+        margin-bottom: 5rem;
         flex-direction: column;
       }
 
