@@ -235,7 +235,7 @@
         }
 
         @media only screen and (max-width: 34.375em) {
-          font-size: 1.75rem;
+          font-size: var(--default-font-size);
         }
 
         @include sm {
