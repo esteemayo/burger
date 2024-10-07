@@ -67,7 +67,7 @@ const Reviews = ({
   }, [isOpen, session]);
 
   const emptyClasses = useMemo(() => {
-    return reviews?.length === 0 && 'emptyReview';
+    return reviews?.length === 0 ? 'emptyReview' : '';
   }, [reviews?.length]);
 
   const reviewLabel = useMemo(() => {
