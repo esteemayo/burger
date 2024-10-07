@@ -8,18 +8,49 @@
       width: 30rem !important;
       height: 27rem !important;
 
-      @media only screen and (max-width: 34.375em) {
-        width: 35rem !important;
-      }
-
-      @include sm {
-        width: 30rem !important;
+      @include lg {
+        width: 27rem !important;
         height: 23rem !important;
       }
 
-      @media only screen and (max-width: 25em) {
-        width: 27rem !important;
+      @media only screen and (max-width: 57.5em) {
+        width: 25rem !important;
         height: 20rem !important;
+      }
+
+      @include md {
+        width: 30rem !important;
+        height: 25rem !important;
+      }
+
+      @media only screen and (max-width: 37.5em) {
+        width: 26rem !important;
+        height: 21rem !important;
+      }
+
+      @media only screen and (max-width: 34.375em) {
+        width: 25rem !important;
+        height: 20rem !important;
+      }
+
+      @include sm {
+        width: 23rem !important;
+        height: 18rem !important;
+      }
+
+      @media only screen and (max-width: 26.875em) {
+        width: 21rem !important;
+        height: 17rem !important;
+      }
+
+      @media only screen and (max-width: 24.375em) {
+        width: 18rem !important;
+        height: 15rem !important;
+      }
+
+      @media only screen and (max-width: 21.5em) {
+        width: 23rem !important;
+        height: 17rem !important;
       }
 
       @media only screen and (min-width: 112.5em) {
