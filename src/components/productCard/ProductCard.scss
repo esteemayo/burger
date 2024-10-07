@@ -20,6 +20,10 @@
     width: 30rem;
   }
 
+  @media only screen and (max-width: 37.5em) {
+    width: 26rem;
+  }
+
   @media only screen and (max-width: 34.375em) {
     width: 35rem;
   }
@@ -60,6 +64,11 @@
     @include md {
       width: 30rem;
       height: 25rem;
+    }
+
+    @media only screen and (max-width: 37.5em) {
+      width: 26rem;
+      height: 21rem;
     }
 
     @media only screen and (max-width: 34.375em) {
