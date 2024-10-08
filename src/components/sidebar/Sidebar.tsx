@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import RoomServiceIcon from '@mui/icons-material/RoomService';
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useMemo } from 'react';
 
 import { useSearch } from '@/hooks/useSearch';
 import { useLogout } from '@/hooks/useLogout';
