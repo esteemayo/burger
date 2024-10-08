@@ -46,6 +46,7 @@
     background-color: transparent;
     backdrop-filter: blur(3rem);
     box-shadow: none;
+    transition: all 0.5s ease-in;
 
     .container {
       .lists {
@@ -87,6 +88,7 @@
   &.inActive {
     background-color: $clr-white;
     backdrop-filter: blur(0);
+    transition: all 0.5s ease-out;
   }
 
   @media only screen and (min-width: 30.0625em) {
