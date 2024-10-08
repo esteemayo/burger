@@ -25,7 +25,7 @@ const Sidebar = () => {
   const { searchQuery, handleChange, handleSubmit } = useSearch();
 
   const sidebarClasses = useMemo(() => {
-    return !!isOpen ? 'sidebar active' : 'sidebar';
+    return !!isOpen ? 'sidebar show' : 'sidebar hide';
   }, [isOpen]);
 
   return (
