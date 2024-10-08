@@ -5,13 +5,6 @@
   all: unset;
   width: 3.5rem;
 
-  img {
-    display: inline-block;
-    width: 3.25rem;
-    height: 3.25rem;
-    object-fit: cover;
-  }
-
   svg {
     width: 100%;
     fill: $clr-primary;
