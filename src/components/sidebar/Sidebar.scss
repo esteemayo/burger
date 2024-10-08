@@ -50,6 +50,10 @@
     .container {
       .lists {
         li {
+          &:not(:last-child) {
+            border-color: $clr-border;
+          }
+
           a,
           a:link,
           a:active {
@@ -70,6 +74,10 @@
             }
           }
         }
+      }
+
+      .userBox {
+        border-color: $clr-border;
       }
     }
   }
