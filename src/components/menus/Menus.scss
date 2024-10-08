@@ -91,13 +91,13 @@
             position: absolute;
             top: 2.5rem;
 
-            @include lg {
-              width: 7rem;
+            @media only screen and (max-width: 56.25em) {
+              width: 8rem;
+              top: 2rem;
             }
 
-            @media only screen and (max-width: 56.25em) {
+            @include md {
               width: 7rem;
-              top: 2rem;
             }
 
             @include sm {
