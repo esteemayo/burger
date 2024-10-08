@@ -31,7 +31,7 @@ const Sidebar = () => {
   }, [isOpen]);
 
   const activeClasses = useMemo(() => {
-    return !!isOpen && isActive ? 'active' : '';
+    return !!isOpen && isActive ? 'active' : 'inActive';
   }, [isActive, isOpen]);
 
   return (
