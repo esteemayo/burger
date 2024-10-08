@@ -4,7 +4,6 @@
 .sidebar {
   position: fixed;
   top: 12rem;
-  right: -100%;
 
   width: 35rem;
   min-height: 35rem;
@@ -13,7 +12,6 @@
   border-bottom-left-radius: 0.8rem;
   box-shadow: $shadow;
   z-index: 4000;
-  transition: all 0.5s ease-out;
 
   @media only screen and (max-width: 21.5em) {
     min-height: 30rem;
@@ -34,9 +32,14 @@
     padding: 1rem 2.5rem;
   }
 
-  &.active {
+  &.show {
     right: 0;
     transition: all 0.5s ease-in;
+  }
+
+  &.hide {
+    right: -100%;
+    transition: all 0.5s ease-out;
   }
 
   @media only screen and (min-width: 30.0625em) {
