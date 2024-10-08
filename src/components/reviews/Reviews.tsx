@@ -44,6 +44,10 @@ const Reviews = ({
       : 'reviews';
   }, [loading, products?.length, session]);
 
+  const listItemClasses = useMemo(() => {
+    return reviews?.length > 0 ? 'listItem active' : 'listItem inActive';
+  }, [reviews?.length]);
+
   const totalReviews = useMemo(() => {
     return reviews?.length ?? productReviews.length;
   }, [productReviews, reviews]);
@@ -80,7 +84,7 @@ const Reviews = ({
     <div className={reviewsContainer}>
       <div className='reviewBox'>
         <ul className='listWrap'>
-          <li className='listItem active'>
+          <li className={listItemClasses}>
             Reviews ({totalReviews})
             {reviews?.length > 0 && (
               <span className='toggleIcon' onClick={toggleOpen}>
