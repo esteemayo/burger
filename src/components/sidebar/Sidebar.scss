@@ -48,6 +48,11 @@
     box-shadow: none;
   }
 
+  &.inActive {
+    background-color: $clr-white;
+    backdrop-filter: blur(0);
+  }
+
   @media only screen and (min-width: 30.0625em) {
     display: none;
   }
