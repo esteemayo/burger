@@ -51,7 +51,7 @@
       .lists {
         li {
           &:not(:last-child) {
-            border-color: $clr-border;
+            border-color: $clr-secondary;
           }
 
           a,
@@ -65,19 +65,20 @@
       .search {
         form {
           input {
+            color: $clr-primary;
             box-shadow: none;
-            border: 1px solid $clr-primary;
+            border: 1px solid currentColor;
             caret-color: $clr-primary;
 
             &::placeholder {
-              color: $clr-secondary;
+              color: $clr-primary;
             }
           }
         }
       }
 
       .userBox {
-        border-color: $clr-border;
+        border-color: $clr-secondary;
       }
     }
   }
