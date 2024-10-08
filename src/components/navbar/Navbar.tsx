@@ -1,11 +1,11 @@
 'use client';
 
-import { usePathname } from 'next/navigation';
-import Link from 'next/link';
-import RoomServiceIcon from '@mui/icons-material/RoomService';
-import Image from 'next/image';
-import { useCallback, useEffect, useMemo, useState } from 'react';
 import { useSession } from 'next-auth/react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import Image from 'next/image';
+import RoomServiceIcon from '@mui/icons-material/RoomService';
+import { useMemo } from 'react';
 
 import CartMenu from '../cartMenu/CartMenu';
 import Logo from '../logo/Logo';
@@ -18,11 +18,11 @@ import { useAvatar } from '@/hooks/useAvatar';
 import { useCartStore } from '@/hooks/useCartStore';
 import { useSearch } from '@/hooks/useSearch';
 import { useCartControls } from '@/hooks/useCartControls';
+import { useScroll } from '@/hooks/useScroll';
 
 import Avatar from '../avatar/Avatar';
 
 import './Navbar.scss';
-import { useScroll } from '@/hooks/useScroll';
 
 const Navbar = () => {
   const pathname = usePathname();
