@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import RoomServiceIcon from '@mui/icons-material/RoomService';
-import { useMemo } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 
 import { useSearch } from '@/hooks/useSearch';
 import { useLogout } from '@/hooks/useLogout';
@@ -24,12 +24,27 @@ const Sidebar = () => {
   const { isOpen, handleClose, handleLogout } = useLogout();
   const { searchQuery, handleChange, handleSubmit } = useSearch();
 
+  const [isActive, setIsActive] = useState(false);
+
+  const isActiveHandler = useCallback(() => {
+    setIsActive(window.scrollY > 0 ? true : false);
+  }, []);
+
   const sidebarClasses = useMemo(() => {
     return !!isOpen ? 'sidebar show' : 'sidebar hide';
   }, [isOpen]);
 
+  const activeClasses = useMemo(() => {
+    return !!isOpen && isActive ? 'active' : '';
+  }, [isActive, isOpen]);
+
+  useEffect(() => {
+    window.addEventListener('scroll', isActiveHandler);
+    return window.removeEventListener('scroll', isActiveHandler);
+  }, [isActiveHandler]);
+
   return (
-    <aside className={sidebarClasses}>
+    <aside className={`${sidebarClasses} ${activeClasses}`}>
       <div className='container'>
         <ul className='lists'>
           <li onClick={handleClose}>
