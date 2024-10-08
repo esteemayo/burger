@@ -151,6 +151,11 @@
         right: 1rem;
         z-index: 2000;
 
+        @include sm {
+          top: 0.65rem;
+          right: 0.5rem;
+        }
+
         & > span {
           @include sm {
             width: 4rem;
