@@ -10,6 +10,7 @@ import { useCallback, useEffect, useMemo, useState } from 'react';
 import { useSearch } from '@/hooks/useSearch';
 import { useLogout } from '@/hooks/useLogout';
 import { useCartControls } from '@/hooks/useCartControls';
+import { useScroll } from '@/hooks/useScroll';
 
 import { authLinks, sidebarMenus } from '@/data';
 
@@ -19,16 +20,11 @@ const Sidebar = () => {
   const pathname = usePathname();
   const { data: session } = useSession();
 
+  const { isActive } = useScroll();
   const { cartQuantity } = useCartControls();
 
   const { isOpen, handleClose, handleLogout } = useLogout();
   const { searchQuery, handleChange, handleSubmit } = useSearch();
-
-  const [isActive, setIsActive] = useState(false);
-
-  const isActiveHandler = useCallback(() => {
-    setIsActive(window.scrollY > 0 ? true : false);
-  }, []);
 
   const sidebarClasses = useMemo(() => {
     return !!isOpen ? 'sidebar show' : 'sidebar hide';
@@ -37,11 +33,6 @@ const Sidebar = () => {
   const activeClasses = useMemo(() => {
     return !!isOpen && isActive ? 'active' : '';
   }, [isActive, isOpen]);
-
-  useEffect(() => {
-    window.addEventListener('scroll', isActiveHandler);
-    return window.removeEventListener('scroll', isActiveHandler);
-  }, [isActiveHandler]);
 
   return (
     <aside className={`${sidebarClasses} ${activeClasses}`}>
