@@ -22,6 +22,7 @@ import { useCartControls } from '@/hooks/useCartControls';
 import Avatar from '../avatar/Avatar';
 
 import './Navbar.scss';
+import { useScroll } from '@/hooks/useScroll';
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -36,22 +37,12 @@ const Navbar = () => {
   const { searchQuery, handleChange, handleSubmit } = useSearch();
   const { cartQuantity, handleDecrement, handleIncrement } = useCartControls();
 
+  const { isActive } = useScroll();
   const { avatar } = useAvatar(session?.user);
-
-  const [isActive, setIsActive] = useState(false);
-
-  const isActiveHandler = useCallback(() => {
-    setIsActive(window.scrollY > 0 ? true : false);
-  }, []);
 
   const navClasses = useMemo(() => {
     return isActive ? 'navbar active' : 'navbar';
   }, [isActive]);
-
-  useEffect(() => {
-    window.addEventListener('scroll', isActiveHandler);
-    return () => window.removeEventListener('scroll', isActiveHandler);
-  }, [isActiveHandler]);
 
   return (
     <nav className={navClasses}>
