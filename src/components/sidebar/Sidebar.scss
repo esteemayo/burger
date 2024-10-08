@@ -57,6 +57,20 @@
           }
         }
       }
+
+      .search {
+        form {
+          input {
+            box-shadow: none;
+            border: 1px solid $clr-primary;
+            caret-color: $clr-primary;
+
+            &::placeholder {
+              color: $clr-secondary;
+            }
+          }
+        }
+      }
     }
   }
 
