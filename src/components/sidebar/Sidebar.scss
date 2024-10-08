@@ -51,7 +51,7 @@
       .lists {
         li {
           &:not(:last-child) {
-            border-color: $clr-secondary;
+            border-color: $clr-primary;
           }
 
           a,
@@ -63,6 +63,7 @@
       }
 
       .search {
+        border-color: $clr-primary;
         form {
           input {
             color: $clr-primary;
@@ -78,7 +79,7 @@
       }
 
       .userBox {
-        border-color: $clr-secondary;
+        border-color: $clr-primary;
       }
     }
   }
