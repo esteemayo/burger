@@ -46,6 +46,18 @@
     background-color: transparent;
     backdrop-filter: blur(1rem);
     box-shadow: none;
+
+    .container {
+      .lists {
+        li {
+          a,
+          a:link,
+          a:active {
+            color: $clr-primary;
+          }
+        }
+      }
+    }
   }
 
   &.inActive {
