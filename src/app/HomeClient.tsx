@@ -8,7 +8,11 @@ import Features from '@/components/features/Features';
 import Offer from '@/components/offer/Offer';
 import NewsLetter from '@/components/newsletter/NewsLetter';
 
+import { useCloseSidebar } from '@/hooks/useCloseSidebar';
+
 const HomeClient = () => {
+  const { closeHandler } = useCloseSidebar();
+
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -35,7 +39,7 @@ const HomeClient = () => {
   }, [containerRef]);
 
   return (
-    <div ref={containerRef}>
+    <div ref={containerRef} onClick={closeHandler}>
       <Header />
       <Features />
       <Menus />
