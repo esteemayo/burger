@@ -206,7 +206,12 @@
       }
 
       svg {
-        font-size: 2rem;
+        position: absolute;
+        top: 2.65rem;
+        left: 1rem;
+
+        width: 2.25rem;
+        height: 2.25rem;
         stroke: $clr-gray-light;
         stroke-width: 1;
       }
