@@ -205,6 +205,12 @@
         }
       }
 
+      svg {
+        font-size: 2rem;
+        stroke: $clr-gray-light;
+        stroke-width: 1;
+      }
+
       img.searchIcon {
         position: absolute;
         top: 3rem;
