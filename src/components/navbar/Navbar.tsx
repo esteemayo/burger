@@ -28,10 +28,10 @@ const Navbar = () => {
   const pathname = usePathname();
   const { data: session, status } = useSession();
 
-  const onToggle = useSidebar((store) => store.onToggle);
+  const products = useCartStore((store) => store.products);
   const isOpen = useSidebar((store) => store.isOpen);
   const totalPrice = useCartStore((store) => store.totalPrice);
-  const products = useCartStore((store) => store.products);
+  const onToggle = useSidebar((store) => store.onToggle);
   const removeFromCart = useCartStore((store) => store.removeFromCart);
 
   const { searchQuery, handleChange, handleSubmit } = useSearch();
