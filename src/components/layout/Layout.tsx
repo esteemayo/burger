@@ -2,12 +2,12 @@
 
 import { useCallback } from 'react';
 
-import Footer from '../footer/Footer';
 import Designer from '../designer/Designer';
-import Navbar from '../navbar/Navbar';
+import Footer from '../footer/Footer';
 import ScrollTop from '../scrollTop/ScrollTop';
-import Sidebar from '../sidebar/Sidebar';
+import Navbar from '../navbar/Navbar';
 import ClientOnly from '../clientOnly/ClientOnly';
+import Sidebar from '../sidebar/Sidebar';
 
 import ModalProvider from '@/providers/ModalProvider';
 import CartProvider from '@/providers/CartProvider';
