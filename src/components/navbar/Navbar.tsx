@@ -34,11 +34,11 @@ const Navbar = () => {
   const onToggle = useSidebar((store) => store.onToggle);
   const removeFromCart = useCartStore((store) => store.removeFromCart);
 
-  const { searchQuery, handleChange, handleSubmit } = useSearch();
-  const { cartQuantity, handleDecrement, handleIncrement } = useCartControls();
-
   const { isActive } = useScroll();
   const { avatar } = useAvatar(session?.user);
+
+  const { searchQuery, handleChange, handleSubmit } = useSearch();
+  const { cartQuantity, handleDecrement, handleIncrement } = useCartControls();
 
   const navClasses = useMemo(() => {
     return isActive ? 'navbar active' : 'navbar';
