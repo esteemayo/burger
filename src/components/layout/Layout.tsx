@@ -1,7 +1,3 @@
-'use client';
-
-import { useCallback } from 'react';
-
 import Designer from '../designer/Designer';
 import Footer from '../footer/Footer';
 import ScrollTop from '../scrollTop/ScrollTop';
@@ -15,24 +11,9 @@ import ToasterProvider from '@/providers/ToasterProvider';
 import AuthProvider from '@/providers/AuthProvider';
 import SkeletonProvider from '@/providers/SkeletonProvider';
 
-import { useSidebar } from '@/hooks/useSidebar';
-
 const Layout = ({ children }: { children: React.ReactNode }) => {
-  const onClose = useSidebar((store) => store.onClose);
-
-  const handleClose = useCallback(
-    (e: React.MouseEvent<HTMLElement>) => {
-      const target = e.target as HTMLElement;
-
-      if (!target.classList.contains('sidebar')) {
-        onClose();
-      }
-    },
-    [onClose]
-  );
-
   return (
-    <main onClick={handleClose}>
+    <main>
       <AuthProvider>
         <ClientOnly>
           <SkeletonProvider>
