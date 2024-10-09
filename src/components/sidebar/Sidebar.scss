@@ -82,6 +82,12 @@
 
       .userBox {
         border-color: $clr-primary;
+
+        .currentUser {
+          span {
+            color: $clr-primary;
+          }
+        }
       }
     }
   }
