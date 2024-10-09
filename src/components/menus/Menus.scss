@@ -6,6 +6,10 @@
   justify-content: center;
   padding: 12rem 0;
 
+  @include lg {
+    padding: 10rem 0;
+  }
+
   @include sm {
     padding-top: 6rem;
     padding-bottom: 8rem;
