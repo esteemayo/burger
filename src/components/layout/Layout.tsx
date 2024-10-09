@@ -5,11 +5,12 @@ import Navbar from '../navbar/Navbar';
 import ClientOnly from '../clientOnly/ClientOnly';
 import Sidebar from '../sidebar/Sidebar';
 
-import ModalProvider from '@/providers/ModalProvider';
+import SidebarProvider from '@/providers/SidebarProvider';
 import CartProvider from '@/providers/CartProvider';
 import ToasterProvider from '@/providers/ToasterProvider';
 import AuthProvider from '@/providers/AuthProvider';
 import SkeletonProvider from '@/providers/SkeletonProvider';
+import ModalProvider from '@/providers/ModalProvider';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -22,7 +23,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
               <Sidebar />
               <ToasterProvider />
               <ModalProvider />
-              {children}
+              <SidebarProvider>{children}</SidebarProvider>
               <Footer />
               <Designer />
               <ScrollTop />
