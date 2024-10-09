@@ -47,7 +47,7 @@ const Sidebar = () => {
           {sidebarMenus.map((menu) => {
             const { id, url, icon, label } = menu;
             return (
-              <li key={id}>
+              <li key={id} onClick={handleClose}>
                 <Link href={url}>
                   <Image
                     src={`/svg/${icon}.svg`}
