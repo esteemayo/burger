@@ -78,6 +78,11 @@
             }
           }
         }
+
+        svg {
+          fill: $clr-primary;
+          stroke: $clr-primary;
+        }
       }
 
       .userBox {
