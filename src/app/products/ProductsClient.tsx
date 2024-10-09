@@ -8,16 +8,12 @@ import EmptyState from '@/components/emptyState/EmptyState';
 import Spinner from '@/components/spinner/Spinner';
 import ProductLists from '@/components/productLists/ProductLists';
 
-import { getProducts } from '@/services/productService';
-import { useCloseSidebar } from '@/hooks/useCloseSidebar';
-
 import { ProductType } from '@/types';
+import { getProducts } from '@/services/productService';
 
 import './Products.scss';
 
 const ProductsClient = () => {
-  const { closeHandler } = useCloseSidebar();
-
   const { isLoading, data, refetch } = useQuery({
     queryKey: ['products'],
     queryFn: async () => {
@@ -72,7 +68,7 @@ const ProductsClient = () => {
   }
 
   return (
-    <div className='products' onClick={closeHandler}>
+    <div className='products'>
       <div className='container'>
         <h3>
           Most popular near you
