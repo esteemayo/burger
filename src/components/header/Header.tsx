@@ -50,7 +50,7 @@ const Header = () => {
             </button>
           </div>
           <button disabled={!!isLoading} className='searchBtn'>
-            {true ? <Spinner /> : 'Find products'}
+            {!!isLoading ? <Spinner /> : 'Find products'}
           </button>
         </form>
       </div>
