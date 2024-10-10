@@ -248,6 +248,10 @@
             min-width: 100%;
           }
 
+          @media only screen and (max-width: 25em) {
+            height: 5.25rem;
+          }
+
           @media only screen and (min-width: 112.5em) {
             min-width: 24rem;
             height: 6rem;
