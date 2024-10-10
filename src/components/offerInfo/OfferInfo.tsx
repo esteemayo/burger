@@ -8,7 +8,7 @@ import CountDown from '../countdown/CountDown';
 import './OfferInfo.scss';
 
 const OfferInfo = () => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleClick = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
     e.stopPropagation();
