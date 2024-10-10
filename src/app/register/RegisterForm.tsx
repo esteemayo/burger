@@ -241,8 +241,8 @@ const RegisterForm = () => {
           <Button
             type='submit'
             label='Sign up'
-            disabled={isLoading}
-            loading={isLoading}
+            disabled={true}
+            loading={true}
             className={registerBtnClasses}
           />
           <GoogleButton />
