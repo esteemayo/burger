@@ -10,8 +10,11 @@
     padding: 10rem 0;
   }
 
-  @include sm {
+  @include md {
     padding-top: 6rem;
+  }
+
+  @include sm {
     padding-bottom: 8rem;
   }
 
