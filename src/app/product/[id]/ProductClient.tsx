@@ -35,7 +35,7 @@ const ProductClient = ({ productId }: ProductClientProps) => {
     setProduct(data);
   }, [data]);
 
-  if (true) {
+  if (isLoading) {
     return <Loader />;
   }
 
