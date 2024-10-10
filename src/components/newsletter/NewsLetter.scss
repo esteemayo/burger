@@ -225,6 +225,7 @@
           letter-spacing: 1.5px;
           line-height: 1;
           width: fit-content;
+          min-width: 19rem;
           height: 5.5rem;
           padding: 1.6rem 6rem;
           background-color: $clr-black;
@@ -234,7 +235,8 @@
           transition: all 0.3s;
 
           @media only screen and (max-width: 56.25em) {
-            font-size: 1.625rem;
+            min-width: 20rem;
+            font-size: 1.35rem;
           }
 
           @media only screen and (max-width: 37.5em) {
@@ -243,15 +245,18 @@
 
           @media only screen and (max-width: 26.875em) {
             width: 100%;
+            min-width: 100%;
           }
 
           @media only screen and (min-width: 112.5em) {
+            min-width: 24rem;
             height: 6rem;
             font-size: var(--default-font-size);
             padding: 1.8rem 8rem;
           }
 
           @media only screen and (min-width: 125em) {
+            min-width: 29rem;
             height: 7rem;
             font-size: 1.8rem;
             padding: 2rem 10rem;
