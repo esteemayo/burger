@@ -145,14 +145,18 @@
   }
 
   button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     all: unset;
-    display: inline-block;
     text-transform: capitalize;
     font-weight: 600;
     font-size: 100%;
     letter-spacing: 1.5px;
     line-height: 1;
     width: fit-content;
+    min-width: 5rem;
     height: 3rem;
     padding: 1.6rem 6rem;
     background-color: $clr-primary;
