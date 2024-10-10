@@ -171,11 +171,13 @@
     }
 
     @media only screen and (max-width: 37.5em) {
+      min-width: 18rem;
       padding: 1.3rem 3rem;
     }
 
     @include sm {
       font-weight: 500;
+      min-width: 15rem;
       letter-spacing: 0;
     }
 
