@@ -26,6 +26,11 @@
         width: 6rem !important;
         height: 6rem !important;
       }
+
+      @media only screen and (max-width: 18.75em) {
+        width: 4rem !important;
+        height: 4rem !important;
+      }
     }
   }
 }
