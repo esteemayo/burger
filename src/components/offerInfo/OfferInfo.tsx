@@ -1,8 +1,25 @@
+'use client';
+
+import { useCallback, useState } from 'react';
+
+import Spinner from '../spinner/Spinner';
 import CountDown from '../countdown/CountDown';
 
 import './OfferInfo.scss';
 
 const OfferInfo = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  const handleClick = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
+    e.stopPropagation();
+
+    setIsLoading(true);
+
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 5000);
+  }, []);
+
   return (
     <div className='orderInfo'>
       <h1 className='heading'>Double crunchy chicken burger</h1>
@@ -12,7 +29,9 @@ const OfferInfo = () => {
         special sauce and cheese! Its an absolute crowd pleaser.
       </p>
       <CountDown />
-      <button type='button'>Order now</button>
+      <button type='button' disabled={!!isLoading} onClick={handleClick}>
+        {!!isLoading ? <Spinner /> : 'Order now'}
+      </button>
     </div>
   );
 };
