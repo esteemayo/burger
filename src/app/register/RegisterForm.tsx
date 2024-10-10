@@ -233,7 +233,7 @@ const RegisterForm = () => {
         <SlideButtons
           onPrev={onPrev}
           onNext={onNext}
-          disabled={isLoading}
+          disabled={!!isLoading}
           prevBtnClasses={prevBtnClasses}
           nextBtnClasses={nextBtnClasses}
         />
@@ -241,8 +241,8 @@ const RegisterForm = () => {
           <Button
             type='submit'
             label='Sign up'
-            disabled={true}
-            loading={true}
+            disabled={!!isLoading}
+            loading={!!isLoading}
             className={registerBtnClasses}
           />
           <GoogleButton />

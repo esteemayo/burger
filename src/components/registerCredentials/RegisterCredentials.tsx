@@ -33,7 +33,7 @@ const RegisterCredentials = ({
       />
       <Input
         name='password'
-        type={isPassword ? 'text' : 'password'}
+        type={!!isPassword ? 'text' : 'password'}
         label='Password'
         value={password}
         placeholder='Password'
@@ -41,12 +41,12 @@ const RegisterCredentials = ({
         error={errors['password']}
       >
         <span onClick={onTogglePassword} className={passwordIcon}>
-          {isPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
+          {!!isPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
         </span>
       </Input>
       <Input
         name='confirmPassword'
-        type={isConfirmPassword ? 'text' : 'password'}
+        type={!!isConfirmPassword ? 'text' : 'password'}
         label='Confirm Password'
         value={confirmPassword}
         placeholder='Confirm Password'
@@ -55,7 +55,7 @@ const RegisterCredentials = ({
         dimension='large'
       >
         <span onClick={onToggleConfirm} className={confirmIcon}>
-          {isConfirmPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
+          {!!isConfirmPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
         </span>
       </Input>
     </>
