@@ -175,8 +175,8 @@ const LoginForm = () => {
           <Button
             type='submit'
             label='Sign in'
-            disabled={isLoading}
-            loading={isLoading}
+            disabled={true}
+            loading={true}
             className='loginBtn'
           />
           <GoogleButton />

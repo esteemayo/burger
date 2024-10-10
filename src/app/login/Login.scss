@@ -275,17 +275,24 @@
 
               @media only screen and (min-width: 112.5em) {
                 font-size: 1.8rem;
-                padding: 1.7rem 1rem;
+                padding: 2rem 1rem;
               }
 
               @media only screen and (min-width: 125em) {
                 font-size: 2rem;
-                padding: 2rem 1rem;
+                padding: 2.2rem 1rem;
               }
 
               &:disabled {
                 opacity: 0.7;
                 cursor: default;
+              }
+
+              span {
+                @media only screen and (min-width: 112.5em) {
+                  width: 2.8rem !important;
+                  height: 2.8rem !important;
+                }
               }
             }
 
