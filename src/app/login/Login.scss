@@ -274,13 +274,14 @@
               }
 
               @media only screen and (min-width: 112.5em) {
+                width: 7rem;
                 font-size: 1.8rem;
-                padding: 2rem 1rem;
+                padding: 1.7rem 1rem;
               }
 
               @media only screen and (min-width: 125em) {
                 font-size: 2rem;
-                padding: 2.2rem 1rem;
+                padding: 2rem 1rem;
               }
 
               &:disabled {
