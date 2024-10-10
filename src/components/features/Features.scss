@@ -7,7 +7,11 @@
   padding: 10rem 0;
 
   @include lg {
-    padding: 8rem 0;
+    padding-bottom: 8rem;
+  }
+
+  @include md {
+    padding-bottom: 6rem;
   }
 
   @media only screen and (min-width: 112.5em) {
