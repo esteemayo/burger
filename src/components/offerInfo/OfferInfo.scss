@@ -189,6 +189,7 @@
     }
 
     @media only screen and (min-width: 125em) {
+      height: 4rem;
       font-size: 2.25rem;
       padding: 2rem 6rem;
     }
@@ -206,6 +207,11 @@
       @media only screen and (min-width: 112.5em) {
         width: 3rem !important;
         height: 3rem !important;
+      }
+
+      @media only screen and (min-width: 125em) {
+        width: 3.5rem !important;
+        height: 3.5rem !important;
       }
     }
   }
