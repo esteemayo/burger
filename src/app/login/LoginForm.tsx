@@ -151,7 +151,7 @@ const LoginForm = () => {
         />
         <Input
           name='password'
-          type={showPassword ? 'text' : 'password'}
+          type={!!showPassword ? 'text' : 'password'}
           label='Password'
           value={password}
           placeholder='Password'
@@ -159,7 +159,7 @@ const LoginForm = () => {
           error={errors['password']}
         >
           <span onClick={togglePassword} className={iconClasses}>
-            {showPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
+            {!!showPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
           </span>
         </Input>
         <div className='rememberWrap'>
@@ -175,8 +175,8 @@ const LoginForm = () => {
           <Button
             type='submit'
             label='Sign in'
-            disabled={true}
-            loading={true}
+            disabled={!!isLoading}
+            loading={!!isLoading}
             className='loginBtn'
           />
           <GoogleButton />
