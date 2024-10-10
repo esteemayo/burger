@@ -166,7 +166,7 @@ const LoginForm = () => {
           <Checkbox
             name='rememberMe'
             label='Remember for 30 days'
-            checked={rememberMe}
+            checked={!!rememberMe}
             onChange={handleChangeRememberMe}
           />
           <Link href='#'>Forgot password</Link>
