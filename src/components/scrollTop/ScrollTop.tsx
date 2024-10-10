@@ -22,7 +22,7 @@ const ScrollTop = () => {
   }, []);
 
   const scrollClasses = useMemo(() => {
-    return isVisible ? 'scrollTop show' : 'scrollTop';
+    return isVisible ? 'scrollTop show' : 'scrollTop hide';
   }, [isVisible]);
 
   useEffect(() => {
