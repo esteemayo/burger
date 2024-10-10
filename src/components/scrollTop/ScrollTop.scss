@@ -12,9 +12,9 @@
   overflow: hidden;
   animation: moveInBottom 0.5s ease-out 1s backwards;
 
-  @include md {
-    width: 4.5rem;
-    height: 4.5rem;
+  @media only screen and (max-width: 56.25em) {
+    width: 4.25rem;
+    height: 4.25rem;
   }
 
   @include sm {
