@@ -36,6 +36,16 @@
         width: 4rem !important;
         height: 4rem !important;
       }
+
+      @media only screen and (min-width: 112.5em) {
+        width: 12rem !important;
+        height: 12rem !important;
+      }
+
+      @media only screen and (min-width: 125em) {
+        width: 14rem !important;
+        height: 14rem !important;
+      }
     }
   }
 }
