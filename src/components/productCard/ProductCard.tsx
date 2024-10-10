@@ -42,10 +42,10 @@ const ProductCard = ({ product, onLike, onRefetch }: ProductCardProps) => {
           <button
             type='button'
             className='cartButton'
-            disabled={inCart ?? isLoading}
+            disabled={!!inCart ?? !!isLoading}
             onClick={handleClick}
           >
-            {true ? <Spinner color='#a00c1a' /> : btnLabel}
+            {!!isLoading ? <Spinner color='#a00c1a' /> : btnLabel}
           </button>
         </span>
         <Image
