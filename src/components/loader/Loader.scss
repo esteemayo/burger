@@ -17,6 +17,11 @@
     justify-content: center;
 
     span {
+      @include lg {
+        width: 9rem !important;
+        height: 9rem !important;
+      }
+
       @include md {
         width: 8rem !important;
         height: 8rem !important;
