@@ -10,11 +10,6 @@
   line-height: 3.5rem;
   width: 3.5rem;
   height: 3.5rem;
-  overflow: hidden;
-  display: none;
-  visibility: hidden;
-  opacity: 0;
-  z-index: -1;
   animation: moveInBottom 0.5s ease-out 1s backwards;
 
   @include md {
@@ -39,6 +34,14 @@
     visibility: visible;
     opacity: 1;
     z-index: 2000;
+  }
+
+  &.hide {
+    overflow: hidden;
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
   }
 
   button {
