@@ -55,8 +55,8 @@ const NewsLetter = () => {
               type='email'
               placeholder='Your email address'
             />
-            <button type='submit' disabled={true}>
-              {true ? <Spinner color='#a00c1a' /> : 'Subscribe'}
+            <button type='submit' disabled={!!isLoading}>
+              {!!isLoading ? <Spinner color='#a00c1a' /> : 'Subscribe'}
             </button>
           </form>
         </div>
