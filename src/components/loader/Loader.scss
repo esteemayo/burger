@@ -21,6 +21,11 @@
         width: 8rem !important;
         height: 8rem !important;
       }
+
+      @include sm {
+        width: 6rem !important;
+        height: 6rem !important;
+      }
     }
   }
 }
