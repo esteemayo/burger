@@ -167,6 +167,7 @@
         font-weight: 600;
         font-size: 1.2rem;
         width: 14.8rem;
+        height: 4rem;
         padding: 1rem 0;
         background-color: $clr-tertiary;
         color: inherit;
@@ -200,12 +201,15 @@
         }
 
         @media only screen and (min-width: 112.5em) {
+          width: 16rem;
+          height: 5rem;
           font-size: 1.5rem;
           padding: 1.2rem 0;
         }
 
         @media only screen and (min-width: 125em) {
           width: 17rem;
+          height: 7rem;
           font-size: 1.7rem;
           padding: 1.5rem 0;
         }
