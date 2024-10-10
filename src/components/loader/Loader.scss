@@ -15,5 +15,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    span {
+      @include md {
+        width: 8rem !important;
+        height: 8rem !important;
+      }
+    }
   }
 }
