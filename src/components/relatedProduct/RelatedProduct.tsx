@@ -45,10 +45,10 @@ const RelatedProduct = ({
             <button
               type='button'
               className='relatedBtn'
-              disabled={inCart ?? isLoading}
+              disabled={inCart ?? true}
               onClick={handleClick}
             >
-              {isLoading ? <Spinner size={15} color='#a00c1a' /> : btnLabel}
+              {true ? <Spinner size={15} color='#a00c1a' /> : btnLabel}
             </button>
           </span>
           <Image
