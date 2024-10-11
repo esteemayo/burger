@@ -15,7 +15,12 @@ import { formatCurrency } from '@/utils/formatCurrency';
 
 import './ProductInfo.scss';
 
-const ProductInfo = ({ product, currentUser, onUpdate, onRefetch }: ProductInfoProps) => {
+const ProductInfo = ({
+  product,
+  currentUser,
+  onUpdate,
+  onRefetch,
+}: ProductInfoProps) => {
   const { btnLabel, inCart } = useCartControls(product);
   const { quantity, isLoading, handleChange, handleClick } = useCart(product);
 
@@ -62,13 +67,9 @@ const ProductInfo = ({ product, currentUser, onUpdate, onRefetch }: ProductInfoP
             max={10}
             onChange={handleChange}
           />
-          <button
-            type='button'
-            disabled={inCart ?? isLoading}
-            onClick={handleClick}
-          >
+          <button type='button' disabled={inCart ?? true} onClick={handleClick}>
             <ShoppingCartIcon />
-            {isLoading ? <Spinner size={13} /> : btnLabel}
+            {true ? <Spinner size={13} /> : btnLabel}
           </button>
         </div>
       </div>
