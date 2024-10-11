@@ -152,6 +152,18 @@
               font-size: 2rem;
             }
 
+            span {
+              @media only screen and (min-width: 112.5em) {
+                width: 1.5rem !important;
+                height: 1.5rem !important;
+              }
+
+              @media only screen and (min-width: 125em) {
+                width: 2rem !important;
+                height: 2rem !important;
+              }
+            }
+
             .btnReadmore {
               position: relative;
               border: none;
@@ -196,18 +208,6 @@
               &:hover {
                 opacity: 0.7;
                 text-decoration: none;
-              }
-
-              span {
-                @media only screen and (min-width: 112.5em) {
-                  width: 1.5rem !important;
-                  height: 1.5rem !important;
-                }
-
-                @media only screen and (min-width: 125em) {
-                  width: 2rem !important;
-                  height: 2rem !important;
-                }
               }
             }
           }
