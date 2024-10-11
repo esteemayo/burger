@@ -72,12 +72,12 @@ const Review = ({ desc, rating, userId }: ReviewProps) => {
                 <div className='reviewerName'>{user?.name}</div>
                 <p className='reviewerText'>
                   {review}
-                  {true ? (
+                  {!!isLoading ? (
                     <Spinner size={10} color='#00000059' />
                   ) : (
                     <button
                       type='button'
-                      disabled={true}
+                      disabled={!!isLoading}
                       className={btnClasses}
                       onClick={handleToggle}
                     >
