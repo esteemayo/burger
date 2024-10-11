@@ -112,7 +112,7 @@ const ReviewForm = ({ productId }: ReviewFormProps) => {
         setIsLoading(false);
       }, 3000);
     },
-    [handleClear, inputs, mutate, productId, rating]
+    [handleClear, inputs, isError, mutate, productId, rating, session]
   );
 
   useEffect(() => {
@@ -173,8 +173,8 @@ const ReviewForm = ({ productId }: ReviewFormProps) => {
           <label htmlFor='consent'>Sign me up for the newsletter!</label>
         </div>
       </div>
-      <button disabled={true} type='submit'>
-        {true ? <Spinner /> : 'Submit review'}
+      <button disabled={!!isLoading} type='submit'>
+        {!!isLoading ? <Spinner /> : 'Submit review'}
       </button>
     </form>
   );
