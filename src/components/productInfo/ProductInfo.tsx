@@ -67,9 +67,13 @@ const ProductInfo = ({
             max={10}
             onChange={handleChange}
           />
-          <button type='button' disabled={inCart ?? true} onClick={handleClick}>
+          <button
+            type='button'
+            disabled={!!inCart ?? !!isLoading}
+            onClick={handleClick}
+          >
             <ShoppingCartIcon />
-            {true ? <Spinner size={13} /> : btnLabel}
+            {!!isLoading ? <Spinner size={13} /> : btnLabel}
           </button>
         </div>
       </div>
