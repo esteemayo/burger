@@ -151,8 +151,8 @@
 
         & > span {
           @include sm {
-            width: 4rem;
-            height: 4rem;
+            width: 3.75rem;
+            height: 3.75rem;
           }
 
           @media only screen and (max-width: 21.5em) {
