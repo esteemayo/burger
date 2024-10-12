@@ -183,6 +183,10 @@
         row-gap: 3.5rem;
       }
 
+      @media only screen and (max-width: 34.375em) {
+        gap: 3rem;
+      }
+
       @media only screen and (max-width: 20.9375em) {
         gap: 5rem;
       }
