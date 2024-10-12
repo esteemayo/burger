@@ -205,6 +205,11 @@
             left: 19.5%;
           }
 
+          @media only screen and (max-width: 59.375em) {
+            width: 13rem;
+            left: 21%;
+          }
+
           @media only screen and (max-width: 56.25em) {
             font-size: 1.25rem;
           }
