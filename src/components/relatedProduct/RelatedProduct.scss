@@ -237,7 +237,13 @@
           }
 
           @media only screen and (max-width: 25em) {
-            left: 14%;
+            width: 12rem;
+            left: 17%;
+          }
+
+          @media only screen and (max-width: 22.5em) {
+            width: 10rem;
+            left: 21.5%;
           }
 
           @media only screen and (max-width: 21.5em) {
