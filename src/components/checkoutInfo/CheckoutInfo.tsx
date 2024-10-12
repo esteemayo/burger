@@ -114,10 +114,10 @@ const CheckoutInfo = () => {
         <div className='paymentSection'>
           <button
             type='button'
-            disabled={products.length < 1 || isLoading}
+            disabled={products.length < 1 || true}
             onClick={handleCheckout}
           >
-            {isLoading ? <Spinner size={13} /> : 'Place your order'}
+            {true ? <Spinner size={13} /> : 'Place your order'}
           </button>
         </div>
       </div>
