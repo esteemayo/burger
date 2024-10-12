@@ -311,6 +311,11 @@
         min-height: 10rem;
       }
 
+      @media only screen and (max-width: 21.5em) {
+        min-height: 8rem;
+        padding: 1.4rem 1rem;
+      }
+
       @media only screen and (max-width: 20.625em) {
         min-height: 11.7rem;
       }
