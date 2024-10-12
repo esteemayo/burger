@@ -111,20 +111,15 @@
 
         position: absolute;
         top: 50%;
-        left: 20rem;
+        right: 0;
         transform: translateY(-50%);
 
         @include lg {
           width: 75%;
         }
 
-        @media only screen and (max-width: 59.375em) {
-          left: 19rem;
-        }
-
         @media only screen and (max-width: 56.25em) {
           width: 66.5%;
-          left: 25rem;
         }
 
         @media only screen and (max-width: 53.125em) {
@@ -161,14 +156,6 @@
 
         @media only screen and (max-width: 20.9375em) {
           display: none;
-        }
-
-        @media only screen and (min-width: 112.5em) {
-          left: 24rem;
-        }
-
-        @media only screen and (min-width: 125em) {
-          left: 26rem;
         }
       }
     }
