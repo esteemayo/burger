@@ -201,6 +201,10 @@
           opacity: 0;
           z-index: -1;
 
+          @include lg {
+            left: 19.5%;
+          }
+
           @media only screen and (max-width: 56.25em) {
             font-size: 1.25rem;
           }
