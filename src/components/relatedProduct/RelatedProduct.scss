@@ -338,12 +338,15 @@
 
         .relatedHeading {
           text-transform: uppercase;
+          text-overflow: ellipsis;
           text-rendering: optimizeLegibility;
+          white-space: nowrap;
           font-weight: 500;
           font-size: 1.4rem;
           line-height: 1.5;
           margin-bottom: 1px;
           transition: all 0.3s;
+          overflow: hidden;
 
           @media only screen and (max-width: 56.25em) {
             font-size: 1.43rem;
