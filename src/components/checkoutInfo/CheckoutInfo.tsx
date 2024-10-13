@@ -78,14 +78,14 @@ const CheckoutInfo = () => {
             <h6 className='recipientHeading'>Recipient information</h6>
             <div className='customerInfo'>
               <span className='customerName'>
-                {status === 'loading' ? (
+                {true ? (
                   <Skeleton width={120} height={10} />
                 ) : (
                   session?.user.name
                 )}
               </span>
               <span className='customerPhone'>
-                {status === 'loading' ? (
+                {true ? (
                   <Skeleton width={120} height={10} />
                 ) : (
                   session?.user.phone

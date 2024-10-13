@@ -205,6 +205,18 @@
             @media only screen and (min-width: 125em) {
               font-size: 1.8rem;
             }
+
+            .react-loading-skeleton {
+              @media only screen and (min-width: 112.5em) {
+                width: 17rem !important;
+                height: 1.25rem !important;
+              }
+
+              @media only screen and (min-width: 125em) {
+                width: 20rem !important;
+                height: 1.5rem !important;
+              }
+            }
           }
         }
 
