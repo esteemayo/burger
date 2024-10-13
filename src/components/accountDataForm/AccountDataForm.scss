@@ -59,7 +59,8 @@
         font-weight: 400;
         font-size: 1.35rem;
         width: fit-content;
-        max-width: 15rem;
+        min-width: 15rem;
+        height: 5.25rem;
         padding: 1.655rem 6rem;
         background-color: $clr-yellow;
         color: $clr-secondary;
