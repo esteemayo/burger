@@ -86,8 +86,8 @@ const ProductsClient = () => {
         />
         {!isLoading && (
           <div className={btnWrapClasses}>
-            <button type='button' disabled={loading} onClick={handleSeeMore}>
-              {loading ? <Spinner color='#a00c1a' /> : 'See more...'}
+            <button type='button' disabled={true} onClick={handleSeeMore}>
+              {true ? <Spinner color='#a00c1a' /> : 'See more...'}
             </button>
           </div>
         )}
