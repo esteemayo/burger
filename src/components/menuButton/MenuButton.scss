@@ -2,12 +2,14 @@
 @import '../../styles/responsive.scss';
 
 .menuButton {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
   border: none;
   outline: none;
   width: 3rem;
   background-color: transparent;
-  color: $clr-secondary;
   cursor: pointer;
   position: absolute;
   top: 11rem;
@@ -22,8 +24,8 @@
   }
 
   svg {
-    fill: currentColor;
-    stroke: currentColor;
+    fill: $clr-secondary;
+    stroke: $clr-secondary;
     stroke-width: 1;
   }
 
