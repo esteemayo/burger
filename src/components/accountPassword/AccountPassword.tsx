@@ -120,7 +120,9 @@ const AccountPassword = ({ userId }: AccountPasswordProps) => {
           </Input>
         </div>
         <div className='passwordBtnWrap'>
-          <button type='submit'>{true ? <Spinner /> : 'Reset password'}</button>
+          <button type='submit' disabled={!!isLoading}>
+            {!!isLoading ? <Spinner /> : 'Reset password'}
+          </button>
         </div>
       </form>
     </div>

@@ -59,7 +59,9 @@ const AccountDataForm = ({
           />
         </div>
         <div className='dataBtnWrap'>
-          <button type='submit'>{true ? <Spinner /> : 'Update'}</button>
+          <button type='submit' disabled={!!loading}>
+            {!!loading ? <Spinner /> : 'Update'}
+          </button>
         </div>
       </form>
     </div>
