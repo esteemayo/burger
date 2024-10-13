@@ -88,5 +88,13 @@
     @media only screen and (max-width: 17.5em) {
       width: 32rem;
     }
+
+    @media only screen and (min-width: 112.5em) {
+      width: 135rem;
+    }
+
+    @media only screen and (min-width: 125em) {
+      width: 150rem;
+    }
   }
 }
