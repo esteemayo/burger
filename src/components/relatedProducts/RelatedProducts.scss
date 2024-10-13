@@ -141,6 +141,10 @@
         @media only screen and (max-width: 20.9375em) {
           display: none;
         }
+
+        @media only screen and (min-width: 112.5em) {
+          width: 78%;
+        }
       }
     }
 
