@@ -21,10 +21,6 @@
     top: 9rem;
   }
 
-  @media only screen and (max-width: 26.875em) {
-    width: 2.7rem;
-  }
-
   span {
     color: $clr-gray-dark;
   }
@@ -34,6 +30,10 @@
     fill: $clr-secondary;
     stroke: $clr-secondary;
     stroke-width: 1;
+
+    @media only screen and (max-width: 26.875em) {
+      width: 2.7rem;
+    }
   }
 
   @media only screen and (min-width: 64.0625em) {
