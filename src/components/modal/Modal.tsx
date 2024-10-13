@@ -128,11 +128,11 @@ const Modal = ({
               {actionLabel && (
                 <button
                   type='button'
-                  disabled={true}
+                  disabled={!!disabled}
                   className={actionLabelClasses}
                   onClick={handleSubmit}
                 >
-                  {true ? <Spinner /> : actionLabel}
+                  {!!disabled ? <Spinner /> : actionLabel}
                 </button>
               )}
             </div>
