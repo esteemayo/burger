@@ -21,6 +21,10 @@
     top: 9rem;
   }
 
+  @media only screen and (max-width: 26.875em) {
+    font-size: 1.25rem;
+  }
+
   span {
     color: $clr-gray-dark;
   }
