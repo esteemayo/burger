@@ -59,12 +59,8 @@
     }
 
     .checkoutWrap {
-      padding: 0 1.2rem;
       display: flex;
-
-      @media only screen and (max-width: 59.375em) {
-        padding: 0;
-      }
+      gap: 3rem;
 
       @include md {
         flex-direction: column;
