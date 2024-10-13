@@ -155,6 +155,7 @@
             font-weight: 500;
             font-size: 1.35rem;
             width: 50%;
+            height: 4.6rem;
             padding: 1.2rem 1rem;
             border-radius: 0.5rem;
             cursor: pointer;
@@ -170,11 +171,13 @@
 
             @media only screen and (min-width: 112.5em) {
               font-size: 1.7rem;
+              height: 5rem;
               padding: 1.25rem 1rem;
             }
 
             @media only screen and (min-width: 125em) {
               font-size: 1.85rem;
+              height: 6rem;
               padding: 1.5rem 1rem;
             }
 
