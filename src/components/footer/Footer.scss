@@ -424,6 +424,14 @@
           gap: 2rem;
         }
 
+        @media only screen and (min-width: 112.5em) {
+          flex: 4;
+        }
+
+        @media only screen and (min-width: 125em) {
+          flex: 3;
+        }
+
         .menus {
           display: flex;
           align-items: center;
