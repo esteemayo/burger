@@ -4,11 +4,13 @@
 .menuButton {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 0.5rem;
 
   border: none;
   outline: none;
-  width: 3rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.35rem;
   background-color: transparent;
   cursor: pointer;
   position: absolute;
@@ -23,7 +25,12 @@
     width: 2.7rem;
   }
 
+  span {
+    color: $clr-gray-dark;
+  }
+
   svg {
+    width: 3rem;
     fill: $clr-secondary;
     stroke: $clr-secondary;
     stroke-width: 1;
