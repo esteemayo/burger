@@ -41,6 +41,7 @@ const MenuButton = () => {
           />
         </svg>
       )}
+      <span>Menu</span>
     </button>
   );
 };
