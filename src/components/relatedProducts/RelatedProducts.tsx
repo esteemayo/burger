@@ -43,24 +43,28 @@ const RelatedProducts = ({
       <div className='container'>
         <h2 className='relatedHeader'>Related products</h2>
         <div className='relatedWrap'>
-          {isLoading
-            ? Array.from(new Array(4)).map((_, index) => {
-                return <RelatedCardSkeleton key={index} />;
+          {products.length === 0 ? (
+            <span>No related products</span>
+          ) : isLoading ? (
+            Array.from(new Array(4)).map((_, index) => {
+              return <RelatedCardSkeleton key={index} />;
+            })
+          ) : (
+            products
+              ?.filter((product) => product.id !== productId)
+              .slice(0, 4)
+              .map((product) => {
+                return (
+                  <RelatedProduct
+                    key={product.id}
+                    product={product}
+                    currentUser={currentUser}
+                    onLike={setProducts}
+                    onRefetch={refetch}
+                  />
+                );
               })
-            : products
-                ?.filter((product) => product.id !== productId)
-                .slice(0, 4)
-                .map((product) => {
-                  return (
-                    <RelatedProduct
-                      key={product.id}
-                      product={product}
-                      currentUser={currentUser}
-                      onLike={setProducts}
-                      onRefetch={refetch}
-                    />
-                  );
-                })}
+          )}
         </div>
       </div>
     </section>
