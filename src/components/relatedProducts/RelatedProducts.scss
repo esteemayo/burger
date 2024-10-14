@@ -111,22 +111,26 @@
         }
 
         @media only screen and (max-width: 56.25em) {
-          width: 66.5%;
+          width: 72%;
         }
 
         @media only screen and (max-width: 53.125em) {
-          width: 64.25%;
+          width: 70%;
         }
 
         @include md {
-          width: 61.5%;
+          width: 67%;
         }
 
         @media only screen and (max-width: 39.375em) {
-          width: 58.25%;
+          width: 63%;
         }
 
         @media only screen and (max-width: 37.5em) {
+          width: 60%;
+        }
+
+        @media only screen and (max-width: 34.375em) {
           width: 55%;
         }
 
