@@ -12,11 +12,7 @@
     align-items: center;
     justify-content: center;
 
-    @media only screen and (max-width: 68.75em) {
-      width: 110rem;
-    }
-
-    @include lg {
+    @media only screen and (max-width: 76.25em) {
       width: 100rem;
     }
 
