@@ -44,14 +44,14 @@ const StatusForm = ({ actionId, status }: StatusFormProps) => {
         setIsLoading(false);
       }, 3000);
     },
-    [actionId, mutate]
+    [actionId, mutate, statusLists]
   );
 
   return (
     <form onSubmit={handleSubmit}>
       <input type='text' placeholder={status} />
-      <button type='submit' disabled={isLoading}>
-        {isLoading ? (
+      <button type='submit' disabled={true}>
+        {true ? (
           <Spinner size={15} />
         ) : (
           <Image src='/img/edit.png' width={20} height={20} alt='edit icon' />
