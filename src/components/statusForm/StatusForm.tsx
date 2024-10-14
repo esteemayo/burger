@@ -27,6 +27,7 @@ const StatusForm = ({ actionId, status }: StatusFormProps) => {
       const status = input.value;
 
       const error = validateStatusInput(status, statusLists);
+
       if (error) {
         toast.error(error);
         input.value = '';
@@ -50,8 +51,8 @@ const StatusForm = ({ actionId, status }: StatusFormProps) => {
   return (
     <form onSubmit={handleSubmit}>
       <input type='text' placeholder={status} />
-      <button type='submit' disabled={true}>
-        {true ? (
+      <button type='submit' disabled={!!isLoading}>
+        {!!isLoading ? (
           <Spinner size={15} />
         ) : (
           <Image src='/img/edit.png' width={20} height={20} alt='edit icon' />
