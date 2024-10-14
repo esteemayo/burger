@@ -43,7 +43,7 @@ const RelatedProducts = ({
       <div className='container'>
         <h2 className='relatedHeader'>Related products</h2>
         <div className='relatedWrap'>
-          {products.length === 0 ? (
+          {products?.length === 0 ? (
             <span>No related products</span>
           ) : isLoading ? (
             Array.from(new Array(4)).map((_, index) => {
