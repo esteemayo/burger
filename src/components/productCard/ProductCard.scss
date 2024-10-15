@@ -36,7 +36,7 @@
     width: 21rem;
   }
 
-  @media only screen and (max-width: 24.375em) {
+  @media only screen and (max-width: 25em) {
     width: 18rem;
   }
 
@@ -94,7 +94,7 @@
       height: 17rem;
     }
 
-    @media only screen and (max-width: 24.375em) {
+    @media only screen and (max-width: 25em) {
       width: 18rem;
       height: 15rem;
     }
@@ -191,7 +191,7 @@
           width: 12rem;
         }
 
-        @media only screen and (max-width: 24.375em) {
+        @media only screen and (max-width: 25em) {
           font-size: 1.1rem;
           width: 10rem;
         }
@@ -252,10 +252,6 @@
     background-color: $clr-tertiary;
 
     @media only screen and (max-width: 25em) {
-      min-height: 12rem;
-    }
-
-    @media only screen and (max-width: 24.375em) {
       min-height: 10rem;
     }
 
@@ -307,7 +303,7 @@
           font-size: 1.45rem;
         }
 
-        @media only screen and (max-width: 24.375em) {
+        @media only screen and (max-width: 25em) {
           font-size: 1.3rem;
         }
 
