@@ -14,9 +14,14 @@
     height: 50rem;
     animation: moveToTop 3s infinite ease alternate;
 
-    @media only screen and (max-width: 76.25em) {
+    @include lg {
       width: 45rem;
       height: 45rem;
+    }
+
+    @media only screen and (max-width: 59.375em) {
+      width: 40rem;
+      height: 40rem;
     }
 
     @media only screen and (min-width: 112.5em) {
