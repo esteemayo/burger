@@ -81,6 +81,10 @@
     }
 
     @media only screen and (ma-width: 34.375em) {
+      font-size: 3.25rem;
+    }
+
+    @include sm {
       font-size: 3rem;
     }
 
