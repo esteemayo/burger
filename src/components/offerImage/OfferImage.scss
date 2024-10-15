@@ -14,7 +14,7 @@
     height: 50rem;
     animation: moveToTop 3s infinite ease alternate;
 
-    @include lg {
+    @media only screen and (max-width: 76.25em) {
       width: 45rem;
       height: 45rem;
     }
