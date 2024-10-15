@@ -9,10 +9,6 @@
   gap: 3.2rem;
   padding: 2.4rem;
 
-  @media only screen and (max-width: 68.75em) {
-    padding: 0;
-  }
-
   @include lg {
     gap: 2.8rem;
   }
