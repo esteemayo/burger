@@ -147,7 +147,6 @@
 
         &:hover {
           color: $clr-secondary;
-          filter: blur(1px);
         }
 
         svg {
@@ -222,14 +221,6 @@
       .cart {
         position: relative;
         cursor: pointer;
-
-        &:hover {
-          .shoppingCartLogo,
-          .count {
-            filter: blur(1px);
-            transform: scale(1.1);
-          }
-        }
 
         &:hover .cartBox {
           right: 0;
