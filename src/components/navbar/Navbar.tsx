@@ -10,8 +10,9 @@ import { useMemo } from 'react';
 import CartMenu from '../cartMenu/CartMenu';
 import Logo from '../logo/Logo';
 import UserMenu from '../userMenu/UserMenu';
-import Search from '../search/Search';
+import Avatar from '../avatar/Avatar';
 import ToggleButton from '../toggleButton/ToggleButton';
+import Search from '../search/Search';
 
 import { useSidebar } from '@/hooks/useSidebar';
 import { useAvatar } from '@/hooks/useAvatar';
@@ -19,8 +20,6 @@ import { useCartStore } from '@/hooks/useCartStore';
 import { useSearch } from '@/hooks/useSearch';
 import { useCartControls } from '@/hooks/useCartControls';
 import { useScroll } from '@/hooks/useScroll';
-
-import Avatar from '../avatar/Avatar';
 
 import './Navbar.scss';
 
