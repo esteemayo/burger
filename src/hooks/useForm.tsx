@@ -49,7 +49,7 @@ export const useForm = <T extends object, U extends object>(
     if (Object.keys(errors).length > 0) {
       setTimeout(() => setErrors(initialErrors), 5000);
     }
-  }, [errors]);
+  }, [errors, initialErrors]);
 
   return {
     data,
