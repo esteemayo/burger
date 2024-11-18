@@ -161,7 +161,7 @@ const ProductModal = () => {
     };
 
     await handleCreate({ ...newProduct });
-  }, [data, file, handleCreate, ingredients, onNext, step]);
+  }, [data, file, handleCreate, ingredients, onNext, rawPrice, step]);
 
   const actionLabel = useMemo(() => {
     return step === STEPS.IMAGE ? 'Create' : 'Next';
