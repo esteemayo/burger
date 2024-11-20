@@ -168,17 +168,7 @@ const RegisterForm = () => {
     return step === STEPS.AVATAR ? 'registerBtn show' : 'registerBtn hide';
   }, [step]);
 
-  const {
-    name,
-    username,
-    email,
-    street,
-    city,
-    state,
-    gender,
-    password,
-    confirmPassword,
-  } = data;
+  const { gender, password, confirmPassword } = data;
 
   let bodyContent: JSX.Element | undefined;
 
