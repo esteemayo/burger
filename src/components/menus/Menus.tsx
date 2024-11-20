@@ -58,7 +58,7 @@ const Menus = () => {
             ? Array.from(Array(6)).map((_, index) => {
                 return <ProductCardSkeleton key={index} />;
               })
-            : products?.map((product) => {
+            : products?.slice(0, 6).map((product) => {
                 return (
                   <ProductCard
                     key={product.id}
