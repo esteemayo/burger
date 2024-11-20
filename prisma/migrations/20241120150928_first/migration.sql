@@ -29,7 +29,6 @@ CREATE TABLE "sessions" (
 -- CreateTable
 CREATE TABLE "users" (
     "id" TEXT NOT NULL,
-    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "name" TEXT,
     "username" TEXT,
     "email" TEXT,
@@ -40,10 +39,12 @@ CREATE TABLE "users" (
     "address" TEXT,
     "password" TEXT NOT NULL,
     "confirmPassword" TEXT,
-    "gender" TEXT,
+    "gender" TEXT NOT NULL,
     "isAdmin" BOOLEAN NOT NULL DEFAULT false,
     "email_verified" TIMESTAMP(3),
     "image" TEXT,
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
 
     CONSTRAINT "users_pkey" PRIMARY KEY ("id")
 );
@@ -58,15 +59,17 @@ CREATE TABLE "verificationtokens" (
 -- CreateTable
 CREATE TABLE "products" (
     "id" TEXT NOT NULL,
-    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "name" TEXT NOT NULL,
     "desc" TEXT NOT NULL,
     "image" TEXT NOT NULL,
-    "price" DECIMAL(65,30) NOT NULL,
+    "price" INTEGER NOT NULL,
     "ingredients" TEXT[],
     "isFeatured" BOOLEAN NOT NULL DEFAULT false,
-    "ratingsAverage" DECIMAL(65,30) NOT NULL,
-    "ratingsQuantity" INTEGER NOT NULL,
+    "totalRatings" INTEGER NOT NULL DEFAULT 0,
+    "ratingNumber" INTEGER NOT NULL DEFAULT 0,
+    "likes" TEXT[],
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
 
     CONSTRAINT "products_pkey" PRIMARY KEY ("id")
 );
@@ -74,11 +77,13 @@ CREATE TABLE "products" (
 -- CreateTable
 CREATE TABLE "reviews" (
     "id" TEXT NOT NULL,
-    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "rating" DECIMAL(65,30) NOT NULL,
     "desc" TEXT NOT NULL,
     "product_id" TEXT NOT NULL,
     "user_id" TEXT NOT NULL,
+    "consent" BOOLEAN NOT NULL DEFAULT false,
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
 
     CONSTRAINT "reviews_pkey" PRIMARY KEY ("id")
 );
@@ -86,12 +91,13 @@ CREATE TABLE "reviews" (
 -- CreateTable
 CREATE TABLE "orders" (
     "id" TEXT NOT NULL,
-    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "price" DECIMAL(65,30) NOT NULL,
+    "price" INTEGER NOT NULL,
     "products" JSONB[],
     "status" TEXT NOT NULL,
     "intent_id" TEXT,
     "user_id" TEXT NOT NULL,
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
 
     CONSTRAINT "orders_pkey" PRIMARY KEY ("id")
 );
