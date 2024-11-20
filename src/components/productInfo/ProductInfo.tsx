@@ -26,16 +26,16 @@ const ProductInfo = ({
 
   const ratings = useMemo(() => {
     return (
-      !isNaN(product.ratingsAverage / product.ratingsQuantity) &&
-      product.ratingsAverage / product.ratingsQuantity
+      !isNaN(product.totalRatings / product.ratingNumber) &&
+      product.totalRatings / product.ratingNumber
     );
   }, [product]);
 
   const reviewLabel = useMemo(() => {
-    return product.ratingsQuantity === 0 || product.ratingsQuantity > 1
-      ? `${product.ratingsQuantity} reviews`
-      : `${product.ratingsQuantity} review`;
-  }, [product.ratingsQuantity]);
+    return product.ratingNumber === 0 || product.ratingNumber > 1
+      ? `${product.ratingNumber} reviews`
+      : `${product.ratingNumber} review`;
+  }, [product.ratingNumber]);
 
   return (
     <section className='productInfo'>
