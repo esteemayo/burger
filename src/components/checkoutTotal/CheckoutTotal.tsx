@@ -1,8 +1,8 @@
 'use client';
 
-import Skeleton from 'react-loading-skeleton';
-import { useMemo } from 'react';
 import { useSession } from 'next-auth/react';
+import { useMemo } from 'react';
+import Skeleton from 'react-loading-skeleton';
 
 import EmptyCheckout from '../emptyCheckout/EmptyCheckout';
 import CheckoutProducts from '../checkoutProducts/CheckoutProducts';
@@ -32,7 +32,11 @@ const CheckoutTotal = () => {
             <div className='checkoutHeader'>
               Your order from
               <p className='checkoutCustomer'>
-                {status === 'loading' ? <Skeleton width={120} height={10} /> : customerLabel}
+                {status === 'loading' ? (
+                  <Skeleton width={120} height={10} />
+                ) : (
+                  customerLabel
+                )}
               </p>
             </div>
             <div className='checkoutBody'>
