@@ -56,8 +56,8 @@ export type CartItem = {
   ingredients?: string[];
   likes: string[];
   isFeatured: boolean;
-  ratingsAverage: number;
-  ratingsQuantity: number;
+  totalRatings: number;
+  ratingNumber: number;
   quantity: number;
 };
 
@@ -287,8 +287,8 @@ export type ProductType = {
   ingredients?: string[];
   likes: string[];
   isFeatured: boolean;
-  ratingsAverage: number;
-  ratingsQuantity: number;
+  totalRatings: number;
+  ratingNumber: number;
   quantity: number;
 };
 
@@ -541,8 +541,8 @@ export type SingleProductType = {
   ingredients?: string[];
   likes: string[];
   isFeatured: boolean;
-  ratingsAverage: number;
-  ratingsQuantity: number;
+  totalRatings: number;
+  ratingNumber: number;
   reviews: ReviewType;
   quantity: number;
 };
