@@ -4,11 +4,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useCallback, useMemo } from 'react';
 
+import StatusForm from '../statusForm/StatusForm';
+
 import { formatDate } from '@/utils/formatDate';
 import { excerpts } from '@/utils';
 import { formatCurrency } from '@/utils/formatCurrency';
 
-import StatusForm from '../statusForm/StatusForm';
 import { StatusType, TableBodyProps } from '@/types';
 
 import './Table.scss';

@@ -1,5 +1,6 @@
-import { features } from '@/data';
 import Feature from '../feature/Feature';
+
+import { features } from '@/data';
 
 import './Features.scss';
 

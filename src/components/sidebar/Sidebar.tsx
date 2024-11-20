@@ -7,10 +7,11 @@ import Image from 'next/image';
 import RoomServiceIcon from '@mui/icons-material/RoomService';
 import { useMemo } from 'react';
 
-import { useSearch } from '@/hooks/useSearch';
 import { useLogout } from '@/hooks/useLogout';
-import { useCartControls } from '@/hooks/useCartControls';
+import { useSearch } from '@/hooks/useSearch';
+
 import { useScroll } from '@/hooks/useScroll';
+import { useCartControls } from '@/hooks/useCartControls';
 
 import { authLinks, sidebarMenus } from '@/data';
 

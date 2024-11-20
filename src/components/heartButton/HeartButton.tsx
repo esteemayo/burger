@@ -1,9 +1,9 @@
 'use client';
 
+import HeartIcon from '../heartIcon/HeartIcon';
+
 import { HeartButtonProps } from '@/types';
 import useFavorite from '@/hooks/useFavorite';
-
-import HeartIcon from '../heartIcon/HeartIcon';
 
 import './HeartButton.scss';
 
