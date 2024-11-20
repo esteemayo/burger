@@ -42,10 +42,7 @@ export const POST = async (req: NextRequest, { params }: IParams) => {
 
       const review = await prisma.review.findFirst({
         where: {
-          AND: [
-            { productId },
-            { userId },
-          ],
+          AND: [{ productId }, { userId }],
         },
       });
 
@@ -73,10 +70,10 @@ export const POST = async (req: NextRequest, { params }: IParams) => {
             id: productId,
           },
           data: {
-            ratingsAverage: {
+            totalRatings: {
               increment: body.rating,
             },
-            ratingsQuantity: {
+            ratingNumber: {
               increment: 1,
             },
           },
