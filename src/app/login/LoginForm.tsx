@@ -136,7 +136,7 @@ const LoginForm = () => {
     <div className='formWrap'>
       <div className='headingWrap'>
         <h1>
-          Hey there! <br /> Welcome back to <span>Burger</span>
+          Hey there! <br /> Welcome back to <span>Burgers</span>
         </h1>
       </div>
       <form onSubmit={handleSubmit} className='loginForm'>
