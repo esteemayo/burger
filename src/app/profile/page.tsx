@@ -7,7 +7,7 @@ import AccountSettings from '@/components/accountSettings/AccountSettings';
 import './Profile.scss';
 
 export const metadata: Metadata = {
-  title: 'Burger. App | User Profile',
+  title: 'Burgers. App | User Profile',
 };
 
 const Profile = () => {

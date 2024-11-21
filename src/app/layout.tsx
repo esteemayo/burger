@@ -14,7 +14,7 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: 'Burgers. App | Burger Ordering | Online Burger Delivery',
   description:
-    'Order burger online from local restaurants with Burger. Get delivery or pickup from your favorite eateries. Order your burger with Burger App. Get delivery or pickup from this local favorite.',
+    'Order burger online from local restaurants with Burgers. Get delivery or pickup from your favorite eateries. Order your burger with Burgers App. Get delivery or pickup from this local favorite.',
   keywords: 'burger ordering, online burger ordering',
   authors: [
     { name: 'Xsteem Designx', url: 'https://www.esteemdesigns.com' },

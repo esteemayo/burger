@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import ProductsClient from './ProductsClient';
 
 export const metadata: Metadata = {
-  title: 'Burger. App | Products',
+  title: 'Burgers. App | Products',
 };
 
 const Products = () => {
