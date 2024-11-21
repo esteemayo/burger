@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import SearchClient from '@/components/searchClient/SearchClient';
 
 export const metadata: Metadata = {
-  title: 'Burger. App | Search',
+  title: 'Burgers. App | Search',
 };
 
 const Search = () => {
