@@ -16,7 +16,7 @@ const Hero = ({ name, image }: HeroProps) => {
       <div className='headingWrap'>
         <h1 className='heroHeading'>{name}</h1>
         <div className='heroSubHeading'>
-          <span className='heroText'>Welcome to Burger.</span>
+          <span className='heroText'>Welcome to Burgers.</span>
         </div>
       </div>
     </header>

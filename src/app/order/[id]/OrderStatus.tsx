@@ -52,7 +52,7 @@ const OrderStatus = ({ createdAt, status }: OrderStatusProps) => {
           );
         })}
       </ul>
-      <span className='brand'>Burger. Inc {orderStatus} your order!</span>
+      <span className='brand'>Burgers. Inc {orderStatus} your order!</span>
     </div>
   );
 };
