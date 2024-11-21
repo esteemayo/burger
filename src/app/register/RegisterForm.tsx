@@ -13,12 +13,13 @@ import GoogleButton from '@/components/google/GoogleButton';
 import RegisterCredentials from '@/components/registerCredentials/RegisterCredentials';
 import RegisterInfo from '@/components/registerInfo/RegisterInfo';
 
-import { useForm } from '@/hooks/useForm';
 import { upload } from '@/utils/upload';
+import { formatPhone } from '@/utils/formatPhone';
+
+import { useForm } from '@/hooks/useForm';
 import { validateRegisterInputs } from '@/validations/register';
 
 import { registerUser } from '@/services/authService';
-import { formatPhone } from '@/utils/formatPhone';
 import { RegisterData, RegisterErrors } from '@/types';
 
 import './Register.scss';
@@ -215,7 +216,7 @@ const RegisterForm = () => {
     <div className='formWrap'>
       <div className='headingWrap'>
         <h1>
-          Hey there! <br /> Welcome to <span>Burger</span>
+          Hey there! <br /> Welcome to <span>Burgers</span>
         </h1>
       </div>
       <form onSubmit={handleSubmit} className='registerForm'>
