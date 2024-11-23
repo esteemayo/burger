@@ -8,7 +8,7 @@ const Logo = () => {
     <div className='logo'>
       <Link href='/'>
         <Image
-          src='/svg/logo.svg'
+          src='/svg/logo-2.svg'
           priority
           width={100}
           height={100}
