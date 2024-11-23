@@ -26,7 +26,7 @@ const DropZone = ({ id, label, small, onSelect }: DropZoneProps) => {
       <label htmlFor={id}>{label}</label>
       <div className='dropzoneBox'>
         <div {...getRootProps({ className: 'dropzoneWrap' })}>
-          <input id={id} {...getInputProps()} />
+          <input id={id} accept='image/*' {...getInputProps()} />
           {isDragActive ? (
             <p>Drop the file here ...</p>
           ) : (
