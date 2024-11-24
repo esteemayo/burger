@@ -4,7 +4,7 @@ export const upload = async (file: File | undefined) => {
   const data = new FormData();
 
   data.append('file', file!);
-  data.append('upload_preset', 'burger');
+  data.append('upload_preset', 'burgers');
 
   try {
     const res = await uploadImage(data);
