@@ -103,16 +103,16 @@ The following API endpoints are available:
 
 ### Product Endpoints
 
-- GET /api/products: Returns a list of product items.
-- GET /api/products/search: Search the product items using the product name or desc.
-- GET /api/products/ingredients: Return product items that have one or more related ingredients
-- GET /api/products/:id/reviews: Return reviews associated with a productId.
-- GET /api/products/:id: Returns a single product item by ID.
-- POST /api/products: Creates a new product item but only by the admin.
-- POST /api/products/:id/reviews: Creates a new review with a productId.
-- PATCH /api/products/like/:id: Handles the like functionality of a product item.
-- PATCH /api/products/:id: Update a single product item by ID but only the admin is authorized.
-- DELETE /api/products/:id: Delete a single product item by ID by the admin only.
+- ==GET /api/products==.: Returns a list of product items.
+- ==GET /api/products/search==.: Search the product items using the product name or desc.
+- ==GET /api/products/ingredients==.: Return product items that have one or more related ingredients
+- ==GET /api/products/:id/reviews==.: Return reviews associated with a productId.
+- ==GET /api/products/:id==.: Returns a single product item by ID.
+- ==POST /api/products==.: Creates a new product item but only by the admin.
+- ==POST /api/products/:id/reviews==.: Creates a new review with a productId.
+- ==PATCH /api/products/like/:id==.: Handles the like functionality of a product item.
+- ==PATCH /api/products/:id==.: Update a single product item by ID but only the admin is authorized.
+- ==DELETE /api/products/:id==.: Delete a single product item by ID by the admin only.
 
 ### Order Endpoints
 
