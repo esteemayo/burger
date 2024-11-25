@@ -92,6 +92,13 @@ The following API endpoints are available:
 - POST /api/auth/register: Creates a new user and returns a JWT.
 - PATCH /api/auth/update-my-password/:id: Updates the current user password.
 
+# User Endpoints
+
+- GET /api/users: Returns the users data to the admin.
+- GET /api/users/id: Return a single user by ID.
+- PATCH /api/users/id: Updates the current user's data such as name, username, email, etc. But cannot update current user's password.
+- DELETE /api/users/id: Deletes the current user's data.
+
 # Product Endpoints
 
 - GET /api/products: Returns a list of product items.
