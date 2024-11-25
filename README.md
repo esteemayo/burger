@@ -27,7 +27,7 @@ This application allows users to browse a menu of burgers, add items to cart, an
 - Shopping cart with item quantity management
 - Order placement with payment processing (Stripe)
 - Order history and status updates
-  -Admin dashboard for managing menu items, orders, and users
+- Admin dashboard for managing menu items, orders, and users
 - Real-time updates using WebSockets
 - Reviews and ratings system
 
