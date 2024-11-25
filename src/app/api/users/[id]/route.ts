@@ -12,7 +12,6 @@ interface IParams {
 
 export const GET = async (req: NextRequest, { params }: IParams) => {
   const { id: userId } = params;
-  const session = await getAuthSession();
 
   try {
     const user = await prisma.user.findUnique({
