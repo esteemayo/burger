@@ -98,6 +98,7 @@ The following API endpoints are available:
 - GET /api/users/id: Return a single user by ID.
 - PATCH /api/users/id: Updates the current user's data such as name, username, email, etc. But cannot update current user's password.
 - DELETE /api/users/id: Deletes the current user's data by the user itself or by the admin.
+- DELETE /api/users/delete-me/:id: Deletes authenticated user's data by the user or admin.
 
 # Product Endpoints
 
