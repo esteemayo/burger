@@ -55,7 +55,7 @@ This application allows users to browse a menu of burgers, add items to cart, an
 - <mark>NEXTAUTH_SECRET:</mark> Next-Auth secret key
 - <mark>NEXT_PUBLIC_DEV_API_URL:</mark> Application url in development
 - <mark>NEXT_PUBLIC_PROD_API_URL:</mark> Applicaton url in production
-- <mark>NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY:</mark>
+- <mark>NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY:</mark> Stripe publishable key
 - <mark>STRIPE_SECRET_KEY:</mark> Stripe secret key
 
 5. Start the Docker containers: <mark>docker compose up</mark>
