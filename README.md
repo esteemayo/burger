@@ -95,30 +95,30 @@ The following API endpoints are available:
 
 ### User Endpoints
 
-- ==GET /api/users==.: Returns the users data to the admin.
-- ==GET /api/users/id==.: Return a single user by ID.
-- ==PATCH /api/users/id==.: Updates the authenticated user's data such as name, username, email, etc. But cannot update authenticated user's password.
-- ==DELETE /api/users/id==.: Deletes the authenticated user's data by the user itself or by the admin.
-- ==DELETE /api/users/delete-me/:id==.: Deletes authenticated user's data by the user or admin.
+- ==GET /api/users==: Returns the users data to the admin.
+- ==GET /api/users/id==: Return a single user by ID.
+- ==PATCH /api/users/id==: Updates the authenticated user's data such as name, username, email, etc. But cannot update authenticated user's password.
+- ==DELETE /api/users/id==: Deletes the authenticated user's data by the user itself or by the admin.
+- ==DELETE /api/users/delete-me/:id==: Deletes authenticated user's data by the user or admin.
 
 ### Product Endpoints
 
-- ==GET /api/products==.: Returns a list of product items.
-- ==GET /api/products/search==.: Search the product items using the product name or desc.
-- ==GET /api/products/ingredients==.: Return product items that have one or more related ingredients
-- ==GET /api/products/:id/reviews==.: Return reviews associated with a productId.
-- ==GET /api/products/:id==.: Returns a single product item by ID.
-- ==POST /api/products==.: Creates a new product item but only by the admin.
-- ==POST /api/products/:id/reviews==.: Creates a new review with a productId.
-- ==PATCH /api/products/like/:id==.: Handles the like functionality of a product item.
-- ==PATCH /api/products/:id==.: Update a single product item by ID but only the admin is authorized.
-- ==DELETE /api/products/:id==.: Delete a single product item by ID by the admin only.
+- ==GET /api/products==: Returns a list of product items.
+- ==GET /api/products/search==: Search the product items using the product name or desc.
+- ==GET /api/products/ingredients==: Return product items that have one or more related ingredients
+- ==GET /api/products/:id/reviews==: Return reviews associated with a productId.
+- ==GET /api/products/:id==: Returns a single product item by ID.
+- ==POST /api/products==: Creates a new product item but only by the admin.
+- ==POST /api/products/:id/reviews==: Creates a new review with a productId.
+- ==PATCH /api/products/like/:id==: Handles the like functionality of a product item.
+- ==PATCH /api/products/:id==: Update a single product item by ID but only the admin is authorized.
+- ==DELETE /api/products/:id==: Delete a single product item by ID by the admin only.
 
 ### Order Endpoints
 
-- ==GET /api/orders==.: Returns a list of orders for the authenticated admin.
-- ==GET /api/orders/details/==.:intentId: Returns a single order for the authenticated user by INTENTID.
-- ==GET /api/orders/:id==.: Returns a single order for the authenticated user or admin by ID.
-- ==POST /api/orders==.: Creates a new order only for the authenticated user and not the admin.
-- ==PATCH /api/orders/:id==.: Updates an order by the authenticated admin.
-- ==DELETE /api/orders/:id==.: Deletes an order by the authenticated admin.
+- ==GET /api/orders==: Returns a list of orders for the authenticated admin.
+- ==GET /api/orders/details/==:intentId: Returns a single order for the authenticated user by INTENTID.
+- ==GET /api/orders/:id==: Returns a single order for the authenticated user or admin by ID.
+- ==POST /api/orders==: Creates a new order only for the authenticated user and not the admin.
+- ==PATCH /api/orders/:id==: Updates an order by the authenticated admin.
+- ==DELETE /api/orders/:id==: Deletes an order by the authenticated admin.
