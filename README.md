@@ -68,3 +68,7 @@ This application allows users to browse a menu of burgers, add items to cart, an
 3. Browse the menu and add items to your cart
 4. Click on the "Checkout" button to place an order
 5. Enter your payment information and complete the order
+
+## Authentication and Authorization
+
+This application uses Next-Auth for authentication and authorization. Users can login using their username and password, and are redirected to the home page after successful authentication. The NEXTAUTH_SECRET environment variable is used to secure the authentication process.
