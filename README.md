@@ -49,14 +49,14 @@ This application allows users to browse a menu of burgers, add items to cart, an
 3. Install dependencies: <mark>npm install or yarn install</mark>
 4. Create a <mark>.env</mark> file and add the following environment variables:
 
-- DATABASE_URL: PostgreSQL database URL
-- GOOGLE_ID: Google id
-- GOOGLE_SECRET: Google secret key
-- NEXTAUTH_SECRET: Next-Auth secret key
-- NEXT_PUBLIC_DEV_API_URL: Application url in development
-- NEXT_PUBLIC_PROD_API_URL: Applicaton url in production
-- NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY:
-- STRIPE_SECRET_KEY: Stripe secret key
+- <mark>DATABASE_URL:</mark> PostgreSQL database URL
+- <mark>GOOGLE_ID:</mark> Google id
+- <mark>GOOGLE_SECRET:</mark> Google secret key
+- <mark>NEXTAUTH_SECRET:</mark> Next-Auth secret key
+- <mark>NEXT_PUBLIC_DEV_API_URL:</mark> Application url in development
+- <mark>NEXT_PUBLIC_PROD_API_URL:</mark> Applicaton url in production
+- <mark>NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY:</mark>
+- <mark>STRIPE_SECRET_KEY:</mark> Stripe secret key
 
 5. Start the Docker containers: <mark>docker compose up</mark>
 6. Run the database migrations: <mark>npx prisma migrate dev</mark>
