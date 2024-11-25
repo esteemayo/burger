@@ -1,4 +1,4 @@
-## Burger Ordering Application
+# Burger Ordering Application
 
 A modern burger ordering application built using Docker, Next.js, Prisma, PostgreSQL, Zustand, Next-Auth, React Query and more.
 
@@ -44,7 +44,7 @@ This application allows users to browse a menu of burgers, add items to cart, an
 
 ## Setup and Installation
 
-1. Clone the repository: [git clone]()
+1. Clone the repository: [git clone](https://github.com/esteemayo/burgers.git)
 2. Change into the project directory: cd your-repo-name
 3. Install dependencies: npm install or yarn install
 4. Create a .env file and add the following environment variables:
@@ -64,7 +64,7 @@ This application allows users to browse a menu of burgers, add items to cart, an
 
 ## Usage
 
-1. Open a web browser and navigate to (http://localhost:3000)
+1. [Open a web browser and navigate to](http://localhost:3000)
 2. Click on the "Login" button to authenticate using Next-Auth
 3. Browse the menu and add items to your cart
 4. Click on the "Checkout" button to place an order
@@ -87,13 +87,13 @@ The database schema is defined using Prisma. The schema includes the following m
 
 The following API endpoints are available:
 
-# Authentication Endpoints
+### Authentication Endpoints
 
 - POST /api/auth/[...nextauth]: Authenticates a user and returns a JSON Web Token (JWT).
 - POST /api/auth/register: Creates a new user and returns a JWT.
 - PATCH /api/auth/update-my-password/:id: Updates the authenticated user password.
 
-# User Endpoints
+### User Endpoints
 
 - GET /api/users: Returns the users data to the admin.
 - GET /api/users/id: Return a single user by ID.
@@ -101,7 +101,7 @@ The following API endpoints are available:
 - DELETE /api/users/id: Deletes the authenticated user's data by the user itself or by the admin.
 - DELETE /api/users/delete-me/:id: Deletes authenticated user's data by the user or admin.
 
-# Product Endpoints
+### Product Endpoints
 
 - GET /api/products: Returns a list of product items.
 - GET /api/products/search: Search the product items using the product name or desc.
@@ -114,7 +114,7 @@ The following API endpoints are available:
 - PATCH /api/products/:id: Update a single product item by ID but only the admin is authorized.
 - DELETE /api/products/:id: Delete a single product item by ID by the admin only.
 
-# Order Endpoints
+### Order Endpoints
 
 - GET /api/orders: Returns a list of orders for the authenticated admin.
 - GET /api/orders/details/:intentId: Returns a single order for the authenticated user by INTENTID.
