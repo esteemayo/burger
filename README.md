@@ -44,10 +44,10 @@ This application allows users to browse a menu of burgers, add items to cart, an
 
 ## Setup and Installation
 
-1. Clone the repository: [git clone](https://github.com/esteemayo/burgers.git)
-2. Change into the project directory: cd your-repo-name
-3. Install dependencies: npm install or yarn install
-4. Create a .env file and add the following environment variables:
+1. Clone the repository: ==[git clone](https://github.com/esteemayo/burgers.git)==.
+2. Change into the project directory: ==cd your-repo-name==.
+3. Install dependencies: ==npm install or yarn install==.
+4. Create a ==.env==. file and add the following environment variables:
 
 - DATABASE_URL: PostgreSQL database URL
 - GOOGLE_ID: Google id
@@ -58,9 +58,9 @@ This application allows users to browse a menu of burgers, add items to cart, an
 - NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY:
 - STRIPE_SECRET_KEY: Stripe secret key
 
-5. Start the Docker containers: docker compose up
-6. Run the database migrations: npx prisma migrate dev
-7. Start the Next.js development server: npm run dev or yarn dev
+5. Start the Docker containers: ==docker compose up==.
+6. Run the database migrations: ==npx prisma migrate dev==.
+7. Start the Next.js development server: ==npm run dev or yarn dev==.
 
 ## Usage
 
@@ -72,16 +72,16 @@ This application allows users to browse a menu of burgers, add items to cart, an
 
 ## Authentication and Authorization
 
-This application uses Next-Auth for authentication and authorization. Users can login using their username and password, and are redirected to the home page after successful authentication. The NEXTAUTH_SECRET environment variable is used to secure the authentication process.
+This application uses Next-Auth for authentication and authorization. Users can login using their username and password, and are redirected to the home page after successful authentication. The ==NEXTAUTH_SECRET==. environment variable is used to secure the authentication process.
 
 ## Database Schema
 
 The database schema is defined using Prisma. The schema includes the following models:
 
-- User: Represent a user with a name, username, email, phone, state, city, street, address, password, confirmPassword, gender, image, and role,
-- Product: Represent a product with a name, description, image, ingredients, isFeatured, totalRatings, ratingNumber, likes, reviews and price.
-- Order: Represents an order with a user, product/menu items, price, status, and intent_id.
-- Review: Represents a review with a rating, description, productId, userId, and consent.
+- ==User==.: Represent a user with a name, username, email, phone, state, city, street, address, password, confirmPassword, gender, image, and role,
+- ==Product==.: Represent a product with a name, description, image, ingredients, isFeatured, totalRatings, ratingNumber, likes, reviews and price.
+- ==Order==.: Represents an order with a user, product/menu items, price, status, and intent_id.
+- ==Review==.: Represents a review with a rating, description, productId, userId, and consent.
 
 ## API Endpoints
 
