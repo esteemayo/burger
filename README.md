@@ -86,6 +86,12 @@ The database schema is defined using Prisma. The schema includes the following m
 
 The following API endpoints are available:
 
+# Authentication Endpoints
+
+- POST /api/auth/[...nextauth]: Authenticates a user and returns a JSON Web Token (JWT).
+- POST /api/auth/register: Creates a new user and returns a JWT.
+- PATCH /api/auth/update-my-password/:id: Updates the current user password.
+
 # Product Endpoints
 
 - GET /api/products: Returns a list of product items.
