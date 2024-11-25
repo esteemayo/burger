@@ -112,3 +112,12 @@ The following API endpoints are available:
 - PATCH /api/products/like/:id: Handles the like functionality of a product item.
 - PATCH /api/products/:id: Update a single product item by ID but only the admin is authorized.
 - DELETE /api/products/:id: Delete a single product item by ID by the admin only.
+
+# Order Endpoints
+
+- GET /api/orders: Returns a list of orders for the authenticated admin.
+- GET /api/orders/details/:intentId: Returns a single order for the authenticated user by INTENTID.
+- GET /api/orders/:id: Returns a single order for the authenticated user or admin by ID.
+- POST /api/orders: Creates a new order only for the authenticated user and not the admin.
+- PATCH /api/orders/:id: Updates an order by the authenticated admin.
+- DELETE /api/orders/:id: Deletes an order by the authenticated admin.
