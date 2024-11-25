@@ -75,7 +75,7 @@ This application uses Next-Auth for authentication and authorization. Users can 
 
 ## Database Schema
 
-The database schema is defined using Prisma. The schema includes the following models
+The database schema is defined using Prisma. The schema includes the following models:
 
 - User: Represent a user with a name, username, email, phone, state, city, street, address, password, confirmPassword, gender, image, and role,
 - Product: Represent a product with a name, description, image, ingredients, isFeatured, totalRatings, ratingNumber, likes, reviews and price.
