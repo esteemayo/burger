@@ -60,3 +60,11 @@ This application allows users to browse a menu of burgers, add items to cart, an
 5. Start the Docker containers: docker compose up
 6. Run the database migrations: npx prisma migrate dev
 7. Start the Next.js development server: npm run dev or yarn dev
+
+## Usage
+
+1. Open a web browser and navigate to (http://localhost:3000)
+2. Click on the "Login" button to authenticate using Next-Auth
+3. Browse the menu and add items to your cart
+4. Click on the "Checkout" button to place an order
+5. Enter your payment information and complete the order
