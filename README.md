@@ -44,10 +44,10 @@ This application allows users to browse a menu of burgers, add items to cart, an
 
 ## Setup and Installation
 
-1. Clone the repository: ==[git clone](https://github.com/esteemayo/burgers.git)==
-2. Change into the project directory: ==cd your-repo-name==
-3. Install dependencies: ==npm install or yarn install==
-4. Create a ==.env== file and add the following environment variables:
+1. Clone the repository: <mark>[git clone](https://github.com/esteemayo/burgers.git)</mark>
+2. Change into the project directory: <mark>cd your-repo-name</mark>
+3. Install dependencies: <mark>npm install or yarn install</mark>
+4. Create a <mark>.env</mark> file and add the following environment variables:
 
 - DATABASE_URL: PostgreSQL database URL
 - GOOGLE_ID: Google id
@@ -58,9 +58,9 @@ This application allows users to browse a menu of burgers, add items to cart, an
 - NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY:
 - STRIPE_SECRET_KEY: Stripe secret key
 
-5. Start the Docker containers: ==docker compose up==
-6. Run the database migrations: ==npx prisma migrate dev==
-7. Start the Next.js development server: ==npm run dev or yarn dev==
+5. Start the Docker containers: <mark>docker compose up</mark>
+6. Run the database migrations: <mark>npx prisma migrate dev</mark>
+7. Start the Next.js development server: <mark>npm run dev or yarn dev</mark>
 
 ## Usage
 
@@ -72,16 +72,16 @@ This application allows users to browse a menu of burgers, add items to cart, an
 
 ## Authentication and Authorization
 
-This application uses Next-Auth for authentication and authorization. Users can login using their username and password, and are redirected to the home page after successful authentication. The ==NEXTAUTH_SECRET== environment variable is used to secure the authentication process.
+This application uses Next-Auth for authentication and authorization. Users can login using their username and password, and are redirected to the home page after successful authentication. The <mark>NEXTAUTH_SECRET</mark> environment variable is used to secure the authentication process.
 
 ## Database Schema
 
 The database schema is defined using Prisma. The schema includes the following models:
 
-- ==User==: Represent a user with a name, username, email, phone, state, city, street, address, password, confirmPassword, gender, image, and role,
-- ==Product==: Represent a product with a name, description, image, ingredients, isFeatured, totalRatings, ratingNumber, likes, reviews and price.
-- ==Order==: Represents an order with a user, product/menu items, price, status, and intent_id.
-- ==Review==: Represents a review with a rating, description, productId, userId, and consent.
+- <mark>User</mark>: Represent a user with a name, username, email, phone, state, city, street, address, password, confirmPassword, gender, image, and role,
+- <mark>Product</mark>: Represent a product with a name, description, image, ingredients, isFeatured, totalRatings, ratingNumber, likes, reviews and price.
+- <mark>Order</mark>: Represents an order with a user, product/menu items, price, status, and intent_id.
+- <mark>Review</mark>: Represents a review with a rating, description, productId, userId, and consent.
 
 ## API Endpoints
 
@@ -89,36 +89,36 @@ The following API endpoints are available:
 
 ### Authentication Endpoints
 
-- ==POST /api/auth/[...nextauth]==: Authenticates a user and returns a JSON Web Token (JWT).
-- ==POST /api/auth/register==: Creates a new user and returns a JWT.
-- ==PATCH /api/auth/update-my-password/:id==: Updates the authenticated user password.
+- <mark>POST /api/auth/[...nextauth]</mark>: Authenticates a user and returns a JSON Web Token (JWT).
+- <mark>POST /api/auth/register</mark>: Creates a new user and returns a JWT.
+- <mark>PATCH /api/auth/update-my-password/:id</mark>: Updates the authenticated user password.
 
 ### User Endpoints
 
-- ==GET /api/users==: Returns the users data to the admin.
-- ==GET /api/users/id==: Return a single user by ID.
-- ==PATCH /api/users/id==: Updates the authenticated user's data such as name, username, email, etc. But cannot update authenticated user's password.
-- ==DELETE /api/users/id==: Deletes the authenticated user's data by the user itself or by the admin.
-- ==DELETE /api/users/delete-me/:id==: Deletes authenticated user's data by the user or admin.
+- <mark>GET /api/users</mark>: Returns the users data to the admin.
+- <mark>GET /api/users/id</mark>: Return a single user by ID.
+- <mark>PATCH /api/users/id</mark>: Updates the authenticated user's data such as name, username, email, etc. But cannot update authenticated user's password.
+- <mark>DELETE /api/users/id</mark>: Deletes the authenticated user's data by the user itself or by the admin.
+- <mark>DELETE /api/users/delete-me/:id</mark>: Deletes authenticated user's data by the user or admin.
 
 ### Product Endpoints
 
-- ==GET /api/products==: Returns a list of product items.
-- ==GET /api/products/search==: Search the product items using the product name or desc.
-- ==GET /api/products/ingredients==: Return product items that have one or more related ingredients
-- ==GET /api/products/:id/reviews==: Return reviews associated with a productId.
-- ==GET /api/products/:id==: Returns a single product item by ID.
-- ==POST /api/products==: Creates a new product item but only by the admin.
-- ==POST /api/products/:id/reviews==: Creates a new review with a productId.
-- ==PATCH /api/products/like/:id==: Handles the like functionality of a product item.
-- ==PATCH /api/products/:id==: Update a single product item by ID but only the admin is authorized.
-- ==DELETE /api/products/:id==: Delete a single product item by ID by the admin only.
+- <mark>GET /api/products</mark>: Returns a list of product items.
+- <mark>GET /api/products/search</mark>: Search the product items using the product name or desc.
+- <mark>GET /api/products/ingredients</mark>: Return product items that have one or more related ingredients
+- <mark>GET /api/products/:id/reviews</mark>: Return reviews associated with a productId.
+- <mark>GET /api/products/:id</mark>: Returns a single product item by ID.
+- <mark>POST /api/products</mark>: Creates a new product item but only by the admin.
+- <mark>POST /api/products/:id/reviews</mark>: Creates a new review with a productId.
+- <mark>PATCH /api/products/like/:id</mark>: Handles the like functionality of a product item.
+- <mark>PATCH /api/products/:id</mark>: Update a single product item by ID but only the admin is authorized.
+- <mark>DELETE /api/products/:id</mark>: Delete a single product item by ID by the admin only.
 
 ### Order Endpoints
 
-- ==GET /api/orders==: Returns a list of orders for the authenticated admin.
-- ==GET /api/orders/details/==:intentId: Returns a single order for the authenticated user by INTENTID.
-- ==GET /api/orders/:id==: Returns a single order for the authenticated user or admin by ID.
-- ==POST /api/orders==: Creates a new order only for the authenticated user and not the admin.
-- ==PATCH /api/orders/:id==: Updates an order by the authenticated admin.
-- ==DELETE /api/orders/:id==: Deletes an order by the authenticated admin.
+- <mark>GET /api/orders</mark>: Returns a list of orders for the authenticated admin.
+- <mark>GET /api/orders/details/</mark>:intentId: Returns a single order for the authenticated user by INTENTID.
+- <mark>GET /api/orders/:id</mark>: Returns a single order for the authenticated user or admin by ID.
+- <mark>POST /api/orders</mark>: Creates a new order only for the authenticated user and not the admin.
+- <mark>PATCH /api/orders/:id</mark>: Updates an order by the authenticated admin.
+- <mark>DELETE /api/orders/:id</mark>: Deletes an order by the authenticated admin.
