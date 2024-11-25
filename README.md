@@ -90,14 +90,14 @@ The following API endpoints are available:
 
 - POST /api/auth/[...nextauth]: Authenticates a user and returns a JSON Web Token (JWT).
 - POST /api/auth/register: Creates a new user and returns a JWT.
-- PATCH /api/auth/update-my-password/:id: Updates the current user password.
+- PATCH /api/auth/update-my-password/:id: Updates the authenticated user password.
 
 # User Endpoints
 
 - GET /api/users: Returns the users data to the admin.
 - GET /api/users/id: Return a single user by ID.
-- PATCH /api/users/id: Updates the current user's data such as name, username, email, etc. But cannot update current user's password.
-- DELETE /api/users/id: Deletes the current user's data by the user itself or by the admin.
+- PATCH /api/users/id: Updates the authenticated user's data such as name, username, email, etc. But cannot update authenticated user's password.
+- DELETE /api/users/id: Deletes the authenticated user's data by the user itself or by the admin.
 - DELETE /api/users/delete-me/:id: Deletes authenticated user's data by the user or admin.
 
 # Product Endpoints
