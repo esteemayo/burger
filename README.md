@@ -64,7 +64,7 @@ This application allows users to browse a menu of burgers, add items to cart, an
 
 ## Usage
 
-1. [Open a web browser and navigate to](http://localhost:3000)
+1. Open a web browser and navigate to [http://localhost:3000](http://localhost:3000)
 2. Click on the "Login" button to authenticate using Next-Auth
 3. Browse the menu and add items to your cart
 4. Click on the "Checkout" button to place an order
