@@ -72,3 +72,12 @@ This application allows users to browse a menu of burgers, add items to cart, an
 ## Authentication and Authorization
 
 This application uses Next-Auth for authentication and authorization. Users can login using their username and password, and are redirected to the home page after successful authentication. The NEXTAUTH_SECRET environment variable is used to secure the authentication process.
+
+## Database Schema
+
+The database schema is defined using Prisma. The schema includes the following models
+
+- User: Represent a user with a name, username, email, phone, state, city, street, address, password, confirmPassword, gender, image, and role,
+- Product: Represent a product with a name, description, image, ingredients, isFeatured, totalRatings, ratingNumber, likes, reviews and price.
+- Order: Represents an order with a user, product/menu items, price, status, and intent_id.
+- Review: Represents a review with a rating, description, productId, userId, and consent.
