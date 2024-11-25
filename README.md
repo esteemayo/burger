@@ -34,8 +34,9 @@ This application allows users to browse a menu of burgers, add items to cart, an
 ## Technical Requirements
 
 - Docker
-- Node.js (14.x)
+- Node.js (20.x)
 - Next.js (13.x)
+- Prisma (5.x)
 - PostgreSQL (13.x)
 - Zustand (4.x)
 - Next-Auth (4.x)
