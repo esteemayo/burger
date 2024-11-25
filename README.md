@@ -1,6 +1,6 @@
 # Burger Ordering Application
 
-A modern burger ordering application built using Docker, Next.js, Prisma, PostgreSQL, Zustand, Next-Auth, React Query and more.
+A modern burger ordering application built using Docker, Next-Auth, Next.js, PostgreSQL, Prisma, React Query, Zustand and more.
 
 ## Table of Contents
 
