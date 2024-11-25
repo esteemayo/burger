@@ -95,11 +95,11 @@ The following API endpoints are available:
 
 ### User Endpoints
 
-- GET /api/users: Returns the users data to the admin.
-- GET /api/users/id: Return a single user by ID.
-- PATCH /api/users/id: Updates the authenticated user's data such as name, username, email, etc. But cannot update authenticated user's password.
-- DELETE /api/users/id: Deletes the authenticated user's data by the user itself or by the admin.
-- DELETE /api/users/delete-me/:id: Deletes authenticated user's data by the user or admin.
+- ==GET /api/users==.: Returns the users data to the admin.
+- ==GET /api/users/id==.: Return a single user by ID.
+- ==PATCH /api/users/id==.: Updates the authenticated user's data such as name, username, email, etc. But cannot update authenticated user's password.
+- ==DELETE /api/users/id==.: Deletes the authenticated user's data by the user itself or by the admin.
+- ==DELETE /api/users/delete-me/:id==.: Deletes authenticated user's data by the user or admin.
 
 ### Product Endpoints
 
