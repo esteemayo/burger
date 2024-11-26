@@ -41,6 +41,7 @@ This application allows users to browse a menu of burgers, add items to cart, an
 - PostgreSQL (13.x)
 - Zustand (4.x)
 - Next-Auth (4.x)
+- SASS (1.x)
 - React Query (5.x)
 
 ## Setup and Installation
