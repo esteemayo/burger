@@ -137,6 +137,10 @@ The following API endpoints are available:
 
 This application uses Zustand for state management. Zustand provides a simple and scalable way to manage global state in React applications.
 
+## Styling
+
+This application uses SASS for styling. SASS is a preprocessor scripting language that is compiled to CSS. It allows developers to write more efficient, modular, and reusable CSS code.
+
 ## Contributing
 
 Contributions are welcome! Please submit a pull request with your changes.
