@@ -91,7 +91,9 @@ The following API endpoints are available:
 
 ### Authentication Endpoints
 
-- <mark>POST /api/auth/[...nextauth]:</mark> Authenticates a user and returns a JSON Web Token (JWT).
+- <small>
+    <mark>POST /api/auth/[...nextauth]:</mark>
+  </small> Authenticates a user and returns a JSON Web Token (JWT).
 - <mark>POST /api/auth/register:</mark> Creates a new user and returns a JWT.
 - <mark>PATCH /api/auth/update-my-password/:id:</mark> Updates the authenticated user password.
 
