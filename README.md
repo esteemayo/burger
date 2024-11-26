@@ -13,8 +13,9 @@ A modern burger ordering application built using Docker, Next-Auth, Next.js, Pos
 7. #database-schema
 8. #api-endpoints
 9. #state-management
-10. #contributing
-11. #license
+10. #styling
+11. #contributing
+12. #license
 
 ## Overview
 
