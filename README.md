@@ -138,3 +138,7 @@ This application uses Zustand for state management. Zustand provides a simple an
 ## Contributing
 
 Contributions are welcome! Please submit a pull request with your changes.
+
+## License
+
+This projectis licensed under the MIT License.
