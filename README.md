@@ -125,11 +125,11 @@ The following API endpoints are available:
 
 ### Review Endpoints
 
-- GET /api/reviews: Returns a list of reviews for the authenticated admin.
-- GET /api/reviews/:id: Returns a single review by ID for the authenticated user.
-- POST /api/reviews: Creates a new review for the authenticated user.
-- PATCH /api/reviews/:id: Updates a review by ID for the authenticated user or admin.
-- DELETE /api/reviews/:id: Deletes a review by ID for the authenticated user or admin.
+- <mark>GET /api/reviews:</mark> Returns a list of reviews for the authenticated admin.
+- <mark>GET /api/reviews/:id:</mark> Returns a single review by ID for the authenticated user.
+- <mark>POST /api/reviews:</mark> Creates a new review for the authenticated user.
+- <mark>PATCH /api/reviews/:id:</mark> Updates a review by ID for the authenticated user or admin.
+- <mark>DELETE /api/reviews/:id:</mark> Deletes a review by ID for the authenticated user or admin.
 
 ## State Management
 
