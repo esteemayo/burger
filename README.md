@@ -130,3 +130,7 @@ The following API endpoints are available:
 - POST /api/reviews: Creates a new review for the authenticated user.
 - PATCH /api/reviews/:id: Updates a review by ID for the authenticated user or admin.
 - DELETE /api/reviews/:id: Deletes a review by ID for the authenticated user or admin.
+
+## State Management
+
+This application uses Zustand for state management. Zustand provides a simple and scalable way to manage global state in React applications.
