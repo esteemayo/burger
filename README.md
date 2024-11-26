@@ -122,3 +122,11 @@ The following API endpoints are available:
 - <mark>POST /api/orders:</mark> Creates a new order only for the authenticated user and not the admin.
 - <mark>PATCH /api/orders/:id:</mark> Updates an order by the authenticated admin.
 - <mark>DELETE /api/orders/:id:</mark> Deletes an order by the authenticated admin.
+
+### Review Endpoints
+
+- GET /api/reviews: Returns a list of reviews for the authenticated admin.
+- GET /api/reviews/:id: Returns a single review by ID for the authenticated user.
+- POST /api/reviews: Creates a new review for the authenticated user.
+- PATCH /api/reviews/:id: Updates a review by ID for the authenticated user or admin.
+- DELETE /api/reviews/:id: Deletes a review by ID for the authenticated user or admin.
