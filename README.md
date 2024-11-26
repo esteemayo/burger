@@ -117,7 +117,7 @@ The following API endpoints are available:
 ### Order Endpoints
 
 - <mark>GET /api/orders:</mark> Returns a list of orders for the authenticated admin.
-- <mark>GET /api/orders/details/:</mark>intentId: Returns a single order for the authenticated user by INTENTID.
+- <mark>GET /api/orders/details/:intentId:</mark> Returns a single order for the authenticated user by INTENTID.
 - <mark>GET /api/orders/:id:</mark> Returns a single order for the authenticated user or admin by ID.
 - <mark>POST /api/orders:</mark> Creates a new order only for the authenticated user and not the admin.
 - <mark>PATCH /api/orders/:id:</mark> Updates an order by the authenticated admin.
