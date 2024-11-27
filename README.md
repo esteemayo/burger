@@ -52,7 +52,7 @@ This application allows users to browse a menu of burgers, add items to cart, an
 4. Create a <mark>.env</mark> file and add the following environment variables:
 
 - <mark>DATABASE_URL:</mark> PostgreSQL database URL
-- <mark>GOOGLE_ID:</mark> Google id
+- <mark>GOOGLE_ID:</mark> Google ID
 - <mark>GOOGLE_SECRET:</mark> Google secret key
 - <mark>NEXTAUTH_SECRET:</mark> Next-Auth secret key
 - <mark>NEXT_PUBLIC_DEV_API_URL:</mark> Application url in development
