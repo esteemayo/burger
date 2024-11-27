@@ -81,9 +81,9 @@ This application uses Next-Auth for authentication and authorization. Users can 
 The database schema is defined using Prisma. The schema includes the following models:
 
 - <mark>User:</mark> Represent a user with a name, username, email, phone, state, city, street, address, password, confirmPassword, gender, image, and role,
-- <mark>Product:</mark> Represent a product with a name, description, image, ingredients, isFeatured, totalRatings, ratingNumber, likes, reviews and price.
+- <mark>Product:</mark> Represent a product with a name, desc, image, ingredients, isFeatured, totalRatings, ratingNumber, likes, reviews and price.
 - <mark>Order:</mark> Represents an order with a user, product/menu items, price, status, and intent_id.
-- <mark>Review:</mark> Represents a review with a rating, description, productId, userId, and consent.
+- <mark>Review:</mark> Represents a review with a rating, desc, productId, userId, and consent.
 
 ## API Endpoints
 
