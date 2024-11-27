@@ -62,7 +62,7 @@ This application allows users to browse a menu of burgers, add items to cart, an
 
 5. Start the Docker containers: <mark>docker compose up</mark>
 6. Run the database migrations: <mark>npx prisma migrate dev</mark>
-7. Start the Next.js development server: <mark>npm run dev or yarn dev</mark>
+7. Start the Next.js development server: <mark>npm run dev</mark> or <mark>yarn dev</mark>
 
 ## Usage
 
