@@ -112,7 +112,7 @@ The following API endpoints are available:
 - <mark>GET /api/products/:id:</mark> Returns a single product item by ID.
 - <mark>POST /api/products:</mark> Creates a new product item but only by the admin.
 - <mark>POST /api/products/:id/reviews:</mark> Creates a new review with a productId.
-- <mark>PATCH /api/products/like/:id:</mark> Handles the like functionality of a product item.
+- <mark>PATCH /api/products/like/:id:</mark> Handles the likes functionality of a product item.
 - <mark>PATCH /api/products/:id:</mark> Update a single product item by ID but only the admin is authorized.
 - <mark>DELETE /api/products/:id:</mark> Delete a single product item by ID by the admin only.
 
