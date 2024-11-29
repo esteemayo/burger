@@ -110,20 +110,20 @@ The following API endpoints are available:
 - <mark>GET /api/products/ingredients:</mark> Return product items that have one or more related ingredients
 - <mark>GET /api/products/:id/reviews:</mark> Return reviews associated with a productId.
 - <mark>GET /api/products/:id:</mark> Returns a single product item by ID.
-- <mark>POST /api/products:</mark> Creates a new product item but only by the admin.
+- <mark>POST /api/products:</mark> Creates a new product item for the authenticated admin.
 - <mark>POST /api/products/:id/reviews:</mark> Creates a new review with a productId.
 - <mark>PATCH /api/products/like/:id:</mark> Handles the likes functionality of a product item.
-- <mark>PATCH /api/products/:id:</mark> Update a single product item by ID but only the admin is authorized.
-- <mark>DELETE /api/products/:id:</mark> Delete a single product item by ID by the admin only.
+- <mark>PATCH /api/products/:id:</mark> Update a single product item by ID for the authenticated admin.
+- <mark>DELETE /api/products/:id:</mark> Delete a single product item by ID for the authenticated admin.
 
 ### Order Endpoints
 
 - <mark>GET /api/orders:</mark> Returns a list of orders for the authenticated admin.
 - <mark>GET /api/orders/details/:intentId:</mark> Returns a single order for the authenticated user by INTENTID.
-- <mark>GET /api/orders/:id:</mark> Returns a single order for the authenticated user or admin by ID.
-- <mark>POST /api/orders:</mark> Creates a new order only for the authenticated user and not the admin.
-- <mark>PATCH /api/orders/:id:</mark> Updates an order by the authenticated admin.
-- <mark>DELETE /api/orders/:id:</mark> Deletes an order by the authenticated admin.
+- <mark>GET /api/orders/:id:</mark> Returns a single order by ID for the authenticated user or admin.
+- <mark>POST /api/orders:</mark> Creates a new order for the authenticated user.
+- <mark>PATCH /api/orders/:id:</mark> Updates an order for the authenticated admin.
+- <mark>DELETE /api/orders/:id:</mark> Deletes an order for the authenticated admin.
 
 ### Review Endpoints
 
