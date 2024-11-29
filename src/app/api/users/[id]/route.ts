@@ -51,6 +51,12 @@ export const PATCH = async (req: NextRequest, { params }: IParams) => {
     try {
       const body = await req.json();
 
+      if (body.password || body.confirmPassword) {
+        return new NextResponse(
+          JSON.stringify({ message: 'This route is not for password updates' })
+        );
+      }
+
       if (session.user.isAdmin || session.user.id === userId) {
         const user = await prisma.user.findUnique({
           where: {
