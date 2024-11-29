@@ -1,6 +1,6 @@
-export const init = () => {};
+const init = () => {};
 
-export const log = (error: Error) => {
+const log = (error: Error) => {
   console.log(error);
 };
 
