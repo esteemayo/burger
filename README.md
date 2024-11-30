@@ -46,9 +46,9 @@ This application allows users to browse a menu of burgers, add items to cart, an
 
 ## Setup and Installation
 
-1. Clone the repository: <mark>[git clone](https://github.com/esteemayo/burgers.git)</mark>
+1. Clone the repository: <mark>git clone [https://github.com/esteemayo/burgers.git](https://github.com/esteemayo/burgers.git)</mark>
 2. Change into the project directory: <mark>cd your-repo-name</mark>
-3. Install dependencies: <mark>npm install or yarn install</mark>
+3. Install dependencies: <mark>npm install</mark> or <mark>yarn install</mark>
 4. Create a <mark>.env</mark> file and add the following environment variables:
 
 - <mark>DATABASE_URL:</mark> PostgreSQL database URL
