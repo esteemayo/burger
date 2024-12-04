@@ -40,7 +40,7 @@ const ReviewForm = ({ productId }: ReviewFormProps) => {
       return res.data;
     },
     onSuccess() {
-      queryClient.invalidateQueries({ queryKey: ['reviews'] });
+      queryClient.invalidateQueries({ queryKey: ['reviews', productId] });
     },
   });
 
