@@ -11,6 +11,11 @@ import { getOrders } from '@/services/orderService';
 
 import './Orders.scss';
 
+const fetchOrders = async () => {
+  const { data } = await getOrders();
+  return data;
+};
+
 const OrdersClient = () => {
   const { data: session } = useSession();
 
