@@ -18,6 +18,11 @@ const RelatedProduct = dynamic(
   }
 );
 
+const fetchRelatedProducts = async (ingredients: string[] | undefined) => {
+  const { data } = await getRelatedProducts(ingredients);
+  return data;
+};
+
 const RelatedProducts = ({
   productId,
   ingredients,
