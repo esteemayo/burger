@@ -29,7 +29,7 @@ const fetchUser = async (userId: string) => {
 
 const OrderClient = ({ orderId }: OrderClientProps) => {
   const { isLoading, data: order } = useQuery({
-    queryKey: ['order'],
+    queryKey: ['order', orderId],
     queryFn: () => fetchOrder(orderId),
     enabled: !!orderId,
   });
