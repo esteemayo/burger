@@ -24,6 +24,17 @@ interface ReviewFormProps {
   productId: string;
 }
 
+const createNewReview = async ({
+  data,
+  productId,
+}: {
+  data: object;
+  productId: string;
+}) => {
+  const res = await createReviewOnProduct(data, productId);
+  return res.data;
+};
+
 const ReviewForm = ({ productId }: ReviewFormProps) => {
   const queryClient = useQueryClient();
   const { data: session } = useSession();
