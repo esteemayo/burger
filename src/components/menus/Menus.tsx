@@ -17,6 +17,11 @@ const ProductCard = dynamic(() => import('../productCard/ProductCard'), {
   ssr: false,
 });
 
+const fetchFeaturedProducts = async () => {
+  const { data } = await getFeaturedProducts();
+  return data;
+};
+
 const Menus = () => {
   const { isLoading, data, refetch } = useQuery({
     queryKey: ['featuredProducts'],
