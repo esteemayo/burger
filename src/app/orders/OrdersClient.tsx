@@ -21,10 +21,7 @@ const OrdersClient = () => {
 
   const { isLoading, data: orders } = useQuery({
     queryKey: ['orders'],
-    queryFn: async () => {
-      const { data } = await getOrders();
-      return data;
-    },
+    queryFn: () => fetchOrders(),
   });
 
   if (isLoading) {
