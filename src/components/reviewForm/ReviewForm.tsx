@@ -39,7 +39,7 @@ const ReviewForm = ({ productId }: ReviewFormProps) => {
   const queryClient = useQueryClient();
   const { data: session } = useSession();
 
-  const { isError, mutate } = useMutation({
+  const { mutate } = useMutation({
     mutationFn: ({ data, productId }: { data: object; productId: string }) =>
       createNewReview({ data, productId }),
     onSuccess: () => {
