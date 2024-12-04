@@ -42,7 +42,7 @@ const ReviewForm = ({ productId }: ReviewFormProps) => {
   const { isError, mutate } = useMutation({
     mutationFn: ({ data, productId }: { data: object; productId: string }) =>
       createNewReview({ data, productId }),
-    onSuccess() {
+    onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['reviews', productId] });
     },
   });
