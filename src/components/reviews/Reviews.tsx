@@ -115,7 +115,7 @@ const Reviews = ({
                 <div className={`${respondClasses} ${emptyClasses}`}>
                   <span className='replyTitle'>{reviewLabel}</span>
                   {!!session ? (
-                    <ReviewForm productId={actionId} />
+                    <ReviewForm actionId={actionId} />
                   ) : (
                     <div className='reviewAuth'>
                       <span>

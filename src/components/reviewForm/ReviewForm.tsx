@@ -21,30 +21,30 @@ const initialState: ReviewData = {
 };
 
 interface ReviewFormProps {
-  productId: string;
+  actionId: string;
 }
 
 const createNewReview = async ({
   data,
-  productId,
+  actionId,
 }: {
   data: object;
-  productId: string;
+  actionId: string;
 }) => {
-  const res = await createReviewOnProduct(data, productId);
+  const res = await createReviewOnProduct(data, actionId);
   return res.data;
 };
 
-const ReviewForm = ({ productId }: ReviewFormProps) => {
+const ReviewForm = ({ actionId }: ReviewFormProps) => {
   const queryClient = useQueryClient();
   const { data: session } = useSession();
 
   const { mutate } = useMutation({
-    mutationFn: ({ data, productId }: { data: object; productId: string }) =>
-      createNewReview({ data, productId }),
+    mutationFn: ({ data, actionId }: { data: object; actionId: string }) =>
+      createNewReview({ data, actionId }),
     onSuccess: () => {
       toast.success('Review added successfully!');
-      queryClient.invalidateQueries({ queryKey: ['reviews', productId] });
+      queryClient.invalidateQueries({ queryKey: ['reviews', actionId] });
     },
     onError: (error) => {
       toast.error(error.message);
@@ -108,7 +108,7 @@ const ReviewForm = ({ productId }: ReviewFormProps) => {
       setIsLoading(true);
 
       setTimeout(() => {
-        mutate({ data, productId });
+        mutate({ data, actionId });
         handleClear();
 
         // if (!isError) {
@@ -120,7 +120,7 @@ const ReviewForm = ({ productId }: ReviewFormProps) => {
         setIsLoading(false);
       }, 3000);
     },
-    [handleClear, inputs, mutate, productId, rating, session]
+    [handleClear, inputs, mutate, actionId, rating, session]
   );
 
   useEffect(() => {
