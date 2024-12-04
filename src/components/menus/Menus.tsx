@@ -25,10 +25,7 @@ const fetchFeaturedProducts = async () => {
 const Menus = () => {
   const { isLoading, data, refetch } = useQuery({
     queryKey: ['featuredProducts'],
-    queryFn: async () => {
-      const { data } = await getFeaturedProducts();
-      return data;
-    },
+    queryFn: () => fetchFeaturedProducts(),
   });
 
   const [products, setProducts] = useState<ProductType[]>(data);
