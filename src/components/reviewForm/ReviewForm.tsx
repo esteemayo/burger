@@ -111,16 +111,16 @@ const ReviewForm = ({ productId }: ReviewFormProps) => {
         mutate({ data, productId });
         handleClear();
 
-        if (!isError) {
-          toast.success('Review added successfully!');
-        } else {
-          toast.error('You have already created a review for this product!');
-        }
+        // if (!isError) {
+        //   toast.success('Review added successfully!');
+        // } else {
+        //   toast.error('You have already created a review for this product!');
+        // }
 
         setIsLoading(false);
       }, 3000);
     },
-    [handleClear, inputs, isError, mutate, productId, rating, session]
+    [handleClear, inputs, mutate, productId, rating, session]
   );
 
   useEffect(() => {
