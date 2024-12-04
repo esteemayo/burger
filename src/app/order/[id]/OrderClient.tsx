@@ -22,6 +22,11 @@ const fetchOrder = async (orderId: string) => {
   return data;
 };
 
+const fetchUser = async (userId: string) => {
+  const { data } = await getUser(userId);
+  return data;
+};
+
 const OrderClient = ({ orderId }: OrderClientProps) => {
   const { isLoading, data: order } = useQuery({
     queryKey: ['order'],
