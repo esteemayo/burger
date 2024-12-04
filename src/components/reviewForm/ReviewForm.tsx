@@ -43,6 +43,7 @@ const ReviewForm = ({ productId }: ReviewFormProps) => {
     mutationFn: ({ data, productId }: { data: object; productId: string }) =>
       createNewReview({ data, productId }),
     onSuccess: () => {
+      toast.success('Review added successfully!');
       queryClient.invalidateQueries({ queryKey: ['reviews', productId] });
     },
   });
