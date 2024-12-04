@@ -22,10 +22,7 @@ const ProductReview = ({
 }: ProductReviewProps) => {
   const { isLoading, data: reviews } = useQuery({
     queryKey: ['reviews'],
-    queryFn: async () => {
-      const { data } = await getReviewsOnProduct(actionId);
-      return data;
-    },
+    queryFn: () => fetchProductReviews(actionId),
     enabled: !!actionId,
   });
 
