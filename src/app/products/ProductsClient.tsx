@@ -13,6 +13,11 @@ import { getProducts } from '@/services/productService';
 
 import './Products.scss';
 
+const fetchProducts = async () => {
+  const { data } = await getProducts();
+  return data;
+};
+
 const ProductsClient = () => {
   const { isLoading, data, refetch } = useQuery({
     queryKey: ['products'],
