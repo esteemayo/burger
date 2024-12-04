@@ -27,10 +27,7 @@ const ProductClient = ({ productId }: ProductClientProps) => {
 
   const { isLoading, data, refetch } = useQuery({
     queryKey: ['product'],
-    queryFn: async () => {
-      const { data } = await getProductClient(productId);
-      return data;
-    },
+    queryFn: () => fetchProduct(productId),
     enabled: !!productId,
   });
 
