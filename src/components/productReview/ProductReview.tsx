@@ -21,7 +21,7 @@ const ProductReview = ({
   productReviews,
 }: ProductReviewProps) => {
   const { isLoading, data: reviews } = useQuery({
-    queryKey: ['reviews'],
+    queryKey: ['reviews', actionId],
     queryFn: () => fetchProductReviews(actionId),
     enabled: !!actionId,
   });
