@@ -10,6 +10,11 @@ import { getReviewsOnProduct } from '@/services/productService';
 
 import './ProductReview.scss';
 
+const fetchProductReviews = async (actionId: string) => {
+  const { data } = await getReviewsOnProduct(actionId);
+  return data;
+};
+
 const ProductReview = ({
   actionId,
   productName,
