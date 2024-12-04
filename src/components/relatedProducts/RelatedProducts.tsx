@@ -30,10 +30,7 @@ const RelatedProducts = ({
 }: RelatedProductsProps) => {
   const { isLoading, data, refetch } = useQuery({
     queryKey: ['featuredProducts'],
-    queryFn: async () => {
-      const { data } = await getRelatedProducts(ingredients);
-      return data;
-    },
+    queryFn: () => fetchRelatedProducts(ingredients),
     enabled: !!ingredients,
   });
 
