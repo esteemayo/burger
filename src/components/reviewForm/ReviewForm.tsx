@@ -40,16 +40,8 @@ const ReviewForm = ({ productId }: ReviewFormProps) => {
   const { data: session } = useSession();
 
   const { isError, mutate } = useMutation({
-    mutationFn: async ({
-      data,
-      productId,
-    }: {
-      data: object;
-      productId: string;
-    }) => {
-      const res = await createReviewOnProduct(data, productId);
-      return res.data;
-    },
+    mutationFn: ({ data, productId }: { data: object; productId: string }) =>
+      createNewReview({ data, productId }),
     onSuccess() {
       queryClient.invalidateQueries({ queryKey: ['reviews', productId] });
     },
