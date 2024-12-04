@@ -26,7 +26,7 @@ const ProductClient = ({ productId }: ProductClientProps) => {
   const { data: session } = useSession();
 
   const { isLoading, data, refetch } = useQuery({
-    queryKey: ['product'],
+    queryKey: ['product', productId],
     queryFn: () => fetchProduct(productId),
     enabled: !!productId,
   });
