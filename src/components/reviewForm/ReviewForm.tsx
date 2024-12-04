@@ -46,6 +46,10 @@ const ReviewForm = ({ productId }: ReviewFormProps) => {
       toast.success('Review added successfully!');
       queryClient.invalidateQueries({ queryKey: ['reviews', productId] });
     },
+    onError: (error) => {
+      toast.error(error.message);
+      toast.error('You have already created a review for this product!');
+    },
   });
 
   const [errors, setErrors] = useState<ReviewErrors>({});
