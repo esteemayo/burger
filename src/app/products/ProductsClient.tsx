@@ -21,10 +21,7 @@ const fetchProducts = async () => {
 const ProductsClient = () => {
   const { isLoading, data, refetch } = useQuery({
     queryKey: ['products'],
-    queryFn: async () => {
-      const { data } = await getProducts();
-      return data;
-    },
+    queryFn: () => fetchProducts(),
   });
 
   const [productToShow, setProductToShow] = useState(6);
