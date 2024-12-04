@@ -17,6 +17,11 @@ interface OrderClientProps {
   orderId: string;
 }
 
+const fetchOrder = async (orderId: string) => {
+  const { data } = await getOrder(orderId);
+  return data;
+};
+
 const OrderClient = ({ orderId }: OrderClientProps) => {
   const { isLoading, data: order } = useQuery({
     queryKey: ['order'],
