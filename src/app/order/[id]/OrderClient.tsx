@@ -38,10 +38,7 @@ const OrderClient = ({ orderId }: OrderClientProps) => {
 
   const { isLoading: isFetching, data: user } = useQuery({
     queryKey: [`${userId}`],
-    queryFn: async () => {
-      const { data } = await getUser(userId);
-      return data;
-    },
+    queryFn: () => fetchUser(userId),
     enabled: !!userId,
   });
 
