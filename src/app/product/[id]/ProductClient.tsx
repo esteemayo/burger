@@ -17,6 +17,11 @@ import { ProductClientProps, SingleProductType } from '@/types';
 
 import './Product.scss';
 
+const fetchProduct = async (productId: string) => {
+  const { data } = await getProductClient(productId);
+  return data;
+};
+
 const ProductClient = ({ productId }: ProductClientProps) => {
   const { data: session } = useSession();
 
