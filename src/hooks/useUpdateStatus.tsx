@@ -25,10 +25,7 @@ export const useUpdateStatus = () => {
     }: {
       actionId: string;
       status: string;
-    }) => {
-      const { data } = await updateOrder(actionId, { status });
-      return data;
-    },
+    }) => updateOrderStatus({ actionId, status }),
     onSuccess() {
       queryClient.invalidateQueries({ queryKey: ['orders'] });
     },
