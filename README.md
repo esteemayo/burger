@@ -86,6 +86,24 @@ The database schema is defined using Prisma. The schema includes the following m
 - <mark>Order:</mark> Represents an order with a user, product/menu items, price, status, and intent_id.
 - <mark>Review:</mark> Represents a review with a rating, desc, productId, userId, and consent.
 
+## Page Routes
+
+The following page routes are available:
+
+- /: Home page
+- /products: Product listing page
+- /product/:id: Product details page
+- /search: Product search page
+- /checkout: Checkout page
+- /payment/:id: Payment page
+- /success: Payment success page
+- /orders: Order listing page
+- /order/:id: Order details page
+- /profile: User profile page
+- /login: Login page
+- /register: Register page
+- /\*: Not found page
+
 ## API Endpoints
 
 The following API endpoints are available:
