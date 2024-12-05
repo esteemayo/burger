@@ -74,7 +74,7 @@ const StatusModal = () => {
   return (
     <Modal
       isOpen={isOpen}
-      title="Edit order's status"
+      title='Update status'
       disabled={isLoading}
       actionLabel='Update'
       body={bodyContent}
