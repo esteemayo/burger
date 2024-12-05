@@ -40,7 +40,6 @@ const StatusForm = ({ actionId, status }: StatusFormProps) => {
         mutate({ actionId, status });
 
         form.reset();
-        toast.success('Status updated!');
 
         setIsLoading(false);
       }, 3000);

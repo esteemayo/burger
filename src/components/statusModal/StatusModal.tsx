@@ -45,7 +45,6 @@ const StatusModal = () => {
     setTimeout(() => {
       mutate({ status, actionId });
       setStatus('');
-      toast.success('Status changed!');
 
       onClose();
       setIsLoading(false);
