@@ -27,7 +27,7 @@ export const useUpdateStatus = () => {
       actionId: string;
       status: string;
     }) => updateOrderStatus({ actionId, status }),
-    onSuccess() {
+    onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['orders'] });
       toast.success('Status updated!');
     },
