@@ -31,6 +31,9 @@ export const useUpdateStatus = () => {
       queryClient.invalidateQueries({ queryKey: ['orders'] });
       toast.success('Status updated!');
     },
+    onError: (error) => {
+      toast.error(error.message);
+    },
   });
 
   return {
