@@ -19,7 +19,7 @@ const updateOrderStatus = async ({
 export const useUpdateStatus = () => {
   const queryClient = useQueryClient();
 
-  const { mutate } = useMutation({
+  const mutation = useMutation({
     mutationFn: async ({
       actionId,
       status,
@@ -37,6 +37,6 @@ export const useUpdateStatus = () => {
   });
 
   return {
-    mutate,
+    mutation,
   };
 };
