@@ -13,7 +13,7 @@ import { StatusFormProps } from '@/types';
 import { validateStatusInput } from '@/validations/status';
 
 const StatusForm = ({ actionId, status }: StatusFormProps) => {
-  const { mutate } = useUpdateStatus();
+  const { mutation } = useUpdateStatus();
   const { statusLists } = useStatusLists();
 
   const [isLoading, setIsLoading] = useState(false);
@@ -37,14 +37,14 @@ const StatusForm = ({ actionId, status }: StatusFormProps) => {
       setIsLoading(true);
 
       setTimeout(() => {
-        mutate({ actionId, status });
+        mutation.mutate({ actionId, status });
 
         form.reset();
 
         setIsLoading(false);
       }, 3000);
     },
-    [actionId, mutate, statusLists]
+    [actionId, mutation, statusLists]
   );
 
   return (
