@@ -90,19 +90,19 @@ The database schema is defined using Prisma. The schema includes the following m
 
 The following page routes are available:
 
-- /: Home page
-- /products: Product listing page
-- /product/:id: Product details page
-- /search: Product search page
-- /checkout: Checkout page
-- /payment/:id: Payment page
-- /success: Payment success page
-- /orders: Order listing page
-- /order/:id: Order details page
-- /profile: User profile page
-- /login: Login page
-- /register: Register page
-- /\*: Not found page
+- <mark>/:</mark> Home page
+- <mark>/products:</mark> Product listing page
+- <mark>/product/:id:</mark> Product details page
+- <mark>/search:</mark> Product search page
+- <mark>/checkout:</mark> Checkout page
+- <mark>/payment/:id:</mark> Payment page
+- <mark>/success:</mark> Payment success page
+- <mark>/orders:</mark> Order listing page
+- <mark>/order/:id:</mark> Order details page
+- <mark>/profile:</mark> User profile page
+- <mark>/login:</mark> Login page
+- <mark>/register:</mark> Register page
+- <mark>/\*:</mark> Not found page
 
 ## API Endpoints
 
