@@ -1,5 +1,6 @@
 'use client';
 
+import { toast } from 'react-toastify';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 
 import { updateOrder } from '@/services/orderService';
@@ -28,6 +29,7 @@ export const useUpdateStatus = () => {
     }) => updateOrderStatus({ actionId, status }),
     onSuccess() {
       queryClient.invalidateQueries({ queryKey: ['orders'] });
+      toast.success('Status updated!');
     },
   });
 
