@@ -12,7 +12,7 @@ import { useUpdateStatus } from '@/hooks/useUpdateStatus';
 import { validateStatusInput } from '@/validations/status';
 
 const StatusModal = () => {
-  const { mutate } = useUpdateStatus();
+  const { mutation } = useUpdateStatus();
   const { statusLists } = useStatusLists();
 
   const isOpen = useStatusModal((store) => store.isOpen);
@@ -42,13 +42,13 @@ const StatusModal = () => {
     setIsLoading(true);
 
     setTimeout(() => {
-      mutate({ status, actionId });
+      mutation.mutate({ status, actionId });
       setStatus('');
 
       onClose();
       setIsLoading(false);
     }, 3000);
-  }, [onClose, mutate, order, status, statusLists]);
+  }, [onClose, mutation, order, status, statusLists]);
 
   useEffect(() => {
     setStatus(order?.status || '');
