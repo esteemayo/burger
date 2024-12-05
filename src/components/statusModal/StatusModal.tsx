@@ -50,7 +50,7 @@ const StatusModal = () => {
       onClose();
       setIsLoading(false);
     }, 3000);
-  }, [onClose, order, status]);
+  }, [onClose, mutate, order, status, statusLists]);
 
   useEffect(() => {
     setStatus(order?.status || '');
